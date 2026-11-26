@@ -27,6 +27,7 @@ Phase 2 (fondation d'évaluation) en cours ; phase 3 étape 1 (C8 générique) l
 | idem | multirfe_synth dev | doc MRR +0,033 [+0,006 ; +0,071], passage hit +1,3 pt n.s., latence −18 % | gardé : nouvelle référence |
 | Ablation C8 composant par composant (10) | les deux dev | seuls dense et reranker utiles (IC excluant 0) | les 8 autres retirés de C9 |
 | C9 simple (BM25+dense+RRF+reranker+routeur) vs C8 | les deux dev | toutes différences n.s. (MRR −0,03 tendance) | C9 candidat, à confirmer en génération |
+| Embedder Qwen3-Embedding-0.6B vs e5-small (C9) | les deux dev | toutes différences n.s. (doc hit −2,6 tendance) | non adopté ; tester en dense seul |
 | Ancien C0 vs ancien C8, génération 7B mode générique, juge Haiku (κ 0,88) | abp171 dev | correct 64,7 → 80,4 % (+15,7 [+2,9 ; +27,5]) ; erreurs graves 14,7 → 5,9 % | référence « avant » pour la génération |
 | Reranker bge-reranker-v2-m3 vs mmarco (C9) | multirfe dev | passage hit +3,9 [−1,3 ; +9,2], MRR +0,059 n.s. ; latence ×30 sur Mac | candidat GPU, non adopté localement |
 
