@@ -1,0 +1,2085 @@
+{
+  "antibioprophylaxie_171": [
+    {
+      "config_name": "C0_naive_fixed_bm25",
+      "chunking_strategy": "naive_fixed",
+      "num_questions": 171,
+      "doc_hit_rate": 0.9591,
+      "current_edition_hit_rate": 0.9474,
+      "obsolete_intrusion_rate": 0.6199,
+      "bibliography_pollution_rate": 0.0,
+      "evidence_recall": 0.9203,
+      "evidence_eval_count": 138,
+      "allergy_evidence_recall": 0.8333,
+      "allergy_eval_count": 6,
+      "mrr_current_edition": 0.8031,
+      "multi_edition_coverage": null,
+      "avg_latency_ms": 1.43,
+      "avg_context_chars": 9573.8,
+      "est_context_tokens": 2393.0,
+      "per_category": {
+        "antibioprophylaxie_allergy": {
+          "n": 8,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 0.8333
+        },
+        "antibioprophylaxie_mcq": {
+          "n": 31,
+          "curr_hit_rate": 0.9355,
+          "ev_recall": null
+        },
+        "antibioprophylaxie_open": {
+          "n": 132,
+          "curr_hit_rate": 0.947,
+          "ev_recall": 0.9242
+        }
+      },
+      "sample_failures": [
+        {
+          "id": "Q01",
+          "title": "PTH standard",
+          "category": "antibioprophylaxie_open",
+          "has_curr_edition": false,
+          "evidence_found": false,
+          "required_terms": [
+            "Céfazoline"
+          ],
+          "top3_docs": [
+            "Prévention de la maladie thromboembolique veineuse péri-opératoire (2024, prose)",
+            "Réhabilitation améliorée après chirurgie orthopédique lourde du membre inférieur (Arthroplastie de hanche et de genou hors fracture) (2019, prose)",
+            "Gestion périopératoire des traitements chroniques et dispositifs médicaux (2009, prose)"
+          ]
+        },
+        {
+          "id": "Q15",
+          "title": "Polytrauma fémur radius plaie main",
+          "category": "antibioprophylaxie_open",
+          "has_curr_edition": true,
+          "evidence_found": false,
+          "required_terms": [
+            "Amoxicilline",
+            "Clavulanate"
+          ],
+          "top3_docs": [
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, prose)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, prose)",
+            "Pratique des anesthésies locales et locorégionales par des médecins non spécialisés en anesthésie-réanimation, dans le cadre des urgences (2004, prose)"
+          ]
+        },
+        {
+          "id": "Q22",
+          "title": "Plaie cranio-cérébrale",
+          "category": "antibioprophylaxie_open",
+          "has_curr_edition": false,
+          "evidence_found": false,
+          "required_terms": [
+            "Amoxicilline",
+            "Clavulanate"
+          ],
+          "top3_docs": [
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (patients adultes) (2017, prose)",
+            "Prise en charge des patients présentant un traumatisme crânien léger de l’adulte (2022, prose)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (patients adultes) (2018, prose)"
+          ]
+        },
+        {
+          "id": "Q28",
+          "title": "Plaie cranio-cérébrale allergie pénicillines",
+          "category": "antibioprophylaxie_allergy",
+          "has_curr_edition": true,
+          "evidence_found": false,
+          "required_terms": [
+            "Triméthoprime",
+            "Sulfaméthoxazole"
+          ],
+          "top3_docs": [
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (patients adultes) (2017, prose)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (patients adultes) (2018, prose)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (patients adultes) (2017, prose)"
+          ]
+        },
+        {
+          "id": "Q38",
+          "title": "Traumatisme globe ouvert",
+          "category": "antibioprophylaxie_open",
+          "has_curr_edition": true,
+          "evidence_found": false,
+          "required_terms": [
+            "Vancomycine",
+            "Ceftazidime"
+          ],
+          "top3_docs": [
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (patients adultes) (2018, prose)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (patients adultes) (2018, prose)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (patients adultes) (2017, prose)"
+          ]
+        },
+        {
+          "id": "Q40",
+          "title": "Extraction dent incluse",
+          "category": "antibioprophylaxie_open",
+          "has_curr_edition": false,
+          "evidence_found": false,
+          "required_terms": [
+            "Amoxicilline"
+          ],
+          "top3_docs": [
+            "Gestion des anticoagulants pour une procédure invasive programmée (2026, prose)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (patients adultes) (2017, prose)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (patients adultes) (2018, prose)"
+          ]
+        },
+        {
+          "id": "Q44",
+          "title": "Remplacement valvulaire sous CEC",
+          "category": "antibioprophylaxie_open",
+          "has_curr_edition": true,
+          "evidence_found": false,
+          "required_terms": [
+            "Céfazoline"
+          ],
+          "top3_docs": [
+            "Réhabilitation améliorée après chirurgie cardiaque adulte sous CEC ou à cœur battant (2021, prose)",
+            "Gestion des anticoagulants pour une procédure invasive programmée (2026, prose)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, prose)"
+          ]
+        },
+        {
+          "id": "Q52",
+          "title": "Drainage thoracique",
+          "category": "antibioprophylaxie_open",
+          "has_curr_edition": false,
+          "evidence_found": false,
+          "required_terms": [
+            "pas d'antibioprophylaxie"
+          ],
+          "top3_docs": [
+            "Traumatisme Thoracique : Prise en charge des 48 premières heures (2014, prose)",
+            "Épanchement pleural liquidien de l’adulte en soins critiques (2023, prose)",
+            "Épanchement pleural liquidien de l’adulte en soins critiques (2023, prose)"
+          ]
+        },
+        {
+          "id": "Q90",
+          "title": "Colectomie droite porteur BLSE",
+          "category": "antibioprophylaxie_open",
+          "has_curr_edition": true,
+          "evidence_found": false,
+          "required_terms": [
+            "Ertapénème"
+          ],
+          "top3_docs": [
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, prose)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, prose)",
+            "Stratégies de réduction de l’utilisation des antibiotiques à visée curative en réanimation (2014, prose)"
+          ]
+        },
+        {
+          "id": "Q111",
+          "title": "Cystectomie sustrigonale",
+          "category": "antibioprophylaxie_open",
+          "has_curr_edition": false,
+          "evidence_found": true,
+          "required_terms": [
+            "Céfoxitine"
+          ],
+          "top3_docs": [
+            "Place de l’ECBU avant une prise en charge urologique chirurgicale ou interventionnelle chez l’adulte et modalités de traitement en cas de colonisation (2026, prose)",
+            "Place de l’ECBU avant une prise en charge urologique chirurgicale ou interventionnelle chez l’adulte et modalités de traitement en cas de colonisation (2026, prose)",
+            "Place de l’ECBU avant une prise en charge urologique chirurgicale ou interventionnelle chez l’adulte et modalités de traitement en cas de colonisation (2026, prose)"
+          ]
+        },
+        {
+          "id": "Q116",
+          "title": "Néphrolithotomie percutanée",
+          "category": "antibioprophylaxie_open",
+          "has_curr_edition": false,
+          "evidence_found": false,
+          "required_terms": [
+            "Céfazoline"
+          ],
+          "top3_docs": [
+            "Place de l’ECBU avant une prise en charge urologique chirurgicale ou interventionnelle chez l’adulte et modalités de traitement en cas de colonisation (2026, prose)",
+            "Place de l’ECBU avant une prise en charge urologique chirurgicale ou interventionnelle chez l’adulte et modalités de traitement en cas de colonisation (2026, prose)",
+            "Place de l’ECBU avant une prise en charge urologique chirurgicale ou interventionnelle chez l’adulte et modalités de traitement en cas de colonisation (2026, prose)"
+          ]
+        },
+        {
+          "id": "Q134",
+          "title": "Abdominoplastie courte durée",
+          "category": "antibioprophylaxie_open",
+          "has_curr_edition": false,
+          "evidence_found": false,
+          "required_terms": [
+            "pas d'antibioprophylaxie"
+          ],
+          "top3_docs": [
+            "Stratégie du remplissage vasculaire périopératoire (2012, prose)",
+            "Les blocs périmédullaires chez l’adulte (2006, prose)",
+            "Prise en charge du sepsis du nouveau-né, de l’enfant et de l’adulte – HAS 2025 (2025, prose)"
+          ]
+        },
+        {
+          "id": "Q163",
+          "title": "Fracture ouverte radius ceftriaxone pneumopathie",
+          "category": "antibioprophylaxie_mcq",
+          "has_curr_edition": false,
+          "evidence_found": null,
+          "required_terms": [],
+          "top3_docs": [
+            "Prise en charge des patients présentant un traumatisme sévère de membre(s) (2020, prose)",
+            "Prise en charge des patients présentant un traumatisme sévère de membre(s) (2020, prose)",
+            "Prise en charge des traumatisés crâniens graves à la phase précoce (24 premières heures) (2016, prose)"
+          ]
+        },
+        {
+          "id": "Q171",
+          "title": "ORL : laquelle ne nécessite PAS d'ABP ?",
+          "category": "antibioprophylaxie_mcq",
+          "has_curr_edition": false,
+          "evidence_found": null,
+          "required_terms": [],
+          "top3_docs": [
+            "Prise en charge des voies aériennes en anesthésie adulte à l’exception de l’intubation difficile (2003, prose)",
+            "Prise en charge des voies aériennes de l’adulte au bloc opératoire (2026, prose)",
+            "Intubation difficile (2006, prose)"
+          ]
+        }
+      ]
+    },
+    {
+      "config_name": "C2_hierarchical_bm25_no_refs",
+      "chunking_strategy": "hierarchical_markdown",
+      "num_questions": 171,
+      "doc_hit_rate": 0.9766,
+      "current_edition_hit_rate": 0.9708,
+      "obsolete_intrusion_rate": 0.6433,
+      "bibliography_pollution_rate": 0.0,
+      "evidence_recall": 0.942,
+      "evidence_eval_count": 138,
+      "allergy_evidence_recall": 0.8333,
+      "allergy_eval_count": 6,
+      "mrr_current_edition": 0.8624,
+      "multi_edition_coverage": null,
+      "avg_latency_ms": 0.85,
+      "avg_context_chars": 7169.6,
+      "est_context_tokens": 1792.0,
+      "per_category": {
+        "antibioprophylaxie_allergy": {
+          "n": 8,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 0.8333
+        },
+        "antibioprophylaxie_mcq": {
+          "n": 31,
+          "curr_hit_rate": 0.9355,
+          "ev_recall": null
+        },
+        "antibioprophylaxie_open": {
+          "n": 132,
+          "curr_hit_rate": 0.9773,
+          "ev_recall": 0.947
+        }
+      },
+      "sample_failures": [
+        {
+          "id": "Q01",
+          "title": "PTH standard",
+          "category": "antibioprophylaxie_open",
+          "has_curr_edition": false,
+          "evidence_found": false,
+          "required_terms": [
+            "Céfazoline"
+          ],
+          "top3_docs": [
+            "Prévention de la maladie thromboembolique veineuse postopératoire (2011, prose)",
+            "Gestion périopératoire des traitements chroniques et dispositifs médicaux (2009, prose)",
+            "Prévention de la maladie thromboembolique veineuse postopératoire (2011, prose)"
+          ]
+        },
+        {
+          "id": "Q12",
+          "title": "Fracture ouverte Gustilo 3 allergie",
+          "category": "antibioprophylaxie_allergy",
+          "has_curr_edition": true,
+          "evidence_found": false,
+          "required_terms": [
+            "Clindamycine",
+            "Gentamicine"
+          ],
+          "top3_docs": [
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, prose)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, prose)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, prose)"
+          ]
+        },
+        {
+          "id": "Q14",
+          "title": "Morsure chien visage parage bloc",
+          "category": "antibioprophylaxie_open",
+          "has_curr_edition": true,
+          "evidence_found": false,
+          "required_terms": [
+            "Amoxicilline",
+            "Clavulanate"
+          ],
+          "top3_docs": [
+            "Bris dentaires périanesthésiques (2012, prose)",
+            "Tenue vestimentaire au bloc opératoire (2021, prose)",
+            "Prise en charge des voies aériennes de l’adulte au bloc opératoire (2026, prose)"
+          ]
+        },
+        {
+          "id": "Q22",
+          "title": "Plaie cranio-cérébrale",
+          "category": "antibioprophylaxie_open",
+          "has_curr_edition": false,
+          "evidence_found": false,
+          "required_terms": [
+            "Amoxicilline",
+            "Clavulanate"
+          ],
+          "top3_docs": [
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (patients adultes) (2018, prose)",
+            "Prise en charge des patients présentant un traumatisme crânien léger de l’adulte (2022, prose)",
+            "Prise en charge neurochirurgicales des traumatismes cranio-encéphaliques de l’adulte et de l’enfant à la phase initiale (2025, prose)"
+          ]
+        },
+        {
+          "id": "Q40",
+          "title": "Extraction dent incluse",
+          "category": "antibioprophylaxie_open",
+          "has_curr_edition": true,
+          "evidence_found": false,
+          "required_terms": [
+            "Amoxicilline"
+          ],
+          "top3_docs": [
+            "Gestion des anticoagulants pour une procédure invasive programmée (2026, prose)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (patients adultes) (2018, prose)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (patients adultes) (2018, prose)"
+          ]
+        },
+        {
+          "id": "Q44",
+          "title": "Remplacement valvulaire sous CEC",
+          "category": "antibioprophylaxie_open",
+          "has_curr_edition": true,
+          "evidence_found": false,
+          "required_terms": [
+            "Céfazoline"
+          ],
+          "top3_docs": [
+            "Réhabilitation améliorée après chirurgie cardiaque adulte sous CEC ou à cœur battant (2021, prose)",
+            "Réhabilitation améliorée après chirurgie cardiaque adulte sous CEC ou à cœur battant (2021, prose)",
+            "Réhabilitation améliorée après chirurgie cardiaque adulte sous CEC ou à cœur battant (2021, prose)"
+          ]
+        },
+        {
+          "id": "Q52",
+          "title": "Drainage thoracique",
+          "category": "antibioprophylaxie_open",
+          "has_curr_edition": false,
+          "evidence_found": false,
+          "required_terms": [
+            "pas d'antibioprophylaxie"
+          ],
+          "top3_docs": [
+            "Traumatisme Thoracique : Prise en charge des 48 premières heures (2014, prose)",
+            "Traumatisme Thoracique : Prise en charge des 48 premières heures (2014, prose)",
+            "Épanchement pleural liquidien de l’adulte en soins critiques (2023, prose)"
+          ]
+        },
+        {
+          "id": "Q85",
+          "title": "Oesophagectomie",
+          "category": "antibioprophylaxie_open",
+          "has_curr_edition": true,
+          "evidence_found": false,
+          "required_terms": [
+            "Céfazoline"
+          ],
+          "top3_docs": [
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, prose)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, prose)",
+            "Prise en charge du brûlé grave à la phase aiguë chez l’adulte et l’enfant (2019, prose)"
+          ]
+        },
+        {
+          "id": "Q139",
+          "title": "PTG première intention",
+          "category": "antibioprophylaxie_mcq",
+          "has_curr_edition": false,
+          "evidence_found": null,
+          "required_terms": [],
+          "top3_docs": [
+            "Prévention de la maladie thromboembolique veineuse postopératoire (2011, prose)",
+            "Prévention de la maladie thromboembolique veineuse postopératoire (2011, prose)",
+            "Prévention de la maladie thromboembolique veineuse postopératoire (2011, prose)"
+          ]
+        },
+        {
+          "id": "Q163",
+          "title": "Fracture ouverte radius ceftriaxone pneumopathie",
+          "category": "antibioprophylaxie_mcq",
+          "has_curr_edition": false,
+          "evidence_found": null,
+          "required_terms": [],
+          "top3_docs": [
+            "Prise en charge des patients présentant un traumatisme sévère de membre(s) (2020, prose)",
+            "Facteurs humains en situations critiques (2022, prose)",
+            "Prise en charge des patients présentant un traumatisme sévère de membre(s) (2020, prose)"
+          ]
+        }
+      ]
+    },
+    {
+      "config_name": "C3_table_sota_bm25_lexicon",
+      "chunking_strategy": "table_aware_sota",
+      "num_questions": 171,
+      "doc_hit_rate": 0.9708,
+      "current_edition_hit_rate": 0.9532,
+      "obsolete_intrusion_rate": 0.5497,
+      "bibliography_pollution_rate": 0.0,
+      "evidence_recall": 0.942,
+      "evidence_eval_count": 138,
+      "allergy_evidence_recall": 0.6667,
+      "allergy_eval_count": 6,
+      "mrr_current_edition": 0.8361,
+      "multi_edition_coverage": null,
+      "avg_latency_ms": 0.88,
+      "avg_context_chars": 5885.7,
+      "est_context_tokens": 1471.0,
+      "per_category": {
+        "antibioprophylaxie_allergy": {
+          "n": 8,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 0.6667
+        },
+        "antibioprophylaxie_mcq": {
+          "n": 31,
+          "curr_hit_rate": 0.8387,
+          "ev_recall": null
+        },
+        "antibioprophylaxie_open": {
+          "n": 132,
+          "curr_hit_rate": 0.9773,
+          "ev_recall": 0.9545
+        }
+      },
+      "sample_failures": [
+        {
+          "id": "Q01",
+          "title": "PTH standard",
+          "category": "antibioprophylaxie_open",
+          "has_curr_edition": false,
+          "evidence_found": false,
+          "required_terms": [
+            "Céfazoline"
+          ],
+          "top3_docs": [
+            "Prévention de la maladie thromboembolique veineuse péri-opératoire (2024, prose)",
+            "Prévention de la maladie thromboembolique veineuse postopératoire (2011, table_markdown)",
+            "Prévention de la maladie thromboembolique veineuse postopératoire (2011, prose)"
+          ]
+        },
+        {
+          "id": "Q12",
+          "title": "Fracture ouverte Gustilo 3 allergie",
+          "category": "antibioprophylaxie_allergy",
+          "has_curr_edition": true,
+          "evidence_found": false,
+          "required_terms": [
+            "Clindamycine",
+            "Gentamicine"
+          ],
+          "top3_docs": [
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, table_markdown)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, prose)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, table_markdown)"
+          ]
+        },
+        {
+          "id": "Q22",
+          "title": "Plaie cranio-cérébrale",
+          "category": "antibioprophylaxie_open",
+          "has_curr_edition": false,
+          "evidence_found": false,
+          "required_terms": [
+            "Amoxicilline",
+            "Clavulanate"
+          ],
+          "top3_docs": [
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (patients adultes) (2018, prose)",
+            "Prise en charge des patients présentant un traumatisme crânien léger de l’adulte (2022, prose)",
+            "Prise en charge neurochirurgicales des traumatismes cranio-encéphaliques de l’adulte et de l’enfant à la phase initiale (2025, prose)"
+          ]
+        },
+        {
+          "id": "Q28",
+          "title": "Plaie cranio-cérébrale allergie pénicillines",
+          "category": "antibioprophylaxie_allergy",
+          "has_curr_edition": true,
+          "evidence_found": false,
+          "required_terms": [
+            "Triméthoprime",
+            "Sulfaméthoxazole"
+          ],
+          "top3_docs": [
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (patients adultes) (2018, prose)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, prose)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, prose)"
+          ]
+        },
+        {
+          "id": "Q40",
+          "title": "Extraction dent incluse",
+          "category": "antibioprophylaxie_open",
+          "has_curr_edition": true,
+          "evidence_found": false,
+          "required_terms": [
+            "Amoxicilline"
+          ],
+          "top3_docs": [
+            "Gestion des anticoagulants pour une procédure invasive programmée (2026, table_markdown)",
+            "Gestion des anticoagulants pour une procédure invasive programmée (2026, table_row_card)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, table_markdown)"
+          ]
+        },
+        {
+          "id": "Q44",
+          "title": "Remplacement valvulaire sous CEC",
+          "category": "antibioprophylaxie_open",
+          "has_curr_edition": true,
+          "evidence_found": false,
+          "required_terms": [
+            "Céfazoline"
+          ],
+          "top3_docs": [
+            "Réhabilitation améliorée après chirurgie cardiaque adulte sous CEC ou à cœur battant (2021, table_markdown)",
+            "Réhabilitation améliorée après chirurgie cardiaque adulte sous CEC ou à cœur battant (2021, prose)",
+            "Réhabilitation améliorée après chirurgie cardiaque adulte sous CEC ou à cœur battant (2021, callout_footnote)"
+          ]
+        },
+        {
+          "id": "Q52",
+          "title": "Drainage thoracique",
+          "category": "antibioprophylaxie_open",
+          "has_curr_edition": false,
+          "evidence_found": false,
+          "required_terms": [
+            "pas d'antibioprophylaxie"
+          ],
+          "top3_docs": [
+            "Traumatisme Thoracique : Prise en charge des 48 premières heures (2014, prose)",
+            "Traumatisme Thoracique : Prise en charge des 48 premières heures (2014, prose)",
+            "Épanchement pleural liquidien de l’adulte en soins critiques (2023, prose)"
+          ]
+        },
+        {
+          "id": "Q85",
+          "title": "Oesophagectomie",
+          "category": "antibioprophylaxie_open",
+          "has_curr_edition": true,
+          "evidence_found": false,
+          "required_terms": [
+            "Céfazoline"
+          ],
+          "top3_docs": [
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, prose)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, prose)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, table_markdown)"
+          ]
+        },
+        {
+          "id": "Q139",
+          "title": "PTG première intention",
+          "category": "antibioprophylaxie_mcq",
+          "has_curr_edition": false,
+          "evidence_found": null,
+          "required_terms": [],
+          "top3_docs": [
+            "Prévention de la maladie thromboembolique veineuse postopératoire (2011, prose)",
+            "Prévention de la maladie thromboembolique veineuse postopératoire (2011, prose)",
+            "Prévention de la maladie thromboembolique veineuse postopératoire (2011, prose)"
+          ]
+        },
+        {
+          "id": "Q140",
+          "title": "Intervention sans ABP",
+          "category": "antibioprophylaxie_mcq",
+          "has_curr_edition": false,
+          "evidence_found": null,
+          "required_terms": [],
+          "top3_docs": [
+            "Pneumonies associées aux soins de réanimation (2017, prose)",
+            "Pneumonies associées aux soins de réanimation (2017, prose)",
+            "Pneumonies associées aux soins de réanimation (2017, prose)"
+          ]
+        },
+        {
+          "id": "Q146",
+          "title": "ORL sans ABP",
+          "category": "antibioprophylaxie_mcq",
+          "has_curr_edition": false,
+          "evidence_found": null,
+          "required_terms": [],
+          "top3_docs": [
+            "Recommandations Antalgiques en chirurgie ORL (2014, prose)",
+            "Recommandations Antalgiques en chirurgie ORL (2014, callout_footnote)",
+            "Recommandations Antalgiques en chirurgie ORL (2014, prose)"
+          ]
+        },
+        {
+          "id": "Q163",
+          "title": "Fracture ouverte radius ceftriaxone pneumopathie",
+          "category": "antibioprophylaxie_mcq",
+          "has_curr_edition": false,
+          "evidence_found": null,
+          "required_terms": [],
+          "top3_docs": [
+            "Prise en charge des patients présentant un traumatisme sévère de membre(s) (2020, prose)",
+            "Prise en charge des patients présentant un traumatisme sévère de membre(s) (2020, prose)",
+            "Prise en charge des patients présentant un traumatisme sévère de membre(s) (2020, prose)"
+          ]
+        },
+        {
+          "id": "Q171",
+          "title": "ORL : laquelle ne nécessite PAS d'ABP ?",
+          "category": "antibioprophylaxie_mcq",
+          "has_curr_edition": false,
+          "evidence_found": null,
+          "required_terms": [],
+          "top3_docs": [
+            "Recommandations Antalgiques en chirurgie ORL (2014, prose)",
+            "Recommandations Antalgiques en chirurgie ORL (2014, callout_footnote)",
+            "Gestion des anticoagulants pour une procédure invasive programmée (2026, prose)"
+          ]
+        }
+      ]
+    },
+    {
+      "config_name": "C4_table_sota_dense",
+      "chunking_strategy": "table_aware_sota",
+      "num_questions": 171,
+      "doc_hit_rate": 1.0,
+      "current_edition_hit_rate": 0.9883,
+      "obsolete_intrusion_rate": 0.8772,
+      "bibliography_pollution_rate": 0.0,
+      "evidence_recall": 0.8696,
+      "evidence_eval_count": 138,
+      "allergy_evidence_recall": 1.0,
+      "allergy_eval_count": 6,
+      "mrr_current_edition": 0.831,
+      "multi_edition_coverage": null,
+      "avg_latency_ms": 17.89,
+      "avg_context_chars": 3895.7,
+      "est_context_tokens": 974.0,
+      "per_category": {
+        "antibioprophylaxie_allergy": {
+          "n": 8,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 1.0
+        },
+        "antibioprophylaxie_mcq": {
+          "n": 31,
+          "curr_hit_rate": 0.9677,
+          "ev_recall": null
+        },
+        "antibioprophylaxie_open": {
+          "n": 132,
+          "curr_hit_rate": 0.9924,
+          "ev_recall": 0.8636
+        }
+      },
+      "sample_failures": [
+        {
+          "id": "Q14",
+          "title": "Morsure chien visage parage bloc",
+          "category": "antibioprophylaxie_open",
+          "has_curr_edition": true,
+          "evidence_found": false,
+          "required_terms": [
+            "Amoxicilline",
+            "Clavulanate"
+          ],
+          "top3_docs": [
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (patients adultes) (2017, prose)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, prose)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, prose)"
+          ]
+        },
+        {
+          "id": "Q15",
+          "title": "Polytrauma fémur radius plaie main",
+          "category": "antibioprophylaxie_open",
+          "has_curr_edition": true,
+          "evidence_found": false,
+          "required_terms": [
+            "Amoxicilline",
+            "Clavulanate"
+          ],
+          "top3_docs": [
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, table_row_card)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, prose)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, prose)"
+          ]
+        },
+        {
+          "id": "Q16",
+          "title": "Splénectomie hémostase fixateur externe fémur",
+          "category": "antibioprophylaxie_open",
+          "has_curr_edition": true,
+          "evidence_found": false,
+          "required_terms": [
+            "Céfazoline"
+          ],
+          "top3_docs": [
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (patients adultes) (2018, table_row_card)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, table_row_card)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (patients adultes) (2017, table_row_card)"
+          ]
+        },
+        {
+          "id": "Q32",
+          "title": "Laryngectomie totale",
+          "category": "antibioprophylaxie_open",
+          "has_curr_edition": true,
+          "evidence_found": false,
+          "required_terms": [
+            "Amoxicilline",
+            "Clavulanate"
+          ],
+          "top3_docs": [
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, table_row_card)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, table_markdown)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, table_markdown)"
+          ]
+        },
+        {
+          "id": "Q34",
+          "title": "Trachéotomie chirurgicale",
+          "category": "antibioprophylaxie_open",
+          "has_curr_edition": true,
+          "evidence_found": false,
+          "required_terms": [
+            "Céfazoline"
+          ],
+          "top3_docs": [
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, table_row_card)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, prose)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, table_row_card)"
+          ]
+        },
+        {
+          "id": "Q38",
+          "title": "Traumatisme globe ouvert",
+          "category": "antibioprophylaxie_open",
+          "has_curr_edition": true,
+          "evidence_found": false,
+          "required_terms": [
+            "Vancomycine",
+            "Ceftazidime"
+          ],
+          "top3_docs": [
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, prose)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, table_row_card)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, table_row_card)"
+          ]
+        },
+        {
+          "id": "Q40",
+          "title": "Extraction dent incluse",
+          "category": "antibioprophylaxie_open",
+          "has_curr_edition": true,
+          "evidence_found": false,
+          "required_terms": [
+            "Amoxicilline"
+          ],
+          "top3_docs": [
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, table_row_card)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (patients adultes) (2018, table_row_card)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, prose)"
+          ]
+        },
+        {
+          "id": "Q41",
+          "title": "Fracture mandibule",
+          "category": "antibioprophylaxie_open",
+          "has_curr_edition": true,
+          "evidence_found": false,
+          "required_terms": [
+            "Amoxicilline",
+            "Clavulanate"
+          ],
+          "top3_docs": [
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, prose)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, table_row_card)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, table_row_card)"
+          ]
+        },
+        {
+          "id": "Q42",
+          "title": "Chirurgie orthognatique",
+          "category": "antibioprophylaxie_open",
+          "has_curr_edition": true,
+          "evidence_found": false,
+          "required_terms": [
+            "Céfazoline"
+          ],
+          "top3_docs": [
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, table_row_card)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (patients adultes) (2018, prose)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, prose)"
+          ]
+        },
+        {
+          "id": "Q46",
+          "title": "Pose pacemaker",
+          "category": "antibioprophylaxie_open",
+          "has_curr_edition": false,
+          "evidence_found": false,
+          "required_terms": [
+            "Céfazoline"
+          ],
+          "top3_docs": [
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (patients adultes) (2018, prose)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (patients adultes) (2018, table_row_card)",
+            "Recommandations pour la pratique des blocs moteurs périphériques en Médecine Physique et de Réadaptation (MPR) (2018, prose)"
+          ]
+        },
+        {
+          "id": "Q70",
+          "title": "Résection endométriose avec atteinte rectale",
+          "category": "antibioprophylaxie_open",
+          "has_curr_edition": true,
+          "evidence_found": false,
+          "required_terms": [
+            "Céfazoline",
+            "Métronidazole"
+          ],
+          "top3_docs": [
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (patients adultes) (2018, prose)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, prose)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, callout_footnote)"
+          ]
+        },
+        {
+          "id": "Q73",
+          "title": "Conisation col utérin",
+          "category": "antibioprophylaxie_open",
+          "has_curr_edition": true,
+          "evidence_found": false,
+          "required_terms": [
+            "pas d'antibioprophylaxie"
+          ],
+          "top3_docs": [
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (patients adultes) (2018, prose)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (patients adultes) (2018, prose)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (patients adultes) (2018, prose)"
+          ]
+        },
+        {
+          "id": "Q76",
+          "title": "Chirurgie du prolapsus",
+          "category": "antibioprophylaxie_open",
+          "has_curr_edition": true,
+          "evidence_found": false,
+          "required_terms": [
+            "Céfazoline"
+          ],
+          "top3_docs": [
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (patients adultes) (2018, prose)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (patients adultes) (2018, prose)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (patients adultes) (2018, prose)"
+          ]
+        },
+        {
+          "id": "Q91",
+          "title": "Hémorroïdes",
+          "category": "antibioprophylaxie_open",
+          "has_curr_edition": true,
+          "evidence_found": false,
+          "required_terms": [
+            "Métronidazole"
+          ],
+          "top3_docs": [
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (patients adultes) (2018, prose)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, table_row_card)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, table_row_card)"
+          ]
+        },
+        {
+          "id": "Q99",
+          "title": "Transplantation hépatique",
+          "category": "antibioprophylaxie_open",
+          "has_curr_edition": true,
+          "evidence_found": false,
+          "required_terms": [
+            "Céfoxitine"
+          ],
+          "top3_docs": [
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, table_markdown)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, prose)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, table_row_card)"
+          ]
+        }
+      ]
+    },
+    {
+      "config_name": "C5_table_sota_hybrid_rrf",
+      "chunking_strategy": "table_aware_sota",
+      "num_questions": 171,
+      "doc_hit_rate": 1.0,
+      "current_edition_hit_rate": 0.9942,
+      "obsolete_intrusion_rate": 0.7602,
+      "bibliography_pollution_rate": 0.0,
+      "evidence_recall": 0.9565,
+      "evidence_eval_count": 138,
+      "allergy_evidence_recall": 1.0,
+      "allergy_eval_count": 6,
+      "mrr_current_edition": 0.9137,
+      "multi_edition_coverage": null,
+      "avg_latency_ms": 14.85,
+      "avg_context_chars": 4648.6,
+      "est_context_tokens": 1162.0,
+      "per_category": {
+        "antibioprophylaxie_allergy": {
+          "n": 8,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 1.0
+        },
+        "antibioprophylaxie_mcq": {
+          "n": 31,
+          "curr_hit_rate": 0.9677,
+          "ev_recall": null
+        },
+        "antibioprophylaxie_open": {
+          "n": 132,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 0.9545
+        }
+      },
+      "sample_failures": [
+        {
+          "id": "Q14",
+          "title": "Morsure chien visage parage bloc",
+          "category": "antibioprophylaxie_open",
+          "has_curr_edition": true,
+          "evidence_found": false,
+          "required_terms": [
+            "Amoxicilline",
+            "Clavulanate"
+          ],
+          "top3_docs": [
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, prose)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, prose)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, prose)"
+          ]
+        },
+        {
+          "id": "Q15",
+          "title": "Polytrauma fémur radius plaie main",
+          "category": "antibioprophylaxie_open",
+          "has_curr_edition": true,
+          "evidence_found": false,
+          "required_terms": [
+            "Amoxicilline",
+            "Clavulanate"
+          ],
+          "top3_docs": [
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, table_row_card)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, prose)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, table_row_card)"
+          ]
+        },
+        {
+          "id": "Q38",
+          "title": "Traumatisme globe ouvert",
+          "category": "antibioprophylaxie_open",
+          "has_curr_edition": true,
+          "evidence_found": false,
+          "required_terms": [
+            "Vancomycine",
+            "Ceftazidime"
+          ],
+          "top3_docs": [
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, table_row_card)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (patients adultes) (2018, table_row_card)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, table_row_card)"
+          ]
+        },
+        {
+          "id": "Q40",
+          "title": "Extraction dent incluse",
+          "category": "antibioprophylaxie_open",
+          "has_curr_edition": true,
+          "evidence_found": false,
+          "required_terms": [
+            "Amoxicilline"
+          ],
+          "top3_docs": [
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (patients adultes) (2018, table_row_card)",
+            "Gestion des anticoagulants pour une procédure invasive programmée (2026, table_markdown)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, table_row_card)"
+          ]
+        },
+        {
+          "id": "Q85",
+          "title": "Oesophagectomie",
+          "category": "antibioprophylaxie_open",
+          "has_curr_edition": true,
+          "evidence_found": false,
+          "required_terms": [
+            "Céfazoline"
+          ],
+          "top3_docs": [
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, prose)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (patients adultes) (2018, prose)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, table_row_card)"
+          ]
+        },
+        {
+          "id": "Q99",
+          "title": "Transplantation hépatique",
+          "category": "antibioprophylaxie_open",
+          "has_curr_edition": true,
+          "evidence_found": false,
+          "required_terms": [
+            "Céfoxitine"
+          ],
+          "top3_docs": [
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, table_markdown)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, table_row_card)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, prose)"
+          ]
+        },
+        {
+          "id": "Q140",
+          "title": "Intervention sans ABP",
+          "category": "antibioprophylaxie_mcq",
+          "has_curr_edition": false,
+          "evidence_found": null,
+          "required_terms": [],
+          "top3_docs": [
+            "Pneumonies associées aux soins de réanimation (2017, prose)",
+            "Pneumonies associées aux soins de réanimation (2017, prose)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (patients adultes) (2018, prose)"
+          ]
+        }
+      ]
+    },
+    {
+      "config_name": "C6_hybrid_temporal_metadata",
+      "chunking_strategy": "table_aware_sota",
+      "num_questions": 171,
+      "doc_hit_rate": 1.0,
+      "current_edition_hit_rate": 1.0,
+      "obsolete_intrusion_rate": 0.0,
+      "bibliography_pollution_rate": 0.0,
+      "evidence_recall": 0.9783,
+      "evidence_eval_count": 138,
+      "allergy_evidence_recall": 1.0,
+      "allergy_eval_count": 6,
+      "mrr_current_edition": 0.9828,
+      "multi_edition_coverage": null,
+      "avg_latency_ms": 21.24,
+      "avg_context_chars": 4132.6,
+      "est_context_tokens": 1033.0,
+      "per_category": {
+        "antibioprophylaxie_allergy": {
+          "n": 8,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 1.0
+        },
+        "antibioprophylaxie_mcq": {
+          "n": 31,
+          "curr_hit_rate": 1.0,
+          "ev_recall": null
+        },
+        "antibioprophylaxie_open": {
+          "n": 132,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 0.9773
+        }
+      },
+      "sample_failures": [
+        {
+          "id": "Q15",
+          "title": "Polytrauma fémur radius plaie main",
+          "category": "antibioprophylaxie_open",
+          "has_curr_edition": true,
+          "evidence_found": false,
+          "required_terms": [
+            "Amoxicilline",
+            "Clavulanate"
+          ],
+          "top3_docs": [
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, table_row_card)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, table_row_card)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, table_row_card)"
+          ]
+        },
+        {
+          "id": "Q38",
+          "title": "Traumatisme globe ouvert",
+          "category": "antibioprophylaxie_open",
+          "has_curr_edition": true,
+          "evidence_found": false,
+          "required_terms": [
+            "Vancomycine",
+            "Ceftazidime"
+          ],
+          "top3_docs": [
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, table_row_card)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, table_row_card)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, table_row_card)"
+          ]
+        },
+        {
+          "id": "Q40",
+          "title": "Extraction dent incluse",
+          "category": "antibioprophylaxie_open",
+          "has_curr_edition": true,
+          "evidence_found": false,
+          "required_terms": [
+            "Amoxicilline"
+          ],
+          "top3_docs": [
+            "Gestion des anticoagulants pour une procédure invasive programmée (2026, table_row_card)",
+            "Gestion des anticoagulants pour une procédure invasive programmée (2026, table_markdown)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, table_row_card)"
+          ]
+        }
+      ]
+    },
+    {
+      "config_name": "C7_sota_rerank_callouts",
+      "chunking_strategy": "table_aware_sota",
+      "num_questions": 171,
+      "doc_hit_rate": 1.0,
+      "current_edition_hit_rate": 1.0,
+      "obsolete_intrusion_rate": 0.0,
+      "bibliography_pollution_rate": 0.0,
+      "evidence_recall": 0.9928,
+      "evidence_eval_count": 138,
+      "allergy_evidence_recall": 1.0,
+      "allergy_eval_count": 6,
+      "mrr_current_edition": 0.9849,
+      "multi_edition_coverage": null,
+      "avg_latency_ms": 3108.36,
+      "avg_context_chars": 5042.7,
+      "est_context_tokens": 1261.0,
+      "per_category": {
+        "antibioprophylaxie_allergy": {
+          "n": 8,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 1.0
+        },
+        "antibioprophylaxie_mcq": {
+          "n": 31,
+          "curr_hit_rate": 1.0,
+          "ev_recall": null
+        },
+        "antibioprophylaxie_open": {
+          "n": 132,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 0.9924
+        }
+      },
+      "sample_failures": [
+        {
+          "id": "Q15",
+          "title": "Polytrauma fémur radius plaie main",
+          "category": "antibioprophylaxie_open",
+          "has_curr_edition": true,
+          "evidence_found": false,
+          "required_terms": [
+            "Amoxicilline",
+            "Clavulanate"
+          ],
+          "top3_docs": [
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, table_row_card)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, table_row_card)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, prose)"
+          ]
+        }
+      ]
+    },
+    {
+      "config_name": "C8_frontier_2026_tri_dbsf_crag",
+      "chunking_strategy": "table_aware_sota",
+      "num_questions": 171,
+      "doc_hit_rate": 0.9942,
+      "current_edition_hit_rate": 0.9942,
+      "obsolete_intrusion_rate": 0.0,
+      "bibliography_pollution_rate": 0.0,
+      "evidence_recall": 0.9928,
+      "evidence_eval_count": 138,
+      "allergy_evidence_recall": 1.0,
+      "allergy_eval_count": 6,
+      "mrr_current_edition": 0.9815,
+      "multi_edition_coverage": null,
+      "avg_latency_ms": 743.95,
+      "avg_context_chars": 4594.2,
+      "est_context_tokens": 1149.0,
+      "per_category": {
+        "antibioprophylaxie_allergy": {
+          "n": 8,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 1.0
+        },
+        "antibioprophylaxie_mcq": {
+          "n": 31,
+          "curr_hit_rate": 0.9677,
+          "ev_recall": null
+        },
+        "antibioprophylaxie_open": {
+          "n": 132,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 0.9924
+        }
+      },
+      "sample_failures": [
+        {
+          "id": "Q15",
+          "title": "Polytrauma fémur radius plaie main",
+          "category": "antibioprophylaxie_open",
+          "has_curr_edition": true,
+          "evidence_found": false,
+          "required_terms": [
+            "Amoxicilline",
+            "Clavulanate"
+          ],
+          "top3_docs": [
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, table_row_card)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, table_row_card)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, table_row_card)"
+          ]
+        },
+        {
+          "id": "Q163",
+          "title": "Fracture ouverte radius ceftriaxone pneumopathie",
+          "category": "antibioprophylaxie_mcq",
+          "has_curr_edition": false,
+          "evidence_found": null,
+          "required_terms": [],
+          "top3_docs": [
+            "Prise en charge des patients présentant un traumatisme sévère de membre(s) (2020, prose)",
+            "Prise en charge des patients présentant un traumatisme sévère de membre(s) (2020, prose)",
+            "Prise en charge des patients présentant un traumatisme sévère de membre(s) (2020, prose)"
+          ]
+        }
+      ]
+    }
+  ],
+  "multi_rfe_stress_30": [
+    {
+      "config_name": "C0_naive_fixed_bm25",
+      "chunking_strategy": "naive_fixed",
+      "num_questions": 30,
+      "doc_hit_rate": 1.0,
+      "current_edition_hit_rate": 1.0,
+      "obsolete_intrusion_rate": 0.3571,
+      "bibliography_pollution_rate": 0.0,
+      "evidence_recall": 0.9667,
+      "evidence_eval_count": 30,
+      "allergy_evidence_recall": 1.0,
+      "allergy_eval_count": 4,
+      "mrr_current_edition": 0.9556,
+      "multi_edition_coverage": 0.5,
+      "avg_latency_ms": 1.38,
+      "avg_context_chars": 9517.7,
+      "est_context_tokens": 2379.0,
+      "per_category": {
+        "flagship_abp_2026": {
+          "n": 3,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 1.0
+        },
+        "flagship_abp_allergy": {
+          "n": 3,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 1.0
+        },
+        "flagship_abp_pediatrie": {
+          "n": 1,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 0.0
+        },
+        "flagship_anticoag_2026": {
+          "n": 5,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 1.0
+        },
+        "flagship_iia_2026": {
+          "n": 6,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 1.0
+        },
+        "recent_2026": {
+          "n": 1,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 1.0
+        },
+        "scope_separation_urgence": {
+          "n": 2,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 1.0
+        },
+        "supersession_2024": {
+          "n": 1,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 1.0
+        },
+        "supersession_2025": {
+          "n": 2,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 1.0
+        },
+        "supersession_2026": {
+          "n": 4,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 1.0
+        },
+        "temporal_diff": {
+          "n": 2,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 1.0
+        }
+      },
+      "sample_failures": [
+        {
+          "id": "M05",
+          "title": "ABP pédiatrie Champ 3 (nouveauté V3.0 2026)",
+          "category": "flagship_abp_pediatrie",
+          "has_curr_edition": true,
+          "evidence_found": false,
+          "required_terms": [
+            "cefazoline",
+            "mg/kg"
+          ],
+          "top3_docs": [
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, prose)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, prose)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, prose)"
+          ]
+        }
+      ]
+    },
+    {
+      "config_name": "C2_hierarchical_bm25_no_refs",
+      "chunking_strategy": "hierarchical_markdown",
+      "num_questions": 30,
+      "doc_hit_rate": 1.0,
+      "current_edition_hit_rate": 1.0,
+      "obsolete_intrusion_rate": 0.5714,
+      "bibliography_pollution_rate": 0.0,
+      "evidence_recall": 0.9333,
+      "evidence_eval_count": 30,
+      "allergy_evidence_recall": 0.75,
+      "allergy_eval_count": 4,
+      "mrr_current_edition": 0.9306,
+      "multi_edition_coverage": 0.5,
+      "avg_latency_ms": 1.3,
+      "avg_context_chars": 7811.2,
+      "est_context_tokens": 1953.0,
+      "per_category": {
+        "flagship_abp_2026": {
+          "n": 3,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 1.0
+        },
+        "flagship_abp_allergy": {
+          "n": 3,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 0.6667
+        },
+        "flagship_abp_pediatrie": {
+          "n": 1,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 1.0
+        },
+        "flagship_anticoag_2026": {
+          "n": 5,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 1.0
+        },
+        "flagship_iia_2026": {
+          "n": 6,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 0.8333
+        },
+        "recent_2026": {
+          "n": 1,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 1.0
+        },
+        "scope_separation_urgence": {
+          "n": 2,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 1.0
+        },
+        "supersession_2024": {
+          "n": 1,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 1.0
+        },
+        "supersession_2025": {
+          "n": 2,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 1.0
+        },
+        "supersession_2026": {
+          "n": 4,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 1.0
+        },
+        "temporal_diff": {
+          "n": 2,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 1.0
+        }
+      },
+      "sample_failures": [
+        {
+          "id": "M06",
+          "title": "ABP fracture ouverte Gustilo 3 allergie pénicillines",
+          "category": "flagship_abp_allergy",
+          "has_curr_edition": true,
+          "evidence_found": false,
+          "required_terms": [
+            "clindamycine",
+            "gentamicine"
+          ],
+          "top3_docs": [
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, prose)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, prose)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, prose)"
+          ]
+        },
+        {
+          "id": "M08",
+          "title": "IIA communautaire sans sepsis antibiothérapie probabiliste (R1.2.1 2026)",
+          "category": "flagship_iia_2026",
+          "has_curr_edition": true,
+          "evidence_found": false,
+          "required_terms": [
+            "3",
+            "metronidazole"
+          ],
+          "top3_docs": [
+            "Prise en charge thérapeutique des Infections intra-abdominales de l’adulte (2026, prose)",
+            "Prise en charge thérapeutique des Infections intra-abdominales de l’adulte (2026, prose)",
+            "Prise en charge thérapeutique des Infections intra-abdominales de l’adulte (2026, prose)"
+          ]
+        }
+      ]
+    },
+    {
+      "config_name": "C3_table_sota_bm25_lexicon",
+      "chunking_strategy": "table_aware_sota",
+      "num_questions": 30,
+      "doc_hit_rate": 0.9667,
+      "current_edition_hit_rate": 0.9667,
+      "obsolete_intrusion_rate": 0.3571,
+      "bibliography_pollution_rate": 0.0,
+      "evidence_recall": 0.9,
+      "evidence_eval_count": 30,
+      "allergy_evidence_recall": 0.5,
+      "allergy_eval_count": 4,
+      "mrr_current_edition": 0.9028,
+      "multi_edition_coverage": 0.5,
+      "avg_latency_ms": 0.95,
+      "avg_context_chars": 6435.6,
+      "est_context_tokens": 1609.0,
+      "per_category": {
+        "flagship_abp_2026": {
+          "n": 3,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 1.0
+        },
+        "flagship_abp_allergy": {
+          "n": 3,
+          "curr_hit_rate": 0.6667,
+          "ev_recall": 0.3333
+        },
+        "flagship_abp_pediatrie": {
+          "n": 1,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 0.0
+        },
+        "flagship_anticoag_2026": {
+          "n": 5,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 1.0
+        },
+        "flagship_iia_2026": {
+          "n": 6,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 1.0
+        },
+        "recent_2026": {
+          "n": 1,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 1.0
+        },
+        "scope_separation_urgence": {
+          "n": 2,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 1.0
+        },
+        "supersession_2024": {
+          "n": 1,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 1.0
+        },
+        "supersession_2025": {
+          "n": 2,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 1.0
+        },
+        "supersession_2026": {
+          "n": 4,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 1.0
+        },
+        "temporal_diff": {
+          "n": 2,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 1.0
+        }
+      },
+      "sample_failures": [
+        {
+          "id": "M03",
+          "title": "ABP PTG allergie bêtalactamines (split-chunk allergy box)",
+          "category": "flagship_abp_allergy",
+          "has_curr_edition": false,
+          "evidence_found": false,
+          "required_terms": [
+            "clindamycine"
+          ],
+          "top3_docs": [
+            "Prévention de la maladie thromboembolique veineuse postopératoire (2011, prose)",
+            "Prévention de la maladie thromboembolique veineuse postopératoire (2011, prose)",
+            "Prévention de la maladie thromboembolique veineuse postopératoire (2011, prose)"
+          ]
+        },
+        {
+          "id": "M05",
+          "title": "ABP pédiatrie Champ 3 (nouveauté V3.0 2026)",
+          "category": "flagship_abp_pediatrie",
+          "has_curr_edition": true,
+          "evidence_found": false,
+          "required_terms": [
+            "cefazoline",
+            "mg/kg"
+          ],
+          "top3_docs": [
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, prose)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, prose)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, prose)"
+          ]
+        },
+        {
+          "id": "M06",
+          "title": "ABP fracture ouverte Gustilo 3 allergie pénicillines",
+          "category": "flagship_abp_allergy",
+          "has_curr_edition": true,
+          "evidence_found": false,
+          "required_terms": [
+            "clindamycine",
+            "gentamicine"
+          ],
+          "top3_docs": [
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, table_markdown)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, prose)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, table_markdown)"
+          ]
+        }
+      ]
+    },
+    {
+      "config_name": "C4_table_sota_dense",
+      "chunking_strategy": "table_aware_sota",
+      "num_questions": 30,
+      "doc_hit_rate": 1.0,
+      "current_edition_hit_rate": 1.0,
+      "obsolete_intrusion_rate": 0.5357,
+      "bibliography_pollution_rate": 0.0,
+      "evidence_recall": 0.9667,
+      "evidence_eval_count": 30,
+      "allergy_evidence_recall": 1.0,
+      "allergy_eval_count": 4,
+      "mrr_current_edition": 0.9667,
+      "multi_edition_coverage": 0.5,
+      "avg_latency_ms": 16.48,
+      "avg_context_chars": 5044.3,
+      "est_context_tokens": 1261.0,
+      "per_category": {
+        "flagship_abp_2026": {
+          "n": 3,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 1.0
+        },
+        "flagship_abp_allergy": {
+          "n": 3,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 1.0
+        },
+        "flagship_abp_pediatrie": {
+          "n": 1,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 0.0
+        },
+        "flagship_anticoag_2026": {
+          "n": 5,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 1.0
+        },
+        "flagship_iia_2026": {
+          "n": 6,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 1.0
+        },
+        "recent_2026": {
+          "n": 1,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 1.0
+        },
+        "scope_separation_urgence": {
+          "n": 2,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 1.0
+        },
+        "supersession_2024": {
+          "n": 1,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 1.0
+        },
+        "supersession_2025": {
+          "n": 2,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 1.0
+        },
+        "supersession_2026": {
+          "n": 4,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 1.0
+        },
+        "temporal_diff": {
+          "n": 2,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 1.0
+        }
+      },
+      "sample_failures": [
+        {
+          "id": "M05",
+          "title": "ABP pédiatrie Champ 3 (nouveauté V3.0 2026)",
+          "category": "flagship_abp_pediatrie",
+          "has_curr_edition": true,
+          "evidence_found": false,
+          "required_terms": [
+            "cefazoline",
+            "mg/kg"
+          ],
+          "top3_docs": [
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, prose)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, prose)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, prose)"
+          ]
+        }
+      ]
+    },
+    {
+      "config_name": "C5_table_sota_hybrid_rrf",
+      "chunking_strategy": "table_aware_sota",
+      "num_questions": 30,
+      "doc_hit_rate": 1.0,
+      "current_edition_hit_rate": 1.0,
+      "obsolete_intrusion_rate": 0.3929,
+      "bibliography_pollution_rate": 0.0,
+      "evidence_recall": 0.9667,
+      "evidence_eval_count": 30,
+      "allergy_evidence_recall": 1.0,
+      "allergy_eval_count": 4,
+      "mrr_current_edition": 0.9833,
+      "multi_edition_coverage": 1.0,
+      "avg_latency_ms": 15.93,
+      "avg_context_chars": 5537.8,
+      "est_context_tokens": 1384.0,
+      "per_category": {
+        "flagship_abp_2026": {
+          "n": 3,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 1.0
+        },
+        "flagship_abp_allergy": {
+          "n": 3,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 1.0
+        },
+        "flagship_abp_pediatrie": {
+          "n": 1,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 0.0
+        },
+        "flagship_anticoag_2026": {
+          "n": 5,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 1.0
+        },
+        "flagship_iia_2026": {
+          "n": 6,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 1.0
+        },
+        "recent_2026": {
+          "n": 1,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 1.0
+        },
+        "scope_separation_urgence": {
+          "n": 2,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 1.0
+        },
+        "supersession_2024": {
+          "n": 1,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 1.0
+        },
+        "supersession_2025": {
+          "n": 2,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 1.0
+        },
+        "supersession_2026": {
+          "n": 4,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 1.0
+        },
+        "temporal_diff": {
+          "n": 2,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 1.0
+        }
+      },
+      "sample_failures": [
+        {
+          "id": "M05",
+          "title": "ABP pédiatrie Champ 3 (nouveauté V3.0 2026)",
+          "category": "flagship_abp_pediatrie",
+          "has_curr_edition": true,
+          "evidence_found": false,
+          "required_terms": [
+            "cefazoline",
+            "mg/kg"
+          ],
+          "top3_docs": [
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, table_row_card)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, table_row_card)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, table_row_card)"
+          ]
+        }
+      ]
+    },
+    {
+      "config_name": "C6_hybrid_temporal_metadata",
+      "chunking_strategy": "table_aware_sota",
+      "num_questions": 30,
+      "doc_hit_rate": 1.0,
+      "current_edition_hit_rate": 1.0,
+      "obsolete_intrusion_rate": 0.0,
+      "bibliography_pollution_rate": 0.0,
+      "evidence_recall": 0.9333,
+      "evidence_eval_count": 30,
+      "allergy_evidence_recall": 0.75,
+      "allergy_eval_count": 4,
+      "mrr_current_edition": 1.0,
+      "multi_edition_coverage": 1.0,
+      "avg_latency_ms": 16.82,
+      "avg_context_chars": 5196.8,
+      "est_context_tokens": 1299.0,
+      "per_category": {
+        "flagship_abp_2026": {
+          "n": 3,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 0.6667
+        },
+        "flagship_abp_allergy": {
+          "n": 3,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 1.0
+        },
+        "flagship_abp_pediatrie": {
+          "n": 1,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 0.0
+        },
+        "flagship_anticoag_2026": {
+          "n": 5,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 1.0
+        },
+        "flagship_iia_2026": {
+          "n": 6,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 1.0
+        },
+        "recent_2026": {
+          "n": 1,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 1.0
+        },
+        "scope_separation_urgence": {
+          "n": 2,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 1.0
+        },
+        "supersession_2024": {
+          "n": 1,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 1.0
+        },
+        "supersession_2025": {
+          "n": 2,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 1.0
+        },
+        "supersession_2026": {
+          "n": 4,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 1.0
+        },
+        "temporal_diff": {
+          "n": 2,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 1.0
+        }
+      },
+      "sample_failures": [
+        {
+          "id": "M04",
+          "title": "ABP obèse R1.5.2 / R1.6 V3.0 (nouveauté 2026)",
+          "category": "flagship_abp_2026",
+          "has_curr_edition": true,
+          "evidence_found": false,
+          "required_terms": [
+            "obese",
+            "r1.6"
+          ],
+          "top3_docs": [
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, recommendation_box)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, table_row_card)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, table_row_card)"
+          ]
+        },
+        {
+          "id": "M05",
+          "title": "ABP pédiatrie Champ 3 (nouveauté V3.0 2026)",
+          "category": "flagship_abp_pediatrie",
+          "has_curr_edition": true,
+          "evidence_found": false,
+          "required_terms": [
+            "cefazoline",
+            "mg/kg"
+          ],
+          "top3_docs": [
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, table_row_card)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, table_row_card)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, table_row_card)"
+          ]
+        }
+      ]
+    },
+    {
+      "config_name": "C7_sota_rerank_callouts",
+      "chunking_strategy": "table_aware_sota",
+      "num_questions": 30,
+      "doc_hit_rate": 1.0,
+      "current_edition_hit_rate": 1.0,
+      "obsolete_intrusion_rate": 0.0,
+      "bibliography_pollution_rate": 0.0,
+      "evidence_recall": 0.9667,
+      "evidence_eval_count": 30,
+      "allergy_evidence_recall": 1.0,
+      "allergy_eval_count": 4,
+      "mrr_current_edition": 1.0,
+      "multi_edition_coverage": 1.0,
+      "avg_latency_ms": 718.94,
+      "avg_context_chars": 5612.2,
+      "est_context_tokens": 1403.0,
+      "per_category": {
+        "flagship_abp_2026": {
+          "n": 3,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 1.0
+        },
+        "flagship_abp_allergy": {
+          "n": 3,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 1.0
+        },
+        "flagship_abp_pediatrie": {
+          "n": 1,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 0.0
+        },
+        "flagship_anticoag_2026": {
+          "n": 5,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 1.0
+        },
+        "flagship_iia_2026": {
+          "n": 6,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 1.0
+        },
+        "recent_2026": {
+          "n": 1,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 1.0
+        },
+        "scope_separation_urgence": {
+          "n": 2,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 1.0
+        },
+        "supersession_2024": {
+          "n": 1,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 1.0
+        },
+        "supersession_2025": {
+          "n": 2,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 1.0
+        },
+        "supersession_2026": {
+          "n": 4,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 1.0
+        },
+        "temporal_diff": {
+          "n": 2,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 1.0
+        }
+      },
+      "sample_failures": [
+        {
+          "id": "M05",
+          "title": "ABP pédiatrie Champ 3 (nouveauté V3.0 2026)",
+          "category": "flagship_abp_pediatrie",
+          "has_curr_edition": true,
+          "evidence_found": false,
+          "required_terms": [
+            "cefazoline",
+            "mg/kg"
+          ],
+          "top3_docs": [
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, table_row_card)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, table_row_card)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, table_row_card)"
+          ]
+        }
+      ]
+    },
+    {
+      "config_name": "C8_frontier_2026_tri_dbsf_crag",
+      "chunking_strategy": "table_aware_sota",
+      "num_questions": 30,
+      "doc_hit_rate": 1.0,
+      "current_edition_hit_rate": 1.0,
+      "obsolete_intrusion_rate": 0.0,
+      "bibliography_pollution_rate": 0.0,
+      "evidence_recall": 0.9667,
+      "evidence_eval_count": 30,
+      "allergy_evidence_recall": 1.0,
+      "allergy_eval_count": 4,
+      "mrr_current_edition": 1.0,
+      "multi_edition_coverage": 1.0,
+      "avg_latency_ms": 712.15,
+      "avg_context_chars": 5235.4,
+      "est_context_tokens": 1309.0,
+      "per_category": {
+        "flagship_abp_2026": {
+          "n": 3,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 1.0
+        },
+        "flagship_abp_allergy": {
+          "n": 3,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 1.0
+        },
+        "flagship_abp_pediatrie": {
+          "n": 1,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 0.0
+        },
+        "flagship_anticoag_2026": {
+          "n": 5,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 1.0
+        },
+        "flagship_iia_2026": {
+          "n": 6,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 1.0
+        },
+        "recent_2026": {
+          "n": 1,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 1.0
+        },
+        "scope_separation_urgence": {
+          "n": 2,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 1.0
+        },
+        "supersession_2024": {
+          "n": 1,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 1.0
+        },
+        "supersession_2025": {
+          "n": 2,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 1.0
+        },
+        "supersession_2026": {
+          "n": 4,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 1.0
+        },
+        "temporal_diff": {
+          "n": 2,
+          "curr_hit_rate": 1.0,
+          "ev_recall": 1.0
+        }
+      },
+      "sample_failures": [
+        {
+          "id": "M05",
+          "title": "ABP pédiatrie Champ 3 (nouveauté V3.0 2026)",
+          "category": "flagship_abp_pediatrie",
+          "has_curr_edition": true,
+          "evidence_found": false,
+          "required_terms": [
+            "cefazoline",
+            "mg/kg"
+          ],
+          "top3_docs": [
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, table_row_card)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, table_row_card)",
+            "Antibioprophylaxie en chirurgie et médecine interventionnelle (2026, table_row_card)"
+          ]
+        }
+      ]
+    }
+  ]
+}

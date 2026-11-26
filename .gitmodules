@@ -1,0 +1,6 @@
+[submodule "data/sfar_recommendations"]
+	path = data/sfar_recommendations
+	url = https://github.com/jaj42/sfar_recommendations.git
+[submodule "data/antibioprophylaxie_benchmark"]
+	path = data/antibioprophylaxie_benchmark
+	url = https://github.com/tomboulier/antibioprophylaxie-LLM-benchmark.git

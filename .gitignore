@@ -1,0 +1,54 @@
+# --- Environnements & caches (à recréer sur LibreDataHub) ---
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.ipynb_checkpoints/
+.mypy_cache/
+.ruff_cache/
+*.DS_Store
+
+# --- Secrets ---
+.env
+.env.*
+!.env.example
+
+# --- Artefacts lourds régénérables ---
+# Index : à reconstruire sur place (rag-sfar-index), idéalement avec BGE-M3 sur GPU
+index/
+*.npy
+*.pkl
+*.sqlite
+# Poids de modèles / caches HF / adaptateurs LoRA
+models/
+checkpoints/
+adapters/
+*.safetensors
+*.gguf
+*.bin
+.cache/
+# Logs et sorties brutes volumineuses
+logs/
+*.log
+runs/
+wandb/
+
+# --- Données : uniquement via submodules (data/sfar_recommendations, data/antibioprophylaxie_benchmark) ---
+data/*
+!data/.gitkeep
+!data/sfar_recommendations
+!data/antibioprophylaxie_benchmark
+
+# --- Fichiers personnels / pilotage de l'agent IA (ne pas partager) ---
+PROMPT*.md
+CLAUDE.md
+CLAUDE.local.md
+AGENTS.md
+.claude/
+COURS_*.pdf
+MASTERCLASS_*.md
+reports/masterclass_course.html

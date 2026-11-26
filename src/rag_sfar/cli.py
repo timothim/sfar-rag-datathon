@@ -1,0 +1,320 @@
+"""Command-line entrypoints for RAG-SFAR (audit, index, eval, serve)."""
+
+from __future__ import annotations
+
+import argparse
+import collections
+import json
+import time
+from pathlib import Path
+
+from rich.console import Console
+from rich.table import Table
+
+from rag_sfar.config import Settings
+from rag_sfar.evaluation.ablation import (
+    build_standard_ablation_configs,
+    format_ablation_markdown,
+    run_ablation_suite,
+)
+from rag_sfar.evaluation.benchmarks import (
+    load_antibioprophylaxie_benchmark,
+    load_multi_rfe_stress_benchmark,
+)
+from rag_sfar.ingestion.chunker import ChunkingStrategy, chunk_corpus
+from rag_sfar.ingestion.loader import load_sfar_corpus
+from rag_sfar.retrieval.bm25 import BM25Index
+from rag_sfar.retrieval.embedder import build_embedder
+from rag_sfar.retrieval.pipeline import SfarRagRetriever
+from rag_sfar.retrieval.reranker import build_reranker
+from rag_sfar.retrieval.subword import CharNgramIndex
+from rag_sfar.retrieval.vector_store import LocalVectorStore
+
+console = Console()
+
+
+def build_and_save_index(
+    corpus_dir: Path,
+    output_dir: Path,
+    strategy: ChunkingStrategy = "table_aware_sota",
+    embedding_provider: str = "sentence_transformer",
+    embedding_model: str = "intfloat/multilingual-e5-small",
+    skip_embeddings: bool = False,
+    batch_size: int = 32,
+) -> LocalVectorStore:
+    """Ingest corpus, chunk with chosen strategy, build BM25+ & dense index, and save to disk."""
+    t0 = time.perf_counter()
+    console.print(f"[bold cyan]Loading SFAR corpus from {corpus_dir}...[/bold cyan]")
+    docs = load_sfar_corpus(corpus_dir)
+    console.print(f"  Loaded [green]{len(docs)}[/green] enriched unique SFAR documents.")
+
+    t_c = time.perf_counter()
+    chunks = chunk_corpus(docs, strategy=strategy)
+    chunk_types = collections.Counter(c.chunk_type for c in chunks)
+    console.print(
+        f"  Chunked ([bold]{strategy}[/bold]): [green]{len(chunks):,}[/green] chunks "
+        f"in {time.perf_counter() - t_c:.1f}s -> {dict(chunk_types)}"
+    )
+
+    t_b = time.perf_counter()
+    indexed_texts = [c.indexed_text for c in chunks]
+    bm25 = BM25Index().build(indexed_texts)
+    console.print(
+        f"  Built BM25+ index ({len(bm25.idf):,} terms) in {time.perf_counter() - t_b:.1f}s"
+    )
+
+    t_sw = time.perf_counter()
+    subword = CharNgramIndex().build(indexed_texts)
+    console.print(
+        f"  Built Subword Char 3-5 N-Gram index in {time.perf_counter() - t_sw:.1f}s"
+    )
+
+    embeddings = None
+    embedder = None
+    if not skip_embeddings:
+        import numpy as np
+
+        t_e = time.perf_counter()
+        console.print(
+            f"  Computing dense embeddings ([bold]{embedding_provider}:{embedding_model}[/bold])..."
+        )
+        embedder = build_embedder(provider=embedding_provider, model_name=embedding_model)
+        # Skip dense embedding on pure bibliography chunks (searched via BM25 when requested)
+        active_indices = [i for i, c in enumerate(chunks) if not c.is_reference_section]
+        active_texts = [chunks[i].indexed_text for i in active_indices]
+        active_vecs = embedder.embed_documents(active_texts, batch_size=batch_size)
+        embeddings = np.zeros((len(chunks), active_vecs.shape[1]), dtype=np.float32)
+        embeddings[active_indices] = active_vecs
+        embedder.save_state(output_dir)
+        console.print(
+            f"  Embedded {len(active_indices):,}/{len(chunks):,} clinical chunks "
+            f"{embeddings.shape} in {time.perf_counter() - t_e:.1f}s"
+        )
+
+    manifest = {
+        "strategy": strategy,
+        "num_documents": len(docs),
+        "num_chunks": len(chunks),
+        "chunk_types": dict(chunk_types),
+        "has_subword": True,
+        "embedding_provider": embedding_provider if not skip_embeddings else "none",
+        "embedding_model": embedder.model_name if embedder else "none",
+        "embedding_dim": int(embeddings.shape[1]) if embeddings is not None else 0,
+        "build_seconds": round(time.perf_counter() - t0, 2),
+    }
+
+    store = LocalVectorStore(
+        chunks=chunks,
+        documents=[d.metadata for d in docs],
+        embeddings=embeddings,
+        bm25=bm25,
+        manifest=manifest,
+        subword=subword,
+    )
+    store.save(output_dir)
+    console.print(f"[bold green]Saved index to {output_dir}[/bold green] ({manifest['build_seconds']}s)")
+    return store
+
+
+def audit_cmd() -> None:
+    parser = argparse.ArgumentParser(description="Run forensic metadata & quality audit on SFAR corpus.")
+    parser.add_argument("--corpus-dir", type=Path, default=Settings().corpus_dir)
+    parser.add_argument("--output-dir", type=Path, default=Path("reports"))
+    args = parser.parse_args()
+
+    docs = load_sfar_corpus(args.corpus_dir)
+    metas = [d.metadata for d in docs]
+
+    total_chars = sum(m.char_count for m in metas)
+    total_tables = sum(m.table_count for m in metas)
+    ref_chars = sum(int(m.char_count * m.reference_char_ratio) for m in metas)
+    langs = collections.Counter(m.language for m in metas)
+    roles = collections.Counter(m.doc_role for m in metas)
+    types = collections.Counter(m.doc_type for m in metas)
+    superseded = [m for m in metas if not m.is_latest_edition]
+    imputed_years = [m for m in metas if m.year_was_imputed]
+    imputed_sub = [m for m in metas if m.subdomain_was_imputed]
+    abrogated = [m for m in metas if not m.is_active]
+
+    summary = {
+        "unique_documents": len(metas),
+        "total_chars": total_chars,
+        "estimated_words": int(total_chars / 6.2),
+        "total_html_tables": total_tables,
+        "reference_chars": ref_chars,
+        "reference_share_pct": round(100 * ref_chars / max(1, total_chars), 2),
+        "languages": dict(langs),
+        "doc_types": dict(types),
+        "doc_roles": dict(roles),
+        "imputed_years_count": len(imputed_years),
+        "imputed_subdomains_count": len(imputed_sub),
+        "abrogated_count": len(abrogated),
+        "superseded_editions_count": len(superseded),
+        "superseded_examples": [
+            {
+                "title": m.title,
+                "year": m.effective_year,
+                "lineage": m.topic_lineage,
+                "superseded_by_year": m.superseded_by_year,
+                "filename": m.filename,
+            }
+            for m in superseded
+        ],
+    }
+
+    args.output_dir.mkdir(parents=True, exist_ok=True)
+    (args.output_dir / "corpus_audit.json").write_text(
+        json.dumps(summary, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
+
+    md_lines = [
+        "# Audit Forensique du Corpus SFAR (2000–2026)\n",
+        f"- **Documents uniques (dédupliqués SHA-256)** : {summary['unique_documents']}",
+        f"- **Volume total** : {total_chars:,} caractères (~{summary['estimated_words']:,} mots)",
+        f"- **Tableaux HTML `<table>`** : **{total_tables:,}** (0 tableau pipe Markdown !)",
+        f"- **Volume Bibliographie / Références** : **{summary['reference_share_pct']}%** du corpus ({ref_chars:,} caractères de bruit potentiel)",
+        f"- **Langues détectées (corps du texte)** : {dict(langs)}",
+        f"- **Sous-domaines manquants imputés** : **{len(imputed_sub)}** documents (dont les 3 RFE phares 2026 !)",
+        f"- **Années manquantes imputées** : **{len(imputed_years)}** documents",
+        f"- **Documents explicitement abrogés** : **{len(abrogated)}**",
+        f"- **Éditions historiques remplacées (graphe de supersession)** : **{len(superseded)}** documents\n",
+        "## Éditions historiques détectées comme remplacées\n",
+        "| Lignée clinique | Année | Remplacée en | Titre | Fichier |",
+        "|---|---:|---:|---|---|",
+    ]
+    for ex in summary["superseded_examples"]:
+        md_lines.append(
+            f"| `{ex['lineage']}` | {ex['year']} | **{ex['superseded_by_year']}** | {ex['title'][:65]} | `{ex['filename'][:45]}` |"
+        )
+    (args.output_dir / "corpus_audit.md").write_text("\n".join(md_lines), encoding="utf-8")
+
+    console.print("[bold green]Corpus audit written to reports/corpus_audit.{json,md}[/bold green]")
+    console.print(f"  Docs: {len(metas)} | Tables: {total_tables} | Refs: {summary['reference_share_pct']}% | Superseded: {len(superseded)} | Imputed subdomains: {len(imputed_sub)}")
+
+
+def index_cmd() -> None:
+    parser = argparse.ArgumentParser(description="Build hybrid RAG-SFAR index.")
+    s = Settings()
+    parser.add_argument("--corpus-dir", type=Path, default=s.corpus_dir)
+    parser.add_argument("--output-dir", type=Path, default=s.index_dir)
+    parser.add_argument(
+        "--strategy",
+        choices=["naive_fixed", "hierarchical_markdown", "table_aware_sota"],
+        default="table_aware_sota",
+    )
+    parser.add_argument("--embedding-provider", default=s.embedding_provider)
+    parser.add_argument("--embedding-model", default=s.embedding_model)
+    parser.add_argument("--skip-embeddings", action="store_true")
+    parser.add_argument("--batch-size", type=int, default=s.embedding_batch_size)
+    args = parser.parse_args()
+
+    build_and_save_index(
+        corpus_dir=args.corpus_dir,
+        output_dir=args.output_dir,
+        strategy=args.strategy,
+        embedding_provider=args.embedding_provider,
+        embedding_model=args.embedding_model,
+        skip_embeddings=args.skip_embeddings,
+        batch_size=args.batch_size,
+    )
+
+
+def eval_cmd() -> None:
+    parser = argparse.ArgumentParser(description="Run full RAG-SFAR ablation benchmark suite.")
+    s = Settings()
+    parser.add_argument("--index-root", type=Path, default=Path("index"))
+    parser.add_argument("--benchmark-path", type=Path, default=s.benchmark_path)
+    parser.add_argument("--output-dir", type=Path, default=Path("reports"))
+    parser.add_argument("--reranker-provider", default=s.reranker_provider)
+    parser.add_argument("--reranker-model", default=s.reranker_model)
+    args = parser.parse_args()
+
+    reranker = (
+        build_reranker(args.reranker_provider, args.reranker_model)
+        if args.reranker_provider != "none"
+        else None
+    )
+
+    retrievers: dict[str, SfarRagRetriever] = {}
+    embedder_cache: dict[tuple[str, str], object] = {}
+
+    for strat in ("naive_fixed", "hierarchical_markdown", "table_aware_sota"):
+        idx_dir = args.index_root / strat
+        if not (idx_dir / "metadata.sqlite").exists():
+            console.print(f"[yellow]Skipping missing index: {idx_dir}[/yellow]")
+            continue
+        store = LocalVectorStore.load(idx_dir)
+        emb = None
+        if store.embeddings is not None:
+            prov = store.manifest.get("embedding_provider", s.embedding_provider)
+            mod = store.manifest.get("embedding_model", s.embedding_model)
+            key = (prov, mod)
+            if prov == "tfidf_svd":
+                emb = build_embedder(provider=prov, model_name=mod, index_dir=idx_dir)
+            else:
+                if key not in embedder_cache:
+                    embedder_cache[key] = build_embedder(provider=prov, model_name=mod)
+                emb = embedder_cache[key]
+        retrievers[strat] = SfarRagRetriever(store=store, embedder=emb, reranker=reranker)
+
+    datasets = {
+        "antibioprophylaxie_171": load_antibioprophylaxie_benchmark(args.benchmark_path),
+        "multi_rfe_stress_30": load_multi_rfe_stress_benchmark(),
+    }
+    configs = build_standard_ablation_configs()
+    results = run_ablation_suite(retrievers, datasets, configs=configs)
+
+    args.output_dir.mkdir(parents=True, exist_ok=True)
+    (args.output_dir / "ablation_results.json").write_text(
+        json.dumps(results, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
+    md = format_ablation_markdown(results)
+    (args.output_dir / "ablation_report.md").write_text(md, encoding="utf-8")
+
+    # Pretty console table
+    for ds_name, rows in results.items():
+        tbl = Table(title=f"Ablation Results — {ds_name}")
+        for col in ["Config", "Ed.Hit@8", "Obsol.%", "Ev.Rec", "Allerg.Rec", "MRR", "ms", "~Tok"]:
+            tbl.add_column(col)
+        for r in rows:
+            ev = f"{r['evidence_recall']*100:.1f}%" if r["evidence_recall"] is not None else "—"
+            al = (
+                f"{r['allergy_evidence_recall']*100:.1f}%"
+                if r["allergy_evidence_recall"] is not None
+                else "—"
+            )
+            tbl.add_row(
+                r["config_name"],
+                f"{r['current_edition_hit_rate']*100:.1f}%",
+                f"{r['obsolete_intrusion_rate']*100:.1f}%",
+                ev,
+                al,
+                f"{r['mrr_current_edition']:.3f}",
+                f"{r['avg_latency_ms']:.1f}",
+                f"{int(r['est_context_tokens'])}",
+            )
+        console.print(tbl)
+    console.print(f"[bold green]Saved reports to {args.output_dir}/ablation_report.md[/bold green]")
+
+
+def serve_cmd() -> None:
+    import uvicorn
+
+    from rag_sfar.interfaces.api import create_app
+
+    s = Settings()
+    parser = argparse.ArgumentParser(description="Start RAG-SFAR Demonstrator & OpenAI API server.")
+    parser.add_argument("--index-dir", type=Path, default=s.index_dir)
+    parser.add_argument("--host", default=s.api_host)
+    parser.add_argument("--port", type=int, default=s.api_port)
+    parser.add_argument("--no-llm", action="store_true", help="Start in retrieval-only mode.")
+    parser.add_argument("--mlx-model", default=None, help="Optional local Apple Silicon MLX model path/repo.")
+    args = parser.parse_args()
+
+    app = create_app(
+        index_dir=args.index_dir,
+        settings=s,
+        enable_llm=not args.no_llm,
+        mlx_model_path=args.mlx_model,
+    )
+    uvicorn.run(app, host=args.host, port=args.port)

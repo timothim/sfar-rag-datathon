@@ -1,0 +1,179 @@
+{
+  "v3_version": "V3.0 (04/05/2026)",
+  "v3_changelog": "V3.0 du 04/05/2026 : ajout d'une recommandation R1.5.2 (avis d'experts) sur la dose de l'amoxicilline-clavulanate chez l'obèse (pages 25-28) ; modification d'une borne d'IMC pour l'adaptation de la clindamycine chez l'obèse (R1.6) pour une meilleure clarté (page 30) ; ajout de propositions de schémas thérapeutiques pour la prolongation postopératoire de l'antibioprophylaxie chez le patient allergique aux bêtalactamines dans les tableaux de neurochirurgie, chirurgie ORL et maxillo-faciale, chirurgie vasculaire, chirurgie thoracique, chirurgie plastique et reconstructrice ; modification de la posologie pourl'antibioprophylaxie de la pose de valve zéphyr (page 55) ; ajout de l'alternative en cas d'allergie aux bêtalactamines quand la céfoxitine est indiquée dans l'encadré allergie du tableau de chirurgie d'affirmation de genre (page 60) ; modification d'un intitulé chirurgical de la ligne « vaginoplastie » du tableau de chirurgie d'affirmation de genre (page 60) ; ajout de l'alternative en cas d'allergie aux bêtalactamines pour les traumatismes complexes de la main dans l'encadré allergie du tableau de traumatologie (page 75) ; modification des intitulés chirurgicaux sur la chirurgie des hernies de paroi (page 83) ; ajout du lien vers les recommandations 2026 de l'AFU concernant l'ECBU préopératoire dans le chapeau introductif du tableau 9 (page 87) ; ajout de précisions sur les délais d'administration de la fosfomycine en antibioprophylaxie des biopsies de prostate par voie transrectale (page 88) ; ajout du champ 3 et des 9 tableaux de recommandations sur l'antibioprophylaxie en chirurgie et médecine interventionnelle pédiatrique (à partir de la page 91).",
+  "total_benchmark_questions": 171,
+  "flagged_for_v3_review": 19,
+  "questions": [
+    {
+      "id": "Q03",
+      "title": "PTG allergie bêtalactamines",
+      "type": "open",
+      "expected_v2": "Clindamycine",
+      "v3_impact_areas": [
+        "Allergie bêtalactamines / prolongation postop (V3.0 tableaux)"
+      ]
+    },
+    {
+      "id": "Q04",
+      "title": "PTH voie antérieure allergie",
+      "type": "open",
+      "expected_v2": "Vancomycine",
+      "v3_impact_areas": [
+        "Allergie bêtalactamines / prolongation postop (V3.0 tableaux)"
+      ]
+    },
+    {
+      "id": "Q09",
+      "title": "Écrasement main > 2h",
+      "type": "open",
+      "expected_v2": "Amoxicilline/Clavulanate",
+      "v3_impact_areas": [
+        "Traumatismes complexes de la main (encadré allergie ajouté) (V3.0 p.75)"
+      ]
+    },
+    {
+      "id": "Q12",
+      "title": "Fracture ouverte Gustilo 3 allergie",
+      "type": "open",
+      "expected_v2": "Clindamycine + Gentamicine",
+      "v3_impact_areas": [
+        "Allergie bêtalactamines / prolongation postop (V3.0 tableaux)"
+      ]
+    },
+    {
+      "id": "Q15",
+      "title": "Polytrauma fémur radius plaie main",
+      "type": "open",
+      "expected_v2": "Amoxicilline/Clavulanate",
+      "v3_impact_areas": [
+        "Traumatismes complexes de la main (encadré allergie ajouté) (V3.0 p.75)"
+      ]
+    },
+    {
+      "id": "Q27",
+      "title": "Craniotomie allergie bêtalactamines",
+      "type": "open",
+      "expected_v2": "Clindamycine",
+      "v3_impact_areas": [
+        "Allergie bêtalactamines / prolongation postop (V3.0 tableaux)"
+      ]
+    },
+    {
+      "id": "Q28",
+      "title": "Plaie cranio-cérébrale allergie pénicillines",
+      "type": "open",
+      "expected_v2": "Triméthoprime/Sulfaméthoxazole",
+      "v3_impact_areas": [
+        "Allergie bêtalactamines / prolongation postop (V3.0 tableaux)"
+      ]
+    },
+    {
+      "id": "Q43",
+      "title": "Carcinologique cervico-faciale allergie bêtalactamines",
+      "type": "open",
+      "expected_v2": "Clindamycine + Gentamicine",
+      "v3_impact_areas": [
+        "Allergie bêtalactamines / prolongation postop (V3.0 tableaux)"
+      ]
+    },
+    {
+      "id": "Q63",
+      "title": "Vaginoplastie affirmation de genre",
+      "type": "open",
+      "expected_v2": "Amoxicilline/Clavulanate",
+      "v3_impact_areas": [
+        "Chirurgie d'affirmation de genre (vaginoplastie & encadré allergie céfoxitine) (V3.0 p.60)"
+      ]
+    },
+    {
+      "id": "Q92",
+      "title": "Cholécystectomie coelioscopique haut risque",
+      "type": "open",
+      "expected_v2": "Céfazoline",
+      "v3_impact_areas": [
+        "Champ 3 : Pédiatrie & néonatalogie (9 nouveaux tableaux) (V3.0 p.91+)"
+      ]
+    },
+    {
+      "id": "Q100",
+      "title": "Hernie inguinale avec prothèse",
+      "type": "open",
+      "expected_v2": "Céfazoline",
+      "v3_impact_areas": [
+        "Chirurgie des hernies de paroi (intitulés modifiés) (V3.0 p.83)"
+      ]
+    },
+    {
+      "id": "Q101",
+      "title": "Hernie aine sans prothèse",
+      "type": "open",
+      "expected_v2": "Pas d'antibioprophylaxie",
+      "v3_impact_areas": [
+        "Chirurgie des hernies de paroi (intitulés modifiés) (V3.0 p.83)"
+      ]
+    },
+    {
+      "id": "Q108",
+      "title": "Biopsie prostate transrectale",
+      "type": "open",
+      "expected_v2": "Fosfomycine-trométamol",
+      "v3_impact_areas": [
+        "Biopsie prostate transrectale (délais fosfomycine précisés) (V3.0 p.88)"
+      ]
+    },
+    {
+      "id": "Q109",
+      "title": "Biopsie prostate transpérinéale",
+      "type": "open",
+      "expected_v2": "Pas d'antibioprophylaxie",
+      "v3_impact_areas": [
+        "Biopsie prostate transrectale (délais fosfomycine précisés) (V3.0 p.88)"
+      ]
+    },
+    {
+      "id": "Q141",
+      "title": "PTG allergie alternative",
+      "type": "mcq",
+      "expected_v2": "C",
+      "v3_impact_areas": [
+        "Allergie bêtalactamines / prolongation postop (V3.0 tableaux)"
+      ]
+    },
+    {
+      "id": "Q143",
+      "title": "Plaie jardinage main",
+      "type": "mcq",
+      "expected_v2": "C",
+      "v3_impact_areas": [
+        "Traumatismes complexes de la main (encadré allergie ajouté) (V3.0 p.75)"
+      ]
+    },
+    {
+      "id": "Q160",
+      "title": "Biopsie prostate voie d'abord",
+      "type": "mcq",
+      "expected_v2": "C",
+      "v3_impact_areas": [
+        "Biopsie prostate transrectale (délais fosfomycine précisés) (V3.0 p.88)"
+      ]
+    },
+    {
+      "id": "Q161",
+      "title": "Hernie inguinale avec vs sans prothèse",
+      "type": "mcq",
+      "expected_v2": "C",
+      "v3_impact_areas": [
+        "Chirurgie des hernies de paroi (intitulés modifiés) (V3.0 p.83)"
+      ]
+    },
+    {
+      "id": "Q167",
+      "title": "Allergie bêtalactamines en chirurgie cardiaque",
+      "type": "mcq",
+      "expected_v2": "B",
+      "v3_impact_areas": [
+        "Allergie bêtalactamines / prolongation postop (V3.0 tableaux)"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="480" viewBox="0 0 960 480">
+<rect width="100%" height="100%" fill="#0b1220" rx="14"/>
+<text x="70" y="34" fill="#f1f5f9" font-family="system-ui,-apple-system,sans-serif" font-size="19" font-weight="700">RAG-SFAR Ablation — antibioprophylaxie_171</text>
+<text x="70" y="56" fill="#94a3b8" font-family="system-ui,-apple-system,sans-serif" font-size="12.5">Progression C0 (naïf) → C8 (Frontier 2026) : Édition en vigueur, Evidence Recall & Intrusion d'éditions obsolètes</text>
+<rect x="70" y="66" width="12" height="12" fill="#38bdf8" rx="2"/>
+<text x="88" y="76" fill="#cbd5e1" font-family="system-ui,-apple-system,sans-serif" font-size="12">Édition en vigueur Hit@8</text>
+<rect x="282.8" y="66" width="12" height="12" fill="#22c55e" rx="2"/>
+<text x="300.8" y="76" fill="#cbd5e1" font-family="system-ui,-apple-system,sans-serif" font-size="12">Evidence Recall@8</text>
+<rect x="445.20000000000005" y="66" width="12" height="12" fill="#ef4444" rx="2"/>
+<text x="463.20000000000005" y="76" fill="#cbd5e1" font-family="system-ui,-apple-system,sans-serif" font-size="12">Intrusion Obsolète (bas = mieux)</text>
+<line x1="70" y1="358.0" x2="930" y2="358.0" stroke="#1e293b" stroke-width="1"/>
+<text x="60" y="362.0" text-anchor="end" fill="#64748b" font-family="system-ui,-apple-system,sans-serif" font-size="11">0%</text>
+<line x1="70" y1="308.0" x2="930" y2="308.0" stroke="#1e293b" stroke-width="1"/>
+<text x="60" y="312.0" text-anchor="end" fill="#64748b" font-family="system-ui,-apple-system,sans-serif" font-size="11">20%</text>
+<line x1="70" y1="258.0" x2="930" y2="258.0" stroke="#1e293b" stroke-width="1"/>
+<text x="60" y="262.0" text-anchor="end" fill="#64748b" font-family="system-ui,-apple-system,sans-serif" font-size="11">40%</text>
+<line x1="70" y1="208.0" x2="930" y2="208.0" stroke="#1e293b" stroke-width="1"/>
+<text x="60" y="212.0" text-anchor="end" fill="#64748b" font-family="system-ui,-apple-system,sans-serif" font-size="11">60%</text>
+<line x1="70" y1="158.0" x2="930" y2="158.0" stroke="#1e293b" stroke-width="1"/>
+<text x="60" y="162.0" text-anchor="end" fill="#64748b" font-family="system-ui,-apple-system,sans-serif" font-size="11">80%</text>
+<line x1="70" y1="108.0" x2="930" y2="108.0" stroke="#1e293b" stroke-width="1"/>
+<text x="60" y="112.0" text-anchor="end" fill="#64748b" font-family="system-ui,-apple-system,sans-serif" font-size="11">100%</text>
+<rect x="81.1" y="121.1" width="25.8" height="236.9" fill="#38bdf8" rx="3"/>
+<text x="94.0" y="116.1" text-anchor="middle" fill="#e2e8f0" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="600">95%</text>
+<rect x="110.9" y="127.9" width="25.8" height="230.1" fill="#22c55e" rx="3"/>
+<text x="123.8" y="122.9" text-anchor="middle" fill="#e2e8f0" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="600">92%</text>
+<rect x="140.7" y="203.0" width="25.8" height="155.0" fill="#ef4444" rx="3"/>
+<text x="153.6" y="198.0" text-anchor="middle" fill="#e2e8f0" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="600">62%</text>
+<text x="123.8" y="376" text-anchor="end" transform="rotate(-24 123.8 376)" fill="#cbd5e1" font-family="system-ui,-apple-system,sans-serif" font-size="11">C0 naive fixed bm25</text>
+<rect x="188.6" y="115.3" width="25.8" height="242.7" fill="#38bdf8" rx="3"/>
+<text x="201.5" y="110.3" text-anchor="middle" fill="#e2e8f0" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="600">97%</text>
+<rect x="218.4" y="122.5" width="25.8" height="235.5" fill="#22c55e" rx="3"/>
+<text x="231.3" y="117.5" text-anchor="middle" fill="#e2e8f0" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="600">94%</text>
+<rect x="248.2" y="197.2" width="25.8" height="160.8" fill="#ef4444" rx="3"/>
+<text x="261.1" y="192.2" text-anchor="middle" fill="#e2e8f0" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="600">64%</text>
+<text x="231.2" y="376" text-anchor="end" transform="rotate(-24 231.2 376)" fill="#cbd5e1" font-family="system-ui,-apple-system,sans-serif" font-size="11">C2 hierarchical bm25 no refs</text>
+<rect x="296.1" y="119.7" width="25.8" height="238.3" fill="#38bdf8" rx="3"/>
+<text x="308.9" y="114.7" text-anchor="middle" fill="#e2e8f0" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="600">95%</text>
+<rect x="325.9" y="122.5" width="25.8" height="235.5" fill="#22c55e" rx="3"/>
+<text x="338.8" y="117.5" text-anchor="middle" fill="#e2e8f0" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="600">94%</text>
+<rect x="355.6" y="220.6" width="25.8" height="137.4" fill="#ef4444" rx="3"/>
+<text x="368.5" y="215.6" text-anchor="middle" fill="#e2e8f0" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="600">55%</text>
+<text x="338.8" y="376" text-anchor="end" transform="rotate(-24 338.8 376)" fill="#cbd5e1" font-family="system-ui,-apple-system,sans-serif" font-size="11">C3 table sota bm25 lexicon</text>
+<rect x="403.6" y="110.9" width="25.8" height="247.1" fill="#38bdf8" rx="3"/>
+<text x="416.4" y="105.9" text-anchor="middle" fill="#e2e8f0" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="600">99%</text>
+<rect x="433.4" y="140.6" width="25.8" height="217.4" fill="#22c55e" rx="3"/>
+<text x="446.2" y="135.6" text-anchor="middle" fill="#e2e8f0" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="600">87%</text>
+<rect x="463.1" y="138.7" width="25.8" height="219.3" fill="#ef4444" rx="3"/>
+<text x="476.0" y="133.7" text-anchor="middle" fill="#e2e8f0" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="600">88%</text>
+<text x="446.2" y="376" text-anchor="end" transform="rotate(-24 446.2 376)" fill="#cbd5e1" font-family="system-ui,-apple-system,sans-serif" font-size="11">C4 table sota dense</text>
+<rect x="511.1" y="109.5" width="25.8" height="248.5" fill="#38bdf8" rx="3"/>
+<text x="524.0" y="104.5" text-anchor="middle" fill="#e2e8f0" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="600">99%</text>
+<rect x="540.9" y="118.9" width="25.8" height="239.1" fill="#22c55e" rx="3"/>
+<text x="553.8" y="113.9" text-anchor="middle" fill="#e2e8f0" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="600">96%</text>
+<rect x="570.6" y="168.0" width="25.8" height="190.0" fill="#ef4444" rx="3"/>
+<text x="583.5" y="163.0" text-anchor="middle" fill="#e2e8f0" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="600">76%</text>
+<text x="553.8" y="376" text-anchor="end" transform="rotate(-24 553.8 376)" fill="#cbd5e1" font-family="system-ui,-apple-system,sans-serif" font-size="11">C5 table sota hybrid rrf</text>
+<rect x="618.5" y="108.0" width="25.8" height="250.0" fill="#38bdf8" rx="3"/>
+<text x="631.4" y="103.0" text-anchor="middle" fill="#e2e8f0" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="600">100%</text>
+<rect x="648.3" y="113.4" width="25.8" height="244.6" fill="#22c55e" rx="3"/>
+<text x="661.2" y="108.4" text-anchor="middle" fill="#e2e8f0" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="600">98%</text>
+<rect x="678.1" y="358.0" width="25.8" height="0.0" fill="#ef4444" rx="3"/>
+<text x="691.0" y="353.0" text-anchor="middle" fill="#e2e8f0" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="600">0%</text>
+<text x="661.2" y="376" text-anchor="end" transform="rotate(-24 661.2 376)" fill="#cbd5e1" font-family="system-ui,-apple-system,sans-serif" font-size="11">C6 hybrid temporal metadata</text>
+<rect x="726.0" y="108.0" width="25.8" height="250.0" fill="#38bdf8" rx="3"/>
+<text x="738.9" y="103.0" text-anchor="middle" fill="#e2e8f0" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="600">100%</text>
+<rect x="755.8" y="109.8" width="25.8" height="248.2" fill="#22c55e" rx="3"/>
+<text x="768.7" y="104.8" text-anchor="middle" fill="#e2e8f0" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="600">99%</text>
+<rect x="785.6" y="358.0" width="25.8" height="0.0" fill="#ef4444" rx="3"/>
+<text x="798.5" y="353.0" text-anchor="middle" fill="#e2e8f0" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="600">0%</text>
+<text x="768.8" y="376" text-anchor="end" transform="rotate(-24 768.8 376)" fill="#cbd5e1" font-family="system-ui,-apple-system,sans-serif" font-size="11">C7 sota rerank callouts</text>
+<rect x="833.5" y="109.5" width="25.8" height="248.5" fill="#38bdf8" rx="3"/>
+<text x="846.4" y="104.5" text-anchor="middle" fill="#e2e8f0" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="600">99%</text>
+<rect x="863.3" y="109.8" width="25.8" height="248.2" fill="#22c55e" rx="3"/>
+<text x="876.2" y="104.8" text-anchor="middle" fill="#e2e8f0" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="600">99%</text>
+<rect x="893.1" y="358.0" width="25.8" height="0.0" fill="#ef4444" rx="3"/>
+<text x="906.0" y="353.0" text-anchor="middle" fill="#e2e8f0" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="600">0%</text>
+<text x="876.2" y="376" text-anchor="end" transform="rotate(-24 876.2 376)" fill="#cbd5e1" font-family="system-ui,-apple-system,sans-serif" font-size="11">C8 frontier 2026 tri dbsf crag</text>
+</svg>

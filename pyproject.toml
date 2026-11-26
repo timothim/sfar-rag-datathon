@@ -1,0 +1,54 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rag-sfar"
+version = "1.0.0"
+description = "State-of-the-art clinical RAG & MCP engine for SFAR anesthesia & intensive care guidelines"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "SFAR Datathon Team — RAG-SFAR" }]
+dependencies = [
+    "numpy>=1.26",
+    "pydantic>=2.7",
+    "pydantic-settings>=2.2",
+    "beautifulsoup4>=4.12",
+    "httpx>=0.27",
+    "openai>=1.40",
+    "fastapi>=0.115",
+    "uvicorn>=0.30",
+    "rich>=13.7",
+    "pyyaml>=6.0",
+    "scikit-learn>=1.5",
+    "pypdf>=5.0",
+]
+
+[project.optional-dependencies]
+neural = [
+    "sentence-transformers>=3.0",
+    "torch>=2.2",
+]
+pgvector = [
+    "psycopg[binary]>=3.2",
+    "pgvector>=0.3",
+]
+dev = [
+    "pytest>=8.0",
+    "pytest-asyncio>=0.24",
+]
+
+[project.scripts]
+rag-sfar-audit = "rag_sfar.cli:audit_cmd"
+rag-sfar-index = "rag_sfar.cli:index_cmd"
+rag-sfar-eval = "rag_sfar.cli:eval_cmd"
+rag-sfar-serve = "rag_sfar.cli:serve_cmd"
+rag-sfar-mcp = "rag_sfar.interfaces.mcp_server:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

@@ -1,0 +1,344 @@
+{
+  "unique_documents": 264,
+  "total_chars": 23185552,
+  "estimated_words": 3739605,
+  "total_html_tables": 2056,
+  "reference_chars": 5889866,
+  "reference_share_pct": 25.4,
+  "languages": {
+    "fr": 215,
+    "bilingual": 25,
+    "en": 24
+  },
+  "doc_types": {
+    "RFE": 223,
+    "RPP": 21,
+    "Preconisation": 15,
+    "HAS": 5
+  },
+  "doc_roles": {
+    "recommandation": 175,
+    "argumentaire": 19,
+    "algorithme": 5,
+    "aide_cognitive": 10,
+    "annexe": 9,
+    "texte_court": 15,
+    "tableaux_synthese": 6,
+    "traduction_en": 24,
+    "abrogee": 1
+  },
+  "imputed_years_count": 18,
+  "imputed_subdomains_count": 57,
+  "abrogated_count": 1,
+  "superseded_editions_count": 44,
+  "superseded_examples": [
+    {
+      "title": "Gestion perioperatoire des patients sous AOD pour un acte programmé",
+      "year": 2021,
+      "lineage": "anticoagulants_procedure_programmee",
+      "superseded_by_year": 2026,
+      "filename": "Gestion%20perioperatoire%20des%20patients%20sous%20AOD%20pour%20un%20acte%20programm%C3%A9.pdf"
+    },
+    {
+      "title": "Gestion des patients sous AOD (dabigatran) en urgence",
+      "year": 2021,
+      "lineage": "anticoagulants_urgence",
+      "superseded_by_year": 2024,
+      "filename": "Gestion%20perioperatoire%20des%20patients%20sous%20AOD%20en%20urgence.pdf"
+    },
+    {
+      "title": "Gestion périopératoire des AOD en urgence",
+      "year": 2013,
+      "lineage": "anticoagulants_urgence",
+      "superseded_by_year": 2024,
+      "filename": "2013%20AFAR%20GIHP.pdf"
+    },
+    {
+      "title": "Antibioprophylaxie en chirurgie et médecine interventionnelle (patients adultes)",
+      "year": 2018,
+      "lineage": "antibioprophylaxie",
+      "superseded_by_year": 2026,
+      "filename": "Antibioprophylaxie-RFE-mise-a-jour-2018.pdf"
+    },
+    {
+      "title": "Antibioprophylaxie en chirurgie et médecine interventionnelle (patients adultes)",
+      "year": 2017,
+      "lineage": "antibioprophylaxie",
+      "superseded_by_year": 2026,
+      "filename": "rfe-antibioprophylaxie-in-surgery-and-interventional-medicine.pdf"
+    },
+    {
+      "title": "Antibioprophylaxie en chirurgie et médecine interventionnelle (patients adultes)",
+      "year": 2017,
+      "lineage": "antibioprophylaxie",
+      "superseded_by_year": 2026,
+      "filename": "Antibioprophylaxie-version-2017-CRC_CA_MODIF.pdf"
+    },
+    {
+      "title": "Intubation difficile et extubation en anesthésie chez l’adulte",
+      "year": 2017,
+      "lineage": "voies_aeriennes_adulte_bloc",
+      "superseded_by_year": 2026,
+      "filename": "RFE-ANREA-Intubation-difficile-et-extubation-en-anesthesie-chez-l-adulte.pdf"
+    },
+    {
+      "title": "Prévention des erreurs médicamenteuses en A-R",
+      "year": 2016,
+      "lineage": "prevention_erreurs_medicamenteuses",
+      "superseded_by_year": 2024,
+      "filename": "texte-court-preco-erreurs-med-2016-SFAR-SFPC-version-finale-25-oct-2016.pdf"
+    },
+    {
+      "title": "Prévention des erreurs médicamenteuses en A-R",
+      "year": 2016,
+      "lineage": "prevention_erreurs_medicamenteuses",
+      "superseded_by_year": 2024,
+      "filename": "texte-long-Preconisations-2016-erreurs-med-SFAR-SFPC-version-finale-25-oct-2016.pdf"
+    },
+    {
+      "title": "La gestion périopératoire des patients sous AOD pour un acte programmé",
+      "year": 2015,
+      "lineage": "anticoagulants_procedure_programmee",
+      "superseded_by_year": 2026,
+      "filename": "Reactualisation-GIHP_AOD_actes-programmes_Septembre-20151.pdf"
+    },
+    {
+      "title": "Nutrition artificielle en réanimation",
+      "year": 2014,
+      "lineage": "nutrition_clinique_adulte",
+      "superseded_by_year": 2026,
+      "filename": "2_AFAR_Nutrition-artificielle-en-reanimation.pdf"
+    },
+    {
+      "title": "Prise en charge des infections intra-abdominales",
+      "year": 2015,
+      "lineage": "infections_intra_abdominales",
+      "superseded_by_year": 2026,
+      "filename": "RFE-Guidelines-for-management-of-intra-abdominal-infections.pdf"
+    },
+    {
+      "title": "Prise en charge des infections intra-abdominales",
+      "year": 2015,
+      "lineage": "infections_intra_abdominales",
+      "superseded_by_year": 2026,
+      "filename": "2_AFAR_Prise-en-charge-des-infections-intra-abdominales.pdf"
+    },
+    {
+      "title": "Recommandations d’Experts pour le Risque d’HYPERTHERMIE MALIGNE en Anesthésie Réanimation",
+      "year": 2013,
+      "lineage": "hyperthermie_maligne",
+      "superseded_by_year": 2019,
+      "filename": "2_SFAR_HyperthermieMaligne.pdf"
+    },
+    {
+      "title": "Stratégie du remplissage vasculaire périopératoire",
+      "year": 2012,
+      "lineage": "optimisation_hemodynamique_adulte",
+      "superseded_by_year": 2024,
+      "filename": "2b_AFAR_ANGLAIS_Strategie-du-remplissage-vasculaire-perioperatoire.pdf"
+    },
+    {
+      "title": "Stratégie du remplissage vasculaire périopératoire",
+      "year": 2012,
+      "lineage": "optimisation_hemodynamique_adulte",
+      "superseded_by_year": 2024,
+      "filename": "2a_AFAR_FRANCAIS_Strategie-du-remplissage-vasculaire-perioperatoire.pdf"
+    },
+    {
+      "title": "Prévention de la maladie thromboembolique veineuse postopératoire",
+      "year": 2011,
+      "lineage": "prevention_mtev_perioperatoire",
+      "superseded_by_year": 2024,
+      "filename": "2_AFAR_Prevention-de-la-maladie-thromboembolique-veineuse-postoperatoire-copie.pdf"
+    },
+    {
+      "title": "Prévention du risque allergique peranesthésique",
+      "year": 2011,
+      "lineage": "hypersensibilite_allergie_perioperatoire",
+      "superseded_by_year": 2025,
+      "filename": "2_AFAR_Prevention-du-risque-allergique-peranesthesique.pdf"
+    },
+    {
+      "title": "Anesthésie loco-régionale en pédiatrie",
+      "year": 2010,
+      "lineage": "alr_pediatrique",
+      "superseded_by_year": 2026,
+      "filename": "2_SFAR_Anesthesie-loco-regionale-en-pediatrie.pdf"
+    },
+    {
+      "title": "Recommandations de bonnes pratiques cliniques sur la nutrition périopératoire",
+      "year": 2010,
+      "lineage": "nutrition_clinique_adulte",
+      "superseded_by_year": 2026,
+      "filename": "2_AFAR_Nutrition-artificielle-perioperatoire-en-chirurgie-programmee-de-ladulte.pdf"
+    },
+    {
+      "title": "Sédation et analgésie en Structures d’Urgence",
+      "year": 2010,
+      "lineage": "sedation_urgences",
+      "superseded_by_year": 2026,
+      "filename": "2_AFAR_Sedation-analgesie-en-structure-d-urgence.pdf"
+    },
+    {
+      "title": "Prise en charge multidisciplinaire des formes graves de prééclampsie",
+      "year": 2009,
+      "lineage": "preeclampsie_severe",
+      "superseded_by_year": 2020,
+      "filename": "2_SFAR_Prise-en-charge-pre-et-interhospitaliere-des-formes-graves-de-preeclampsie.pdf"
+    },
+    {
+      "title": "Recommandations AVK",
+      "year": 2008,
+      "lineage": "anticoagulants_procedure_programmee",
+      "superseded_by_year": 2026,
+      "filename": "2_HAS_Prise-en-charge-des-surdosages-en-antivitamines-K.pdf"
+    },
+    {
+      "title": "Prise en charge de la douleur postopératoire chez l’adulte et l’enfant",
+      "year": 2008,
+      "lineage": "douleur_postoperatoire",
+      "superseded_by_year": 2016,
+      "filename": "2b_AFAR_ANGLAISEExpert-panel-guidelines-2008.-Postoperative-pain-management-in-adults-and-children.-SFAR-Committees-on-Pain-and-Local-Regional-Anaesthesia-and-on-Standards..pdf"
+    },
+    {
+      "title": "Prise en charge de la douleur postopératoire chez l’adulte et l’enfant",
+      "year": 2008,
+      "lineage": "douleur_postoperatoire",
+      "superseded_by_year": 2016,
+      "filename": "2a_AFAR_Prise-en-charge-de-la-douleur-postoperatoire-chez-ladulte-et-lenfant.pdf"
+    },
+    {
+      "title": "Prévention des erreurs médicamenteuses en anesthésie",
+      "year": 2006,
+      "lineage": "prevention_erreurs_medicamenteuses",
+      "superseded_by_year": 2024,
+      "filename": "preverreurmedic_recos.pdf"
+    },
+    {
+      "title": "Gestion du traitement antiplaquettaire oral chez les patients porteurs d’endoprothèses coronaires",
+      "year": 2006,
+      "lineage": "agents_antiplaquettaires_programme",
+      "superseded_by_year": 2018,
+      "filename": "2_AFAR_Gestion-du-traitement-anti-plaquettaire-.pdf"
+    },
+    {
+      "title": "Prise en charge initiale des états septiques graves de l’adulte et de l’enfant",
+      "year": 2006,
+      "lineage": "sepsis_general",
+      "superseded_by_year": 2025,
+      "filename": "2_AFAR_Prise-en-charge-initiale-des-etats-septiques-graves-de-ladulte-et-de-lenfant.pdf"
+    },
+    {
+      "title": "Prise en charge hémodynamique du sepsis sévère (nouveau-né exclu)",
+      "year": 2005,
+      "lineage": "sepsis_general",
+      "superseded_by_year": 2025,
+      "filename": "2b_TEXTE-LONG_AFAR_Prise-en-charge-hemodynamique-du-sepsis-grave.pdf"
+    },
+    {
+      "title": "Prise en charge hémodynamique du sepsis sévère (nouveau-né exclu)",
+      "year": 2005,
+      "lineage": "sepsis_general",
+      "superseded_by_year": 2025,
+      "filename": "2a_TEXTE-COURT_Prise-en-charge-hemodynamique-du-sepsis-grave.pdf"
+    },
+    {
+      "title": "Antibiothérapie probabiliste des états septiques graves",
+      "year": 2004,
+      "lineage": "sepsis_general",
+      "superseded_by_year": 2025,
+      "filename": "2_AFAR_Antibiotherapie-probabiliste-des-etats-septiques-graves.pdf"
+    },
+    {
+      "title": "Prise en charge d’un blessé adulte présentant un traumatisme vertébro-médullaire",
+      "year": 2003,
+      "lineage": "traumatisme_vertebro_medullaire",
+      "superseded_by_year": 2019,
+      "filename": "2_AFAR_Prise-en-charge-d-un-blesse-adulte-presentant-un-traumatisme-vertebro-medullaire.pdf"
+    },
+    {
+      "title": "Prise en charge des voies aériennes en anesthésie adulte à l’exception de l’intubation difficile",
+      "year": 2003,
+      "lineage": "voies_aeriennes_adulte_bloc",
+      "superseded_by_year": 2026,
+      "filename": "2b_AFAR_Texte-Long_.pdf"
+    },
+    {
+      "title": "Prise en charge des voies aériennes en anesthésie adulte à l’exception de l’intubation difficile",
+      "year": 2003,
+      "lineage": "voies_aeriennes_adulte_bloc",
+      "superseded_by_year": 2026,
+      "filename": "1-2a_SFAR_Texte-court-Controle-des-voies-aeriennes-en-anesthesie-en-dehors-de-l-intubation-difficile.pdf"
+    },
+    {
+      "title": "Thrombopénie induite par l’héparine",
+      "year": 2002,
+      "lineage": "thrombopenie_induite_heparine",
+      "superseded_by_year": 2019,
+      "filename": "2_AFAR_Thrombopenie-induite-par-lheparine.pdf"
+    },
+    {
+      "title": "Les blocs périphériques des membres chez l’adulte",
+      "year": 2001,
+      "lineage": "blocs_peripheriques_adulte",
+      "superseded_by_year": 2016,
+      "filename": "2_AFAR_Les-blocs-peripheriques-des-membres-chez-l-adulte.pdf"
+    },
+    {
+      "title": "Pancréatite aiguë",
+      "year": 2001,
+      "lineage": "pancreatite_aigue",
+      "superseded_by_year": 2021,
+      "filename": "cc_pancreatiteaigue20010.pdf"
+    },
+    {
+      "title": "Recommandations SFAR-SRLF d’organisation des unités de surveillance continue",
+      "year": 2002,
+      "lineage": "organisation_usc",
+      "superseded_by_year": 2018,
+      "filename": "200502-Recommandations_SFAR_SRLF-OrganisationDesUSC.pdf"
+    },
+    {
+      "title": "Recommandations pour les structures et le matériel de l’anesthésie pédiatrique",
+      "year": 2000,
+      "lineage": "organisation_anesthesie_pediatrique",
+      "superseded_by_year": 2023,
+      "filename": "2_SFAR_Recommandations-pour-les-structures-et-le-materiel-de-lanesthesie-pediatrique.pdf"
+    },
+    {
+      "title": "Agents antiplaquettaires et période périopératoire",
+      "year": 2001,
+      "lineage": "agents_antiplaquettaires_programme",
+      "superseded_by_year": 2018,
+      "filename": "2b_SFAR-Anglais.pdf"
+    },
+    {
+      "title": "Agents antiplaquettaires et période périopératoire",
+      "year": 2001,
+      "lineage": "agents_antiplaquettaires_programme",
+      "superseded_by_year": 2018,
+      "filename": "2a_SFAR-Francais.pdf"
+    },
+    {
+      "title": "Intubation difficile",
+      "year": 2015,
+      "lineage": "voies_aeriennes_adulte_bloc",
+      "superseded_by_year": 2026,
+      "filename": "BJA-2015-reco-ventilation-et-IOT1.pdf"
+    },
+    {
+      "title": "Intubation difficile",
+      "year": 1996,
+      "lineage": "voies_aeriennes_adulte_bloc",
+      "superseded_by_year": 2026,
+      "filename": "2b_AFAR_Texte-Long_Intubation-difficile.pdf"
+    },
+    {
+      "title": "Intubation difficile",
+      "year": 2006,
+      "lineage": "voies_aeriennes_adulte_bloc",
+      "superseded_by_year": 2026,
+      "filename": "2a_SFAR_texte_court_Intubation-difficile.pdf"
+    }
+  ]
+}
