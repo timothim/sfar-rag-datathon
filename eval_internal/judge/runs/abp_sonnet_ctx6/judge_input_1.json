@@ -1,0 +1,308 @@
+[
+ {
+  "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::Q96",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une pancréatectomie gauche avec conservation de la rate ?",
+  "reference": "Céfazoline",
+  "answer": "Céfazoline 2g IVL, avec réinjection de 1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie, pour la pancréatectomie gauche avec ou sans conservation de la rate [S1][S2].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (GRADE 2)."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::Q97",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une duodéno-pancréatectomie céphalique (DPC) sans geste de drainage biliaire préopératoire ?",
+  "reference": "Céfoxitine",
+  "answer": "Duodéno-pancréatectomie céphalique (DPC) sans geste de drainage biliaire préopératoire : céfoxitine 2 g IVL, puis 1 g si durée > 2h, puis toutes les 2h jusqu'à fin de chirurgie [S1][S2].\n\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle — RFE SFAR 2026 (V3.1), GRADE 1."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::Q98",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une duodéno-pancréatectomie totale (DPT) pour ampullome avec antécédent de drainage biliaire ?",
+  "reference": "Pipéracilline/Tazobactam",
+  "answer": "Pour une duodéno-pancréatectomie totale (DPT) pour ampullome ou avec antécédent de drainage biliaire : pipéracilline + tazobactam 4 g IVL, puis 4 g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie [S2][S4].\n\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle — RFE SFAR 2026 (V3.1), GRADE 2."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::Q99",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une transplantation hépatique ?",
+  "reference": "Céfoxitine",
+  "answer": "Chez l'adulte, pour une transplantation de foie (total ou réduit) : céfoxitine 2 g IVL, puis 1 g si durée > 2h puis toutes les 2h jusqu'à fin de chirurgie [S4]. Chez l'enfant, il n'est pas possible de recommander une antibioprophylaxie consensuelle unique : elle doit tenir compte de la pression de sélection antibiotique préalable et/ou de la colonisation documentée, avec un protocole local établi par chaque centre [S1][S2].\n\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle — RFE SFAR 2026 (V3.1), avis d'experts."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::Q100",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une cure de hernie inguinale avec pose de prothèse par coelioscopie ?",
+  "reference": "Céfazoline",
+  "answer": "Cure de hernie inguinale avec prothèse (voie ouverte ou laparoscopique) : céfazoline 2 g IVL, puis 1 g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie [S3].\n\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle — RFE SFAR 2026 (V3.1), GRADE 2."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::Q101",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une cure de hernie de l'aine sans prothèse ?",
+  "reference": "Pas d'antibioprophylaxie",
+  "answer": "Cure de hernie sans prothèse : pas d'antibioprophylaxie [S1][S4].\n\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle — RFE SFAR 2026 (V3.1), GRADE 2."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::Q102",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour la pose d'une gastrostomie par voie transcutanée avec guidage endoscopique ?",
+  "reference": "Céfazoline",
+  "answer": "Pose de gastrostomie par voie transcutanée avec guidage endoscopique : céfazoline 2 g IVL, dose unique [S2][S3].\n\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle — RFE SFAR 2026 (V3.1), GRADE 1."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::Q104",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une CPRE avec extraction de calculs biliaires et drainage biliaire complet satisfaisant ?",
+  "reference": "Pas d'antibioprophylaxie",
+  "answer": "CPRE avec extraction de calculs biliaires et drainage biliaire complet satisfaisant : pas d'antibioprophylaxie [S1][S2].\n\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle — RFE SFAR 2026 (V3.1), GRADE 1."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::Q105",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une chimio-embolisation hépatique ?",
+  "reference": "Pas d'antibioprophylaxie",
+  "answer": "Chimio-embolisation hépatique : pas d'antibioprophylaxie [S1][S2].\n\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle — RFE SFAR 2026 (V3.1), avis d'experts."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::Q107",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une prostatectomie totale ?",
+  "reference": "Pas d'antibioprophylaxie",
+  "answer": "Prostatectomie totale : pas d'antibioprophylaxie [S1][S2][S4].\n\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle — RFE SFAR 2026 (V3.1), avis d'experts ; Place de l'ECBU avant une prise en charge urologique chirurgicale ou interventionnelle chez l'adulte — RPP SFAR 2026, GRADE 1."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::Q108",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour des biopsies de prostate par voie transrectale ?",
+  "reference": "Fosfomycine-trométamol",
+  "answer": "Biopsies de prostate par voie transrectale : fosfomycine-trométamol 3 g per os, dose unique, 2 à 4 h avant le geste [S5].\n\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle — RFE SFAR 2026 (V3.1), GRADE 1."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::Q109",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour des biopsies de prostate par voie transpérinéale ?",
+  "reference": "Pas d'antibioprophylaxie",
+  "answer": "Biopsies de prostate par voie transpérinéale : pas d'antibioprophylaxie [S1][S2].\n\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle — RFE SFAR 2026 (V3.1), avis d'experts."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::Q111",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une cystectomie sustrigonale totale ?",
+  "reference": "Céfoxitine",
+  "answer": "Cystectomie susgrigonale partielle ou totale, quel que soit le mode de dérivation : céfoxitine 2 g IVL, puis 1 g si durée > 2h, puis toutes les 2h jusqu'à fin de chirurgie [S1][S2].\n\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle — RFE SFAR 2026 (V3.1), avis d'experts."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::Q114",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une urétéroscopie diagnostique ?",
+  "reference": "Céfazoline",
+  "answer": "Urétéroscopie diagnostique et/ou thérapeutique : céfazoline 2 g IVL, puis 1 g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie [S4][S5].\n\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle — RFE SFAR 2026 (V3.1), GRADE 1."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::Q115",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une lithotritie extra-corporelle ?",
+  "reference": "Pas d'antibioprophylaxie",
+  "answer": "Lithotritie extra-corporelle : pas d'antibioprophylaxie [S1][S2].\n\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle — RFE SFAR 2026 (V3.1), GRADE 1."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::Q117",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une tympanoplastie (myringoplastie) ?",
+  "reference": "Pas d'antibioprophylaxie",
+  "answer": "Tympanoplastie / myringoplastie : pas d'antibioprophylaxie [S1][S2][S3].\n\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle — RFE SFAR 2026 (V3.1), GRADE 2."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::Q118",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une stapédectomie pour otospongiose ?",
+  "reference": "Pas d'antibioprophylaxie",
+  "answer": "Stapédectomie pour otospongiose (chirurgie de la chaîne ossiculaire) : pas d'antibioprophylaxie [S1][S2][S3].\n\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle — RFE SFAR 2026 (V3.1), GRADE 2."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::Q119",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une chirurgie de cholestéatome non infecté (tympanotomie d'oreille moyenne) ?",
+  "reference": "Pas d'antibioprophylaxie",
+  "answer": "Chirurgie de cholestéatome non infecté : pas d'antibioprophylaxie [S1][S2][S3].\n\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle — RFE SFAR 2026 (V3.1), GRADE 2."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::Q120",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une adénoïdectomie isolée ?",
+  "reference": "Pas d'antibioprophylaxie",
+  "answer": "Adénoïdectomie isolée : pas d'antibioprophylaxie [S1][S4][S5].\n\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle — RFE SFAR 2026 (V3.1), GRADE 1."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::Q121",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une laryngoscopie en suspension avec geste thérapeutique par laser (cordectomie) ?",
+  "reference": "Pas d'antibioprophylaxie",
+  "answer": "Laryngoscopie en suspension avec geste thérapeutique (laser, cordectomie, etc.) : pas d'antibioprophylaxie [S1][S2][S3].\n\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle — RFE SFAR 2026 (V3.1), avis d'experts."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::Q122",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une parathyroïdectomie pour hyperparathyroïdie primaire ?",
+  "reference": "Pas d'antibioprophylaxie",
+  "answer": "Parathyroïdectomie : pas d'antibioprophylaxie [S1][S2][S3][S5].\n\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle — RFE SFAR 2026 (V3.1), avis d'experts."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::Q127",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour la création d'une fistule artério-veineuse native sans mise en place de matériel prothétique ?",
+  "reference": "Pas d'antibioprophylaxie",
+  "answer": "Création ou reprise de fistule artério-veineuse sans mise en place de matériel : pas d'antibioprophylaxie [S1][S2].\n\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle — RFE SFAR 2026 (V3.1), GRADE 2."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::Q128",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour la création d'une fistule artério-veineuse prothétique avec mise en place d'un greffon synthétique ?",
+  "reference": "Céfazoline",
+  "answer": "Création ou reprise de fistule artério-veineuse avec mise en place de matériel : céfazoline 2 g IVL, puis 1 g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie [S2][S3].\n\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle — RFE SFAR 2026 (V3.1), GRADE 2."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::Q129",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une chirurgie des varices avec abord chirurgical du triangle de Scarpa ?",
+  "reference": "Céfazoline",
+  "answer": "Chirurgie des varices avec abord chirurgical du scarpa : céfazoline 2 g IVL, puis 1 g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie [S5].\n\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle — RFE SFAR 2026 (V3.1), GRADE 2."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::Q131",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour la fermeture d'un foramen ovale perméable par voie percutanée avec implantation de matériel ?",
+  "reference": "Amoxicilline/Clavulanate",
+  "answer": "Fermeture de foramen ovale perméable par voie percutanée avec implantation de matériel : amoxicilline/clavulanate 2 g IVL, puis 1 g si durée > 2h, puis toutes les 2h jusqu'à fin de chirurgie [S1][S2].\n\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle — RFE SFAR 2026 (V3.1), avis d'experts."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::Q132",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une bullectomie avec pleurectomie apicale par vidéothoracoscopie pour pneumothorax spontané récidivant ?",
+  "reference": "Céfazoline",
+  "answer": "Chirurgie du pneumothorax (bullectomie avec pleurectomie apicale par vidéothoracoscopie) : céfazoline 2 g IVL, puis 1 g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie [S1][S3].\n\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle — RFE SFAR 2026 (V3.1), avis d'experts."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::Q133",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour un body-lift (lifting corporel circulaire post-perte de poids massive) ?",
+  "reference": "Céfazoline",
+  "answer": "Body-lift : céfazoline 2 g IVL, puis 1 g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie [S1][S2].\n\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle — RFE SFAR 2026 (V3.1), GRADE 2."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::Q134",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une abdominoplastie de durée inférieure ou égale à 2 heures ?",
+  "reference": "Pas d'antibioprophylaxie",
+  "answer": "Pour une abdominoplastie de durée ≤ 2h, il n'y a pas d'antibioprophylaxie [S1][S3]. Une antibioprophylaxie par céfazoline n'est prévue qu'en cas de durée > 2h [S2].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1) ; Avis d'experts."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::Q135",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une brachioplastie (lifting des bras) ?",
+  "reference": "Pas d'antibioprophylaxie",
+  "answer": "Pour une brachioplastie (chirurgie de silhouette), il n'y a pas d'antibioprophylaxie [S1][S2].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1) ; Avis d'experts."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::Q136",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour un curage ganglionnaire axillaire seul (sans geste mammaire associé) ?",
+  "reference": "Pas d'antibioprophylaxie",
+  "answer": "Pour un curage ganglionnaire axillaire seul, il n'y a pas d'antibioprophylaxie [S4].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1) ; Avis d'experts."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::Q137",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une génioplastie (avec ou sans implant) ?",
+  "reference": "Amoxicilline/Clavulanate",
+  "answer": "Pour une génioplastie (avec ou sans implant) : amoxicilline/clavulanate 2g IVL [S4][S6]. Réinjection de 1g si durée > 2h, puis toutes les 2h jusqu'à fin de chirurgie [S4][S6].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1) ; Avis d'experts."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::Q138",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour la pose d'un substitut dermique (matrice dermique acellulaire) ?",
+  "reference": "Céfazoline",
+  "answer": "Chez l'adulte, pose d'un substitut dermique : céfazoline 2g IVL, avec 1g si durée > 4h puis toutes les 4h jusqu'à fin de chirurgie [S2][S6]. Chez l'enfant : céfazoline 30 mg/kg IVL, avec 30 mg/kg si durée > 4h puis toutes les 4h jusqu'à fin de chirurgie [S1][S3].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1) ; Avis d'experts."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::Q139",
+  "question": "Quelle molécule est recommandée en première intention pour l'antibioprophylaxie d'une prothèse totale de genou ?\nA. Amoxicilline/Clavulanate\nB. Céfazoline\nC. Clindamycine\nD. Vancomycine",
+  "reference": "B (Céfazoline)",
+  "answer": "Demande : molécule de première intention, prothèse totale de genou (proposition exacte).\nA. Amoxicilline/Clavulanate : non indiqué pour prothèse de genou [S6].\nB. Céfazoline : 2g IVL pour prothèse de hanche ou de genou [S6].\nC. Clindamycine : seulement en cas d'allergie aux bêtalactamines [S1].\nD. Vancomycine : seulement en seconde intention si allergie [S1].\n\nRÉPONSE : B (SFAR 2026 [S6])"
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::Q141",
+  "question": "En cas d'allergie aux bêtalactamines, quelle est l'alternative de première intention pour l'antibioprophylaxie d'une prothèse de genou ?\nA. Gentamicine\nB. Vancomycine\nC. Clindamycine\nD. Métronidazole",
+  "reference": "C (Clindamycine)",
+  "answer": "Demande : alternative de première intention en cas d'allergie aux bêtalactamines, chirurgie orthopédique programmée (prothèse de genou).\nA. Gentamicine : absente des extraits pour ce contexte.\nB. Vancomycine : seconde intention (avec teicoplanine) [S1].\nC. Clindamycine 900 mg IVL : première intention [S1].\nD. Métronidazole : absent des extraits pour ce contexte.\n\nRÉPONSE : C (SFAR 2026 [S1])"
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::Q144",
+  "question": "Parmi ces actes neurochirurgicaux, lequel nécessite une antibioprophylaxie ?\nA. Dérivation ventriculaire externe (DVE)\nB. Biopsie cérébrale\nC. Dérivation ventriculo-péritonéale (DVP)\nD. Angiographie des artères cérébrales",
+  "reference": "C (Dérivation ventriculo-péritonéale (DVP))",
+  "answer": "Demande : acte nécessitant une antibioprophylaxie (proposition exacte).\nA. DVE : pas d'antibioprophylaxie [S1].\nB. Biopsie cérébrale : pas d'antibioprophylaxie [S1].\nC. DVP : céfazoline 2g IVL [S1][S5].\nD. Angiographie cérébrale : pas d'antibioprophylaxie [S7].\n\nRÉPONSE : C (SFAR 2026 [S1])"
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::Q147",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour la chirurgie de la cataracte ?\nA. Céfazoline IV\nB. Céfuroxime intracamérulaire\nC. Vancomycine intravitréenne\nD. Moxifloxacine en collyre",
+  "reference": "B (Céfuroxime intracamérulaire)",
+  "answer": "Demande : recommandation d'antibioprophylaxie pour la chirurgie de la cataracte (proposition exacte).\nA. Céfazoline IV : non retenue pour la cataracte [S1].\nB. Céfuroxime intracamérulaire : 1 mg/0,1 mL en fin d'intervention, dose unique (GRADE 1) [S1][S3].\nC. Vancomycine intravitréenne : réservée aux traumatismes à globe ouvert [S1].\nD. Moxifloxacine : intracamérulaire si allergie ; collyres non recommandés [S1][S2].\n\nRÉPONSE : B (SFAR 2026 [S1])"
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::Q149",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une lobectomie pulmonaire par thoracotomie ?\nA. Amoxicilline/Clavulanate uniquement\nB. Céfazoline uniquement\nC. Céfuroxime uniquement\nD. Amoxicilline/Clavulanate, Céfazoline ou Céfuroxime (au choix)",
+  "reference": "D (Amoxicilline/Clavulanate, Céfazoline ou Céfuroxime (au choix))",
+  "answer": "Demande : recommandation pour une lobectomie pulmonaire par thoracotomie (proposition exacte).\nA. Amoxicilline/Clavulanate seul : à privilégier [S1], mais pas seul.\nB. Céfazoline seule : option au choix, pas exclusive [S2].\nC. Céfuroxime seul : 1,5g IVL, option (GRADE 1) [S3][S5].\nD. Les trois au choix : amoxicilline/clavulanate ou céfazoline [S2], ou céfuroxime [S3][S5] (amoxicilline/clavulanate à privilégier [S1]).\n\nRÉPONSE : D (SFAR 2026 [S2])"
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::Q153",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une hystérectomie totale par voie coelioscopique (avec annexectomie) ?\nA. Céfazoline\nB. Céfoxitine\nC. Amoxicilline/Clavulanate\nD. Céfuroxime",
+  "reference": "B (Céfoxitine)",
+  "answer": "Demande : recommandation pour une hystérectomie totale par coelioscopie avec annexectomie (proposition exacte).\nA. Céfazoline : pour hystérectomie subtotale, myomectomie [S1].\nB. Céfoxitine 2g IVL : hystérectomie totale sans ou avec annexectomie [S1][S2].\nC. Amoxicilline/Clavulanate : absent des extraits pour cet acte.\nD. Céfuroxime : alternative pour hystérectomie subtotale, non totale [S1].\n\nRÉPONSE : B (SFAR 2026 [S2])"
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::Q154",
+  "question": "Parmi ces interventions gynécologiques par coelioscopie, laquelle ne nécessite PAS d'antibioprophylaxie ?\nA. Annexectomie\nB. Curage pelvien\nC. Kystectomie ovarienne\nD. Omentectomie",
+  "reference": "C (Kystectomie ovarienne)",
+  "answer": "Demande : intervention coelioscopique sans antibioprophylaxie (polarité : PAS).\nA. Annexectomie : céfazoline [S2].\nB. Curage pelvien : céfazoline [S2].\nC. Kystectomie ovarienne : pas d'antibioprophylaxie [S1][S2].\nD. Omentectomie : céfazoline [S2].\n\nRÉPONSE : C (SFAR 2026 [S2])"
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::Q156",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une résection de lésions endométriosiques avec atteinte rectale ?\nA. Céfazoline seule\nB. Céfoxitine seule\nC. Céfazoline + Métronidazole\nD. Amoxicilline/Clavulanate",
+  "reference": "C (Céfazoline + Métronidazole)",
+  "answer": "Demande : recommandation pour résection de lésions endométriosiques avec atteinte rectale (proposition exacte).\nA. Céfazoline seule : incomplet, métronidazole associé [S1].\nB. Céfoxitine seule : non retenue [S1].\nC. Céfazoline 2 g + métronidazole 1 g IVL (dose unique) [S1].\nD. Amoxicilline/Clavulanate : non retenue [S1].\n\nRÉPONSE : C (SFAR 2026 [S1])"
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::Q157",
+  "question": "Concernant l'antibioprophylaxie en chirurgie bariatrique, quelle affirmation est correcte ?\nA. Anneau gastrique et sleeve gastrectomie utilisent la même molécule\nB. L'anneau gastrique nécessite de la céfazoline, la sleeve gastrectomie de la céfoxitine\nC. Aucune chirurgie bariatrique ne nécessite d'antibioprophylaxie\nD. Toute chirurgie bariatrique nécessite de la céfoxitine",
+  "reference": "B (L'anneau gastrique nécessite de la céfazoline, la sleeve gastrectomie de la céfoxitine)",
+  "answer": "Demande : affirmation correcte sur la chirurgie bariatrique.\nA. Molécule identique : faux, céfoxitine vs céfazoline [S1][S3].\nB. Anneau : céfazoline [S3] ; sleeve : céfoxitine [S1].\nC. Aucune antibioprophylaxie : faux [S1][S3].\nD. Céfoxitine pour toutes : faux, anneau sous céfazoline [S3].\n\nRÉPONSE : B (SFAR 2026 [S1][S3])"
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::Q158",
+  "question": "Quel est le protocole d'antibioprophylaxie recommandé pour une colectomie programmée ?\nA. Céfoxitine IV le jour de la chirurgie uniquement\nB. Tobramycine + Métronidazole per os la veille, puis Céfoxitine IV le jour de la chirurgie\nC. Amoxicilline/Clavulanate IV le jour de la chirurgie uniquement\nD. Céfazoline IV le jour de la chirurgie + Métronidazole per os la veille",
+  "reference": "B (Tobramycine + Métronidazole per os la veille, puis Céfoxitine IV le jour de la chirurgie)",
+  "answer": "Demande : protocole recommandé pour une colectomie programmée (proposition exacte).\nA. Céfoxitine seule le jour J : incomplet [S4].\nB. Tobramycine 200 mg + métronidazole 1 g per os la veille, puis céfoxitine 2 g IVL [S4][S5].\nC. Amoxicilline/Clavulanate : non retenue [S4].\nD. Céfazoline + métronidazole per os : non retenue [S4].\n\nRÉPONSE : B (SFAR 2026 [S4])"
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::Q159",
+  "question": "Une cholécystectomie élective par coelioscopie est programmée. Dans quel cas une antibioprophylaxie est-elle recommandée ?\nA. Chez un patient de moins de 60 ans, sans comorbidité, pour vésicule lithiasique symptomatique sans cholécystite\nB. Chez un patient avec ictère et calcul de la voie biliaire principale\nC. Une antibioprophylaxie est toujours recommandée quelle que soit la situation\nD. Une antibioprophylaxie n'est jamais recommandée pour la voie coelioscopique",
+  "reference": "B (Chez un patient avec ictère et calcul de la voie biliaire principale)",
+  "answer": "Demande : cas où l'antibioprophylaxie est recommandée pour cholécystectomie élective par coelioscopie.\nA. Patient < 60 ans sans comorbidité : critères de faible risque, non précisé comme indication [S1].\nB. Ictère et calcul de la VBP : critères de haut risque, céfazoline 2g IVL [S1][S2].\nC. Toujours recommandée : non étayé, distinction haut/faible risque [S1].\nD. Jamais recommandée : faux, patients à haut risque [S1].\n\nRÉPONSE : B (SFAR 2026 [S1])"
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::Q160",
+  "question": "Concernant l'antibioprophylaxie des biopsies de prostate, quelle affirmation est correcte ?\nA. Les deux voies (transrectale et transpérinéale) nécessitent une antibioprophylaxie\nB. Aucune des deux voies ne nécessite d'antibioprophylaxie\nC. Seule la voie transrectale nécessite une antibioprophylaxie (fosfomycine-trométamol)\nD. Seule la voie transpérinéale nécessite une antibioprophylaxie (céfazoline)",
+  "reference": "C (Seule la voie transrectale nécessite une antibioprophylaxie (fosfomycine-trométamol))",
+  "answer": "Demande : affirmation correcte sur les biopsies de prostate.\nA. Les deux voies : faux, transpérinéale sans antibioprophylaxie [S6].\nB. Aucune des deux : faux, transrectale avec fosfomycine [S6].\nC. Transrectale seule : fosfomycine-trométamol 3g per os (GRADE 1) [S3][S6].\nD. Transpérinéale seule : faux [S6].\n\nRÉPONSE : C (SFAR 2026 [S6])"
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::Q161",
+  "question": "Concernant l'antibioprophylaxie de la cure de hernie inguinale, quelle affirmation est correcte ?\nA. Une antibioprophylaxie est toujours recommandée, avec ou sans prothèse\nB. Une antibioprophylaxie n'est jamais recommandée, avec ou sans prothèse\nC. Une antibioprophylaxie est recommandée uniquement en cas de pose de prothèse\nD. Une antibioprophylaxie est recommandée uniquement en l'absence de prothèse",
+  "reference": "C (Une antibioprophylaxie est recommandée uniquement en cas de pose de prothèse)",
+  "answer": "Demande : affirmation correcte sur la cure de hernie inguinale.\nA. Toujours : faux, hernie sans prothèse sans antibioprophylaxie [S5].\nB. Jamais : faux, avec prothèse céfazoline 2g IVL [S5].\nC. Uniquement avec prothèse : céfazoline avec prothèse, aucune sans [S5][S6].\nD. Uniquement sans prothèse : faux [S5].\n\nRÉPONSE : C (SFAR 2026 [S5])"
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::Q163",
+  "question": "Un patient traumatisé crânien a reçu de la ceftriaxone en prévention de la pneumopathie d'inhalation. Il doit être opéré d'une fracture ouverte du radius. Laquelle des conduites suivantes est INCORRECTE ?\nA. Amoxicilline/Clavulanate en dose unique pré-opératoire\nB. Céfazoline + Gentamicine en dose unique pré-opératoire\nC. Aucun ajout, la ceftriaxone couvre déjà l'antibioprophylaxie chirurgicale",
+  "reference": "C (Aucun ajout, la ceftriaxone couvre déjà l'antibioprophylaxie chirurgicale)",
+  "answer": "Demande : conduite INCORRECTE (polarité négative), fracture ouverte (hors main), traumatisé crânien sous ceftriaxone.\nA. Amoxicilline/Clavulanate 2g IVL : recommandé pour Gustilo 2 ou 3 [S7].\nB. Céfazoline + gentamicine : schéma du traumatisme complexe de la main [S1] ; extraits non explicites pour le radius.\nC. Aucun ajout, ceftriaxone suffisante : aucun extrait ne le prévoit ; fracture ouverte relève d'une antibioprophylaxie spécifique [S7].\n\nRÉPONSE : C (SFAR 2026 [S7])"
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::Q164",
+  "question": "Parmi ces interventions otologiques, laquelle nécessite une antibioprophylaxie ?\nA. Tympanoplastie pour perforation tympanique\nB. Stapédectomie pour otospongiose\nC. Pose d'implant cochléaire\nD. Chirurgie de cholestéatome non infecté",
+  "reference": "C (Pose d'implant cochléaire)",
+  "answer": "Demande : intervention otologique nécessitant une antibioprophylaxie (proposition exacte).\nA. Tympanoplastie : pas d'antibioprophylaxie [S2].\nB. Stapédectomie : pas d'antibioprophylaxie [S2].\nC. Implant cochléaire : céfazoline 2g IVL [S2].\nD. Cholestéatome non infecté : pas d'antibioprophylaxie [S2].\n\nRÉPONSE : C (SFAR 2026 [S2])"
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::Q165",
+  "question": "Concernant l'antibioprophylaxie de la chirurgie des glandes salivaires, quelle affirmation est correcte ?\nA. Une antibioprophylaxie est toujours recommandée, quelle que soit la voie d'abord\nB. Une antibioprophylaxie n'est jamais recommandée pour ce type de chirurgie\nC. Une antibioprophylaxie est recommandée uniquement en cas d'accès par la cavité bucco-pharyngée\nD. Une antibioprophylaxie est recommandée uniquement en l'absence d'accès par la cavité bucco-pharyngée",
+  "reference": "C (Une antibioprophylaxie est recommandée uniquement en cas d'accès par la cavité bucco-pharyngée)",
+  "answer": "Demande : affirmation correcte sur les glandes salivaires.\nA. Toujours : faux, sans accès bucco-pharyngé aucune [S2].\nB. Jamais : faux, avec accès amoxicilline/clavulanate [S4].\nC. Uniquement avec accès bucco-pharyngé : amoxicilline/clavulanate 2g IVL [S4][S6].\nD. Uniquement sans accès : faux [S2].\n\nRÉPONSE : C (SFAR 2026 [S4])"
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::Q166",
+  "question": "Parmi ces procédures interventionnelles vasculaires, dans quel cas l'antibioprophylaxie n'est-elle PAS recommandée ?\nA. Pose d'un stent couvert aortique\nB. Pose d'une endoprothèse vasculaire\nC. Pose d'un stent nu chez un patient avec facteurs de risque infectieux\nD. Pose d'un stent nu chez un patient sans facteur de risque infectieux",
+  "reference": "D (Pose d'un stent nu chez un patient sans facteur de risque infectieux)",
+  "answer": "Demande : cas SANS antibioprophylaxie (polarité négative).\nA. Stent couvert : céfazoline [S4].\nB. Endoprothèse : céfazoline [S4].\nC. Stent nu avec facteurs de risque : céfazoline [S4].\nD. Stent nu sans facteur de risque : pas d'antibioprophylaxie (GRADE 2) [S1].\n\nRÉPONSE : D (SFAR 2026 [S1])"
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::Q168",
+  "question": "Concernant l'antibioprophylaxie de la chirurgie de fistule artério-veineuse pour accès de dialyse, quelle affirmation est correcte ?\nA. Une antibioprophylaxie est recommandée dans tous les cas\nB. Une antibioprophylaxie n'est jamais recommandée\nC. Une antibioprophylaxie est recommandée uniquement en cas de mise en place de matériel prothétique\nD. Une antibioprophylaxie est recommandée uniquement en l'absence de matériel prothétique",
+  "reference": "C (Une antibioprophylaxie est recommandée uniquement en cas de mise en place de matériel prothétique)",
+  "answer": "Demande : affirmation correcte sur la chirurgie de FAV.\nA. Tous les cas : faux, sans matériel aucune [S5].\nB. Jamais : faux, avec matériel céfazoline [S5].\nC. Uniquement avec matériel : céfazoline 2g IVL (GRADE 2) ; sans matériel, aucune [S1][S3][S5].\nD. Uniquement sans matériel : faux [S5].\n\nRÉPONSE : C (SFAR 2026 [S5])"
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::Q171",
+  "question": "Parmi ces interventions ORL ou cervico-faciales, laquelle ne nécessite PAS d'antibioprophylaxie ?\nA. Septo-rhinoplastie avec greffe de cartilage\nB. Chirurgie des glandes salivaires avec accès par la cavité bucco-pharyngée\nC. Parathyroïdectomie\nD. Pose d'implant cochléaire",
+  "reference": "C (Parathyroïdectomie)",
+  "answer": "Demande : intervention sans antibioprophylaxie (polarité : PAS).\nA. Septo-rhinoplastie avec greffe : absente des extraits fournis.\nB. Glandes salivaires avec accès bucco-pharyngé : amoxicilline/clavulanate [S3].\nC. Parathyroïdectomie : pas d'antibioprophylaxie [S5].\nD. Implant cochléaire : absent des extraits fournis.\n\nRÉPONSE : C (SFAR 2026 [S5])"
+ }
+]

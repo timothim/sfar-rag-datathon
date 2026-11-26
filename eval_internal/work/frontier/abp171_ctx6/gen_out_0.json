@@ -1,0 +1,106 @@
+[
+ {
+  "case_id": "Q01",
+  "answer": "Pour une prothèse de hanche, l'antibioprophylaxie recommandée est la céfazoline 2g IVL, avec 1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie [S1][S2].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (Avis d'experts)"
+ },
+ {
+  "case_id": "Q02",
+  "answer": "Pour une arthroscopie diagnostique sans mise en place de matériel (membre inférieur), il n'y a pas d'antibioprophylaxie [S2][S3].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (Avis d'experts)"
+ },
+ {
+  "case_id": "Q03",
+  "answer": "Pour une prothèse de genou, l'antibioprophylaxie standard est la céfazoline 2g IVL [S3], mais les extraits ne précisent pas la conduite en cas d'allergie aux bêtalactamines pour le genou ; la seule mention allergique concerne la prothèse de hanche par voie antérieure (vancomycine ou teicoplanine préférées à la clindamycine) [S3][S6].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (Avis d'experts)"
+ },
+ {
+  "case_id": "Q05",
+  "answer": "Pour une fracture ouverte Gustilo 2 (ou 3), l'antibioprophylaxie recommandée est l'amoxicilline/clavulanate 2g IVL, avec 1g si durée > 2h, puis toutes les 2h jusqu'à fin de chirurgie [S1][S4].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (Avis d'experts)"
+ },
+ {
+  "case_id": "Q07",
+  "answer": "Pour une chirurgie instrumentée du rachis avec pose de matériel en 1 temps, l'antibioprophylaxie recommandée est la céfazoline 2g IVL, avec 1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie [S2][S3][S4].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (GRADE 2)"
+ },
+ {
+  "case_id": "Q09",
+  "answer": "Pour un traumatisme complexe de la main (écrasement, ou durée de chirurgie prévue > 2h), l'antibioprophylaxie recommandée est l'amoxicilline/clavulanate 2g IVL, avec 1g si durée > 2h, puis toutes les 2h jusqu'à fin de chirurgie [S1][S2].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (Avis d'experts)"
+ },
+ {
+  "case_id": "Q18",
+  "answer": "Pour une craniotomie, l'antibioprophylaxie recommandée est la céfazoline 2g IVL, avec 1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie [S3][S6].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (GRADE 2 et Avis d'experts)"
+ },
+ {
+  "case_id": "Q19",
+  "answer": "Pour une biopsie cérébrale, il n'y a pas d'antibioprophylaxie [S1][S5].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (Avis d'experts)"
+ },
+ {
+  "case_id": "Q20",
+  "answer": "Pour la pose d'une dérivation ventriculaire externe (DVE), il n'y a pas d'antibioprophylaxie [S1].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (Avis d'experts)"
+ },
+ {
+  "case_id": "Q25",
+  "answer": "Pour la pose d'une électrode de stimulation cérébrale, l'antibioprophylaxie recommandée chez l'adulte est la céfazoline 2g IVL, avec 1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie [S1] ; chez l'enfant, la dose initiale est de 30 mg/kg IVL [S2][S3].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (Avis d'experts)"
+ },
+ {
+  "case_id": "Q26",
+  "answer": "Pour l'embolisation d'un anévrysme cérébral (neuroradiologie interventionnelle), il n'y a pas d'antibioprophylaxie [S1][S2].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (Avis d'experts)"
+ },
+ {
+  "case_id": "Q27",
+  "answer": "Les recommandations SFAR fournies ne traitent pas cette question."
+ },
+ {
+  "case_id": "Q28",
+  "answer": "Pour une plaie cranio-cérébrale, l'antibioprophylaxie standard est l'amoxicilline/clavulanate 2g IVL, avec 1g si durée > 2h, puis toutes les 2h jusqu'à fin de chirurgie [S4], mais les extraits ne précisent pas d'alternative en cas d'allergie aux pénicillines pour cette indication.\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (Avis d'experts)"
+ },
+ {
+  "case_id": "Q30",
+  "answer": "Pour une thyroïdectomie totale, il n'y a pas d'antibioprophylaxie [S1][S2].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (Avis d'experts)"
+ },
+ {
+  "case_id": "Q31",
+  "answer": "Pour une chirurgie sinusienne de polypose nasale (méatotomie, éthmoïdectomie, sphénoïdectomie, polypectomie), il n'y a pas d'antibioprophylaxie [S1][S2].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (Avis d'experts)"
+ },
+ {
+  "case_id": "Q36",
+  "answer": "Pour une chirurgie de la cataracte, l'antibioprophylaxie recommandée est le céfuroxime 1 mg/0,1 mL en injection intracamérulaire en fin d'intervention, dose unique [S5] ; en cas d'allergie, moxifloxacine 0,480 mg/0,3 mL en injection intracamérulaire en fin d'intervention [S5].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (GRADE 1 ; Avis d'experts pour l'alternative en cas d'allergie)"
+ },
+ {
+  "case_id": "Q37",
+  "answer": "Pour une chirurgie du glaucome, il n'y a pas d'antibioprophylaxie [S3][S4].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (Avis d'experts)"
+ },
+ {
+  "case_id": "Q40",
+  "answer": "Les recommandations SFAR fournies ne traitent pas cette question."
+ },
+ {
+  "case_id": "Q41",
+  "answer": "Pour une fracture ouverte de mandibule, l'antibioprophylaxie recommandée est l'amoxicilline/clavulanate 2g IVL, avec 1g si durée > 2h, puis toutes les 2h jusqu'à la fin de la chirurgie [S1][S6].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (GRADE 2)"
+ },
+ {
+  "case_id": "Q42",
+  "answer": "Les recommandations SFAR fournies ne traitent pas cette question."
+ },
+ {
+  "case_id": "Q43",
+  "answer": "Pour une chirurgie carcinologique cervico-faciale avec lambeau, le schéma est l'amoxicilline/clavulanate 2g IVL (1g si durée > 2h, puis toutes les 2h jusqu'à fin de chirurgie) ; en cas d'allergie aux bêtalactamines, il faut rajouter la gentamicine 6-7 mg/kg IVL à la clindamycine [S3][S4]. La dose de clindamycine n'est pas précisée dans les extraits pour cet acte (900 mg IVL dans l'encadré allergie de la chirurgie stomatologique et maxillo-faciale) [S2].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (Avis d'experts)"
+ },
+ {
+  "case_id": "Q44",
+  "answer": "Pour un remplacement valvulaire aortique sous CEC, l'antibioprophylaxie recommandée est la céfazoline 2g IVL, avec 1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie, + 1g lors du priming si CEC [S4].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (GRADE 1)"
+ },
+ {
+  "case_id": "Q45",
+  "answer": "Pour la pose d'une bioprothèse de valve aortique par voie transcutanée (TAVI), l'antibioprophylaxie recommandée est l'amoxicilline/clavulanate 2g IVL, avec 1g si durée > 2h, puis toutes les 2h jusqu'à fin de chirurgie [S1][S2].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (Avis d'experts)"
+ },
+ {
+  "case_id": "Q46",
+  "answer": "Pour l'implantation d'un stimulateur cardiaque, l'antibioprophylaxie recommandée est la céfazoline 2g IVL, avec 1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie [S1][S2].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (GRADE 1)"
+ },
+ {
+  "case_id": "Q48",
+  "answer": "Pour la mise en place percutanée d'une ECMO sans abord chirurgical, il n'y a pas d'antibioprophylaxie [S2][S3].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (Avis d'experts)"
+ },
+ {
+  "case_id": "Q50",
+  "answer": "Pour une amputation de membre (hors contexte septique), l'antibioprophylaxie recommandée est l'amoxicilline/clavulanate 2g IVL, avec 1g si durée > 2h, puis toutes les 2h jusqu'à fin de chirurgie, puis 50 mg/kg/j en 3 ou 4 injections IVL pendant 48h [S1][S2].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (GRADE 2)"
+ }
+]
