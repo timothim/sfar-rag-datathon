@@ -1,0 +1,378 @@
+[
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::MR-g3b9708b3518cddf9bccf",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Conduite identique : retour possible après scanner normal avec les mêmes critères cliniques."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::MR-gfff2848a70957ac0b7b5",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Scanner cérébral avec injection recommandé devant la suspicion de dissection, conforme à la référence."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::MR-g8f23afa63325b0d08bd8",
+  "correctness": "partial",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Traitement opératoire précoce correct, mais le scanner secondaire de la référence est omis."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::MR-g8e54d9655989718c1639",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Non-hypothermie par rapport à la normothermie, conforme à la référence."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::MR-gd1b252c6b18be4bca7b6",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Pas de bénéfice à descendre sous 34 °C, conforme à la référence."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::MR-gd9a325c36650ee68a17f",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Transposition aux enfants confirmée par les experts pédiatres, conforme à la référence."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::MR-ge6178ab7ed0b124f3edc",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Pas de radiographie systématique quel que soit l'âge, conforme à la référence."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::MR-g2c188878f4fca6996f4b",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Endartériectomie carotidienne classée à risque intermédiaire (1 à 5 %), conforme à la référence."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::MR-gae3cda1acd4e903f01fd",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Radiographie non contributive, non systématique, conforme à la référence."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::MR-geb9482ee3d54334a43fd",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Intervention le matin et sortie après six heures de surveillance, conforme à la référence."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::MR-g9dbb7b8cb49592f9fa97",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Bilan d'hémostase nécessaire avant trois ans, conforme à la référence."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::MR-gbe3dad7d7f9b1ae34b88",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Effets indésirables principaux identiques à la référence."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::MR-gc1eeae015b45990b618e",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Candida dans les VAS y compris le LBA n'a pas de valeur diagnostique, conforme à la référence."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::MR-g28ea0199f37013bf91f9",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Le médecin anesthésiste-réanimateur décide, conforme à la référence."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::MR-g6951bd8344b814c79f7e",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Absence de réponse après deux jours d'arrêt des diurétiques et albumine 1 g/kg, conforme à la référence."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::MR-g392fcc10d6909f623c73",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "HBPM option de choix avec posologies probablement insuffisantes, conforme à la référence."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::MR-g6d75a0524a3097e36863",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Contrôle de l'hémorragie et de la contamination périnéale, conforme à la référence."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::MR-g424483aecf041277fed5",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Réhabilitation améliorée avec mobilisation précoce, conforme à la référence."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::MR-ga86840965e184a4c0f3d",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Support vidéo réduisant l'anxiété, conforme à la référence."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::MR-g26cc210b12a24bc1dcf5",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Formule du poids théorique correcte, conforme à la référence."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::MR-gb9a942c3d4de87e96a69",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "PEP élevée probablement recommandée, conforme à la référence."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::MR-g448aac5e0ca03eebb7fb",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Les quatre situations de la référence sont citées sans contresens."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::MR-gace2db46f6d0fbc9a4b7",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Non-recommandation de la VNI de rattrapage et mortalité accrue, conforme à la référence."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::MR-gfc720f85a7e4c8f6d739",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Gouttière sur mesure recommandée et information tracée, conforme à la référence."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::MR-g655c1a5b2a8ff63dc61f",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Pas de réimplantation d'une dent temporaire luxée, conforme à la référence."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::MR-g32226ce0e89926e25109",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Report de l'intervention à HbA1c 10 %, conforme à la référence."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::MR-g9f4e50ab33c87f6858b4",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Absence de lien hiérarchique avec le médecin en charge, conforme à la référence."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::MR-gb3d45a182edaa9519369",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Contenu du dossier décrit en détail, conforme à la référence."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::MR-g3bd1e3f5c8f306008b76",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Traitement conservateur discuté au cas par cas, conforme à la référence."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::MR-g83a9315591cd44551dbc",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Monitorage pouvant détecter sous- ou surdosage chez le patient curarisé, conforme à la référence."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::MR-gbc67a0eb3b22c1690c0c",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Valeur d'environ 45 à 0,5 CAM, conforme à la référence."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::MR-gff794cd57325dca363d6",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Aide au raisonnement et détection du sous- ou surdosage, conforme à la référence."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::MR-gcb6edd578e226e2bf83b",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Fraction de filtration inférieure à 25 % en ajustant le débit sanguin, conforme à la référence."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::MR-g0979ab4dc4ec3f5dbd2f",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Dialyse péritonéale possible en postopératoire de chirurgie cardiaque, conforme à la référence."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::MR-gf761346ec9be5d6ba346",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Formation à la communication/médiation, proche de la référence sans contresens."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::MR-g0aba15fbdfface749f92",
+  "correctness": "incorrect",
+  "abstained": true,
+  "serious_error": "other",
+  "faithful": null,
+  "justification": "Abstention alors que la référence donne une recommandation (accompagnement structuré, GRADE 1)."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::MR-gfd6492bcff9d310fa822",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Glycémie peropératoire et en SSPI chez les patients à risque, conforme à la référence."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::MR-g43a751763308810eda5b",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Abandon des protocoles statiques, conforme à la référence."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::MR-ga82b7f724c31133396b0",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Pas de sonde nasogastrique après chirurgie colorectale, conforme à la référence."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::MR-g3940cdb7b78acbdfb13d",
+  "correctness": "partial",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Analgésie multimodale et locorégionale correctes, mais la lidocaïne IV privilégiée de la référence est omise."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::MR-g508df1f5f5c7dacd7171",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Niveau d'aide faible d'environ 7 cmH2O, conforme à la référence."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::MR-gaaba8d034741e6533aee",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Dysfonction diaphragmatique transitoire, douleur et plus faible taux d'échec, conforme à la référence."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::MR-g76063f88d9909f319d85",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Prémédication anxiolytique et/ou analgésique possible, conforme à la référence."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::MR-g293148d474c4b595ab24",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Benzodiazépines à éviter pour les troubles du comportement, conforme à la référence."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::MR-gf79873a2c51a5380fe66",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Repérage de la sidération, defusing puis dépistage de l'ESPT, conforme à la référence."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::MR-g55e468b6df0cb295c14b",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Perfusion continue identifiée comme facteur de risque, conforme à la référence."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::MR-g0c4e1de8af1e9b05f324",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Anesthésie générale en cas d'échec de la périmédullaire, conforme à la référence."
+ }
+]

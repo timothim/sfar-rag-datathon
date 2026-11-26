@@ -32,6 +32,7 @@ Phase 3 (boucle d'amélioration). Référence courante : C9 (BM25+dense+RRF+rera
 | idem | abp dev | correct 80,4 → 76,5 (n.s.) ; graves 5,9 = | cohérent (sur-ajustement retiré) |
 | Prompt concis vs détaillé (C9) | abp dev | correct +4,9 n.s., graves −2,0, latence −2,7 s | prometteur |
 | idem | multirfe dev | correct +2,1 n.s., latence −4,8 s, mais abstention 83 → 61 % | à corriger (abstention) avant adoption |
+| Générateur Sonnet vs 7B, mêmes contextes C9 (6 passages) | multirfe dev | correct 69,1 → 90,4 % (+21,3 [+12,8 ; +30,9]), graves 7,4 → 0 % | générateur = goulot principal ; viser un modèle ouvert plus fort sur LibreDataHub |
 | Embedder Qwen3-Embedding-0.6B vs e5-small (C9) | les deux dev | toutes différences n.s. (doc hit −2,6 tendance) | non adopté ; tester en dense seul |
 | Ancien C0 vs ancien C8, génération 7B mode générique, juge Haiku (κ 0,88) | abp171 dev | correct 64,7 → 80,4 % (+15,7 [+2,9 ; +27,5]) ; erreurs graves 14,7 → 5,9 % | référence « avant » pour la génération |
 | Reranker bge-reranker-v2-m3 vs mmarco (C9) | multirfe dev | passage hit +3,9 [−1,3 ; +9,2], MRR +0,059 n.s. ; latence ×30 sur Mac | candidat GPU, non adopté localement |

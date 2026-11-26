@@ -1431,7 +1431,26 @@
       },
       "n": 4
      }
-    }
+    },
+    "judge_correct": {
+     "mean": 0.9042553191489362,
+     "ci_low": 0.8404255319148937,
+     "ci_high": 0.9574468085106383,
+     "n": 94
+    },
+    "judge_correct_or_partial": {
+     "mean": 0.9468085106382979,
+     "ci_low": 0.9042553191489362,
+     "ci_high": 0.9893617021276596,
+     "n": 94
+    },
+    "judge_serious_error": {
+     "mean": 0.0,
+     "ci_low": 0.0,
+     "ci_high": 0.0,
+     "n": 94
+    },
+    "judge_serious_error_types": {}
    },
    "rows": [
     {
@@ -1455,7 +1474,18 @@
      "false_abstention": 0.0,
      "correct": 0.0,
      "sourced": 1.0,
-     "answer": "Oui, après une imagerie cérébrale normale, un patient sous anticoagulant peut être autorisé à rentrer à domicile, sous réserve de répondre aux éléments cliniques requis [S1]. Les critères sont : l'absence d'intoxication associée, l'absence de vomissements itératifs, l'absence de céphalées importantes persistantes, un Score de Glasgow à 15, l'absence de déficit neurologique et l'absence d'autres motifs pouvant justifier une hospitalisation [S1].\nSource : Prise en charge des patients présentant un traumatisme crânien léger de l’adulte — RPP SFAR 2022 (avis d'experts, accord fort)."
+     "answer": "Oui, après une imagerie cérébrale normale, un patient sous anticoagulant peut être autorisé à rentrer à domicile, sous réserve de répondre aux éléments cliniques requis [S1]. Les critères sont : l'absence d'intoxication associée, l'absence de vomissements itératifs, l'absence de céphalées importantes persistantes, un Score de Glasgow à 15, l'absence de déficit neurologique et l'absence d'autres motifs pouvant justifier une hospitalisation [S1].\nSource : Prise en charge des patients présentant un traumatisme crânien léger de l’adulte — RPP SFAR 2022 (avis d'experts, accord fort).",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-g3b9708b3518cddf9bccf",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Retour à domicile possible après scanner normal avec les mêmes critères de sortie que la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-gfff2848a70957ac0b7b5",
@@ -1478,7 +1508,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Il faut réaliser un scanner cérébral avec injection, car le syndrome de Claude Bernard Horner et la fracture du rachis cervical sont des signes cliniques évocateurs de dissection carotidienne [S1][S2].\nSource : Prise en charge des patients présentant un traumatisme crânien léger de l’adulte — RPP SFAR 2022 (avis d'experts, accord fort)."
+     "answer": "Il faut réaliser un scanner cérébral avec injection, car le syndrome de Claude Bernard Horner et la fracture du rachis cervical sont des signes cliniques évocateurs de dissection carotidienne [S1][S2].\nSource : Prise en charge des patients présentant un traumatisme crânien léger de l’adulte — RPP SFAR 2022 (avis d'experts, accord fort).",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-gfff2848a70957ac0b7b5",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Scanner cérébral avec injection, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-g8f23afa63325b0d08bd8",
@@ -1501,7 +1542,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "En cas d'hémopéritoine abondant avec un scanner incompatible avec l'état du patient, la conduite est un traitement opératoire précoce [S1][S3]. Il s'agit d'une laparotomie selon les règles de « damage control » : procédure écourtée, abord xypho-pubien, contrôle simple des sites hémorragiques, packing hépatique, coprostase, fermeture par VAC ou fermeture cutanée seule [S3]. Le délai avant laparotomie majore la mortalité, de 1% par tranche de 3 min en cas d'instabilité hémodynamique après traumatisme abdominal fermé [S5].\nSource : Prise en charge du traumatisme abdominal grave de l’adulte : les 48 premières heures — RFE SFAR 2019."
+     "answer": "En cas d'hémopéritoine abondant avec un scanner incompatible avec l'état du patient, la conduite est un traitement opératoire précoce [S1][S3]. Il s'agit d'une laparotomie selon les règles de « damage control » : procédure écourtée, abord xypho-pubien, contrôle simple des sites hémorragiques, packing hépatique, coprostase, fermeture par VAC ou fermeture cutanée seule [S3]. Le délai avant laparotomie majore la mortalité, de 1% par tranche de 3 min en cas d'instabilité hémodynamique après traumatisme abdominal fermé [S5].\nSource : Prise en charge du traumatisme abdominal grave de l’adulte : les 48 premières heures — RFE SFAR 2019.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-g8f23afa63325b0d08bd8",
+      "correctness": "partial",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Traitement opératoire précoce correctement donné, mais le scanner secondaire de la référence n'est pas mentionné."
+     },
+     "judge_correct": 0.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-g8e54d9655989718c1639",
@@ -1525,7 +1577,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Non : chez un patient dans le coma avec une méningite bactérienne, en l'absence d'HTIC, il ne faut probablement pas pratiquer d'hypothermie, en comparaison avec une normothermie, dans le but d'améliorer la survie avec bon pronostic neurologique [S2].\nSource : Contrôle cible de la température en réanimation (hors nouveau-nés) — RFE SFAR 2016 (R4.3, avis d'experts)."
+     "answer": "Non : chez un patient dans le coma avec une méningite bactérienne, en l'absence d'HTIC, il ne faut probablement pas pratiquer d'hypothermie, en comparaison avec une normothermie, dans le but d'améliorer la survie avec bon pronostic neurologique [S2].\nSource : Contrôle cible de la température en réanimation (hors nouveau-nés) — RFE SFAR 2016 (R4.3, avis d'experts).",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-g8e54d9655989718c1639",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Il ne faut probablement pas refroidir, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-gd1b252c6b18be4bca7b6",
@@ -1549,7 +1612,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Non : les études ne montrent pas de bénéfice supplémentaire sur la PIC à diminuer la température à 31 °C en cas d'HTIC persistante à 34 °C [S5]. Chez les traumatisés crâniens avec hypertension intracrânienne malgré un traitement médical bien conduit, il faut probablement pratiquer un CCT entre 34 et 35 °C dans le but de faire baisser la pression intracrânienne [S4][S2]. Un CCT entre 32 et 35 °C pour traiter une HTIC peut entraîner des effets secondaires proportionnels à la durée et à la profondeur de l'hypothermie [S5].\nSource : Contrôle cible de la température en réanimation (hors nouveau-nés) — RFE SFAR 2016 (R2.3, Grade 2+, accord fort) ; Prise en charge des traumatisés crâniens graves à la phase précoce (24 premières heures) — RFE SFAR 2016 (R12.3, GRADE 2+, accord fort)."
+     "answer": "Non : les études ne montrent pas de bénéfice supplémentaire sur la PIC à diminuer la température à 31 °C en cas d'HTIC persistante à 34 °C [S5]. Chez les traumatisés crâniens avec hypertension intracrânienne malgré un traitement médical bien conduit, il faut probablement pratiquer un CCT entre 34 et 35 °C dans le but de faire baisser la pression intracrânienne [S4][S2]. Un CCT entre 32 et 35 °C pour traiter une HTIC peut entraîner des effets secondaires proportionnels à la durée et à la profondeur de l'hypothermie [S5].\nSource : Contrôle cible de la température en réanimation (hors nouveau-nés) — RFE SFAR 2016 (R2.3, Grade 2+, accord fort) ; Prise en charge des traumatisés crâniens graves à la phase précoce (24 premières heures) — RFE SFAR 2016 (R12.3, GRADE 2+, accord fort).",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-gd1b252c6b18be4bca7b6",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Non à l'abaissement à 31 °C sans bénéfice sur la PIC et effets secondaires, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-gd9a325c36650ee68a17f",
@@ -1573,7 +1647,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Oui : les données rapportées chez l'adulte concernant le CCT visant la normothermie au cours de l'état de mal épileptique peuvent, selon les experts pédiatres, s'appliquer à l'enfant [S2]. Chez l'enfant présentant un état de mal épileptique, il faut probablement réaliser un CCT (normothermie) à visée neuroprotectrice [S4].\nSource : Contrôle cible de la température en réanimation (hors nouveau-nés) — RFE SFAR 2016 (avis d'experts)."
+     "answer": "Oui : les données rapportées chez l'adulte concernant le CCT visant la normothermie au cours de l'état de mal épileptique peuvent, selon les experts pédiatres, s'appliquer à l'enfant [S2]. Chez l'enfant présentant un état de mal épileptique, il faut probablement réaliser un CCT (normothermie) à visée neuroprotectrice [S4].\nSource : Contrôle cible de la température en réanimation (hors nouveau-nés) — RFE SFAR 2016 (avis d'experts).",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-gd9a325c36650ee68a17f",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Transposabilité des données adultes à l'enfant selon les experts pédiatres, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-ge6178ab7ed0b124f3edc",
@@ -1595,7 +1680,18 @@
      "false_abstention": 0.0,
      "correct": 0.0,
      "sourced": 1.0,
-     "answer": "Non : il est recommandé de ne pas prescrire de manière systématique une radiographie de thorax préinterventionnelle en chirurgie non cardiothoracique, quel que soit l'âge du patient, sauf en cas de pathologie cardiopulmonaire évolutive ou aiguë [S1]. Il n'existe pas d'argument permettant de recommander la réalisation d'une radiographie de thorax d'un âge seuil [S2].\nSource : Examens pré-interventionnels systématiques — RFE SFAR 2012 (GRADE 1-)."
+     "answer": "Non : il est recommandé de ne pas prescrire de manière systématique une radiographie de thorax préinterventionnelle en chirurgie non cardiothoracique, quel que soit l'âge du patient, sauf en cas de pathologie cardiopulmonaire évolutive ou aiguë [S1]. Il n'existe pas d'argument permettant de recommander la réalisation d'une radiographie de thorax d'un âge seuil [S2].\nSource : Examens pré-interventionnels systématiques — RFE SFAR 2012 (GRADE 1-).",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-ge6178ab7ed0b124f3edc",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Non à la radiographie systématique quel que soit l'âge, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-g2c188878f4fca6996f4b",
@@ -1618,7 +1714,18 @@
      "false_abstention": 0.0,
      "correct": 0.0,
      "sourced": 1.0,
-     "answer": "Une endartériectomie carotidienne se situe dans la catégorie de risque intermédiaire (1 % à 5 % de décès + infarctus du myocarde) [S1]. Les chirurgies vasculaires sont considérées comme à haut risque, hormis l'endartériectomie carotidienne [S2].\nSource : Examens pré-interventionnels systématiques — RFE SFAR 2012 (annexe A) ; Prise en charge du coronarien qui doit être opéré en chirurgie non cardiaque — RFE SFAR 2010."
+     "answer": "Une endartériectomie carotidienne se situe dans la catégorie de risque intermédiaire (1 % à 5 % de décès + infarctus du myocarde) [S1]. Les chirurgies vasculaires sont considérées comme à haut risque, hormis l'endartériectomie carotidienne [S2].\nSource : Examens pré-interventionnels systématiques — RFE SFAR 2012 (annexe A) ; Prise en charge du coronarien qui doit être opéré en chirurgie non cardiaque — RFE SFAR 2010.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-g2c188878f4fca6996f4b",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Endartériectomie carotidienne classée en risque intermédiaire 1 à 5 %, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-gae3cda1acd4e903f01fd",
@@ -1640,7 +1747,18 @@
      "false_abstention": 1.0,
      "correct": 0.0,
      "sourced": 0.0,
-     "answer": "Les recommandations SFAR fournies ne traitent pas cette question."
+     "answer": "Les recommandations SFAR fournies ne traitent pas cette question.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-gae3cda1acd4e903f01fd",
+      "correctness": "incorrect",
+      "abstained": true,
+      "serious_error": "other",
+      "faithful": null,
+      "justification": "Le système dit ne pas traiter la question alors que la référence y répond (examen non contributif)."
+     },
+     "judge_correct": 0.0,
+     "judge_correct_or_partial": 0.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-geb9482ee3d54334a43fd",
@@ -1664,7 +1782,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Programmer l'intervention le plus tôt possible dans la matinée, afin de permettre la sortie après une surveillance postopératoire de six heures [S1]. La sortie est autorisée seulement après une surveillance de six heures au minimum dans l'unité d'ambulatoire [S3].\nSource : Anesthésie pour amygdalectomie chez l’enfant — RFE SFAR 2005 (accord fort)."
+     "answer": "Programmer l'intervention le plus tôt possible dans la matinée, afin de permettre la sortie après une surveillance postopératoire de six heures [S1]. La sortie est autorisée seulement après une surveillance de six heures au minimum dans l'unité d'ambulatoire [S3].\nSource : Anesthésie pour amygdalectomie chez l’enfant — RFE SFAR 2005 (accord fort).",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-geb9482ee3d54334a43fd",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Programmation le matin et surveillance de six heures, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-g9dbb7b8cb49592f9fa97",
@@ -1687,7 +1816,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Oui : lorsque l'évaluation préopératoire ne peut être considérée comme fiable, notamment chez l'enfant de moins de trois ans, une étude de l'hémostase doit être réalisée [S3]. L'interrogatoire n'est pas fiable chez l'enfant en deçà de l'âge de la marche, généralement fixé à trois ans [S1]. Si des examens d'hémostase sont prescrits, le temps de céphaline avec activateur et la numération plaquettaire sont les tests les plus utiles [S3].\nSource : Anesthésie pour amygdalectomie chez l’enfant — RFE SFAR 2005 (accord fort)."
+     "answer": "Oui : lorsque l'évaluation préopératoire ne peut être considérée comme fiable, notamment chez l'enfant de moins de trois ans, une étude de l'hémostase doit être réalisée [S3]. L'interrogatoire n'est pas fiable chez l'enfant en deçà de l'âge de la marche, généralement fixé à trois ans [S1]. Si des examens d'hémostase sont prescrits, le temps de céphaline avec activateur et la numération plaquettaire sont les tests les plus utiles [S3].\nSource : Anesthésie pour amygdalectomie chez l’enfant — RFE SFAR 2005 (accord fort).",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-g9dbb7b8cb49592f9fa97",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Bilan d'hémostase recommandé avant trois ans, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-gbe3dad7d7f9b1ae34b88",
@@ -1710,7 +1850,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Il faut surveiller l'hypokaliémie, l'hypomagnésémie et l'insuffisance rénale, ainsi que la fièvre et les frissons lors de l'injection et la cytopénie [S1][S2].\nSource : Prise en charge des candidoses et aspergilloses invasives de l’adulte — RFE SFAR 2004."
+     "answer": "Il faut surveiller l'hypokaliémie, l'hypomagnésémie et l'insuffisance rénale, ainsi que la fièvre et les frissons lors de l'injection et la cytopénie [S1][S2].\nSource : Prise en charge des candidoses et aspergilloses invasives de l’adulte — RFE SFAR 2004.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-gbe3dad7d7f9b1ae34b88",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Les cinq effets indésirables de la référence sont tous cités."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-gc1eeae015b45990b618e",
@@ -1733,7 +1884,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "La présence de Candida sp. dans les sécrétions provenant des voies aériennes inférieures, y compris le lavage broncho-alvéolaire, n'a pas de valeur diagnostique (B3) [S1].\nSource : Prise en charge des candidoses et aspergilloses invasives de l’adulte — RFE SFAR 2004 (B3)."
+     "answer": "La présence de Candida sp. dans les sécrétions provenant des voies aériennes inférieures, y compris le lavage broncho-alvéolaire, n'a pas de valeur diagnostique (B3) [S1].\nSource : Prise en charge des candidoses et aspergilloses invasives de l’adulte — RFE SFAR 2004 (B3).",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-gc1eeae015b45990b618e",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Absence de valeur diagnostique du Candida isolé au LBA, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-g28ea0199f37013bf91f9",
@@ -1755,7 +1917,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "La décision finale de l'indication d'anesthésie et de ses modalités relève de la responsabilité du médecin anesthésiste-réanimateur [S1]. Une concertation réelle et sérieuse doit précéder les décisions en cas de désaccord entre les intervenants [S1].\nSource : Recommandations concernant les relations entre anesthésistes-réanimateurs et chirurgiens, autres spécialistes ou professionnels de santé — RFE SFAR 2001."
+     "answer": "La décision finale de l'indication d'anesthésie et de ses modalités relève de la responsabilité du médecin anesthésiste-réanimateur [S1]. Une concertation réelle et sérieuse doit précéder les décisions en cas de désaccord entre les intervenants [S1].\nSource : Recommandations concernant les relations entre anesthésistes-réanimateurs et chirurgiens, autres spécialistes ou professionnels de santé — RFE SFAR 2001.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-g28ea0199f37013bf91f9",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Responsabilité de l'anesthésiste-réanimateur, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-g6951bd8344b814c79f7e",
@@ -1779,7 +1952,18 @@
      "false_abstention": 0.0,
      "correct": 0.0,
      "sourced": 1.0,
-     "answer": "Il faut l'absence de réponse après 2 jours consécutifs d'arrêt des diurétiques et de remplissage vasculaire par de l'albumine (1 g/kg) [S3]. Cette épreuve s'inscrit dans la prise en charge de l'IRA du cirrhotique avec administration d'albumine 1 g/kg pendant 48 h au stade 2-3 [S4].\nSource : Insuffisance hépatique en soins critiques — RFE SFAR 2018."
+     "answer": "Il faut l'absence de réponse après 2 jours consécutifs d'arrêt des diurétiques et de remplissage vasculaire par de l'albumine (1 g/kg) [S3]. Cette épreuve s'inscrit dans la prise en charge de l'IRA du cirrhotique avec administration d'albumine 1 g/kg pendant 48 h au stade 2-3 [S4].\nSource : Insuffisance hépatique en soins critiques — RFE SFAR 2018.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-g6951bd8344b814c79f7e",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Absence de réponse après 2 jours de sevrage diurétique et albumine 1 g/kg, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-g392fcc10d6909f623c73",
@@ -1803,7 +1987,18 @@
      "false_abstention": 1.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Chez les patients hospitalisés avec COVID-19, la prévention de la maladie thromboembolique par une HBPM est l'option de choix, mais il est vraisemblable que les posologies validées en médecine soient fréquemment insuffisantes, notamment dans les formes sévères et en cas d'obésité [S1]. Il est suggéré d'ajuster l'anticoagulation au poids ou à l'IMC des patients COVID-19 [S3]. Les patients avec une forme sévère (oxygénothérapie à plus de 6 L/min ou ventilation mécanique) devraient recevoir au moins une anticoagulation prophylactique à dose intermédiaire [S2].\nSource : Traitement anticoagulants patients COVID-19 — RFE SFAR 2020 ; Prévention du risque thromboembolique veineux et surveillance de l’hémostase chez les patients hospitalisés pour covid-19 : propositions réactualisées (avril 2021) — RFE SFAR 2021 (suggestions)."
+     "answer": "Chez les patients hospitalisés avec COVID-19, la prévention de la maladie thromboembolique par une HBPM est l'option de choix, mais il est vraisemblable que les posologies validées en médecine soient fréquemment insuffisantes, notamment dans les formes sévères et en cas d'obésité [S1]. Il est suggéré d'ajuster l'anticoagulation au poids ou à l'IMC des patients COVID-19 [S3]. Les patients avec une forme sévère (oxygénothérapie à plus de 6 L/min ou ventilation mécanique) devraient recevoir au moins une anticoagulation prophylactique à dose intermédiaire [S2].\nSource : Traitement anticoagulants patients COVID-19 — RFE SFAR 2020 ; Prévention du risque thromboembolique veineux et surveillance de l’hémostase chez les patients hospitalisés pour covid-19 : propositions réactualisées (avril 2021) — RFE SFAR 2021 (suggestions).",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-g392fcc10d6909f623c73",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "HBPM option de choix avec posologies probablement insuffisantes en forme sévère et obésité, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-g6d75a0524a3097e36863",
@@ -1826,7 +2021,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Les deux objectifs initiaux sont le contrôle de l'hémorragie et de la contamination périnéale [S1]. Il est aussi probablement recommandé de prendre en charge ces traumatismes dans des centres de référence [S1].\nSource : Prise en charge des traumatisés pelviens graves à la phase précoce (24 premières heures) — RFE SFAR 2017 (R2.17, GRADE 1+, accord fort ; R2.16, GRADE 2+, accord fort)."
+     "answer": "Les deux objectifs initiaux sont le contrôle de l'hémorragie et de la contamination périnéale [S1]. Il est aussi probablement recommandé de prendre en charge ces traumatismes dans des centres de référence [S1].\nSource : Prise en charge des traumatisés pelviens graves à la phase précoce (24 premières heures) — RFE SFAR 2017 (R2.17, GRADE 1+, accord fort ; R2.16, GRADE 2+, accord fort).",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-g6d75a0524a3097e36863",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Contrôle de l'hémorragie et de la contamination périnéale, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-g424483aecf041277fed5",
@@ -1848,7 +2054,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Il est recommandé d'utiliser un programme de réhabilitation améliorée après chirurgie, incluant la mobilisation précoce postopératoire, pour diminuer l'incidence de complications postopératoires et la durée d'hospitalisation [S2]. Il est probablement recommandé de favoriser les approches minimalement invasives par thoracoscopie, et il est recommandé de ne placer qu'un seul drain thoracique [S6][S5]. L'utilisation préventive de la VNI n'est probablement pas recommandée [S1].\nSource : Réhabilitation améliorée après lobectomie pulmonaire — RFE SFAR 2019 (R5.4, GRADE 1+ ; R4.1, GRADE 2+ ; R4.4.1, GRADE 1+, accord fort)."
+     "answer": "Il est recommandé d'utiliser un programme de réhabilitation améliorée après chirurgie, incluant la mobilisation précoce postopératoire, pour diminuer l'incidence de complications postopératoires et la durée d'hospitalisation [S2]. Il est probablement recommandé de favoriser les approches minimalement invasives par thoracoscopie, et il est recommandé de ne placer qu'un seul drain thoracique [S6][S5]. L'utilisation préventive de la VNI n'est probablement pas recommandée [S1].\nSource : Réhabilitation améliorée après lobectomie pulmonaire — RFE SFAR 2019 (R5.4, GRADE 1+ ; R4.1, GRADE 2+ ; R4.4.1, GRADE 1+, accord fort).",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-g424483aecf041277fed5",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Réhabilitation améliorée avec mobilisation précoce, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-ga86840965e184a4c0f3d",
@@ -1870,7 +2087,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Un supplément d'information apporté par un support vidéo permet une réduction significative des scores d'anxiété et une amélioration de la satisfaction globale chez les patients de chirurgie thoracique [S1].\nSource : Réhabilitation améliorée après lobectomie pulmonaire — RFE SFAR 2019."
+     "answer": "Un supplément d'information apporté par un support vidéo permet une réduction significative des scores d'anxiété et une amélioration de la satisfaction globale chez les patients de chirurgie thoracique [S1].\nSource : Réhabilitation améliorée après lobectomie pulmonaire — RFE SFAR 2019.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-ga86840965e184a4c0f3d",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Support vidéo réduisant l'anxiété et améliorant la satisfaction, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-g26cc210b12a24bc1dcf5",
@@ -1893,7 +2121,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Chez l'homme, le poids théorique (kg) = 50 + 0,91 × [taille (cm) − 152,4] [S3].\nSource : Recommandations pour la prise en charge du SDRA — RFE SFAR 2018."
+     "answer": "Chez l'homme, le poids théorique (kg) = 50 + 0,91 × [taille (cm) − 152,4] [S3].\nSource : Recommandations pour la prise en charge du SDRA — RFE SFAR 2018.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-g26cc210b12a24bc1dcf5",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Formule du poids théorique chez l'homme identique à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-gb9a942c3d4de87e96a69",
@@ -1916,7 +2155,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Il est probablement recommandé que les patients adultes atteints de SDRA modéré à sévère soient ventilés avec une PEP élevée plutôt qu'avec une PEP basse [S3]. En cas de sepsis, il est suggéré d'utiliser un niveau élevé de PEP après élimination d'une défaillance cardiaque droite [S4].\nSource : Recommandations pour la prise en charge du SDRA — RFE SFAR 2018 (R4, GRADE 2+) ; Prise en charge du sepsis du nouveau-né, de l’enfant et de l’adulte — HAS SFAR 2025 (recommandation conditionnelle, faible niveau de certitude)."
+     "answer": "Il est probablement recommandé que les patients adultes atteints de SDRA modéré à sévère soient ventilés avec une PEP élevée plutôt qu'avec une PEP basse [S3]. En cas de sepsis, il est suggéré d'utiliser un niveau élevé de PEP après élimination d'une défaillance cardiaque droite [S4].\nSource : Recommandations pour la prise en charge du SDRA — RFE SFAR 2018 (R4, GRADE 2+) ; Prise en charge du sepsis du nouveau-né, de l’enfant et de l’adulte — HAS SFAR 2025 (recommandation conditionnelle, faible niveau de certitude).",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-gb9a942c3d4de87e96a69",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "PEP élevée préférée à PEP basse dans le SDRA modéré à sévère, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-g448aac5e0ca03eebb7fb",
@@ -1940,7 +2190,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "La VNI ne fait pas la preuve d'un avantage et il ne faut probablement pas l'entreprendre dans la pneumopathie hypoxémiante, le syndrome de détresse respiratoire aiguë, le traitement de l'insuffisance respiratoire aiguë post extubation et les maladies neuromusculaires aiguës réversibles [S1]. Pour l'asthme aigu grave et le syndrome d'obésité hypoventilation, il n'a pas été possible de déterminer l'attitude [S1].\nSource : Ventilation Non Invasive au cours de l’insuffisance respiratoire aiguë (nouveau-né exclu) — RFE SFAR 2006."
+     "answer": "La VNI ne fait pas la preuve d'un avantage et il ne faut probablement pas l'entreprendre dans la pneumopathie hypoxémiante, le syndrome de détresse respiratoire aiguë, le traitement de l'insuffisance respiratoire aiguë post extubation et les maladies neuromusculaires aiguës réversibles [S1]. Pour l'asthme aigu grave et le syndrome d'obésité hypoventilation, il n'a pas été possible de déterminer l'attitude [S1].\nSource : Ventilation Non Invasive au cours de l’insuffisance respiratoire aiguë (nouveau-né exclu) — RFE SFAR 2006.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-g448aac5e0ca03eebb7fb",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Les quatre situations de non-bénéfice de la VNI de la référence sont citées."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-gace2db46f6d0fbc9a4b7",
@@ -1964,7 +2225,18 @@
      "false_abstention": 1.0,
      "correct": 0.0,
      "sourced": 0.0,
-     "answer": "Les recommandations SFAR fournies ne traitent pas cette question."
+     "answer": "Les recommandations SFAR fournies ne traitent pas cette question.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-gace2db46f6d0fbc9a4b7",
+      "correctness": "incorrect",
+      "abstained": true,
+      "serious_error": "other",
+      "faithful": null,
+      "justification": "Le système dit ne pas traiter la question alors que la référence y répond (VNI de rattrapage non indiquée, ne pas retarder la réintubation)."
+     },
+     "judge_correct": 0.0,
+     "judge_correct_or_partial": 0.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-gfc720f85a7e4c8f6d739",
@@ -1986,7 +2258,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Il faut probablement recommander une gouttière sur mesure plutôt qu'une gouttière standard, et tracer l'information dans le dossier « incité à fournir un protège-dents sur mesure » [S3][S2]. La gouttière sur mesure permet une protection des dents maxillaires de meilleure qualité que les gouttières standards, sans aggraver les conditions d'intubation [S6].\nSource : Bris dentaires périanesthésiques — RFE SFAR 2012."
+     "answer": "Il faut probablement recommander une gouttière sur mesure plutôt qu'une gouttière standard, et tracer l'information dans le dossier « incité à fournir un protège-dents sur mesure » [S3][S2]. La gouttière sur mesure permet une protection des dents maxillaires de meilleure qualité que les gouttières standards, sans aggraver les conditions d'intubation [S6].\nSource : Bris dentaires périanesthésiques — RFE SFAR 2012.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-gfc720f85a7e4c8f6d739",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Gouttière sur mesure et traçabilité dans le dossier, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-g655c1a5b2a8ff63dc61f",
@@ -2009,7 +2292,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Non : chez l'enfant, il ne faut pas réimplanter une dent temporaire en cas de luxation complète, au risque d'altérer le bourgeon dentaire de la dent définitive [S1][S2]. La dent temporaire luxée est remise aux parents [S1].\n\nSource : Bris dentaires périanesthésiques, RFE SFAR 2012."
+     "answer": "Non : chez l'enfant, il ne faut pas réimplanter une dent temporaire en cas de luxation complète, au risque d'altérer le bourgeon dentaire de la dent définitive [S1][S2]. La dent temporaire luxée est remise aux parents [S1].\n\nSource : Bris dentaires périanesthésiques, RFE SFAR 2012.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-g655c1a5b2a8ff63dc61f",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Non-réimplantation d'une dent temporaire luxée, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-g32226ce0e89926e25109",
@@ -2032,7 +2326,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Avec une HbA1c à 10 % (> 9 %), il faut différer la chirurgie [S1].\n\nSource : Prise en charge du patient diabétique en péri opératoire, Préconisation SFAR 2025."
+     "answer": "Avec une HbA1c à 10 % (> 9 %), il faut différer la chirurgie [S1].\n\nSource : Prise en charge du patient diabétique en péri opératoire, Préconisation SFAR 2025.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-g32226ce0e89926e25109",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Report de la chirurgie pour HbA1c à 10 %, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-g9f4e50ab33c87f6858b4",
@@ -2055,7 +2360,18 @@
      "false_abstention": 0.0,
      "correct": 0.0,
      "sourced": 1.0,
-     "answer": "Le consultant doit être au moins un médecin extérieur à l'équipe, sans aucun rapport hiérarchique avec elle (« consultant extérieur ») [S6]. Il donne un avis motivé au praticien en charge du patient et ne peut donc pas être son chef de service ou de pôle [S1][S2]. L'avis motivé d'un deuxième consultant est demandé si l'un des deux médecins l'estime utile [S1][S2].\n\nSource : Décisions de limitation et d'arrêt de traitements (LAT) en soins critiques de l'adulte, RFE SFAR 2026 (Mise à jour 2026) ; Recommandations de bonnes pratiques cliniques concernant l'application de la loi n° 2005-370 du 22 avril 2005, RFE SFAR 2005."
+     "answer": "Le consultant doit être au moins un médecin extérieur à l'équipe, sans aucun rapport hiérarchique avec elle (« consultant extérieur ») [S6]. Il donne un avis motivé au praticien en charge du patient et ne peut donc pas être son chef de service ou de pôle [S1][S2]. L'avis motivé d'un deuxième consultant est demandé si l'un des deux médecins l'estime utile [S1][S2].\n\nSource : Décisions de limitation et d'arrêt de traitements (LAT) en soins critiques de l'adulte, RFE SFAR 2026 (Mise à jour 2026) ; Recommandations de bonnes pratiques cliniques concernant l'application de la loi n° 2005-370 du 22 avril 2005, RFE SFAR 2005.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-g9f4e50ab33c87f6858b4",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Consultant sans lien hiérarchique avec le praticien, non chef de service ou de pôle, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-gb3d45a182edaa9519369",
@@ -2078,7 +2394,18 @@
      "false_abstention": 1.0,
      "correct": 0.0,
      "sourced": 0.0,
-     "answer": "Les recommandations SFAR fournies ne traitent pas cette question."
+     "answer": "Les recommandations SFAR fournies ne traitent pas cette question.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-gb3d45a182edaa9519369",
+      "correctness": "incorrect",
+      "abstained": true,
+      "serious_error": "other",
+      "faithful": null,
+      "justification": "Le système dit ne pas traiter la question alors que la référence détaille la traçabilité à consigner."
+     },
+     "judge_correct": 0.0,
+     "judge_correct_or_partial": 0.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-g3bd1e3f5c8f306008b76",
@@ -2101,7 +2428,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Non : en cas d'hématome extradural d'origine veineuse, les experts suggèrent d'évaluer la balance bénéfice-risque d'une prise en charge conservatrice au cas par cas, y compris en présence de signe de gravité clinique ou radiologique [S3]. Si un traitement conservateur est décidé, il est probablement recommandé d'effectuer une surveillance clinique rapprochée dans un centre doté d'un service de neurochirurgie [S3] et un scanner de contrôle systématiquement à 6 heures post-traumatisme, si le premier scanner a été fait avant H6, ou plus précocement en cas d'aggravation clinique [S6].\n\nSource : Prise en charge neurochirurgicales des traumatismes cranio-encéphaliques de l'adulte et de l'enfant à la phase initiale, RPP SFAR 2025 (avis d'experts, accord fort ; GRADE 2, accord fort pour le scanner de contrôle)."
+     "answer": "Non : en cas d'hématome extradural d'origine veineuse, les experts suggèrent d'évaluer la balance bénéfice-risque d'une prise en charge conservatrice au cas par cas, y compris en présence de signe de gravité clinique ou radiologique [S3]. Si un traitement conservateur est décidé, il est probablement recommandé d'effectuer une surveillance clinique rapprochée dans un centre doté d'un service de neurochirurgie [S3] et un scanner de contrôle systématiquement à 6 heures post-traumatisme, si le premier scanner a été fait avant H6, ou plus précocement en cas d'aggravation clinique [S6].\n\nSource : Prise en charge neurochirurgicales des traumatismes cranio-encéphaliques de l'adulte et de l'enfant à la phase initiale, RPP SFAR 2025 (avis d'experts, accord fort ; GRADE 2, accord fort pour le scanner de contrôle).",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-g3bd1e3f5c8f306008b76",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Non systématique à l'évacuation, traitement conservateur au cas par cas, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-g83a9315591cd44551dbc",
@@ -2123,7 +2461,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Chez un patient curarisé, les moniteurs de profondeur d'anesthésie pourraient permettre de détecter un sous- ou un surdosage anesthésique, les signes cliniques d'anesthésie étant modifiés par les curares [S4].\n\nSource : Monitorage de l'adéquation / profondeur de l'anesthésie à partir de l'analyse de l'EEG cortical, RFE SFAR 2010 (avis d'experts)."
+     "answer": "Chez un patient curarisé, les moniteurs de profondeur d'anesthésie pourraient permettre de détecter un sous- ou un surdosage anesthésique, les signes cliniques d'anesthésie étant modifiés par les curares [S4].\n\nSource : Monitorage de l'adéquation / profondeur de l'anesthésie à partir de l'analyse de l'EEG cortical, RFE SFAR 2010 (avis d'experts).",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-g83a9315591cd44551dbc",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Détection de sous- ou surdosage par l'EEG malgré les curares, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-gbc67a0eb3b22c1690c0c",
@@ -2146,7 +2495,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "À 0,5 CAM de sévoflurane, l'index bispectral attendu est de 45 [S1].\n\nSource : Monitorage de l'adéquation / profondeur de l'anesthésie à partir de l'analyse de l'EEG cortical, RFE SFAR 2010."
+     "answer": "À 0,5 CAM de sévoflurane, l'index bispectral attendu est de 45 [S1].\n\nSource : Monitorage de l'adéquation / profondeur de l'anesthésie à partir de l'analyse de l'EEG cortical, RFE SFAR 2010.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-gbc67a0eb3b22c1690c0c",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Index bispectral attendu d'environ 45 à 0,5 CAM de sévoflurane, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-gff794cd57325dca363d6",
@@ -2168,7 +2528,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Les moniteurs de profondeur de l'anesthésie pourraient être utiles pour affiner le raisonnement médical chez les patients pour lesquels la relation dose - concentration - effets des médicaments anesthésiques est inhabituelle [S3]. Ils peuvent permettre de détecter plus facilement le sous- et le surdosage anesthésique dans ces populations [S3].\n\nSource : Monitorage de l'adéquation / profondeur de l'anesthésie à partir de l'analyse de l'EEG cortical, RFE SFAR 2010."
+     "answer": "Les moniteurs de profondeur de l'anesthésie pourraient être utiles pour affiner le raisonnement médical chez les patients pour lesquels la relation dose - concentration - effets des médicaments anesthésiques est inhabituelle [S3]. Ils peuvent permettre de détecter plus facilement le sous- et le surdosage anesthésique dans ces populations [S3].\n\nSource : Monitorage de l'adéquation / profondeur de l'anesthésie à partir de l'analyse de l'EEG cortical, RFE SFAR 2010.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-gff794cd57325dca363d6",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Aide au raisonnement et détection du sous- ou surdosage, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-gcb6edd578e226e2bf83b",
@@ -2192,7 +2563,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "En hémofiltration réalisée en post-dilution, il faut ajuster le débit sanguin de façon à garder une fraction de filtration inférieure à 25 % [S1][S2].\n\nSource : Epuration extrarénale continue en réanimation (à l'exclusion de la dialyse péritonéale), RFE SFAR 2014 (avis d'experts, accord fort)."
+     "answer": "En hémofiltration réalisée en post-dilution, il faut ajuster le débit sanguin de façon à garder une fraction de filtration inférieure à 25 % [S1][S2].\n\nSource : Epuration extrarénale continue en réanimation (à l'exclusion de la dialyse péritonéale), RFE SFAR 2014 (avis d'experts, accord fort).",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-gcb6edd578e226e2bf83b",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Ajustement du débit sanguin pour une fraction de filtration inférieure à 25 %, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-g0979ab4dc4ec3f5dbd2f",
@@ -2216,7 +2598,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Oui, en pédiatrie et chez le nouveau-né, il est possible de faire de la dialyse péritonéale, en particulier en période postopératoire de chirurgie cardiaque à but de déplétion, en raison de sa facilité d'utilisation [S1].\n\nSource : Epuration extrarénale continue en réanimation (à l'exclusion de la dialyse péritonéale), RFE SFAR 2014 (accord faible)."
+     "answer": "Oui, en pédiatrie et chez le nouveau-né, il est possible de faire de la dialyse péritonéale, en particulier en période postopératoire de chirurgie cardiaque à but de déplétion, en raison de sa facilité d'utilisation [S1].\n\nSource : Epuration extrarénale continue en réanimation (à l'exclusion de la dialyse péritonéale), RFE SFAR 2014 (accord faible).",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-g0979ab4dc4ec3f5dbd2f",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Dialyse péritonéale possible en postopératoire de chirurgie cardiaque chez le nourrisson, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-gf761346ec9be5d6ba346",
@@ -2239,7 +2632,18 @@
      "false_abstention": 0.0,
      "correct": 0.0,
      "sourced": 1.0,
-     "answer": "Pour diminuer les conflits, il est proposé d'expliquer de façon efficace les soins de confort aux familles et de perfectionner les échanges entre les soignants et les proches autour de l'évaluation clinique du patient (douleur, anxiété) [S1].\n\nSource : Décisions de limitation et d'arrêt de traitements (LAT) en soins critiques de l'adulte, RFE SFAR 2026 (Mise à jour 2026)."
+     "answer": "Pour diminuer les conflits, il est proposé d'expliquer de façon efficace les soins de confort aux familles et de perfectionner les échanges entre les soignants et les proches autour de l'évaluation clinique du patient (douleur, anxiété) [S1].\n\nSource : Décisions de limitation et d'arrêt de traitements (LAT) en soins critiques de l'adulte, RFE SFAR 2026 (Mise à jour 2026).",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-gf761346ec9be5d6ba346",
+      "correctness": "partial",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Amélioration des échanges soignants-proches évoquée, mais la formation de l'équipe à la communication de la référence n'est pas citée."
+     },
+     "judge_correct": 0.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-g0aba15fbdfface749f92",
@@ -2262,7 +2666,18 @@
      "false_abstention": 0.0,
      "correct": 0.0,
      "sourced": 1.0,
-     "answer": "Les experts suggèrent d'utiliser un protocole de service d'aide à la décision et de communication avec les proches et au sein de l'équipe soignante [S3][S6]. La personne de confiance ou, à défaut, la famille ou l'un des proches est informé dès que la décision de mettre en œuvre la procédure collégiale a été prise [S1].\n\nSource : Décisions de limitation et d'arrêt de traitements (LAT) en soins critiques de l'adulte, RFE SFAR 2026 (Mise à jour 2026) (R 1.3 : avis d'experts)."
+     "answer": "Les experts suggèrent d'utiliser un protocole de service d'aide à la décision et de communication avec les proches et au sein de l'équipe soignante [S3][S6]. La personne de confiance ou, à défaut, la famille ou l'un des proches est informé dès que la décision de mettre en œuvre la procédure collégiale a été prise [S1].\n\nSource : Décisions de limitation et d'arrêt de traitements (LAT) en soins critiques de l'adulte, RFE SFAR 2026 (Mise à jour 2026) (R 1.3 : avis d'experts).",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-g0aba15fbdfface749f92",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Protocole d'accompagnement structuré avec communication auprès des proches et de l'équipe, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-gfd6492bcff9d310fa822",
@@ -2284,7 +2699,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Oui : il faut probablement mesurer la glycémie peropératoire au cours des interventions à risque [S1][S3]. Chez les patients à risque, il faut aussi réaliser une mesure de glycémie durant le séjour en salle de surveillance post-interventionnelle (SSPI) [S1].\n\nSource : Contrôle de la glycémie en réanimation et en anesthésie, RFE SFAR 2009 (accord fort ; NGP faible pour la mesure peropératoire)."
+     "answer": "Oui : il faut probablement mesurer la glycémie peropératoire au cours des interventions à risque [S1][S3]. Chez les patients à risque, il faut aussi réaliser une mesure de glycémie durant le séjour en salle de surveillance post-interventionnelle (SSPI) [S1].\n\nSource : Contrôle de la glycémie en réanimation et en anesthésie, RFE SFAR 2009 (accord fort ; NGP faible pour la mesure peropératoire).",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-gfd6492bcff9d310fa822",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Glycémie peropératoire lors des interventions à risque et mesure en SSPI, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-g43a751763308810eda5b",
@@ -2307,7 +2733,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Il faut abandonner les protocoles de contrôle glycémique statiques, qui déterminent le débit d'insuline uniquement à partir de la glycémie la plus récente [S1].\n\nSource : Contrôle de la glycémie en réanimation et en anesthésie, RFE SFAR 2009 (NGP modéré, accord fort)."
+     "answer": "Il faut abandonner les protocoles de contrôle glycémique statiques, qui déterminent le débit d'insuline uniquement à partir de la glycémie la plus récente [S1].\n\nSource : Contrôle de la glycémie en réanimation et en anesthésie, RFE SFAR 2009 (NGP modéré, accord fort).",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-g43a751763308810eda5b",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Abandon des protocoles statiques fondés sur la seule dernière glycémie, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-ga82b7f724c31133396b0",
@@ -2329,7 +2766,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Non : il n'est pas recommandé de laisser une sonde nasogastrique après une chirurgie colorectale [S2]. L'abandon de la pose d'une sonde nasogastrique systématique à titre prophylactique est associé à un niveau de preuves I [S1].\n\nSource : Réhabilitation rapide après une chirurgie colorectale programmée, RFE SFAR 2014 (GRADE 1-, accord fort)."
+     "answer": "Non : il n'est pas recommandé de laisser une sonde nasogastrique après une chirurgie colorectale [S2]. L'abandon de la pose d'une sonde nasogastrique systématique à titre prophylactique est associé à un niveau de preuves I [S1].\n\nSource : Réhabilitation rapide après une chirurgie colorectale programmée, RFE SFAR 2014 (GRADE 1-, accord fort).",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-ga82b7f724c31133396b0",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Non-recommandation de la sonde nasogastrique après colectomie, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-g3940cdb7b78acbdfb13d",
@@ -2352,7 +2800,18 @@
      "false_abstention": 0.0,
      "correct": 0.0,
      "sourced": 1.0,
-     "answer": "Il est recommandé de prescrire une technique d'analgésie multimodale privilégiant les agents antalgiques non morphiniques et/ou une technique d'analgésie locorégionale [S3]. Après une chirurgie par laparoscopie, l'analgésie péridurale thoracique n'est probablement pas recommandée [S1].\n\nSource : Réhabilitation rapide après une chirurgie colorectale programmée, RFE SFAR 2014 (analgésie multimodale : GRADE 1+, accord fort ; péridurale thoracique après laparoscopie : GRADE 2-, accord faible)."
+     "answer": "Il est recommandé de prescrire une technique d'analgésie multimodale privilégiant les agents antalgiques non morphiniques et/ou une technique d'analgésie locorégionale [S3]. Après une chirurgie par laparoscopie, l'analgésie péridurale thoracique n'est probablement pas recommandée [S1].\n\nSource : Réhabilitation rapide après une chirurgie colorectale programmée, RFE SFAR 2014 (analgésie multimodale : GRADE 1+, accord fort ; péridurale thoracique après laparoscopie : GRADE 2-, accord faible).",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-g3940cdb7b78acbdfb13d",
+      "correctness": "partial",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Péridurale thoracique à éviter correctement donnée, mais la lidocaïne intraveineuse privilégiée par la référence est absente."
+     },
+     "judge_correct": 0.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-g508df1f5f5c7dacd7171",
@@ -2376,7 +2835,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "L'épreuve de ventilation spontanée en aide inspiratoire se fait avec un faible niveau d'aide de l'ordre de 7 cm H2O, le patient restant connecté au respirateur [S1]. Le niveau minimal est de 7 cmH2O, pour une durée minimale de 30 min [S2].\n\nSource : Sevrage de la ventilation mécanique (à l'exclusion du nouveau-né et du réveil d'anesthésie), RFE SFAR 2001 ; Sécurisation des procédures à risques en réanimation : risque infectieux exclu, RFE SFAR 2008 (accord fort)."
+     "answer": "L'épreuve de ventilation spontanée en aide inspiratoire se fait avec un faible niveau d'aide de l'ordre de 7 cm H2O, le patient restant connecté au respirateur [S1]. Le niveau minimal est de 7 cmH2O, pour une durée minimale de 30 min [S2].\n\nSource : Sevrage de la ventilation mécanique (à l'exclusion du nouveau-né et du réveil d'anesthésie), RFE SFAR 2001 ; Sécurisation des procédures à risques en réanimation : risque infectieux exclu, RFE SFAR 2008 (accord fort).",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-g508df1f5f5c7dacd7171",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Faible niveau d'aide inspiratoire d'environ 7 cmH2O, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-gaaba8d034741e6533aee",
@@ -2399,7 +2869,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Ces patients sont assimilés à la population générale, hormis l'existence en chirurgie thoracique et abdominale d'une dysfonction diaphragmatique postopératoire transitoire et de la douleur, qui doit être traitée [S1]. Ils ont le taux d'échec d'extubation le plus faible [S1].\n\nSource : Sevrage de la ventilation mécanique (à l'exclusion du nouveau-né et du réveil d'anesthésie), RFE SFAR 2001."
+     "answer": "Ces patients sont assimilés à la population générale, hormis l'existence en chirurgie thoracique et abdominale d'une dysfonction diaphragmatique postopératoire transitoire et de la douleur, qui doit être traitée [S1]. Ils ont le taux d'échec d'extubation le plus faible [S1].\n\nSource : Sevrage de la ventilation mécanique (à l'exclusion du nouveau-né et du réveil d'anesthésie), RFE SFAR 2001.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-gaaba8d034741e6533aee",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Dysfonction diaphragmatique transitoire, douleur à traiter et plus faible taux d'échec d'extubation, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-g76063f88d9909f319d85",
@@ -2422,7 +2903,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Oui, en hospitalisation ambulatoire, il est possible de prescrire une prémédication anxiolytique et/ou analgésique [S6]. Il n'est toutefois pas recommandé de prescrire systématiquement une prémédication sédative avant une intervention afin de réduire la survenue de complications postopératoires [S2].\n\nSource : Prise en charge anesthésique des patients en hospitalisation ambulatoire, RFE SFAR 2009 ; Programme d'optimisation périopératoire du patient adulte, RFE SFAR 2022 (GRADE 1-, accord fort)."
+     "answer": "Oui, en hospitalisation ambulatoire, il est possible de prescrire une prémédication anxiolytique et/ou analgésique [S6]. Il n'est toutefois pas recommandé de prescrire systématiquement une prémédication sédative avant une intervention afin de réduire la survenue de complications postopératoires [S2].\n\nSource : Prise en charge anesthésique des patients en hospitalisation ambulatoire, RFE SFAR 2009 ; Programme d'optimisation périopératoire du patient adulte, RFE SFAR 2022 (GRADE 1-, accord fort).",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-g76063f88d9909f319d85",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Prémédication anxiolytique et/ou analgésique possible en ambulatoire, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-g293148d474c4b595ab24",
@@ -2446,7 +2938,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Il faut éviter les benzodiazépines en préopératoire chez la personne âgée opérée en ambulatoire, car elles augmentent l'incidence des troubles du comportement postopératoire [S6][S3]. La prémédication doit être adaptée en évitant la prise de benzodiazépines [S1].\n\nSource : Prise en charge anesthésique des patients en hospitalisation ambulatoire, RFE SFAR 2009 ; Recommandations AFU/SFAR/AFCA/ANAP sur la Chirurgie Ambulatoire en Urologie, RFE SFAR 2013."
+     "answer": "Il faut éviter les benzodiazépines en préopératoire chez la personne âgée opérée en ambulatoire, car elles augmentent l'incidence des troubles du comportement postopératoire [S6][S3]. La prémédication doit être adaptée en évitant la prise de benzodiazépines [S1].\n\nSource : Prise en charge anesthésique des patients en hospitalisation ambulatoire, RFE SFAR 2009 ; Recommandations AFU/SFAR/AFCA/ANAP sur la Chirurgie Ambulatoire en Urologie, RFE SFAR 2013.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-g293148d474c4b595ab24",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Benzodiazépines à éviter chez la personne âgée pour les troubles du comportement postopératoires, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-gf79873a2c51a5380fe66",
@@ -2469,7 +2972,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Les experts suggèrent d'identifier la sidération et le soin psychique d'urgence (defusing) en postpartum, puis, à distance, de diagnostiquer l'état de stress post-traumatique (ESPT) en explorant le bien-être maternel et la relation mère-enfant [S2]. Ils suggèrent ensuite de confier la patiente à des spécialistes de l'ESPT pour une prise en charge par des techniques adaptées de psychothérapie [S2]. Il est aussi suggéré de tracer l'insuffisance d'analgésie, d'accompagner la naissance puis de débriefer l'expérience douloureuse avec l'équipe [S2].\n\nSource : Insuffisance d'analgésie au cours de la césarienne sous anesthésie périmédullaire, Préconisation SFAR 2021 (formulation « les experts suggèrent »)."
+     "answer": "Les experts suggèrent d'identifier la sidération et le soin psychique d'urgence (defusing) en postpartum, puis, à distance, de diagnostiquer l'état de stress post-traumatique (ESPT) en explorant le bien-être maternel et la relation mère-enfant [S2]. Ils suggèrent ensuite de confier la patiente à des spécialistes de l'ESPT pour une prise en charge par des techniques adaptées de psychothérapie [S2]. Il est aussi suggéré de tracer l'insuffisance d'analgésie, d'accompagner la naissance puis de débriefer l'expérience douloureuse avec l'équipe [S2].\n\nSource : Insuffisance d'analgésie au cours de la césarienne sous anesthésie périmédullaire, Préconisation SFAR 2021 (formulation « les experts suggèrent »).",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-gf79873a2c51a5380fe66",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Repérage de la sidération, defusing, dépistage à distance de l'ESPT et orientation, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-g55e468b6df0cb295c14b",
@@ -2492,7 +3006,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "L'entretien de l'analgésie péridurale par perfusion continue plutôt que par PCEA ou PIEB figure parmi les facteurs de risque d'échec de l'extension péridurale pour césarienne [S1].\n\nSource : Insuffisance d'analgésie au cours de la césarienne sous anesthésie périmédullaire, Préconisation SFAR 2021."
+     "answer": "L'entretien de l'analgésie péridurale par perfusion continue plutôt que par PCEA ou PIEB figure parmi les facteurs de risque d'échec de l'extension péridurale pour césarienne [S1].\n\nSource : Insuffisance d'analgésie au cours de la césarienne sous anesthésie périmédullaire, Préconisation SFAR 2021.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-g55e468b6df0cb295c14b",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Perfusion continue identifiée comme facteur de risque d'échec de l'extension, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-g0c4e1de8af1e9b05f324",
@@ -2516,7 +3041,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Les experts suggèrent de réaliser une anesthésie générale en cas d'insuffisance d'anesthésie constatée juste avant ou dès l'incision pour césarienne code rouge [S1][S3]. L'insuffisance d'analgésie doit être tracée, avec accompagnement de la naissance puis débriefing de l'expérience douloureuse avec l'équipe [S1].\n\nSource : Insuffisance d'analgésie au cours de la césarienne sous anesthésie périmédullaire, Préconisation SFAR 2021 (formulation « les experts suggèrent »)."
+     "answer": "Les experts suggèrent de réaliser une anesthésie générale en cas d'insuffisance d'anesthésie constatée juste avant ou dès l'incision pour césarienne code rouge [S1][S3]. L'insuffisance d'analgésie doit être tracée, avec accompagnement de la naissance puis débriefing de l'expérience douloureuse avec l'équipe [S1].\n\nSource : Insuffisance d'analgésie au cours de la césarienne sous anesthésie périmédullaire, Préconisation SFAR 2021 (formulation « les experts suggèrent »).",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-g0c4e1de8af1e9b05f324",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Anesthésie générale en cas d'insuffisance d'anesthésie à l'incision, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-gb96b3d27c279158ad3ef",
@@ -2539,7 +3075,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "En cas d'IVG chirurgicale chez une femme avec antécédent connu d'infection génitale haute, il est recommandé d'adopter une stratégie de prévention des complications infectieuses faisant appel à une antibiothérapie [S1].\n\nSource : Prise en charge de l'interruption volontaire de grossesse jusqu'à 14 semaines, RFE SFAR 2010."
+     "answer": "En cas d'IVG chirurgicale chez une femme avec antécédent connu d'infection génitale haute, il est recommandé d'adopter une stratégie de prévention des complications infectieuses faisant appel à une antibiothérapie [S1].\n\nSource : Prise en charge de l'interruption volontaire de grossesse jusqu'à 14 semaines, RFE SFAR 2010.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-gb96b3d27c279158ad3ef",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse recommande l'antibiothérapie, comme la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-gc6eabc0b647f3aa1afca",
@@ -2563,7 +3110,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Orienter la patiente vers une unité de réanimation en cas de persistance d'une défaillance d'organe nécessitant une suppléance, d'apparition d'une défaillance multiviscérale ou de mise en jeu du pronostic vital, selon la convention établie entre chaque unité d'obstétrique et une unité de réanimation adulte, notamment si la maternité n'en dispose pas [S4]. Il est également recommandé d'anticiper et d'organiser la surveillance continue des patientes présentant ou susceptibles de présenter une ou plusieurs défaillances d'organe [S4].\n\nSource : Organisation de l'Anesthésie-Réanimation Obstétricale, RFE SFAR 2016 (RP 3.13, accord fort)."
+     "answer": "Orienter la patiente vers une unité de réanimation en cas de persistance d'une défaillance d'organe nécessitant une suppléance, d'apparition d'une défaillance multiviscérale ou de mise en jeu du pronostic vital, selon la convention établie entre chaque unité d'obstétrique et une unité de réanimation adulte, notamment si la maternité n'en dispose pas [S4]. Il est également recommandé d'anticiper et d'organiser la surveillance continue des patientes présentant ou susceptibles de présenter une ou plusieurs défaillances d'organe [S4].\n\nSource : Organisation de l'Anesthésie-Réanimation Obstétricale, RFE SFAR 2016 (RP 3.13, accord fort).",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-gc6eabc0b647f3aa1afca",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Les critères d'orientation (défaillance d'organe persistante, multiviscérale, pronostic vital) correspondent à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-g3e964e64a0ac6da585eb",
@@ -2587,7 +3145,18 @@
      "false_abstention": 0.0,
      "correct": 0.0,
      "sourced": 1.0,
-     "answer": "Le bloc dédié à la chirurgie obstétricale d'urgence doit être contigu au secteur de naissance (au même niveau en cas de création de nouvelle structure), avec un accès permanent à au moins une salle d'intervention dédiée [S1].\n\nSource : Organisation de l'Anesthésie-Réanimation Obstétricale, RFE SFAR 2016 (RP 1, accord fort et disposition légale)."
+     "answer": "Le bloc dédié à la chirurgie obstétricale d'urgence doit être contigu au secteur de naissance (au même niveau en cas de création de nouvelle structure), avec un accès permanent à au moins une salle d'intervention dédiée [S1].\n\nSource : Organisation de l'Anesthésie-Réanimation Obstétricale, RFE SFAR 2016 (RP 1, accord fort et disposition légale).",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-g3e964e64a0ac6da585eb",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Bloc contigu au secteur de naissance avec salle dédiée accessible en permanence, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-g822a50690730ee2ef6bc",
@@ -2610,7 +3179,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Il faut utiliser une approche standardisée multimodale de prévention des pneumonies associées aux soins pour diminuer la morbidité des patients de réanimation [S3]. Il faut privilégier l'association de mesures ayant un effet sur la morbidité, notamment les durées de ventilation mécanique, d'hospitalisation en réanimation et la consommation d'antibiotique [S2].\n\nSource : Pneumonies associées aux soins de réanimation, RFE SFAR 2017 (R1.1 : GRADE 1+, accord fort)."
+     "answer": "Il faut utiliser une approche standardisée multimodale de prévention des pneumonies associées aux soins pour diminuer la morbidité des patients de réanimation [S3]. Il faut privilégier l'association de mesures ayant un effet sur la morbidité, notamment les durées de ventilation mécanique, d'hospitalisation en réanimation et la consommation d'antibiotique [S2].\n\nSource : Pneumonies associées aux soins de réanimation, RFE SFAR 2017 (R1.1 : GRADE 1+, accord fort).",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-g822a50690730ee2ef6bc",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse privilégie les mesures ayant un effet sur la morbidité (durées de ventilation, de réanimation, antibiotiques) comme la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-g2f51f3362361053361b7",
@@ -2634,7 +3214,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Retenir une température corporelle > 38,3 °C sans autre cause et des leucocytes < 4000/mm³ ou ≥ 12 000/mm³ (au moins un de ces deux signes) [S1]. En l'absence d'antécédents de cardiopathie ou de maladie pulmonaire sous-jacentes, un seul examen radiologique suffit [S1].\n\nSource : Pneumonies associées aux soins de réanimation, RFE SFAR 2017."
+     "answer": "Retenir une température corporelle > 38,3 °C sans autre cause et des leucocytes < 4000/mm³ ou ≥ 12 000/mm³ (au moins un de ces deux signes) [S1]. En l'absence d'antécédents de cardiopathie ou de maladie pulmonaire sous-jacentes, un seul examen radiologique suffit [S1].\n\nSource : Pneumonies associées aux soins de réanimation, RFE SFAR 2017.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-g2f51f3362361053361b7",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Seuils de température (>38,3 °C) et de leucocytes (<4000 ou >=12 000/mm3) identiques à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-gc03aaf37539dfd4b39a8",
@@ -2658,7 +3249,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Il est recommandé d'administrer en peropératoire un bolus de 8-10 mg de dexaméthasone pour réduire la morbidité postopératoire [S1][S3]. La force de cette recommandation est faible (R 2.2.1) [S1][S3].\n\nSource : Prise en charge péri-opératoire du patient adulte lors d'une résection hépatique, RFE SFAR 2025 (recommandation faible)."
+     "answer": "Il est recommandé d'administrer en peropératoire un bolus de 8-10 mg de dexaméthasone pour réduire la morbidité postopératoire [S1][S3]. La force de cette recommandation est faible (R 2.2.1) [S1][S3].\n\nSource : Prise en charge péri-opératoire du patient adulte lors d'une résection hépatique, RFE SFAR 2025 (recommandation faible).",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-gc03aaf37539dfd4b39a8",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Bolus de 8-10 mg de dexaméthasone et force faible, conformes à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-g7efa49eea406c3678a28",
@@ -2682,7 +3284,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Délivrer une ventilation non invasive de type ventilation spontanée avec aide inspiratoire et pression expiratoire positive (VSAI-PEP) [S1]. Cela se fait après réalisation d'une tomodensitométrie et du drainage d'un pneumothorax lorsqu'il est indiqué, en l'absence de contre-indication à la VNI et dans un environnement disposant d'une surveillance continue [S1]. Le grade est G1+ [S1].\n\nSource : Traumatisme Thoracique : Prise en charge des 48 premières heures, RFE SFAR 2014 (G1+)."
+     "answer": "Délivrer une ventilation non invasive de type ventilation spontanée avec aide inspiratoire et pression expiratoire positive (VSAI-PEP) [S1]. Cela se fait après réalisation d'une tomodensitométrie et du drainage d'un pneumothorax lorsqu'il est indiqué, en l'absence de contre-indication à la VNI et dans un environnement disposant d'une surveillance continue [S1]. Le grade est G1+ [S1].\n\nSource : Traumatisme Thoracique : Prise en charge des 48 premières heures, RFE SFAR 2014 (G1+).",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-g7efa49eea406c3678a28",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "VSAI-PEP après TDM et drainage, sans contre-indication et sous surveillance continue, grade G1+ : conforme."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-gb8871ff491d05e49db36",
@@ -2705,7 +3318,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Les experts suggèrent de discuter la mise en place d'un filtre cave optionnel lorsque la procédure doit être réalisée 1 à 3 mois après une thrombose veineuse profonde proximale et/ou une embolie pulmonaire et que la reprise de l'anticoagulation à dose curative ne peut pas être envisagée dans les 72h postopératoires [S1]. Il est recommandé de retirer le filtre quand le traitement anticoagulant curatif a pu être repris sans complication et qu'un nouvel arrêt n'est pas prévu à court terme [S1].\n\nSource : Gestion de l'anticoagulation dans un contexte d'urgence, RFE SFAR 2024 (R4.8.2 : avis d'experts, accord fort ; R4.8.3 : GRADE 1+, accord fort) ; extrait issu du chapitre sur les procédures invasives non programmées sous anticoagulant."
+     "answer": "Les experts suggèrent de discuter la mise en place d'un filtre cave optionnel lorsque la procédure doit être réalisée 1 à 3 mois après une thrombose veineuse profonde proximale et/ou une embolie pulmonaire et que la reprise de l'anticoagulation à dose curative ne peut pas être envisagée dans les 72h postopératoires [S1]. Il est recommandé de retirer le filtre quand le traitement anticoagulant curatif a pu être repris sans complication et qu'un nouvel arrêt n'est pas prévu à court terme [S1].\n\nSource : Gestion de l'anticoagulation dans un contexte d'urgence, RFE SFAR 2024 (R4.8.2 : avis d'experts, accord fort ; R4.8.3 : GRADE 1+, accord fort) ; extrait issu du chapitre sur les procédures invasives non programmées sous anticoagulant.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-gb8871ff491d05e49db36",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Discussion d'un filtre cave optionnel si l'anticoagulation curative ne peut être reprise dans les 72 h, comme dans la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-g571f916b70fb2a0586cb",
@@ -2727,7 +3351,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "L'exérèse d'un angiofibrome nasopharyngé se classe dans la catégorie à risque hémorragique élevé [S2]. La chirurgie de l'angiofibrome nasopharyngé est à très haut risque de saignement, qui peut être diminué par une dévascularisation préopératoire (niveau de preuve 1) [S1].\n\nSource : Gestion des anticoagulants pour une procédure invasive programmée, RFE SFAR 2026 (niveau de preuve 1 pour la dévascularisation préopératoire)."
+     "answer": "L'exérèse d'un angiofibrome nasopharyngé se classe dans la catégorie à risque hémorragique élevé [S2]. La chirurgie de l'angiofibrome nasopharyngé est à très haut risque de saignement, qui peut être diminué par une dévascularisation préopératoire (niveau de preuve 1) [S1].\n\nSource : Gestion des anticoagulants pour une procédure invasive programmée, RFE SFAR 2026 (niveau de preuve 1 pour la dévascularisation préopératoire).",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-g571f916b70fb2a0586cb",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "L'angiofibrome nasopharyngé est classé à risque hémorragique élevé, comme la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-gc6d6192f7b53462c02dd",
@@ -2751,7 +3386,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Administrer du plasma thérapeutique à la dose de 10 à 15 mL/kg de poids corporel, dans le cadre d'une situation d'urgence hémorragique, lorsqu'une préparation de facteur purifié existe mais ne peut pas être obtenue rapidement [S1]. Il s'agit d'un accord professionnel [S1].\n\nSource : Transfusion de plasma thérapeutique : produits, indications, RFE SFAR 2012 (accord professionnel)."
+     "answer": "Administrer du plasma thérapeutique à la dose de 10 à 15 mL/kg de poids corporel, dans le cadre d'une situation d'urgence hémorragique, lorsqu'une préparation de facteur purifié existe mais ne peut pas être obtenue rapidement [S1]. Il s'agit d'un accord professionnel [S1].\n\nSource : Transfusion de plasma thérapeutique : produits, indications, RFE SFAR 2012 (accord professionnel).",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-gc6d6192f7b53462c02dd",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Plasma thérapeutique à 10-15 mL/kg, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-g526e54165c42ca78bf63",
@@ -2775,7 +3421,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Utiliser un dispositif de photothérapie n'émettant pas de rayonnements d'une longueur d'onde inférieure à 425 nm, afin d'éviter la potentialisation théorique d'une interaction entre la lumière UVA et l'amotosalen, pouvant conduire à un érythème [S1]. Le choix du plasma doit tenir compte des longueurs d'onde du matériel utilisé en photothérapie [S2].\n\nSource : Transfusion de plasma thérapeutique : produits, indications, RFE SFAR 2012 ; Transfusion de globules rouges homologues : produits, indications alternatives, RFE SFAR 2014."
+     "answer": "Utiliser un dispositif de photothérapie n'émettant pas de rayonnements d'une longueur d'onde inférieure à 425 nm, afin d'éviter la potentialisation théorique d'une interaction entre la lumière UVA et l'amotosalen, pouvant conduire à un érythème [S1]. Le choix du plasma doit tenir compte des longueurs d'onde du matériel utilisé en photothérapie [S2].\n\nSource : Transfusion de plasma thérapeutique : produits, indications, RFE SFAR 2012 ; Transfusion de globules rouges homologues : produits, indications alternatives, RFE SFAR 2014.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-g526e54165c42ca78bf63",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Dispositif n'émettant pas de longueur d'onde inférieure à 425 nm, comme la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-g2b5dca4f8dcab2a9f869",
@@ -2797,7 +3454,18 @@
      "false_abstention": 0.0,
      "correct": 0.0,
      "sourced": 1.0,
-     "answer": "Oui, après discussion avec le patient, il est possible de réaliser un bloc associé à une anesthésie (générale ou régionale) ou une sédation profonde s'il existe un bénéfice, la traçabilité du choix étant importante [S2]. Toutefois, il est probablement recommandé en première intention de réaliser l'ALR chez un patient éveillé ou légèrement sédaté, calme et coopérant [S2][S1]. Dans ce cas, l'échographie apporte probablement une sécurité supplémentaire [S2][S1].\n\nSource : Anesthésie Loco-Régionale périnerveuse, RFE SFAR 2016 (R5.2, avis d'experts) ; Échographie en anesthésie locorégionale, RFE SFAR 2011."
+     "answer": "Oui, après discussion avec le patient, il est possible de réaliser un bloc associé à une anesthésie (générale ou régionale) ou une sédation profonde s'il existe un bénéfice, la traçabilité du choix étant importante [S2]. Toutefois, il est probablement recommandé en première intention de réaliser l'ALR chez un patient éveillé ou légèrement sédaté, calme et coopérant [S2][S1]. Dans ce cas, l'échographie apporte probablement une sécurité supplémentaire [S2][S1].\n\nSource : Anesthésie Loco-Régionale périnerveuse, RFE SFAR 2016 (R5.2, avis d'experts) ; Échographie en anesthésie locorégionale, RFE SFAR 2011.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-g2b5dca4f8dcab2a9f869",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse indique que le bloc sous anesthésie est possible après discussion et que l'échographie apporte une sécurité, cohérent avec la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-ga7998a95924ce47cf4b2",
@@ -2819,7 +3487,18 @@
      "false_abstention": 0.0,
      "correct": 0.0,
      "sourced": 1.0,
-     "answer": "Obtenir rapidement un avis neurochirurgical en cas de déficit complet [S1]. Un examen neurologique précis doit être fait, et en cas de suspicion de lésion nerveuse secondaire au bloc, il est recommandé de réaliser un examen électrophysiologique par EMG [S1].\n\nSource : Anesthésie Loco-Régionale périnerveuse, RFE SFAR 2016."
+     "answer": "Obtenir rapidement un avis neurochirurgical en cas de déficit complet [S1]. Un examen neurologique précis doit être fait, et en cas de suspicion de lésion nerveuse secondaire au bloc, il est recommandé de réaliser un examen électrophysiologique par EMG [S1].\n\nSource : Anesthésie Loco-Régionale périnerveuse, RFE SFAR 2016.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-ga7998a95924ce47cf4b2",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Avis neurochirurgical rapide et EMG, conformes à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-gcb7201d68bfd3c66882d",
@@ -2844,7 +3523,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Il faut prendre en compte les prescriptions antérieures de fluoroquinolones dans les 6 mois précédents, quelle qu'en soit l'indication, et ne pas en prescrire de façon répétée chez un même patient [S1]. Cet accord est fort [S1].\n\nSource : Stratégies de réduction de l'utilisation des antibiotiques à visée curative en réanimation, RFE SFAR 2014 (accord fort)."
+     "answer": "Il faut prendre en compte les prescriptions antérieures de fluoroquinolones dans les 6 mois précédents, quelle qu'en soit l'indication, et ne pas en prescrire de façon répétée chez un même patient [S1]. Cet accord est fort [S1].\n\nSource : Stratégies de réduction de l'utilisation des antibiotiques à visée curative en réanimation, RFE SFAR 2014 (accord fort).",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-gcb7201d68bfd3c66882d",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Prise en compte des fluoroquinolones des 6 derniers mois, accord fort, conforme."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-gd56911820a0a15744c26",
@@ -2867,7 +3557,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Oui : les experts suggèrent d'utiliser la simulation pour améliorer les compétences en communication entre professionnels en soins critiques, en formation initiale et continue, médicale et paramédicale [S1][S3]. L'accord est fort [S1][S3].\n\nSource : Intérêts de l'apprentissage par simulation en soins critiques, RFE SFAR 2019 (R2.4, accord fort) ; Facteurs humains en situations critiques, RPP SFAR 2022 (avis d'experts, accord fort)."
+     "answer": "Oui : les experts suggèrent d'utiliser la simulation pour améliorer les compétences en communication entre professionnels en soins critiques, en formation initiale et continue, médicale et paramédicale [S1][S3]. L'accord est fort [S1][S3].\n\nSource : Intérêts de l'apprentissage par simulation en soins critiques, RFE SFAR 2019 (R2.4, accord fort) ; Facteurs humains en situations critiques, RPP SFAR 2022 (avis d'experts, accord fort).",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-gd56911820a0a15744c26",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Simulation conseillée en formation initiale et continue, médicale et paramédicale, accord fort : conforme."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-gb4774403759a289947d9",
@@ -2891,7 +3592,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Les experts suggèrent de débuter le réchauffement actif avant l'induction avec un dispositif adapté et un contrôle de la température de la salle [S1]. Il faut le poursuivre en continu pendant l'intervention et en post-opératoire (lit réchauffé ou couveuse maintenue à la température adéquate) [S1].\n\nSource : Organisation de l'anesthésie pédiatrique, RPP SFAR 2023 (R2.6.2, avis d'experts, accord fort)."
+     "answer": "Les experts suggèrent de débuter le réchauffement actif avant l'induction avec un dispositif adapté et un contrôle de la température de la salle [S1]. Il faut le poursuivre en continu pendant l'intervention et en post-opératoire (lit réchauffé ou couveuse maintenue à la température adéquate) [S1].\n\nSource : Organisation de l'anesthésie pédiatrique, RPP SFAR 2023 (R2.6.2, avis d'experts, accord fort).",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-gb4774403759a289947d9",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Réchauffement débuté avant l'induction et poursuivi en peropératoire et postopératoire, conforme."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-g659a6f7980ea5f93af09",
@@ -2915,7 +3627,18 @@
      "false_abstention": 0.0,
      "correct": 0.0,
      "sourced": 1.0,
-     "answer": "Non : la chlorhexidine 0,5 % / alcoolique à 70 % (Hibitane) est contre-indiquée chez les nourrissons de moins d'un mois [S1][S2]. Sont autorisés dès la naissance la chlorhexidine 0,25 % / alcoolique à 4 % (Biseptine) [S3] et la chlorée Amukine [S2].\n\nSource : Organisation de l'anesthésie pédiatrique, RPP SFAR 2023 (annexe 2 : matériel d'abord veineux pédiatrique)."
+     "answer": "Non : la chlorhexidine 0,5 % / alcoolique à 70 % (Hibitane) est contre-indiquée chez les nourrissons de moins d'un mois [S1][S2]. Sont autorisés dès la naissance la chlorhexidine 0,25 % / alcoolique à 4 % (Biseptine) [S3] et la chlorée Amukine [S2].\n\nSource : Organisation de l'anesthésie pédiatrique, RPP SFAR 2023 (annexe 2 : matériel d'abord veineux pédiatrique).",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-g659a6f7980ea5f93af09",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Contre-indication de la chlorhexidine 0,5 % avant 1 mois, conforme ; les ajouts sur d'autres antiseptiques ne contredisent pas la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-ga95d75ad6fe8fb541a44",
@@ -2938,7 +3661,18 @@
      "false_abstention": 0.0,
      "correct": 0.0,
      "sourced": 1.0,
-     "answer": "Oui : chez l'enfant qui n'a pas acquis la marche, il faut probablement prescrire un TCA et une numération des plaquettes pour éliminer certaines pathologies constitutionnelles de l'hémostase [S2]. L'absence de bilan d'hémostase systématique ne s'applique pas aux enfants qui n'ont pas acquis la marche [S3], et l'interrogatoire n'est pas fiable avant l'âge de la marche [S1].\n\nSource : Examens pré-interventionnels systématiques, RFE SFAR 2012 (GRADE 2+)."
+     "answer": "Oui : chez l'enfant qui n'a pas acquis la marche, il faut probablement prescrire un TCA et une numération des plaquettes pour éliminer certaines pathologies constitutionnelles de l'hémostase [S2]. L'absence de bilan d'hémostase systématique ne s'applique pas aux enfants qui n'ont pas acquis la marche [S3], et l'interrogatoire n'est pas fiable avant l'âge de la marche [S1].\n\nSource : Examens pré-interventionnels systématiques, RFE SFAR 2012 (GRADE 2+).",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-ga95d75ad6fe8fb541a44",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Bilan d'hémostase indiqué chez l'enfant n'ayant pas acquis la marche, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-gcf5aefb7a5425d025d76",
@@ -2961,7 +3695,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Il est probablement recommandé de se servir de l'apport diagnostique du dosage de la procalcitonine et de la tomodensitométrie abdominale, sans se limiter à l'examen clinique et à la mesure de la CRP, pour établir le diagnostic d'infection de nécrose pancréatique [S1]. Le grade est GRADE 2+ (accord fort) [S1].\n\nSource : Pancréatite aigüe du patient adulte en soins critiques, RFE SFAR 2021 (R3.2, GRADE 2+, accord fort)."
+     "answer": "Il est probablement recommandé de se servir de l'apport diagnostique du dosage de la procalcitonine et de la tomodensitométrie abdominale, sans se limiter à l'examen clinique et à la mesure de la CRP, pour établir le diagnostic d'infection de nécrose pancréatique [S1]. Le grade est GRADE 2+ (accord fort) [S1].\n\nSource : Pancréatite aigüe du patient adulte en soins critiques, RFE SFAR 2021 (R3.2, GRADE 2+, accord fort).",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-gcf5aefb7a5425d025d76",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Procalcitonine et TDM abdominale, GRADE 2+, conformes à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-g394ecc098e4d21e40da0",
@@ -2985,7 +3730,18 @@
      "false_abstention": 1.0,
      "correct": 0.0,
      "sourced": 0.0,
-     "answer": "Les recommandations SFAR fournies ne traitent pas cette question."
+     "answer": "Les recommandations SFAR fournies ne traitent pas cette question.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-g394ecc098e4d21e40da0",
+      "correctness": "incorrect",
+      "abstained": true,
+      "serious_error": "other",
+      "faithful": null,
+      "justification": "La référence donne un score de 2 pour PaO2/FiO2 de 250, mais la réponse s'abstient à tort."
+     },
+     "judge_correct": 0.0,
+     "judge_correct_or_partial": 0.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-gae027791784341a1d570",
@@ -3008,7 +3764,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Chez un patient en soins critiques ayant une pancréatite aigüe grave hypertriglycéridémique persistante sévère ou très sévère associée à une acidose hyperlactatémique et/ou à une défaillance d'organe, il semble pertinent de proposer d'emblée les échanges plasmatiques [S1]. En cas d'échec du traitement médical, les experts suggèrent d'initier une thérapie par échanges plasmatiques pour diminuer rapidement l'hypertriglycéridémie sévère [S3]. Cette approche est à considérer en cas d'hypertriglycéridémie sévère (> 11,3 mmol/L) ou très sévère (> 22,4 mmol/L) et persistante, associée à des défaillances d'organes, l'objectif final étant < 5,7 mmol/L [S2].\n\nSource : Pancréatite aigüe du patient adulte en soins critiques, RFE SFAR 2021 (avis d'experts, accord fort)."
+     "answer": "Chez un patient en soins critiques ayant une pancréatite aigüe grave hypertriglycéridémique persistante sévère ou très sévère associée à une acidose hyperlactatémique et/ou à une défaillance d'organe, il semble pertinent de proposer d'emblée les échanges plasmatiques [S1]. En cas d'échec du traitement médical, les experts suggèrent d'initier une thérapie par échanges plasmatiques pour diminuer rapidement l'hypertriglycéridémie sévère [S3]. Cette approche est à considérer en cas d'hypertriglycéridémie sévère (> 11,3 mmol/L) ou très sévère (> 22,4 mmol/L) et persistante, associée à des défaillances d'organes, l'objectif final étant < 5,7 mmol/L [S2].\n\nSource : Pancréatite aigüe du patient adulte en soins critiques, RFE SFAR 2021 (avis d'experts, accord fort).",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-gae027791784341a1d570",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Échanges plasmatiques proposés d'emblée puis en cas d'échec du traitement médical, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-gcf361e9af2739ce43a9f",
@@ -3031,7 +3798,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Le ticagrélor est l'inhibiteur réversible du récepteur plaquettaire P2Y12 de l'ADP, alors que le clopidogrel et le prasugrel en sont des inhibiteurs irréversibles [S1][S2].\n\nSource : Gestion des agents antiplaquettaires en cas de procédure invasive non programmée ou d'hémorragie, RFE SFAR 2018 ; Gestion perioperatoire des patients sous AAP en urgence, Preconisation SFAR 2021."
+     "answer": "Le ticagrélor est l'inhibiteur réversible du récepteur plaquettaire P2Y12 de l'ADP, alors que le clopidogrel et le prasugrel en sont des inhibiteurs irréversibles [S1][S2].\n\nSource : Gestion des agents antiplaquettaires en cas de procédure invasive non programmée ou d'hémorragie, RFE SFAR 2018 ; Gestion perioperatoire des patients sous AAP en urgence, Preconisation SFAR 2021.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-gcf361e9af2739ce43a9f",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Ticagrélor identifié comme inhibiteur réversible du P2Y12, conforme."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-ge78b13400ed5e89af859",
@@ -3055,7 +3833,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Non : il est proposé de ne pas utiliser de desmopressine pour neutraliser les AAP (accord fort) [S3]. Chez des volontaires sains ayant reçu du ticagrelor, la desmopressine ne réduit pas le temps de saignement et ne corrige pas les fonctions plaquettaires [S1]. Il est proposé d'administrer de l'acide tranexamique pour son efficacité à réduire le saignement, que le patient soit ou non traité par AAP (accord fort) [S3].\n\nSource : Gestion perioperatoire des patients sous AAP en urgence, Preconisation SFAR 2021 (accord fort)."
+     "answer": "Non : il est proposé de ne pas utiliser de desmopressine pour neutraliser les AAP (accord fort) [S3]. Chez des volontaires sains ayant reçu du ticagrelor, la desmopressine ne réduit pas le temps de saignement et ne corrige pas les fonctions plaquettaires [S1]. Il est proposé d'administrer de l'acide tranexamique pour son efficacité à réduire le saignement, que le patient soit ou non traité par AAP (accord fort) [S3].\n\nSource : Gestion perioperatoire des patients sous AAP en urgence, Preconisation SFAR 2021 (accord fort).",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-ge78b13400ed5e89af859",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Desmopressine déconseillée sous AAP récents, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-g1fa665d53b3782891db2",
@@ -3077,7 +3866,18 @@
      "false_abstention": 0.0,
      "correct": 0.0,
      "sourced": 1.0,
-     "answer": "Mettre en place un dispositif d'oxygénation nasale à haut débit pendant la laryngoscopie, après une préoxygénation bien conduite, afin de prolonger le temps sans désaturation, y compris chez le patient obèse ou estomac plein [S4][S5]. Cette recommandation concerne l'intubation difficile prévue sans indication au maintien de la ventilation spontanée [S4][S5].\n\nSource : Prise en charge des voies aériennes de l'adulte au bloc opératoire, RFE SFAR 2026 (R2.1.1, avis d'experts)."
+     "answer": "Mettre en place un dispositif d'oxygénation nasale à haut débit pendant la laryngoscopie, après une préoxygénation bien conduite, afin de prolonger le temps sans désaturation, y compris chez le patient obèse ou estomac plein [S4][S5]. Cette recommandation concerne l'intubation difficile prévue sans indication au maintien de la ventilation spontanée [S4][S5].\n\nSource : Prise en charge des voies aériennes de l'adulte au bloc opératoire, RFE SFAR 2026 (R2.1.1, avis d'experts).",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-g1fa665d53b3782891db2",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Oxygénation nasale à haut débit pendant l'apnée, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-g42624ba80bc36c8e0925",
@@ -3099,7 +3899,18 @@
      "false_abstention": 1.0,
      "correct": 0.0,
      "sourced": 0.0,
-     "answer": "Les recommandations SFAR fournies ne traitent pas cette question."
+     "answer": "Les recommandations SFAR fournies ne traitent pas cette question.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-g42624ba80bc36c8e0925",
+      "correctness": "incorrect",
+      "abstained": true,
+      "serious_error": "other",
+      "faithful": null,
+      "justification": "La référence décrit les caractéristiques d'une revue de morbi-mortalité de qualité, mais la réponse s'abstient à tort."
+     },
+     "judge_correct": 0.0,
+     "judge_correct_or_partial": 0.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-g6d7e10b60e750f150a7a",
@@ -3124,7 +3935,18 @@
      "false_abstention": 0.0,
      "correct": 0.0,
      "sourced": 1.0,
-     "answer": "Lors d'une induction en séquence rapide chez l'enfant, il est suggéré de ventiler au masque dès que la SpO2 est inférieure à 95 % [S1]. La ventilation se fait avec une FiO2 ≥ 0,8 et de faibles niveaux de pression, juste suffisants pour soulever le thorax et éviter une insufflation gastrique, idéalement < 15 cmH2O [S1].\n\nSource : Gestion des voies aériennes de l'enfant, RFE SFAR 2018 (avis d'experts)."
+     "answer": "Lors d'une induction en séquence rapide chez l'enfant, il est suggéré de ventiler au masque dès que la SpO2 est inférieure à 95 % [S1]. La ventilation se fait avec une FiO2 ≥ 0,8 et de faibles niveaux de pression, juste suffisants pour soulever le thorax et éviter une insufflation gastrique, idéalement < 15 cmH2O [S1].\n\nSource : Gestion des voies aériennes de l'enfant, RFE SFAR 2018 (avis d'experts).",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-g6d7e10b60e750f150a7a",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Ventilation au masque dès SpO2 < 95 %, FiO2 >= 0,8 et pression < 15 cmH2O, conforme."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-g1b4ad3d31046fdbdd025",
@@ -3145,7 +3967,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "**Éditions comparées**\n- RFE SFAR 2001, « Les blocs périphériques des membres chez l'adulte » (édition antérieure, remplacée) [S2, S5] (2001)\n- RFE SFAR 2016, « Anesthésie Loco-Régionale périnerveuse » (en vigueur) [S1] (2016)\n\n**Ce qui a changé**\n- 2001 : les extraits ne décrivent que la réalisation du bloc avec une sédation légère, réactivité conservée aux stimulations verbales, chez des patients coopérants ; ils ne traitent pas explicitement du bloc réalisé sous anesthésie générale ou sous sédation profonde [S2, S5] (2001).\n- 2016 : l'ALR est probablement recommandée en première intention chez un patient éveillé ou légèrement sédaté, calme et coopérant ; toutefois, après discussion avec le patient, il est possible de réaliser un bloc associé à une anesthésie (générale ou régionale) ou une sédation profonde s'il existe un bénéfice [S1] (2016).\n- 2016 : la traçabilité du choix est importante, et dans ce cas l'échographie apporte probablement une sécurité supplémentaire [S1] (2016).\n- Niveau de preuve : en 2016 cette recommandation (R5.2) relève d'un avis d'experts [S1] (2016) ; en 2001 les mentions sont des accords d'experts avec grade (C) pour la sédation légère peropératoire [S5] (2001).\n\n**Ce qui est resté inchangé**\n- La situation de référence reste le patient coopérant, éveillé ou légèrement sédaté (sédation légère, réactivité conservée) [S2, S5] (2001) ; [S1] (2016).\n\nSource : Anesthésie Loco-Régionale périnerveuse, RFE SFAR 2016 (avis d'experts) ; Les blocs périphériques des membres chez l'adulte, RFE SFAR 2001 (édition antérieure)."
+     "answer": "**Éditions comparées**\n- RFE SFAR 2001, « Les blocs périphériques des membres chez l'adulte » (édition antérieure, remplacée) [S2, S5] (2001)\n- RFE SFAR 2016, « Anesthésie Loco-Régionale périnerveuse » (en vigueur) [S1] (2016)\n\n**Ce qui a changé**\n- 2001 : les extraits ne décrivent que la réalisation du bloc avec une sédation légère, réactivité conservée aux stimulations verbales, chez des patients coopérants ; ils ne traitent pas explicitement du bloc réalisé sous anesthésie générale ou sous sédation profonde [S2, S5] (2001).\n- 2016 : l'ALR est probablement recommandée en première intention chez un patient éveillé ou légèrement sédaté, calme et coopérant ; toutefois, après discussion avec le patient, il est possible de réaliser un bloc associé à une anesthésie (générale ou régionale) ou une sédation profonde s'il existe un bénéfice [S1] (2016).\n- 2016 : la traçabilité du choix est importante, et dans ce cas l'échographie apporte probablement une sécurité supplémentaire [S1] (2016).\n- Niveau de preuve : en 2016 cette recommandation (R5.2) relève d'un avis d'experts [S1] (2016) ; en 2001 les mentions sont des accords d'experts avec grade (C) pour la sédation légère peropératoire [S5] (2001).\n\n**Ce qui est resté inchangé**\n- La situation de référence reste le patient coopérant, éveillé ou légèrement sédaté (sédation légère, réactivité conservée) [S2, S5] (2001) ; [S1] (2016).\n\nSource : Anesthésie Loco-Régionale périnerveuse, RFE SFAR 2016 (avis d'experts) ; Les blocs périphériques des membres chez l'adulte, RFE SFAR 2001 (édition antérieure).",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-g1b4ad3d31046fdbdd025",
+      "correctness": "partial",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Le changement 2016 est bien décrit, mais la réponse ne reprend pas la position de 2001 (bloc sous AG exclu faute de signes d'alerte) et affirme que les extraits ne la traitent pas."
+     },
+     "judge_correct": 0.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-g518431a84972e17017d1",
@@ -3166,7 +3999,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "**Éditions comparées**\n- RFE SFAR 2000, « Recommandations pour les structures et le matériel de l'anesthésie pédiatrique » (édition antérieure, remplacée) [S2] (2000)\n- RPP SFAR 2023, « Organisation de l'anesthésie pédiatrique » (en vigueur) [S1] (2023)\n\n**Ce qui a changé**\n- Gamme de cathéters veineux périphériques : en 2000, disposer de toute la gamme de tailles, depuis les plus petits (24 Gauge) jusqu'au plus grand (14 Gauge) [S2] (2000) ; en 2023, disposer de toutes les tailles entre le 26 gauge et le 16 gauge [S1] (2023).\n- La gamme est donc décalée : la plus petite taille passe de 24 G à 26 G et la plus grande de 14 G à 16 G [S2] (2000) ; [S1] (2023).\n- En 2023, les extraits ajoutent : se poser la question de la difficulté prévisible de l'abord veineux, cathéters courts pour des durées de perfusion ≤ 4 jours, Midline pour 7 à 28 jours sous échographie, cathéters sécurisés sans supériorité démontrée (choix selon les habitudes de l'équipe) [S1] (2023).\n\n**Ce qui est resté inchangé**\n- L'utilisation de cathéters courts pour l'abord veineux périphérique et la nécessité de disposer de toute la gamme de tailles pour adapter le choix [S2] (2000) ; [S1] (2023).\n\nSource : Organisation de l'anesthésie pédiatrique, RPP SFAR 2023 ; Recommandations pour les structures et le matériel de l'anesthésie pédiatrique, RFE SFAR 2000 (édition antérieure). Les extraits ne mentionnent pas de force de recommandation pour ces passages."
+     "answer": "**Éditions comparées**\n- RFE SFAR 2000, « Recommandations pour les structures et le matériel de l'anesthésie pédiatrique » (édition antérieure, remplacée) [S2] (2000)\n- RPP SFAR 2023, « Organisation de l'anesthésie pédiatrique » (en vigueur) [S1] (2023)\n\n**Ce qui a changé**\n- Gamme de cathéters veineux périphériques : en 2000, disposer de toute la gamme de tailles, depuis les plus petits (24 Gauge) jusqu'au plus grand (14 Gauge) [S2] (2000) ; en 2023, disposer de toutes les tailles entre le 26 gauge et le 16 gauge [S1] (2023).\n- La gamme est donc décalée : la plus petite taille passe de 24 G à 26 G et la plus grande de 14 G à 16 G [S2] (2000) ; [S1] (2023).\n- En 2023, les extraits ajoutent : se poser la question de la difficulté prévisible de l'abord veineux, cathéters courts pour des durées de perfusion ≤ 4 jours, Midline pour 7 à 28 jours sous échographie, cathéters sécurisés sans supériorité démontrée (choix selon les habitudes de l'équipe) [S1] (2023).\n\n**Ce qui est resté inchangé**\n- L'utilisation de cathéters courts pour l'abord veineux périphérique et la nécessité de disposer de toute la gamme de tailles pour adapter le choix [S2] (2000) ; [S1] (2023).\n\nSource : Organisation de l'anesthésie pédiatrique, RPP SFAR 2023 ; Recommandations pour les structures et le matériel de l'anesthésie pédiatrique, RFE SFAR 2000 (édition antérieure). Les extraits ne mentionnent pas de force de recommandation pour ces passages.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-g518431a84972e17017d1",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Gamme 2000 (24G-14G) et 2023 (26G-16G) correctement comparées, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-g78a74d874a76bbb543f1",
@@ -3187,7 +4031,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "**Éditions comparées**\n- RFE SFAR 2002, « Thrombopénie induite par l'héparine » (édition antérieure, remplacée) [S4] (2002)\n- RFE/Préconisation SFAR 2019, « Diagnostic et prise en charge d'une thrombopénie induite par l'héparine » (en vigueur) [S1, S3] (2019)\n\n**Ce qui a changé**\n- Seuil plaquettaire pour débuter le relais danaparoïde sodique–AVK : plaquettes remontées au-delà de 100 g/L en 2002 [S4] (2002) ; plaquettes au-dessus de 150 G/L en 2019 [S3] (2019).\n- En 2019, la coumadine est privilégiée et administrée au plus tôt lorsque la ré-ascension plaquettaire est confirmée (plaquettes > 150 G/L), et les AVK ne sont jamais utilisés seuls à la phase aiguë, uniquement sous couvert d'un anticoagulant parentéral efficace (danaparoïde sodique ou argatroban) [S1] (2019).\n\n**Ce qui est resté inchangé**\n- Le relais danaparoïde sodique–AVK n'est initié que lorsque le risque thromboembolique est bien contrôlé, soit 5 à 7 jours de traitement [S4] (2002) ; [S3] (2019).\n- Le danaparoïde n'est arrêté que lorsque l'INR est dans la zone thérapeutique deux jours de suite et après au moins 72 h d'AVK (zone 2 à 3 précisée en 2019) [S4] (2002) ; [S3] (2019).\n\nSource : Diagnostic et prise en charge d'une thrombopénie induite par l'héparine, RFE SFAR 2019 ; Thrombopénie induite par l'héparine, RFE SFAR 2002 (édition antérieure). Les extraits ne mentionnent pas de force de recommandation pour ces passages."
+     "answer": "**Éditions comparées**\n- RFE SFAR 2002, « Thrombopénie induite par l'héparine » (édition antérieure, remplacée) [S4] (2002)\n- RFE/Préconisation SFAR 2019, « Diagnostic et prise en charge d'une thrombopénie induite par l'héparine » (en vigueur) [S1, S3] (2019)\n\n**Ce qui a changé**\n- Seuil plaquettaire pour débuter le relais danaparoïde sodique–AVK : plaquettes remontées au-delà de 100 g/L en 2002 [S4] (2002) ; plaquettes au-dessus de 150 G/L en 2019 [S3] (2019).\n- En 2019, la coumadine est privilégiée et administrée au plus tôt lorsque la ré-ascension plaquettaire est confirmée (plaquettes > 150 G/L), et les AVK ne sont jamais utilisés seuls à la phase aiguë, uniquement sous couvert d'un anticoagulant parentéral efficace (danaparoïde sodique ou argatroban) [S1] (2019).\n\n**Ce qui est resté inchangé**\n- Le relais danaparoïde sodique–AVK n'est initié que lorsque le risque thromboembolique est bien contrôlé, soit 5 à 7 jours de traitement [S4] (2002) ; [S3] (2019).\n- Le danaparoïde n'est arrêté que lorsque l'INR est dans la zone thérapeutique deux jours de suite et après au moins 72 h d'AVK (zone 2 à 3 précisée en 2019) [S4] (2002) ; [S3] (2019).\n\nSource : Diagnostic et prise en charge d'une thrombopénie induite par l'héparine, RFE SFAR 2019 ; Thrombopénie induite par l'héparine, RFE SFAR 2002 (édition antérieure). Les extraits ne mentionnent pas de force de recommandation pour ces passages.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-g78a74d874a76bbb543f1",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Seuil de 100 g/L en 2002 et de 150 G/L en 2019 pour le relais AVK, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-abst000",
@@ -3199,7 +4054,18 @@
      ],
      "abstention_correct": 1.0,
      "sourced": 0.0,
-     "answer": "Les recommandations SFAR fournies ne traitent pas cette question."
+     "answer": "Les recommandations SFAR fournies ne traitent pas cette question.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-abst000",
+      "correctness": "correct",
+      "abstained": true,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Abstention correcte, la question n'est pas couverte."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-abst001",
@@ -3211,7 +4077,18 @@
      ],
      "abstention_correct": 1.0,
      "sourced": 0.0,
-     "answer": "Les recommandations SFAR fournies ne traitent pas cette question."
+     "answer": "Les recommandations SFAR fournies ne traitent pas cette question.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-abst001",
+      "correctness": "correct",
+      "abstained": true,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Abstention correcte, la question n'est pas couverte."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-abst002",
@@ -3223,7 +4100,18 @@
      ],
      "abstention_correct": 1.0,
      "sourced": 0.0,
-     "answer": "Les recommandations SFAR fournies ne traitent pas cette question."
+     "answer": "Les recommandations SFAR fournies ne traitent pas cette question.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-abst002",
+      "correctness": "correct",
+      "abstained": true,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Abstention correcte, la question n'est pas couverte."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-abst004",
@@ -3235,7 +4123,18 @@
      ],
      "abstention_correct": 1.0,
      "sourced": 0.0,
-     "answer": "Les recommandations SFAR fournies ne traitent pas cette question."
+     "answer": "Les recommandations SFAR fournies ne traitent pas cette question.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-abst004",
+      "correctness": "correct",
+      "abstained": true,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Abstention correcte, la question n'est pas couverte."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-abst005",
@@ -3247,7 +4146,18 @@
      ],
      "abstention_correct": 1.0,
      "sourced": 0.0,
-     "answer": "Les recommandations SFAR fournies ne traitent pas cette question."
+     "answer": "Les recommandations SFAR fournies ne traitent pas cette question.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-abst005",
+      "correctness": "correct",
+      "abstained": true,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Abstention correcte, la question n'est pas couverte."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-abst007",
@@ -3259,7 +4169,18 @@
      ],
      "abstention_correct": 1.0,
      "sourced": 0.0,
-     "answer": "Les recommandations SFAR fournies ne traitent pas cette question."
+     "answer": "Les recommandations SFAR fournies ne traitent pas cette question.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-abst007",
+      "correctness": "correct",
+      "abstained": true,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Abstention correcte, la question n'est pas couverte."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-abst009",
@@ -3271,7 +4192,18 @@
      ],
      "abstention_correct": 1.0,
      "sourced": 0.0,
-     "answer": "Les recommandations SFAR fournies ne traitent pas cette question."
+     "answer": "Les recommandations SFAR fournies ne traitent pas cette question.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-abst009",
+      "correctness": "correct",
+      "abstained": true,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Abstention correcte, la question n'est pas couverte."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-abst013",
@@ -3283,7 +4215,18 @@
      ],
      "abstention_correct": 1.0,
      "sourced": 0.0,
-     "answer": "Les recommandations SFAR fournies ne traitent pas cette question."
+     "answer": "Les recommandations SFAR fournies ne traitent pas cette question.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-abst013",
+      "correctness": "correct",
+      "abstained": true,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Abstention correcte, la question n'est pas couverte."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-abst015",
@@ -3295,7 +4238,18 @@
      ],
      "abstention_correct": 1.0,
      "sourced": 0.0,
-     "answer": "Les recommandations SFAR fournies ne traitent pas cette question."
+     "answer": "Les recommandations SFAR fournies ne traitent pas cette question.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-abst015",
+      "correctness": "correct",
+      "abstained": true,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Abstention correcte, la question n'est pas couverte."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-abst016",
@@ -3307,7 +4261,18 @@
      ],
      "abstention_correct": 1.0,
      "sourced": 0.0,
-     "answer": "Les recommandations SFAR fournies ne traitent pas cette question."
+     "answer": "Les recommandations SFAR fournies ne traitent pas cette question.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-abst016",
+      "correctness": "correct",
+      "abstained": true,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Abstention correcte, la question n'est pas couverte."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-abst017",
@@ -3319,7 +4284,18 @@
      ],
      "abstention_correct": 1.0,
      "sourced": 0.0,
-     "answer": "Les recommandations SFAR fournies ne traitent pas cette question."
+     "answer": "Les recommandations SFAR fournies ne traitent pas cette question.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-abst017",
+      "correctness": "correct",
+      "abstained": true,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Abstention correcte, la question n'est pas couverte."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-abst020",
@@ -3331,7 +4307,18 @@
      ],
      "abstention_correct": 1.0,
      "sourced": 0.0,
-     "answer": "Les recommandations SFAR fournies ne traitent pas cette question."
+     "answer": "Les recommandations SFAR fournies ne traitent pas cette question.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-abst020",
+      "correctness": "correct",
+      "abstained": true,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Abstention correcte, la question n'est pas couverte."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-abst022",
@@ -3343,7 +4330,18 @@
      ],
      "abstention_correct": 1.0,
      "sourced": 0.0,
-     "answer": "Les recommandations SFAR fournies ne traitent pas cette question."
+     "answer": "Les recommandations SFAR fournies ne traitent pas cette question.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-abst022",
+      "correctness": "correct",
+      "abstained": true,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Abstention correcte, la question n'est pas couverte."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-abst026",
@@ -3355,7 +4353,18 @@
      ],
      "abstention_correct": 1.0,
      "sourced": 0.0,
-     "answer": "Les recommandations SFAR fournies ne traitent pas cette question."
+     "answer": "Les recommandations SFAR fournies ne traitent pas cette question.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-abst026",
+      "correctness": "correct",
+      "abstained": true,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Abstention correcte, la question n'est pas couverte."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-abst031",
@@ -3367,7 +4376,18 @@
      ],
      "abstention_correct": 1.0,
      "sourced": 0.0,
-     "answer": "Les recommandations SFAR fournies ne traitent pas cette question."
+     "answer": "Les recommandations SFAR fournies ne traitent pas cette question.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-abst031",
+      "correctness": "correct",
+      "abstained": true,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Abstention correcte, la question n'est pas couverte."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-abst036",
@@ -3379,7 +4399,18 @@
      ],
      "abstention_correct": 1.0,
      "sourced": 0.0,
-     "answer": "Les recommandations SFAR fournies ne traitent pas cette question."
+     "answer": "Les recommandations SFAR fournies ne traitent pas cette question.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-abst036",
+      "correctness": "correct",
+      "abstained": true,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Abstention correcte, la question n'est pas couverte."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-abst037",
@@ -3391,7 +4422,18 @@
      ],
      "abstention_correct": 1.0,
      "sourced": 0.0,
-     "answer": "Les recommandations SFAR fournies ne traitent pas cette question."
+     "answer": "Les recommandations SFAR fournies ne traitent pas cette question.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-abst037",
+      "correctness": "correct",
+      "abstained": true,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Abstention correcte, la question n'est pas couverte."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-abst039",
@@ -3403,10 +4445,26 @@
      ],
      "abstention_correct": 1.0,
      "sourced": 0.0,
-     "answer": "Les recommandations SFAR fournies ne traitent pas cette question."
+     "answer": "Les recommandations SFAR fournies ne traitent pas cette question.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank+claude-sonnet-5-5::MR-abst039",
+      "correctness": "correct",
+      "abstained": true,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Abstention correcte, la question n'est pas couverte."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     }
    ]
   }
  ],
- "comparisons": []
+ "comparisons": [],
+ "judge": {
+  "label": "claude-haiku-5-5 subagent (κ=0.88)",
+  "dir": "eval_internal/judge/runs/mr_sonnet_ctx6",
+  "missing": 0
+ }
 }
