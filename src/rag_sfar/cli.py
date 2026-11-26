@@ -219,6 +219,56 @@ def index_cmd() -> None:
     )
 
 
+def _run_unified_eval(args: argparse.Namespace) -> None:
+    from rag_sfar.evaluation import harness
+
+    if args.split == "test" and not args.allow_test:
+        raise SystemExit("The test split is locked: evaluate it only on final configs, with --allow-test.")
+    configs = harness.select_configs(args.configs)
+    strategies = sorted({c.chunking_strategy for c in configs})
+    device = "cpu" if (not args.retrieval_only and args.backend == "mlx") else None
+    retrievers = harness.load_retrievers(
+        args.index_root, strategies, args.reranker_provider, args.reranker_model, device=device
+    )
+
+    factory = None
+    label = ""
+    if not args.retrieval_only:
+        from rag_sfar.generation.client import LocalMlxLLM, OpenAICompatibleLLM, SfarRagEngine
+
+        if args.backend == "mlx":
+            llm = LocalMlxLLM(
+                model_path=args.mlx_model_path or args.model, model_label=args.model,
+                temperature=0.0, max_tokens=args.max_tokens,
+            )
+        else:
+            llm = OpenAICompatibleLLM(
+                base_url=args.base_url, api_key=args.api_key, model=args.model,
+                temperature=0.0, max_tokens=args.max_tokens,
+            )
+        label = f"{args.backend}:{args.model}"
+
+        def factory(retriever):
+            engine = SfarRagEngine(retriever=retriever, llm=llm)
+
+            def answer_fn(item, cfg):
+                mode = args.gen_mode
+                if mode == "auto":
+                    mode = "benchmark_mcq" if item.question_type == "mcq" else "clinical_detailed"
+                resp = engine.answer(item.formatted_query(), mode=mode, config=cfg)
+                return {"answer": resp.answer, "retrieved": resp.retrieved_chunks, "usage": resp.token_usage}
+
+            return answer_fn
+
+    report = harness.run_eval(
+        args.suite, args.split, configs, retrievers, k=args.k, answer_fn_factory=factory,
+        generator_label=label, limit=args.limit, progress=lambda m: console.print(f"[dim]{m}[/dim]"),
+    )
+    jp, mp = harness.save_report(report, tag=args.tag)
+    console.print(harness.to_markdown(report))
+    console.print(f"[bold green]Saved {jp} and {mp}[/bold green]")
+
+
 def eval_cmd() -> None:
     parser = argparse.ArgumentParser(description="Run full RAG-SFAR ablation benchmark suite.")
     s = Settings()
@@ -227,7 +277,27 @@ def eval_cmd() -> None:
     parser.add_argument("--output-dir", type=Path, default=Path("reports"))
     parser.add_argument("--reranker-provider", default=s.reranker_provider)
     parser.add_argument("--reranker-model", default=s.reranker_model)
+    # --- Unified harness (eval/README.md). Without --suite the legacy ablation below runs. ---
+    parser.add_argument("--suite", default=None, help="Suite name from eval/ or eval_internal/, or 'full'.")
+    parser.add_argument("--split", default="dev", choices=["dev", "test", "all"])
+    parser.add_argument("--configs", default="all", help="Comma list, e.g. C0,C6,C8 (prefix or full name).")
+    parser.add_argument("--k", type=int, default=8)
+    parser.add_argument("--limit", type=int, default=0)
+    parser.add_argument("--retrieval-only", action="store_true")
+    parser.add_argument("--backend", choices=["mlx", "openai"], default="mlx")
+    parser.add_argument("--mlx-model-path", default="")
+    parser.add_argument("--model", default=s.llm_model)
+    parser.add_argument("--base-url", default=s.llm_base_url)
+    parser.add_argument("--api-key", default=s.llm_api_key)
+    parser.add_argument("--max-tokens", type=int, default=512)
+    parser.add_argument("--gen-mode", default="auto", help="Prompt mode; 'auto' = benchmark_mcq for MCQ else clinical_detailed.")
+    parser.add_argument("--tag", default="")
+    parser.add_argument("--allow-test", action="store_true", help="Required to evaluate the locked test split.")
     args = parser.parse_args()
+
+    if args.suite:
+        _run_unified_eval(args)
+        return
 
     reranker = (
         build_reranker(args.reranker_provider, args.reranker_model)
