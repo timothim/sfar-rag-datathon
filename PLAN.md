@@ -3,7 +3,7 @@
 Mission : `PROMPT_CLAUDE_CODE.md` §1. Règles actives : `CLAUDE.md`. Relire ce fichier après chaque compaction.
 
 ## Phase en cours
-Phase 2 (fondation d'évaluation) en cours ; phase 3 étape 1 (C8 générique) lancée en parallèle. Voir JOURNAL.md « État courant ».
+Phase 3 (boucle d'amélioration). Référence courante : C9 (BM25+dense+RRF+reranker+routeur), générateur Qwen2.5-7B local. Voir JOURNAL.md.
 
 ## Points d'attention
 - La section `<git_et_libredatahub>` citée en phase 0 n'existe pas dans le prompt. Règles appliquées en attendant : respecter `.gitignore` (index/, data/ hors submodules, `.env`, `CLAUDE.md`, `PROMPT*.md` ne sont jamais commités), commits locaux uniquement, aucun push sans accord.
@@ -28,6 +28,10 @@ Phase 2 (fondation d'évaluation) en cours ; phase 3 étape 1 (C8 générique) l
 | Ablation C8 composant par composant (10) | les deux dev | seuls dense et reranker utiles (IC excluant 0) | les 8 autres retirés de C9 |
 | C9 simple (BM25+dense+RRF+reranker+routeur) vs C8 | les deux dev | toutes différences n.s. (MRR −0,03 tendance) | C9 candidat, à confirmer en génération |
 | Ancien C8, génération 7B, juge Haiku | multirfe dev | correct 68,1 % [59–78], erreurs graves 16,0 % (8 abstentions manquées) | référence « avant » multi-RFE |
+| Ancien C8 → C9 détaillé, génération 7B, juge | multirfe dev | correct −1,1 n.s. ; **graves 16,0 → 5,3 % (−10,6 [−18,1 ; −4,3])** | **C9 adopté** |
+| idem | abp dev | correct 80,4 → 76,5 (n.s.) ; graves 5,9 = | cohérent (sur-ajustement retiré) |
+| Prompt concis vs détaillé (C9) | abp dev | correct +4,9 n.s., graves −2,0, latence −2,7 s | prometteur |
+| idem | multirfe dev | correct +2,1 n.s., latence −4,8 s, mais abstention 83 → 61 % | à corriger (abstention) avant adoption |
 | Embedder Qwen3-Embedding-0.6B vs e5-small (C9) | les deux dev | toutes différences n.s. (doc hit −2,6 tendance) | non adopté ; tester en dense seul |
 | Ancien C0 vs ancien C8, génération 7B mode générique, juge Haiku (κ 0,88) | abp171 dev | correct 64,7 → 80,4 % (+15,7 [+2,9 ; +27,5]) ; erreurs graves 14,7 → 5,9 % | référence « avant » pour la génération |
 | Reranker bge-reranker-v2-m3 vs mmarco (C9) | multirfe dev | passage hit +3,9 [−1,3 ; +9,2], MRR +0,059 n.s. ; latence ×30 sur Mac | candidat GPU, non adopté localement |

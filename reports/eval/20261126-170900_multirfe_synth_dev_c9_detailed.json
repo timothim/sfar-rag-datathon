@@ -1437,6 +1437,30 @@
       },
       "n": 4
      }
+    },
+    "judge_correct": {
+     "mean": 0.6702127659574468,
+     "ci_low": 0.574468085106383,
+     "ci_high": 0.7659574468085106,
+     "n": 94
+    },
+    "judge_correct_or_partial": {
+     "mean": 0.8297872340425532,
+     "ci_low": 0.7446808510638298,
+     "ci_high": 0.9042553191489362,
+     "n": 94
+    },
+    "judge_serious_error": {
+     "mean": 0.05319148936170213,
+     "ci_low": 0.010638297872340425,
+     "ci_high": 0.10638297872340426,
+     "n": 94
+    },
+    "judge_serious_error_types": {
+     "wrong_drug": 1,
+     "wrong_dose": 1,
+     "unsupported_claim": 1,
+     "missing_abstention": 2
     }
    },
    "rows": [
@@ -1493,7 +1517,18 @@
       "completion_tokens": 268,
       "total_tokens": 3200
      },
-     "latency_ms": 17803.513624996413
+     "latency_ms": 17803.513624996413,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-g3b9708b3518cddf9bccf",
+      "correctness": "partial",
+      "abstained": false,
+      "serious_error": "other",
+      "faithful": null,
+      "justification": "Confirme le retour à domicile et les critères cliniques, mais ajoute une réversion immédiate des anticoagulants absente de la référence."
+     },
+     "judge_correct": 0.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-gfff2848a70957ac0b7b5",
@@ -1536,7 +1571,18 @@
       "completion_tokens": 168,
       "total_tokens": 1933
      },
-     "latency_ms": 10474.885042000096
+     "latency_ms": 10474.885042000096,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-gfff2848a70957ac0b7b5",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Recommande un scanner cérébral avec injection devant la dissection carotidienne suspectée, comme la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-g8f23afa63325b0d08bd8",
@@ -1591,7 +1637,18 @@
       "completion_tokens": 155,
       "total_tokens": 3103
      },
-     "latency_ms": 13757.798542035744
+     "latency_ms": 13757.798542035744,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-g8f23afa63325b0d08bd8",
+      "correctness": "partial",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Retient le traitement opératoire précoce mais omet le scanner secondaire de la référence."
+     },
+     "judge_correct": 0.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-g8e54d9655989718c1639",
@@ -1647,7 +1704,18 @@
       "completion_tokens": 79,
       "total_tokens": 2554
      },
-     "latency_ms": 10108.362999977544
+     "latency_ms": 10108.362999977544,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-g8e54d9655989718c1639",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Conclut à ne pas refroidir le patient, conforme à la référence (normothermie)."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-gd1b252c6b18be4bca7b6",
@@ -1703,7 +1771,18 @@
       "completion_tokens": 160,
       "total_tokens": 2842
      },
-     "latency_ms": 12962.726917001419
+     "latency_ms": 12962.726917001419,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-gd1b252c6b18be4bca7b6",
+      "correctness": "incorrect",
+      "abstained": true,
+      "serious_error": "other",
+      "faithful": null,
+      "justification": "Le système s'abstient alors que la référence répond clairement non à la question."
+     },
+     "judge_correct": 0.0,
+     "judge_correct_or_partial": 0.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-gd9a325c36650ee68a17f",
@@ -1759,7 +1838,18 @@
       "completion_tokens": 205,
       "total_tokens": 3254
      },
-     "latency_ms": 15391.086457995698
+     "latency_ms": 15391.086457995698,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-gd9a325c36650ee68a17f",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Répond oui, les données adultes sont transposables à l'enfant, comme la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-ge6178ab7ed0b124f3edc",
@@ -1809,7 +1899,18 @@
       "completion_tokens": 134,
       "total_tokens": 2610
      },
-     "latency_ms": 11600.6265420001
+     "latency_ms": 11600.6265420001,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-ge6178ab7ed0b124f3edc",
+      "correctness": "incorrect",
+      "abstained": true,
+      "serious_error": "other",
+      "faithful": null,
+      "justification": "Abstention alors que la référence donne une conduite claire (ne pas prescrire systématiquement)."
+     },
+     "judge_correct": 0.0,
+     "judge_correct_or_partial": 0.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-g2c188878f4fca6996f4b",
@@ -1852,7 +1953,18 @@
       "completion_tokens": 193,
       "total_tokens": 1799
      },
-     "latency_ms": 10544.08408299787
+     "latency_ms": 10544.08408299787,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-g2c188878f4fca6996f4b",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Classe l'endartériectomie carotidienne en risque intermédiaire (1 % à 5 %), conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-gae3cda1acd4e903f01fd",
@@ -1906,7 +2018,18 @@
       "completion_tokens": 98,
       "total_tokens": 2905
      },
-     "latency_ms": 12171.768667001743
+     "latency_ms": 12171.768667001743,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-gae3cda1acd4e903f01fd",
+      "correctness": "incorrect",
+      "abstained": true,
+      "serious_error": "other",
+      "faithful": null,
+      "justification": "Abstention alors que la référence conclut clairement à un examen non contributif."
+     },
+     "judge_correct": 0.0,
+     "judge_correct_or_partial": 0.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-geb9482ee3d54334a43fd",
@@ -1962,7 +2085,18 @@
       "completion_tokens": 148,
       "total_tokens": 3054
      },
-     "latency_ms": 14439.68379200669
+     "latency_ms": 14439.68379200669,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-geb9482ee3d54334a43fd",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Opération le matin le plus tôt possible et sortie après six heures de surveillance, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-g9dbb7b8cb49592f9fa97",
@@ -2017,7 +2151,18 @@
       "completion_tokens": 123,
       "total_tokens": 3053
      },
-     "latency_ms": 14341.114832961466
+     "latency_ms": 14341.114832961466,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-g9dbb7b8cb49592f9fa97",
+      "correctness": "incorrect",
+      "abstained": true,
+      "serious_error": "other",
+      "faithful": null,
+      "justification": "Abstention alors que la référence recommande un bilan d'hémostase chez cet enfant."
+     },
+     "judge_correct": 0.0,
+     "judge_correct_or_partial": 0.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-gbe3dad7d7f9b1ae34b88",
@@ -2056,7 +2201,18 @@
       "completion_tokens": 147,
       "total_tokens": 1481
      },
-     "latency_ms": 9186.422540980857
+     "latency_ms": 9186.422540980857,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-gbe3dad7d7f9b1ae34b88",
+      "correctness": "partial",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Cite hypokaliémie, hypomagnésémie et insuffisance rénale, sans mentionner la fièvre à l'injection ni la cytopénie, sans contresens."
+     },
+     "judge_correct": 0.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-gc1eeae015b45990b618e",
@@ -2099,7 +2255,18 @@
       "completion_tokens": 179,
       "total_tokens": 2004
      },
-     "latency_ms": 12056.310499960091
+     "latency_ms": 12056.310499960091,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-gc1eeae015b45990b618e",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Indique que Candida au LBA n'a pas de valeur diagnostique (B3), conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-g28ea0199f37013bf91f9",
@@ -2137,7 +2304,18 @@
       "completion_tokens": 98,
       "total_tokens": 1458
      },
-     "latency_ms": 9316.030916990712
+     "latency_ms": 9316.030916990712,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-g28ea0199f37013bf91f9",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Désigne le médecin anesthésiste-réanimateur comme responsable, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-g6951bd8344b814c79f7e",
@@ -2193,7 +2371,18 @@
       "completion_tokens": 127,
       "total_tokens": 2949
      },
-     "latency_ms": 13536.617999954615
+     "latency_ms": 13536.617999954615,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-g6951bd8344b814c79f7e",
+      "correctness": "incorrect",
+      "abstained": true,
+      "serious_error": "other",
+      "faithful": null,
+      "justification": "Abstention alors que la référence précise l'épreuve (absence de réponse après 2 jours d'arrêt des diurétiques et albumine)."
+     },
+     "judge_correct": 0.0,
+     "judge_correct_or_partial": 0.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-g392fcc10d6909f623c73",
@@ -2249,7 +2438,18 @@
       "completion_tokens": 252,
       "total_tokens": 3245
      },
-     "latency_ms": 17542.094709002413
+     "latency_ms": 17542.094709002413,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-g392fcc10d6909f623c73",
+      "correctness": "partial",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Ne nomme pas l'HBPM comme classe de choix et parle d'ajustement de dose, mais reconnaît que les posologies habituelles peuvent être insuffisantes."
+     },
+     "judge_correct": 0.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-g6d75a0524a3097e36863",
@@ -2304,7 +2504,18 @@
       "completion_tokens": 130,
       "total_tokens": 2884
      },
-     "latency_ms": 13047.662708966527
+     "latency_ms": 13047.662708966527,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-g6d75a0524a3097e36863",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Retient contrôle de l'hémorragie et contrôle de la contamination (lavage et parage), conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-g424483aecf041277fed5",
@@ -2358,7 +2569,18 @@
       "completion_tokens": 267,
       "total_tokens": 2433
      },
-     "latency_ms": 15079.570250003599
+     "latency_ms": 15079.570250003599,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-g424483aecf041277fed5",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Inclut le programme de réhabilitation améliorée recommandé par la référence; les détails additionnels ne contredisent pas elle."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-ga86840965e184a4c0f3d",
@@ -2412,7 +2634,18 @@
       "completion_tokens": 220,
       "total_tokens": 2850
      },
-     "latency_ms": 14434.075625031255
+     "latency_ms": 14434.075625031255,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-ga86840965e184a4c0f3d",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Retient l'information préopératoire par vidéo pour réduire l'anxiété, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-g26cc210b12a24bc1dcf5",
@@ -2463,7 +2696,18 @@
       "completion_tokens": 166,
       "total_tokens": 2666
      },
-     "latency_ms": 12523.608874995261
+     "latency_ms": 12523.608874995261,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-g26cc210b12a24bc1dcf5",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Donne la formule homme 50 + 0,91 × (taille − 152,4), identique à la référence; la formule femme est un ajout non contradictoire."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-gb9a942c3d4de87e96a69",
@@ -2518,7 +2762,18 @@
       "completion_tokens": 365,
       "total_tokens": 2855
      },
-     "latency_ms": 19176.615875039715
+     "latency_ms": 19176.615875039715,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-gb9a942c3d4de87e96a69",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Recommande probablement une PEP élevée plutôt que basse, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-g448aac5e0ca03eebb7fb",
@@ -2574,7 +2829,18 @@
       "completion_tokens": 239,
       "total_tokens": 2404
      },
-     "latency_ms": 15956.517249986064
+     "latency_ms": 15956.517249986064,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-g448aac5e0ca03eebb7fb",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Liste les quatre situations de la référence (pneumopathie hypoxémiante, SDRA, IRA post-extubation, maladies neuromusculaires réversibles)."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-gace2db46f6d0fbc9a4b7",
@@ -2626,7 +2892,18 @@
       "completion_tokens": 242,
       "total_tokens": 2579
      },
-     "latency_ms": 14666.178916988429
+     "latency_ms": 14666.178916988429,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-gace2db46f6d0fbc9a4b7",
+      "correctness": "incorrect",
+      "abstained": false,
+      "serious_error": "other",
+      "faithful": null,
+      "justification": "Recommande d'initier la VNI de rattrapage, alors que la référence la déconseille et demande de ne pas retarder la réintubation."
+     },
+     "judge_correct": 0.0,
+     "judge_correct_or_partial": 0.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-gfc720f85a7e4c8f6d739",
@@ -2680,7 +2957,18 @@
       "completion_tokens": 142,
       "total_tokens": 2596
      },
-     "latency_ms": 12162.375333020464
+     "latency_ms": 12162.375333020464,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-gfc720f85a7e4c8f6d739",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Conseille une gouttière sur mesure et la traçabilité dans le dossier, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-g655c1a5b2a8ff63dc61f",
@@ -2719,7 +3007,18 @@
       "completion_tokens": 150,
       "total_tokens": 1574
      },
-     "latency_ms": 9698.551957961172
+     "latency_ms": 9698.551957961172,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-g655c1a5b2a8ff63dc61f",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Conclut à ne pas réimplanter la dent temporaire chez l'enfant, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-g32226ce0e89926e25109",
@@ -2758,7 +3057,18 @@
       "completion_tokens": 197,
       "total_tokens": 1331
      },
-     "latency_ms": 9672.196165949572
+     "latency_ms": 9672.196165949572,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-g32226ce0e89926e25109",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Recommande d'optimiser le diabète et de reporter la chirurgie, ce qui correspond à la référence (différer)."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-g9f4e50ab33c87f6858b4",
@@ -2813,7 +3123,18 @@
       "completion_tokens": 141,
       "total_tokens": 3142
      },
-     "latency_ms": 14026.783165987581
+     "latency_ms": 14026.783165987581,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-g9f4e50ab33c87f6858b4",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Indique que le médecin consultant ne doit pas être hiérarchiquement lié (chef de service ou de pôle), conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-gb3d45a182edaa9519369",
@@ -2864,7 +3185,18 @@
       "completion_tokens": 322,
       "total_tokens": 2778
      },
-     "latency_ms": 17733.759166963864
+     "latency_ms": 17733.759166963864,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-gb3d45a182edaa9519369",
+      "correctness": "partial",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Mentionne la date, la décision et le décideur, mais omet l'argumentaire, les examens, la synthèse des entretiens, les consultants et la portée réglementaire."
+     },
+     "judge_correct": 0.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-g3bd1e3f5c8f306008b76",
@@ -2919,7 +3251,18 @@
       "completion_tokens": 400,
       "total_tokens": 3418
      },
-     "latency_ms": 21448.50974995643
+     "latency_ms": 21448.50974995643,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-g3bd1e3f5c8f306008b76",
+      "correctness": "partial",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Dit que l'évacuation n'est pas systématique et invite à une évaluation au cas par cas, mais ne formule pas clairement le traitement conservateur même avec signes de gravité."
+     },
+     "judge_correct": 0.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-g83a9315591cd44551dbc",
@@ -2973,7 +3316,18 @@
       "completion_tokens": 293,
       "total_tokens": 2614
      },
-     "latency_ms": 15965.201708022505
+     "latency_ms": 15965.201708022505,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-g83a9315591cd44551dbc",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Retient la détection de sous- ou surdosage quand les signes cliniques sont masqués par les curares, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-gbc67a0eb3b22c1690c0c",
@@ -3028,7 +3382,18 @@
       "completion_tokens": 119,
       "total_tokens": 1670
      },
-     "latency_ms": 8862.88016702747
+     "latency_ms": 8862.88016702747,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-gbc67a0eb3b22c1690c0c",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Donne un IBS d'environ 45 à 0,5 CAM de sévoflurane, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-gff794cd57325dca363d6",
@@ -3082,7 +3447,18 @@
       "completion_tokens": 340,
       "total_tokens": 3043
      },
-     "latency_ms": 18955.59179200791
+     "latency_ms": 18955.59179200791,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-gff794cd57325dca363d6",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Indique que le moniteur aide à affiner le raisonnement et à détecter sous- ou surdosage, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-gcb6edd578e226e2bf83b",
@@ -3138,7 +3514,18 @@
       "completion_tokens": 108,
       "total_tokens": 3060
      },
-     "latency_ms": 12960.182291979436
+     "latency_ms": 12960.182291979436,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-gcb6edd578e226e2bf83b",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Fixe une fraction de filtration inférieure à 25 % en agissant sur le débit sanguin, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-g0979ab4dc4ec3f5dbd2f",
@@ -3178,7 +3565,18 @@
       "completion_tokens": 226,
       "total_tokens": 1637
      },
-     "latency_ms": 11390.841499960516
+     "latency_ms": 11390.841499960516,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-g0979ab4dc4ec3f5dbd2f",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Répond oui, la dialyse péritonéale est possible avec accord faible, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-gf761346ec9be5d6ba346",
@@ -3233,7 +3631,18 @@
       "completion_tokens": 109,
       "total_tokens": 2636
      },
-     "latency_ms": 11469.320292002521
+     "latency_ms": 11469.320292002521,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-gf761346ec9be5d6ba346",
+      "correctness": "partial",
+      "abstained": false,
+      "serious_error": "other",
+      "faithful": null,
+      "justification": "Propose l'amélioration des échanges autour de l'évaluation clinique, alors que la référence vise la formation de l'équipe à la communication; relation proche mais mesure différente."
+     },
+     "judge_correct": 0.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-g0aba15fbdfface749f92",
@@ -3288,7 +3697,18 @@
       "completion_tokens": 273,
       "total_tokens": 2909
      },
-     "latency_ms": 16412.233958020806
+     "latency_ms": 16412.233958020806,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-g0aba15fbdfface749f92",
+      "correctness": "partial",
+      "abstained": false,
+      "serious_error": "other",
+      "faithful": null,
+      "justification": "Évoque un protocole de communication avec les proches, cohérent avec la référence, mais attribue un niveau avis d'experts ou GRADE 2 au lieu de GRADE 1."
+     },
+     "judge_correct": 0.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-gfd6492bcff9d310fa822",
@@ -3342,7 +3762,18 @@
       "completion_tokens": 188,
       "total_tokens": 2996
      },
-     "latency_ms": 14603.964125039056
+     "latency_ms": 14603.964125039056,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-gfd6492bcff9d310fa822",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Indique une mesure de glycémie pendant l'intervention et au réveil chez les patients à risque, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-g43a751763308810eda5b",
@@ -3381,7 +3812,18 @@
       "completion_tokens": 96,
       "total_tokens": 1499
      },
-     "latency_ms": 9234.539000026416
+     "latency_ms": 9234.539000026416,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-g43a751763308810eda5b",
+      "correctness": "incorrect",
+      "abstained": true,
+      "serious_error": "other",
+      "faithful": null,
+      "justification": "Abstention alors que la référence identifie les protocoles statiques à abandonner."
+     },
+     "judge_correct": 0.0,
+     "judge_correct_or_partial": 0.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-ga82b7f724c31133396b0",
@@ -3435,7 +3877,18 @@
       "completion_tokens": 103,
       "total_tokens": 2436
      },
-     "latency_ms": 10633.977207995486
+     "latency_ms": 10633.977207995486,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-ga82b7f724c31133396b0",
+      "correctness": "incorrect",
+      "abstained": true,
+      "serious_error": "other",
+      "faithful": null,
+      "justification": "Abstention alors que la référence indique de ne pas laisser de sonde nasogastrique."
+     },
+     "judge_correct": 0.0,
+     "judge_correct_or_partial": 0.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-g3940cdb7b78acbdfb13d",
@@ -3490,7 +3943,18 @@
       "completion_tokens": 381,
       "total_tokens": 2964
      },
-     "latency_ms": 19328.055042016786
+     "latency_ms": 19328.055042016786,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-g3940cdb7b78acbdfb13d",
+      "correctness": "incorrect",
+      "abstained": false,
+      "serious_error": "wrong_drug",
+      "faithful": null,
+      "justification": "Recommande la péridurale thoracique, que la référence déconseille, et propose l'irrigation pariétale au lieu de la lidocaïne IV continue."
+     },
+     "judge_correct": 0.0,
+     "judge_correct_or_partial": 0.0,
+     "judge_serious_error": 1.0
     },
     {
      "id": "MR-g508df1f5f5c7dacd7171",
@@ -3546,7 +4010,18 @@
       "completion_tokens": 151,
       "total_tokens": 3007
      },
-     "latency_ms": 13666.083832969889
+     "latency_ms": 13666.083832969889,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-g508df1f5f5c7dacd7171",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Règle l'aide inspiratoire à 7 cmH2O pour l'épreuve de sevrage, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-gaaba8d034741e6533aee",
@@ -3593,7 +4068,18 @@
       "completion_tokens": 302,
       "total_tokens": 2157
      },
-     "latency_ms": 14706.414374988526
+     "latency_ms": 14706.414374988526,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-gaaba8d034741e6533aee",
+      "correctness": "partial",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Retient la dysfonction diaphragmatique postopératoire transitoire, mais omet la douleur à traiter et le faible taux d'échec d'extubation."
+     },
+     "judge_correct": 0.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-g76063f88d9909f319d85",
@@ -3648,7 +4134,18 @@
       "completion_tokens": 165,
       "total_tokens": 2770
      },
-     "latency_ms": 13422.156167041976
+     "latency_ms": 13422.156167041976,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-g76063f88d9909f319d85",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Indique qu'une prémédication peut être prescrite, conforme à la référence, avec une nuance sur la systématisation."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-g293148d474c4b595ab24",
@@ -3704,7 +4201,18 @@
       "completion_tokens": 233,
       "total_tokens": 3057
      },
-     "latency_ms": 16078.72116699582
+     "latency_ms": 16078.72116699582,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-g293148d474c4b595ab24",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Désigne les benzodiazépines à éviter chez la personne âgée pour les troubles du comportement postopératoires, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-gf79873a2c51a5380fe66",
@@ -3759,7 +4267,18 @@
       "completion_tokens": 400,
       "total_tokens": 3092
      },
-     "latency_ms": 20276.128791971132
+     "latency_ms": 20276.128791971132,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-gf79873a2c51a5380fe66",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Retient le repérage de la sidération, le defusing en post-partum et le dépistage de l'ESPT avec orientation, conforme à la référence (réponse tronquée)."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-g55e468b6df0cb295c14b",
@@ -3814,7 +4333,18 @@
       "completion_tokens": 269,
       "total_tokens": 2820
      },
-     "latency_ms": 16144.809874997009
+     "latency_ms": 16144.809874997009,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-g55e468b6df0cb295c14b",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Désigne la perfusion continue comme mode associé au risque d'échec d'extension, conforme à la référence, en signalant une preuve limitée."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-g0c4e1de8af1e9b05f324",
@@ -3862,7 +4392,18 @@
       "completion_tokens": 119,
       "total_tokens": 2295
      },
-     "latency_ms": 10928.959249984473
+     "latency_ms": 10928.959249984473,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-g0c4e1de8af1e9b05f324",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Conseille une anesthésie générale en cas d'insuffisance de l'anesthésie périmédullaire, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-gb96b3d27c279158ad3ef",
@@ -3901,7 +4442,18 @@
       "completion_tokens": 186,
       "total_tokens": 1656
      },
-     "latency_ms": 10919.020875007845
+     "latency_ms": 10919.020875007845,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-gb96b3d27c279158ad3ef",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Donne l'antibiothérapie recommandée en cas d'antécédent d'infection génitale haute, comme la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-gc6eabc0b647f3aa1afca",
@@ -3949,7 +4501,18 @@
       "completion_tokens": 323,
       "total_tokens": 2628
      },
-     "latency_ms": 17847.570958954748
+     "latency_ms": 17847.570958954748,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-gc6eabc0b647f3aa1afca",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Cite les mêmes critères d'orientation (suppléance, défaillance multiviscérale, pronostic vital) avec l'accord fort de la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-g3e964e64a0ac6da585eb",
@@ -3997,7 +4560,18 @@
       "completion_tokens": 93,
       "total_tokens": 2130
      },
-     "latency_ms": 10177.234790986404
+     "latency_ms": 10177.234790986404,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-g3e964e64a0ac6da585eb",
+      "correctness": "partial",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Indique un bloc contigu au secteur de naissance mais omet l'accès permanent à au moins une salle dédiée."
+     },
+     "judge_correct": 0.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-g822a50690730ee2ef6bc",
@@ -4052,7 +4626,18 @@
       "completion_tokens": 346,
       "total_tokens": 2720
      },
-     "latency_ms": 18712.20229100436
+     "latency_ms": 18712.20229100436,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-g822a50690730ee2ef6bc",
+      "correctness": "partial",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Cite la ventilation non invasive et le sevrage précoce sans énoncer le principe de privilégier les mesures ayant un effet sur la morbidité."
+     },
+     "judge_correct": 0.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-g2f51f3362361053361b7",
@@ -4092,7 +4677,18 @@
       "completion_tokens": 198,
       "total_tokens": 1668
      },
-     "latency_ms": 11394.697332987562
+     "latency_ms": 11394.697332987562,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-g2f51f3362361053361b7",
+      "correctness": "incorrect",
+      "abstained": false,
+      "serious_error": "wrong_dose",
+      "faithful": null,
+      "justification": "Le seuil de température est donné à plus de 38 °C alors que la référence retient plus de 38,3 °C."
+     },
+     "judge_correct": 0.0,
+     "judge_correct_or_partial": 0.0,
+     "judge_serious_error": 1.0
     },
     {
      "id": "MR-gc03aaf37539dfd4b39a8",
@@ -4148,7 +4744,18 @@
       "completion_tokens": 168,
       "total_tokens": 2755
      },
-     "latency_ms": 14295.298874960281
+     "latency_ms": 14295.298874960281,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-gc03aaf37539dfd4b39a8",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Bolus peropératoire de 8-10 mg de dexaméthasone avec une recommandation faible, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-g7efa49eea406c3678a28",
@@ -4204,7 +4811,18 @@
       "completion_tokens": 251,
       "total_tokens": 2982
      },
-     "latency_ms": 15700.490167015232
+     "latency_ms": 15700.490167015232,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-g7efa49eea406c3678a28",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "VSAI-PEP après scanner et drainage sans contre-indication, grade G1+, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-gb8871ff491d05e49db36",
@@ -4251,7 +4869,18 @@
       "completion_tokens": 241,
       "total_tokens": 3134
      },
-     "latency_ms": 16362.958709010854
+     "latency_ms": 16362.958709010854,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-gb8871ff491d05e49db36",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Propose de discuter la pose d'un filtre cave optionnel, comme la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-g571f916b70fb2a0586cb",
@@ -4305,7 +4934,18 @@
       "completion_tokens": 225,
       "total_tokens": 2649
      },
-     "latency_ms": 12609.706124989316
+     "latency_ms": 12609.706124989316,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-g571f916b70fb2a0586cb",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Classe l'exérèse d'angiofibrome à risque hémorragique élevé, conforme à la référence, la mention de très haut risque restant secondaire."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-gc6d6192f7b53462c02dd",
@@ -4349,7 +4989,18 @@
       "completion_tokens": 118,
       "total_tokens": 2194
      },
-     "latency_ms": 8899.024999991525
+     "latency_ms": 8899.024999991525,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-gc6d6192f7b53462c02dd",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Plasma thérapeutique à 10-15 mL/kg, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-g526e54165c42ca78bf63",
@@ -4401,7 +5052,18 @@
       "completion_tokens": 254,
       "total_tokens": 2476
      },
-     "latency_ms": 12585.932708985638
+     "latency_ms": 12585.932708985638,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-g526e54165c42ca78bf63",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Exige un rayonnement supérieur à 425 nm, ce qui revient à ne pas émettre sous 425 nm comme la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-g2b5dca4f8dcab2a9f869",
@@ -4447,7 +5109,18 @@
       "completion_tokens": 356,
       "total_tokens": 2345
      },
-     "latency_ms": 14406.121666019317
+     "latency_ms": 14406.121666019317,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-g2b5dca4f8dcab2a9f869",
+      "correctness": "incorrect",
+      "abstained": false,
+      "serious_error": "other",
+      "faithful": null,
+      "justification": "Répond non et recommande d'éveiller le patient, alors que la référence indique que le bloc sous anesthésie générale est possible sans risque accru démontré."
+     },
+     "judge_correct": 0.0,
+     "judge_correct_or_partial": 0.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-ga7998a95924ce47cf4b2",
@@ -4485,7 +5158,18 @@
       "completion_tokens": 271,
       "total_tokens": 1607
      },
-     "latency_ms": 10605.11454200605
+     "latency_ms": 10605.11454200605,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-ga7998a95924ce47cf4b2",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Avis neurochirurgical rapide et examen électrophysiologique (EMG), conformes à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-gcb7201d68bfd3c66882d",
@@ -4534,7 +5218,18 @@
       "completion_tokens": 183,
       "total_tokens": 2485
      },
-     "latency_ms": 11396.718000003602
+     "latency_ms": 11396.718000003602,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-gcb7201d68bfd3c66882d",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Vérifier les fluoroquinolones des 6 mois précédents, accord fort, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-gd56911820a0a15744c26",
@@ -4589,7 +5284,18 @@
       "completion_tokens": 217,
       "total_tokens": 2689
      },
-     "latency_ms": 13013.194083992857
+     "latency_ms": 13013.194083992857,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-gd56911820a0a15744c26",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Simulation conseillée en formation initiale et continue, médicale et paramédicale, accord fort, conforme."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-gb4774403759a289947d9",
@@ -4629,7 +5335,18 @@
       "completion_tokens": 210,
       "total_tokens": 1578
      },
-     "latency_ms": 9356.648291985039
+     "latency_ms": 9356.648291985039,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-gb4774403759a289947d9",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Réchauffement actif avant l'induction puis maintenu en peropératoire et en postopératoire, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-g659a6f7980ea5f93af09",
@@ -4677,7 +5394,18 @@
       "completion_tokens": 136,
       "total_tokens": 1892
      },
-     "latency_ms": 8563.116916979197
+     "latency_ms": 8563.116916979197,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-g659a6f7980ea5f93af09",
+      "correctness": "partial",
+      "abstained": true,
+      "serious_error": "other",
+      "faithful": null,
+      "justification": "Déclare la question hors périmètre alors que la référence répond; il cite la contre-indication avant 1 mois et chez le prématuré sans conclure pour un nourrisson de 3 semaines."
+     },
+     "judge_correct": 0.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-ga95d75ad6fe8fb541a44",
@@ -4720,7 +5448,18 @@
       "completion_tokens": 400,
       "total_tokens": 2243
      },
-     "latency_ms": 15049.560374987777
+     "latency_ms": 15049.560374987777,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-ga95d75ad6fe8fb541a44",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Conclut à prescrire un bilan d'hémostase chez ce nourrisson qui ne marche pas, conforme à la référence, malgré un préambule de non-couverture et des réserves."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-gcf5aefb7a5425d025d76",
@@ -4775,7 +5514,18 @@
       "completion_tokens": 128,
       "total_tokens": 2928
      },
-     "latency_ms": 11165.195624984335
+     "latency_ms": 11165.195624984335,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-gcf5aefb7a5425d025d76",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Associe clinique, CRP, procalcitonine et tomodensitométrie abdominale au grade 2+, incluant les examens de la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-g394ecc098e4d21e40da0",
@@ -4819,7 +5569,18 @@
       "completion_tokens": 97,
       "total_tokens": 1720
      },
-     "latency_ms": 7288.480666989926
+     "latency_ms": 7288.480666989926,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-g394ecc098e4d21e40da0",
+      "correctness": "incorrect",
+      "abstained": true,
+      "serious_error": "other",
+      "faithful": null,
+      "justification": "S'abstient sur une question couverte alors que la référence donne le score 2 pour un PaO2/FiO2 entre 201 et 300."
+     },
+     "judge_correct": 0.0,
+     "judge_correct_or_partial": 0.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-gae027791784341a1d570",
@@ -4874,7 +5635,18 @@
       "completion_tokens": 199,
       "total_tokens": 2700
      },
-     "latency_ms": 12245.819292031229
+     "latency_ms": 12245.819292031229,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-gae027791784341a1d570",
+      "correctness": "partial",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Retient les échanges plasmatiques comme recommandés sans dire qu'ils peuvent être proposés d'emblée, et ajoute des seuils absents de la référence."
+     },
+     "judge_correct": 0.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-gcf361e9af2739ce43a9f",
@@ -4929,7 +5701,18 @@
       "completion_tokens": 158,
       "total_tokens": 2740
      },
-     "latency_ms": 11300.772416987456
+     "latency_ms": 11300.772416987456,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-gcf361e9af2739ce43a9f",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Identifie le ticagrelor comme inhibiteur réversible du P2Y12, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-ge78b13400ed5e89af859",
@@ -4985,7 +5768,18 @@
       "completion_tokens": 110,
       "total_tokens": 2840
      },
-     "latency_ms": 10972.015374980401
+     "latency_ms": 10972.015374980401,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-ge78b13400ed5e89af859",
+      "correctness": "incorrect",
+      "abstained": true,
+      "serious_error": "other",
+      "faithful": null,
+      "justification": "Ne répond pas alors que la référence indique que la desmopressine est inefficace sous ticagrelor."
+     },
+     "judge_correct": 0.0,
+     "judge_correct_or_partial": 0.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-g1fa665d53b3782891db2",
@@ -5039,7 +5833,18 @@
       "completion_tokens": 368,
       "total_tokens": 3243
      },
-     "latency_ms": 17225.846583023667
+     "latency_ms": 17225.846583023667,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-g1fa665d53b3782891db2",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Oxygénation nasale à haut débit pendant l'apnée après préoxygénation, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-g42624ba80bc36c8e0925",
@@ -5093,7 +5898,18 @@
       "completion_tokens": 178,
       "total_tokens": 3062
      },
-     "latency_ms": 12620.48662500456
+     "latency_ms": 12620.48662500456,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-g42624ba80bc36c8e0925",
+      "correctness": "incorrect",
+      "abstained": true,
+      "serious_error": "other",
+      "faithful": null,
+      "justification": "S'abstient sur une question couverte, alors que la référence décrit les caractéristiques d'une revue de morbi-mortalité de qualité."
+     },
+     "judge_correct": 0.0,
+     "judge_correct_or_partial": 0.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-g6d7e10b60e750f150a7a",
@@ -5138,7 +5954,18 @@
       "completion_tokens": 204,
       "total_tokens": 1860
      },
-     "latency_ms": 9832.650666998234
+     "latency_ms": 9832.650666998234,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-g6d7e10b60e750f150a7a",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Ventilation au masque dès SpO2 sous 95 %, FiO2 au moins 0,8 et pression sous 15 cmH2O, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-g1b4ad3d31046fdbdd025",
@@ -5187,7 +6014,18 @@
       "completion_tokens": 400,
       "total_tokens": 1949
      },
-     "latency_ms": 14263.395374990068
+     "latency_ms": 14263.395374990068,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-g1b4ad3d31046fdbdd025",
+      "correctness": "partial",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Compare correctement les deux éditions mais la réponse est tronquée avant le point sur le bénéfice du bloc sous anesthésie en 2016."
+     },
+     "judge_correct": 0.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-g518431a84972e17017d1",
@@ -5236,7 +6074,18 @@
       "completion_tokens": 341,
       "total_tokens": 2425
      },
-     "latency_ms": 14610.187290993053
+     "latency_ms": 14610.187290993053,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-g518431a84972e17017d1",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Gammes 24G à 14G en 2000 et 26G à 16G en 2023, conformes à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-g78a74d874a76bbb543f1",
@@ -5289,7 +6138,18 @@
       "completion_tokens": 400,
       "total_tokens": 2494
      },
-     "latency_ms": 15843.229999998584
+     "latency_ms": 15843.229999998584,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-g78a74d874a76bbb543f1",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Seuils de 100 G/L en 2002 et 150 G/L en 2019 correctement présentés, bien que la réponse soit tronquée en fin de texte."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-abst000",
@@ -5321,7 +6181,18 @@
       "completion_tokens": 156,
       "total_tokens": 1372
      },
-     "latency_ms": 7699.055667035282
+     "latency_ms": 7699.055667035282,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-abst000",
+      "correctness": "correct",
+      "abstained": true,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "S'abstient, comme attendu pour une question non couverte par les recommandations."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-abst001",
@@ -5365,7 +6236,18 @@
       "completion_tokens": 127,
       "total_tokens": 2717
      },
-     "latency_ms": 10544.961792009417
+     "latency_ms": 10544.961792009417,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-abst001",
+      "correctness": "correct",
+      "abstained": true,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "S'abstient sur la FiO2 maximale en chirurgie laser, comme attendu."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-abst002",
@@ -5409,7 +6291,18 @@
       "completion_tokens": 171,
       "total_tokens": 2877
      },
-     "latency_ms": 11982.701166998595
+     "latency_ms": 11982.701166998595,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-abst002",
+      "correctness": "correct",
+      "abstained": true,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "S'abstient sur la comparaison du saignement entre propofol-rémifentanil et halogénés, comme attendu."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-abst004",
@@ -5453,7 +6346,18 @@
       "completion_tokens": 119,
       "total_tokens": 2640
      },
-     "latency_ms": 10206.534833996557
+     "latency_ms": 10206.534833996557,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-abst004",
+      "correctness": "correct",
+      "abstained": true,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "S'abstient sur la durée de proscription du protoxyde d'azote après gaz intraoculaire, comme attendu."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-abst005",
@@ -5497,7 +6401,18 @@
       "completion_tokens": 117,
       "total_tokens": 2926
      },
-     "latency_ms": 10994.579999998678
+     "latency_ms": 10994.579999998678,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-abst005",
+      "correctness": "correct",
+      "abstained": true,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "S'abstient sur l'atropine en prophylaxie du réflexe oculocardiaque, comme attendu."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-abst007",
@@ -5541,7 +6456,18 @@
       "completion_tokens": 129,
       "total_tokens": 3667
      },
-     "latency_ms": 13254.964583029505
+     "latency_ms": 13254.964583029505,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-abst007",
+      "correctness": "correct",
+      "abstained": true,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "S'abstient sur la recherche systématique d'un foramen ovale, comme attendu."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-abst009",
@@ -5585,7 +6511,18 @@
       "completion_tokens": 333,
       "total_tokens": 3265
      },
-     "latency_ms": 16517.712375032715
+     "latency_ms": 16517.712375032715,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-abst009",
+      "correctness": "partial",
+      "abstained": true,
+      "serious_error": "unsupported_claim",
+      "faithful": null,
+      "justification": "S'abstient d'abord mais avance une cible de pression artérielle moyenne et des consignes de mesure absentes de la référence."
+     },
+     "judge_correct": 0.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 1.0
     },
     {
      "id": "MR-abst013",
@@ -5621,7 +6558,18 @@
       "completion_tokens": 127,
       "total_tokens": 1990
      },
-     "latency_ms": 8585.9077500063
+     "latency_ms": 8585.9077500063,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-abst013",
+      "correctness": "correct",
+      "abstained": true,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "S'abstient sur les seuils de chlorémie et bicarbonates avant pylorotomie, comme attendu."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-abst015",
@@ -5665,7 +6613,18 @@
       "completion_tokens": 229,
       "total_tokens": 2433
      },
-     "latency_ms": 11887.858083005995
+     "latency_ms": 11887.858083005995,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-abst015",
+      "correctness": "incorrect",
+      "abstained": false,
+      "serious_error": "missing_abstention",
+      "faithful": null,
+      "justification": "Répond par une transfusion préopératoire avec hémoglobine d'au moins 10 g/dl alors que la question n'est pas couverte."
+     },
+     "judge_correct": 0.0,
+     "judge_correct_or_partial": 0.0,
+     "judge_serious_error": 1.0
     },
     {
      "id": "MR-abst016",
@@ -5697,7 +6656,18 @@
       "completion_tokens": 111,
       "total_tokens": 2043
      },
-     "latency_ms": 8324.534541985486
+     "latency_ms": 8324.534541985486,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-abst016",
+      "correctness": "correct",
+      "abstained": true,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "S'abstient sur la dexmédétomidine intranasale en prémédication, comme attendu."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-abst017",
@@ -5741,7 +6711,18 @@
       "completion_tokens": 123,
       "total_tokens": 3227
      },
-     "latency_ms": 11763.411708991043
+     "latency_ms": 11763.411708991043,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-abst017",
+      "correctness": "correct",
+      "abstained": true,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "S'abstient sur la pression de pneumopéritoine et la surveillance fœtale, comme attendu."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-abst020",
@@ -5777,7 +6758,18 @@
       "completion_tokens": 322,
       "total_tokens": 2440
      },
-     "latency_ms": 16418.23975002626
+     "latency_ms": 16418.23975002626,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-abst020",
+      "correctness": "incorrect",
+      "abstained": false,
+      "serious_error": "missing_abstention",
+      "faithful": null,
+      "justification": "Affirme que la sédation consciente est préférable pour ce TAVI alors que la question n'est pas couverte, malgré un paragraphe d'abstention final."
+     },
+     "judge_correct": 0.0,
+     "judge_correct_or_partial": 0.0,
+     "judge_serious_error": 1.0
     },
     {
      "id": "MR-abst022",
@@ -5809,7 +6801,18 @@
       "completion_tokens": 53,
       "total_tokens": 2057
      },
-     "latency_ms": 8552.768542023841
+     "latency_ms": 8552.768542023841,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-abst022",
+      "correctness": "correct",
+      "abstained": true,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "S'abstient sur la contraception complémentaire après sugammadex, comme attendu."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-abst026",
@@ -5837,7 +6840,18 @@
       "completion_tokens": 110,
       "total_tokens": 1374
      },
-     "latency_ms": 7687.208459014073
+     "latency_ms": 7687.208459014073,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-abst026",
+      "correctness": "correct",
+      "abstained": true,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "S'abstient sur les bisphosphonates dans le SDRC de type 1, comme attendu."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-abst031",
@@ -5881,7 +6895,18 @@
       "completion_tokens": 109,
       "total_tokens": 2392
      },
-     "latency_ms": 10449.910249968525
+     "latency_ms": 10449.910249968525,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-abst031",
+      "correctness": "correct",
+      "abstained": true,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "S'abstient sur l'insulinothérapie à haute dose en intoxication aux bêtabloquants, comme attendu."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-abst036",
@@ -5921,7 +6946,18 @@
       "completion_tokens": 127,
       "total_tokens": 2726
      },
-     "latency_ms": 11154.508834006265
+     "latency_ms": 11154.508834006265,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-abst036",
+      "correctness": "correct",
+      "abstained": true,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "S'abstient sur la durée de préparation alpha-bloquante avant surrénalectomie, comme attendu."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-abst037",
@@ -5957,7 +6993,18 @@
       "completion_tokens": 117,
       "total_tokens": 2271
      },
-     "latency_ms": 9628.012874978594
+     "latency_ms": 9628.012874978594,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-abst037",
+      "correctness": "correct",
+      "abstained": true,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "S'abstient sur l'octréotide préopératoire pour la crise carcinoïde, comme attendu."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "MR-abst039",
@@ -6001,12 +7048,28 @@
       "completion_tokens": 233,
       "total_tokens": 3113
      },
-     "latency_ms": 14951.639834034722
+     "latency_ms": 14951.639834034722,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::MR-abst039",
+      "correctness": "correct",
+      "abstained": true,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "S'abstient sur la séquence de prise en charge de l'hypoxémie en ventilation unipulmonaire, comme attendu."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     }
    ]
   }
  ],
  "comparisons": [],
  "index_map": {},
- "reranker_model": "cross-encoder/mmarco-mMiniLMv2-L12-H384-v1"
+ "reranker_model": "cross-encoder/mmarco-mMiniLMv2-L12-H384-v1",
+ "judge": {
+  "label": "claude-haiku-5-5 subagent (κ=0.88)",
+  "dir": "eval_internal/judge/runs/mr_c9_detailed",
+  "missing": 0
+ }
 }
