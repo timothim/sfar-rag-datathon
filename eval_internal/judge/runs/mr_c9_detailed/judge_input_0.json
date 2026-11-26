@@ -1,0 +1,284 @@
+[
+ {
+  "case_id": "C9_simple_hybrid_rerank::MR-g3b9708b3518cddf9bccf",
+  "question": "Un adulte sous anticoagulant consulte aux urgences pour un traumatisme crânien léger et son scanner cérébral est normal : peut-il rentrer chez lui, et sur quels critères cliniques ?",
+  "reference": "Oui, le retour à domicile est possible après un scanner normal, en l'absence d'intoxication, de vomissements itératifs, de céphalées importantes persistantes, de déficit neurologique et d'autre motif d'hospitalisation, avec un Glasgow à 15 (avis d'experts, accord fort).",
+  "answer": "**Réponse synthétique** : Le patient peut rentrer chez lui, mais une réversion immédiate de l'anticoagulant est recommandée.\n\n**Posologie, délais et modalités** : \n- Réversion immédiate des anticoagulants oraux (AOD, AVK) et anticoagulants oraux directs.\n- Non précisé dans les extraits.\n\n**Cas particuliers / Sécurité** : \n- L'absence de signes cliniques de lésion intracrânienne (Score de Glasgow à 15, absence de vomissements itératifs, absence de céphalées importantes persistantes, absence de déficit neurologique) est nécessaire.\n- Les patients sous anticoagulants doivent être surveillés pour une possible aggravation neurologique.\n\n**Niveau de preuve** : Avis d'experts, Accord Fort (R2.6.1 et R2.6.2) [S3].\n\n**Vigilance temporelle** : L'édition actuelle est en vigueur.\n\n**Abstention sécurisée (anti-hallucination)** : Hors périmètre / Information non retrouvée dans les extraits SFAR fournis."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank::MR-gfff2848a70957ac0b7b5",
+  "question": "Un adulte victime d'un traumatisme crânien léger présente un syndrome de Claude Bernard Horner et une fracture du rachis cervical. Quelle imagerie réaliser ?",
+  "reference": "Un scanner cérébral avec injection, devant ces signes évocateurs de dissection carotidienne.",
+  "answer": "**Réponse synthétique** : Un scanner cérébral avec injection doit être réalisé.\n\n**Posologie, délais et modalités** : Non précisé dans les extraits.\n\n**Cas particuliers / Sécurité** : Un scanner cérébral avec injection doit être pratiqué devant des signes cliniques évocateurs de dissection carotidienne, notamment en cas de fracture du rachis cervical et de syndrome de Claude Bernard Horner.\n\n**Niveau de preuve** : Avis d'experts (Accord Fort) [S1], [S2].\n\nLe syndrome de Claude Bernard Horner et la fracture du rachis cervical sont des signes évocateurs de dissection carotidienne, qui justifient l'administration d'un scanner cérébral avec injection."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank::MR-g8f23afa63325b0d08bd8",
+  "question": "Un adulte victime d'un traumatisme abdominal grave a, à la FAST, un hémopéritoine abondant et son état ne permet pas de passer au scanner. Quelle conduite tenir ?",
+  "reference": "Traitement opératoire précoce, suivi d'un scanner secondaire.",
+  "answer": "**Réponse synthétique** : Traitement opératoire précoce.\n\n**Posologie, délais et modalités** : Dose initiale et réinjections non précises dans les extraits. La conduite à tenir est une laparotomie secondaire.\n\n**Cas particuliers / Sécurité** : Non précisé dans les extraits.\n\n**Niveau de preuve** : Grade 1+, Accord fort [S2].\n\nLa FAST a montré un hémopéritoine abondant, ce qui justifie un traitement opératoire précoce. Comme l'état de l'adulte ne permet pas de passer au scanner, une laparotomie secondaire est recommandée."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank::MR-g8e54d9655989718c1639",
+  "question": "Un patient comateux atteint d'une méningite bactérienne, sans hypertension intracrânienne, est admis en réanimation : faut-il le refroidir pour améliorer son pronostic neurologique ?",
+  "reference": "Non, il ne faut probablement pas pratiquer d'hypothermie par rapport à la normothermie (avis d'experts).",
+  "answer": "**Réponse synthétique** : Il ne faut pas refroidir le patient.\n\n**Posologie, délais et modalités** : Non précisé dans les extraits.\n\n**Cas particuliers / Sécurité** : Non précisé dans les extraits.\n\n**Niveau de preuve** : Avis d'experts (R4.3) [S2]."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank::MR-gd1b252c6b18be4bca7b6",
+  "question": "Un traumatisé crânien grave garde une PIC élevée malgré un contrôle ciblé de la température à 34 °C. Faut-il abaisser davantage la température, par exemple à 31 °C ?",
+  "reference": "Non : abaisser la température en dessous de 34 °C (par ex. 31 °C) n'apporte pas de bénéfice supplémentaire démontré sur la PIC, et l'hypothermie expose à des effets secondaires proportionnels à sa profondeur et à sa durée.",
+  "answer": "Hors périmètre / Information non retrouvée dans les extraits SFAR fournis.\n\nLes extraits fournis ne contiennent pas d'informations spécifiques sur l'efficacité d'une hypothermie à 31 °C chez un patient traumatisé crânien grave ayant une pression intracrânienne élevée malgré un contrôle ciblé de la température à 34 °C. Les recommandations actuelles suggèrent d'adapter la durée et la profondeur du contrôle ciblé de la température en fonction de l'hypertension intracrânienne, mais ne précisent pas jusqu'à quelle température descendre en dessous de 34 °C."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank::MR-gd9a325c36650ee68a17f",
+  "question": "Pour un enfant en état de mal épileptique, les données adultes sur le contrôle ciblé de la température visant la normothermie sont-elles transposables ?",
+  "reference": "Oui, selon les experts pédiatres, les données adultes de CCT visant la normothermie au cours de l'EME peuvent s'appliquer à l'enfant (avis d'experts).",
+  "answer": "**Réponse synthétique** : Oui, les données adultes sur le contrôle ciblé de la température visant la normothermie peuvent être transposées chez l'enfant en état de mal épileptique.\n\n**Posologie, délais et modalités** : Non précisé dans les extraits.\n\n**Cas particuliers / Sécurité** : Non précisé dans les extraits.\n\n**Niveau de preuve** : Avis d'experts (RFE SFAR 2016, [S1], [S4]).\n\nLes experts pédiatres suggèrent que les données adultes concernant le contrôle ciblé de la température visant la normothermie peuvent s'appliquer à l'enfant en état de mal épileptique. Cependant, les détails spécifiques de la posologie, des délais et des modalités ne sont pas précisés dans les extraits fournis."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank::MR-ge6178ab7ed0b124f3edc",
+  "question": "Avant une chirurgie non cardiothoracique chez un patient âgé sans pathologie cardiopulmonaire aiguë ni évolutive, faut-il demander une radiographie thoracique préopératoire systématique ?",
+  "reference": "Non, il est recommandé de ne pas la prescrire systématiquement, quel que soit l'âge (GRADE I–).",
+  "answer": "Hors périmètre / Information non retrouvée dans les extraits SFAR fournis.\n\nLes extraits fournis ne contiennent pas d'informations spécifiques concernant la réalisation systématique d'une radiographie thoracique préopératoire chez un patient âgé sans pathologie cardiopulmonaire aiguë ni évolutive avant une chirurgie non cardiothoracique. Les recommandations mentionnées s'appliquent à des cas de pathologie cardiopulmonaire évolutive ou aiguë, mais ne donnent pas de consigne pour le cas présent."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank::MR-g2c188878f4fca6996f4b",
+  "question": "Dans la stratification du risque cardiaque (décès et infarctus) en chirurgie non cardiaque, dans quelle catégorie se situe une endartériectomie carotidienne ?",
+  "reference": "Risque intermédiaire, de 1 % à 5 %.",
+  "answer": "**Réponse synthétique** : Une endartériectomie carotidienne se situe dans la catégorie de risque intermédiaire (1 % à 5 %).\n\n**Posologie, délais et modalités** : Non précisé dans les extraits.\n\n**Cas particuliers / Sécurité** : Non précisé dans les extraits.\n\n**Niveau de preuve** : [S1] (RFE SFAR 2012, en vigueur).\n\nL'endartériectomie carotidienne est mentionnée dans l'ANNEXE A de la RFE SFAR 2012 comme exemple d'intervention de type intermédiaire (1 % à 5 % de risque combiné de décès ou d'infarctus myocardeal) dans la stratification du risque cardiaque pour la chirurgie non cardiaque."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank::MR-gae3cda1acd4e903f01fd",
+  "question": "Un patient asymptomatique doit être opéré d'une chirurgie non cardiothoracique et l'interne propose une radiographie thoracique pour prédire les complications respiratoires postopératoires. Cet examen est-il contributif ?",
+  "reference": "Non : sa valeur prédictive positive est médiocre (5 %), elle ne prédit pas les complications ventilatoires et n'apporte aucun gain informatif.",
+  "answer": "Hors périmètre / Information non retrouvée dans les extraits SFAR fournis.\n\nLes extraits fournis ne contiennent aucune recommandation concernant l'utilisation d'une radiographie thoracique pour prédire les complications respiratoires postopératoires. Les recommandations portent principalement sur l'évaluation du risque ischémique myocardique périopératoire et non sur l'évaluation des risques respiratoires."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank::MR-geb9482ee3d54334a43fd",
+  "question": "Pour un enfant de 5 ans sans comorbidité opéré d'une amygdalectomie en ambulatoire, quand programmer l'intervention et quelle durée de surveillance avant la sortie ?",
+  "reference": "Opérer le plus tôt possible dans la matinée pour permettre une sortie après six heures de surveillance postopératoire (accord fort).",
+  "answer": "**Réponse synthétique** : L'intervention doit être programmée le matin pour permettre une surveillance continue pendant six heures, et la sortie est autorisée après une surveillance postopératoire de six heures.\n\n**Posologie, délais et modalités** :\n- L'intervention doit être réalisée le plus tôt possible dans la matinée.\n- La surveillance postopératoire doit durer au moins six heures.\n- La sortie est autorisée après une surveillance de six heures dans l'unité d'ambulatoire.\n\n**Cas particuliers / Sécurité** : Non précisé dans les extraits.\n\n**Niveau de preuve** : Accord fort [S1, S4]."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank::MR-g9dbb7b8cb49592f9fa97",
+  "question": "Un enfant de 2 ans est programmé pour une amygdalectomie ; l'interrogatoire familial est peu informatif. Faut-il réaliser un bilan d'hémostase ?",
+  "reference": "Oui, une étude de l'hémostase (TCA et numération plaquettaire) doit être réalisée car l'évaluation clinique n'est pas fiable avant trois ans.",
+  "answer": "Hors périmètre / Information non retrouvée dans les extraits SFAR fournis.\n\nLes extraits SFAR fournis ne contiennent pas de recommandations spécifiques pour un enfant de 2 ans programmé pour une amygdalectomie, surtout lorsque l'interrogatoire familial est peu informatif. Les recommandations portent principalement sur l'évaluation préopératoire et la préparation à la chirurgie pour les enfants de plus de trois ans, et ne donnent pas de consigne claire pour les enfants de moins de trois ans."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank::MR-gbe3dad7d7f9b1ae34b88",
+  "question": "Quels effets indésirables principaux faut-il surveiller chez un patient traité par amphotéricine B désoxycholate intraveineuse ?",
+  "reference": "Hypokaliémie, hypomagnésémie, insuffisance rénale, fièvre et frissons à l'injection, cytopénie.",
+  "answer": "**Réponse synthétique** : Les effets indésirables principaux à surveiller chez un patient traité par amphotéricine B désoxycholate intraveineuse sont l'hypokaliémie, l'hypomagnésémie et l'insuffisance rénale.\n\n**Posologie, délais et modalités** : Non précisé dans les extraits.\n\n**Cas particuliers / Sécurité** : Non précisé dans les extraits.\n\n**Niveau de preuve** : Les effets indésirables mentionnés sont cités dans [S1], qui est une RFE SFAR 2004 en vigueur."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank::MR-gc1eeae015b45990b618e",
+  "question": "Chez un patient ventilé en réanimation, le lavage broncho-alvéolaire isole Candida sp. Quelle valeur diagnostique accorder à ce résultat ?",
+  "reference": "Aucune : la présence de Candida dans les sécrétions des voies aériennes inférieures, LBA compris, n'a pas de valeur diagnostique (B3).",
+  "answer": "**Réponse synthétique** : Le lavage broncho-alvéolaire isolant *Candida* sp. n'a pas de valeur diagnostique précise.\n\n**Posologie, délais et modalités** : Non précisé dans les extraits.\n\n**Cas particuliers / Sécurité** : Non précisé dans les extraits.\n\n**Niveau de preuve** : B3 [S1]\n\nLe lavage broncho-alvéolaire isolant *Candida* sp. n'a pas de valeur diagnostique selon les extraits fournis. Il est mentionné que la présence de *Candida* sp. dans les sécrétions provenant des voies aériennes inférieures, y compris le lavage broncho-alvéolaire, n'a pas de valeur diagnostique (B3)."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank::MR-g28ea0199f37013bf91f9",
+  "question": "Lorsqu'un avis cardiologique préopératoire a été demandé par le chirurgien, qui porte la responsabilité de la décision finale sur l'indication et les modalités de l'anesthésie ?",
+  "reference": "Le médecin anesthésiste-réanimateur.",
+  "answer": "**Réponse synthétique** : La responsabilité de la décision finale sur l'indication et les modalités de l'anesthésie relève de l'anesthésiste-réanimateur.\n\n**Posologie, délais et modalités** : Non précisé dans les extraits.\n\n**Cas particuliers / Sécurité** : Non précisé dans les extraits.\n\n**Niveau de preuve** : Non précisé dans les extraits."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank::MR-g6951bd8344b814c79f7e",
+  "question": "Chez un cirrhotique avec ascite et insuffisance rénale aiguë KDIGO stade 2, quelle épreuve doit rester sans réponse pour retenir un syndrome hépatorénal ?",
+  "reference": "Absence de réponse après 2 jours consécutifs d'arrêt des diurétiques et d'expansion volémique par albumine à 1 g/kg.",
+  "answer": "Hors périmètre / Information non retrouvée dans les extraits SFAR fournis.\n\nLes extraits fournis ne contiennent pas d'informations spécifiques sur les critères qui doivent rester sans réponse pour retenir un syndrome hépatorénal (SHR) chez un cirrhotique avec ascite et insuffisance rénale aiguë KDIGO stade 2. Les extraits mentionnent les critères pour le diagnostic d'un SHR, mais ils ne précisent pas quel critère doit rester sans réponse pour retenir ce diagnostic."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank::MR-g392fcc10d6909f623c73",
+  "question": "Un patient obèse est hospitalisé pour une forme sévère de COVID-19. Quelle classe d'anticoagulant privilégier en prévention thromboembolique et que penser des posologies habituelles ?",
+  "reference": "Une HBPM est l'option de choix, mais les posologies validées en médecine sont probablement souvent insuffisantes dans les formes sévères et en cas d'obésité.",
+  "answer": "**Réponse synthétique** : Privilégier l'ajustement de la posologie d'un anticoagulant à dose intermédiaire en tenant compte du poids du patient obèse.\n\n**Posologie, délais et modalités** : \n- L'ajustement de la posologie doit être fait en fonction du poids du patient.\n- Les posologies habituelles peuvent être insuffisantes et doivent être ajustées.\n\n**Cas particuliers / Sécurité** : \n- L'ajustement de la posologie est particulièrement important chez les patients obèses.\n- Non précisé dans les extraits.\n\n**Niveau de preuve** : \n- Les extraits suggèrent l'ajustement de la posologie en fonction du poids du patient, mais ne donnent pas de posologies précises.\n\n**Vigilance temporelle** : Les extraits actuels sont en vigueur.\n\n**Abstention sécurisée (anti-hallucination)** : Hors périmètre / Information non retrouvée dans les extraits SFAR fournis. Les posologies exactes et les modalités d'ajustement ne sont pas spécifiées."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank::MR-g6d75a0524a3097e36863",
+  "question": "Devant un traumatisme pelvien grave ouvert, quels sont les deux objectifs prioritaires de la prise en charge initiale ?",
+  "reference": "Contrôler l'hémorragie et la contamination périnéale (GRADE 1+, accord fort).",
+  "answer": "**Réponse synthétique** : Les deux objectifs prioritaires de la prise en charge initiale sont le contrôle de l'hémorragie et le lavage et le parage des lésions des tissus mous.\n\n**Posologie, délais et modalités** : Non précisé dans les extraits.\n\n**Cas particuliers / Sécurité** : Non précisé dans les extraits.\n\n**Niveau de preuve** : R2.16 (GRADE 2+, ACCORD FORT) et R2.17 (GRADE 1+, ACCORD FORT) [S1]."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank::MR-g424483aecf041277fed5",
+  "question": "Après une lobectomie pulmonaire, quelle stratégie postopératoire globale adopter pour réduire les complications et la durée de séjour ?",
+  "reference": "Un programme de réhabilitation améliorée incluant la mobilisation précoce est recommandé (GRADE 1+, accord fort).",
+  "answer": "**Réponse synthétique** : L'utilisation d'une approche minimalement invasive (thoracoscopie), d'un seul drain thoracique, et d'un programme de réhabilitation améliorée postopératoire sont recommandées pour réduire les complications et la durée de séjour après une lobectomie pulmonaire.\n\n**Posologie, délais et modalités** : Non précisé dans les extraits.\n\n**Cas particuliers / Sécurité** : Non précisé dans les extraits.\n\n**Niveau de preuve** : \n- L'utilisation d'une approche thoracoscopique est probablement recommandée (GRADE 2+, accord fort) [S6].\n- L'utilisation d'un seul drain thoracique est recommandée (GRADE 1+, accord fort) [S5].\n- L'utilisation d'un programme de réhabilitation améliorée postopératoire est recommandée (GRADE 1+, accord fort) [S2].\n\n**Vigilance temporelle** : Les extraits fournis sont en vigueur.\n\n**Clarification** : Les extraits ne fournissent pas de détails spécifiques sur la posologie, les délais ou les modalités de mise en œuvre de ces stratégies."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank::MR-ga86840965e184a4c0f3d",
+  "question": "Un patient anxieux est programmé pour une chirurgie thoracique. Quel complément d'information préopératoire permet de réduire son anxiété ?",
+  "reference": "Un support vidéo d'information, qui réduit l'anxiété et améliore la satisfaction.",
+  "answer": "**Réponse synthétique** : Utiliser une information préopératoire multimodal, incluant une vidéo, pour réduire l'anxiété du patient anxieux programmé pour une chirurgie thoracique.\n\n**Posologie, délais et modalités** : Non précisé dans les extraits.\n\n**Cas particuliers / Sécurité** : Non précisé dans les extraits.\n\n**Niveau de preuve** : Accord fort, RFE SFAR 2019 [S1].\n\nLes extraits [S1] et [S5] suggèrent que l'utilisation d'une information préopératoire multimodal, notamment sous forme de vidéo, est efficace pour réduire l'anxiété chez les patients anxieux opérés de chirurgie thoracique. Les extraits [S4] et [S5] mentionnent également l'utilisation de l'échelle APAIS pour évaluer l'anxiété préopératoire, mais ne précisent pas la posologie ou les délais."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank::MR-g26cc210b12a24bc1dcf5",
+  "question": "Un homme intubé pour SDRA doit avoir son volume courant réglé sur le poids idéal. Comment calculer ce poids théorique ?",
+  "reference": "Poids théorique (kg) = 50 + 0,91 × [taille (cm) − 152,4].",
+  "answer": "**Réponse synthétique** : Le poids théorique doit être calculé en utilisant les formules spécifiques pour hommes et femmes.\n\n**Posologie, délais et modalités** : \n- Pour l'homme : Poids théorique (kg) = 50 + 0,91 × (taille (cm) - 152,4)\n- Pour la femme : Poids théorique (kg) = 45,5 + 0,91 × (taille (cm) - 152,4)\n\n**Cas particuliers / Sécurité** : Non précisé dans les extraits.\n\n**Niveau de preuve** : GRADE 1, RFE SFAR 2018 [S5]."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank::MR-gb9a942c3d4de87e96a69",
+  "question": "Chez un adulte ventilé pour un SDRA modéré à sévère, faut-il préférer un niveau de PEP haut ou bas ?",
+  "reference": "Il est probablement recommandé d'utiliser une PEP élevée plutôt qu'une PEP basse (GRADE 2+).",
+  "answer": "**Réponse synthétique** : Il est probablement recommandé d'utiliser un niveau de PEP élevé plutôt qu'un niveau de PEP bas.\n\n**Posologie, délais et modalités** : Non précisé dans les extraits.\n\n**Cas particuliers / Sécurité** : Il est nécessaire d'éliminer une défaillance cardiaque droite en utilisant le monitoring adapté si l'utilisation d'un niveau de PEP élevé est envisagée. Les bénéfices potentiels incluent l'amélioration du recrutement alvéolaire, la réduction du stress et du strain, et la prévention de l'atélectrauma. Les risques potentiels incluent la survenue de lésions en rapport avec une surdistension alvéolaire télé-expiratoire, l'augmentation du shunt intra-pulmonaire, l'augmentation de l'espace mort, et l'augmentation des résistances vasculaires pulmonaires à l'origine d'un cœur pulmonaire aigu.\n\n**Niveau de preuve** : GRADE 2+ (RFE SFAR 2018) et GRADE 2 (RFE SFAR 2018).\n\n**Vigilance temporelle** : Les recommandations actuelles sont basées sur les éditions [EN VIGUEUR] des recommandations SFAR.\n\n**Abstention sécurisée (anti-hallucination)** : Hors périmètre / Information non retrouvée dans les extraits SFAR fournis. Les extraits ne précisent pas la posologie, les délais ou les modalités de mise en œuvre du niveau de PEP élevé."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank::MR-g448aac5e0ca03eebb7fb",
+  "question": "En insuffisance respiratoire aiguë de l'adulte, dans quelles situations la ventilation non invasive n'a pas fait la preuve d'un bénéfice et ne devrait probablement pas être tentée ?",
+  "reference": "Pneumopathie hypoxémiante, SDRA, IRA post-extubation et maladies neuromusculaires aiguës réversibles.",
+  "answer": "**Réponse synthétique** : La ventilation non invasive (VNI) n'a pas fait la preuve d'un bénéfice et ne devrait probablement pas être tentée dans les situations suivantes : la pneumopathie hypoxémiante, le syndrome de détresse respiratoire aiguë, le traitement de l'insuffisance respiratoire aiguë post extubation, et les maladies neuromusculaires aiguës réversibles.\n\n**Posologie, délais et modalités** : Non précisé dans les extraits.\n\n**Cas particuliers / Sécurité** : Non précisé dans les extraits.\n\n**Niveau de preuve** : G2- (selon l'interprétation du système GRADE, bien que le niveau de preuve ne soit pas explicitement mentionné, il s'agit d'une recommandation de type G2- qui signifie qu'il ne faut probablement pas faire).\n\nLa question ne précise pas d'autres cas particuliers ou de situations cliniques spécifiques, donc on se base uniquement sur les informations fournies dans les extraits."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank::MR-gace2db46f6d0fbc9a4b7",
+  "question": "Un patient extubé la veille en réanimation développe une nouvelle détresse respiratoire. Quelle conduite tenir vis-à-vis d'une VNI de rattrapage ?",
+  "reference": "La VNI de rattrapage n'est pas indiquée : elle ne diminue pas le recours à la réintubation et s'associe à une mortalité plus élevée, probablement par retard de réintubation ; il ne faut pas retarder la réintubation.",
+  "answer": "**Réponse synthétique** : La VNI de rattrapage doit être initiée pour traiter la détresse respiratoire aiguë post-extubation.\n\n**Posologie, délais et modalités** : Non précisé dans les extraits.\n\n**Cas particuliers / Sécurité** : Non précisé dans les extraits.\n\n**Niveau de preuve** : Grade 2, Accord faible [S4].\n\n---\n\nLa conduite à tenir est de débuter la VNI curative pour traiter la détresse respiratoire aiguë post-extubation, car l'échec de l'extubation est défini comme la nécessité d'une réintubation dans les 48 à 72 heures suivant une extubation programmée. Les extraits mentionnent que la VNI peut être utilisée de façon curative pour traiter une détresse respiratoire aiguë déjà installée post-extubation. Cependant, les détails spécifiques concernant la posologie, les délais et les modalités de la VNI ne sont pas précisés dans les extraits fournis."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank::MR-gfc720f85a7e4c8f6d739",
+  "question": "Pour protéger les dents d'un patient à risque de bris dentaire lors de l'anesthésie, si l'on opte pour une gouttière, quel type faut-il conseiller ?",
+  "reference": "Une gouttière sur mesure plutôt qu'une gouttière standard, en traçant l'information dans le dossier.",
+  "answer": "**Réponse synthétique** : Conseiller une gouttière sur mesure.\n\n**Posologie, délais et modalités** : Non précisé dans les extraits.\n\n**Cas particuliers / Sécurité** : Si l'utilisation d'une gouttière est retenue, il faut probablement recommander l'utilisation de gouttière sur mesure plutôt que de gouttière standard et tracer l'information dans le dossier « incité à fournir un protège-dents sur mesure » [S2].\n\n**Niveau de preuve** : Avis d'experts, RFE SFAR 2012 [EN VIGUEUR]."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank::MR-g655c1a5b2a8ff63dc61f",
+  "question": "Lors de l'intubation d'un enfant, une dent de lait est totalement expulsée de son alvéole. Faut-il la remettre en place ?",
+  "reference": "Non, une dent temporaire complètement luxée ne doit pas être réimplantée chez l'enfant.",
+  "answer": "**Réponse synthétique** : Non, il ne faut pas remettre en place la dent de lait totalement expulsée de son alvéole chez un enfant.\n\n**Posologie, délais et modalités** : Non précisé dans les extraits.\n\n**Cas particuliers / Sécurité** : Chez l'enfant, il ne faut jamais réimplanter une dent temporaire en cas de luxation complète, au risque d'induire une altération du bourgeon dentaire de la dent définitive. [S1]\n\n**Niveau de preuve** : Avis d'experts, RFE SFAR 2012 [EN VIGUEUR]."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank::MR-g32226ce0e89926e25109",
+  "question": "Chez un patient diabétique programmé pour une chirurgie, quelle attitude adopter si l'HbA1c atteint 10 % ?",
+  "reference": "Il faut différer l'intervention.",
+  "answer": "**Réponse synthétique** : Optimiser le diabète déséquilibré et reporter la chirurgie si possible.\n\n**Posologie, délais et modalités** : Non précisé dans les extraits.\n\n**Cas particuliers / Sécurité** : Non précisé dans les extraits.\n\n**Niveau de preuve** : Non précisé dans les extraits. Cependant, la recommandation est basée sur des méta-analyses et des avis d'experts, ce qui correspond à un niveau de preuve d'Avis d'experts (GRADE 2) selon les recommandations SFAR.\n\nLa HbA1c de 10% est supérieure au seuil recommandé de 9% pour différer la chirurgie. Il est donc recommandé d'optimiser le contrôle du diabète et de reporter la chirurgie si celle-ci n'est pas urgente."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank::MR-g9f4e50ab33c87f6858b4",
+  "question": "En réanimation, lors d'une procédure collégiale de limitation thérapeutique chez un patient incapable d'exprimer sa volonté, quelles conditions doit remplir le médecin consultant ?",
+  "reference": "Il ne doit avoir aucun lien hiérarchique avec le praticien en charge (donc ni chef de service ni chef de pôle) et de préférence ne pas être impliqué dans les soins.",
+  "answer": "**Réponse synthétique** : Le médecin consultant doit être un médecin non hiérarchiquement lié au médecin en charge du patient.\n\n**Posologie, délais et modalités** : Non précisé dans les extraits.\n\n**Cas particuliers / Sécurité** : Le médecin consultant ne peut pas être le chef de service ou de pôle du médecin en charge du patient. Si l'un des deux médecins l'estime utile, un autre consultant doit être sollicité.\n\n**Niveau de preuve** : [S1], [S6], [S4] (Grade Avis d'experts, Accord fort, édition 2026)."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank::MR-gb3d45a182edaa9519369",
+  "question": "En réanimation, une décision d'arrêt des traitements vient d'être prise pour un patient inconscient. Que faut-il consigner dans le dossier médical et quelle est la portée de cette traçabilité ?",
+  "reference": "Doivent être inscrits l'argumentaire médical, les examens réalisés pour fixer le pronostic, la synthèse des entretiens, les étapes de la procédure, la nature de la décision, le nom et l'avis motivé des consultants, la date, les motifs et le nom du décideur ; c'est une obligation réglementaire et une condition indispensable à l'exonération de responsabilité pénale.",
+  "answer": "**Réponse synthétique** : Consigner dans le dossier médical la décision d'arrêt des traitements, la date et l'heure, et identifier clairement la personne qui a pris cette décision (médecin ou patient selon les DA existants).\n\n**Posologie, délais et modalités** : Non précisé dans les extraits.\n\n**Cas particuliers / Sécurité** : \n- Si des directives anticipées (DA) existent, elles doivent être respectées et consignées.\n- Si le patient a des directives anticipées, celles-ci sont le reflet de ce que le patient aurait accepté ou refusé selon son acceptation de souffrances potentiellement engendrées, du risque de séquelles et du risque de décès.\n- Si les DA apparaissent manifestement inappropriées ou non conformes à la situation médicale, la décision doit être consignée et portée à la connaissance de la personne de confiance ou, à défaut, de la famille ou des proches.\n\n**Niveau de preuve** : Accord fort (avis d'experts) [S3].\n\n**Vigilance temporelle** : Non précisé dans les extraits.\n\n**Abstention sécurisée (anti-hallucination)** : Hors périmètre / Information non retrouvée dans les extraits SFAR fournis. Les extraits ne précisent pas les modalités de consignation ou les délais précis à respecter."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank::MR-g3bd1e3f5c8f306008b76",
+  "question": "Un traumatisé crânien présente un hématome extradural de source veineuse avec des signes de gravité au scanner. L'évacuation chirurgicale est-elle systématique ?",
+  "reference": "Non, les experts suggèrent de discuter au cas par cas un traitement conservateur, même en présence de signes de gravité (avis d'experts, accord fort).",
+  "answer": "**Réponse synthétique** : L'évacuation chirurgicale n'est pas systématique, mais est recommandée dans certaines circonstances.\n\n**Posologie, délais et modalités** : Non précisé dans les extraits.\n\n**Cas particuliers / Sécurité** : Non précisé dans les extraits.\n\n**Niveau de preuve** : RÉCITÉ [S3], [S5], [S6].\n\n---\n\n**Analyse détaillée** :\n\n**Question clinique** : Un traumatisé crânien présente un hématome extradural de source veineuse avec des signes de gravité au scanner. L'évacuation chirurgicale est-elle systématique ?\n\n**Réponse** : Selon les recommandations de la SFAR, l'évacuation chirurgicale n'est pas systématique, mais est recommandée dans certaines circonstances. Les experts suggèrent d'évaluer la balance bénéfice-risque d'une prise en charge conservatrice au cas par cas, en particulier en présence de signes de gravité clinique ou radiologiques.\n\n**R 6.3 [S3]** : Chez le patient présentant un traumatisme cranio-encéphalique associé à un hématome extradural d'origine veineuse, les experts suggèrent d'évaluer la balance bénéfice-risque d'une prise en charge conservatrice au cas par cas, y compris en présence de signe de gravité clinique ou radiologique.\n\n**R 6.4 [S3]** : Chez le patient présentant un traumatisme cranio-encéphalique associé à un hématome extradural, il est probablement recommandé d'effectuer une surveillance clinique rapprochée dans un centre doté d'un"
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank::MR-g83a9315591cd44551dbc",
+  "question": "Quel intérêt peut-on attendre d'un monitorage EEG de la profondeur d'anesthésie chez un patient curarisé ?",
+  "reference": "Il pourrait permettre de détecter un sous- ou un surdosage anesthésique lorsque les signes cliniques sont masqués par les curares (avis d'experts).",
+  "answer": "**Réponse synthétique** : Un monitorage EEG de la profondeur d'anesthésie peut être utile pour détecter un sous-ou surdosage anesthésique chez un patient curarisé.\n\n**Posologie, délais et modalités** : Non précisé dans les extraits.\n\n**Cas particuliers / Sécurité** : Les moniteurs de profondeur d'anesthésie pourraient être utiles pour affiner le raisonnement médical, en particulier pour les patients pour lesquels la relation dose - concentration - effets des médicaments anesthésiques est inhabituelle, comme dans le cas de patients curarisés. Cela peut permettre de détecter plus facilement le sous- et le surdosage anesthésique.\n\n**Niveau de preuve** : Avis d'experts (Module B, question 2, [S4]).\n\nLe monitoring de la profondeur d'anesthésie par le BIS peut aider à mieux gérer le dosage des anesthésiques, notamment chez les patients curarisés où les signes cliniques peuvent être modifiés. Cependant, il ne remplace pas complètement l'évaluation clinique et doit être utilisé comme complément de l'appréciation du médecin anesthésiste."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank::MR-gbc67a0eb3b22c1690c0c",
+  "question": "Quelle valeur d'index bispectral attend-on chez un patient anesthésié au sévoflurane à 0,5 CAM ?",
+  "reference": "Environ 45.",
+  "answer": "**Réponse synthétique** : L'index bispectral (IBS) attendu chez un patient anesthésié au sévoflurane à 0,5 CAM est de 45.\n\n**Posologie, délais et modalités** : Non précisé dans les extraits.\n\n**Cas particuliers / Sécurité** : Non précisé dans les extraits.\n\n**Niveau de preuve** : Les valeurs d'IBS correspondantes sont données dans l'extrait [S1], qui est la dernière édition en vigueur."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank::MR-gff794cd57325dca363d6",
+  "question": "Vous anesthésiez un patient chez qui la réponse aux agents anesthésiques est réputée imprévisible. Quel apport peut avoir un moniteur de profondeur d'anesthésie ?",
+  "reference": "Il peut aider à affiner le raisonnement et à détecter plus facilement un sous- ou un surdosage anesthésique.",
+  "answer": "**Réponse synthétique** : Un moniteur de profondeur d'anesthésie peut être utile pour affiner le raisonnement médical et détecter plus facilement le sous- et le surdosage anesthésique, surtout dans les situations où la relation dose - concentration - effets cliniques des médicaments anesthésiques est inhabituelle.\n\n**Posologie, délais et modalités** : Non précisé dans les extraits.\n\n**Cas particuliers / Sécurité** : Non précisé dans les extraits.\n\n**Niveau de preuve** : Les moniteurs de profondeur d'anesthésie pourraient être utiles pour affiner le raisonnement médical, en particulier pour les patients pour lesquels la relation dose - concentration - effets des médicaments anesthésiques est inhabituelle. Cela peut permettre de détecter plus facilement le sous- et le surdosage anesthésique (Module B, question 5, [S3]).\n\n**Clarification** : La question mentionne que la réponse aux agents anesthésiques est réputée imprévisible. Cela correspond à une situation où la relation entre doses/concentrations et effets cliniques des médicaments anesthésiques peut être modifiée (Module B, question 5, [S3]). Les moniteurs de profondeur d'anesthésie peuvent être utiles dans ces cas, mais il n'y a pas de recommandation spécifique pour une posologie ou un délai d'utilisation."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank::MR-gcb6edd578e226e2bf83b",
+  "question": "En hémodiafiltration continue en post-dilution, quelle fraction de filtration ne faut-il pas dépasser et sur quel paramètre agir ?",
+  "reference": "Ajuster le débit sanguin pour maintenir une fraction de filtration inférieure à 25 % (avis d'experts, accord fort).",
+  "answer": "**Réponse synthétique** : Il ne faut pas dépasser une fraction de filtration inférieure à 25 % en hémodiafiltration continue en post-dilution. Pour atteindre cette fraction, il faut ajuster le débit sanguin.\n\n**Posologie, délais et modalités** : Non précisé dans les extraits.\n\n**Cas particuliers / Sécurité** : Non précisé dans les extraits.\n\n**Niveau de preuve** : Accord fort [S2]."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank::MR-g0979ab4dc4ec3f5dbd2f",
+  "question": "Chez un nourrisson en postopératoire de chirurgie cardiaque nécessitant une déplétion hydrique, peut-on recourir à la dialyse péritonéale ?",
+  "reference": "Oui, la dialyse péritonéale est possible dans cette indication du fait de sa facilité d'utilisation (accord faible).",
+  "answer": "**Réponse synthétique** : Oui, la dialyse péritonéale peut être utilisée chez un nourrisson en postopératoire de chirurgie cardiaque nécessitant une déplétion hydrique.\n\n**Posologie, délais et modalités** : Non précisé dans les extraits.\n\n**Cas particuliers / Sécurité** : Non précisé dans les extraits.\n\n**Niveau de preuve** : Accord faible [S1].\n\nLa dialyse péritonéale est mentionnée comme une option possible chez le nouveau-né et l'enfant en postopératoire de chirurgie cardiaque pour la déplétion hydrosodée, avec un accord faible [S1]. Les extraits [S2] confirment l'efficacité de la dialyse péritonéale dans ce contexte, notamment pour la déplétion hydrosodée postopératoire, sans préciser de posologie, délais ou modalités spécifiques."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank::MR-gf761346ec9be5d6ba346",
+  "question": "En réanimation, quelle mesure concernant les soignants est proposée pour limiter les conflits avec les familles des patients ?",
+  "reference": "Former l'équipe médico-soignante à la communication (avis d'experts, accord fort).",
+  "answer": "**Réponse synthétique** : L'amélioration des échanges entre les soignants et les proches autour de l'évaluation clinique du patient (douleur, anxiété) est proposée pour limiter les conflits avec les familles.\n\n**Posologie, délais et modalités** : Non précisé dans les extraits.\n\n**Cas particuliers / Sécurité** : Non précisé dans les extraits.\n\n**Niveau de preuve** : Non précisé dans les extraits."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank::MR-g0aba15fbdfface749f92",
+  "question": "Après une décision de limitation ou d'arrêt des thérapeutiques en soins critiques, quelle démarche adopter envers les proches et avec quel niveau de recommandation ?",
+  "reference": "Utiliser une stratégie d'accompagnement structurée (interactions proactives avec l'équipe et/ou supports de communication), GRADE 1.",
+  "answer": "**Réponse synthétique** : Il est recommandé d'utiliser un protocole de service d'aide à la décision et de communication avec les proches et au sein de l'équipe soignante.\n\n**Posologie, délais et modalités** : Non précisé dans les extraits.\n\n**Cas particuliers / Sécurité** : Non précisé dans les extraits.\n\n**Niveau de preuve** : Avis d'experts (R 1.3) et GRADE 2 (R 1.4) [S3, S5, S6].\n\nLa recommandation est clairement formulée par les experts pour améliorer la qualité des soins lors d'une prise de décision de limitation ou d'arrêt des traitements en soins critiques. Les experts suggèrent d'utiliser un protocole de service d'aide à la décision et de communication avec les proches et au sein de l'équipe soignante (R 1.3, Avis d'experts) et il est probablement recommandé d'inclure la participation active des équipes paramédicales aux réunions de procédure collégiale (R 1.4, GRADE 2) [S3, S5, S6]."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank::MR-gfd6492bcff9d310fa822",
+  "question": "Chez un patient opéré considéré à risque sur le plan glycémique, faut-il contrôler la glycémie pendant l'intervention et au réveil ?",
+  "reference": "Il faut probablement la mesurer en peropératoire lors des interventions à risque, et réaliser une mesure en SSPI chez les patients à risque.",
+  "answer": "**Réponse synthétique** : Oui, il faut contrôler la glycémie pendant l'intervention et au réveil.\n\n**Posologie, délais et modalités** : \n- Mesure de glycémie pendant l'intervention : toutes les 30 minutes (mentionnée dans [S3]).\n- Mesure de glycémie au réveil : non précisé dans les extraits.\n\n**Cas particuliers / Sécurité** : \n- Non précisé dans les extraits.\n\n**Niveau de preuve** : Accord fort (mentionné dans [S1], [S3], [S4]).\n\nLe contrôle de la glycémie est recommandé pour les patients à risque pendant l'intervention et au réveil. La surveillance glycémique doit être réalisée toutes les 30 minutes pendant l'intervention (mentionnée dans [S3])."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank::MR-g43a751763308810eda5b",
+  "question": "En réanimation, quel type de protocole d'insulinothérapie doit être abandonné ?",
+  "reference": "Les protocoles statiques qui fixent le débit d'insuline sur la seule dernière glycémie (NGP modéré, accord fort).",
+  "answer": "Hors périmètre / Information non retrouvée dans les extraits SFAR fournis.\n\nLes extraits fournis ne mentionnent pas explicitement qu'un type de protocole d'insulinothérapie doit être abandonné en réanimation. Ils discutent plutôt des protocoles de contrôle glycémique et de l'utilisation d'insuline en continu, mais ne spécifient pas de protocole à abandonner."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank::MR-ga82b7f724c31133396b0",
+  "question": "Après une colectomie programmée dans un programme de réhabilitation, faut-il maintenir une aspiration gastrique par sonde en postopératoire ?",
+  "reference": "Non, il n'est pas recommandé de laisser une sonde nasogastrique (GRADE 1–, accord fort).",
+  "answer": "Hors périmètre / Information non retrouvée dans les extraits SFAR fournis.\n\nLes extraits fournis ne contiennent aucune recommandation spécifique concernant le maintien d'une aspiration gastrique par sonde après une colectomie programmée dans le cadre d'un programme de réhabilitation. Les extraits mentionnent l'abandon de la sonde nasogastrique, mais ne discutent pas de l'aspiration gastrique par sonde."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank::MR-g3940cdb7b78acbdfb13d",
+  "question": "Pour l'analgésie après chirurgie colorectale laparoscopique en réhabilitation améliorée, quelle technique privilégier et laquelle éviter ?",
+  "reference": "Privilégier la lidocaïne intraveineuse continue ; ne pas utiliser la péridurale thoracique.",
+  "answer": "**Réponse synthétique** : Pour l'analgésie après chirurgie colorectale laparoscopique en réhabilitation améliorée, privilégier l'analgésie péridurale thoracique et éviter l'irrigation pariétale avec une perfusion d'anesthésique local.\n\n**Posologie, délais et modalités** : Non précisé dans les extraits.\n\n**Cas particuliers / Sécurité** : Non précisé dans les extraits.\n\n**Niveau de preuve** : \n- L'analgésie péridurale thoracique est recommandée (GRADE 1+, Accord Fort) [S1, S4].\n- L'irrigation pariétale avec une perfusion d'anesthésique local est probablement recommandée (GRADE 2+, Accord Faible) [S2], mais son bénéfice sur la réhabilitation postopératoire reste à démontrer.\n\n**Vigilance temporelle** : Les extraits fournis sont en vigueur.\n\n**Clarification** : Les recommandations sont claires pour l'analgésie péridurale thoracique et l'irrigation pariétale. L'analgésie péridurale thoracique est fortement recommandée, tandis que l'irrigation pariétale est probablement recommandée mais son bénéfice reste à démontrer.\n\n**Réponse QCM** : \n- L'analgésie péridurale thoracique est privilégiée (option A).\n- L'irrigation pariétale avec une perfusion d'anesthésique local est à éviter (option B).\n\nDonc, la réponse correcte est **A et B**."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank::MR-g508df1f5f5c7dacd7171",
+  "question": "Lors d'une épreuve de sevrage de la ventilation mécanique réalisée en aide inspiratoire, quel niveau d'aide faut-il régler ?",
+  "reference": "Un faible niveau d'aide inspiratoire, de l'ordre de 7 cmH2O.",
+  "answer": "**Réponse synthétique** : Le niveau d'aide inspiratoire doit être réglé à 7 cm H₂O.\n\n**Posologie, délais et modalités** : Le niveau d'aide inspiratoire est progressivement adapté pour obtenir un volume courant expiré cible autour de 6 à 8 ml/kg, avec un niveau de départ entre 6 et 8 cm H₂O. Le niveau maximal inspiratoire ne doit pas dépasser 20 cm H₂O.\n\n**Cas particuliers / Sécurité** : Non précisé dans les extraits.\n\n**Niveau de preuve** : Accord fort, RFE SFAR 2008 [EN VIGUEUR]."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank::MR-gaaba8d034741e6533aee",
+  "question": "Un patient ventilé après une chirurgie abdominale majeure devient candidat au sevrage. Quelles particularités prendre en compte ?",
+  "reference": "Une dysfonction diaphragmatique postopératoire transitoire et la douleur, qui doit être traitée ; ces patients ont le plus faible taux d'échec d'extubation.",
+  "answer": "**Réponse synthétique** : Il est nécessaire de prendre en compte les particularités liées à la chirurgie abdominale majeure et potentiellement à une dysfonction diaphragmatique postopératoire.\n\n**Posologie, délais et modalités** : Non précisé dans les extraits.\n\n**Cas particuliers / Sécurité** : \n- **Dysfonction diaphragmatique postopératoire** : Il faut être vigilant car les patients chirurgicaux, en particulier après une chirurgie abdominale majeure, peuvent présenter une dysfonction diaphragmatique postopératoire transitoire. Cette condition doit être prise en compte lors du sevrage de la ventilation mécanique.\n\n**Niveau de preuve** : Non précisé dans les extraits.\n\n**Vigilance temporelle** : L'édition fournie est en vigueur.\n\n**Ambiguïté clinique / Clarification** : Les extraits ne fournissent pas de détails spécifiques sur la posologie, les délais ou les modalités de sevrage pour les patients ayant subi une chirurgie abdominale majeure. Il est recommandé de suivre un protocole de sevrage qui prend en compte la dysfonction diaphragmatique postopératoire, mais les détails précis de ce protocole ne sont pas fournis."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank::MR-g76063f88d9909f319d85",
+  "question": "En chirurgie ambulatoire, peut-on prescrire une prémédication avant l'intervention ?",
+  "reference": "Oui, une prémédication anxiolytique et/ou analgésique peut être prescrite.",
+  "answer": "**Réponse synthétique** : La prémédication sédatif peut être prescrite, mais il n'est pas recommandé de la prescrire systématiquement avant une intervention chirurgicale ambulatoire pour réduire la survenue de complications postopératoires.\n\n**Posologie, délais et modalités** : Non précisé dans les extraits.\n\n**Cas particuliers / Sécurité** : Non précisé dans les extraits.\n\n**Niveau de preuve** : GRADE 1, Accord fort [S2].\n\nEn chirurgie ambulatoire, la prémédication sédatif peut être prescrite, mais elle n'est pas recommandée de manière systématique pour réduire les complications postopératoires."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank::MR-g293148d474c4b595ab24",
+  "question": "Chez une personne âgée opérée en ambulatoire, quelle classe médicamenteuse faut-il éviter en prémédication et pour quelle raison ?",
+  "reference": "Les benzodiazépines, car elles augmentent les troubles du comportement postopératoires.",
+  "answer": "**Réponse synthétique** : Chez une personne âgée opérée en ambulatoire, il faut éviter les benzodiazépines et apparentées en prémédication car elles augmentent l'incidence des troubles du comportement postopératoire.\n\n**Posologie, délais et modalités** : Non précisé dans les extraits.\n\n**Cas particuliers / Sécurité** : Les benzodiazépines et apparentées doivent être évitées en prémédication chez la personne âgée, en particulier pour éviter l'augmentation de l'incidence des troubles du comportement postopératoire.\n\n**Niveau de preuve** : GRADE 2, Accord fort [S4].\n\n**Vigilance temporelle** : Les extraits fournis sont en vigueur.\n\n**Ambiguïté clinique / Clarification** : Les extraits ne mentionnent pas de cas particuliers ou de délais spécifiques concernant l'évitement des benzodiazépines et apparentées en prémédication."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank::MR-gf79873a2c51a5380fe66",
+  "question": "Après une césarienne sous anesthésie périmédullaire compliquée de douleurs peropératoires, quel suivi psychologique proposer à la mère ?",
+  "reference": "Repérer la sidération et assurer un soin psychique d'urgence (defusing) en post-partum, puis dépister à distance un ESPT et orienter vers des spécialistes (avis d'experts).",
+  "answer": "**Réponse synthétique** : Proposer un suivi psychologique pour évaluer et gérer éventuellement l'état de stress post-traumatique (ESPT).\n\n**Posologie, délais et modalités** : Non précisé dans les extraits.\n\n**Cas particuliers / Sécurité** : \n- **Allergies** : Non précisé dans les extraits.\n- **Fonction rénale** : Non précisé dans les extraits.\n- **Obésité** : Non précisé dans les extraits.\n- **Populations particulières** : Les extraits suggèrent de débriefer l'expérience douloureuse avec l'équipe et de confier la patiente à des spécialistes de l'ESPT pour une prise en charge adaptée.\n\n**Niveau de preuve** : Les recommandations sont basées sur des avis d'experts (RFE SFAR 2021).\n\n**Vigilance temporelle** : Les recommandations sont en vigueur.\n\n**Clarification** : Les extraits suggèrent de tracer l'insuffisance d'analgésie en cours de césarienne, de renforcer l'anesthésie locorégionale et/ou générale, d'accompagner la naissance, puis de débriefer l'expérience douloureuse avec l'équipe. Ensuite, il est recommandé d'identifier la sidération et de proposer un soin psychique d'urgence (defusing) en post-partum. Enfin, il est suggéré de diagnostiquer l'état de stress post-traumatique (ESPT) en explorant le bien-être maternel et la relation mère-enfant, et de confier la patiente à des spécialistes de l'ESPT pour une prise en charge adaptée.\n\n**Option"
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank::MR-g55e468b6df0cb295c14b",
+  "question": "Chez une parturiente sous péridurale de travail, quel mode d'entretien de l'analgésie est associé à un risque d'échec de l'extension pour césarienne ?",
+  "reference": "L'entretien par perfusion continue plutôt que par PCEA ou PIEB.",
+  "answer": "Réponse synthétique : L'entretien de l'analgésie par perfusion continue est associé à un risque d'échec de l'extension pour césarienne.\n\nPosologie, délais et modalités : Non précisé dans les extraits.\n\nCas particuliers / Sécurité : Non précisé dans les extraits.\n\nNiveau de preuve : Les experts suggèrent (P1.7) que l'entretien de l'analgésie par perfusion continue expose au risque d'échec de conversion de la péridurale analgésique en péridurale anesthésique pour la césarienne en cours de travail. Cependant, il n'y a pas de preuve directe dans les extraits fournis pour soutenir cette affirmation comme une recommandation formelle.\n\nNote : Les extraits fournis ne contiennent pas de preuve directe ou formelle pour soutenir que l'entretien de l'analgésie par perfusion continue est associé à un risque d'échec de l'extension pour césarienne. Les experts suggèrent cette association, mais il n'y a pas de preuve claire dans les extraits fournis."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank::MR-g0c4e1de8af1e9b05f324",
+  "question": "Une césarienne code rouge est décidée pour suspicion d'acidose fœtale chez une parturiente sous péridurale ; à l'incision, l'anesthésie est manifestement insuffisante. Quelle conduite tenir ?",
+  "reference": "Réaliser une anesthésie générale.",
+  "answer": "**Réponse synthétique** : Realiser une anesthésie générale en présence d'une insuffisance d'anesthésie périmédullaire constatée juste avant ou dès l'incision pour césarienne code rouge.\n\n**Posologie, délais et modalités** : Non précisé dans les extraits.\n\n**Cas particuliers / Sécurité** : Non précisé dans les extraits.\n\n**Niveau de preuve** : Les experts suggèrent cette conduite (S1, S3, S4)."
+ }
+]
