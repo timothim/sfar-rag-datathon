@@ -151,3 +151,7 @@ Rapports d'audit attendus dans `reports/agents/` (si un fichier manque, l'agent 
 - Sonnet ctx12 sur abp : 86,3 % en notation déterministe vs 95,1 % ctx6, mais **artefact** : 11/11 pertes = « Aucune antibioprophylaxie n'est recommandée » au lieu de « Pas d'antibioprophylaxie » (clé par sous-chaîne). Jugement Haiku en cours.
 - **Sonnet ctx12 sur abp171 dev (jugé)** : **95,1 % [90–99]**, graves 2,0 % ; vs ctx6 +3,9 [+1,0 ; +7,8] (significatif). Le « recul » en notation déterministe était bien un artefact de formulation. Contrôle : 0 désaccord juge/clé sur les QCM.
 - Synthèse générateur (dev, C9) : 7B concis ≈ 69 % (multirfe) / 81 % (abp) ; Sonnet 6 passages 90 / 91 % ; Sonnet 12 passages 97 / 95 % ; erreurs graves Sonnet 0–2 %. Conclusion : générateur = goulot principal ; contexte élargi utile pour un modèle fort.
+
+## Nouvelle orientation (utilisateur, 2026-11-26 ~18h30)
+- Arrêt de l'évaluation Qwen 7B (file `queue_h_ab.sh` stoppée). Objectif : **retrieval ≈ 100 %** puis prompt parfait pour un générateur de classe ~30B. Explorer toutes les pistes étape par étape (chunking, index, requête, candidats, fusion, rerank, sélection, contexte), analyser chaque échec, innover.
+- Méthode : métrique principale = **passage hit@k** (et rappel@k pour k = 1…20) sur multirfe_synth dev + abp171 dev (après annotation des passages gold ABP) ; chaque levier testé seul sur dev, CI appariés ; test (scellé) seulement à la fin.
