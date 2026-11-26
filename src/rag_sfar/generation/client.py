@@ -18,7 +18,8 @@ from rag_sfar.generation.prompts import (
 from rag_sfar.generation.verifier import verify_generation
 from rag_sfar.retrieval.context_optimizer import select_generation_context
 from rag_sfar.retrieval.pipeline import SfarRagRetriever, format_context_for_llm
-from rag_sfar.schemas import Citation, RagResponse, RetrievedChunk
+from rag_sfar.retrieval.router import detect_affirmed_allergy
+from rag_sfar.schemas import Citation, QueryAnalysis, RagResponse, RetrievedChunk
 
 
 class OpenAICompatibleLLM:
@@ -208,6 +209,74 @@ def build_citations(retrieved: list[RetrievedChunk]) -> list[Citation]:
     return citations
 
 
+def allergy_context_note(query: str) -> str:
+    """Context note added when — and only when — the question states a patient allergy.
+
+    Generic wording: it quotes the question's own allergy statement and assumes no allergen
+    class (the previous version asserted a beta-lactam allergy on any 'alternative' or
+    'pénicilline' mention)."""
+    statement = detect_affirmed_allergy(query)
+    if not statement:
+        return ""
+    return (
+        f"NOTE : la question mentionne une allergie (« {statement} »). Recherche dans les extraits "
+        "la conduite prévue pour ce terrain et applique-la ; si les extraits ne la précisent pas, "
+        "signale-le.\n\n"
+    )
+
+
+def generation_budget(mode: str) -> tuple[int, int]:
+    """(max chunks, max characters) of the generation context per output mode.
+
+    Hyper-parameters tuned on the development set (declared as such, see audit)."""
+    max_chunks = 7 if mode == "benchmark_mcq" else (5 if mode == "benchmark_open" else 6)
+    max_chars = 6500 if mode != "benchmark_open" else 5200
+    return max_chunks, max_chars
+
+
+def build_generation_context(
+    retrieved: list[RetrievedChunk],
+    analysis: QueryAnalysis,
+    cfg: RetrievalConfig,
+    query: str,
+    mode: str = "clinical_detailed",
+) -> tuple[list[RetrievedChunk], str]:
+    """Select the chunks shown to the LLM and format the context block.
+
+    Shared by the engine (sync and streaming) and the benchmark adapter so that every entry
+    point evaluates the same context."""
+    max_chunks, max_chars = generation_budget(mode)
+    gen_chunks = (
+        select_generation_context(
+            retrieved,
+            is_allergy_query=("allergy" in analysis.modifiers),
+            max_chunks=max_chunks,
+            max_total_chars=max_chars,
+        )
+        if cfg.use_context_pruning
+        else retrieved
+    )
+    context_block = format_context_for_llm(
+        gen_chunks,
+        query=query,
+        reorder_u_shape=cfg.use_u_shape_ordering,
+        prune_prose=cfg.use_context_pruning,
+    )
+    if cfg.use_context_pruning:
+        context_block = allergy_context_note(query) + context_block
+    return gen_chunks, context_block
+
+
+def attach_provenance(answer: str, gen_chunks: list[RetrievedChunk]) -> tuple[str, bool]:
+    """Append "(SFAR <année> [S1])" when a short answer carries no year.
+
+    Returns (answer, added). The added year is that of [S1], not necessarily of the source the
+    model used: it is display-only and must not be counted as sourcing in evaluations."""
+    if gen_chunks and not re.search(r"\b\d{4}\b", answer) and gen_chunks[0].chunk.effective_year:
+        return f"{answer} (SFAR {gen_chunks[0].chunk.effective_year} [S1])", True
+    return answer, False
+
+
 class SfarRagEngine:
     """Complete RAG-SFAR orchestrator combining retrieval, grounded prompting, LLM, and verification."""
 
@@ -216,10 +285,14 @@ class SfarRagEngine:
         retriever: SfarRagRetriever,
         llm: OpenAICompatibleLLM | LocalMlxLLM | None = None,
         default_config: RetrievalConfig | None = None,
+        attach_provenance: bool = False,
     ) -> None:
         self.retriever = retriever
         self.llm = llm
         self.default_config = default_config or RetrievalConfig()
+        # Off by default (evaluation): when on, benchmark modes append "(SFAR <année> [S1])" to
+        # answers without a year, and the response says so (`provenance_added_by_code`).
+        self.attach_provenance = attach_provenance
 
     @classmethod
     def from_settings(
@@ -228,6 +301,7 @@ class SfarRagEngine:
         retriever: SfarRagRetriever,
         default_config: RetrievalConfig | None = None,
         enable_llm: bool = True,
+        attach_provenance: bool = False,
     ) -> "SfarRagEngine":
         llm = None
         if enable_llm:
@@ -239,7 +313,9 @@ class SfarRagEngine:
                 max_tokens=settings.llm_max_tokens,
                 timeout=settings.llm_timeout_seconds,
             )
-        return cls(retriever=retriever, llm=llm, default_config=default_config)
+        return cls(
+            retriever=retriever, llm=llm, default_config=default_config, attach_provenance=attach_provenance
+        )
 
     def answer(
         self,
@@ -258,32 +334,8 @@ class SfarRagEngine:
             override_latest_only=override_latest_only,
             override_domains=override_domains,
         )
-        gen_max_chunks = 7 if mode == "benchmark_mcq" else (5 if mode == "benchmark_open" else 6)
-        gen_max_chars = 6500 if mode != "benchmark_open" else 5200
-        gen_chunks = (
-            select_generation_context(
-                retrieved,
-                is_allergy_query=("allergy" in analysis.modifiers),
-                max_chunks=gen_max_chunks,
-                max_total_chars=gen_max_chars,
-            )
-            if cfg.use_context_pruning
-            else retrieved
-        )
+        gen_chunks, context_block = build_generation_context(retrieved, analysis, cfg, query, mode)
         citations = build_citations(gen_chunks)
-        context_block = format_context_for_llm(
-            gen_chunks,
-            query=query,
-            reorder_u_shape=cfg.use_u_shape_ordering,
-            prune_prose=cfg.use_context_pruning,
-        )
-        if "allergy" in analysis.modifiers and cfg.use_context_pruning:
-            context_block = (
-                "⚠️ ALERTE CLINIQUE : Patient ALLERGIQUE aux bêtalactamines/pénicillines. "
-                "Ne donne PAS la molécule de 1re intention (bêtalactamine) ; applique l'encadré allergie "
-                "ou l'exception spécifique présente dans les extraits.\n\n"
-                + context_block
-            )
 
         # Auto-select temporal diff prompt if user explicitly asked for edition comparison
         effective_mode = mode
@@ -306,7 +358,7 @@ class SfarRagEngine:
                 latency_ms=timings,
                 model_used="retrieval_only",
                 config_name=cfg.name,
-                extra={"context_chars": len(context_block)},
+                extra={"context_chars": len(context_block), "provenance_added_by_code": False},
             )
 
         system_prompt = {
@@ -369,14 +421,11 @@ class SfarRagEngine:
                 verification = rep_verif
                 self_corrected = True
 
-        # Deterministic provenance attachment for benchmark modes when LLM omits the source year
-        if (
-            effective_mode in ("benchmark_open", "benchmark_mcq")
-            and gen_chunks
-            and not re.search(r"\b\d{4}\b", raw_answer)
-            and gen_chunks[0].chunk.effective_year
-        ):
-            raw_answer = f"{raw_answer} (SFAR {gen_chunks[0].chunk.effective_year} [S1])"
+        # Optional display-only provenance for benchmark modes (off by default; flagged when used)
+        provenance_added = False
+        if self.attach_provenance and effective_mode in ("benchmark_open", "benchmark_mcq"):
+            raw_answer, provenance_added = attach_provenance(raw_answer, gen_chunks)
+        verification.provenance_added_by_code = provenance_added
 
         return RagResponse(
             query=query,
@@ -394,6 +443,7 @@ class SfarRagEngine:
                 "context_chars": len(context_block),
                 "self_corrected": self_corrected,
                 "reasoning_trace": raw_generation if raw_generation != raw_answer else "",
+                "provenance_added_by_code": provenance_added,
             },
         )
 
@@ -414,32 +464,8 @@ class SfarRagEngine:
             override_latest_only=override_latest_only,
             override_domains=override_domains,
         )
-        gen_max_chunks = 7 if mode == "benchmark_mcq" else (5 if mode == "benchmark_open" else 6)
-        gen_max_chars = 6500 if mode != "benchmark_open" else 5200
-        gen_chunks = (
-            select_generation_context(
-                retrieved,
-                is_allergy_query=("allergy" in analysis.modifiers),
-                max_chunks=gen_max_chunks,
-                max_total_chars=gen_max_chars,
-            )
-            if cfg.use_context_pruning
-            else retrieved
-        )
+        gen_chunks, context_block = build_generation_context(retrieved, analysis, cfg, query, mode)
         citations = build_citations(gen_chunks)
-        context_block = format_context_for_llm(
-            gen_chunks,
-            query=query,
-            reorder_u_shape=cfg.use_u_shape_ordering,
-            prune_prose=cfg.use_context_pruning,
-        )
-        if "allergy" in analysis.modifiers and cfg.use_context_pruning:
-            context_block = (
-                "⚠️ ALERTE CLINIQUE : Patient ALLERGIQUE aux bêtalactamines/pénicillines. "
-                "Ne donne PAS la molécule de 1re intention (bêtalactamine) ; applique l'encadré allergie "
-                "ou l'exception spécifique présente dans les extraits.\n\n"
-                + context_block
-            )
         effective_mode = mode
         if mode == "clinical_detailed" and analysis.temporal_mode == "all_versions":
             effective_mode = "temporal_diff"
@@ -538,6 +564,8 @@ class SfarRagEngine:
             "extra": {
                 "self_corrected": self_corrected,
                 "reasoning_trace": raw_generation if raw_generation != raw_answer else "",
+                # The streaming path never appends a source.
+                "provenance_added_by_code": False,
             },
         }
 

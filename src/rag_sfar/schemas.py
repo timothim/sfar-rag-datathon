@@ -186,6 +186,8 @@ class VerificationReport(BaseModel):
     is_abstention: bool = False
     grounding_score: float = 1.0
     warnings: list[str] = Field(default_factory=list)
+    # True when "(SFAR <année> [S1])" was appended by code, not written by the model.
+    provenance_added_by_code: bool = False
 
 
 class RagResponse(BaseModel):

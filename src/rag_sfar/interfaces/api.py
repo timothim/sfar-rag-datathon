@@ -359,10 +359,15 @@ def create_app(
             temperature=cfg_settings.llm_temperature,
             max_tokens=min(cfg_settings.llm_max_tokens, 420),
         )
-        engine = SfarRagEngine(retriever=retriever, llm=llm)
+        engine = SfarRagEngine(
+            retriever=retriever, llm=llm, attach_provenance=cfg_settings.api_attach_provenance
+        )
     else:
         engine = SfarRagEngine.from_settings(
-            settings=cfg_settings, retriever=retriever, enable_llm=enable_llm
+            settings=cfg_settings,
+            retriever=retriever,
+            enable_llm=enable_llm,
+            attach_provenance=cfg_settings.api_attach_provenance,
         )
 
     app = FastAPI(title="RAG-SFAR Clinical Engine", version="1.0.0")

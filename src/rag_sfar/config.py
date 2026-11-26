@@ -53,6 +53,10 @@ class Settings(BaseSettings):
     # Server
     api_host: str = "0.0.0.0"
     api_port: int = 8000
+    # HTTP API only: append "(SFAR <année> [S1])" to benchmark-mode answers that lack a year
+    # (display; flagged in sfar_verification.provenance_added_by_code). The engine default,
+    # used by evaluations, is off.
+    api_attach_provenance: bool = True
 
 
 @dataclass
