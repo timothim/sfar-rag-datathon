@@ -336,6 +336,27 @@
       },
       "n": 37
      }
+    },
+    "judge_correct": {
+     "mean": 0.9509803921568627,
+     "ci_low": 0.9019607843137255,
+     "ci_high": 0.9901960784313726,
+     "n": 102
+    },
+    "judge_correct_or_partial": {
+     "mean": 0.9607843137254902,
+     "ci_low": 0.9215686274509803,
+     "ci_high": 0.9901960784313726,
+     "n": 102
+    },
+    "judge_serious_error": {
+     "mean": 0.0196078431372549,
+     "ci_low": 0.0,
+     "ci_high": 0.049019607843137254,
+     "n": 102
+    },
+    "judge_serious_error_types": {
+     "wrong_drug": 2
     }
    },
    "rows": [
@@ -354,7 +375,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Pour une prothèse de hanche, l'antibioprophylaxie recommandée est la céfazoline 2g IVL, avec réinjection de 1g si la durée dépasse 4h, puis toutes les 4h jusqu'à la fin de la chirurgie [S1][S2]. En cas de chirurgie prothétique de hanche par voie antérieure et d'allergie aux bêtalactamines, il est préférable d'utiliser la vancomycine ou la teicoplanine plutôt que la clindamycine [S6].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1), avis d’experts."
+     "answer": "Pour une prothèse de hanche, l'antibioprophylaxie recommandée est la céfazoline 2g IVL, avec réinjection de 1g si la durée dépasse 4h, puis toutes les 4h jusqu'à la fin de la chirurgie [S1][S2]. En cas de chirurgie prothétique de hanche par voie antérieure et d'allergie aux bêtalactamines, il est préférable d'utiliser la vancomycine ou la teicoplanine plutôt que la clindamycine [S6].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1), avis d’experts.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q01",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Donne la céfazoline comme la référence, les précisions de réinjection et d'alternative étant des détails supplémentaires non contredits."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q02",
@@ -373,7 +405,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Pour une arthroscopie diagnostique du genou sans mise en place de matériel, il n'y a pas d'antibioprophylaxie [S2][S3].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1), avis d’experts."
+     "answer": "Pour une arthroscopie diagnostique du genou sans mise en place de matériel, il n'y a pas d'antibioprophylaxie [S2][S3].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1), avis d’experts.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q02",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Conclut à l'absence d'antibioprophylaxie, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q03",
@@ -392,7 +435,18 @@
      "false_abstention": 1.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Pour une prothèse de genou, l'antibioprophylaxie recommandée est la céfazoline 2g IVL, avec réinjection de 1g si la durée dépasse 4h, puis toutes les 4h jusqu'à la fin de la chirurgie [S3]. Les extraits fournis ne précisent pas d'alternative en cas d'allergie aux bêtalactamines pour la prothèse de genou : la préférence pour la vancomycine ou la teicoplanine plutôt que la clindamycine n'est indiquée que pour la chirurgie prothétique de hanche par voie antérieure [S3].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1), avis d’experts."
+     "answer": "Pour une prothèse de genou, l'antibioprophylaxie recommandée est la céfazoline 2g IVL, avec réinjection de 1g si la durée dépasse 4h, puis toutes les 4h jusqu'à la fin de la chirurgie [S3]. Les extraits fournis ne précisent pas d'alternative en cas d'allergie aux bêtalactamines pour la prothèse de genou : la préférence pour la vancomycine ou la teicoplanine plutôt que la clindamycine n'est indiquée que pour la chirurgie prothétique de hanche par voie antérieure [S3].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1), avis d’experts.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q03",
+      "correctness": "incorrect",
+      "abstained": false,
+      "serious_error": "wrong_drug",
+      "faithful": null,
+      "justification": "Recommande la céfazoline chez un patient allergique aux bêtalactamines alors que la référence attend la clindamycine."
+     },
+     "judge_correct": 0.0,
+     "judge_correct_or_partial": 0.0,
+     "judge_serious_error": 1.0
     },
     {
      "id": "Q05",
@@ -409,7 +463,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Pour une fracture ouverte de jambe Gustilo 2, l'antibioprophylaxie recommandée est l'amoxicilline/clavulanate 2g IVL, avec réinjection de 1g si la durée dépasse 2h, puis toutes les 2h jusqu'à la fin de la chirurgie [S1][S4].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1), avis d’experts."
+     "answer": "Pour une fracture ouverte de jambe Gustilo 2, l'antibioprophylaxie recommandée est l'amoxicilline/clavulanate 2g IVL, avec réinjection de 1g si la durée dépasse 2h, puis toutes les 2h jusqu'à la fin de la chirurgie [S1][S4].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1), avis d’experts.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q05",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Recommande l'amoxicilline/clavulanate comme la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q07",
@@ -426,7 +491,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Pour une chirurgie instrumentée du rachis avec mise en place de matériel en 1 temps, l'antibioprophylaxie recommandée est la céfazoline 2g IVL, avec réinjection de 1g si la durée dépasse 4h, puis toutes les 4h jusqu'à la fin de la chirurgie [S2][S3]. Une antibioprophylaxie prolongée n'est pas supérieure à une administration pré et peropératoire uniquement [S7].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1), GRADE 2."
+     "answer": "Pour une chirurgie instrumentée du rachis avec mise en place de matériel en 1 temps, l'antibioprophylaxie recommandée est la céfazoline 2g IVL, avec réinjection de 1g si la durée dépasse 4h, puis toutes les 4h jusqu'à la fin de la chirurgie [S2][S3]. Une antibioprophylaxie prolongée n'est pas supérieure à une administration pré et peropératoire uniquement [S7].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1), GRADE 2.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q07",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Recommande la céfazoline comme la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q09",
@@ -443,7 +519,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Pour un traumatisme complexe de la main (écrasement, ou durée de chirurgie prévue > 2h), l'antibioprophylaxie recommandée est l'amoxicilline/clavulanate 2g IVL, avec réinjection de 1g si la durée dépasse 2h, puis toutes les 2h jusqu'à la fin de la chirurgie [S1][S2].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1), avis d’experts."
+     "answer": "Pour un traumatisme complexe de la main (écrasement, ou durée de chirurgie prévue > 2h), l'antibioprophylaxie recommandée est l'amoxicilline/clavulanate 2g IVL, avec réinjection de 1g si la durée dépasse 2h, puis toutes les 2h jusqu'à la fin de la chirurgie [S1][S2].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1), avis d’experts.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q09",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Recommande l'amoxicilline/clavulanate comme la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q18",
@@ -460,7 +547,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Pour une craniotomie, l'antibioprophylaxie recommandée est la céfazoline 2g IVL, avec réinjection de 1g si la durée dépasse 4h, puis toutes les 4h jusqu'à la fin de la chirurgie [S3][S6]. L'antibioprophylaxie a montré une diminution indiscutable du risque infectieux pour les chirurgies par craniotomie [S1].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1), GRADE 2."
+     "answer": "Pour une craniotomie, l'antibioprophylaxie recommandée est la céfazoline 2g IVL, avec réinjection de 1g si la durée dépasse 4h, puis toutes les 4h jusqu'à la fin de la chirurgie [S3][S6]. L'antibioprophylaxie a montré une diminution indiscutable du risque infectieux pour les chirurgies par craniotomie [S1].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1), GRADE 2.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q18",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Recommande la céfazoline comme la référence, l'affirmation d'efficacité étant un détail supplémentaire."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q19",
@@ -479,7 +577,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Pour une biopsie cérébrale, il n'y a pas d'antibioprophylaxie [S1][S5]. Cela vaut aussi pour la biopsie cérébrale stéréotaxique [S3].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1), avis d’experts."
+     "answer": "Pour une biopsie cérébrale, il n'y a pas d'antibioprophylaxie [S1][S5]. Cela vaut aussi pour la biopsie cérébrale stéréotaxique [S3].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1), avis d’experts.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q19",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Conclut à l'absence d'antibioprophylaxie, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q20",
@@ -498,7 +607,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Pour la pose d'une dérivation ventriculaire externe (DVE), il n'y a pas d'antibioprophylaxie [S1]. L'application d'un protocole standardisé de mesures préventives a montré son efficacité, contrairement à l'antibioprophylaxie [S2].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1), avis d’experts."
+     "answer": "Pour la pose d'une dérivation ventriculaire externe (DVE), il n'y a pas d'antibioprophylaxie [S1]. L'application d'un protocole standardisé de mesures préventives a montré son efficacité, contrairement à l'antibioprophylaxie [S2].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1), avis d’experts.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q20",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Conclut à l'absence d'antibioprophylaxie, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q25",
@@ -515,7 +635,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Pour la pose d'une électrode de stimulation cérébrale, l'antibioprophylaxie recommandée est la céfazoline 2g IVL, avec réinjection de 1g si la durée dépasse 4h, puis toutes les 4h jusqu'à la fin de la chirurgie [S1].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1), avis d’experts."
+     "answer": "Pour la pose d'une électrode de stimulation cérébrale, l'antibioprophylaxie recommandée est la céfazoline 2g IVL, avec réinjection de 1g si la durée dépasse 4h, puis toutes les 4h jusqu'à la fin de la chirurgie [S1].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1), avis d’experts.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q25",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Recommande la céfazoline comme la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q26",
@@ -534,7 +665,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Pour l'embolisation d'un anévrysme cérébral, il n'y a pas d'antibioprophylaxie [S1][S2][S6].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1), avis d’experts."
+     "answer": "Pour l'embolisation d'un anévrysme cérébral, il n'y a pas d'antibioprophylaxie [S1][S2][S6].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1), avis d’experts.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q26",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Conclut à l'absence d'antibioprophylaxie, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q27",
@@ -553,7 +695,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Dans le tableau d'antibioprophylaxie en neurochirurgie, en cas d'allergie aux bêtalactamines, si la céfazoline est indiquée, la molécule de remplacement est la clindamycine 900 mg IV [S1]. Les extraits fournis ne reprennent pas la ligne « craniotomie » de ce tableau.\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1), avis d’experts."
+     "answer": "Dans le tableau d'antibioprophylaxie en neurochirurgie, en cas d'allergie aux bêtalactamines, si la céfazoline est indiquée, la molécule de remplacement est la clindamycine 900 mg IV [S1]. Les extraits fournis ne reprennent pas la ligne « craniotomie » de ce tableau.\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1), avis d’experts.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q27",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Donne la clindamycine comme alternative en cas d'allergie, conforme à la référence, même si la réponse reste conditionnelle."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q28",
@@ -572,7 +725,18 @@
      "false_abstention": 1.0,
      "correct": 0.0,
      "sourced": 1.0,
-     "answer": "Pour une plaie cranio-cérébrale, pénétrante ou non, l'antibioprophylaxie recommandée est l'amoxicilline/clavulanate 2g IVL, avec réinjection de 1g si la durée dépasse 2h, puis toutes les 2h jusqu'à la fin de la chirurgie [S4]. Les extraits fournis ne précisent pas d'alternative en cas d'allergie aux pénicillines pour la neurochirurgie : les schémas d'allergie présentés concernent la chirurgie otologique, la traumatologie maxillo-faciale et la neuroradiologie interventionnelle [S2][S3][S6].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1), avis d’experts."
+     "answer": "Pour une plaie cranio-cérébrale, pénétrante ou non, l'antibioprophylaxie recommandée est l'amoxicilline/clavulanate 2g IVL, avec réinjection de 1g si la durée dépasse 2h, puis toutes les 2h jusqu'à la fin de la chirurgie [S4]. Les extraits fournis ne précisent pas d'alternative en cas d'allergie aux pénicillines pour la neurochirurgie : les schémas d'allergie présentés concernent la chirurgie otologique, la traumatologie maxillo-faciale et la neuroradiologie interventionnelle [S2][S3][S6].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1), avis d’experts.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q28",
+      "correctness": "incorrect",
+      "abstained": false,
+      "serious_error": "wrong_drug",
+      "faithful": null,
+      "justification": "Propose l'amoxicilline/clavulanate sans donner l'alternative attendue (triméthoprime/sulfaméthoxazole) pour un patient allergique aux pénicillines."
+     },
+     "judge_correct": 0.0,
+     "judge_correct_or_partial": 0.0,
+     "judge_serious_error": 1.0
     },
     {
      "id": "Q30",
@@ -591,7 +755,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Pour une thyroïdectomie totale, il n'y a pas d'antibioprophylaxie [S1][S2].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1), avis d’experts."
+     "answer": "Pour une thyroïdectomie totale, il n'y a pas d'antibioprophylaxie [S1][S2].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1), avis d’experts.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q30",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Conclut à l'absence d'antibioprophylaxie, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q31",
@@ -610,7 +785,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Pour une chirurgie sinusienne de polypose ou de sinusite chronique (méatotomie, éthmoïdectomie, sphénoïdectomie, polypectomie), il n'y a pas d'antibioprophylaxie [S1][S2].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1), avis d’experts."
+     "answer": "Pour une chirurgie sinusienne de polypose ou de sinusite chronique (méatotomie, éthmoïdectomie, sphénoïdectomie, polypectomie), il n'y a pas d'antibioprophylaxie [S1][S2].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1), avis d’experts.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q31",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Conclut à l'absence d'antibioprophylaxie, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q36",
@@ -627,7 +813,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Pour une chirurgie de la cataracte, l'antibioprophylaxie recommandée est le céfuroxime 1 mg/0,1 mL en injection intracamérulaire en fin d'intervention, en dose unique [S5]. L'antibioprophylaxie par collyres, par voie sous-conjonctivale ou dans le liquide d'irrigation intraoculaire n'est pas recommandée [S1].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1), GRADE 1."
+     "answer": "Pour une chirurgie de la cataracte, l'antibioprophylaxie recommandée est le céfuroxime 1 mg/0,1 mL en injection intracamérulaire en fin d'intervention, en dose unique [S5]. L'antibioprophylaxie par collyres, par voie sous-conjonctivale ou dans le liquide d'irrigation intraoculaire n'est pas recommandée [S1].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1), GRADE 1.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q36",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Recommande le céfuroxime intracamérulaire, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q37",
@@ -646,7 +843,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Pour une chirurgie du glaucome, il n'y a pas d'antibioprophylaxie [S3][S4]. Si elle est réalisée dans le même temps opératoire qu'une chirurgie de la cataracte, elle relève de la chirurgie de la cataracte combinée [S1][S4].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1), avis d’experts."
+     "answer": "Pour une chirurgie du glaucome, il n'y a pas d'antibioprophylaxie [S3][S4]. Si elle est réalisée dans le même temps opératoire qu'une chirurgie de la cataracte, elle relève de la chirurgie de la cataracte combinée [S1][S4].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1), avis d’experts.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q37",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Conclut à l'absence d'antibioprophylaxie, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q40",
@@ -663,7 +871,18 @@
      "false_abstention": 1.0,
      "correct": 0.0,
      "sourced": 0.0,
-     "answer": "Les recommandations SFAR fournies ne traitent pas cette question."
+     "answer": "Les recommandations SFAR fournies ne traitent pas cette question.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q40",
+      "correctness": "incorrect",
+      "abstained": true,
+      "serious_error": "other",
+      "faithful": null,
+      "justification": "Indique que les recommandations ne traitent pas la question alors que la référence attend l'amoxicilline."
+     },
+     "judge_correct": 0.0,
+     "judge_correct_or_partial": 0.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q41",
@@ -680,7 +899,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Pour une fracture ouverte de mandibule, l'antibioprophylaxie recommandée est l'amoxicilline/clavulanate 2g IVL, avec réinjection de 1g si la durée dépasse 2h, puis toutes les 2h jusqu'à la fin de la chirurgie [S1][S6].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1), GRADE 2."
+     "answer": "Pour une fracture ouverte de mandibule, l'antibioprophylaxie recommandée est l'amoxicilline/clavulanate 2g IVL, avec réinjection de 1g si la durée dépasse 2h, puis toutes les 2h jusqu'à la fin de la chirurgie [S1][S6].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1), GRADE 2.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q41",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Recommande l'amoxicilline/clavulanate comme la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q42",
@@ -697,7 +927,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Pour une chirurgie orthognatique, l'antibioprophylaxie recommandée est la céfazoline 2g IVL, avec réinjection de 1g si la durée dépasse 4h, puis toutes les 4h jusqu'à la fin de la chirurgie, puis 1g/6h postopératoire pendant 48h maximum [S7].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1), GRADE 2."
+     "answer": "Pour une chirurgie orthognatique, l'antibioprophylaxie recommandée est la céfazoline 2g IVL, avec réinjection de 1g si la durée dépasse 4h, puis toutes les 4h jusqu'à la fin de la chirurgie, puis 1g/6h postopératoire pendant 48h maximum [S7].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1), GRADE 2.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q42",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Recommande la céfazoline comme la référence, la posologie postopératoire étant un détail supplémentaire."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q43",
@@ -716,7 +957,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Pour une chirurgie carcinologique cervico-faciale avec lambeau chez un patient allergique aux bêtalactamines, il faut rajouter la gentamicine 6-7 mg/kg IVL à la clindamycine [S1][S3]. La clindamycine est indiquée à la dose de 900 mg IVL dans l'encadré allergie aux bêtalactamines de la chirurgie stomatologique et maxillo-faciale [S5].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1), avis d’experts."
+     "answer": "Pour une chirurgie carcinologique cervico-faciale avec lambeau chez un patient allergique aux bêtalactamines, il faut rajouter la gentamicine 6-7 mg/kg IVL à la clindamycine [S1][S3]. La clindamycine est indiquée à la dose de 900 mg IVL dans l'encadré allergie aux bêtalactamines de la chirurgie stomatologique et maxillo-faciale [S5].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1), avis d’experts.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q43",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Recommande la clindamycine associée à la gentamicine, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q44",
@@ -733,7 +985,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Pour un remplacement valvulaire aortique sous CEC, l'antibioprophylaxie recommandée est la céfazoline 2g IVL, avec réinjection de 1g si la durée dépasse 4h, puis toutes les 4h jusqu'à la fin de la chirurgie, et 1g lors du priming si CEC [S4][S6].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1), GRADE 1."
+     "answer": "Pour un remplacement valvulaire aortique sous CEC, l'antibioprophylaxie recommandée est la céfazoline 2g IVL, avec réinjection de 1g si la durée dépasse 4h, puis toutes les 4h jusqu'à la fin de la chirurgie, et 1g lors du priming si CEC [S4][S6].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1), GRADE 1.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q44",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Recommande la céfazoline comme la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q45",
@@ -750,7 +1013,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Pour la pose d'une bioprothèse de valve aortique par voie transcutanée (TAVI), l'antibioprophylaxie recommandée est l'amoxicilline/clavulanate 2g IVL, avec réinjection de 1g si la durée dépasse 2h, puis toutes les 2h jusqu'à la fin de la procédure [S1][S2].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1), avis d’experts."
+     "answer": "Pour la pose d'une bioprothèse de valve aortique par voie transcutanée (TAVI), l'antibioprophylaxie recommandée est l'amoxicilline/clavulanate 2g IVL, avec réinjection de 1g si la durée dépasse 2h, puis toutes les 2h jusqu'à la fin de la procédure [S1][S2].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1), avis d’experts.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q45",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Recommande l'amoxicilline/clavulanate comme la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q46",
@@ -767,7 +1041,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Pour l'implantation d'un stimulateur cardiaque, l'antibioprophylaxie recommandée est la céfazoline 2g IVL, avec réinjection de 1g si la durée dépasse 4h, puis toutes les 4h jusqu'à la fin de la chirurgie [S1][S2].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1), GRADE 1."
+     "answer": "Pour l'implantation d'un stimulateur cardiaque, l'antibioprophylaxie recommandée est la céfazoline 2g IVL, avec réinjection de 1g si la durée dépasse 4h, puis toutes les 4h jusqu'à la fin de la chirurgie [S1][S2].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1), GRADE 1.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q46",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Recommande la céfazoline comme la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q48",
@@ -786,7 +1071,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Pour une assistance de courte durée (ECMO) avec mise en place percutanée sans abord chirurgical, il n'y a pas d'antibioprophylaxie [S2][S3].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1), avis d’experts."
+     "answer": "Pour une assistance de courte durée (ECMO) avec mise en place percutanée sans abord chirurgical, il n'y a pas d'antibioprophylaxie [S2][S3].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1), avis d’experts.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q48",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Conclut à l'absence d'antibioprophylaxie, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q50",
@@ -803,7 +1099,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Pour une amputation de membre (hors contexte septique), l'antibioprophylaxie recommandée est l'amoxicilline/clavulanate 2g IVL, avec réinjection de 1g si la durée dépasse 2h, puis toutes les 2h jusqu'à la fin de la chirurgie, puis 50 mg/kg/j en 3 ou 4 injections IVL pendant 48h [S1][S2].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1), GRADE 2."
+     "answer": "Pour une amputation de membre (hors contexte septique), l'antibioprophylaxie recommandée est l'amoxicilline/clavulanate 2g IVL, avec réinjection de 1g si la durée dépasse 2h, puis toutes les 2h jusqu'à la fin de la chirurgie, puis 50 mg/kg/j en 3 ou 4 injections IVL pendant 48h [S1][S2].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1), GRADE 2.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q50",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Recommande l'amoxicilline/clavulanate comme la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q51",
@@ -822,7 +1129,18 @@
      "false_abstention": 0.0,
      "correct": 0.0,
      "sourced": 1.0,
-     "answer": "Aucune antibioprophylaxie n'est recommandée pour la chirurgie des varices sans abord chirurgical du scarpa [S1][S3].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; Avis d'experts."
+     "answer": "Aucune antibioprophylaxie n'est recommandée pour la chirurgie des varices sans abord chirurgical du scarpa [S1][S3].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; Avis d'experts.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q51",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Conclut à l'absence d'antibioprophylaxie, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q52",
@@ -841,7 +1159,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Aucune antibioprophylaxie n'est recommandée pour le drainage thoracique, tunnellisé ou non [S6]. Dans le traumatisme thoracique fermé, les experts ne proposent pas d'antibioprophylaxie avant drainage thoracique [S7]. En cas de traumatisme pénétrant du thorax, ils suggèrent une antibioprophylaxie, par exemple amoxicilline + acide clavulanique pendant 24 à 48 h [S8].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) (Avis d'experts) ; Traumatisme Thoracique : Prise en charge des 48 premières heures, RFE SFAR 2014 (G2- pour les traumatismes fermés, G2+ pour les traumatismes pénétrants)."
+     "answer": "Aucune antibioprophylaxie n'est recommandée pour le drainage thoracique, tunnellisé ou non [S6]. Dans le traumatisme thoracique fermé, les experts ne proposent pas d'antibioprophylaxie avant drainage thoracique [S7]. En cas de traumatisme pénétrant du thorax, ils suggèrent une antibioprophylaxie, par exemple amoxicilline + acide clavulanique pendant 24 à 48 h [S8].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) (Avis d'experts) ; Traumatisme Thoracique : Prise en charge des 48 premières heures, RFE SFAR 2014 (G2- pour les traumatismes fermés, G2+ pour les traumatismes pénétrants).",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q52",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Conclut à l'absence d'antibioprophylaxie pour le drainage thoracique, conforme à la référence, la mention du traumatisme pénétrant étant un autre cas."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q53",
@@ -860,7 +1189,18 @@
      "false_abstention": 0.0,
      "correct": 0.0,
      "sourced": 1.0,
-     "answer": "Aucune antibioprophylaxie n'est recommandée pour une médiastinoscopie, avec ou sans biopsie [S1].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; Avis d'experts."
+     "answer": "Aucune antibioprophylaxie n'est recommandée pour une médiastinoscopie, avec ou sans biopsie [S1].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; Avis d'experts.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q53",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Conclut à l'absence d'antibioprophylaxie, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q59",
@@ -879,7 +1219,18 @@
      "false_abstention": 0.0,
      "correct": 0.0,
      "sourced": 1.0,
-     "answer": "Aucune antibioprophylaxie n'est recommandée pour une lipoaspiration sous anesthésie générale ou locale [S1][S2].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; Avis d'experts."
+     "answer": "Aucune antibioprophylaxie n'est recommandée pour une lipoaspiration sous anesthésie générale ou locale [S1][S2].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; Avis d'experts.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q59",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Conclut à l'absence d'antibioprophylaxie, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q61",
@@ -896,7 +1247,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Pour les lambeaux libres microchirurgicaux ou pédiculés en chirurgie plastique pédiatrique, l'antibioprophylaxie recommandée est la céfazoline 30 mg/kg IVL, avec 30 mg/kg si durée > 4h puis toutes les 4h jusqu'à fin de chirurgie [S6]. Pour la chirurgie carcinologique cervico-faciale avec lambeau libre ou pédiculé chez l'adulte, il s'agit d'amoxicilline/clavulanate 2g IVL, avec 1g si durée > 2h puis toutes les 2h jusqu'à fin de chirurgie [S7].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; Avis d'experts."
+     "answer": "Pour les lambeaux libres microchirurgicaux ou pédiculés en chirurgie plastique pédiatrique, l'antibioprophylaxie recommandée est la céfazoline 30 mg/kg IVL, avec 30 mg/kg si durée > 4h puis toutes les 4h jusqu'à fin de chirurgie [S6]. Pour la chirurgie carcinologique cervico-faciale avec lambeau libre ou pédiculé chez l'adulte, il s'agit d'amoxicilline/clavulanate 2g IVL, avec 1g si durée > 2h puis toutes les 2h jusqu'à fin de chirurgie [S7].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; Avis d'experts.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q61",
+      "correctness": "partial",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Mentionne la céfazoline pour la chirurgie pédiatrique mais propose aussi l'amoxicilline/clavulanate pour l'adulte sans trancher, sans contresens explicite."
+     },
+     "judge_correct": 0.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q62",
@@ -915,7 +1277,18 @@
      "false_abstention": 0.0,
      "correct": 0.0,
      "sourced": 1.0,
-     "answer": "Aucune antibioprophylaxie n'est recommandée pour une greffe cutanée hors brûlures [S1][S7].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; Avis d'experts."
+     "answer": "Aucune antibioprophylaxie n'est recommandée pour une greffe cutanée hors brûlures [S1][S7].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; Avis d'experts.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q62",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Conclut à l'absence d'antibioprophylaxie, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q67",
@@ -934,7 +1307,18 @@
      "false_abstention": 0.0,
      "correct": 0.0,
      "sourced": 1.0,
-     "answer": "Aucune antibioprophylaxie n'est recommandée pour la chirurgie du mamelon ou de la plaque aréolo-mamelonnaire [S1][S2].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; Avis d'experts."
+     "answer": "Aucune antibioprophylaxie n'est recommandée pour la chirurgie du mamelon ou de la plaque aréolo-mamelonnaire [S1][S2].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; Avis d'experts.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q67",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Conclut à l'absence d'antibioprophylaxie, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q69",
@@ -951,7 +1335,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Pour une annexectomie par voie coelioscopique : céfazoline 2 g IVL, avec 1g si durée > 4h puis toutes les 4h jusqu'à fin de chirurgie [S6][S7].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; GRADE 2."
+     "answer": "Pour une annexectomie par voie coelioscopique : céfazoline 2 g IVL, avec 1g si durée > 4h puis toutes les 4h jusqu'à fin de chirurgie [S6][S7].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; GRADE 2.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q69",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Recommande la céfazoline comme la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q70",
@@ -968,7 +1363,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Pour la résection de lésions endométriosiques avec atteinte rectale par coelioscopie : céfazoline 2 g IVL (1g si durée > 4h puis toutes les 4h jusqu'à fin de chirurgie) associée à métronidazole 1 g IVL en dose unique [S1][S7].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; Avis d'experts."
+     "answer": "Pour la résection de lésions endométriosiques avec atteinte rectale par coelioscopie : céfazoline 2 g IVL (1g si durée > 4h puis toutes les 4h jusqu'à fin de chirurgie) associée à métronidazole 1 g IVL en dose unique [S1][S7].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; Avis d'experts.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q70",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Recommande la céfazoline associée au métronidazole, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q71",
@@ -985,7 +1391,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Pour une hystérectomie totale sans annexectomie par laparotomie : céfoxitine 2g IVL, avec 1g si durée > 2h puis toutes les 2h jusqu'à fin de chirurgie [S1][S3].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; Avis d'experts."
+     "answer": "Pour une hystérectomie totale sans annexectomie par laparotomie : céfoxitine 2g IVL, avec 1g si durée > 2h puis toutes les 2h jusqu'à fin de chirurgie [S1][S3].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; Avis d'experts.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q71",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Recommande la céfoxitine comme la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q73",
@@ -1004,7 +1421,18 @@
      "false_abstention": 0.0,
      "correct": 0.0,
      "sourced": 1.0,
-     "answer": "Aucune antibioprophylaxie n'est recommandée pour une conisation du col utérin [S1].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; Avis d'experts."
+     "answer": "Aucune antibioprophylaxie n'est recommandée pour une conisation du col utérin [S1].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; Avis d'experts.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q73",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Conclut à l'absence d'antibioprophylaxie, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q74",
@@ -1023,7 +1451,18 @@
      "false_abstention": 1.0,
      "correct": 0.0,
      "sourced": 0.0,
-     "answer": "Les recommandations SFAR fournies ne traitent pas cette question."
+     "answer": "Les recommandations SFAR fournies ne traitent pas cette question.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q74",
+      "correctness": "incorrect",
+      "abstained": true,
+      "serious_error": "other",
+      "faithful": null,
+      "justification": "Indique que les recommandations ne traitent pas la question alors que la référence indique l'absence d'antibioprophylaxie."
+     },
+     "judge_correct": 0.0,
+     "judge_correct_or_partial": 0.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q75",
@@ -1042,7 +1481,18 @@
      "false_abstention": 0.0,
      "correct": 0.0,
      "sourced": 1.0,
-     "answer": "Aucune antibioprophylaxie n'est recommandée pour une biopsie de l'endomètre par hystéroscopie [S1]. Une antibioprophylaxie par céfazoline limitée à la période opératoire peut être considérée en cas d'endométriose, d'antécédent de chirurgies pelviennes ou d'infection génitale haute [S1].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; GRADE 1 pour l'absence d'antibioprophylaxie, Avis d'experts pour la céfazoline en situation à risque."
+     "answer": "Aucune antibioprophylaxie n'est recommandée pour une biopsie de l'endomètre par hystéroscopie [S1]. Une antibioprophylaxie par céfazoline limitée à la période opératoire peut être considérée en cas d'endométriose, d'antécédent de chirurgies pelviennes ou d'infection génitale haute [S1].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; GRADE 1 pour l'absence d'antibioprophylaxie, Avis d'experts pour la céfazoline en situation à risque.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q75",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Conclut à l'absence d'antibioprophylaxie, conforme à la référence, la mention de céfazoline en situation à risque étant un détail supplémentaire."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q78",
@@ -1061,7 +1511,18 @@
      "false_abstention": 0.0,
      "correct": 0.0,
      "sourced": 1.0,
-     "answer": "Aucune antibioprophylaxie n'est recommandée pour une nymphoplastie de réduction [S1].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; GRADE 2."
+     "answer": "Aucune antibioprophylaxie n'est recommandée pour une nymphoplastie de réduction [S1].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; GRADE 2.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q78",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Conclut à l'absence d'antibioprophylaxie, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q79",
@@ -1078,7 +1539,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Pour une césarienne programmée : céfazoline 2g IVL, avec 1g si durée > 4h puis toutes les 4h jusqu'à fin de chirurgie [S2][S7]. L'injection est faite, autant que possible, avant l'incision [S5][S7]. Aucune alternative à la céfazoline n'est proposée pour la césarienne [S3].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; GRADE 2."
+     "answer": "Pour une césarienne programmée : céfazoline 2g IVL, avec 1g si durée > 4h puis toutes les 4h jusqu'à fin de chirurgie [S2][S7]. L'injection est faite, autant que possible, avant l'incision [S5][S7]. Aucune alternative à la céfazoline n'est proposée pour la césarienne [S3].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; GRADE 2.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q79",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Recommande la céfazoline comme la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q80",
@@ -1097,7 +1569,18 @@
      "false_abstention": 0.0,
      "correct": 0.0,
      "sourced": 1.0,
-     "answer": "Aucune antibioprophylaxie n'est recommandée pour un cerclage du col de l'utérus au cours de la grossesse par voie transvaginale [S1][S3].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; Avis d'experts."
+     "answer": "Aucune antibioprophylaxie n'est recommandée pour un cerclage du col de l'utérus au cours de la grossesse par voie transvaginale [S1][S3].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; Avis d'experts.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q80",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Conclut à l'absence d'antibioprophylaxie, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q81",
@@ -1114,7 +1597,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Pour une révision de la cavité de l'utérus après délivrance naturelle : céfazoline 2g IVL en dose unique lors de la révision ou de la délivrance manuelle [S2].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; Avis d'experts."
+     "answer": "Pour une révision de la cavité de l'utérus après délivrance naturelle : céfazoline 2g IVL en dose unique lors de la révision ou de la délivrance manuelle [S2].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; Avis d'experts.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q81",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Recommande la céfazoline en dose unique, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q83",
@@ -1133,7 +1627,18 @@
      "false_abstention": 0.0,
      "correct": 0.0,
      "sourced": 1.0,
-     "answer": "Aucune antibioprophylaxie n'est recommandée pour l'évacuation d'un utérus gravide par aspiration et/ou curetage au 1er trimestre de la grossesse [S1].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; GRADE 2."
+     "answer": "Aucune antibioprophylaxie n'est recommandée pour l'évacuation d'un utérus gravide par aspiration et/ou curetage au 1er trimestre de la grossesse [S1].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; GRADE 2.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q83",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Conclut à l'absence d'antibioprophylaxie, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q84",
@@ -1152,7 +1657,18 @@
      "false_abstention": 0.0,
      "correct": 0.0,
      "sourced": 1.0,
-     "answer": "Aucune antibioprophylaxie n'est recommandée pour un prélèvement d'ovocytes par voie transvaginale avec échoguidage [S1]. Une antibioprophylaxie par céfazoline limitée à la période opératoire peut être considérée en cas d'endométriose, d'antécédent de chirurgies pelviennes ou d'infection génitale haute [S1].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; GRADE 1 pour l'absence d'antibioprophylaxie, Avis d'experts pour la céfazoline en situation à risque."
+     "answer": "Aucune antibioprophylaxie n'est recommandée pour un prélèvement d'ovocytes par voie transvaginale avec échoguidage [S1]. Une antibioprophylaxie par céfazoline limitée à la période opératoire peut être considérée en cas d'endométriose, d'antécédent de chirurgies pelviennes ou d'infection génitale haute [S1].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; GRADE 1 pour l'absence d'antibioprophylaxie, Avis d'experts pour la céfazoline en situation à risque.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q84",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Conclut à l'absence d'antibioprophylaxie, conforme à la référence, la céfazoline en situation à risque étant un détail supplémentaire."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q85",
@@ -1169,7 +1685,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Pour une oesophagectomie : céfazoline 2g IVL, avec 1g si durée > 4h puis toutes les 4h jusqu'à fin de chirurgie [S1][S2].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; Avis d'experts."
+     "answer": "Pour une oesophagectomie : céfazoline 2g IVL, avec 1g si durée > 4h puis toutes les 4h jusqu'à fin de chirurgie [S1][S2].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; Avis d'experts.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q85",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Recommande la céfazoline comme la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q87",
@@ -1186,7 +1713,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Pour la mise en place d'un anneau gastrique : céfazoline 2g IVL, avec 1g si durée > 4h puis toutes les 4h jusqu'à fin de chirurgie [S1]. Cette dose s'applique jusqu'à un IMC ≤ 50 kg/m² en respectant les intervalles de réinjection, et le céfuroxime n'est pas proposé en alternative dans cette chirurgie [S7].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; Avis d'experts."
+     "answer": "Pour la mise en place d'un anneau gastrique : céfazoline 2g IVL, avec 1g si durée > 4h puis toutes les 4h jusqu'à fin de chirurgie [S1]. Cette dose s'applique jusqu'à un IMC ≤ 50 kg/m² en respectant les intervalles de réinjection, et le céfuroxime n'est pas proposé en alternative dans cette chirurgie [S7].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; Avis d'experts.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q87",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Recommande la céfazoline comme la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q88",
@@ -1203,7 +1741,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Pour une résection de l'intestin grêle par laparotomie : céfoxitine 2g IVL, avec 1g si durée > 2h puis toutes les 2h jusqu'à fin de chirurgie [S1].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; Avis d'experts."
+     "answer": "Pour une résection de l'intestin grêle par laparotomie : céfoxitine 2g IVL, avec 1g si durée > 2h puis toutes les 2h jusqu'à fin de chirurgie [S1].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; Avis d'experts.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q88",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Recommande la céfoxitine comme la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q89",
@@ -1220,7 +1769,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Pour une appendicectomie programmée : céfoxitine 2 g IVL, avec 1g si durée > 2h puis toutes les 2h jusqu'à fin de chirurgie [S1][S5].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; Avis d'experts."
+     "answer": "Pour une appendicectomie programmée : céfoxitine 2 g IVL, avec 1g si durée > 2h puis toutes les 2h jusqu'à fin de chirurgie [S1][S5].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; Avis d'experts.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q89",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Recommande la céfoxitine comme la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q91",
@@ -1237,7 +1797,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Pour la chirurgie des hémorroïdes chez l'adulte : métronidazole 1g IVL en dose unique [S2]. Chez l'enfant : métronidazole 15 mg/kg IVL en dose unique [S1].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; Avis d'experts."
+     "answer": "Pour la chirurgie des hémorroïdes chez l'adulte : métronidazole 1g IVL en dose unique [S2]. Chez l'enfant : métronidazole 15 mg/kg IVL en dose unique [S1].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; Avis d'experts.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q91",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Recommande le métronidazole comme la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q95",
@@ -1254,7 +1825,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Pour une splénectomie programmée par laparotomie : céfazoline 2g IVL, avec 1g si durée > 4h puis toutes les 4h jusqu'à fin de chirurgie [S1][S3].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; Avis d'experts."
+     "answer": "Pour une splénectomie programmée par laparotomie : céfazoline 2g IVL, avec 1g si durée > 4h puis toutes les 4h jusqu'à fin de chirurgie [S1][S3].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; Avis d'experts.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q95",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Recommande la céfazoline comme la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q96",
@@ -1271,7 +1853,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Pour une pancréatectomie gauche avec ou sans conservation de la rate : céfazoline 2g IVL, avec 1g si durée > 4h puis toutes les 4h jusqu'à fin de chirurgie [S1][S2].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; GRADE 2."
+     "answer": "Pour une pancréatectomie gauche avec ou sans conservation de la rate : céfazoline 2g IVL, avec 1g si durée > 4h puis toutes les 4h jusqu'à fin de chirurgie [S1][S2].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; GRADE 2.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q96",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse donne la céfazoline, identique à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q97",
@@ -1288,7 +1881,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Pour une duodéno-pancréatectomie céphalique (DPC) sans geste de drainage biliaire préopératoire, l'antibioprophylaxie recommandée est la céfoxitine 2 g IVL [S1][S2]. Réinjection de 1g si durée > 2h, puis toutes les 2h jusqu'à fin de chirurgie [S1][S2].\n\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle — RFE SFAR 2026 (V3.1), GRADE 1."
+     "answer": "Pour une duodéno-pancréatectomie céphalique (DPC) sans geste de drainage biliaire préopératoire, l'antibioprophylaxie recommandée est la céfoxitine 2 g IVL [S1][S2]. Réinjection de 1g si durée > 2h, puis toutes les 2h jusqu'à fin de chirurgie [S1][S2].\n\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle — RFE SFAR 2026 (V3.1), GRADE 1.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q97",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse donne la céfoxitine, identique à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q98",
@@ -1305,7 +1909,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Pour une duodéno-pancréatectomie totale (DPT) pour ampullome ou avec antécédent de drainage biliaire, l'antibioprophylaxie recommandée est la pipéracilline + tazobactam 4g IVL [S2][S4]. Réinjection de 4g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie [S2][S4].\n\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle — RFE SFAR 2026 (V3.1), GRADE 2."
+     "answer": "Pour une duodéno-pancréatectomie totale (DPT) pour ampullome ou avec antécédent de drainage biliaire, l'antibioprophylaxie recommandée est la pipéracilline + tazobactam 4g IVL [S2][S4]. Réinjection de 4g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie [S2][S4].\n\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle — RFE SFAR 2026 (V3.1), GRADE 2.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q98",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse donne la pipéracilline/tazobactam, identique à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q99",
@@ -1322,7 +1937,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Pour une transplantation hépatique (foie total ou foie réduit) chez l'adulte, l'antibioprophylaxie est la céfoxitine 2g IVL [S4][S7]. Réinjection de 1g si durée > 2h, puis toutes les 2h jusqu'à fin de chirurgie [S4][S7].\n\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle — RFE SFAR 2026 (V3.1), avis d'experts."
+     "answer": "Pour une transplantation hépatique (foie total ou foie réduit) chez l'adulte, l'antibioprophylaxie est la céfoxitine 2g IVL [S4][S7]. Réinjection de 1g si durée > 2h, puis toutes les 2h jusqu'à fin de chirurgie [S4][S7].\n\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle — RFE SFAR 2026 (V3.1), avis d'experts.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q99",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse donne la céfoxitine, identique à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q100",
@@ -1339,7 +1965,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Pour une cure de hernie inguinale avec prothèse (voie ouverte ou laparoscopique), l'antibioprophylaxie recommandée est la céfazoline 2g IVL [S3][S7]. Réinjection de 1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie [S3][S7].\n\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle — RFE SFAR 2026 (V3.1), GRADE 2."
+     "answer": "Pour une cure de hernie inguinale avec prothèse (voie ouverte ou laparoscopique), l'antibioprophylaxie recommandée est la céfazoline 2g IVL [S3][S7]. Réinjection de 1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie [S3][S7].\n\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle — RFE SFAR 2026 (V3.1), GRADE 2.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q100",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse donne la céfazoline, identique à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q101",
@@ -1358,7 +1995,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Pour une cure de hernie de l'aine sans prothèse, il n'y a pas d'antibioprophylaxie [S1][S4].\n\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle — RFE SFAR 2026 (V3.1), GRADE 2."
+     "answer": "Pour une cure de hernie de l'aine sans prothèse, il n'y a pas d'antibioprophylaxie [S1][S4].\n\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle — RFE SFAR 2026 (V3.1), GRADE 2.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q101",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse indique l'absence d'antibioprophylaxie, comme la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q102",
@@ -1375,7 +2023,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Pour la pose d'une gastrostomie par voie transcutanée avec guidage endoscopique, l'antibioprophylaxie recommandée est la céfazoline 2g IVL en dose unique [S2][S3].\n\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle — RFE SFAR 2026 (V3.1), GRADE 1."
+     "answer": "Pour la pose d'une gastrostomie par voie transcutanée avec guidage endoscopique, l'antibioprophylaxie recommandée est la céfazoline 2g IVL en dose unique [S2][S3].\n\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle — RFE SFAR 2026 (V3.1), GRADE 1.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q102",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse donne la céfazoline en dose unique, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q104",
@@ -1394,7 +2053,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Pour une CPRE avec extraction de calculs biliaires et drainage biliaire complet satisfaisant, il n'y a pas d'antibioprophylaxie [S1][S2].\n\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle — RFE SFAR 2026 (V3.1), GRADE 1."
+     "answer": "Pour une CPRE avec extraction de calculs biliaires et drainage biliaire complet satisfaisant, il n'y a pas d'antibioprophylaxie [S1][S2].\n\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle — RFE SFAR 2026 (V3.1), GRADE 1.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q104",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse indique l'absence d'antibioprophylaxie, comme la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q105",
@@ -1413,7 +2083,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Pour une chimio-embolisation hépatique, il n'y a pas d'antibioprophylaxie [S1][S2].\n\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle — RFE SFAR 2026 (V3.1), avis d'experts."
+     "answer": "Pour une chimio-embolisation hépatique, il n'y a pas d'antibioprophylaxie [S1][S2].\n\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle — RFE SFAR 2026 (V3.1), avis d'experts.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q105",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse indique l'absence d'antibioprophylaxie, comme la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q107",
@@ -1432,7 +2113,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Pour une prostatectomie totale, il n'y a pas d'antibioprophylaxie [S1][S2][S4].\n\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle — RFE SFAR 2026 (V3.1), avis d'experts ; Place de l'ECBU avant une prise en charge urologique chirurgicale ou interventionnelle chez l'adulte — RPP SFAR 2026, GRADE 1."
+     "answer": "Pour une prostatectomie totale, il n'y a pas d'antibioprophylaxie [S1][S2][S4].\n\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle — RFE SFAR 2026 (V3.1), avis d'experts ; Place de l'ECBU avant une prise en charge urologique chirurgicale ou interventionnelle chez l'adulte — RPP SFAR 2026, GRADE 1.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q107",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse indique l'absence d'antibioprophylaxie, comme la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q108",
@@ -1449,7 +2141,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Pour des biopsies de prostate par voie transrectale, l'antibioprophylaxie recommandée est la fosfomycine-trométamol 3g per os, en dose unique, 2 à 4 h avant le geste [S5][S7][S9].\n\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle — RFE SFAR 2026 (V3.1), GRADE 1."
+     "answer": "Pour des biopsies de prostate par voie transrectale, l'antibioprophylaxie recommandée est la fosfomycine-trométamol 3g per os, en dose unique, 2 à 4 h avant le geste [S5][S7][S9].\n\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle — RFE SFAR 2026 (V3.1), GRADE 1.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q108",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse donne la fosfomycine-trométamol 3 g, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q109",
@@ -1468,7 +2171,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Pour des biopsies de prostate par voie transpérinéale, il n'y a pas d'antibioprophylaxie [S1][S2].\n\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle — RFE SFAR 2026 (V3.1), avis d'experts."
+     "answer": "Pour des biopsies de prostate par voie transpérinéale, il n'y a pas d'antibioprophylaxie [S1][S2].\n\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle — RFE SFAR 2026 (V3.1), avis d'experts.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q109",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse indique l'absence d'antibioprophylaxie, comme la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q111",
@@ -1485,7 +2199,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Pour une cystectomie sustrigonale totale, l'antibioprophylaxie recommandée est la céfoxitine 2 g IVL [S1][S2]. Réinjection de 1g si durée > 2h, puis toutes les 2h jusqu'à fin de chirurgie [S1][S2].\n\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle — RFE SFAR 2026 (V3.1), avis d'experts."
+     "answer": "Pour une cystectomie sustrigonale totale, l'antibioprophylaxie recommandée est la céfoxitine 2 g IVL [S1][S2]. Réinjection de 1g si durée > 2h, puis toutes les 2h jusqu'à fin de chirurgie [S1][S2].\n\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle — RFE SFAR 2026 (V3.1), avis d'experts.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q111",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse donne la céfoxitine, identique à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q114",
@@ -1502,7 +2227,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Pour une urétéroscopie diagnostique, l'antibioprophylaxie recommandée est la céfazoline 2g IVL [S4][S5]. Réinjection de 1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie [S4][S5].\n\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle — RFE SFAR 2026 (V3.1), GRADE 1 pour le principe d'administrer une antibioprophylaxie ; schéma de niveau avis d'experts [S12]."
+     "answer": "Pour une urétéroscopie diagnostique, l'antibioprophylaxie recommandée est la céfazoline 2g IVL [S4][S5]. Réinjection de 1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie [S4][S5].\n\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle — RFE SFAR 2026 (V3.1), GRADE 1 pour le principe d'administrer une antibioprophylaxie ; schéma de niveau avis d'experts [S12].",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q114",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse donne la céfazoline, identique à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q115",
@@ -1521,7 +2257,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Pour une lithotritie extra-corporelle, il n'y a pas d'antibioprophylaxie [S1][S2].\n\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle — RFE SFAR 2026 (V3.1), GRADE 1."
+     "answer": "Pour une lithotritie extra-corporelle, il n'y a pas d'antibioprophylaxie [S1][S2].\n\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle — RFE SFAR 2026 (V3.1), GRADE 1.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q115",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse indique l'absence d'antibioprophylaxie, comme la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q117",
@@ -1540,7 +2287,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Pour une tympanoplastie (myringoplastie), il n'y a pas d'antibioprophylaxie [S2][S3].\n\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle — RFE SFAR 2026 (V3.1), GRADE 2."
+     "answer": "Pour une tympanoplastie (myringoplastie), il n'y a pas d'antibioprophylaxie [S2][S3].\n\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle — RFE SFAR 2026 (V3.1), GRADE 2.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q117",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse indique l'absence d'antibioprophylaxie, comme la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q118",
@@ -1559,7 +2317,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Pour une stapédectomie pour otospongiose, il n'y a pas d'antibioprophylaxie [S2][S1][S3].\n\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle — RFE SFAR 2026 (V3.1), GRADE 2."
+     "answer": "Pour une stapédectomie pour otospongiose, il n'y a pas d'antibioprophylaxie [S2][S1][S3].\n\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle — RFE SFAR 2026 (V3.1), GRADE 2.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q118",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse indique l'absence d'antibioprophylaxie, comme la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q119",
@@ -1578,7 +2347,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Pour une chirurgie de cholestéatome non infecté, il n'y a pas d'antibioprophylaxie [S1][S3].\n\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle — RFE SFAR 2026 (V3.1), GRADE 2."
+     "answer": "Pour une chirurgie de cholestéatome non infecté, il n'y a pas d'antibioprophylaxie [S1][S3].\n\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle — RFE SFAR 2026 (V3.1), GRADE 2.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q119",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse indique l'absence d'antibioprophylaxie, comme la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q120",
@@ -1597,7 +2377,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Pour une adénoïdectomie isolée, il n'y a pas d'antibioprophylaxie [S1][S5].\n\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle — RFE SFAR 2026 (V3.1), GRADE 1."
+     "answer": "Pour une adénoïdectomie isolée, il n'y a pas d'antibioprophylaxie [S1][S5].\n\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle — RFE SFAR 2026 (V3.1), GRADE 1.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q120",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse indique l'absence d'antibioprophylaxie, comme la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q121",
@@ -1616,7 +2407,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Pour une laryngoscopie en suspension avec geste thérapeutique (laser, cordectomie), il n'y a pas d'antibioprophylaxie [S1][S3].\n\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle — RFE SFAR 2026 (V3.1), avis d'experts."
+     "answer": "Pour une laryngoscopie en suspension avec geste thérapeutique (laser, cordectomie), il n'y a pas d'antibioprophylaxie [S1][S3].\n\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle — RFE SFAR 2026 (V3.1), avis d'experts.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q121",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse indique l'absence d'antibioprophylaxie, comme la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q122",
@@ -1635,7 +2437,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Pour une parathyroïdectomie, il n'y a pas d'antibioprophylaxie [S1][S5].\n\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle — RFE SFAR 2026 (V3.1), avis d'experts."
+     "answer": "Pour une parathyroïdectomie, il n'y a pas d'antibioprophylaxie [S1][S5].\n\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle — RFE SFAR 2026 (V3.1), avis d'experts.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q122",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse indique l'absence d'antibioprophylaxie, comme la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q127",
@@ -1654,7 +2467,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Pour la création ou la reprise d'une fistule artério-veineuse sans mise en place de matériel, il n'y a pas d'antibioprophylaxie [S1][S2].\n\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle — RFE SFAR 2026 (V3.1), GRADE 2."
+     "answer": "Pour la création ou la reprise d'une fistule artério-veineuse sans mise en place de matériel, il n'y a pas d'antibioprophylaxie [S1][S2].\n\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle — RFE SFAR 2026 (V3.1), GRADE 2.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q127",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse indique l'absence d'antibioprophylaxie sans matériel, comme la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q128",
@@ -1671,7 +2495,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Pour la création ou la reprise d'une fistule artério-veineuse avec mise en place de matériel, l'antibioprophylaxie recommandée est la céfazoline 2g IVL [S2][S3]. Réinjection de 1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie [S2][S3].\n\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle — RFE SFAR 2026 (V3.1), GRADE 2."
+     "answer": "Pour la création ou la reprise d'une fistule artério-veineuse avec mise en place de matériel, l'antibioprophylaxie recommandée est la céfazoline 2g IVL [S2][S3]. Réinjection de 1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie [S2][S3].\n\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle — RFE SFAR 2026 (V3.1), GRADE 2.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q128",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse donne la céfazoline avec matériel prothétique, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q129",
@@ -1688,7 +2523,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Pour une chirurgie des varices avec abord chirurgical du triangle de Scarpa, l'antibioprophylaxie recommandée est la céfazoline 2g IVL [S5][S7]. Réinjection de 1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie [S5][S7].\n\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle — RFE SFAR 2026 (V3.1), GRADE 2."
+     "answer": "Pour une chirurgie des varices avec abord chirurgical du triangle de Scarpa, l'antibioprophylaxie recommandée est la céfazoline 2g IVL [S5][S7]. Réinjection de 1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie [S5][S7].\n\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle — RFE SFAR 2026 (V3.1), GRADE 2.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q129",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse donne la céfazoline, identique à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q131",
@@ -1705,7 +2551,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Pour la fermeture d'un foramen ovale perméable par voie percutanée avec implantation de matériel, l'antibioprophylaxie recommandée est l'amoxicilline/clavulanate 2g IVL [S1][S2]. Réinjection de 1g si durée > 2h, puis toutes les 2h jusqu'à fin de chirurgie [S1][S2].\n\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle — RFE SFAR 2026 (V3.1), avis d'experts."
+     "answer": "Pour la fermeture d'un foramen ovale perméable par voie percutanée avec implantation de matériel, l'antibioprophylaxie recommandée est l'amoxicilline/clavulanate 2g IVL [S1][S2]. Réinjection de 1g si durée > 2h, puis toutes les 2h jusqu'à fin de chirurgie [S1][S2].\n\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle — RFE SFAR 2026 (V3.1), avis d'experts.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q131",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse donne l'amoxicilline/clavulanate, identique à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q132",
@@ -1722,7 +2579,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Pour une chirurgie du pneumothorax (y compris par voie thoracoscopique vidéo-assistée), l'antibioprophylaxie recommandée est la céfazoline 2g IVL [S1][S3]. Réinjection de 1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie [S1][S3].\n\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle — RFE SFAR 2026 (V3.1), avis d'experts."
+     "answer": "Pour une chirurgie du pneumothorax (y compris par voie thoracoscopique vidéo-assistée), l'antibioprophylaxie recommandée est la céfazoline 2g IVL [S1][S3]. Réinjection de 1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie [S1][S3].\n\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle — RFE SFAR 2026 (V3.1), avis d'experts.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q132",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse donne la céfazoline pour la chirurgie du pneumothorax, identique à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q133",
@@ -1739,7 +2607,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Pour un body-lift, l'antibioprophylaxie recommandée est la céfazoline 2g IVL [S1][S2]. Réinjection de 1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie [S1][S2].\n\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle — RFE SFAR 2026 (V3.1), GRADE 2."
+     "answer": "Pour un body-lift, l'antibioprophylaxie recommandée est la céfazoline 2g IVL [S1][S2]. Réinjection de 1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie [S1][S2].\n\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle — RFE SFAR 2026 (V3.1), GRADE 2.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q133",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse donne la céfazoline, identique à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q134",
@@ -1758,7 +2637,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Pas d'antibioprophylaxie pour une abdominoplastie de durée ≤ 2h [S1][S3].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle — RFE SFAR 2026 (V3.1), avis d'experts."
+     "answer": "Pas d'antibioprophylaxie pour une abdominoplastie de durée ≤ 2h [S1][S3].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle — RFE SFAR 2026 (V3.1), avis d'experts.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q134",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse indique l'absence d'antibioprophylaxie, comme la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q135",
@@ -1777,7 +2667,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Pas d'antibioprophylaxie pour une brachioplastie [S1][S2].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle — RFE SFAR 2026 (V3.1), avis d'experts."
+     "answer": "Pas d'antibioprophylaxie pour une brachioplastie [S1][S2].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle — RFE SFAR 2026 (V3.1), avis d'experts.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q135",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse indique l'absence d'antibioprophylaxie, comme la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q136",
@@ -1796,7 +2697,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Pas d'antibioprophylaxie pour un curage ganglionnaire axillaire ou inguinal seul [S4][S6].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle — RFE SFAR 2026 (V3.1), avis d'experts."
+     "answer": "Pas d'antibioprophylaxie pour un curage ganglionnaire axillaire ou inguinal seul [S4][S6].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle — RFE SFAR 2026 (V3.1), avis d'experts.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q136",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse indique l'absence d'antibioprophylaxie pour un curage seul, comme la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q137",
@@ -1813,7 +2725,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Génioplastie (avec ou sans implant) : amoxicilline/clavulanate 2g IVL, puis 1g si durée > 2h, puis toutes les 2h jusqu'à fin de chirurgie [S4][S6].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle — RFE SFAR 2026 (V3.1), avis d'experts."
+     "answer": "Génioplastie (avec ou sans implant) : amoxicilline/clavulanate 2g IVL, puis 1g si durée > 2h, puis toutes les 2h jusqu'à fin de chirurgie [S4][S6].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle — RFE SFAR 2026 (V3.1), avis d'experts.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q137",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse donne l'amoxicilline/clavulanate, identique à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q138",
@@ -1830,7 +2753,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Chez l'adulte, pose de substitut dermique : céfazoline 2g IVL, puis 1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie [S2][S6].\nChez l'enfant, céfazoline 30 mg/kg IVL, puis 30 mg/kg si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie [S1][S3][S4].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle — RFE SFAR 2026 (V3.1), avis d'experts."
+     "answer": "Chez l'adulte, pose de substitut dermique : céfazoline 2g IVL, puis 1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie [S2][S6].\nChez l'enfant, céfazoline 30 mg/kg IVL, puis 30 mg/kg si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie [S1][S3][S4].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle — RFE SFAR 2026 (V3.1), avis d'experts.",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q138",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse donne la céfazoline pour le substitut dermique, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q139",
@@ -1846,7 +2780,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Question : molécule de première intention, prothèse totale de genou.\nA. Amox/clav : réservée aux Gustilo 2-3, morsures [S5].\nB. Céfazoline : molécule des chirurgies orthopédiques avec matériel [S5].\nC. Clindamycine : non citée comme première intention.\nD. Vancomycine : non citée comme première intention.\nExtraits sans ligne explicite prothèse de genou ; choix le plus cohérent : céfazoline.\nRÉPONSE : B (SFAR 2026 [S5])"
+     "answer": "Question : molécule de première intention, prothèse totale de genou.\nA. Amox/clav : réservée aux Gustilo 2-3, morsures [S5].\nB. Céfazoline : molécule des chirurgies orthopédiques avec matériel [S5].\nC. Clindamycine : non citée comme première intention.\nD. Vancomycine : non citée comme première intention.\nExtraits sans ligne explicite prothèse de genou ; choix le plus cohérent : céfazoline.\nRÉPONSE : B (SFAR 2026 [S5])",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q139",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse tranche pour B (céfazoline), identique à la référence, malgré une réserve sur l'absence de ligne explicite."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q141",
@@ -1864,7 +2809,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Question : alternative de première intention si allergie aux bêtalactamines, prothèse de genou.\nA. Gentamicine : non citée en orthopédie programmée.\nB. Vancomycine : seconde intention [S1].\nC. Clindamycine 900 mg IVL : première intention [S1].\nD. Métronidazole : non cité.\nRÉPONSE : C (SFAR 2026 [S1])"
+     "answer": "Question : alternative de première intention si allergie aux bêtalactamines, prothèse de genou.\nA. Gentamicine : non citée en orthopédie programmée.\nB. Vancomycine : seconde intention [S1].\nC. Clindamycine 900 mg IVL : première intention [S1].\nD. Métronidazole : non cité.\nRÉPONSE : C (SFAR 2026 [S1])",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q141",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse tranche pour C (clindamycine), identique à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q144",
@@ -1880,7 +2836,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Question : acte nécessitant une antibioprophylaxie.\nA. DVE : pas d'antibioprophylaxie [S1][S3].\nB. Biopsie cérébrale : pas d'antibioprophylaxie [S1].\nC. DVP : céfazoline 2g IVL [S1][S5].\nD. Angiographie cérébrale : pas d'antibioprophylaxie [S2].\nRÉPONSE : C (SFAR 2026 [S1])"
+     "answer": "Question : acte nécessitant une antibioprophylaxie.\nA. DVE : pas d'antibioprophylaxie [S1][S3].\nB. Biopsie cérébrale : pas d'antibioprophylaxie [S1].\nC. DVP : céfazoline 2g IVL [S1][S5].\nD. Angiographie cérébrale : pas d'antibioprophylaxie [S2].\nRÉPONSE : C (SFAR 2026 [S1])",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q144",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse tranche pour C (dérivation ventriculo-péritonéale), identique à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q147",
@@ -1896,7 +2863,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Question : recommandation pour la chirurgie de la cataracte.\nA. Céfazoline IV : non recommandée ici.\nB. Céfuroxime intracamérulaire, dose unique en fin d'intervention [S1][S3].\nC. Vancomycine intravitréenne : traumatismes à globe ouvert [S1].\nD. Moxifloxacine : intracamérulaire si allergie, pas collyre [S1][S2].\nRÉPONSE : B (SFAR 2026 [S1])"
+     "answer": "Question : recommandation pour la chirurgie de la cataracte.\nA. Céfazoline IV : non recommandée ici.\nB. Céfuroxime intracamérulaire, dose unique en fin d'intervention [S1][S3].\nC. Vancomycine intravitréenne : traumatismes à globe ouvert [S1].\nD. Moxifloxacine : intracamérulaire si allergie, pas collyre [S1][S2].\nRÉPONSE : B (SFAR 2026 [S1])",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q147",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse tranche pour B (céfuroxime intracamérulaire), identique à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q149",
@@ -1912,7 +2890,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Question : lobectomie pulmonaire par thoracotomie.\nA. Amox/clav uniquement : l'extrait dit « au choix » [S2].\nB. Céfazoline uniquement : idem [S2].\nC. Céfuroxime uniquement : idem [S3][S5].\nD. Amox/clav ou céfazoline ou céfuroxime : au choix [S2][S5].\nRÉPONSE : D (SFAR 2026 [S2])"
+     "answer": "Question : lobectomie pulmonaire par thoracotomie.\nA. Amox/clav uniquement : l'extrait dit « au choix » [S2].\nB. Céfazoline uniquement : idem [S2].\nC. Céfuroxime uniquement : idem [S3][S5].\nD. Amox/clav ou céfazoline ou céfuroxime : au choix [S2][S5].\nRÉPONSE : D (SFAR 2026 [S2])",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q149",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse tranche pour D (amoxicilline/clavulanate, céfazoline ou céfuroxime au choix), identique à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q153",
@@ -1928,7 +2917,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Question : hystérectomie totale par coelioscopie avec annexectomie.\nA. Céfazoline : réservée à l'hystérectomie subtotale [S1].\nB. Céfoxitine 2g IVL : hystérectomie totale [S2].\nC. Amox/clav : non indiquée.\nD. Céfuroxime : non indiqué pour ce geste.\nRÉPONSE : B (SFAR 2026 [S2])"
+     "answer": "Question : hystérectomie totale par coelioscopie avec annexectomie.\nA. Céfazoline : réservée à l'hystérectomie subtotale [S1].\nB. Céfoxitine 2g IVL : hystérectomie totale [S2].\nC. Amox/clav : non indiquée.\nD. Céfuroxime : non indiqué pour ce geste.\nRÉPONSE : B (SFAR 2026 [S2])",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q153",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse tranche pour B (céfoxitine), identique à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q154",
@@ -1944,7 +2944,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Question : coelioscopie sans antibioprophylaxie.\nA. Annexectomie : céfazoline [S5].\nB. Curage pelvien : céfazoline [S5].\nC. Kystectomie ovarienne : pas d'antibioprophylaxie [S1].\nD. Omentectomie : céfazoline [S5].\nRÉPONSE : C (SFAR 2026 [S1])"
+     "answer": "Question : coelioscopie sans antibioprophylaxie.\nA. Annexectomie : céfazoline [S5].\nB. Curage pelvien : céfazoline [S5].\nC. Kystectomie ovarienne : pas d'antibioprophylaxie [S1].\nD. Omentectomie : céfazoline [S5].\nRÉPONSE : C (SFAR 2026 [S1])",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q154",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse tranche pour C (kystectomie ovarienne), identique à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q156",
@@ -1960,7 +2971,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Question : résection de lésions endométriosiques avec atteinte rectale.\nA. Céfazoline seule : sans métronidazole, incomplet [S1].\nB. Céfoxitine seule : non indiquée [S1].\nC. Céfazoline 2 g + métronidazole 1 g IVL [S1].\nD. Amox/clav : non indiquée.\nRÉPONSE : C (SFAR 2026 [S1])"
+     "answer": "Question : résection de lésions endométriosiques avec atteinte rectale.\nA. Céfazoline seule : sans métronidazole, incomplet [S1].\nB. Céfoxitine seule : non indiquée [S1].\nC. Céfazoline 2 g + métronidazole 1 g IVL [S1].\nD. Amox/clav : non indiquée.\nRÉPONSE : C (SFAR 2026 [S1])",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q156",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse tranche pour C (céfazoline plus métronidazole), identique à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q157",
@@ -1976,7 +2998,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Question : affirmation correcte, chirurgie bariatrique.\nA. Même molécule : faux, céfazoline versus céfoxitine [S1][S3].\nB. Anneau : céfazoline [S3] ; sleeve : céfoxitine [S1].\nC. Aucune antibioprophylaxie : faux [S1][S3].\nD. Toute chirurgie en céfoxitine : faux, anneau céfazoline [S3].\nRÉPONSE : B (SFAR 2026 [S1])"
+     "answer": "Question : affirmation correcte, chirurgie bariatrique.\nA. Même molécule : faux, céfazoline versus céfoxitine [S1][S3].\nB. Anneau : céfazoline [S3] ; sleeve : céfoxitine [S1].\nC. Aucune antibioprophylaxie : faux [S1][S3].\nD. Toute chirurgie en céfoxitine : faux, anneau céfazoline [S3].\nRÉPONSE : B (SFAR 2026 [S1])",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q157",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse tranche pour B, identique à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q158",
@@ -1992,7 +3025,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Question : protocole pour colectomie programmée.\nA. Céfoxitine seule : omet la préparation orale [S4].\nB. Tobramycine + métronidazole per os la veille, puis céfoxitine IV [S4].\nC. Amox/clav : non indiquée [S4].\nD. Céfazoline + métronidazole : non indiquée [S4].\nRÉPONSE : B (SFAR 2026 [S4])"
+     "answer": "Question : protocole pour colectomie programmée.\nA. Céfoxitine seule : omet la préparation orale [S4].\nB. Tobramycine + métronidazole per os la veille, puis céfoxitine IV [S4].\nC. Amox/clav : non indiquée [S4].\nD. Céfazoline + métronidazole : non indiquée [S4].\nRÉPONSE : B (SFAR 2026 [S4])",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q158",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse tranche pour B (tobramycine plus métronidazole puis céfoxitine), identique à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q159",
@@ -2008,7 +3052,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Question : cholécystectomie élective coelioscopique, indication.\nA. Patient < 60 ans sans comorbidité : non à haut risque [S2].\nB. Ictère et calcul de la VBP : patient à haut risque [S2].\nC. Toujours : faux, selon le risque [S2].\nD. Jamais : faux, patients à haut risque [S2].\nRÉPONSE : B (SFAR 2026 [S2])"
+     "answer": "Question : cholécystectomie élective coelioscopique, indication.\nA. Patient < 60 ans sans comorbidité : non à haut risque [S2].\nB. Ictère et calcul de la VBP : patient à haut risque [S2].\nC. Toujours : faux, selon le risque [S2].\nD. Jamais : faux, patients à haut risque [S2].\nRÉPONSE : B (SFAR 2026 [S2])",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q159",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse tranche pour B (ictère et calcul de la VBP), identique à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q160",
@@ -2024,7 +3079,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Question : biopsies de prostate.\nA. Les deux voies : faux, transpérinéale sans [S6].\nB. Aucune voie : faux, transrectale avec [S6].\nC. Seule transrectale : fosfomycine-trométamol 3g per os [S6][S3].\nD. Seule transpérinéale : faux [S6].\nRÉPONSE : C (SFAR 2026 [S6])"
+     "answer": "Question : biopsies de prostate.\nA. Les deux voies : faux, transpérinéale sans [S6].\nB. Aucune voie : faux, transrectale avec [S6].\nC. Seule transrectale : fosfomycine-trométamol 3g per os [S6][S3].\nD. Seule transpérinéale : faux [S6].\nRÉPONSE : C (SFAR 2026 [S6])",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q160",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse tranche pour C (seule la voie transrectale), identique à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q161",
@@ -2040,7 +3106,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Question : cure de hernie inguinale.\nA. Toujours : faux, hernie sans prothèse non [S2].\nB. Jamais : faux, avec prothèse céfazoline [S5].\nC. Uniquement avec prothèse : céfazoline 2g IVL [S5] ; sans prothèse aucune [S2].\nD. Uniquement sans prothèse : faux [S2][S5].\nRÉPONSE : C (SFAR 2026 [S5])"
+     "answer": "Question : cure de hernie inguinale.\nA. Toujours : faux, hernie sans prothèse non [S2].\nB. Jamais : faux, avec prothèse céfazoline [S5].\nC. Uniquement avec prothèse : céfazoline 2g IVL [S5] ; sans prothèse aucune [S2].\nD. Uniquement sans prothèse : faux [S2][S5].\nRÉPONSE : C (SFAR 2026 [S5])",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q161",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse tranche pour C (uniquement en cas de prothèse), identique à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q163",
@@ -2056,7 +3133,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Question : conduite INCORRECTE, fracture ouverte du radius.\nA. Amox/clav 2g IVL : schéma des fractures ouvertes Gustilo 2-3 [S7].\nB. Céfazoline + gentamicine : schéma alternatif, traumatisme complexe de la main [S3].\nC. Ceftriaxone couvrant l'antibioprophylaxie : aucun extrait ne le soutient ; incorrect.\nAntibioprophylaxie chirurgicale spécifique indiquée dans les extraits [S7].\nRÉPONSE : C (SFAR 2026 [S7])"
+     "answer": "Question : conduite INCORRECTE, fracture ouverte du radius.\nA. Amox/clav 2g IVL : schéma des fractures ouvertes Gustilo 2-3 [S7].\nB. Céfazoline + gentamicine : schéma alternatif, traumatisme complexe de la main [S3].\nC. Ceftriaxone couvrant l'antibioprophylaxie : aucun extrait ne le soutient ; incorrect.\nAntibioprophylaxie chirurgicale spécifique indiquée dans les extraits [S7].\nRÉPONSE : C (SFAR 2026 [S7])",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q163",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse identifie C comme la conduite incorrecte, identique à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q164",
@@ -2072,7 +3160,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Question : intervention otologique nécessitant une antibioprophylaxie.\nA. Tympanoplastie : pas d'antibioprophylaxie [S2][S3].\nB. Stapédectomie : pas d'antibioprophylaxie [S2][S3].\nC. Implant cochléaire : céfazoline [S2][S3].\nD. Cholestéatome non infecté : pas d'antibioprophylaxie [S2].\nRÉPONSE : C (SFAR 2026 [S2])"
+     "answer": "Question : intervention otologique nécessitant une antibioprophylaxie.\nA. Tympanoplastie : pas d'antibioprophylaxie [S2][S3].\nB. Stapédectomie : pas d'antibioprophylaxie [S2][S3].\nC. Implant cochléaire : céfazoline [S2][S3].\nD. Cholestéatome non infecté : pas d'antibioprophylaxie [S2].\nRÉPONSE : C (SFAR 2026 [S2])",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q164",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse tranche pour C (implant cochléaire), identique à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q165",
@@ -2088,7 +3187,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Question : chirurgie des glandes salivaires.\nA. Toujours : faux, sans accès bucco-pharyngé non [S2].\nB. Jamais : faux [S4].\nC. Uniquement si accès bucco-pharyngé : amox/clav [S4][S2].\nD. Uniquement sans accès : faux [S2][S4].\nRÉPONSE : C (SFAR 2026 [S4])"
+     "answer": "Question : chirurgie des glandes salivaires.\nA. Toujours : faux, sans accès bucco-pharyngé non [S2].\nB. Jamais : faux [S4].\nC. Uniquement si accès bucco-pharyngé : amox/clav [S4][S2].\nD. Uniquement sans accès : faux [S2][S4].\nRÉPONSE : C (SFAR 2026 [S4])",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q165",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse tranche pour C (uniquement en cas d'accès bucco-pharyngé), identique à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q166",
@@ -2104,7 +3214,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Question : antibioprophylaxie NON recommandée.\nA. Stent couvert : céfazoline [S4].\nB. Endoprothèse : céfazoline [S4].\nC. Stent nu avec facteurs de risque : céfazoline [S4].\nD. Stent nu sans facteur de risque : pas d'antibioprophylaxie [S1].\nRÉPONSE : D (SFAR 2026 [S1])"
+     "answer": "Question : antibioprophylaxie NON recommandée.\nA. Stent couvert : céfazoline [S4].\nB. Endoprothèse : céfazoline [S4].\nC. Stent nu avec facteurs de risque : céfazoline [S4].\nD. Stent nu sans facteur de risque : pas d'antibioprophylaxie [S1].\nRÉPONSE : D (SFAR 2026 [S1])",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q166",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse tranche pour D (stent nu sans facteur de risque), identique à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q168",
@@ -2120,7 +3241,18 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Question : fistule artério-veineuse.\nA. Tous les cas : faux, sans matériel non [S1].\nB. Jamais : faux, avec matériel [S3].\nC. Uniquement avec matériel : céfazoline 2g IVL [S3][S5] ; sans matériel aucune [S1].\nD. Uniquement sans matériel : faux [S1][S3].\nRÉPONSE : C (SFAR 2026 [S3])"
+     "answer": "Question : fistule artério-veineuse.\nA. Tous les cas : faux, sans matériel non [S1].\nB. Jamais : faux, avec matériel [S3].\nC. Uniquement avec matériel : céfazoline 2g IVL [S3][S5] ; sans matériel aucune [S1].\nD. Uniquement sans matériel : faux [S1][S3].\nRÉPONSE : C (SFAR 2026 [S3])",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q168",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse tranche pour C (uniquement en cas de matériel prothétique), identique à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q171",
@@ -2136,10 +3268,26 @@
      "false_abstention": 0.0,
      "correct": 1.0,
      "sourced": 1.0,
-     "answer": "Question : intervention sans antibioprophylaxie.\nA. Septo-rhinoplastie avec greffe : non couverte par les extraits.\nB. Glandes salivaires avec accès bucco-pharyngé : amox/clav [S3].\nC. Parathyroïdectomie : pas d'antibioprophylaxie [S5].\nD. Implant cochléaire : non couvert par les extraits.\nRÉPONSE : C (SFAR 2026 [S5])"
+     "answer": "Question : intervention sans antibioprophylaxie.\nA. Septo-rhinoplastie avec greffe : non couverte par les extraits.\nB. Glandes salivaires avec accès bucco-pharyngé : amox/clav [S3].\nC. Parathyroïdectomie : pas d'antibioprophylaxie [S5].\nD. Implant cochléaire : non couvert par les extraits.\nRÉPONSE : C (SFAR 2026 [S5])",
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q171",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse tranche pour C (parathyroïdectomie), identique à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     }
    ]
   }
  ],
- "comparisons": []
+ "comparisons": [],
+ "judge": {
+  "label": "claude-haiku-5-5 subagent (κ=0.88)",
+  "dir": "eval_internal/judge/runs/abp_sonnet_ctx12",
+  "missing": 0
+ }
 }

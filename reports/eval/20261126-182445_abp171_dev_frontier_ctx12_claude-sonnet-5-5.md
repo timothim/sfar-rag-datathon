@@ -14,3 +14,9 @@ Valeurs : moyenne en %, IC bootstrap 95 % entre crochets.
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
 | allergy | 5 | 0.0 [0–0] | 0.000 [0.00–0.00] | 0.0 [0–0] | 100.0 [100–100] | 80.0 [40–100] | 40.0 [0–80] | 100.0 [100–100] |
 | no_abp | 37 | 0.0 [0–0] | 0.000 [0.00–0.00] | 0.0 [0–0] | 100.0 [100–100] | 67.6 [51–81] | 2.7 [0–8] | 97.3 [92–100] |
+
+## Juge LLM (claude-haiku-5-5 subagent (κ=0.88))
+
+| Config | Correct (juge) | Correct ou partiel | Erreurs graves | Types |
+|---|---:|---:|---:|---|
+| `C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5` | 95.1 [90–99] | 96.1 [92–99] | 2.0 [0–5] | {'wrong_drug': 2} |
