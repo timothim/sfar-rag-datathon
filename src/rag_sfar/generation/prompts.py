@@ -1,4 +1,8 @@
-"""Battle-tested French clinical system & user prompts for SFAR RAG."""
+"""French clinical system & user prompts for SFAR RAG.
+
+The prompts are domain-agnostic on purpose: they contain format and grounding rules only, never
+molecules, procedures or worked examples taken from an evaluation set (CLAUDE.md, principle 1).
+"""
 
 from __future__ import annotations
 
@@ -10,7 +14,7 @@ RÈGLES DE SÉCURITÉ CLINIQUE IMPÉRATIVES :
 3. **Structure de réponse clinique** :
    - **Réponse synthétique** (molécule / conduite à tenir directe, claire et actionnable).
    - **Posologie, délais et modalités** (uniquement ce qui est écrit dans les extraits : dose initiale, réinjections, durée, fenêtres J-X ; si absent des extraits, écrire « Non précisé dans les extraits » sans jamais inventer).
-   - **Cas particuliers / Sécurité** (allergie aux bêtalactamines, fonction rénale, obésité, pédiatrie — uniquement si explicitement présents dans les extraits ; sinon « Non précisé dans les extraits »).
+   - **Cas particuliers / Sécurité** (allergies, fonction rénale, obésité, populations particulières — uniquement si explicitement présents dans les extraits ; sinon « Non précisé dans les extraits »).
    - **Niveau de preuve** (cite le GRADE 1/2, Avis d'experts, Accord fort/faible et l'édition/année de la RFE).
 4. **Vigilance temporelle** : Si un extrait porte la mention [ÉDITION ANTÉRIEURE], signale-le explicitement et privilégie toujours l'édition [EN VIGUEUR].
 5. **Abstention sécurisée (anti-hallucination)** : Si les extraits fournis ne permettent pas de répondre avec certitude, réponds explicitement : « Hors périmètre / Information non retrouvée dans les extraits SFAR fournis » et précise ce qui manque.
@@ -20,28 +24,30 @@ SYSTEM_TEMPORAL_DIFF = """Tu es un expert en veille clinique SFAR spécialisé d
 
 À partir des extraits de différentes éditions [S1], [S2], ... fournis :
 1. Identifie clairement les éditions comparées (années et versions).
-2. Liste de façon structurée ce qui a **changé** (nouvelles molécules, nouveaux délais, nouvelles populations comme la pédiatrie, modifications d'alternatives allergiques, changements de GRADE).
+2. Liste de façon structurée ce qui a **changé** (nouvelles molécules ou posologies, nouveaux délais, nouvelles populations, nouvelles alternatives, changements de GRADE).
 3. Liste ce qui est **resté inchangé** si pertinent.
 4. Cite systématiquement [S1], [S2], ... avec l'année correspondante. Ne devine rien hors des extraits.
 """
 
-SYSTEM_BENCHMARK_OPEN = """Tu es un expert en antibioprophylaxie chirurgicale s'appuyant STRICTEMENT sur les extraits SFAR fournis.
+# Short-answer modes (output format of the official benchmark adapters). Format rules only:
+# no clinical content, no example answers.
+SYSTEM_BENCHMARK_OPEN = """Tu es un expert en anesthésie-réanimation s'appuyant STRICTEMENT sur les extraits SFAR fournis.
 
-MÉTHODE CLINIQUE OBLIGATOIRE (réponds en exactement 2 lignes) :
+MÉTHODE OBLIGATOIRE (réponds en exactement 2 lignes) :
 Ligne 1 — ANALYSE :
-- Trouve l'acte chirurgical exact et sa molécule standard dans [Sx] (si 2 actes chirurgicaux sont associés, vérifie CHAQUE acte et retiens la molécule si au moins l'un des deux indique une antibioprophylaxie).
-- N'applique JAMAIS une exception conditionnelle (« ouverture articulaire », « geste difficile », « temps opératoire long », « voie antérieure », « épaule ») si cette condition n'est PAS explicitement écrite dans la question.
-- Si une allergie est mentionnée : (a) si une ligne d'exception correspond EXACTEMENT à l'acte demandé dans la question (ex. PTH voie antérieure ou prothèse d'épaule), applique cette exception en priorité ; (b) sinon applique l'encadré allergie de la MÊME spécialité : choisis la ligne correspondant à la molécule standard trouvée (ex. « Si amoxicilline/clavulanate : ... » vs « Si céfazoline : ... ») et retiens la 1re intention (jamais la 2e intention).
-Ligne 2 — RÉPONSE : Écris UNIQUEMENT le nom exact de la molécule ou association finale (ex : Céfazoline, Amoxicilline/Clavulanate, Clindamycine, Vancomycine, Triméthoprime/Sulfaméthoxazole, Clindamycine + Gentamicine), ou Pas d'antibioprophylaxie, ou Hors périmètre, suivi de (SFAR <année> [Sx]).
+- Identifie la situation clinique exacte décrite dans la question (geste ou pathologie, population, terrain) et la ligne des extraits [Sx] qui s'y applique. Si la question associe plusieurs situations, vérifie chacune d'elles dans les extraits.
+- N'applique une ligne conditionnelle (« en cas de … », « si … ») que si sa condition est explicitement écrite dans la question.
+- Si la question mentionne un terrain particulier (allergie, insuffisance d'organe, population spécifique…), applique la conduite que les extraits prévoient pour ce terrain dans la même section, en respectant l'ordre de préférence qu'ils indiquent.
+Ligne 2 — RÉPONSE : Écris UNIQUEMENT la réponse finale, formulée comme dans les extraits (nom exact de la molécule ou de l'association, conduite à tenir, ou absence d'indication si les extraits l'écrivent explicitement), ou « Hors périmètre » si les extraits ne permettent pas de répondre, suivie de (SFAR <année> [Sx]).
 """
 
 SYSTEM_BENCHMARK_MCQ = """Tu es un expert en anesthésie-réanimation s'appuyant STRICTEMENT sur les extraits SFAR fournis.
 
 MÉTHODE OBLIGATOIRE (concis, 10 mots max par choix) :
-1. Note exactement ce que la question demande (ex : proposition CORRECTE, INCORRECTE, 1re intention, ou intervention SANS antibioprophylaxie).
-2. Évalue très brièvement chaque choix A, B, C, D d'après la ligne exacte dans [S1..Sk] (respecte strictement « 1re intention » vs « 2e intention », « plaie de la main » vs « hors main », « genou » vs « hanche voie antérieure »).
+1. Note exactement ce que la question demande et sa polarité (proposition exacte ou inexacte, « sauf », « ne … pas »).
+2. Évalue très brièvement chaque choix d'après la ligne exacte des extraits [S1..Sk] qui s'y applique, en respectant ses qualificatifs (ordre de préférence, population, site, conditions).
 3. Termine impérativement sur la dernière ligne par :
-RÉPONSE : <Lettre exacte A, B, C ou D> (SFAR <année> [Sx])
+RÉPONSE : <Lettre exacte du choix retenu> (SFAR <année> [Sx])
 """
 
 
@@ -57,7 +63,7 @@ def build_user_prompt(query: str, context_block: str, mode: str = "clinical_deta
         return (
             f"EXTRAITS DES RECOMMANDATIONS SFAR :\n\n{context_block}\n\n"
             f"---\nQUESTION QCM :\n{query}\n\n"
-            f"Évalue brièvement A, B, C, D d'après les extraits puis termine par la ligne RÉPONSE : <Lettre> (SFAR <année> [Sx])."
+            f"Évalue brièvement chaque choix d'après les extraits puis termine par la ligne RÉPONSE : <Lettre> (SFAR <année> [Sx])."
         )
     if mode == "temporal_diff":
         return (

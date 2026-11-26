@@ -344,7 +344,7 @@ class SfarRagEngine:
                 f"ALERTE SÉCURITÉ CLINIQUE : Les molécules suivantes ne figurent PAS dans les "
                 f"extraits SFAR [S1]–[S{len(gen_chunks)}] : {', '.join(verification.ungrounded_molecules)}. "
                 f"Corrige ta réponse en t'appuyant UNIQUEMENT sur les molécules explicitement "
-                f"présentes dans les extraits fournis (ou réponds 'Pas d'antibioprophylaxie' / 'Hors périmètre')."
+                f"présentes dans les extraits fournis (ou réponds 'Hors périmètre' si les extraits ne permettent pas de répondre)."
             )
             t_rep = time.perf_counter()
             repaired_gen, rep_usage = self.llm.complete(
