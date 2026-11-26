@@ -133,9 +133,19 @@ _ABSTAIN_PATTERNS = [
 ]
 
 
+def _answer_head(answer: str) -> str:
+    """The part of an answer that carries the decision: the 'Réponse synthétique' line when the
+    answer is structured, else the first ~300 characters. Sub-sections saying 'non précisé dans
+    les extraits' about dosage do not make an answer an abstention."""
+    m = re.search(r"r[ée]ponse synth[ée]tique\**\s*:?\**\s*(.+)", answer, re.I)
+    if m:
+        return m.group(1).split("\n")[0]
+    return answer[:300]
+
+
 def is_abstention(answer: str) -> bool:
-    a = fold(answer)
-    return any(re.search(p, a) for p in _ABSTAIN_PATTERNS)
+    a = fold(_answer_head(answer))
+    return any(re.search(p, a) for p in _ABSTAIN_PATTERNS) or bool(re.search(r"non (?:retrouve|precise|disponible)", a))
 
 
 def extract_mcq_letter(answer: str) -> str | None:
