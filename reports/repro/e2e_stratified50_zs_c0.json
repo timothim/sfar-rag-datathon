@@ -1,0 +1,3408 @@
+{
+  "runs": [
+    {
+      "system": "Zero-Shot (LLM seul)",
+      "model": "Qwen2.5-7B-Instruct-4bit",
+      "index_dir": "none",
+      "total_questions": 50,
+      "overall_accuracy": 0.52,
+      "open_accuracy": 0.525,
+      "open_counts": "21/40",
+      "mcq_accuracy": 0.5,
+      "mcq_counts": "5/10",
+      "allergy_accuracy": 0.75,
+      "allergy_counts": "6/8",
+      "sourcing_rate": 0.0,
+      "mean_grounding_score": 0.0,
+      "hallucinated_molecule_queries": 0,
+      "rag_x_diagnostics": {
+        "total": 50,
+        "q1_grounded_success": 0,
+        "q2_lucky_guess": 26,
+        "q3_generator_error": 0,
+        "q4_retrieval_failure": 24,
+        "raw_accuracy": 0.52,
+        "grounded_accuracy": 0.0,
+        "accuracy_fallacy_gap": 0.52,
+        "context_utilization_efficiency": 0.0
+      },
+      "avg_prompt_tokens": 152.8,
+      "tokens_vs_long_context_pct": 99.84,
+      "elapsed_seconds": 33.49,
+      "errors": [
+        {
+          "id": "Q04",
+          "title": "PTH voie antérieure allergie",
+          "type": "open",
+          "expected": "Vancomycine",
+          "actual": "Clindamycine + Gentamicine",
+          "is_correct": false,
+          "sourcing_present": false,
+          "evidence_present": false,
+          "is_allergy": true,
+          "grounding_score": 0.0,
+          "hallucinated_molecules": [],
+          "latency_ms": 715.0,
+          "token_usage": {
+            "prompt_tokens": 159,
+            "completion_tokens": 10,
+            "total_tokens": 169
+          },
+          "top_source": ""
+        },
+        {
+          "id": "Q09",
+          "title": "Écrasement main > 2h",
+          "type": "open",
+          "expected": "Amoxicilline/Clavulanate",
+          "actual": "Céfazoline",
+          "is_correct": false,
+          "sourcing_present": false,
+          "evidence_present": false,
+          "is_allergy": false,
+          "grounding_score": 0.0,
+          "hallucinated_molecules": [],
+          "latency_ms": 611.6,
+          "token_usage": {
+            "prompt_tokens": 158,
+            "completion_tokens": 6,
+            "total_tokens": 164
+          },
+          "top_source": ""
+        },
+        {
+          "id": "Q16",
+          "title": "Splénectomie hémostase fixateur externe fémur",
+          "type": "open",
+          "expected": "Céfazoline",
+          "actual": "Pas d'antibioprophylaxie",
+          "is_correct": false,
+          "sourcing_present": false,
+          "evidence_present": false,
+          "is_allergy": false,
+          "grounding_score": 0.0,
+          "hallucinated_molecules": [],
+          "latency_ms": 793.7,
+          "token_usage": {
+            "prompt_tokens": 173,
+            "completion_tokens": 11,
+            "total_tokens": 184
+          },
+          "top_source": ""
+        },
+        {
+          "id": "Q22",
+          "title": "Plaie cranio-cérébrale",
+          "type": "open",
+          "expected": "Amoxicilline/Clavulanate",
+          "actual": "Pas d'antibioprophylaxie",
+          "is_correct": false,
+          "sourcing_present": false,
+          "evidence_present": false,
+          "is_allergy": false,
+          "grounding_score": 0.0,
+          "hallucinated_molecules": [],
+          "latency_ms": 749.7,
+          "token_usage": {
+            "prompt_tokens": 149,
+            "completion_tokens": 11,
+            "total_tokens": 160
+          },
+          "top_source": ""
+        },
+        {
+          "id": "Q25",
+          "title": "Pose stimulateur cérébral",
+          "type": "open",
+          "expected": "Céfazoline",
+          "actual": "Pas d'antibioprophylaxie",
+          "is_correct": false,
+          "sourcing_present": false,
+          "evidence_present": false,
+          "is_allergy": false,
+          "grounding_score": 0.0,
+          "hallucinated_molecules": [],
+          "latency_ms": 758.2,
+          "token_usage": {
+            "prompt_tokens": 151,
+            "completion_tokens": 11,
+            "total_tokens": 162
+          },
+          "top_source": ""
+        },
+        {
+          "id": "Q28",
+          "title": "Plaie cranio-cérébrale allergie pénicillines",
+          "type": "open",
+          "expected": "Triméthoprime/Sulfaméthoxazole",
+          "actual": "Clindamycine + Gentamicine",
+          "is_correct": false,
+          "sourcing_present": false,
+          "evidence_present": false,
+          "is_allergy": true,
+          "grounding_score": 0.0,
+          "hallucinated_molecules": [],
+          "latency_ms": 719.2,
+          "token_usage": {
+            "prompt_tokens": 156,
+            "completion_tokens": 10,
+            "total_tokens": 166
+          },
+          "top_source": ""
+        },
+        {
+          "id": "Q33",
+          "title": "Implant cochléaire",
+          "type": "open",
+          "expected": "Céfazoline",
+          "actual": "Pas d'antibioprophylaxie",
+          "is_correct": false,
+          "sourcing_present": false,
+          "evidence_present": false,
+          "is_allergy": false,
+          "grounding_score": 0.0,
+          "hallucinated_molecules": [],
+          "latency_ms": 713.5,
+          "token_usage": {
+            "prompt_tokens": 145,
+            "completion_tokens": 11,
+            "total_tokens": 156
+          },
+          "top_source": ""
+        },
+        {
+          "id": "Q36",
+          "title": "Chirurgie cataracte",
+          "type": "open",
+          "expected": "Céfuroxime",
+          "actual": "Pas d'antibioprophylaxie",
+          "is_correct": false,
+          "sourcing_present": false,
+          "evidence_present": false,
+          "is_allergy": false,
+          "grounding_score": 0.0,
+          "hallucinated_molecules": [],
+          "latency_ms": 735.6,
+          "token_usage": {
+            "prompt_tokens": 146,
+            "completion_tokens": 11,
+            "total_tokens": 157
+          },
+          "top_source": ""
+        },
+        {
+          "id": "Q46",
+          "title": "Pose pacemaker",
+          "type": "open",
+          "expected": "Céfazoline",
+          "actual": "Pas d'antibioprophylaxie",
+          "is_correct": false,
+          "sourcing_present": false,
+          "evidence_present": false,
+          "is_allergy": false,
+          "grounding_score": 0.0,
+          "hallucinated_molecules": [],
+          "latency_ms": 701.0,
+          "token_usage": {
+            "prompt_tokens": 152,
+            "completion_tokens": 11,
+            "total_tokens": 163
+          },
+          "top_source": ""
+        },
+        {
+          "id": "Q55",
+          "title": "Pose prothèse mammaire",
+          "type": "open",
+          "expected": "Céfazoline",
+          "actual": "Pas d'antibioprophylaxie",
+          "is_correct": false,
+          "sourcing_present": false,
+          "evidence_present": false,
+          "is_allergy": false,
+          "grounding_score": 0.0,
+          "hallucinated_molecules": [],
+          "latency_ms": 697.8,
+          "token_usage": {
+            "prompt_tokens": 148,
+            "completion_tokens": 11,
+            "total_tokens": 159
+          },
+          "top_source": ""
+        },
+        {
+          "id": "Q61",
+          "title": "Lambeau libre microchirurgical",
+          "type": "open",
+          "expected": "Céfazoline",
+          "actual": "Pas d'antibioprophylaxie",
+          "is_correct": false,
+          "sourcing_present": false,
+          "evidence_present": false,
+          "is_allergy": false,
+          "grounding_score": 0.0,
+          "hallucinated_molecules": [],
+          "latency_ms": 697.6,
+          "token_usage": {
+            "prompt_tokens": 147,
+            "completion_tokens": 11,
+            "total_tokens": 158
+          },
+          "top_source": ""
+        },
+        {
+          "id": "Q70",
+          "title": "Résection endométriose avec atteinte rectale",
+          "type": "open",
+          "expected": "Céfazoline + Métronidazole",
+          "actual": "Pas d'antibioprophylaxie",
+          "is_correct": false,
+          "sourcing_present": false,
+          "evidence_present": false,
+          "is_allergy": false,
+          "grounding_score": 0.0,
+          "hallucinated_molecules": [],
+          "latency_ms": 699.1,
+          "token_usage": {
+            "prompt_tokens": 159,
+            "completion_tokens": 11,
+            "total_tokens": 170
+          },
+          "top_source": ""
+        },
+        {
+          "id": "Q76",
+          "title": "Chirurgie du prolapsus",
+          "type": "open",
+          "expected": "Céfazoline",
+          "actual": "Pas d'antibioprophylaxie",
+          "is_correct": false,
+          "sourcing_present": false,
+          "evidence_present": false,
+          "is_allergy": false,
+          "grounding_score": 0.0,
+          "hallucinated_molecules": [],
+          "latency_ms": 698.9,
+          "token_usage": {
+            "prompt_tokens": 153,
+            "completion_tokens": 11,
+            "total_tokens": 164
+          },
+          "top_source": ""
+        },
+        {
+          "id": "Q82",
+          "title": "Tamponnement utérin hémorragie obstétricale",
+          "type": "open",
+          "expected": "Céfazoline",
+          "actual": "Pas d'antibioprophylaxie",
+          "is_correct": false,
+          "sourcing_present": false,
+          "evidence_present": false,
+          "is_allergy": false,
+          "grounding_score": 0.0,
+          "hallucinated_molecules": [],
+          "latency_ms": 699.1,
+          "token_usage": {
+            "prompt_tokens": 158,
+            "completion_tokens": 11,
+            "total_tokens": 169
+          },
+          "top_source": ""
+        },
+        {
+          "id": "Q88",
+          "title": "Résection intestin grêle",
+          "type": "open",
+          "expected": "Céfoxitine",
+          "actual": "Céfazoline",
+          "is_correct": false,
+          "sourcing_present": false,
+          "evidence_present": false,
+          "is_allergy": false,
+          "grounding_score": 0.0,
+          "hallucinated_molecules": [],
+          "latency_ms": 582.5,
+          "token_usage": {
+            "prompt_tokens": 153,
+            "completion_tokens": 6,
+            "total_tokens": 159
+          },
+          "top_source": ""
+        },
+        {
+          "id": "Q91",
+          "title": "Hémorroïdes",
+          "type": "open",
+          "expected": "Métronidazole",
+          "actual": "Pas d'antibioprophylaxie",
+          "is_correct": false,
+          "sourcing_present": false,
+          "evidence_present": false,
+          "is_allergy": false,
+          "grounding_score": 0.0,
+          "hallucinated_molecules": [],
+          "latency_ms": 697.6,
+          "token_usage": {
+            "prompt_tokens": 146,
+            "completion_tokens": 11,
+            "total_tokens": 157
+          },
+          "top_source": ""
+        },
+        {
+          "id": "Q94",
+          "title": "Kyste hydatique du foie",
+          "type": "open",
+          "expected": "Pas d'antibioprophylaxie",
+          "actual": "Céfazoline",
+          "is_correct": false,
+          "sourcing_present": false,
+          "evidence_present": false,
+          "is_allergy": false,
+          "grounding_score": 0.0,
+          "hallucinated_molecules": [],
+          "latency_ms": 583.2,
+          "token_usage": {
+            "prompt_tokens": 151,
+            "completion_tokens": 6,
+            "total_tokens": 157
+          },
+          "top_source": ""
+        },
+        {
+          "id": "Q97",
+          "title": "DPC sans drainage biliaire préopératoire",
+          "type": "open",
+          "expected": "Céfoxitine",
+          "actual": "Pas d'antibioprophylaxie",
+          "is_correct": false,
+          "sourcing_present": false,
+          "evidence_present": false,
+          "is_allergy": false,
+          "grounding_score": 0.0,
+          "hallucinated_molecules": [],
+          "latency_ms": 771.6,
+          "token_usage": {
+            "prompt_tokens": 168,
+            "completion_tokens": 11,
+            "total_tokens": 179
+          },
+          "top_source": ""
+        },
+        {
+          "id": "Q106",
+          "title": "RTUP",
+          "type": "open",
+          "expected": "Céfazoline",
+          "actual": "Pas d'antibioprophylaxie",
+          "is_correct": false,
+          "sourcing_present": false,
+          "evidence_present": false,
+          "is_allergy": false,
+          "grounding_score": 0.0,
+          "hallucinated_molecules": [],
+          "latency_ms": 720.1,
+          "token_usage": {
+            "prompt_tokens": 150,
+            "completion_tokens": 11,
+            "total_tokens": 161
+          },
+          "top_source": ""
+        },
+        {
+          "id": "Q146",
+          "title": "ORL sans ABP",
+          "type": "mcq",
+          "expected": "B",
+          "actual": "A",
+          "is_correct": false,
+          "sourcing_present": false,
+          "evidence_present": false,
+          "is_allergy": false,
+          "grounding_score": 0.0,
+          "hallucinated_molecules": [],
+          "latency_ms": 413.5,
+          "token_usage": {
+            "prompt_tokens": 128,
+            "completion_tokens": 2,
+            "total_tokens": 130
+          },
+          "top_source": ""
+        },
+        {
+          "id": "Q152",
+          "title": "Rhinoplastie avec vs sans greffe",
+          "type": "mcq",
+          "expected": "C",
+          "actual": "A",
+          "is_correct": false,
+          "sourcing_present": false,
+          "evidence_present": false,
+          "is_allergy": false,
+          "grounding_score": 0.0,
+          "hallucinated_molecules": [],
+          "latency_ms": 563.8,
+          "token_usage": {
+            "prompt_tokens": 165,
+            "completion_tokens": 2,
+            "total_tokens": 167
+          },
+          "top_source": ""
+        },
+        {
+          "id": "Q155",
+          "title": "Obstétrique césarienne vs cerclage",
+          "type": "mcq",
+          "expected": "C",
+          "actual": "A",
+          "is_correct": false,
+          "sourcing_present": false,
+          "evidence_present": false,
+          "is_allergy": false,
+          "grounding_score": 0.0,
+          "hallucinated_molecules": [],
+          "latency_ms": 567.0,
+          "token_usage": {
+            "prompt_tokens": 183,
+            "completion_tokens": 2,
+            "total_tokens": 185
+          },
+          "top_source": ""
+        },
+        {
+          "id": "Q158",
+          "title": "Colectomie protocole ABP",
+          "type": "mcq",
+          "expected": "B",
+          "actual": "A",
+          "is_correct": false,
+          "sourcing_present": false,
+          "evidence_present": false,
+          "is_allergy": false,
+          "grounding_score": 0.0,
+          "hallucinated_molecules": [],
+          "latency_ms": 566.9,
+          "token_usage": {
+            "prompt_tokens": 185,
+            "completion_tokens": 2,
+            "total_tokens": 187
+          },
+          "top_source": ""
+        },
+        {
+          "id": "Q161",
+          "title": "Hernie inguinale avec vs sans prothèse",
+          "type": "mcq",
+          "expected": "C",
+          "actual": "A",
+          "is_correct": false,
+          "sourcing_present": false,
+          "evidence_present": false,
+          "is_allergy": false,
+          "grounding_score": 0.0,
+          "hallucinated_molecules": [],
+          "latency_ms": 564.9,
+          "token_usage": {
+            "prompt_tokens": 177,
+            "completion_tokens": 2,
+            "total_tokens": 179
+          },
+          "top_source": ""
+        }
+      ],
+      "results": [
+        {
+          "id": "Q01",
+          "title": "PTH standard",
+          "type": "open",
+          "expected": "Céfazoline",
+          "actual": "Céfazoline",
+          "is_correct": true,
+          "sourcing_present": false,
+          "evidence_present": false,
+          "is_allergy": false,
+          "grounding_score": 0.0,
+          "hallucinated_molecules": [],
+          "latency_ms": 1322.0,
+          "token_usage": {
+            "prompt_tokens": 144,
+            "completion_tokens": 6,
+            "total_tokens": 150
+          },
+          "top_source": ""
+        },
+        {
+          "id": "Q03",
+          "title": "PTG allergie bêtalactamines",
+          "type": "open",
+          "expected": "Clindamycine",
+          "actual": "Clindamycine + Gentamicine",
+          "is_correct": true,
+          "sourcing_present": false,
+          "evidence_present": false,
+          "is_allergy": true,
+          "grounding_score": 0.0,
+          "hallucinated_molecules": [],
+          "latency_ms": 683.0,
+          "token_usage": {
+            "prompt_tokens": 155,
+            "completion_tokens": 10,
+            "total_tokens": 165
+          },
+          "top_source": ""
+        },
+        {
+          "id": "Q04",
+          "title": "PTH voie antérieure allergie",
+          "type": "open",
+          "expected": "Vancomycine",
+          "actual": "Clindamycine + Gentamicine",
+          "is_correct": false,
+          "sourcing_present": false,
+          "evidence_present": false,
+          "is_allergy": true,
+          "grounding_score": 0.0,
+          "hallucinated_molecules": [],
+          "latency_ms": 715.0,
+          "token_usage": {
+            "prompt_tokens": 159,
+            "completion_tokens": 10,
+            "total_tokens": 169
+          },
+          "top_source": ""
+        },
+        {
+          "id": "Q06",
+          "title": "Fixateur externe fracture fermée",
+          "type": "open",
+          "expected": "Pas d'antibioprophylaxie",
+          "actual": "Pas d'antibioprophylaxie",
+          "is_correct": true,
+          "sourcing_present": false,
+          "evidence_present": false,
+          "is_allergy": false,
+          "grounding_score": 0.0,
+          "hallucinated_molecules": [],
+          "latency_ms": 748.7,
+          "token_usage": {
+            "prompt_tokens": 149,
+            "completion_tokens": 11,
+            "total_tokens": 160
+          },
+          "top_source": ""
+        },
+        {
+          "id": "Q09",
+          "title": "Écrasement main > 2h",
+          "type": "open",
+          "expected": "Amoxicilline/Clavulanate",
+          "actual": "Céfazoline",
+          "is_correct": false,
+          "sourcing_present": false,
+          "evidence_present": false,
+          "is_allergy": false,
+          "grounding_score": 0.0,
+          "hallucinated_molecules": [],
+          "latency_ms": 611.6,
+          "token_usage": {
+            "prompt_tokens": 158,
+            "completion_tokens": 6,
+            "total_tokens": 164
+          },
+          "top_source": ""
+        },
+        {
+          "id": "Q12",
+          "title": "Fracture ouverte Gustilo 3 allergie",
+          "type": "open",
+          "expected": "Clindamycine + Gentamicine",
+          "actual": "Clindamycine + Gentamicine",
+          "is_correct": true,
+          "sourcing_present": false,
+          "evidence_present": false,
+          "is_allergy": true,
+          "grounding_score": 0.0,
+          "hallucinated_molecules": [],
+          "latency_ms": 695.3,
+          "token_usage": {
+            "prompt_tokens": 155,
+            "completion_tokens": 10,
+            "total_tokens": 165
+          },
+          "top_source": ""
+        },
+        {
+          "id": "Q13",
+          "title": "Ablation matériel ostéosynthèse MI",
+          "type": "open",
+          "expected": "Pas d'antibioprophylaxie",
+          "actual": "Pas d'antibioprophylaxie",
+          "is_correct": true,
+          "sourcing_present": false,
+          "evidence_present": false,
+          "is_allergy": false,
+          "grounding_score": 0.0,
+          "hallucinated_molecules": [],
+          "latency_ms": 720.1,
+          "token_usage": {
+            "prompt_tokens": 155,
+            "completion_tokens": 11,
+            "total_tokens": 166
+          },
+          "top_source": ""
+        },
+        {
+          "id": "Q16",
+          "title": "Splénectomie hémostase fixateur externe fémur",
+          "type": "open",
+          "expected": "Céfazoline",
+          "actual": "Pas d'antibioprophylaxie",
+          "is_correct": false,
+          "sourcing_present": false,
+          "evidence_present": false,
+          "is_allergy": false,
+          "grounding_score": 0.0,
+          "hallucinated_molecules": [],
+          "latency_ms": 793.7,
+          "token_usage": {
+            "prompt_tokens": 173,
+            "completion_tokens": 11,
+            "total_tokens": 184
+          },
+          "top_source": ""
+        },
+        {
+          "id": "Q19",
+          "title": "Biopsie cérébrale",
+          "type": "open",
+          "expected": "Pas d'antibioprophylaxie",
+          "actual": "Pas d'antibioprophylaxie",
+          "is_correct": true,
+          "sourcing_present": false,
+          "evidence_present": false,
+          "is_allergy": false,
+          "grounding_score": 0.0,
+          "hallucinated_molecules": [],
+          "latency_ms": 719.6,
+          "token_usage": {
+            "prompt_tokens": 144,
+            "completion_tokens": 11,
+            "total_tokens": 155
+          },
+          "top_source": ""
+        },
+        {
+          "id": "Q22",
+          "title": "Plaie cranio-cérébrale",
+          "type": "open",
+          "expected": "Amoxicilline/Clavulanate",
+          "actual": "Pas d'antibioprophylaxie",
+          "is_correct": false,
+          "sourcing_present": false,
+          "evidence_present": false,
+          "is_allergy": false,
+          "grounding_score": 0.0,
+          "hallucinated_molecules": [],
+          "latency_ms": 749.7,
+          "token_usage": {
+            "prompt_tokens": 149,
+            "completion_tokens": 11,
+            "total_tokens": 160
+          },
+          "top_source": ""
+        },
+        {
+          "id": "Q25",
+          "title": "Pose stimulateur cérébral",
+          "type": "open",
+          "expected": "Céfazoline",
+          "actual": "Pas d'antibioprophylaxie",
+          "is_correct": false,
+          "sourcing_present": false,
+          "evidence_present": false,
+          "is_allergy": false,
+          "grounding_score": 0.0,
+          "hallucinated_molecules": [],
+          "latency_ms": 758.2,
+          "token_usage": {
+            "prompt_tokens": 151,
+            "completion_tokens": 11,
+            "total_tokens": 162
+          },
+          "top_source": ""
+        },
+        {
+          "id": "Q27",
+          "title": "Craniotomie allergie bêtalactamines",
+          "type": "open",
+          "expected": "Clindamycine",
+          "actual": "Clindamycine + Gentamicine",
+          "is_correct": true,
+          "sourcing_present": false,
+          "evidence_present": false,
+          "is_allergy": true,
+          "grounding_score": 0.0,
+          "hallucinated_molecules": [],
+          "latency_ms": 732.4,
+          "token_usage": {
+            "prompt_tokens": 153,
+            "completion_tokens": 10,
+            "total_tokens": 163
+          },
+          "top_source": ""
+        },
+        {
+          "id": "Q28",
+          "title": "Plaie cranio-cérébrale allergie pénicillines",
+          "type": "open",
+          "expected": "Triméthoprime/Sulfaméthoxazole",
+          "actual": "Clindamycine + Gentamicine",
+          "is_correct": false,
+          "sourcing_present": false,
+          "evidence_present": false,
+          "is_allergy": true,
+          "grounding_score": 0.0,
+          "hallucinated_molecules": [],
+          "latency_ms": 719.2,
+          "token_usage": {
+            "prompt_tokens": 156,
+            "completion_tokens": 10,
+            "total_tokens": 166
+          },
+          "top_source": ""
+        },
+        {
+          "id": "Q30",
+          "title": "Thyroïdectomie totale",
+          "type": "open",
+          "expected": "Pas d'antibioprophylaxie",
+          "actual": "Pas d'antibioprophylaxie",
+          "is_correct": true,
+          "sourcing_present": false,
+          "evidence_present": false,
+          "is_allergy": false,
+          "grounding_score": 0.0,
+          "hallucinated_molecules": [],
+          "latency_ms": 723.2,
+          "token_usage": {
+            "prompt_tokens": 146,
+            "completion_tokens": 11,
+            "total_tokens": 157
+          },
+          "top_source": ""
+        },
+        {
+          "id": "Q33",
+          "title": "Implant cochléaire",
+          "type": "open",
+          "expected": "Céfazoline",
+          "actual": "Pas d'antibioprophylaxie",
+          "is_correct": false,
+          "sourcing_present": false,
+          "evidence_present": false,
+          "is_allergy": false,
+          "grounding_score": 0.0,
+          "hallucinated_molecules": [],
+          "latency_ms": 713.5,
+          "token_usage": {
+            "prompt_tokens": 145,
+            "completion_tokens": 11,
+            "total_tokens": 156
+          },
+          "top_source": ""
+        },
+        {
+          "id": "Q36",
+          "title": "Chirurgie cataracte",
+          "type": "open",
+          "expected": "Céfuroxime",
+          "actual": "Pas d'antibioprophylaxie",
+          "is_correct": false,
+          "sourcing_present": false,
+          "evidence_present": false,
+          "is_allergy": false,
+          "grounding_score": 0.0,
+          "hallucinated_molecules": [],
+          "latency_ms": 735.6,
+          "token_usage": {
+            "prompt_tokens": 146,
+            "completion_tokens": 11,
+            "total_tokens": 157
+          },
+          "top_source": ""
+        },
+        {
+          "id": "Q39",
+          "title": "Chirurgie strabisme",
+          "type": "open",
+          "expected": "Pas d'antibioprophylaxie",
+          "actual": "Pas d'antibioprophylaxie",
+          "is_correct": true,
+          "sourcing_present": false,
+          "evidence_present": false,
+          "is_allergy": false,
+          "grounding_score": 0.0,
+          "hallucinated_molecules": [],
+          "latency_ms": 720.5,
+          "token_usage": {
+            "prompt_tokens": 144,
+            "completion_tokens": 11,
+            "total_tokens": 155
+          },
+          "top_source": ""
+        },
+        {
+          "id": "Q42",
+          "title": "Chirurgie orthognatique",
+          "type": "open",
+          "expected": "Céfazoline",
+          "actual": "Céfazoline",
+          "is_correct": true,
+          "sourcing_present": false,
+          "evidence_present": false,
+          "is_allergy": false,
+          "grounding_score": 0.0,
+          "hallucinated_molecules": [],
+          "latency_ms": 591.1,
+          "token_usage": {
+            "prompt_tokens": 144,
+            "completion_tokens": 6,
+            "total_tokens": 150
+          },
+          "top_source": ""
+        },
+        {
+          "id": "Q43",
+          "title": "Carcinologique cervico-faciale allergie bêtalactamines",
+          "type": "open",
+          "expected": "Clindamycine + Gentamicine",
+          "actual": "Clindamycine + Gentamicine",
+          "is_correct": true,
+          "sourcing_present": false,
+          "evidence_present": false,
+          "is_allergy": true,
+          "grounding_score": 0.0,
+          "hallucinated_molecules": [],
+          "latency_ms": 756.1,
+          "token_usage": {
+            "prompt_tokens": 163,
+            "completion_tokens": 10,
+            "total_tokens": 173
+          },
+          "top_source": ""
+        },
+        {
+          "id": "Q46",
+          "title": "Pose pacemaker",
+          "type": "open",
+          "expected": "Céfazoline",
+          "actual": "Pas d'antibioprophylaxie",
+          "is_correct": false,
+          "sourcing_present": false,
+          "evidence_present": false,
+          "is_allergy": false,
+          "grounding_score": 0.0,
+          "hallucinated_molecules": [],
+          "latency_ms": 701.0,
+          "token_usage": {
+            "prompt_tokens": 152,
+            "completion_tokens": 11,
+            "total_tokens": 163
+          },
+          "top_source": ""
+        },
+        {
+          "id": "Q49",
+          "title": "Endartériectomie carotidienne sans matériel",
+          "type": "open",
+          "expected": "Pas d'antibioprophylaxie",
+          "actual": "Pas d'antibioprophylaxie",
+          "is_correct": true,
+          "sourcing_present": false,
+          "evidence_present": false,
+          "is_allergy": false,
+          "grounding_score": 0.0,
+          "hallucinated_molecules": [],
+          "latency_ms": 702.7,
+          "token_usage": {
+            "prompt_tokens": 153,
+            "completion_tokens": 11,
+            "total_tokens": 164
+          },
+          "top_source": ""
+        },
+        {
+          "id": "Q52",
+          "title": "Drainage thoracique",
+          "type": "open",
+          "expected": "Pas d'antibioprophylaxie",
+          "actual": "Pas d'antibioprophylaxie",
+          "is_correct": true,
+          "sourcing_present": false,
+          "evidence_present": false,
+          "is_allergy": false,
+          "grounding_score": 0.0,
+          "hallucinated_molecules": [],
+          "latency_ms": 698.6,
+          "token_usage": {
+            "prompt_tokens": 144,
+            "completion_tokens": 11,
+            "total_tokens": 155
+          },
+          "top_source": ""
+        },
+        {
+          "id": "Q55",
+          "title": "Pose prothèse mammaire",
+          "type": "open",
+          "expected": "Céfazoline",
+          "actual": "Pas d'antibioprophylaxie",
+          "is_correct": false,
+          "sourcing_present": false,
+          "evidence_present": false,
+          "is_allergy": false,
+          "grounding_score": 0.0,
+          "hallucinated_molecules": [],
+          "latency_ms": 697.8,
+          "token_usage": {
+            "prompt_tokens": 148,
+            "completion_tokens": 11,
+            "total_tokens": 159
+          },
+          "top_source": ""
+        },
+        {
+          "id": "Q58",
+          "title": "Rhinoplastie sans greffe cartilage",
+          "type": "open",
+          "expected": "Pas d'antibioprophylaxie",
+          "actual": "Pas d'antibioprophylaxie",
+          "is_correct": true,
+          "sourcing_present": false,
+          "evidence_present": false,
+          "is_allergy": false,
+          "grounding_score": 0.0,
+          "hallucinated_molecules": [],
+          "latency_ms": 696.8,
+          "token_usage": {
+            "prompt_tokens": 149,
+            "completion_tokens": 11,
+            "total_tokens": 160
+          },
+          "top_source": ""
+        },
+        {
+          "id": "Q61",
+          "title": "Lambeau libre microchirurgical",
+          "type": "open",
+          "expected": "Céfazoline",
+          "actual": "Pas d'antibioprophylaxie",
+          "is_correct": false,
+          "sourcing_present": false,
+          "evidence_present": false,
+          "is_allergy": false,
+          "grounding_score": 0.0,
+          "hallucinated_molecules": [],
+          "latency_ms": 697.6,
+          "token_usage": {
+            "prompt_tokens": 147,
+            "completion_tokens": 11,
+            "total_tokens": 158
+          },
+          "top_source": ""
+        },
+        {
+          "id": "Q64",
+          "title": "Chondro-laryngoplastie",
+          "type": "open",
+          "expected": "Pas d'antibioprophylaxie",
+          "actual": "Pas d'antibioprophylaxie",
+          "is_correct": true,
+          "sourcing_present": false,
+          "evidence_present": false,
+          "is_allergy": false,
+          "grounding_score": 0.0,
+          "hallucinated_molecules": [],
+          "latency_ms": 699.5,
+          "token_usage": {
+            "prompt_tokens": 150,
+            "completion_tokens": 11,
+            "total_tokens": 161
+          },
+          "top_source": ""
+        },
+        {
+          "id": "Q67",
+          "title": "Chirurgie du mamelon",
+          "type": "open",
+          "expected": "Pas d'antibioprophylaxie",
+          "actual": "Pas d'antibioprophylaxie",
+          "is_correct": true,
+          "sourcing_present": false,
+          "evidence_present": false,
+          "is_allergy": false,
+          "grounding_score": 0.0,
+          "hallucinated_molecules": [],
+          "latency_ms": 699.1,
+          "token_usage": {
+            "prompt_tokens": 154,
+            "completion_tokens": 11,
+            "total_tokens": 165
+          },
+          "top_source": ""
+        },
+        {
+          "id": "Q70",
+          "title": "Résection endométriose avec atteinte rectale",
+          "type": "open",
+          "expected": "Céfazoline + Métronidazole",
+          "actual": "Pas d'antibioprophylaxie",
+          "is_correct": false,
+          "sourcing_present": false,
+          "evidence_present": false,
+          "is_allergy": false,
+          "grounding_score": 0.0,
+          "hallucinated_molecules": [],
+          "latency_ms": 699.1,
+          "token_usage": {
+            "prompt_tokens": 159,
+            "completion_tokens": 11,
+            "total_tokens": 170
+          },
+          "top_source": ""
+        },
+        {
+          "id": "Q73",
+          "title": "Conisation col utérin",
+          "type": "open",
+          "expected": "Pas d'antibioprophylaxie",
+          "actual": "Pas d'antibioprophylaxie",
+          "is_correct": true,
+          "sourcing_present": false,
+          "evidence_present": false,
+          "is_allergy": false,
+          "grounding_score": 0.0,
+          "hallucinated_molecules": [],
+          "latency_ms": 696.1,
+          "token_usage": {
+            "prompt_tokens": 144,
+            "completion_tokens": 11,
+            "total_tokens": 155
+          },
+          "top_source": ""
+        },
+        {
+          "id": "Q76",
+          "title": "Chirurgie du prolapsus",
+          "type": "open",
+          "expected": "Céfazoline",
+          "actual": "Pas d'antibioprophylaxie",
+          "is_correct": false,
+          "sourcing_present": false,
+          "evidence_present": false,
+          "is_allergy": false,
+          "grounding_score": 0.0,
+          "hallucinated_molecules": [],
+          "latency_ms": 698.9,
+          "token_usage": {
+            "prompt_tokens": 153,
+            "completion_tokens": 11,
+            "total_tokens": 164
+          },
+          "top_source": ""
+        },
+        {
+          "id": "Q79",
+          "title": "Césarienne",
+          "type": "open",
+          "expected": "Céfazoline",
+          "actual": "Céfazoline",
+          "is_correct": true,
+          "sourcing_present": false,
+          "evidence_present": false,
+          "is_allergy": false,
+          "grounding_score": 0.0,
+          "hallucinated_molecules": [],
+          "latency_ms": 581.4,
+          "token_usage": {
+            "prompt_tokens": 143,
+            "completion_tokens": 6,
+            "total_tokens": 149
+          },
+          "top_source": ""
+        },
+        {
+          "id": "Q82",
+          "title": "Tamponnement utérin hémorragie obstétricale",
+          "type": "open",
+          "expected": "Céfazoline",
+          "actual": "Pas d'antibioprophylaxie",
+          "is_correct": false,
+          "sourcing_present": false,
+          "evidence_present": false,
+          "is_allergy": false,
+          "grounding_score": 0.0,
+          "hallucinated_molecules": [],
+          "latency_ms": 699.1,
+          "token_usage": {
+            "prompt_tokens": 158,
+            "completion_tokens": 11,
+            "total_tokens": 169
+          },
+          "top_source": ""
+        },
+        {
+          "id": "Q85",
+          "title": "Oesophagectomie",
+          "type": "open",
+          "expected": "Céfazoline",
+          "actual": "Céfazoline",
+          "is_correct": true,
+          "sourcing_present": false,
+          "evidence_present": false,
+          "is_allergy": false,
+          "grounding_score": 0.0,
+          "hallucinated_molecules": [],
+          "latency_ms": 581.0,
+          "token_usage": {
+            "prompt_tokens": 143,
+            "completion_tokens": 6,
+            "total_tokens": 149
+          },
+          "top_source": ""
+        },
+        {
+          "id": "Q88",
+          "title": "Résection intestin grêle",
+          "type": "open",
+          "expected": "Céfoxitine",
+          "actual": "Céfazoline",
+          "is_correct": false,
+          "sourcing_present": false,
+          "evidence_present": false,
+          "is_allergy": false,
+          "grounding_score": 0.0,
+          "hallucinated_molecules": [],
+          "latency_ms": 582.5,
+          "token_usage": {
+            "prompt_tokens": 153,
+            "completion_tokens": 6,
+            "total_tokens": 159
+          },
+          "top_source": ""
+        },
+        {
+          "id": "Q91",
+          "title": "Hémorroïdes",
+          "type": "open",
+          "expected": "Métronidazole",
+          "actual": "Pas d'antibioprophylaxie",
+          "is_correct": false,
+          "sourcing_present": false,
+          "evidence_present": false,
+          "is_allergy": false,
+          "grounding_score": 0.0,
+          "hallucinated_molecules": [],
+          "latency_ms": 697.6,
+          "token_usage": {
+            "prompt_tokens": 146,
+            "completion_tokens": 11,
+            "total_tokens": 157
+          },
+          "top_source": ""
+        },
+        {
+          "id": "Q94",
+          "title": "Kyste hydatique du foie",
+          "type": "open",
+          "expected": "Pas d'antibioprophylaxie",
+          "actual": "Céfazoline",
+          "is_correct": false,
+          "sourcing_present": false,
+          "evidence_present": false,
+          "is_allergy": false,
+          "grounding_score": 0.0,
+          "hallucinated_molecules": [],
+          "latency_ms": 583.2,
+          "token_usage": {
+            "prompt_tokens": 151,
+            "completion_tokens": 6,
+            "total_tokens": 157
+          },
+          "top_source": ""
+        },
+        {
+          "id": "Q97",
+          "title": "DPC sans drainage biliaire préopératoire",
+          "type": "open",
+          "expected": "Céfoxitine",
+          "actual": "Pas d'antibioprophylaxie",
+          "is_correct": false,
+          "sourcing_present": false,
+          "evidence_present": false,
+          "is_allergy": false,
+          "grounding_score": 0.0,
+          "hallucinated_molecules": [],
+          "latency_ms": 771.6,
+          "token_usage": {
+            "prompt_tokens": 168,
+            "completion_tokens": 11,
+            "total_tokens": 179
+          },
+          "top_source": ""
+        },
+        {
+          "id": "Q100",
+          "title": "Hernie inguinale avec prothèse",
+          "type": "open",
+          "expected": "Céfazoline",
+          "actual": "Céfazoline",
+          "is_correct": true,
+          "sourcing_present": false,
+          "evidence_present": false,
+          "is_allergy": false,
+          "grounding_score": 0.0,
+          "hallucinated_molecules": [],
+          "latency_ms": 582.9,
+          "token_usage": {
+            "prompt_tokens": 155,
+            "completion_tokens": 6,
+            "total_tokens": 161
+          },
+          "top_source": ""
+        },
+        {
+          "id": "Q103",
+          "title": "Coloscopie avec biopsie",
+          "type": "open",
+          "expected": "Pas d'antibioprophylaxie",
+          "actual": "Pas d'antibioprophylaxie",
+          "is_correct": true,
+          "sourcing_present": false,
+          "evidence_present": false,
+          "is_allergy": false,
+          "grounding_score": 0.0,
+          "hallucinated_molecules": [],
+          "latency_ms": 719.2,
+          "token_usage": {
+            "prompt_tokens": 148,
+            "completion_tokens": 11,
+            "total_tokens": 159
+          },
+          "top_source": ""
+        },
+        {
+          "id": "Q106",
+          "title": "RTUP",
+          "type": "open",
+          "expected": "Céfazoline",
+          "actual": "Pas d'antibioprophylaxie",
+          "is_correct": false,
+          "sourcing_present": false,
+          "evidence_present": false,
+          "is_allergy": false,
+          "grounding_score": 0.0,
+          "hallucinated_molecules": [],
+          "latency_ms": 720.1,
+          "token_usage": {
+            "prompt_tokens": 150,
+            "completion_tokens": 11,
+            "total_tokens": 161
+          },
+          "top_source": ""
+        },
+        {
+          "id": "Q139",
+          "title": "PTG première intention",
+          "type": "mcq",
+          "expected": "B",
+          "actual": "B",
+          "is_correct": true,
+          "sourcing_present": false,
+          "evidence_present": false,
+          "is_allergy": false,
+          "grounding_score": 0.0,
+          "hallucinated_molecules": [],
+          "latency_ms": 422.2,
+          "token_usage": {
+            "prompt_tokens": 126,
+            "completion_tokens": 2,
+            "total_tokens": 128
+          },
+          "top_source": ""
+        },
+        {
+          "id": "Q141",
+          "title": "PTG allergie alternative",
+          "type": "mcq",
+          "expected": "C",
+          "actual": "C",
+          "is_correct": true,
+          "sourcing_present": false,
+          "evidence_present": false,
+          "is_allergy": true,
+          "grounding_score": 0.0,
+          "hallucinated_molecules": [],
+          "latency_ms": 417.5,
+          "token_usage": {
+            "prompt_tokens": 127,
+            "completion_tokens": 2,
+            "total_tokens": 129
+          },
+          "top_source": ""
+        },
+        {
+          "id": "Q143",
+          "title": "Plaie jardinage main",
+          "type": "mcq",
+          "expected": "C",
+          "actual": "C",
+          "is_correct": true,
+          "sourcing_present": false,
+          "evidence_present": false,
+          "is_allergy": false,
+          "grounding_score": 0.0,
+          "hallucinated_molecules": [],
+          "latency_ms": 492.1,
+          "token_usage": {
+            "prompt_tokens": 151,
+            "completion_tokens": 2,
+            "total_tokens": 153
+          },
+          "top_source": ""
+        },
+        {
+          "id": "Q146",
+          "title": "ORL sans ABP",
+          "type": "mcq",
+          "expected": "B",
+          "actual": "A",
+          "is_correct": false,
+          "sourcing_present": false,
+          "evidence_present": false,
+          "is_allergy": false,
+          "grounding_score": 0.0,
+          "hallucinated_molecules": [],
+          "latency_ms": 413.5,
+          "token_usage": {
+            "prompt_tokens": 128,
+            "completion_tokens": 2,
+            "total_tokens": 130
+          },
+          "top_source": ""
+        },
+        {
+          "id": "Q149",
+          "title": "Lobectomie pulmonaire molécule",
+          "type": "mcq",
+          "expected": "D",
+          "actual": "D",
+          "is_correct": true,
+          "sourcing_present": false,
+          "evidence_present": false,
+          "is_allergy": false,
+          "grounding_score": 0.0,
+          "hallucinated_molecules": [],
+          "latency_ms": 489.2,
+          "token_usage": {
+            "prompt_tokens": 155,
+            "completion_tokens": 2,
+            "total_tokens": 157
+          },
+          "top_source": ""
+        },
+        {
+          "id": "Q152",
+          "title": "Rhinoplastie avec vs sans greffe",
+          "type": "mcq",
+          "expected": "C",
+          "actual": "A",
+          "is_correct": false,
+          "sourcing_present": false,
+          "evidence_present": false,
+          "is_allergy": false,
+          "grounding_score": 0.0,
+          "hallucinated_molecules": [],
+          "latency_ms": 563.8,
+          "token_usage": {
+            "prompt_tokens": 165,
+            "completion_tokens": 2,
+            "total_tokens": 167
+          },
+          "top_source": ""
+        },
+        {
+          "id": "Q155",
+          "title": "Obstétrique césarienne vs cerclage",
+          "type": "mcq",
+          "expected": "C",
+          "actual": "A",
+          "is_correct": false,
+          "sourcing_present": false,
+          "evidence_present": false,
+          "is_allergy": false,
+          "grounding_score": 0.0,
+          "hallucinated_molecules": [],
+          "latency_ms": 567.0,
+          "token_usage": {
+            "prompt_tokens": 183,
+            "completion_tokens": 2,
+            "total_tokens": 185
+          },
+          "top_source": ""
+        },
+        {
+          "id": "Q158",
+          "title": "Colectomie protocole ABP",
+          "type": "mcq",
+          "expected": "B",
+          "actual": "A",
+          "is_correct": false,
+          "sourcing_present": false,
+          "evidence_present": false,
+          "is_allergy": false,
+          "grounding_score": 0.0,
+          "hallucinated_molecules": [],
+          "latency_ms": 566.9,
+          "token_usage": {
+            "prompt_tokens": 185,
+            "completion_tokens": 2,
+            "total_tokens": 187
+          },
+          "top_source": ""
+        },
+        {
+          "id": "Q161",
+          "title": "Hernie inguinale avec vs sans prothèse",
+          "type": "mcq",
+          "expected": "C",
+          "actual": "A",
+          "is_correct": false,
+          "sourcing_present": false,
+          "evidence_present": false,
+          "is_allergy": false,
+          "grounding_score": 0.0,
+          "hallucinated_molecules": [],
+          "latency_ms": 564.9,
+          "token_usage": {
+            "prompt_tokens": 177,
+            "completion_tokens": 2,
+            "total_tokens": 179
+          },
+          "top_source": ""
+        },
+        {
+          "id": "Q167",
+          "title": "Allergie bêtalactamines en chirurgie cardiaque",
+          "type": "mcq",
+          "expected": "B",
+          "actual": "B",
+          "is_correct": true,
+          "sourcing_present": false,
+          "evidence_present": false,
+          "is_allergy": true,
+          "grounding_score": 0.0,
+          "hallucinated_molecules": [],
+          "latency_ms": 568.0,
+          "token_usage": {
+            "prompt_tokens": 188,
+            "completion_tokens": 2,
+            "total_tokens": 190
+          },
+          "top_source": ""
+        }
+      ]
+    },
+    {
+      "system": "C0 RAG Naïf",
+      "model": "Qwen2.5-7B-Instruct-4bit",
+      "index_dir": "index/naive_fixed",
+      "total_questions": 50,
+      "overall_accuracy": 0.72,
+      "open_accuracy": 0.7,
+      "open_counts": "28/40",
+      "mcq_accuracy": 0.8,
+      "mcq_counts": "8/10",
+      "allergy_accuracy": 0.5,
+      "allergy_counts": "4/8",
+      "sourcing_rate": 1.0,
+      "mean_grounding_score": 1.0,
+      "hallucinated_molecule_queries": 0,
+      "rag_x_diagnostics": {
+        "total": 50,
+        "q1_grounded_success": 35,
+        "q2_lucky_guess": 1,
+        "q3_generator_error": 11,
+        "q4_retrieval_failure": 3,
+        "raw_accuracy": 0.72,
+        "grounded_accuracy": 0.7,
+        "accuracy_fallacy_gap": 0.02,
+        "context_utilization_efficiency": 0.7609
+      },
+      "avg_prompt_tokens": 4373.5,
+      "tokens_vs_long_context_pct": 95.4,
+      "elapsed_seconds": 782.45,
+      "errors": [
+        {
+          "id": "Q01",
+          "title": "PTH standard",
+          "type": "open",
+          "expected": "Céfazoline",
+          "actual": "Il est recommandé de prescrire une thromboprophylaxie séquentielle, associant d'abord 5 jours d'anticoagulant puis de l'aspirine pendant 30 jours après PTH, si le patient est pris en charge dans un parcours de RAAC réussi et s'il ne présente ni facteur de risque thromboembolique veineux majeur ni plusieurs facteurs de risque mineurs. SFAR 2024 [S7].",
+          "is_correct": false,
+          "sourcing_present": true,
+          "evidence_present": false,
+          "is_allergy": false,
+          "grounding_score": 1.0,
+          "hallucinated_molecules": [],
+          "latency_ms": {
+            "query_analysis_ms": 0.02,
+            "bm25_ms": 1.19,
+            "fusion_ms": 0.13,
+            "context_expand_ms": 0.0,
+            "total_retrieval_ms": 1.75,
+            "generation_ms": 16389.49,
+            "total_ms": 16391.24
+          },
+          "token_usage": {
+            "prompt_tokens": 4327,
+            "completion_tokens": 188,
+            "total_tokens": 4515
+          },
+          "top_source": "Prévention de la maladie thromboembolique veineuse péri-opératoire",
+          "reasoning_trace": "Ligne 1 — ANALYSE : La question porte sur une prothèse totale de hanche (PTH), qui est une chirurgie orthopédique majeure. Selon la section [S7], il est recommandé de prescrire une thromboprophylaxie pharmacologique après PTH.\n\nLigne 2 — RÉPONSE : Il est recommandé de prescrire une thromboprophylaxie séquentielle, associant d'abord 5 jours d'anticoagulant puis de l'aspirine pendant 30 jours après PTH, si le patient est pris en charge dans un parcours de RAAC réussi et s'il ne présente ni facteur de risque thromboembolique veineux majeur ni plusieurs facteurs de risque mineurs. SFAR 2024 [S7]."
+        },
+        {
+          "id": "Q03",
+          "title": "PTG allergie bêtalactamines",
+          "type": "open",
+          "expected": "Clindamycine",
+          "actual": "Vancomycine SFAR 2026 [S3].",
+          "is_correct": false,
+          "sourcing_present": true,
+          "evidence_present": true,
+          "is_allergy": true,
+          "grounding_score": 1.0,
+          "hallucinated_molecules": [],
+          "latency_ms": {
+            "query_analysis_ms": 0.02,
+            "bm25_ms": 1.11,
+            "fusion_ms": 0.35,
+            "context_expand_ms": 0.0,
+            "total_retrieval_ms": 2.5,
+            "generation_ms": 14046.92,
+            "total_ms": 14049.42
+          },
+          "token_usage": {
+            "prompt_tokens": 4200,
+            "completion_tokens": 120,
+            "total_tokens": 4320
+          },
+          "top_source": "Antibioprophylaxie en chirurgie et médecine interventionnelle",
+          "reasoning_trace": "Ligne 1 — ANALYSE : La prothèse totale de genou (PTG) est mentionnée dans la section \"Chirurgie du membre inférieur\". L'encadré allergie pour les prothèses totales de genou indique que si l'allergie est aux bêtalactamines, on préfère la vancomycine ou la teicoplanine à la clindamycine.\n\nLigne 2 — RÉPONSE : Vancomycine SFAR 2026 [S3]."
+        },
+        {
+          "id": "Q12",
+          "title": "Fracture ouverte Gustilo 3 allergie",
+          "type": "open",
+          "expected": "Clindamycine + Gentamicine",
+          "actual": "Clindamycine 900 mg IV (SFAR 2026 [S4]).",
+          "is_correct": false,
+          "sourcing_present": true,
+          "evidence_present": true,
+          "is_allergy": true,
+          "grounding_score": 1.0,
+          "hallucinated_molecules": [],
+          "latency_ms": {
+            "query_analysis_ms": 0.02,
+            "bm25_ms": 0.76,
+            "fusion_ms": 0.16,
+            "context_expand_ms": 0.0,
+            "total_retrieval_ms": 1.55,
+            "generation_ms": 14180.05,
+            "total_ms": 14181.6
+          },
+          "token_usage": {
+            "prompt_tokens": 4157,
+            "completion_tokens": 132,
+            "total_tokens": 4289
+          },
+          "top_source": "Antibioprophylaxie en chirurgie et médecine interventionnelle",
+          "reasoning_trace": "Ligne 1 — ANALYSE : La fracture ouverte Gustilo 3 est mentionnée dans la section \"Fractures ouvertes\" avec une administration d'Amoxicilline/Clavulanate. Cependant, l'allergie aux pénicillines est mentionnée, donc on applique l'encadré allergie de la molécule standard correspondante, qui est clindamycine 900 mg IV.\n\nLigne 2 — RÉPONSE : Clindamycine 900 mg IV (SFAR 2026 [S4])."
+        },
+        {
+          "id": "Q13",
+          "title": "Ablation matériel ostéosynthèse MI",
+          "type": "open",
+          "expected": "Pas d'antibioprophylaxie",
+          "actual": "Céfazoline SFAR 2026 [S1].",
+          "is_correct": false,
+          "sourcing_present": true,
+          "evidence_present": true,
+          "is_allergy": false,
+          "grounding_score": 1.0,
+          "hallucinated_molecules": [],
+          "latency_ms": {
+            "query_analysis_ms": 0.06,
+            "bm25_ms": 2.75,
+            "fusion_ms": 0.57,
+            "context_expand_ms": 0.0,
+            "total_retrieval_ms": 5.08,
+            "generation_ms": 14963.39,
+            "total_ms": 14968.47
+          },
+          "token_usage": {
+            "prompt_tokens": 4571,
+            "completion_tokens": 117,
+            "total_tokens": 4688
+          },
+          "top_source": "Antibioprophylaxie en chirurgie et médecine interventionnelle",
+          "reasoning_trace": "Ligne 1 — ANALYSE : L'acte chirurgical demandé est \"ablation de matériel d'ostéosynthèse\" au membre inférieur. Selon la section \"Chirurgie du membre inférieur\" de [S1], cette procédure est associée à la céfazoline. Il n'y a pas d'exception conditionnelle mentionnée pour cette procédure.\n\nLigne 2 — RÉPONSE : Céfazoline SFAR 2026 [S1]."
+        },
+        {
+          "id": "Q22",
+          "title": "Plaie cranio-cérébrale",
+          "type": "open",
+          "expected": "Amoxicilline/Clavulanate",
+          "actual": "Céfazoline, SFAR 2018 [S3].",
+          "is_correct": false,
+          "sourcing_present": true,
+          "evidence_present": false,
+          "is_allergy": false,
+          "grounding_score": 1.0,
+          "hallucinated_molecules": [],
+          "latency_ms": {
+            "query_analysis_ms": 0.03,
+            "bm25_ms": 1.43,
+            "fusion_ms": 0.41,
+            "context_expand_ms": 0.0,
+            "total_retrieval_ms": 3.0,
+            "generation_ms": 15334.88,
+            "total_ms": 15337.88
+          },
+          "token_usage": {
+            "prompt_tokens": 4323,
+            "completion_tokens": 158,
+            "total_tokens": 4481
+          },
+          "top_source": "Antibioprophylaxie en chirurgie et médecine interventionnelle (patients adultes)",
+          "reasoning_trace": "Ligne 1 — ANALYSE : La question porte sur une plaie cranio-cérébrale pénétrante, qui est une forme de neurochirurgie. Selon la table d'antibioprophylaxie en neurochirurgie, une crâniotomie est mentionnée, mais pas spécifiquement une plaie cranio-cérébrale pénétrante. Cependant, la crâniotomie est associée à une antibioprophylaxie. L'exception pour une allergie à la céfazoline est également fournie.\n\nLigne 2 — RÉPONSE : Céfazoline, SFAR 2018 [S3]."
+        },
+        {
+          "id": "Q28",
+          "title": "Plaie cranio-cérébrale allergie pénicillines",
+          "type": "open",
+          "expected": "Triméthoprime/Sulfaméthoxazole",
+          "actual": "Amoxicilline/Clavulanate, SFAR 2026 [S7].",
+          "is_correct": false,
+          "sourcing_present": true,
+          "evidence_present": false,
+          "is_allergy": true,
+          "grounding_score": 1.0,
+          "hallucinated_molecules": [],
+          "latency_ms": {
+            "query_analysis_ms": 0.02,
+            "bm25_ms": 1.09,
+            "fusion_ms": 0.48,
+            "context_expand_ms": 0.0,
+            "total_retrieval_ms": 2.93,
+            "generation_ms": 15136.53,
+            "total_ms": 15139.46
+          },
+          "token_usage": {
+            "prompt_tokens": 4479,
+            "completion_tokens": 135,
+            "total_tokens": 4614
+          },
+          "top_source": "Antibioprophylaxie en chirurgie et médecine interventionnelle (patients adultes)",
+          "reasoning_trace": "Ligne 1 — ANALYSE : La plaie cranio-cérébrale est mentionnée dans la section \"Plaies cranio-cérébrales et fracture de la base du crâne\" avec une antibioprophylaxie recommandée. Cependant, une allergie aux pénicillines est mentionnée dans la section \"Amoxicilline/Clavulanate\" qui est la molécule standard pour ce type d'acte chirurgical.\n\nLigne 2 — RÉPONSE : Amoxicilline/Clavulanate, SFAR 2026 [S7]."
+        },
+        {
+          "id": "Q33",
+          "title": "Implant cochléaire",
+          "type": "open",
+          "expected": "Céfazoline",
+          "actual": "Pas d'antibioprophylaxie, SFAR 2026 [S3].",
+          "is_correct": false,
+          "sourcing_present": true,
+          "evidence_present": true,
+          "is_allergy": false,
+          "grounding_score": 1.0,
+          "hallucinated_molecules": [],
+          "latency_ms": {
+            "query_analysis_ms": 0.06,
+            "bm25_ms": 1.4,
+            "fusion_ms": 0.44,
+            "context_expand_ms": 0.0,
+            "total_retrieval_ms": 3.49,
+            "generation_ms": 15079.09,
+            "total_ms": 15082.58
+          },
+          "token_usage": {
+            "prompt_tokens": 4307,
+            "completion_tokens": 150,
+            "total_tokens": 4457
+          },
+          "top_source": "Prise en charge du sepsis du nouveau-né, de l’enfant et de l’adulte – HAS 2025",
+          "reasoning_trace": "Ligne 1 — ANALYSE : La pose d'un implant cochléaire est mentionnée dans l'encadré des patients non immunodéprimés porteurs d'une maladie sous-jacente prédisposant à la survenue d'Infection Invasive à Pneumocoque (IIP), ce qui inclut l'asthme sévère sous traitement continu. Cependant, il n'y a pas de mention spécifique de l'antibioprophylaxie pour cette intervention dans les extraits fournis.\n\nLigne 2 — RÉPONSE : Pas d'antibioprophylaxie, SFAR 2026 [S3]."
+        },
+        {
+          "id": "Q42",
+          "title": "Chirurgie orthognatique",
+          "type": "open",
+          "expected": "Céfazoline",
+          "actual": "Amoxicilline/Clavulanate. SFAR 2026 [S6].",
+          "is_correct": false,
+          "sourcing_present": true,
+          "evidence_present": true,
+          "is_allergy": false,
+          "grounding_score": 1.0,
+          "hallucinated_molecules": [],
+          "latency_ms": {
+            "query_analysis_ms": 0.06,
+            "bm25_ms": 2.6,
+            "fusion_ms": 0.67,
+            "context_expand_ms": 0.0,
+            "total_retrieval_ms": 5.25,
+            "generation_ms": 16240.05,
+            "total_ms": 16245.3
+          },
+          "token_usage": {
+            "prompt_tokens": 4514,
+            "completion_tokens": 170,
+            "total_tokens": 4684
+          },
+          "top_source": "Antibioprophylaxie en chirurgie et médecine interventionnelle",
+          "reasoning_trace": "Ligne 1 — ANALYSE : La chirurgie orthognatique est mentionnée dans la section \"Chirurgie orthognatique\" avec une antibioprophylaxie recommandée. La dose initiale est de 50 mg/kg d'amoxicilline-clavulanate, et la réinjection est de 50 mg/kg si la durée de la chirurgie dépasse 2h, puis toutes les 2h jusqu'à la fin de la chirurgie, suivie d'une administration postop de 30 mg/kg toutes les 6h (max 1g) pendant 48h.\n\nLigne 2 — RÉPONSE : Amoxicilline/Clavulanate. SFAR 2026 [S6]."
+        },
+        {
+          "id": "Q61",
+          "title": "Lambeau libre microchirurgical",
+          "type": "open",
+          "expected": "Céfazoline",
+          "actual": "Antibioprophylaxie adaptée au risque du patient et au site opératoire (SFAR 2026 [S3, S4]).",
+          "is_correct": false,
+          "sourcing_present": true,
+          "evidence_present": true,
+          "is_allergy": false,
+          "grounding_score": 1.0,
+          "hallucinated_molecules": [],
+          "latency_ms": {
+            "query_analysis_ms": 0.19,
+            "bm25_ms": 2.25,
+            "fusion_ms": 0.53,
+            "context_expand_ms": 0.0,
+            "total_retrieval_ms": 4.96,
+            "generation_ms": 16160.62,
+            "total_ms": 16165.58
+          },
+          "token_usage": {
+            "prompt_tokens": 4540,
+            "completion_tokens": 156,
+            "total_tokens": 4696
+          },
+          "top_source": "Gestion des anticoagulants pour une procédure invasive programmée",
+          "reasoning_trace": "Ligne 1 — ANALYSE : La reconstruction par lambeau libre est mentionnée dans la section \"Chirurgie gynécologique\" et \"Chirurgie générale et carcinologique\". Cependant, la question ne précise pas de chirurgie gynécologique spécifique. La recommandation est de réaliser une antibioprophylaxie adaptée au risque du patient et au site opératoire, sans indication spécifique pour une antibioprophylaxie standard.\n\nLigne 2 — RÉPONSE : Antibioprophylaxie adaptée au risque du patient et au site opératoire (SFAR 2026 [S3, S4])."
+        },
+        {
+          "id": "Q82",
+          "title": "Tamponnement utérin hémorragie obstétricale",
+          "type": "open",
+          "expected": "Céfazoline",
+          "actual": "Pas d'antibioprophylaxie, SFAR 2026 [S1].",
+          "is_correct": false,
+          "sourcing_present": true,
+          "evidence_present": true,
+          "is_allergy": false,
+          "grounding_score": 1.0,
+          "hallucinated_molecules": [],
+          "latency_ms": {
+            "query_analysis_ms": 0.07,
+            "bm25_ms": 2.31,
+            "fusion_ms": 0.56,
+            "context_expand_ms": 0.0,
+            "total_retrieval_ms": 4.67,
+            "generation_ms": 15128.04,
+            "total_ms": 15132.71
+          },
+          "token_usage": {
+            "prompt_tokens": 4440,
+            "completion_tokens": 123,
+            "total_tokens": 4563
+          },
+          "top_source": "Antibioprophylaxie en chirurgie et médecine interventionnelle",
+          "reasoning_trace": "Ligne 1 — ANALYSE : La question concerne la pose d'un tamponnement intra-utérin pour hémorragie obstétricale, qui correspond à l'acte chirurgical \"Tamponnement utérin\" mentionné dans l'extrait [S1]. L'extrait indique clairement \"PAS D'ANTIOPROPHYLAXIE\" pour cette procédure.\n\nLigne 2 — RÉPONSE : Pas d'antibioprophylaxie, SFAR 2026 [S1]."
+        },
+        {
+          "id": "Q85",
+          "title": "Oesophagectomie",
+          "type": "open",
+          "expected": "Céfazoline",
+          "actual": "Amoxicilline/Clavulanate, SFAR 2026 [S7].",
+          "is_correct": false,
+          "sourcing_present": true,
+          "evidence_present": true,
+          "is_allergy": false,
+          "grounding_score": 1.0,
+          "hallucinated_molecules": [],
+          "latency_ms": {
+            "query_analysis_ms": 0.08,
+            "bm25_ms": 1.8,
+            "fusion_ms": 0.52,
+            "context_expand_ms": 0.0,
+            "total_retrieval_ms": 3.99,
+            "generation_ms": 13203.72,
+            "total_ms": 13207.71
+          },
+          "token_usage": {
+            "prompt_tokens": 4004,
+            "completion_tokens": 97,
+            "total_tokens": 4101
+          },
+          "top_source": "Antibioprophylaxie en chirurgie et médecine interventionnelle",
+          "reasoning_trace": "Ligne 1 — ANALYSE : \n- L'esophagectomie est mentionnée dans la partie chirurgie digestive et bariatrique, endoscopie et médecine interventionnelle digestive. La molécule standard pour cette chirurgie est l'amoxicilline/clavulanate.\n\nLigne 2 — RÉPONSE : Amoxicilline/Clavulanate, SFAR 2026 [S7]."
+        },
+        {
+          "id": "Q94",
+          "title": "Kyste hydatique du foie",
+          "type": "open",
+          "expected": "Pas d'antibioprophylaxie",
+          "actual": "Céfazoline. SFAR 2025 [S3].",
+          "is_correct": false,
+          "sourcing_present": true,
+          "evidence_present": true,
+          "is_allergy": false,
+          "grounding_score": 1.0,
+          "hallucinated_molecules": [],
+          "latency_ms": {
+            "query_analysis_ms": 0.07,
+            "bm25_ms": 1.95,
+            "fusion_ms": 0.43,
+            "context_expand_ms": 0.0,
+            "total_retrieval_ms": 4.01,
+            "generation_ms": 16712.73,
+            "total_ms": 16716.74
+          },
+          "token_usage": {
+            "prompt_tokens": 4589,
+            "completion_tokens": 140,
+            "total_tokens": 4729
+          },
+          "top_source": "Antibioprophylaxie en chirurgie et médecine interventionnelle",
+          "reasoning_trace": "Ligne 1 — ANALYSE : La chirurgie d'un kyste hydatique du foie est mentionnée dans l'annexe 3 de la section Hépatectomie sans chirurgie des voies biliaires, qui est associée à une antibioprophylaxie. La molécule standard est Céfazoline (2g IVL, 1g si durée > 4h, puis toutes les 4h jusqu'à la fin de la chirurgie).\n\nLigne 2 — RÉPONSE : Céfazoline. SFAR 2025 [S3]."
+        },
+        {
+          "id": "Q141",
+          "title": "PTG allergie alternative",
+          "type": "mcq",
+          "expected": "C",
+          "actual": "B (SFAR 2026 [S1])",
+          "is_correct": false,
+          "sourcing_present": true,
+          "evidence_present": true,
+          "is_allergy": true,
+          "grounding_score": 1.0,
+          "hallucinated_molecules": [],
+          "latency_ms": {
+            "query_analysis_ms": 0.03,
+            "bm25_ms": 9.4,
+            "fusion_ms": 0.82,
+            "context_expand_ms": 0.0,
+            "total_retrieval_ms": 22.11,
+            "generation_ms": 15072.86,
+            "total_ms": 15094.97
+          },
+          "token_usage": {
+            "prompt_tokens": 4100,
+            "completion_tokens": 132,
+            "total_tokens": 4232
+          },
+          "top_source": "Antibioprophylaxie en chirurgie et médecine interventionnelle",
+          "reasoning_trace": "1. La question demande l'alternative de première intention pour l'antibioprophylaxie d'une prothèse de genou en cas d'allergie aux bêtalactamines.\n2. Évaluation des choix :\n   - A. Gentamicine : Pas mentionnée comme première intention.\n   - B. Vancomycine : Mentionnée en première intention.\n   - C. Clindamycine : Mentionnée en seconde intention.\n   - D. Métronidazole : Pas mentionnée comme première intention.\n3. RÉPONSE : B (SFAR 2026 [S1])"
+        },
+        {
+          "id": "Q149",
+          "title": "Lobectomie pulmonaire molécule",
+          "type": "mcq",
+          "expected": "D",
+          "actual": "B (SFAR 2026 [S2])",
+          "is_correct": false,
+          "sourcing_present": true,
+          "evidence_present": true,
+          "is_allergy": false,
+          "grounding_score": 1.0,
+          "hallucinated_molecules": [],
+          "latency_ms": {
+            "query_analysis_ms": 0.03,
+            "bm25_ms": 7.17,
+            "fusion_ms": 0.19,
+            "context_expand_ms": 0.0,
+            "total_retrieval_ms": 9.31,
+            "generation_ms": 16819.0,
+            "total_ms": 16828.31
+          },
+          "token_usage": {
+            "prompt_tokens": 3976,
+            "completion_tokens": 243,
+            "total_tokens": 4219
+          },
+          "top_source": "Antibioprophylaxie en chirurgie et médecine interventionnelle",
+          "reasoning_trace": "A. Amoxicilline/Clavulanate uniquement : INCORRECTE. L'extrait [S2] mentionne clairement que l'amoxicilline/clavulanate est une option, mais il s'agit d'une alternative à la céfazoline, pas une recommandation exclusive.\n\nB. Céfazoline uniquement : CORRECTE. L'extrait [S2] indique clairement que la céfazoline est une option recommandée pour les lobectomies pulmonaires par thoracotomie.\n\nC. Céfuroxime uniquement : INCORRECTE. L'extrait [S2] mentionne la céfuroxime comme une alternative, mais elle n'est pas une recommandation exclusive.\n\nD. Amoxicilline/Clavulanate, Céfazoline ou Céfuroxime (au choix) : INCORRECTE. L'extrait [S2] indique clairement que ces options sont des alternatives, pas des recommandations exclusives.\n\nRÉPONSE : B (SFAR 2026 [S2])"
+        }
+      ],
+      "results": [
+        {
+          "id": "Q01",
+          "title": "PTH standard",
+          "type": "open",
+          "expected": "Céfazoline",
+          "actual": "Il est recommandé de prescrire une thromboprophylaxie séquentielle, associant d'abord 5 jours d'anticoagulant puis de l'aspirine pendant 30 jours après PTH, si le patient est pris en charge dans un parcours de RAAC réussi et s'il ne présente ni facteur de risque thromboembolique veineux majeur ni plusieurs facteurs de risque mineurs. SFAR 2024 [S7].",
+          "is_correct": false,
+          "sourcing_present": true,
+          "evidence_present": false,
+          "is_allergy": false,
+          "grounding_score": 1.0,
+          "hallucinated_molecules": [],
+          "latency_ms": {
+            "query_analysis_ms": 0.02,
+            "bm25_ms": 1.19,
+            "fusion_ms": 0.13,
+            "context_expand_ms": 0.0,
+            "total_retrieval_ms": 1.75,
+            "generation_ms": 16389.49,
+            "total_ms": 16391.24
+          },
+          "token_usage": {
+            "prompt_tokens": 4327,
+            "completion_tokens": 188,
+            "total_tokens": 4515
+          },
+          "top_source": "Prévention de la maladie thromboembolique veineuse péri-opératoire",
+          "reasoning_trace": "Ligne 1 — ANALYSE : La question porte sur une prothèse totale de hanche (PTH), qui est une chirurgie orthopédique majeure. Selon la section [S7], il est recommandé de prescrire une thromboprophylaxie pharmacologique après PTH.\n\nLigne 2 — RÉPONSE : Il est recommandé de prescrire une thromboprophylaxie séquentielle, associant d'abord 5 jours d'anticoagulant puis de l'aspirine pendant 30 jours après PTH, si le patient est pris en charge dans un parcours de RAAC réussi et s'il ne présente ni facteur de risque thromboembolique veineux majeur ni plusieurs facteurs de risque mineurs. SFAR 2024 [S7]."
+        },
+        {
+          "id": "Q03",
+          "title": "PTG allergie bêtalactamines",
+          "type": "open",
+          "expected": "Clindamycine",
+          "actual": "Vancomycine SFAR 2026 [S3].",
+          "is_correct": false,
+          "sourcing_present": true,
+          "evidence_present": true,
+          "is_allergy": true,
+          "grounding_score": 1.0,
+          "hallucinated_molecules": [],
+          "latency_ms": {
+            "query_analysis_ms": 0.02,
+            "bm25_ms": 1.11,
+            "fusion_ms": 0.35,
+            "context_expand_ms": 0.0,
+            "total_retrieval_ms": 2.5,
+            "generation_ms": 14046.92,
+            "total_ms": 14049.42
+          },
+          "token_usage": {
+            "prompt_tokens": 4200,
+            "completion_tokens": 120,
+            "total_tokens": 4320
+          },
+          "top_source": "Antibioprophylaxie en chirurgie et médecine interventionnelle",
+          "reasoning_trace": "Ligne 1 — ANALYSE : La prothèse totale de genou (PTG) est mentionnée dans la section \"Chirurgie du membre inférieur\". L'encadré allergie pour les prothèses totales de genou indique que si l'allergie est aux bêtalactamines, on préfère la vancomycine ou la teicoplanine à la clindamycine.\n\nLigne 2 — RÉPONSE : Vancomycine SFAR 2026 [S3]."
+        },
+        {
+          "id": "Q04",
+          "title": "PTH voie antérieure allergie",
+          "type": "open",
+          "expected": "Vancomycine",
+          "actual": "Vancomycine, SFAR 2026 [S1].",
+          "is_correct": true,
+          "sourcing_present": true,
+          "evidence_present": true,
+          "is_allergy": true,
+          "grounding_score": 1.0,
+          "hallucinated_molecules": [],
+          "latency_ms": {
+            "query_analysis_ms": 0.08,
+            "bm25_ms": 2.3,
+            "fusion_ms": 0.37,
+            "context_expand_ms": 0.0,
+            "total_retrieval_ms": 4.08,
+            "generation_ms": 13835.13,
+            "total_ms": 13839.21
+          },
+          "token_usage": {
+            "prompt_tokens": 4155,
+            "completion_tokens": 119,
+            "total_tokens": 4274
+          },
+          "top_source": "Antibioprophylaxie en chirurgie et médecine interventionnelle",
+          "reasoning_trace": "Ligne 1 — ANALYSE : La prothèse de hanche par voie antérieure est mentionnée dans la section \"Chirurgie du membre inférieur\". L'exception conditionnelle pour la voie antérieure est mentionnée, indiquant de préférer la vancomycine ou la teicoplanine à la clindamycine en cas d'allergie aux bêtalactamines.\n\nLigne 2 — RÉPONSE : Vancomycine, SFAR 2026 [S1]."
+        },
+        {
+          "id": "Q06",
+          "title": "Fixateur externe fracture fermée",
+          "type": "open",
+          "expected": "Pas d'antibioprophylaxie",
+          "actual": "Pas d'antibioprophylaxie, SFAR 2026 [S1].",
+          "is_correct": true,
+          "sourcing_present": true,
+          "evidence_present": true,
+          "is_allergy": false,
+          "grounding_score": 1.0,
+          "hallucinated_molecules": [],
+          "latency_ms": {
+            "query_analysis_ms": 0.05,
+            "bm25_ms": 1.91,
+            "fusion_ms": 0.81,
+            "context_expand_ms": 0.0,
+            "total_retrieval_ms": 4.47,
+            "generation_ms": 14129.46,
+            "total_ms": 14133.93
+          },
+          "token_usage": {
+            "prompt_tokens": 4294,
+            "completion_tokens": 112,
+            "total_tokens": 4406
+          },
+          "top_source": "Antibioprophylaxie en chirurgie et médecine interventionnelle",
+          "reasoning_trace": "Ligne 1 — ANALYSE : La pose d'un fixateur externe sur une fracture fermée correspond à l'acte \"Ostéosynthèse par : - fixateur externe\" qui est associé à \"PAS D'ANTIBIOPROPHYLAXIE\" dans la section \"Fractures fermées (hors main)\".\nLigne 2 — RÉPONSE : Pas d'antibioprophylaxie, SFAR 2026 [S1]."
+        },
+        {
+          "id": "Q09",
+          "title": "Écrasement main > 2h",
+          "type": "open",
+          "expected": "Amoxicilline/Clavulanate",
+          "actual": "Amoxicilline/Clavulanate SFAR 2026 [S1].",
+          "is_correct": true,
+          "sourcing_present": true,
+          "evidence_present": true,
+          "is_allergy": false,
+          "grounding_score": 1.0,
+          "hallucinated_molecules": [],
+          "latency_ms": {
+            "query_analysis_ms": 0.06,
+            "bm25_ms": 2.57,
+            "fusion_ms": 0.82,
+            "context_expand_ms": 0.0,
+            "total_retrieval_ms": 5.37,
+            "generation_ms": 14132.2,
+            "total_ms": 14137.57
+          },
+          "token_usage": {
+            "prompt_tokens": 4172,
+            "completion_tokens": 127,
+            "total_tokens": 4299
+          },
+          "top_source": "Antibioprophylaxie en chirurgie et médecine interventionnelle",
+          "reasoning_trace": "Ligne 1 — ANALYSE : L'acte chirurgical est \"Traumatisme complexe de la main (replantation, mains de portière, écrasement, avulsion, blast, plaies par balles, injection sous pression, ou durée de chirurgie prévue >2h)\" qui nécessite une antibioprophylaxie. La molécule standard est Amoxicilline/Clavulanate.\nLigne 2 — RÉPONSE : Amoxicilline/Clavulanate SFAR 2026 [S1]."
+        },
+        {
+          "id": "Q12",
+          "title": "Fracture ouverte Gustilo 3 allergie",
+          "type": "open",
+          "expected": "Clindamycine + Gentamicine",
+          "actual": "Clindamycine 900 mg IV (SFAR 2026 [S4]).",
+          "is_correct": false,
+          "sourcing_present": true,
+          "evidence_present": true,
+          "is_allergy": true,
+          "grounding_score": 1.0,
+          "hallucinated_molecules": [],
+          "latency_ms": {
+            "query_analysis_ms": 0.02,
+            "bm25_ms": 0.76,
+            "fusion_ms": 0.16,
+            "context_expand_ms": 0.0,
+            "total_retrieval_ms": 1.55,
+            "generation_ms": 14180.05,
+            "total_ms": 14181.6
+          },
+          "token_usage": {
+            "prompt_tokens": 4157,
+            "completion_tokens": 132,
+            "total_tokens": 4289
+          },
+          "top_source": "Antibioprophylaxie en chirurgie et médecine interventionnelle",
+          "reasoning_trace": "Ligne 1 — ANALYSE : La fracture ouverte Gustilo 3 est mentionnée dans la section \"Fractures ouvertes\" avec une administration d'Amoxicilline/Clavulanate. Cependant, l'allergie aux pénicillines est mentionnée, donc on applique l'encadré allergie de la molécule standard correspondante, qui est clindamycine 900 mg IV.\n\nLigne 2 — RÉPONSE : Clindamycine 900 mg IV (SFAR 2026 [S4])."
+        },
+        {
+          "id": "Q13",
+          "title": "Ablation matériel ostéosynthèse MI",
+          "type": "open",
+          "expected": "Pas d'antibioprophylaxie",
+          "actual": "Céfazoline SFAR 2026 [S1].",
+          "is_correct": false,
+          "sourcing_present": true,
+          "evidence_present": true,
+          "is_allergy": false,
+          "grounding_score": 1.0,
+          "hallucinated_molecules": [],
+          "latency_ms": {
+            "query_analysis_ms": 0.06,
+            "bm25_ms": 2.75,
+            "fusion_ms": 0.57,
+            "context_expand_ms": 0.0,
+            "total_retrieval_ms": 5.08,
+            "generation_ms": 14963.39,
+            "total_ms": 14968.47
+          },
+          "token_usage": {
+            "prompt_tokens": 4571,
+            "completion_tokens": 117,
+            "total_tokens": 4688
+          },
+          "top_source": "Antibioprophylaxie en chirurgie et médecine interventionnelle",
+          "reasoning_trace": "Ligne 1 — ANALYSE : L'acte chirurgical demandé est \"ablation de matériel d'ostéosynthèse\" au membre inférieur. Selon la section \"Chirurgie du membre inférieur\" de [S1], cette procédure est associée à la céfazoline. Il n'y a pas d'exception conditionnelle mentionnée pour cette procédure.\n\nLigne 2 — RÉPONSE : Céfazoline SFAR 2026 [S1]."
+        },
+        {
+          "id": "Q16",
+          "title": "Splénectomie hémostase fixateur externe fémur",
+          "type": "open",
+          "expected": "Céfazoline",
+          "actual": "Céfazoline SFAR 2026 [S6].",
+          "is_correct": true,
+          "sourcing_present": true,
+          "evidence_present": true,
+          "is_allergy": false,
+          "grounding_score": 1.0,
+          "hallucinated_molecules": [],
+          "latency_ms": {
+            "query_analysis_ms": 0.04,
+            "bm25_ms": 1.77,
+            "fusion_ms": 0.46,
+            "context_expand_ms": 0.0,
+            "total_retrieval_ms": 3.59,
+            "generation_ms": 14955.68,
+            "total_ms": 14959.27
+          },
+          "token_usage": {
+            "prompt_tokens": 4370,
+            "completion_tokens": 140,
+            "total_tokens": 4510
+          },
+          "top_source": "Antibioprophylaxie en chirurgie et médecine interventionnelle",
+          "reasoning_trace": "Ligne 1 — ANALYSE : La splénectomie d'hémostase n'est pas mentionnée dans les extraits fournis. La pose d'un fixateur externe sur fracture fermée du fémur est couverte par la recommandation de céfazoline 30 mg/kg IVL, mais la splénectomie n'est pas associée à cette indication. De plus, il n'y a pas d'exception conditionnelle mentionnée pour un polytraumatisé dans les extraits fournis.\n\nLigne 2 — RÉPONSE : Céfazoline SFAR 2026 [S6]."
+        },
+        {
+          "id": "Q19",
+          "title": "Biopsie cérébrale",
+          "type": "open",
+          "expected": "Pas d'antibioprophylaxie",
+          "actual": "Pas d'antibioprophylaxie (SFAR 2026 [S3]).",
+          "is_correct": true,
+          "sourcing_present": true,
+          "evidence_present": true,
+          "is_allergy": false,
+          "grounding_score": 1.0,
+          "hallucinated_molecules": [],
+          "latency_ms": {
+            "query_analysis_ms": 0.06,
+            "bm25_ms": 1.7,
+            "fusion_ms": 0.91,
+            "context_expand_ms": 0.0,
+            "total_retrieval_ms": 4.7,
+            "generation_ms": 15178.09,
+            "total_ms": 15182.79
+          },
+          "token_usage": {
+            "prompt_tokens": 4762,
+            "completion_tokens": 104,
+            "total_tokens": 4866
+          },
+          "top_source": "Place de l’ECBU avant une prise en charge urologique chirurgicale ou interventionnelle chez l’adulte et modalités de traitement en cas de colonisation",
+          "reasoning_trace": "Ligne 1 — ANALYSE : La biopsie cérébrale est mentionnée dans la section \"Craniotomie\" où une couverture antibiotique est recommandée. Cependant, une biopsie cérébrale stéréotaxique est explicitement mentionnée sans antibioprophylaxie.\n\nLigne 2 — RÉPONSE : Pas d'antibioprophylaxie (SFAR 2026 [S3])."
+        },
+        {
+          "id": "Q22",
+          "title": "Plaie cranio-cérébrale",
+          "type": "open",
+          "expected": "Amoxicilline/Clavulanate",
+          "actual": "Céfazoline, SFAR 2018 [S3].",
+          "is_correct": false,
+          "sourcing_present": true,
+          "evidence_present": false,
+          "is_allergy": false,
+          "grounding_score": 1.0,
+          "hallucinated_molecules": [],
+          "latency_ms": {
+            "query_analysis_ms": 0.03,
+            "bm25_ms": 1.43,
+            "fusion_ms": 0.41,
+            "context_expand_ms": 0.0,
+            "total_retrieval_ms": 3.0,
+            "generation_ms": 15334.88,
+            "total_ms": 15337.88
+          },
+          "token_usage": {
+            "prompt_tokens": 4323,
+            "completion_tokens": 158,
+            "total_tokens": 4481
+          },
+          "top_source": "Antibioprophylaxie en chirurgie et médecine interventionnelle (patients adultes)",
+          "reasoning_trace": "Ligne 1 — ANALYSE : La question porte sur une plaie cranio-cérébrale pénétrante, qui est une forme de neurochirurgie. Selon la table d'antibioprophylaxie en neurochirurgie, une crâniotomie est mentionnée, mais pas spécifiquement une plaie cranio-cérébrale pénétrante. Cependant, la crâniotomie est associée à une antibioprophylaxie. L'exception pour une allergie à la céfazoline est également fournie.\n\nLigne 2 — RÉPONSE : Céfazoline, SFAR 2018 [S3]."
+        },
+        {
+          "id": "Q25",
+          "title": "Pose stimulateur cérébral",
+          "type": "open",
+          "expected": "Céfazoline",
+          "actual": "Céfazoline SFAR 2026 [S1, S3].",
+          "is_correct": true,
+          "sourcing_present": true,
+          "evidence_present": true,
+          "is_allergy": false,
+          "grounding_score": 1.0,
+          "hallucinated_molecules": [],
+          "latency_ms": {
+            "query_analysis_ms": 0.03,
+            "bm25_ms": 1.82,
+            "fusion_ms": 0.73,
+            "context_expand_ms": 0.0,
+            "total_retrieval_ms": 4.27,
+            "generation_ms": 13488.84,
+            "total_ms": 13493.11
+          },
+          "token_usage": {
+            "prompt_tokens": 4132,
+            "completion_tokens": 106,
+            "total_tokens": 4238
+          },
+          "top_source": "Antibioprophylaxie en chirurgie et médecine interventionnelle",
+          "reasoning_trace": "Ligne 1 — ANALYSE : Trouve l'acte chirurgical exact \"Pose d'électrode de stimulation cérébrale ou médullaire\" dans [S1] et [S3], et sa molécule standard est Céfazoline. Les deux sections sont cohérentes et ne mentionnent aucune exception.\n\nLigne 2 — RÉPONSE : Céfazoline SFAR 2026 [S1, S3]."
+        },
+        {
+          "id": "Q27",
+          "title": "Craniotomie allergie bêtalactamines",
+          "type": "open",
+          "expected": "Clindamycine",
+          "actual": "Clindamycine 900 mg IV (SFAR 2026 [S3]).",
+          "is_correct": true,
+          "sourcing_present": true,
+          "evidence_present": true,
+          "is_allergy": true,
+          "grounding_score": 1.0,
+          "hallucinated_molecules": [],
+          "latency_ms": {
+            "query_analysis_ms": 0.04,
+            "bm25_ms": 1.09,
+            "fusion_ms": 0.48,
+            "context_expand_ms": 0.0,
+            "total_retrieval_ms": 2.85,
+            "generation_ms": 13720.55,
+            "total_ms": 13723.4
+          },
+          "token_usage": {
+            "prompt_tokens": 3981,
+            "completion_tokens": 132,
+            "total_tokens": 4113
+          },
+          "top_source": "Antibioprophylaxie en chirurgie et médecine interventionnelle",
+          "reasoning_trace": "Ligne 1 — ANALYSE : La craniotomie est mentionnée dans le tableau avec une antibioprophylaxie recommandée. Si le patient est allergique aux bêtalactamines, l'encadré allergie indique clarament qu'en cas d'allergie aux bêtalactamines et antibioprophylaxie indiquée, on doit utiliser clindamycine 900 mg IV.\n\nLigne 2 — RÉPONSE : Clindamycine 900 mg IV (SFAR 2026 [S3])."
+        },
+        {
+          "id": "Q28",
+          "title": "Plaie cranio-cérébrale allergie pénicillines",
+          "type": "open",
+          "expected": "Triméthoprime/Sulfaméthoxazole",
+          "actual": "Amoxicilline/Clavulanate, SFAR 2026 [S7].",
+          "is_correct": false,
+          "sourcing_present": true,
+          "evidence_present": false,
+          "is_allergy": true,
+          "grounding_score": 1.0,
+          "hallucinated_molecules": [],
+          "latency_ms": {
+            "query_analysis_ms": 0.02,
+            "bm25_ms": 1.09,
+            "fusion_ms": 0.48,
+            "context_expand_ms": 0.0,
+            "total_retrieval_ms": 2.93,
+            "generation_ms": 15136.53,
+            "total_ms": 15139.46
+          },
+          "token_usage": {
+            "prompt_tokens": 4479,
+            "completion_tokens": 135,
+            "total_tokens": 4614
+          },
+          "top_source": "Antibioprophylaxie en chirurgie et médecine interventionnelle (patients adultes)",
+          "reasoning_trace": "Ligne 1 — ANALYSE : La plaie cranio-cérébrale est mentionnée dans la section \"Plaies cranio-cérébrales et fracture de la base du crâne\" avec une antibioprophylaxie recommandée. Cependant, une allergie aux pénicillines est mentionnée dans la section \"Amoxicilline/Clavulanate\" qui est la molécule standard pour ce type d'acte chirurgical.\n\nLigne 2 — RÉPONSE : Amoxicilline/Clavulanate, SFAR 2026 [S7]."
+        },
+        {
+          "id": "Q30",
+          "title": "Thyroïdectomie totale",
+          "type": "open",
+          "expected": "Pas d'antibioprophylaxie",
+          "actual": "Pas d'antibioprophylaxie, SFAR 2026 [S3].",
+          "is_correct": true,
+          "sourcing_present": true,
+          "evidence_present": true,
+          "is_allergy": false,
+          "grounding_score": 1.0,
+          "hallucinated_molecules": [],
+          "latency_ms": {
+            "query_analysis_ms": 0.01,
+            "bm25_ms": 0.6,
+            "fusion_ms": 0.34,
+            "context_expand_ms": 0.0,
+            "total_retrieval_ms": 1.98,
+            "generation_ms": 14293.8,
+            "total_ms": 14295.78
+          },
+          "token_usage": {
+            "prompt_tokens": 4635,
+            "completion_tokens": 81,
+            "total_tokens": 4716
+          },
+          "top_source": "Antibioprophylaxie en chirurgie et médecine interventionnelle",
+          "reasoning_trace": "Ligne 1 — ANALYSE : La thyroïdectomie totale est mentionnée dans la section \"Chirurgie cervicale isolée\" sans indication d'antibioprophylaxie.\n\nLigne 2 — RÉPONSE : Pas d'antibioprophylaxie, SFAR 2026 [S3]."
+        },
+        {
+          "id": "Q33",
+          "title": "Implant cochléaire",
+          "type": "open",
+          "expected": "Céfazoline",
+          "actual": "Pas d'antibioprophylaxie, SFAR 2026 [S3].",
+          "is_correct": false,
+          "sourcing_present": true,
+          "evidence_present": true,
+          "is_allergy": false,
+          "grounding_score": 1.0,
+          "hallucinated_molecules": [],
+          "latency_ms": {
+            "query_analysis_ms": 0.06,
+            "bm25_ms": 1.4,
+            "fusion_ms": 0.44,
+            "context_expand_ms": 0.0,
+            "total_retrieval_ms": 3.49,
+            "generation_ms": 15079.09,
+            "total_ms": 15082.58
+          },
+          "token_usage": {
+            "prompt_tokens": 4307,
+            "completion_tokens": 150,
+            "total_tokens": 4457
+          },
+          "top_source": "Prise en charge du sepsis du nouveau-né, de l’enfant et de l’adulte – HAS 2025",
+          "reasoning_trace": "Ligne 1 — ANALYSE : La pose d'un implant cochléaire est mentionnée dans l'encadré des patients non immunodéprimés porteurs d'une maladie sous-jacente prédisposant à la survenue d'Infection Invasive à Pneumocoque (IIP), ce qui inclut l'asthme sévère sous traitement continu. Cependant, il n'y a pas de mention spécifique de l'antibioprophylaxie pour cette intervention dans les extraits fournis.\n\nLigne 2 — RÉPONSE : Pas d'antibioprophylaxie, SFAR 2026 [S3]."
+        },
+        {
+          "id": "Q36",
+          "title": "Chirurgie cataracte",
+          "type": "open",
+          "expected": "Céfuroxime",
+          "actual": "Céfuroxime SFAR 2026 [S3].",
+          "is_correct": true,
+          "sourcing_present": true,
+          "evidence_present": true,
+          "is_allergy": false,
+          "grounding_score": 1.0,
+          "hallucinated_molecules": [],
+          "latency_ms": {
+            "query_analysis_ms": 0.04,
+            "bm25_ms": 1.18,
+            "fusion_ms": 0.36,
+            "context_expand_ms": 0.0,
+            "total_retrieval_ms": 2.69,
+            "generation_ms": 15344.63,
+            "total_ms": 15347.32
+          },
+          "token_usage": {
+            "prompt_tokens": 4646,
+            "completion_tokens": 120,
+            "total_tokens": 4766
+          },
+          "top_source": "Antibioprophylaxie en chirurgie et médecine interventionnelle (patients adultes)",
+          "reasoning_trace": "Ligne 1 — ANALYSE : La chirurgie de la cataracte est mentionnée dans la section \"Antibioprophylaxie en chirurgie ophtalmologique\" et \"Antibioprophylaxie en chirurgie cardiaque\". La molécule standard pour la chirurgie de la cataracte est l'injection intracaméculaire de céfuroxime.\n\nLigne 2 — RÉPONSE : Céfuroxime SFAR 2026 [S3]."
+        },
+        {
+          "id": "Q39",
+          "title": "Chirurgie strabisme",
+          "type": "open",
+          "expected": "Pas d'antibioprophylaxie",
+          "actual": "Pas d'antibioprophylaxie, SFAR 2026 [S3].",
+          "is_correct": true,
+          "sourcing_present": true,
+          "evidence_present": true,
+          "is_allergy": false,
+          "grounding_score": 1.0,
+          "hallucinated_molecules": [],
+          "latency_ms": {
+            "query_analysis_ms": 0.02,
+            "bm25_ms": 0.64,
+            "fusion_ms": 0.18,
+            "context_expand_ms": 0.0,
+            "total_retrieval_ms": 1.43,
+            "generation_ms": 15208.55,
+            "total_ms": 15209.98
+          },
+          "token_usage": {
+            "prompt_tokens": 4303,
+            "completion_tokens": 154,
+            "total_tokens": 4457
+          },
+          "top_source": "Antibioprophylaxie en chirurgie et médecine interventionnelle",
+          "reasoning_trace": "Ligne 1 — ANALYSE : La chirurgie du strabisme est mentionnée dans la partie \"Partie 3 : Antibioprophylaxie en chirurgie cardiaque, cardiologie interventionnelle, rythmologie et chirurgie vasculaire\" et dans la partie \"Partie 9 : Antibioprophylaxie en chirurgie pédiatrique et néonatale\". Cependant, aucune indication d'antibioprophylaxie n'est donnée pour cette chirurgie dans ces sections.\n\nLigne 2 — RÉPONSE : Pas d'antibioprophylaxie, SFAR 2026 [S3]."
+        },
+        {
+          "id": "Q42",
+          "title": "Chirurgie orthognatique",
+          "type": "open",
+          "expected": "Céfazoline",
+          "actual": "Amoxicilline/Clavulanate. SFAR 2026 [S6].",
+          "is_correct": false,
+          "sourcing_present": true,
+          "evidence_present": true,
+          "is_allergy": false,
+          "grounding_score": 1.0,
+          "hallucinated_molecules": [],
+          "latency_ms": {
+            "query_analysis_ms": 0.06,
+            "bm25_ms": 2.6,
+            "fusion_ms": 0.67,
+            "context_expand_ms": 0.0,
+            "total_retrieval_ms": 5.25,
+            "generation_ms": 16240.05,
+            "total_ms": 16245.3
+          },
+          "token_usage": {
+            "prompt_tokens": 4514,
+            "completion_tokens": 170,
+            "total_tokens": 4684
+          },
+          "top_source": "Antibioprophylaxie en chirurgie et médecine interventionnelle",
+          "reasoning_trace": "Ligne 1 — ANALYSE : La chirurgie orthognatique est mentionnée dans la section \"Chirurgie orthognatique\" avec une antibioprophylaxie recommandée. La dose initiale est de 50 mg/kg d'amoxicilline-clavulanate, et la réinjection est de 50 mg/kg si la durée de la chirurgie dépasse 2h, puis toutes les 2h jusqu'à la fin de la chirurgie, suivie d'une administration postop de 30 mg/kg toutes les 6h (max 1g) pendant 48h.\n\nLigne 2 — RÉPONSE : Amoxicilline/Clavulanate. SFAR 2026 [S6]."
+        },
+        {
+          "id": "Q43",
+          "title": "Carcinologique cervico-faciale allergie bêtalactamines",
+          "type": "open",
+          "expected": "Clindamycine + Gentamicine",
+          "actual": "Clindamycine + Gentamicine SFAR 2026 [S1].",
+          "is_correct": true,
+          "sourcing_present": true,
+          "evidence_present": true,
+          "is_allergy": true,
+          "grounding_score": 1.0,
+          "hallucinated_molecules": [],
+          "latency_ms": {
+            "query_analysis_ms": 0.05,
+            "bm25_ms": 1.72,
+            "fusion_ms": 0.38,
+            "context_expand_ms": 0.0,
+            "total_retrieval_ms": 3.24,
+            "generation_ms": 14663.68,
+            "total_ms": 14666.92
+          },
+          "token_usage": {
+            "prompt_tokens": 4518,
+            "completion_tokens": 109,
+            "total_tokens": 4627
+          },
+          "top_source": "Antibioprophylaxie en chirurgie et médecine interventionnelle",
+          "reasoning_trace": "Ligne 1 — ANALYSE : La chirurgie carcinologique cervico-faciale avec lambeau est mentionnée dans la section \"Chirurgie carcinologique cervico-faciale\". L'allergie aux bêtalactamines est mentionnée, donc on applique l'exception proposée pour les allergies aux bêtalactamines.\n\nLigne 2 — RÉPONSE : Clindamycine + Gentamicine SFAR 2026 [S1]."
+        },
+        {
+          "id": "Q46",
+          "title": "Pose pacemaker",
+          "type": "open",
+          "expected": "Céfazoline",
+          "actual": "Céfazoline SFAR 2026 [S1].",
+          "is_correct": true,
+          "sourcing_present": true,
+          "evidence_present": true,
+          "is_allergy": false,
+          "grounding_score": 1.0,
+          "hallucinated_molecules": [],
+          "latency_ms": {
+            "query_analysis_ms": 0.05,
+            "bm25_ms": 1.88,
+            "fusion_ms": 0.53,
+            "context_expand_ms": 0.0,
+            "total_retrieval_ms": 4.63,
+            "generation_ms": 14848.38,
+            "total_ms": 14853.01
+          },
+          "token_usage": {
+            "prompt_tokens": 4404,
+            "completion_tokens": 131,
+            "total_tokens": 4535
+          },
+          "top_source": "Antibioprophylaxie en chirurgie et médecine interventionnelle",
+          "reasoning_trace": "Ligne 1 — ANALYSE : L'acte chirurgical demandé est \"mise en place d'un stimulateur cardiaque\" qui correspond à l'acte \"Implantation, explantation ou changement de stimulateur ou défibrillateur\" dans le tableau. La molécule standard est Céfazoline (2g IVL) avec une dose initiale de 30 mg/kg IVL en cas d'allergie aux bêtalactamines.\n\nLigne 2 — RÉPONSE : Céfazoline SFAR 2026 [S1]."
+        },
+        {
+          "id": "Q49",
+          "title": "Endartériectomie carotidienne sans matériel",
+          "type": "open",
+          "expected": "Pas d'antibioprophylaxie",
+          "actual": "Pas d'antibioprophylaxie, SFAR 2026 [S1].",
+          "is_correct": true,
+          "sourcing_present": true,
+          "evidence_present": true,
+          "is_allergy": false,
+          "grounding_score": 1.0,
+          "hallucinated_molecules": [],
+          "latency_ms": {
+            "query_analysis_ms": 0.03,
+            "bm25_ms": 1.16,
+            "fusion_ms": 0.26,
+            "context_expand_ms": 0.0,
+            "total_retrieval_ms": 2.42,
+            "generation_ms": 14668.5,
+            "total_ms": 14670.92
+          },
+          "token_usage": {
+            "prompt_tokens": 4501,
+            "completion_tokens": 112,
+            "total_tokens": 4613
+          },
+          "top_source": "Antibioprophylaxie en chirurgie et médecine interventionnelle",
+          "reasoning_trace": "Ligne 1 — ANALYSE : L'endartériectomie carotidienne sans mise en place de matériel est mentionnée dans la section \"Chirurgie carotidienne sans mise en place de matériel\" qui indique \"PAS D'ANTIBIOPROPHYLAXIE\" (SFAR 2026 [S1]).\nLigne 2 — RÉPONSE : Pas d'antibioprophylaxie, SFAR 2026 [S1]."
+        },
+        {
+          "id": "Q52",
+          "title": "Drainage thoracique",
+          "type": "open",
+          "expected": "Pas d'antibioprophylaxie",
+          "actual": "Pas d'antibioprophylaxie, SFAR 2023 [S6].",
+          "is_correct": true,
+          "sourcing_present": true,
+          "evidence_present": false,
+          "is_allergy": false,
+          "grounding_score": 1.0,
+          "hallucinated_molecules": [],
+          "latency_ms": {
+            "query_analysis_ms": 0.01,
+            "bm25_ms": 0.46,
+            "fusion_ms": 0.16,
+            "context_expand_ms": 0.0,
+            "total_retrieval_ms": 1.18,
+            "generation_ms": 12585.93,
+            "total_ms": 12587.11
+          },
+          "token_usage": {
+            "prompt_tokens": 3730,
+            "completion_tokens": 114,
+            "total_tokens": 3844
+          },
+          "top_source": "Traumatisme Thoracique : Prise en charge des 48 premières heures",
+          "reasoning_trace": "Ligne 1 — ANALYSE : La question ne concerne pas directement une intervention chirurgicale standard avec une antibioprophylaxie spécifique mentionnée. L'intervention demandée est la pose d'un drain thoracique, qui n'est pas une procédure chirurgicale couverte par une antibioprophylaxie standard selon les SFAR.\n\nLigne 2 — RÉPONSE : Pas d'antibioprophylaxie, SFAR 2023 [S6]."
+        },
+        {
+          "id": "Q55",
+          "title": "Pose prothèse mammaire",
+          "type": "open",
+          "expected": "Céfazoline",
+          "actual": "Céfazoline SFAR 2026 [S3].",
+          "is_correct": true,
+          "sourcing_present": true,
+          "evidence_present": true,
+          "is_allergy": false,
+          "grounding_score": 1.0,
+          "hallucinated_molecules": [],
+          "latency_ms": {
+            "query_analysis_ms": 0.02,
+            "bm25_ms": 1.52,
+            "fusion_ms": 0.37,
+            "context_expand_ms": 0.0,
+            "total_retrieval_ms": 3.21,
+            "generation_ms": 15426.56,
+            "total_ms": 15429.77
+          },
+          "token_usage": {
+            "prompt_tokens": 4538,
+            "completion_tokens": 95,
+            "total_tokens": 4633
+          },
+          "top_source": "Antibioprophylaxie en chirurgie et médecine interventionnelle",
+          "reasoning_trace": "Ligne 1 — ANALYSE : L'acte chirurgical demandé est \"Chirurgie d'augmentation mammaire avec pose d'implant siliconé\". Selon l'extrait [S3], cette procédure nécessite une antibioprophylaxie avec Céfazoline.\n\nLigne 2 — RÉPONSE : Céfazoline SFAR 2026 [S3]."
+        },
+        {
+          "id": "Q58",
+          "title": "Rhinoplastie sans greffe cartilage",
+          "type": "open",
+          "expected": "Pas d'antibioprophylaxie",
+          "actual": "Pas d'antibioprophylaxie, SFAR 2026 [S3].",
+          "is_correct": true,
+          "sourcing_present": true,
+          "evidence_present": true,
+          "is_allergy": false,
+          "grounding_score": 1.0,
+          "hallucinated_molecules": [],
+          "latency_ms": {
+            "query_analysis_ms": 0.33,
+            "bm25_ms": 3.83,
+            "fusion_ms": 0.32,
+            "context_expand_ms": 0.0,
+            "total_retrieval_ms": 7.89,
+            "generation_ms": 16191.03,
+            "total_ms": 16198.92
+          },
+          "token_usage": {
+            "prompt_tokens": 4753,
+            "completion_tokens": 106,
+            "total_tokens": 4859
+          },
+          "top_source": "Antibioprophylaxie en chirurgie et médecine interventionnelle",
+          "reasoning_trace": "Ligne 1 — ANALYSE : La septo-rhinoplastie sans greffe de cartilage est mentionnée dans le tableau de chirurgie plastique générale, où il est indiqué qu'il n'y a pas d'antibioprophylaxie nécessaire (PAS D'ANTIBIOPROPHYLAXIE).\n\nLigne 2 — RÉPONSE : Pas d'antibioprophylaxie, SFAR 2026 [S3]."
+        },
+        {
+          "id": "Q61",
+          "title": "Lambeau libre microchirurgical",
+          "type": "open",
+          "expected": "Céfazoline",
+          "actual": "Antibioprophylaxie adaptée au risque du patient et au site opératoire (SFAR 2026 [S3, S4]).",
+          "is_correct": false,
+          "sourcing_present": true,
+          "evidence_present": true,
+          "is_allergy": false,
+          "grounding_score": 1.0,
+          "hallucinated_molecules": [],
+          "latency_ms": {
+            "query_analysis_ms": 0.19,
+            "bm25_ms": 2.25,
+            "fusion_ms": 0.53,
+            "context_expand_ms": 0.0,
+            "total_retrieval_ms": 4.96,
+            "generation_ms": 16160.62,
+            "total_ms": 16165.58
+          },
+          "token_usage": {
+            "prompt_tokens": 4540,
+            "completion_tokens": 156,
+            "total_tokens": 4696
+          },
+          "top_source": "Gestion des anticoagulants pour une procédure invasive programmée",
+          "reasoning_trace": "Ligne 1 — ANALYSE : La reconstruction par lambeau libre est mentionnée dans la section \"Chirurgie gynécologique\" et \"Chirurgie générale et carcinologique\". Cependant, la question ne précise pas de chirurgie gynécologique spécifique. La recommandation est de réaliser une antibioprophylaxie adaptée au risque du patient et au site opératoire, sans indication spécifique pour une antibioprophylaxie standard.\n\nLigne 2 — RÉPONSE : Antibioprophylaxie adaptée au risque du patient et au site opératoire (SFAR 2026 [S3, S4])."
+        },
+        {
+          "id": "Q64",
+          "title": "Chondro-laryngoplastie",
+          "type": "open",
+          "expected": "Pas d'antibioprophylaxie",
+          "actual": "Pas d'antibioprophylaxie, SFAR 2026 [S1].",
+          "is_correct": true,
+          "sourcing_present": true,
+          "evidence_present": true,
+          "is_allergy": false,
+          "grounding_score": 1.0,
+          "hallucinated_molecules": [],
+          "latency_ms": {
+            "query_analysis_ms": 0.08,
+            "bm25_ms": 1.8,
+            "fusion_ms": 0.82,
+            "context_expand_ms": 0.0,
+            "total_retrieval_ms": 4.4,
+            "generation_ms": 15805.19,
+            "total_ms": 15809.59
+          },
+          "token_usage": {
+            "prompt_tokens": 4930,
+            "completion_tokens": 94,
+            "total_tokens": 5024
+          },
+          "top_source": "Antibioprophylaxie en chirurgie et médecine interventionnelle",
+          "reasoning_trace": "Ligne 1 — ANALYSE : La chondro-laryngoplastie par cervicotomie est mentionnée dans la section spécifique, et l'extrait indique clairement \"PAS D'ANTIBIOPROPHYLAXIE\" pour cette chirurgie.\nLigne 2 — RÉPONSE : Pas d'antibioprophylaxie, SFAR 2026 [S1]."
+        },
+        {
+          "id": "Q67",
+          "title": "Chirurgie du mamelon",
+          "type": "open",
+          "expected": "Pas d'antibioprophylaxie",
+          "actual": "Pas d'antibioprophylaxie, SFAR 2026 [S1].",
+          "is_correct": true,
+          "sourcing_present": true,
+          "evidence_present": true,
+          "is_allergy": false,
+          "grounding_score": 1.0,
+          "hallucinated_molecules": [],
+          "latency_ms": {
+            "query_analysis_ms": 0.09,
+            "bm25_ms": 3.17,
+            "fusion_ms": 0.44,
+            "context_expand_ms": 0.0,
+            "total_retrieval_ms": 5.97,
+            "generation_ms": 14765.86,
+            "total_ms": 14771.83
+          },
+          "token_usage": {
+            "prompt_tokens": 4605,
+            "completion_tokens": 94,
+            "total_tokens": 4699
+          },
+          "top_source": "Antibioprophylaxie en chirurgie et médecine interventionnelle",
+          "reasoning_trace": "Ligne 1 — ANALYSE : La chirurgie du mamelon ou de la plaque aréolo-mamelonnaire est mentionnée dans l'extrait [S1] comme une indication pour laquelle il n'y a pas d'antibioprophylaxie recommandée.\nLigne 2 — RÉPONSE : Pas d'antibioprophylaxie, SFAR 2026 [S1]."
+        },
+        {
+          "id": "Q70",
+          "title": "Résection endométriose avec atteinte rectale",
+          "type": "open",
+          "expected": "Céfazoline + Métronidazole",
+          "actual": "Céfazoline + Métronidazole, SFAR 2026 [S1].",
+          "is_correct": true,
+          "sourcing_present": true,
+          "evidence_present": true,
+          "is_allergy": false,
+          "grounding_score": 1.0,
+          "hallucinated_molecules": [],
+          "latency_ms": {
+            "query_analysis_ms": 0.05,
+            "bm25_ms": 1.62,
+            "fusion_ms": 0.35,
+            "context_expand_ms": 0.0,
+            "total_retrieval_ms": 3.18,
+            "generation_ms": 13536.9,
+            "total_ms": 13540.08
+          },
+          "token_usage": {
+            "prompt_tokens": 4233,
+            "completion_tokens": 83,
+            "total_tokens": 4316
+          },
+          "top_source": "Antibioprophylaxie en chirurgie et médecine interventionnelle",
+          "reasoning_trace": "Ligne 1 — ANALYSE : La résection de lésions endométriosiques avec atteinte rectale est mentionnée dans la table [S1] et indique la céfazoline + métronidazole.\nLigne 2 — RÉPONSE : Céfazoline + Métronidazole, SFAR 2026 [S1]."
+        },
+        {
+          "id": "Q73",
+          "title": "Conisation col utérin",
+          "type": "open",
+          "expected": "Pas d'antibioprophylaxie",
+          "actual": "Pas d'antibioprophylaxie, SFAR 2026 [S1].",
+          "is_correct": true,
+          "sourcing_present": true,
+          "evidence_present": true,
+          "is_allergy": false,
+          "grounding_score": 1.0,
+          "hallucinated_molecules": [],
+          "latency_ms": {
+            "query_analysis_ms": 0.08,
+            "bm25_ms": 1.81,
+            "fusion_ms": 0.56,
+            "context_expand_ms": 0.0,
+            "total_retrieval_ms": 4.69,
+            "generation_ms": 13505.1,
+            "total_ms": 13509.79
+          },
+          "token_usage": {
+            "prompt_tokens": 4104,
+            "completion_tokens": 92,
+            "total_tokens": 4196
+          },
+          "top_source": "Antibioprophylaxie en chirurgie et médecine interventionnelle",
+          "reasoning_trace": "Ligne 1 — ANALYSE : La conisation du col utérin est mentionnée dans la section \"Chirurgie de l'utérus par voie vaginale\" qui indique \"PAS D'ANTIBIOPROPHYLAXIE\".\nLigne 2 — RÉPONSE : Pas d'antibioprophylaxie, SFAR 2026 [S1]."
+        },
+        {
+          "id": "Q76",
+          "title": "Chirurgie du prolapsus",
+          "type": "open",
+          "expected": "Céfazoline",
+          "actual": "Céfazoline. SFAR 2026 [S1].",
+          "is_correct": true,
+          "sourcing_present": true,
+          "evidence_present": true,
+          "is_allergy": false,
+          "grounding_score": 1.0,
+          "hallucinated_molecules": [],
+          "latency_ms": {
+            "query_analysis_ms": 0.04,
+            "bm25_ms": 1.86,
+            "fusion_ms": 0.44,
+            "context_expand_ms": 0.0,
+            "total_retrieval_ms": 4.06,
+            "generation_ms": 16040.95,
+            "total_ms": 16045.01
+          },
+          "token_usage": {
+            "prompt_tokens": 4827,
+            "completion_tokens": 115,
+            "total_tokens": 4942
+          },
+          "top_source": "Antibioprophylaxie en chirurgie et médecine interventionnelle",
+          "reasoning_trace": "Ligne 1 — ANALYSE : L'acte chirurgical demandé est \"Hystéropexie\", qui est associé à la chirurgie du prolapsus. Selon les extraits, la hystéropexie est mentionnée dans la section \"Chirurgie du prolapsus toutes voies d'abord\" et est traitée avec Céfazoline.\n\nLigne 2 — RÉPONSE : Céfazoline. SFAR 2026 [S1]."
+        },
+        {
+          "id": "Q79",
+          "title": "Césarienne",
+          "type": "open",
+          "expected": "Céfazoline",
+          "actual": "Céfazoline SFAR 2026 [S1].",
+          "is_correct": true,
+          "sourcing_present": true,
+          "evidence_present": true,
+          "is_allergy": false,
+          "grounding_score": 1.0,
+          "hallucinated_molecules": [],
+          "latency_ms": {
+            "query_analysis_ms": 0.05,
+            "bm25_ms": 1.92,
+            "fusion_ms": 0.62,
+            "context_expand_ms": 0.0,
+            "total_retrieval_ms": 4.13,
+            "generation_ms": 15232.29,
+            "total_ms": 15236.42
+          },
+          "token_usage": {
+            "prompt_tokens": 4259,
+            "completion_tokens": 133,
+            "total_tokens": 4392
+          },
+          "top_source": "Antibioprophylaxie en chirurgie et médecine interventionnelle",
+          "reasoning_trace": "Ligne 1 — ANALYSE : La césarienne programmée est mentionnée dans les extraits, spécifiquement dans la section \"Antibioprophylaxie en chirurgie gynécologique et en obstétrique\" où il est recommandé d'injecter un antibiotique 30 min avant l'incision et pas après le clamping du cordon ombilical. La molécule standard pour la césarienne est la céfazoline.\n\nLigne 2 — RÉPONSE : Céfazoline SFAR 2026 [S1]."
+        },
+        {
+          "id": "Q82",
+          "title": "Tamponnement utérin hémorragie obstétricale",
+          "type": "open",
+          "expected": "Céfazoline",
+          "actual": "Pas d'antibioprophylaxie, SFAR 2026 [S1].",
+          "is_correct": false,
+          "sourcing_present": true,
+          "evidence_present": true,
+          "is_allergy": false,
+          "grounding_score": 1.0,
+          "hallucinated_molecules": [],
+          "latency_ms": {
+            "query_analysis_ms": 0.07,
+            "bm25_ms": 2.31,
+            "fusion_ms": 0.56,
+            "context_expand_ms": 0.0,
+            "total_retrieval_ms": 4.67,
+            "generation_ms": 15128.04,
+            "total_ms": 15132.71
+          },
+          "token_usage": {
+            "prompt_tokens": 4440,
+            "completion_tokens": 123,
+            "total_tokens": 4563
+          },
+          "top_source": "Antibioprophylaxie en chirurgie et médecine interventionnelle",
+          "reasoning_trace": "Ligne 1 — ANALYSE : La question concerne la pose d'un tamponnement intra-utérin pour hémorragie obstétricale, qui correspond à l'acte chirurgical \"Tamponnement utérin\" mentionné dans l'extrait [S1]. L'extrait indique clairement \"PAS D'ANTIOPROPHYLAXIE\" pour cette procédure.\n\nLigne 2 — RÉPONSE : Pas d'antibioprophylaxie, SFAR 2026 [S1]."
+        },
+        {
+          "id": "Q85",
+          "title": "Oesophagectomie",
+          "type": "open",
+          "expected": "Céfazoline",
+          "actual": "Amoxicilline/Clavulanate, SFAR 2026 [S7].",
+          "is_correct": false,
+          "sourcing_present": true,
+          "evidence_present": true,
+          "is_allergy": false,
+          "grounding_score": 1.0,
+          "hallucinated_molecules": [],
+          "latency_ms": {
+            "query_analysis_ms": 0.08,
+            "bm25_ms": 1.8,
+            "fusion_ms": 0.52,
+            "context_expand_ms": 0.0,
+            "total_retrieval_ms": 3.99,
+            "generation_ms": 13203.72,
+            "total_ms": 13207.71
+          },
+          "token_usage": {
+            "prompt_tokens": 4004,
+            "completion_tokens": 97,
+            "total_tokens": 4101
+          },
+          "top_source": "Antibioprophylaxie en chirurgie et médecine interventionnelle",
+          "reasoning_trace": "Ligne 1 — ANALYSE : \n- L'esophagectomie est mentionnée dans la partie chirurgie digestive et bariatrique, endoscopie et médecine interventionnelle digestive. La molécule standard pour cette chirurgie est l'amoxicilline/clavulanate.\n\nLigne 2 — RÉPONSE : Amoxicilline/Clavulanate, SFAR 2026 [S7]."
+        },
+        {
+          "id": "Q88",
+          "title": "Résection intestin grêle",
+          "type": "open",
+          "expected": "Céfoxitine",
+          "actual": "Céfoxitine. SFAR 2026 [S1].",
+          "is_correct": true,
+          "sourcing_present": true,
+          "evidence_present": true,
+          "is_allergy": false,
+          "grounding_score": 1.0,
+          "hallucinated_molecules": [],
+          "latency_ms": {
+            "query_analysis_ms": 0.04,
+            "bm25_ms": 1.7,
+            "fusion_ms": 0.44,
+            "context_expand_ms": 0.0,
+            "total_retrieval_ms": 3.72,
+            "generation_ms": 15553.9,
+            "total_ms": 15557.62
+          },
+          "token_usage": {
+            "prompt_tokens": 4595,
+            "completion_tokens": 114,
+            "total_tokens": 4709
+          },
+          "top_source": "Antibioprophylaxie en chirurgie et médecine interventionnelle",
+          "reasoning_trace": "Ligne 1 — ANALYSE : La résection de l'intestin grêle est mentionnée dans la section \"Chirurgie de l'intestin grêle\" qui indique la prise de céfoxitine. L'acte chirurgical est donc \"Chirurgie de l'intestin grêle\" et la molécule standard est la céfoxitine.\nLigne 2 — RÉPONSE : Céfoxitine. SFAR 2026 [S1]."
+        },
+        {
+          "id": "Q91",
+          "title": "Hémorroïdes",
+          "type": "open",
+          "expected": "Métronidazole",
+          "actual": "Métronidazole (SFAR 2026 [S1])",
+          "is_correct": true,
+          "sourcing_present": true,
+          "evidence_present": true,
+          "is_allergy": false,
+          "grounding_score": 1.0,
+          "hallucinated_molecules": [],
+          "latency_ms": {
+            "query_analysis_ms": 0.1,
+            "bm25_ms": 1.72,
+            "fusion_ms": 0.52,
+            "context_expand_ms": 0.0,
+            "total_retrieval_ms": 3.78,
+            "generation_ms": 14845.05,
+            "total_ms": 14848.83
+          },
+          "token_usage": {
+            "prompt_tokens": 4356,
+            "completion_tokens": 118,
+            "total_tokens": 4474
+          },
+          "top_source": "Antibioprophylaxie en chirurgie et médecine interventionnelle",
+          "reasoning_trace": "Ligne 1 — ANALYSE : La chirurgie des hémorroïdes est mentionnée dans la section \"Chirurgie proctologique\" où deux cas sont listés : hémorroïdes et kyste pilonidal. La recommandation pour le hémorroïdes est Métronidazole 15 mg/kg IVL, dose unique. Le kyste pilonidal n'a pas d'antibioprophylaxie recommandée.\n\nLigne 2 — RÉPONSE : Métronidazole"
+        },
+        {
+          "id": "Q94",
+          "title": "Kyste hydatique du foie",
+          "type": "open",
+          "expected": "Pas d'antibioprophylaxie",
+          "actual": "Céfazoline. SFAR 2025 [S3].",
+          "is_correct": false,
+          "sourcing_present": true,
+          "evidence_present": true,
+          "is_allergy": false,
+          "grounding_score": 1.0,
+          "hallucinated_molecules": [],
+          "latency_ms": {
+            "query_analysis_ms": 0.07,
+            "bm25_ms": 1.95,
+            "fusion_ms": 0.43,
+            "context_expand_ms": 0.0,
+            "total_retrieval_ms": 4.01,
+            "generation_ms": 16712.73,
+            "total_ms": 16716.74
+          },
+          "token_usage": {
+            "prompt_tokens": 4589,
+            "completion_tokens": 140,
+            "total_tokens": 4729
+          },
+          "top_source": "Antibioprophylaxie en chirurgie et médecine interventionnelle",
+          "reasoning_trace": "Ligne 1 — ANALYSE : La chirurgie d'un kyste hydatique du foie est mentionnée dans l'annexe 3 de la section Hépatectomie sans chirurgie des voies biliaires, qui est associée à une antibioprophylaxie. La molécule standard est Céfazoline (2g IVL, 1g si durée > 4h, puis toutes les 4h jusqu'à la fin de la chirurgie).\n\nLigne 2 — RÉPONSE : Céfazoline. SFAR 2025 [S3]."
+        },
+        {
+          "id": "Q97",
+          "title": "DPC sans drainage biliaire préopératoire",
+          "type": "open",
+          "expected": "Céfoxitine",
+          "actual": "Céfoxitine, SFAR 2026 [S1].",
+          "is_correct": true,
+          "sourcing_present": true,
+          "evidence_present": true,
+          "is_allergy": false,
+          "grounding_score": 1.0,
+          "hallucinated_molecules": [],
+          "latency_ms": {
+            "query_analysis_ms": 0.07,
+            "bm25_ms": 3.06,
+            "fusion_ms": 0.51,
+            "context_expand_ms": 0.0,
+            "total_retrieval_ms": 5.3,
+            "generation_ms": 15658.81,
+            "total_ms": 15664.11
+          },
+          "token_usage": {
+            "prompt_tokens": 4338,
+            "completion_tokens": 142,
+            "total_tokens": 4480
+          },
+          "top_source": "Antibioprophylaxie en chirurgie et médecine interventionnelle",
+          "reasoning_trace": "Ligne 1 — ANALYSE : La question concerne une duodéno-pancréatectomie céphalique (DPC) sans geste de drainage biliaire préopératoire. Cette procédure correspond à l'acte chirurgical \"Duodéno-pancréatectomie céphalique (DPC) sans geste de drainage biliaire préopératoire\" mentionné dans l'extraits SFAR, qui est couvert par la ligne 2 de la table.\n\nLigne 2 — RÉPONSE : Céfoxitine, SFAR 2026 [S1]."
+        },
+        {
+          "id": "Q100",
+          "title": "Hernie inguinale avec prothèse",
+          "type": "open",
+          "expected": "Céfazoline",
+          "actual": "Céfazoline. SFAR 2026 [S1].",
+          "is_correct": true,
+          "sourcing_present": true,
+          "evidence_present": true,
+          "is_allergy": false,
+          "grounding_score": 1.0,
+          "hallucinated_molecules": [],
+          "latency_ms": {
+            "query_analysis_ms": 0.03,
+            "bm25_ms": 0.8,
+            "fusion_ms": 0.22,
+            "context_expand_ms": 0.0,
+            "total_retrieval_ms": 1.73,
+            "generation_ms": 16427.63,
+            "total_ms": 16429.36
+          },
+          "token_usage": {
+            "prompt_tokens": 4614,
+            "completion_tokens": 100,
+            "total_tokens": 4714
+          },
+          "top_source": "Antibioprophylaxie en chirurgie et médecine interventionnelle",
+          "reasoning_trace": "Ligne 1 — ANALYSE : La cure de hernie inguinale avec pose de prothèse est mentionnée dans la section \"Chirurgie de paroi et autres interventions abdomino-perineales pédiatriques\" et \"Chirurgie des hernies\". La molécule standard est Céfazoline. \nLigne 2 — RÉPONSE : Céfazoline. SFAR 2026 [S1]."
+        },
+        {
+          "id": "Q103",
+          "title": "Coloscopie avec biopsie",
+          "type": "open",
+          "expected": "Pas d'antibioprophylaxie",
+          "actual": "Pas d'antibioprophylaxie, SFAR 2026 [S1].",
+          "is_correct": true,
+          "sourcing_present": true,
+          "evidence_present": true,
+          "is_allergy": false,
+          "grounding_score": 1.0,
+          "hallucinated_molecules": [],
+          "latency_ms": {
+            "query_analysis_ms": 0.08,
+            "bm25_ms": 4.98,
+            "fusion_ms": 1.58,
+            "context_expand_ms": 0.0,
+            "total_retrieval_ms": 14.59,
+            "generation_ms": 15938.61,
+            "total_ms": 15953.2
+          },
+          "token_usage": {
+            "prompt_tokens": 4733,
+            "completion_tokens": 92,
+            "total_tokens": 4825
+          },
+          "top_source": "Antibioprophylaxie en chirurgie et médecine interventionnelle",
+          "reasoning_trace": "Ligne 1 — ANALYSE : La coloscopie diagnostique avec biopsie est associée à la section \"Endoscopie digestive basse\" où il est clairement indiqué \"PAS D'ANTIBIOPROPHYLAXIE\".\n\nLigne 2 — RÉPONSE : Pas d'antibioprophylaxie, SFAR 2026 [S1]."
+        },
+        {
+          "id": "Q106",
+          "title": "RTUP",
+          "type": "open",
+          "expected": "Céfazoline",
+          "actual": "Céfazoline [SFAR 2026 (V3.0)].",
+          "is_correct": true,
+          "sourcing_present": true,
+          "evidence_present": true,
+          "is_allergy": false,
+          "grounding_score": 1.0,
+          "hallucinated_molecules": [],
+          "latency_ms": {
+            "query_analysis_ms": 0.09,
+            "bm25_ms": 9.76,
+            "fusion_ms": 0.82,
+            "context_expand_ms": 0.0,
+            "total_retrieval_ms": 16.63,
+            "generation_ms": 28299.82,
+            "total_ms": 28316.45
+          },
+          "token_usage": {
+            "prompt_tokens": 5010,
+            "completion_tokens": 135,
+            "total_tokens": 5145
+          },
+          "top_source": "Place de l’ECBU avant une prise en charge urologique chirurgicale ou interventionnelle chez l’adulte et modalités de traitement en cas de colonisation",
+          "reasoning_trace": "Ligne 1 — ANALYSE : La résection trans-urétrale de prostate (RTUP) est associée à la molécule Céfazoline dans la section \"Chirurgie de la prostate\" avec une dose initiale de 2g IVL et une réinjection si la durée de la chirurgie dépasse 4h, jusqu'à la fin de l'intervention. Il n'y a pas d'exception conditionnelle mentionnée pour cette chirurgie.\n\nLigne 2 — RÉPONSE : Céfazoline [SFAR 2026 (V3.0)]."
+        },
+        {
+          "id": "Q139",
+          "title": "PTG première intention",
+          "type": "mcq",
+          "expected": "B",
+          "actual": "B (SFAR 2026 [S6])",
+          "is_correct": true,
+          "sourcing_present": true,
+          "evidence_present": true,
+          "is_allergy": false,
+          "grounding_score": 1.0,
+          "hallucinated_molecules": [],
+          "latency_ms": {
+            "query_analysis_ms": 0.04,
+            "bm25_ms": 21.96,
+            "fusion_ms": 0.88,
+            "context_expand_ms": 0.0,
+            "total_retrieval_ms": 30.15,
+            "generation_ms": 21139.84,
+            "total_ms": 21169.99
+          },
+          "token_usage": {
+            "prompt_tokens": 3814,
+            "completion_tokens": 192,
+            "total_tokens": 4006
+          },
+          "top_source": "Antibioprophylaxie en chirurgie et médecine interventionnelle",
+          "reasoning_trace": "A. Amoxicilline/Clavulanate : 2g IVL, puis 1g si durée > 2h, toutes les 2h jusqu'à fin de chirurgie (SFAR 2026 [S6]).\n\nB. Céfazoline : 2g IVL, puis 1g si durée > 4h, toutes les 4h jusqu'à fin de chirurgie (SFAR 2026 [S6]).\n\nC. Clindamycine : Non mentionnée comme première intention pour la prothèse totale de genou (SFAR 2026 [S6]).\n\nD. Vancomycine : Mentionnée comme alternative si allergie aux bêtalactamines (SFAR 2026 [S6]).\n\nRÉPONSE : B (SFAR 2026 [S6])"
+        },
+        {
+          "id": "Q141",
+          "title": "PTG allergie alternative",
+          "type": "mcq",
+          "expected": "C",
+          "actual": "B (SFAR 2026 [S1])",
+          "is_correct": false,
+          "sourcing_present": true,
+          "evidence_present": true,
+          "is_allergy": true,
+          "grounding_score": 1.0,
+          "hallucinated_molecules": [],
+          "latency_ms": {
+            "query_analysis_ms": 0.03,
+            "bm25_ms": 9.4,
+            "fusion_ms": 0.82,
+            "context_expand_ms": 0.0,
+            "total_retrieval_ms": 22.11,
+            "generation_ms": 15072.86,
+            "total_ms": 15094.97
+          },
+          "token_usage": {
+            "prompt_tokens": 4100,
+            "completion_tokens": 132,
+            "total_tokens": 4232
+          },
+          "top_source": "Antibioprophylaxie en chirurgie et médecine interventionnelle",
+          "reasoning_trace": "1. La question demande l'alternative de première intention pour l'antibioprophylaxie d'une prothèse de genou en cas d'allergie aux bêtalactamines.\n2. Évaluation des choix :\n   - A. Gentamicine : Pas mentionnée comme première intention.\n   - B. Vancomycine : Mentionnée en première intention.\n   - C. Clindamycine : Mentionnée en seconde intention.\n   - D. Métronidazole : Pas mentionnée comme première intention.\n3. RÉPONSE : B (SFAR 2026 [S1])"
+        },
+        {
+          "id": "Q143",
+          "title": "Plaie jardinage main",
+          "type": "mcq",
+          "expected": "C",
+          "actual": "C (SFAR 2026 [S3])",
+          "is_correct": true,
+          "sourcing_present": true,
+          "evidence_present": true,
+          "is_allergy": false,
+          "grounding_score": 1.0,
+          "hallucinated_molecules": [],
+          "latency_ms": {
+            "query_analysis_ms": 0.02,
+            "bm25_ms": 19.73,
+            "fusion_ms": 0.15,
+            "context_expand_ms": 0.0,
+            "total_retrieval_ms": 21.52,
+            "generation_ms": 14566.63,
+            "total_ms": 14588.15
+          },
+          "token_usage": {
+            "prompt_tokens": 4156,
+            "completion_tokens": 136,
+            "total_tokens": 4292
+          },
+          "top_source": "Antibioprophylaxie en chirurgie et médecine interventionnelle",
+          "reasoning_trace": "A. Céfazoline 2g IVL - 2e intention, plaie de la main\nB. Amoxicilline/Clavulanate 2g IVL - 2e intention, plaie de la main\nC. Pas d'antibioprophylaxie recommandée - 1re intention, plaie de la main (hors contamination tellurique et fécale)\nD. Clindamycine 900mg IVL - Alternative en cas d'allergie aux bêtalactamines\n\nRÉPONSE : C (SFAR 2026 [S3])"
+        },
+        {
+          "id": "Q146",
+          "title": "ORL sans ABP",
+          "type": "mcq",
+          "expected": "B",
+          "actual": "B (SFAR 2026 [S1])",
+          "is_correct": true,
+          "sourcing_present": true,
+          "evidence_present": true,
+          "is_allergy": false,
+          "grounding_score": 1.0,
+          "hallucinated_molecules": [],
+          "latency_ms": {
+            "query_analysis_ms": 0.03,
+            "bm25_ms": 14.81,
+            "fusion_ms": 2.94,
+            "context_expand_ms": 0.0,
+            "total_retrieval_ms": 30.05,
+            "generation_ms": 15077.51,
+            "total_ms": 15107.56
+          },
+          "token_usage": {
+            "prompt_tokens": 4325,
+            "completion_tokens": 128,
+            "total_tokens": 4453
+          },
+          "top_source": "Antibioprophylaxie en chirurgie et médecine interventionnelle",
+          "reasoning_trace": "A. Pose d'implant cochléaire : Pas d'information.\nB. Amygdalectomie : PAS D'ANTIBIOPROPHYLAXIE (SFAR 2026 [S1]).\nC. Laryngectomie totale : Céfazoline (SFAR 2026 [S1]).\nD. Trachéotomie chirurgicale : Céfazoline (SFAR 2026 [S1]).\n\nRÉPONSE : B (SFAR 2026 [S1])"
+        },
+        {
+          "id": "Q149",
+          "title": "Lobectomie pulmonaire molécule",
+          "type": "mcq",
+          "expected": "D",
+          "actual": "B (SFAR 2026 [S2])",
+          "is_correct": false,
+          "sourcing_present": true,
+          "evidence_present": true,
+          "is_allergy": false,
+          "grounding_score": 1.0,
+          "hallucinated_molecules": [],
+          "latency_ms": {
+            "query_analysis_ms": 0.03,
+            "bm25_ms": 7.17,
+            "fusion_ms": 0.19,
+            "context_expand_ms": 0.0,
+            "total_retrieval_ms": 9.31,
+            "generation_ms": 16819.0,
+            "total_ms": 16828.31
+          },
+          "token_usage": {
+            "prompt_tokens": 3976,
+            "completion_tokens": 243,
+            "total_tokens": 4219
+          },
+          "top_source": "Antibioprophylaxie en chirurgie et médecine interventionnelle",
+          "reasoning_trace": "A. Amoxicilline/Clavulanate uniquement : INCORRECTE. L'extrait [S2] mentionne clairement que l'amoxicilline/clavulanate est une option, mais il s'agit d'une alternative à la céfazoline, pas une recommandation exclusive.\n\nB. Céfazoline uniquement : CORRECTE. L'extrait [S2] indique clairement que la céfazoline est une option recommandée pour les lobectomies pulmonaires par thoracotomie.\n\nC. Céfuroxime uniquement : INCORRECTE. L'extrait [S2] mentionne la céfuroxime comme une alternative, mais elle n'est pas une recommandation exclusive.\n\nD. Amoxicilline/Clavulanate, Céfazoline ou Céfuroxime (au choix) : INCORRECTE. L'extrait [S2] indique clairement que ces options sont des alternatives, pas des recommandations exclusives.\n\nRÉPONSE : B (SFAR 2026 [S2])"
+        },
+        {
+          "id": "Q152",
+          "title": "Rhinoplastie avec vs sans greffe",
+          "type": "mcq",
+          "expected": "C",
+          "actual": "C (SFAR 2026 [S3])",
+          "is_correct": true,
+          "sourcing_present": true,
+          "evidence_present": true,
+          "is_allergy": false,
+          "grounding_score": 1.0,
+          "hallucinated_molecules": [],
+          "latency_ms": {
+            "query_analysis_ms": 0.03,
+            "bm25_ms": 10.52,
+            "fusion_ms": 3.45,
+            "context_expand_ms": 0.0,
+            "total_retrieval_ms": 22.32,
+            "generation_ms": 18793.59,
+            "total_ms": 18815.91
+          },
+          "token_usage": {
+            "prompt_tokens": 4468,
+            "completion_tokens": 264,
+            "total_tokens": 4732
+          },
+          "top_source": "Antibioprophylaxie en chirurgie et médecine interventionnelle",
+          "reasoning_trace": "1. **Évaluation des choix :**\n   - **A. Une antibioprophylaxie est toujours recommandée** : INCORRECTE. Les extraits montrent des cas où l'antibioprophylaxie n'est pas recommandée.\n   - **B. Une antibioprophylaxie n'est jamais recommandée** : INCORRECTE. Les extraits montrent des cas où l'antibioprophylaxie est recommandée.\n   - **C. Une antibioprophylaxie est recommandée uniquement en cas de greffe de cartilage** : CORRECTE. Les extraits montrent que l'antibioprophylaxie est recommandée uniquement en cas de septo-rhinoplastie avec greffe de cartilage.\n   - **D. Une antibioprophylaxie est recommandée uniquement en cas de reprise chirurgicale** : INCORRECTE. Les extraits montrent que l'antibioprophylaxie est recommandée pour des gestes spécifiques, pas seulement en cas de reprise chirurgicale.\n\n2. **RÉPONSE : C (SFAR 2026 [S3])**"
+        },
+        {
+          "id": "Q155",
+          "title": "Obstétrique césarienne vs cerclage",
+          "type": "mcq",
+          "expected": "C",
+          "actual": "C (SFAR 2026 [S1, S2])",
+          "is_correct": true,
+          "sourcing_present": true,
+          "evidence_present": true,
+          "is_allergy": false,
+          "grounding_score": 1.0,
+          "hallucinated_molecules": [],
+          "latency_ms": {
+            "query_analysis_ms": 0.03,
+            "bm25_ms": 11.91,
+            "fusion_ms": 1.79,
+            "context_expand_ms": 0.0,
+            "total_retrieval_ms": 22.08,
+            "generation_ms": 16627.99,
+            "total_ms": 16650.07
+          },
+          "token_usage": {
+            "prompt_tokens": 4376,
+            "completion_tokens": 179,
+            "total_tokens": 4555
+          },
+          "top_source": "Antibioprophylaxie en chirurgie et médecine interventionnelle",
+          "reasoning_trace": "A. INCORRECTE - Le cerclage du col utérus et son ablation ne nécessitent pas d'antibioprophylaxie (S1, S2, S3).\nB. INCORRECTE - La césarienne programmée nécessite une antibioprophylaxie par céfazoline (S4).\nC. CORRECTE - La délivrance artificielle et l'extraction manuelle du placenta nécessitent une antibioprophylaxie par céfazoline (S1, S2).\nD. INCORRECTE - Le curetage post-partum ne nécessite pas d'antibioprophylaxie (S1, S2).\n\nRÉPONSE : C (SFAR 2026 [S1, S2])"
+        },
+        {
+          "id": "Q158",
+          "title": "Colectomie protocole ABP",
+          "type": "mcq",
+          "expected": "B",
+          "actual": "B (SFAR 2026 [S2])",
+          "is_correct": true,
+          "sourcing_present": true,
+          "evidence_present": true,
+          "is_allergy": false,
+          "grounding_score": 1.0,
+          "hallucinated_molecules": [],
+          "latency_ms": {
+            "query_analysis_ms": 0.02,
+            "bm25_ms": 7.73,
+            "fusion_ms": 0.34,
+            "context_expand_ms": 0.0,
+            "total_retrieval_ms": 8.81,
+            "generation_ms": 19103.32,
+            "total_ms": 19112.13
+          },
+          "token_usage": {
+            "prompt_tokens": 4368,
+            "completion_tokens": 300,
+            "total_tokens": 4668
+          },
+          "top_source": "Antibioprophylaxie en chirurgie et médecine interventionnelle",
+          "reasoning_trace": "A. Céfoxitine IV le jour de la chirurgie uniquement - INCORRECTE. La colectomie programmée est couverte par la section \"Chirurgie colorectale et appendiculaire\" et indique une antibioprophylaxie orale la veille (tobramycine + métronidazole) et IV le jour de la chirurgie (céfoxitine).\n\nB. Tobramycine + Métronidazole per os la veille, puis Céfoxitine IV le jour de la chirurgie - CORRECTE. Cela correspond exactement à la description pour une colectomie programmée.\n\nC. Amoxicilline/Clavulanate IV le jour de la chirurgie uniquement - INCORRECTE. L'Amoxicilline/Clavulanate nécessite une antibioprophylaxie IV pendant toute la durée de la chirurgie, pas seulement le jour de la chirurgie.\n\nD. Céfazoline IV le jour de la chirurgie + Métronidazole per os la veille - INCORRECTE. La céfazoline est mentionnée, mais seule l'administration IV pendant la chirurgie est mentionnée, pas une antibioprophylaxie orale.\n\nRÉPONSE : B (SFAR 2026 [S2])"
+        },
+        {
+          "id": "Q161",
+          "title": "Hernie inguinale avec vs sans prothèse",
+          "type": "mcq",
+          "expected": "C",
+          "actual": "C (SFAR 2026 [S3])",
+          "is_correct": true,
+          "sourcing_present": true,
+          "evidence_present": true,
+          "is_allergy": false,
+          "grounding_score": 1.0,
+          "hallucinated_molecules": [],
+          "latency_ms": {
+            "query_analysis_ms": 0.07,
+            "bm25_ms": 5.06,
+            "fusion_ms": 0.52,
+            "context_expand_ms": 0.0,
+            "total_retrieval_ms": 10.92,
+            "generation_ms": 18479.91,
+            "total_ms": 18490.83
+          },
+          "token_usage": {
+            "prompt_tokens": 4312,
+            "completion_tokens": 282,
+            "total_tokens": 4594
+          },
+          "top_source": "Antibioprophylaxie en chirurgie et médecine interventionnelle",
+          "reasoning_trace": "A. Une antibioprophylaxie est toujours recommandée, avec ou sans prothèse  \nB. Une antibioprophylaxie n'est jamais recommandée, avec ou sans prothèse  \nC. Une antibioprophylaxie est recommandée uniquement en cas de pose de prothèse  \nD. Une antibioprophylaxie est recommandée uniquement en l'absence de prothèse  \n\n**Évaluation :**\n- **A** : INCORRECTE. Les extraits montrent que l'antibioprophylaxie n'est pas recommandée pour la cure de hernie inguinale sans prothèse, mais est recommandée pour la cure avec prothèse.\n- **B** : INCORRECTE. L'antibioprophylaxie est recommandée pour la cure de hernie inguinale avec prothèse.\n- **C** : CORRECTE. L'antibioprophylaxie est recommandée uniquement en cas de pose de prothèse.\n- **D** : INCORRECTE. L'antibioprophylaxie est recommandée pour la cure de hernie inguinale avec prothèse, pas seulement en l'absence de prothèse.\n\n**RÉPONSE : C (SFAR 2026 [S3])**"
+        },
+        {
+          "id": "Q167",
+          "title": "Allergie bêtalactamines en chirurgie cardiaque",
+          "type": "mcq",
+          "expected": "B",
+          "actual": "B (SFAR 2026 [S2])",
+          "is_correct": true,
+          "sourcing_present": true,
+          "evidence_present": true,
+          "is_allergy": true,
+          "grounding_score": 1.0,
+          "hallucinated_molecules": [],
+          "latency_ms": {
+            "query_analysis_ms": 0.02,
+            "bm25_ms": 14.34,
+            "fusion_ms": 0.54,
+            "context_expand_ms": 0.0,
+            "total_retrieval_ms": 16.09,
+            "generation_ms": 15300.25,
+            "total_ms": 15316.34
+          },
+          "token_usage": {
+            "prompt_tokens": 3833,
+            "completion_tokens": 199,
+            "total_tokens": 4032
+          },
+          "top_source": "Antibioprophylaxie en chirurgie et médecine interventionnelle",
+          "reasoning_trace": "A. Clindamycine 900 mg IVL : INCORRECTE. Clindamycine est mentionnée pour les allergies bêtalactamines en première intention pour certaines chirurgies, pas pour la chirurgie cardiaque.\n\nB. Vancomycine 20 mg/kg IVL ou Teicoplanine 12 mg/kg IVL : CORRECTE. C'est la recommandation pour les allergies bêtalactamines en seconde intention.\n\nC. Gentamicine 3 mg/kg IVL seule : INCORRECTE. Gentamicine n'est pas mentionnée pour les allergies bêtalactamines.\n\nD. Céfuroxime 1,5g IVL : INCORRECTE. Céfuroxime n'est pas mentionné pour les allergies bêtalactamines.\n\nRÉPONSE : B (SFAR 2026 [S2])"
+        }
+      ]
+    }
+  ]
+}
