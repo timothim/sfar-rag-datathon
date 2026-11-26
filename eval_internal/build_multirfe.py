@@ -143,9 +143,12 @@ def sample(n_docs: int, per_doc: int) -> None:
             recos = [t for t in texts if RECO_RE.search(fold(t)) and len(t) < 1500]
             return "\n---\n".join(recos[:25])[:12000]
 
+        new_text, old_text = boxes(new_e["doc_id"]), boxes(old_e["doc_id"])
+        if len(new_text) < 500 or len(old_text) < 500:
+            continue
         comps.append({
             "anchor_id": f"compare::{lin}", "lineage": lin, "new": new_e, "old": old_e,
-            "new_text": boxes(new_e["doc_id"]), "old_text": boxes(old_e["doc_id"]),
+            "new_text": new_text, "old_text": old_text,
         })
 
     catalogue = sorted({f"{t} ({y})" for (t, y) in db.execute("select title, effective_year from documents where language='fr'")})

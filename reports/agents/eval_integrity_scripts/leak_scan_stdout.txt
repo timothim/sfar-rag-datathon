@@ -1,0 +1,289 @@
+{
+ "benchmark_questions": 171,
+ "ngram_size": 4,
+ "template_ngrams_excluded": 25,
+ "ngram": {
+  "lines_total": 54,
+  "lines_system_code": 20,
+  "files_system_code": [
+   "scripts/audit_abp_v2_vs_v3.py",
+   "scripts/quick_demo_queries.py",
+   "scripts/run_clinical_showcase.py",
+   "src/rag_sfar/generation/prompts.py",
+   "src/rag_sfar/ingestion/chunker.py",
+   "src/rag_sfar/interfaces/api.py",
+   "src/rag_sfar/retrieval/crag.py",
+   "src/rag_sfar/retrieval/medical_lexicon.py",
+   "src/rag_sfar/retrieval/pipeline.py"
+  ],
+  "distinct_questions_touched_by_system_code": 22,
+  "question_ids": [
+   "Q01",
+   "Q03",
+   "Q04",
+   "Q06",
+   "Q10",
+   "Q12",
+   "Q13",
+   "Q15",
+   "Q16",
+   "Q22",
+   "Q27",
+   "Q28",
+   "Q43",
+   "Q63",
+   "Q83",
+   "Q139",
+   "Q140",
+   "Q141",
+   "Q143",
+   "Q146",
+   "Q167",
+   "Q171"
+  ]
+ },
+ "ngram_bench_only_system_lines": 11,
+ "ngram_bench_only_questions": [
+  "Q01",
+  "Q03",
+  "Q04",
+  "Q06",
+  "Q10",
+  "Q12",
+  "Q16",
+  "Q22",
+  "Q27",
+  "Q28",
+  "Q43",
+  "Q139",
+  "Q146",
+  "Q171"
+ ],
+ "answer": {
+  "lines_total": 32,
+  "lines_system_code": 8,
+  "files_system_code": [
+   "scripts/run_e2e_eval.py",
+   "src/rag_sfar/generation/prompts.py",
+   "src/rag_sfar/ingestion/table_parser.py",
+   "src/rag_sfar/retrieval/crag.py"
+  ],
+  "distinct_questions_touched_by_system_code": 19,
+  "question_ids": [
+   "Q05",
+   "Q08",
+   "Q09",
+   "Q10",
+   "Q12",
+   "Q14",
+   "Q15",
+   "Q17",
+   "Q22",
+   "Q28",
+   "Q32",
+   "Q41",
+   "Q43",
+   "Q45",
+   "Q50",
+   "Q63",
+   "Q124",
+   "Q131",
+   "Q137"
+  ]
+ },
+ "choice": {
+  "lines_total": 79,
+  "lines_system_code": 16,
+  "files_system_code": [
+   "scripts/audit_abp_v2_vs_v3.py",
+   "scripts/run_e2e_eval.py",
+   "src/rag_sfar/generation/prompts.py",
+   "src/rag_sfar/ingestion/loader.py",
+   "src/rag_sfar/ingestion/table_parser.py",
+   "src/rag_sfar/retrieval/crag.py",
+   "src/rag_sfar/retrieval/medical_lexicon.py"
+  ],
+  "distinct_questions_touched_by_system_code": 6,
+  "question_ids": [
+   "Q139",
+   "Q140",
+   "Q141",
+   "Q146",
+   "Q153",
+   "Q156"
+  ]
+ },
+ "dose": {
+  "lines_total": 25,
+  "lines_system_code": 2,
+  "files_system_code": [
+   "src/rag_sfar/ingestion/table_parser.py"
+  ],
+  "distinct_questions_touched_by_system_code": 2,
+  "question_ids": [
+   "Q143",
+   "Q169"
+  ]
+ },
+ "title": {
+  "lines_total": 20,
+  "lines_system_code": 9,
+  "files_system_code": [
+   "scripts/audit_abp_v2_vs_v3.py",
+   "scripts/run_clinical_showcase.py",
+   "src/rag_sfar/generation/client.py",
+   "src/rag_sfar/generation/prompts.py",
+   "src/rag_sfar/interfaces/api.py"
+  ],
+  "distinct_questions_touched_by_system_code": 5,
+  "question_ids": [
+   "Q04",
+   "Q28",
+   "Q63",
+   "Q108",
+   "Q169"
+  ]
+ },
+ "union_questions_touched_by_system_code": 38,
+ "union_question_ids": [
+  "Q01",
+  "Q03",
+  "Q04",
+  "Q05",
+  "Q06",
+  "Q08",
+  "Q09",
+  "Q10",
+  "Q12",
+  "Q13",
+  "Q14",
+  "Q15",
+  "Q16",
+  "Q17",
+  "Q22",
+  "Q27",
+  "Q28",
+  "Q32",
+  "Q41",
+  "Q43",
+  "Q45",
+  "Q50",
+  "Q63",
+  "Q83",
+  "Q108",
+  "Q124",
+  "Q131",
+  "Q137",
+  "Q139",
+  "Q140",
+  "Q141",
+  "Q143",
+  "Q146",
+  "Q153",
+  "Q156",
+  "Q167",
+  "Q169",
+  "Q171"
+ ]
+}
+
+=== Lignes de code SYSTÈME partageant des n-grammes avec le benchmark ===
+scripts/audit_abp_v2_vs_v3.py:26 [aussi-RFE] Q63 :: ['chirurgie d affirmation de', 'd affirmation de genre'] :: ("Chirurgie d'affirmation de genre (vaginoplastie & encadré allergie céfoxitine)", "V3.0 p.60", [r"vaginoplastie", r"affirmation\s+de\s+genr
+scripts/quick_demo_queries.py:22 [BENCH-ONLY] Q03,Q04,Q27,Q43 :: ['anterieure chez un patient', 'par voie anterieure chez', 'patient allergique aux betalactamines'] :: "Quelle est la recommandation d'antibioprophylaxie pour une PTH par voie antérieure chez un patient allergique aux bêtalactamines ?",
+scripts/quick_demo_queries.py:23 [BENCH-ONLY] Q01,Q03,Q04,Q27,Q43,Q139 :: ['antibioprophylaxie pour une prothese', 'de genou chez un', 'genou chez un patient'] :: "Quelle est la recommandation d'antibioprophylaxie pour une prothèse totale de genou chez un patient allergique aux bêtalactamines ?",
+scripts/run_clinical_showcase.py:36 [BENCH-ONLY] Q03,Q04,Q27,Q43 :: ['anterieure chez un patient', 'par voie anterieure chez', 'patient allergique aux betalactamines'] :: "Quelle est la recommandation d'antibioprophylaxie pour une PTH par voie antérieure chez un patient allergique aux bêtalactamines ?",
+scripts/run_clinical_showcase.py:40 [BENCH-ONLY] Q10,Q12,Q22,Q28 :: ['antibioprophylaxie pour une plaie', 'cranio-cerebrale chez un patient', 'patient allergique aux penicillines'] :: "Quelle est la recommandation d'antibioprophylaxie pour une plaie cranio-cérébrale chez un patient allergique aux pénicillines ?",
+src/rag_sfar/generation/prompts.py:42 [aussi-RFE] Q15,Q143 :: ['plaie de la main'] :: 2. Évalue très brièvement chaque choix A, B, C, D d'après la ligne exacte dans [S1..Sk] (respecte strictement « 1re intention » vs « 2e inte
+src/rag_sfar/ingestion/chunker.py:14 [aussi-RFE] Q141,Q167 :: ['cas d allergie aux', 'd allergie aux betalactamines', 'en cas d allergie'] :: "En cas d'allergie aux bêtalactamines" box & footnotes to every chunk in that section!)
+src/rag_sfar/ingestion/chunker.py:567 [aussi-RFE] Q141,Q167 :: ['cas d allergie aux', 'd allergie aux betalactamines', 'en cas d allergie'] :: # If a specialty allergy box ("En cas d'allergie aux bêtalactamines...") starts
+src/rag_sfar/interfaces/api.py:144 [BENCH-ONLY] Q03,Q04,Q27,Q43 :: ['anterieure chez un patient', 'par voie anterieure chez', 'patient allergique aux betalactamines'] :: <span class="ex-pill" onclick="setExample('Quelle antibioprophylaxie pour une PTH par voie antérieure chez un patient allergique aux bêtalac
+src/rag_sfar/interfaces/api.py:145 [BENCH-ONLY] Q10,Q12,Q22,Q28 :: ['antibioprophylaxie pour une plaie', 'cranio-cerebrale chez un patient', 'patient allergique aux penicillines'] :: <span class="ex-pill" onclick="setExample('Quelle est la recommandation d\\'antibioprophylaxie pour une plaie cranio-cérébrale chez un patie
+src/rag_sfar/retrieval/crag.py:149 [BENCH-ONLY] Q146,Q171 :: ['parmi ces interventions orl'] :: 'Parmi ces interventions ORL... A. Implant cochléaire B. Amygdalectomie...'),
+src/rag_sfar/retrieval/crag.py:204 [BENCH-ONLY] Q16 :: ['d hemostase associee a', 'splenectomie d hemostase associee'] :: """Detect composite multi-act surgical queries (e.g. 'splénectomie d'hémostase associée à
+src/rag_sfar/retrieval/crag.py:205 [BENCH-ONLY] Q06,Q16 :: ['d un fixateur externe', 'externe sur fracture fermee', 'fixateur externe sur fracture'] :: la pose d'un fixateur externe sur fracture fermée du fémur') and split into atomic
+src/rag_sfar/retrieval/medical_lexicon.py:11 [BENCH-ONLY] Q01 :: ['prothese totale de hanche'] :: "PTH": "prothèse totale de hanche",
+src/rag_sfar/retrieval/medical_lexicon.py:12 [BENCH-ONLY] Q03,Q139 :: ['prothese totale de genou'] :: "PTG": "prothèse totale de genou",
+src/rag_sfar/retrieval/medical_lexicon.py:19 [aussi-RFE] Q13,Q140 :: ['ablation de materiel d', 'de materiel d osteosynthese'] :: "AMO": "ablation de matériel d'ostéosynthèse",
+src/rag_sfar/retrieval/medical_lexicon.py:69 [aussi-RFE] Q83 :: ['interruption volontaire de grossesse'] :: "IVG": "interruption volontaire de grossesse",
+src/rag_sfar/retrieval/pipeline.py:567 [aussi-RFE] Q15,Q143 :: ['plaie de la main'] :: query (e.g. `(hors main)` when the user asks about `plaie de la main`).
+src/rag_sfar/retrieval/pipeline.py:569 [aussi-RFE] Q04 :: ['de hanche par voie', 'hanche par voie anterieure'] :: de hanche par voie antérieure...`, `En cas d'ablation avec ouverture articulaire ou
+src/rag_sfar/retrieval/pipeline.py:664 [aussi-RFE] Q141,Q167 :: ['cas d allergie aux', 'd allergie aux betalactamines', 'en cas d allergie'] :: # Check for true specialty allergy boxes ("En cas d'allergie aux bêtalactamines")
+
+=== answer (code système) ===
+scripts/run_e2e_eval.py:53 Amoxicilline/Clavulanate Q05,Q08,Q09,Q10,Q14,Q15,Q17,Q22 :: "(ex : 'Céfazoline', 'Amoxicilline/Clavulanate', 'Clindamycine + Gentamicine'), "
+scripts/run_e2e_eval.py:53 Clindamycine + Gentamicine Q12,Q43 :: "(ex : 'Céfazoline', 'Amoxicilline/Clavulanate', 'Clindamycine + Gentamicine'), "
+src/rag_sfar/generation/prompts.py:34 Amoxicilline/Clavulanate Q05,Q08,Q09,Q10,Q14,Q15,Q17,Q22 :: - Si une allergie est mentionnée : (a) si une ligne d'exception correspond EXACTEMENT à l'acte demandé dans la question (ex. PTH voie antéri
+src/rag_sfar/generation/prompts.py:35 Amoxicilline/Clavulanate Q05,Q08,Q09,Q10,Q14,Q15,Q17,Q22 :: Ligne 2 — RÉPONSE : Écris UNIQUEMENT le nom exact de la molécule ou association finale (ex : Céfazoline, Amoxicilline/Clavulanate, Clindamyc
+src/rag_sfar/generation/prompts.py:35 Clindamycine + Gentamicine Q12,Q43 :: Ligne 2 — RÉPONSE : Écris UNIQUEMENT le nom exact de la molécule ou association finale (ex : Céfazoline, Amoxicilline/Clavulanate, Clindamyc
+src/rag_sfar/generation/prompts.py:35 Triméthoprime/Sulfaméthoxazole Q28 :: Ligne 2 — RÉPONSE : Écris UNIQUEMENT le nom exact de la molécule ou association finale (ex : Céfazoline, Amoxicilline/Clavulanate, Clindamyc
+src/rag_sfar/ingestion/table_parser.py:100 Amoxicilline/Clavulanate Q05,Q08,Q09,Q10,Q14,Q15,Q17,Q22 :: - Option 2 : Molécules = Alternative : Amoxicilline/Clavulanate | Dose initiale = 2g IVL | ...
+src/rag_sfar/retrieval/crag.py:183 Amoxicilline/Clavulanate Q05,Q08,Q09,Q10,Q14,Q15,Q17,Q22 :: When an MCQ lists candidate drug/dosage answers (e.g. `A. Amoxicilline/Clavulanate`,
+
+=== choice (code système) ===
+scripts/audit_abp_v2_vs_v3.py:23 clindamycine Q139,Q141 :: ("Obésité (R1.5.2 Amox/Clav & R1.6 IMC Clindamycine)", "V3.0 p.25-30", [r"\bob[èe]s\w*", r"\bimc\b", r"100\s*kg", r"120\s*kg"]),
+scripts/run_e2e_eval.py:53 amoxicilline/clavulanate Q139,Q153,Q156 :: "(ex : 'Céfazoline', 'Amoxicilline/Clavulanate', 'Clindamycine + Gentamicine'), "
+scripts/run_e2e_eval.py:53 clindamycine Q139,Q141 :: "(ex : 'Céfazoline', 'Amoxicilline/Clavulanate', 'Clindamycine + Gentamicine'), "
+src/rag_sfar/generation/prompts.py:34 amoxicilline/clavulanate Q139,Q153,Q156 :: - Si une allergie est mentionnée : (a) si une ligne d'exception correspond EXACTEMENT à l'acte demandé dans la question (ex. PTH voie antéri
+src/rag_sfar/generation/prompts.py:34 prothese d'epaule Q140 :: - Si une allergie est mentionnée : (a) si une ligne d'exception correspond EXACTEMENT à l'acte demandé dans la question (ex. PTH voie antéri
+src/rag_sfar/generation/prompts.py:35 amoxicilline/clavulanate Q139,Q153,Q156 :: Ligne 2 — RÉPONSE : Écris UNIQUEMENT le nom exact de la molécule ou association finale (ex : Céfazoline, Amoxicilline/Clavulanate, Clindamyc
+src/rag_sfar/generation/prompts.py:35 clindamycine Q139,Q141 :: Ligne 2 — RÉPONSE : Écris UNIQUEMENT le nom exact de la molécule ou association finale (ex : Céfazoline, Amoxicilline/Clavulanate, Clindamyc
+src/rag_sfar/ingestion/loader.py:204 amygdalectomie Q146 :: "amygdalectomie chez l’enfant",
+src/rag_sfar/ingestion/table_parser.py:100 amoxicilline/clavulanate Q139,Q153,Q156 :: - Option 2 : Molécules = Alternative : Amoxicilline/Clavulanate | Dose initiale = 2g IVL | ...
+src/rag_sfar/retrieval/crag.py:41 clindamycine Q139,Q141 :: "patient obèse IMC adaptation dose posologie antibioprophylaxie R1.5 R1.6 céfazoline amoxicilline clindamycine",
+src/rag_sfar/retrieval/crag.py:132 clindamycine Q139,Q141 :: r"clavulanate|clindamycine|vancomycine|t[ée]icoplanine|gentamicine|m[ée]tronidazole|"
+src/rag_sfar/retrieval/crag.py:149 amygdalectomie Q146 :: 'Parmi ces interventions ORL... A. Implant cochléaire B. Amygdalectomie...'),
+src/rag_sfar/retrieval/crag.py:183 amoxicilline/clavulanate Q139,Q153,Q156 :: When an MCQ lists candidate drug/dosage answers (e.g. `A. Amoxicilline/Clavulanate`,
+src/rag_sfar/retrieval/crag.py:184 clindamycine Q139,Q141 :: `B. Céfazoline`, `C. Clindamycine`, `D. Vancomycine` -> `extract_mcq_option_subqueries == []`),
+src/rag_sfar/retrieval/medical_lexicon.py:92 metronidazole Q141 :: "flagyl": "métronidazole",
+src/rag_sfar/retrieval/medical_lexicon.py:95 clindamycine Q139,Q141 :: "dalacine": "clindamycine",
+
+=== dose (code système) ===
+src/rag_sfar/ingestion/table_parser.py:99 2givl Q143,Q169 :: - Option 1 : Molécules = Céfazoline | Dose initiale = 2g IVL | Réinjections et durée = 1g si durée > 4h... | Force = GRADE 2
+src/rag_sfar/ingestion/table_parser.py:100 2givl Q143,Q169 :: - Option 2 : Molécules = Alternative : Amoxicilline/Clavulanate | Dose initiale = 2g IVL | ...
+
+=== title (code système) ===
+scripts/audit_abp_v2_vs_v3.py:26 ['affirmation de genre'] Q63 :: ("Chirurgie d'affirmation de genre (vaginoplastie & encadré allergie céfoxitine)", "V3.0 p.60", [r"vaginoplastie", r"affirmation\s+de\s+genr
+scripts/audit_abp_v2_vs_v3.py:29 ['biopsie prostate transrectale'] Q108 :: ("Biopsie prostate transrectale (délais fosfomycine précisés)", "V3.0 p.88", [r"biopsie.*prostate", r"prostate.*biopsie", r"fosfomycine"]),
+scripts/run_clinical_showcase.py:6 ['pth voie anterieure', 'voie anterieure allergie'] Q04 :: 1. Antibioprophylaxie V3.0 (2026): PTH voie antérieure + allergie bêtalactamines
+scripts/run_clinical_showcase.py:7 ['cranio-cerebrale allergie penicillines', 'plaie cranio-cerebrale allergie'] Q28 :: 2. Antibioprophylaxie V3.0 (2026): Plaie cranio-cérébrale + allergie pénicillines (Neurochirurgie)
+scripts/run_clinical_showcase.py:35 ['pth voie anterieure', 'voie anterieure allergie'] Q04 :: "1. Antibioprophylaxie 2026 — PTH voie antérieure + allergie (Exception + Encadré)",
+src/rag_sfar/generation/client.py:283 ['de 1re intention', 'molecule de 1re'] Q169 :: "Ne donne PAS la molécule de 1re intention (bêtalactamine) ; applique l'encadré allergie "
+src/rag_sfar/generation/client.py:439 ['de 1re intention', 'molecule de 1re'] Q169 :: "Ne donne PAS la molécule de 1re intention (bêtalactamine) ; applique l'encadré allergie "
+src/rag_sfar/generation/prompts.py:34 ['pth voie anterieure'] Q04 :: - Si une allergie est mentionnée : (a) si une ligne d'exception correspond EXACTEMENT à l'acte demandé dans la question (ex. PTH voie antéri
+src/rag_sfar/interfaces/api.py:120 ['pth voie anterieure', 'voie anterieure allergie'] Q04 :: <input id="queryInput" type="text" placeholder="Posez une question clinique SFAR (ex : PTH voie antérieure allergie bêtalactamines, arrêt AO
+
+=== Code d'évaluation / présentation (attendu, pour info) ===
+scripts/build_masterclass_pdf.py:1081 Q01 :: <li><b>Expansion par Lexique Clinique (déterministe, 0 ms)</b> : étend 70+ acronymes et noms commerciaux français d'AR (
+scripts/build_masterclass_pdf.py:1083 Q90 :: <li><b>Décomposition Multi-Hop + RAG-Fusion</b> : face à <i>« Colectomie droite chez un patient porteur rectal de BLSE »
+src/rag_sfar/evaluation/benchmarks.py:119 Q03,Q04,Q27,Q43 :: question="Quelle antibioprophylaxie administrer pour une PTH par voie antérieure chez un patient allergique aux bêtalact
+src/rag_sfar/evaluation/benchmarks.py:131 Q03,Q04,Q27,Q43,Q141 :: question="Quelle est l'alternative recommandée pour une PTG chez un patient allergique aux bêtalactamines ?",
+src/rag_sfar/evaluation/benchmarks.py:143 Q141,Q167 :: question="Comment adapter la dose d'antibioprophylaxie (amoxicilline-clavulanate et alternatives en cas d'allergie) chez
+src/rag_sfar/evaluation/benchmarks.py:165 Q12 :: title="ABP fracture ouverte Gustilo 3 allergie pénicillines",
+src/rag_sfar/evaluation/benchmarks.py:167 Q05,Q12,Q28,Q41 :: question="Quelle antibioprophylaxie prescrire pour une fracture ouverte Gustilo 3 chez un patient allergique aux pénicil
+src/rag_sfar/evaluation/benchmarks.py:179 Q48,Q87,Q126,Q128,Q140 :: question="Quelle antibioprophylaxie et quelle alternative pour une chirurgie rhinologique avec mise en place d'un greffo
+src/rag_sfar/evaluation/benchmarks.py:270 Q158 :: expected_answer="Seuil INR=1,5 (ou 1,2 en neurochirurgie/neuraxial), administrer 2 à 5 mg de vitamine K per os la veille
+src/rag_sfar/evaluation/benchmarks.py:281 Q165 :: expected_answer="Dernière prise à J-3 en l'absence d'insuffisance rénale (3.3, GRADE 2+).",
+src/rag_sfar/evaluation/benchmarks.py:337 Q15,Q17 :: question="Quelles sont les recommandations actuelles pour la prise en charge des voies aériennes de l'adulte au bloc opé
+src/rag_sfar/evaluation/benchmarks.py:348 Q15,Q17 :: question="Quelle est la prise en charge d'une réaction d'hypersensibilité immédiate (anaphylaxie) périopératoire et le b
+src/rag_sfar/evaluation/benchmarks.py:359 Q15,Q17 :: question="Quelles sont les recommandations actuelles pour la prise en charge initiale du sepsis chez l'adulte et l'enfan
+tests/test_rag_sfar.py:69 Q03,Q139 :: <tr><td>Prothèse totale de genou</td><td>Céfazoline</td><td>2g IVL</td><td>GRADE 1</td></tr>
+tests/test_rag_sfar.py:78 Q03,Q139 :: assert "Prothèse totale de genou" in md
+tests/test_rag_sfar.py:102 Q15,Q17 :: fr_body = "Les recommandations formalisées d'experts de la SFAR dans la prise en charge des patients chez l'adulte pour 
+tests/test_rag_sfar.py:129 Q01 :: assert "prothèse totale de hanche" in exp.lower()
+tests/test_rag_sfar.py:154 Q03,Q139 :: <tr><td>Prothèse totale de genou (PTG)</td><td>Céfazoline</td><td>2g IVL</td><td>GRADE 1</td></tr>
+tests/test_rag_sfar.py:159 Q04,Q141,Q167 :: En cas d'allergie aux bêtalactamines, si antibioprophylaxie indiquée dans ce tableau : Clindamycine 900 mg IVL. En cas d
+tests/test_rag_sfar.py:199 Q03,Q139 :: text="Prothèse totale de genou : Céfazoline 2g IVL (GRADE 1).",
+tests/test_rag_sfar.py:200 Q03,Q139 :: indexed_text="Prothèse totale de genou : Céfazoline 2g IVL (GRADE 1).",
+tests/test_rag_sfar.py:318 Q90 :: qa = analyze_query("Antibioprophylaxie pour colectomie droite chez un patient porteur rectal de BLSE ?")
+tests/test_rag_sfar.py:339 Q01 :: + "Pour la prothèse totale de hanche, il est recommandé d'administrer Céfazoline 2g IVL (GRADE 1)."
+tests/test_rag_sfar.py:438 Q141,Q167 :: _rc("c3", "callout_allergy", 0.90, "En cas d'allergie : Clindamycine"),
+tests/test_rag_sfar.py:468 Q166 :: Texte introductif général sur la chirurgie ORL et les facteurs de risque infectieux postopératoires.
+tests/test_rag_sfar.py:471 Q141,Q167 :: En cas d'allergie aux bêtalactamines, si antibioprophylaxie indiquée dans ce tableau :
+tests/test_rag_sfar.py:472 Q167 :: **Clindamycine 900 mg IVL** (Avis d'experts).
+tests/test_rag_sfar.py:491 Q141,Q167 :: assert linked_allergies[0].text.lower().startswith("en cas d'allergie")
+tests/test_rag_sfar.py:567 Q140,Q146,Q154,Q155,Q171 :: "Parmi ces interventions ORL, laquelle ne nécessite PAS d'antibioprophylaxie ?\n"
+tests/test_rag_sfar.py:568 Q146,Q164,Q171 :: "A. Pose d'implant cochléaire\nB. Amygdalectomie\nC. Laryngectomie totale\nD. Trachéotomie chirurgicale"
+tests/test_rag_sfar.py:576 Q04,Q141 :: "Alternative allergie pour une prothèse de genou ?\n"
+tests/test_rag_sfar.py:577 Q143 :: "A. Céfazoline 2g IVL\nB. Amoxicilline/Clavulanate 2g IVL\nC. Pas d'antibioprophylaxie recommandée\nD. Clindamycine 900m
+tests/test_rag_sfar.py:583 Q16,Q95 :: "Quelle antibioprophylaxie pour une splénectomie d'hémostase associée à "
+tests/test_rag_sfar.py:584 Q06,Q16 :: "la pose d'un fixateur externe sur fracture fermée du fémur chez un polytraumatisé ?"

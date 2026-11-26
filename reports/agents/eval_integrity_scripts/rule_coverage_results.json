@@ -1,0 +1,287 @@
+{
+ "lexicon_entries_triggered": {
+  "acronym:PTH": {
+   "abp171": [],
+   "stress30": [
+    "M02"
+   ]
+  },
+  "acronym:PTG": {
+   "abp171": [],
+   "stress30": [
+    "M03"
+   ]
+  },
+  "acronym:DVE": {
+   "abp171": [
+    "Q20",
+    "Q144"
+   ],
+   "stress30": []
+  },
+  "acronym:DVP": {
+   "abp171": [
+    "Q21",
+    "Q144"
+   ],
+   "stress30": []
+  },
+  "acronym:IIA": {
+   "abp171": [],
+   "stress30": [
+    "M08",
+    "M10"
+   ]
+  },
+  "acronym:BLSE": {
+   "abp171": [
+    "Q90"
+   ],
+   "stress30": [
+    "M09",
+    "M10"
+   ]
+  },
+  "acronym:ECBU": {
+   "abp171": [],
+   "stress30": [
+    "M26"
+   ]
+  },
+  "acronym:PAS": {
+   "abp171": [
+    "Q140",
+    "Q146",
+    "Q154",
+    "Q166",
+    "Q171"
+   ],
+   "stress30": []
+  },
+  "acronym:AOD": {
+   "abp171": [],
+   "stress30": [
+    "M16",
+    "M17"
+   ]
+  },
+  "acronym:AVK": {
+   "abp171": [],
+   "stress30": [
+    "M14",
+    "M15"
+   ]
+  },
+  "acronym:MTEV": {
+   "abp171": [],
+   "stress30": [
+    "M24"
+   ]
+  },
+  "acronym:INR": {
+   "abp171": [],
+   "stress30": [
+    "M15"
+   ]
+  },
+  "acronym:ALR": {
+   "abp171": [],
+   "stress30": [
+    "M27"
+   ]
+  },
+  "acronym:CEC": {
+   "abp171": [
+    "Q44"
+   ],
+   "stress30": []
+  },
+  "acronym:TAVI": {
+   "abp171": [
+    "Q45"
+   ],
+   "stress30": []
+  },
+  "acronym:RTUP": {
+   "abp171": [
+    "Q106"
+   ],
+   "stress30": []
+  },
+  "acronym:ORL": {
+   "abp171": [
+    "Q32",
+    "Q146",
+    "Q171"
+   ],
+   "stress30": []
+  },
+  "acronym:IVL": {
+   "abp171": [
+    "Q143",
+    "Q167",
+    "Q169"
+   ],
+   "stress30": []
+  }
+ },
+ "lexicon_entries_total": 97,
+ "router": {
+  "modifier:allergy": {
+   "abp171": 8,
+   "stress30": 6
+  },
+  "modifier:obesity": {
+   "abp171": 0,
+   "stress30": 1
+  },
+  "modifier:renal": {
+   "abp171": 1,
+   "stress30": 1
+  },
+  "modifier:dosage": {
+   "abp171": 4,
+   "stress30": 5
+  },
+  "modifier:grade": {
+   "abp171": 0,
+   "stress30": 0
+  },
+  "modifier:references": {
+   "abp171": 0,
+   "stress30": 0
+  },
+  "temporal_diff": {
+   "abp171": [],
+   "stress30": [
+    "M29",
+    "M30"
+   ]
+  }
+ },
+ "crag": {
+  "facet:blse": {
+   "abp171": [
+    "Q90"
+   ],
+   "stress30": [
+    "M09",
+    "M10"
+   ]
+  },
+  "facet:obesity": {
+   "abp171": [],
+   "stress30": [
+    "M04"
+   ]
+  },
+  "facet:renal": {
+   "abp171": [],
+   "stress30": [
+    "M16"
+   ]
+  },
+  "facet:pediatric": {
+   "abp171": [],
+   "stress30": [
+    "M05",
+    "M23",
+    "M27"
+   ]
+  },
+  "mcq_option_subqueries": {
+   "abp171": [
+    "Q140",
+    "Q142",
+    "Q144",
+    "Q145",
+    "Q146",
+    "Q147",
+    "Q148",
+    "Q149",
+    "Q150",
+    "Q151",
+    "Q152",
+    "Q154",
+    "Q155",
+    "Q156",
+    "Q157",
+    "Q158",
+    "Q159",
+    "Q160",
+    "Q161",
+    "Q162",
+    "Q163",
+    "Q164",
+    "Q165",
+    "Q166",
+    "Q168",
+    "Q170",
+    "Q171"
+   ]
+  },
+  "mcq_distractor_stripping": {
+   "abp171": [
+    "Q139",
+    "Q141",
+    "Q143",
+    "Q153",
+    "Q167",
+    "Q169"
+   ]
+  },
+  "composite_multi_act": {
+   "abp171": [
+    "Q15",
+    "Q16"
+   ],
+   "stress30": [
+    "M18"
+   ]
+  }
+ },
+ "pipeline_guards": {
+  "main_boost (\\bmain\\b)": {
+   "abp171": [
+    "Q09",
+    "Q15",
+    "Q143"
+   ],
+   "stress30": []
+  },
+  "cond_trigger voie anterieure": {
+   "abp171": [
+    "Q04"
+   ]
+  },
+  "cond_trigger epaule": {
+   "abp171": []
+  },
+  "cond_trigger ouverture articulaire/difficile/temps operatoire long": {
+   "abp171": []
+  },
+  "cond_trigger dure-mere": {
+   "abp171": []
+  },
+  "allergy_alert_prefix (client.py:280)": {
+   "abp171": [
+    "Q03",
+    "Q04",
+    "Q12",
+    "Q27",
+    "Q28",
+    "Q43",
+    "Q141",
+    "Q167"
+   ],
+   "stress30": [
+    "M02",
+    "M03",
+    "M04",
+    "M06",
+    "M07",
+    "M22"
+   ]
+  }
+ }
+}

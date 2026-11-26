@@ -1,0 +1,3305 @@
+{
+ "summary": {
+  "benchmark_questions": 171,
+  "ngram_size": 4,
+  "template_ngrams_excluded": 25,
+  "ngram": {
+   "lines_total": 54,
+   "lines_system_code": 20,
+   "files_system_code": [
+    "scripts/audit_abp_v2_vs_v3.py",
+    "scripts/quick_demo_queries.py",
+    "scripts/run_clinical_showcase.py",
+    "src/rag_sfar/generation/prompts.py",
+    "src/rag_sfar/ingestion/chunker.py",
+    "src/rag_sfar/interfaces/api.py",
+    "src/rag_sfar/retrieval/crag.py",
+    "src/rag_sfar/retrieval/medical_lexicon.py",
+    "src/rag_sfar/retrieval/pipeline.py"
+   ],
+   "distinct_questions_touched_by_system_code": 22,
+   "question_ids": [
+    "Q01",
+    "Q03",
+    "Q04",
+    "Q06",
+    "Q10",
+    "Q12",
+    "Q13",
+    "Q15",
+    "Q16",
+    "Q22",
+    "Q27",
+    "Q28",
+    "Q43",
+    "Q63",
+    "Q83",
+    "Q139",
+    "Q140",
+    "Q141",
+    "Q143",
+    "Q146",
+    "Q167",
+    "Q171"
+   ]
+  },
+  "ngram_bench_only_system_lines": 11,
+  "ngram_bench_only_questions": [
+   "Q01",
+   "Q03",
+   "Q04",
+   "Q06",
+   "Q10",
+   "Q12",
+   "Q16",
+   "Q22",
+   "Q27",
+   "Q28",
+   "Q43",
+   "Q139",
+   "Q146",
+   "Q171"
+  ],
+  "answer": {
+   "lines_total": 32,
+   "lines_system_code": 8,
+   "files_system_code": [
+    "scripts/run_e2e_eval.py",
+    "src/rag_sfar/generation/prompts.py",
+    "src/rag_sfar/ingestion/table_parser.py",
+    "src/rag_sfar/retrieval/crag.py"
+   ],
+   "distinct_questions_touched_by_system_code": 19,
+   "question_ids": [
+    "Q05",
+    "Q08",
+    "Q09",
+    "Q10",
+    "Q12",
+    "Q14",
+    "Q15",
+    "Q17",
+    "Q22",
+    "Q28",
+    "Q32",
+    "Q41",
+    "Q43",
+    "Q45",
+    "Q50",
+    "Q63",
+    "Q124",
+    "Q131",
+    "Q137"
+   ]
+  },
+  "choice": {
+   "lines_total": 79,
+   "lines_system_code": 16,
+   "files_system_code": [
+    "scripts/audit_abp_v2_vs_v3.py",
+    "scripts/run_e2e_eval.py",
+    "src/rag_sfar/generation/prompts.py",
+    "src/rag_sfar/ingestion/loader.py",
+    "src/rag_sfar/ingestion/table_parser.py",
+    "src/rag_sfar/retrieval/crag.py",
+    "src/rag_sfar/retrieval/medical_lexicon.py"
+   ],
+   "distinct_questions_touched_by_system_code": 6,
+   "question_ids": [
+    "Q139",
+    "Q140",
+    "Q141",
+    "Q146",
+    "Q153",
+    "Q156"
+   ]
+  },
+  "dose": {
+   "lines_total": 25,
+   "lines_system_code": 2,
+   "files_system_code": [
+    "src/rag_sfar/ingestion/table_parser.py"
+   ],
+   "distinct_questions_touched_by_system_code": 2,
+   "question_ids": [
+    "Q143",
+    "Q169"
+   ]
+  },
+  "title": {
+   "lines_total": 20,
+   "lines_system_code": 9,
+   "files_system_code": [
+    "scripts/audit_abp_v2_vs_v3.py",
+    "scripts/run_clinical_showcase.py",
+    "src/rag_sfar/generation/client.py",
+    "src/rag_sfar/generation/prompts.py",
+    "src/rag_sfar/interfaces/api.py"
+   ],
+   "distinct_questions_touched_by_system_code": 5,
+   "question_ids": [
+    "Q04",
+    "Q28",
+    "Q63",
+    "Q108",
+    "Q169"
+   ]
+  },
+  "union_questions_touched_by_system_code": 38,
+  "union_question_ids": [
+   "Q01",
+   "Q03",
+   "Q04",
+   "Q05",
+   "Q06",
+   "Q08",
+   "Q09",
+   "Q10",
+   "Q12",
+   "Q13",
+   "Q14",
+   "Q15",
+   "Q16",
+   "Q17",
+   "Q22",
+   "Q27",
+   "Q28",
+   "Q32",
+   "Q41",
+   "Q43",
+   "Q45",
+   "Q50",
+   "Q63",
+   "Q83",
+   "Q108",
+   "Q124",
+   "Q131",
+   "Q137",
+   "Q139",
+   "Q140",
+   "Q141",
+   "Q143",
+   "Q146",
+   "Q153",
+   "Q156",
+   "Q167",
+   "Q169",
+   "Q171"
+  ]
+ },
+ "results": {
+  "ngram": [
+   {
+    "file": "scripts/audit_abp_v2_vs_v3.py",
+    "line": 26,
+    "eval_code": false,
+    "qids": [
+     "Q63"
+    ],
+    "n_hits": 2,
+    "bench_only_ngrams": [],
+    "sample": [
+     "chirurgie d affirmation de",
+     "d affirmation de genre"
+    ],
+    "text": "(\"Chirurgie d'affirmation de genre (vaginoplastie & encadré allergie céfoxitine)\", \"V3.0 p.60\", [r\"vaginoplastie\", r\"affirmation\\s+de\\s+genre\"]),"
+   },
+   {
+    "file": "scripts/build_masterclass_pdf.py",
+    "line": 1081,
+    "eval_code": true,
+    "qids": [
+     "Q01"
+    ],
+    "n_hits": 1,
+    "bench_only_ngrams": [
+     "prothese totale de hanche"
+    ],
+    "sample": [
+     "prothese totale de hanche"
+    ],
+    "text": "<li><b>Expansion par Lexique Clinique (déterministe, 0 ms)</b> : étend 70+ acronymes et noms commerciaux français d'AR (<code>PTH → prothèse totale de hanche</code>, <code>AOD → apixaban rivaroxaban dabigatran edoxaban</"
+   },
+   {
+    "file": "scripts/build_masterclass_pdf.py",
+    "line": 1083,
+    "eval_code": true,
+    "qids": [
+     "Q90"
+    ],
+    "n_hits": 1,
+    "bench_only_ngrams": [],
+    "sample": [
+     "chez un patient porteur"
+    ],
+    "text": "<li><b>Décomposition Multi-Hop + RAG-Fusion</b> : face à <i>« Colectomie droite chez un patient porteur rectal de BLSE »</i>, le système génère une sous-requête ciblée sur la facette systémique (<code>colonisation rectal"
+   },
+   {
+    "file": "scripts/quick_demo_queries.py",
+    "line": 22,
+    "eval_code": false,
+    "qids": [
+     "Q03",
+     "Q04",
+     "Q27",
+     "Q43"
+    ],
+    "n_hits": 4,
+    "bench_only_ngrams": [
+     "anterieure chez un patient",
+     "par voie anterieure chez",
+     "voie anterieure chez un"
+    ],
+    "sample": [
+     "anterieure chez un patient",
+     "par voie anterieure chez",
+     "patient allergique aux betalactamines",
+     "voie anterieure chez un"
+    ],
+    "text": "\"Quelle est la recommandation d'antibioprophylaxie pour une PTH par voie antérieure chez un patient allergique aux bêtalactamines ?\","
+   },
+   {
+    "file": "scripts/quick_demo_queries.py",
+    "line": 23,
+    "eval_code": false,
+    "qids": [
+     "Q01",
+     "Q03",
+     "Q04",
+     "Q27",
+     "Q43",
+     "Q139"
+    ],
+    "n_hits": 8,
+    "bench_only_ngrams": [
+     "antibioprophylaxie pour une prothese",
+     "de genou chez un",
+     "genou chez un patient",
+     "pour une prothese totale",
+     "prothese totale de genou",
+     "totale de genou chez",
+     "une prothese totale de"
+    ],
+    "sample": [
+     "antibioprophylaxie pour une prothese",
+     "de genou chez un",
+     "genou chez un patient",
+     "patient allergique aux betalactamines",
+     "pour une prothese totale",
+     "prothese totale de genou"
+    ],
+    "text": "\"Quelle est la recommandation d'antibioprophylaxie pour une prothèse totale de genou chez un patient allergique aux bêtalactamines ?\","
+   },
+   {
+    "file": "scripts/run_clinical_showcase.py",
+    "line": 36,
+    "eval_code": false,
+    "qids": [
+     "Q03",
+     "Q04",
+     "Q27",
+     "Q43"
+    ],
+    "n_hits": 4,
+    "bench_only_ngrams": [
+     "anterieure chez un patient",
+     "par voie anterieure chez",
+     "voie anterieure chez un"
+    ],
+    "sample": [
+     "anterieure chez un patient",
+     "par voie anterieure chez",
+     "patient allergique aux betalactamines",
+     "voie anterieure chez un"
+    ],
+    "text": "\"Quelle est la recommandation d'antibioprophylaxie pour une PTH par voie antérieure chez un patient allergique aux bêtalactamines ?\","
+   },
+   {
+    "file": "scripts/run_clinical_showcase.py",
+    "line": 40,
+    "eval_code": false,
+    "qids": [
+     "Q10",
+     "Q12",
+     "Q22",
+     "Q28"
+    ],
+    "n_hits": 6,
+    "bench_only_ngrams": [
+     "antibioprophylaxie pour une plaie",
+     "cranio-cerebrale chez un patient",
+     "patient allergique aux penicillines",
+     "plaie cranio-cerebrale chez un",
+     "pour une plaie cranio-cerebrale",
+     "une plaie cranio-cerebrale chez"
+    ],
+    "sample": [
+     "antibioprophylaxie pour une plaie",
+     "cranio-cerebrale chez un patient",
+     "patient allergique aux penicillines",
+     "plaie cranio-cerebrale chez un",
+     "pour une plaie cranio-cerebrale",
+     "une plaie cranio-cerebrale chez"
+    ],
+    "text": "\"Quelle est la recommandation d'antibioprophylaxie pour une plaie cranio-cérébrale chez un patient allergique aux pénicillines ?\","
+   },
+   {
+    "file": "src/rag_sfar/evaluation/benchmarks.py",
+    "line": 119,
+    "eval_code": true,
+    "qids": [
+     "Q03",
+     "Q04",
+     "Q27",
+     "Q43"
+    ],
+    "n_hits": 4,
+    "bench_only_ngrams": [
+     "anterieure chez un patient",
+     "par voie anterieure chez",
+     "voie anterieure chez un"
+    ],
+    "sample": [
+     "anterieure chez un patient",
+     "par voie anterieure chez",
+     "patient allergique aux betalactamines",
+     "voie anterieure chez un"
+    ],
+    "text": "question=\"Quelle antibioprophylaxie administrer pour une PTH par voie antérieure chez un patient allergique aux bêtalactamines ?\","
+   },
+   {
+    "file": "src/rag_sfar/evaluation/benchmarks.py",
+    "line": 131,
+    "eval_code": true,
+    "qids": [
+     "Q03",
+     "Q04",
+     "Q27",
+     "Q43",
+     "Q141"
+    ],
+    "n_hits": 2,
+    "bench_only_ngrams": [
+     "quelle est l alternative"
+    ],
+    "sample": [
+     "patient allergique aux betalactamines",
+     "quelle est l alternative"
+    ],
+    "text": "question=\"Quelle est l'alternative recommandée pour une PTG chez un patient allergique aux bêtalactamines ?\","
+   },
+   {
+    "file": "src/rag_sfar/evaluation/benchmarks.py",
+    "line": 143,
+    "eval_code": true,
+    "qids": [
+     "Q141",
+     "Q167"
+    ],
+    "n_hits": 1,
+    "bench_only_ngrams": [],
+    "sample": [
+     "en cas d allergie"
+    ],
+    "text": "question=\"Comment adapter la dose d'antibioprophylaxie (amoxicilline-clavulanate et alternatives en cas d'allergie) chez le patient obèse selon la RFE SFAR ?\","
+   },
+   {
+    "file": "src/rag_sfar/evaluation/benchmarks.py",
+    "line": 165,
+    "eval_code": true,
+    "qids": [
+     "Q12"
+    ],
+    "n_hits": 1,
+    "bench_only_ngrams": [
+     "fracture ouverte gustilo 3"
+    ],
+    "sample": [
+     "fracture ouverte gustilo 3"
+    ],
+    "text": "title=\"ABP fracture ouverte Gustilo 3 allergie pénicillines\","
+   },
+   {
+    "file": "src/rag_sfar/evaluation/benchmarks.py",
+    "line": 167,
+    "eval_code": true,
+    "qids": [
+     "Q05",
+     "Q12",
+     "Q28",
+     "Q41"
+    ],
+    "n_hits": 7,
+    "bench_only_ngrams": [
+     "3 chez un patient",
+     "fracture ouverte gustilo 3",
+     "gustilo 3 chez un",
+     "ouverte gustilo 3 chez",
+     "patient allergique aux penicillines",
+     "pour une fracture ouverte",
+     "une fracture ouverte gustilo"
+    ],
+    "sample": [
+     "3 chez un patient",
+     "fracture ouverte gustilo 3",
+     "gustilo 3 chez un",
+     "ouverte gustilo 3 chez",
+     "patient allergique aux penicillines",
+     "pour une fracture ouverte"
+    ],
+    "text": "question=\"Quelle antibioprophylaxie prescrire pour une fracture ouverte Gustilo 3 chez un patient allergique aux pénicillines ?\","
+   },
+   {
+    "file": "src/rag_sfar/evaluation/benchmarks.py",
+    "line": 179,
+    "eval_code": true,
+    "qids": [
+     "Q48",
+     "Q87",
+     "Q126",
+     "Q128",
+     "Q140"
+    ],
+    "n_hits": 4,
+    "bench_only_ngrams": [],
+    "sample": [
+     "avec mise en place",
+     "en place d un",
+     "mise en place d",
+     "place d un greffon"
+    ],
+    "text": "question=\"Quelle antibioprophylaxie et quelle alternative pour une chirurgie rhinologique avec mise en place d'un greffon ou une chirurgie sinusienne tumorale ?\","
+   },
+   {
+    "file": "src/rag_sfar/evaluation/benchmarks.py",
+    "line": 270,
+    "eval_code": true,
+    "qids": [
+     "Q158"
+    ],
+    "n_hits": 1,
+    "bench_only_ngrams": [
+     "per os la veille"
+    ],
+    "sample": [
+     "per os la veille"
+    ],
+    "text": "expected_answer=\"Seuil INR=1,5 (ou 1,2 en neurochirurgie/neuraxial), administrer 2 à 5 mg de vitamine K per os la veille et contrôler l'INR le lendemain (3.2).\","
+   },
+   {
+    "file": "src/rag_sfar/evaluation/benchmarks.py",
+    "line": 281,
+    "eval_code": true,
+    "qids": [
+     "Q165"
+    ],
+    "n_hits": 1,
+    "bench_only_ngrams": [],
+    "sample": [
+     "en l absence d"
+    ],
+    "text": "expected_answer=\"Dernière prise à J-3 en l'absence d'insuffisance rénale (3.3, GRADE 2+).\","
+   },
+   {
+    "file": "src/rag_sfar/evaluation/benchmarks.py",
+    "line": 337,
+    "eval_code": true,
+    "qids": [
+     "Q15",
+     "Q17"
+    ],
+    "n_hits": 2,
+    "bench_only_ngrams": [
+     "pour la prise en"
+    ],
+    "sample": [
+     "la prise en charge",
+     "pour la prise en"
+    ],
+    "text": "question=\"Quelles sont les recommandations actuelles pour la prise en charge des voies aériennes de l'adulte au bloc opératoire et l'intubation difficile ?\","
+   },
+   {
+    "file": "src/rag_sfar/evaluation/benchmarks.py",
+    "line": 348,
+    "eval_code": true,
+    "qids": [
+     "Q15",
+     "Q17"
+    ],
+    "n_hits": 1,
+    "bench_only_ngrams": [],
+    "sample": [
+     "la prise en charge"
+    ],
+    "text": "question=\"Quelle est la prise en charge d'une réaction d'hypersensibilité immédiate (anaphylaxie) périopératoire et le bilan biologique à réaliser ?\","
+   },
+   {
+    "file": "src/rag_sfar/evaluation/benchmarks.py",
+    "line": 359,
+    "eval_code": true,
+    "qids": [
+     "Q15",
+     "Q17"
+    ],
+    "n_hits": 2,
+    "bench_only_ngrams": [
+     "pour la prise en"
+    ],
+    "sample": [
+     "la prise en charge",
+     "pour la prise en"
+    ],
+    "text": "question=\"Quelles sont les recommandations actuelles pour la prise en charge initiale du sepsis chez l'adulte et l'enfant ?\","
+   },
+   {
+    "file": "src/rag_sfar/generation/prompts.py",
+    "line": 42,
+    "eval_code": false,
+    "qids": [
+     "Q15",
+     "Q143"
+    ],
+    "n_hits": 1,
+    "bench_only_ngrams": [],
+    "sample": [
+     "plaie de la main"
+    ],
+    "text": "2. Évalue très brièvement chaque choix A, B, C, D d'après la ligne exacte dans [S1..Sk] (respecte strictement « 1re intention » vs « 2e intention », « plaie de la main » vs « hors main », « genou » vs « hanche voie antér"
+   },
+   {
+    "file": "src/rag_sfar/ingestion/chunker.py",
+    "line": 14,
+    "eval_code": false,
+    "qids": [
+     "Q141",
+     "Q167"
+    ],
+    "n_hits": 3,
+    "bench_only_ngrams": [],
+    "sample": [
+     "cas d allergie aux",
+     "d allergie aux betalactamines",
+     "en cas d allergie"
+    ],
+    "text": "\"En cas d'allergie aux bêtalactamines\" box & footnotes to every chunk in that section!)"
+   },
+   {
+    "file": "src/rag_sfar/ingestion/chunker.py",
+    "line": 567,
+    "eval_code": false,
+    "qids": [
+     "Q141",
+     "Q167"
+    ],
+    "n_hits": 3,
+    "bench_only_ngrams": [],
+    "sample": [
+     "cas d allergie aux",
+     "d allergie aux betalactamines",
+     "en cas d allergie"
+    ],
+    "text": "# If a specialty allergy box (\"En cas d'allergie aux bêtalactamines...\") starts"
+   },
+   {
+    "file": "src/rag_sfar/interfaces/api.py",
+    "line": 144,
+    "eval_code": false,
+    "qids": [
+     "Q03",
+     "Q04",
+     "Q27",
+     "Q43"
+    ],
+    "n_hits": 4,
+    "bench_only_ngrams": [
+     "anterieure chez un patient",
+     "par voie anterieure chez",
+     "voie anterieure chez un"
+    ],
+    "sample": [
+     "anterieure chez un patient",
+     "par voie anterieure chez",
+     "patient allergique aux betalactamines",
+     "voie anterieure chez un"
+    ],
+    "text": "<span class=\"ex-pill\" onclick=\"setExample('Quelle antibioprophylaxie pour une PTH par voie antérieure chez un patient allergique aux bêtalactamines ?')\">1. PTH voie ant. + allergie (→ Vanco/Teico 2026)</span>"
+   },
+   {
+    "file": "src/rag_sfar/interfaces/api.py",
+    "line": 145,
+    "eval_code": false,
+    "qids": [
+     "Q10",
+     "Q12",
+     "Q22",
+     "Q28"
+    ],
+    "n_hits": 6,
+    "bench_only_ngrams": [
+     "antibioprophylaxie pour une plaie",
+     "cranio-cerebrale chez un patient",
+     "patient allergique aux penicillines",
+     "plaie cranio-cerebrale chez un",
+     "pour une plaie cranio-cerebrale",
+     "une plaie cranio-cerebrale chez"
+    ],
+    "sample": [
+     "antibioprophylaxie pour une plaie",
+     "cranio-cerebrale chez un patient",
+     "patient allergique aux penicillines",
+     "plaie cranio-cerebrale chez un",
+     "pour une plaie cranio-cerebrale",
+     "une plaie cranio-cerebrale chez"
+    ],
+    "text": "<span class=\"ex-pill\" onclick=\"setExample('Quelle est la recommandation d\\\\'antibioprophylaxie pour une plaie cranio-cérébrale chez un patient allergique aux pénicillines ?')\">2. Plaie cranio + allergie (→ Bactrim 2026)<"
+   },
+   {
+    "file": "src/rag_sfar/retrieval/crag.py",
+    "line": 149,
+    "eval_code": false,
+    "qids": [
+     "Q146",
+     "Q171"
+    ],
+    "n_hits": 1,
+    "bench_only_ngrams": [
+     "parmi ces interventions orl"
+    ],
+    "sample": [
+     "parmi ces interventions orl"
+    ],
+    "text": "'Parmi ces interventions ORL... A. Implant cochléaire B. Amygdalectomie...'),"
+   },
+   {
+    "file": "src/rag_sfar/retrieval/crag.py",
+    "line": 204,
+    "eval_code": false,
+    "qids": [
+     "Q16"
+    ],
+    "n_hits": 2,
+    "bench_only_ngrams": [
+     "d hemostase associee a",
+     "splenectomie d hemostase associee"
+    ],
+    "sample": [
+     "d hemostase associee a",
+     "splenectomie d hemostase associee"
+    ],
+    "text": "\"\"\"Detect composite multi-act surgical queries (e.g. 'splénectomie d'hémostase associée à"
+   },
+   {
+    "file": "src/rag_sfar/retrieval/crag.py",
+    "line": 205,
+    "eval_code": false,
+    "qids": [
+     "Q06",
+     "Q16"
+    ],
+    "n_hits": 7,
+    "bench_only_ngrams": [
+     "d un fixateur externe",
+     "externe sur fracture fermee",
+     "fixateur externe sur fracture",
+     "fracture fermee du femur",
+     "pose d un fixateur",
+     "sur fracture fermee du",
+     "un fixateur externe sur"
+    ],
+    "sample": [
+     "d un fixateur externe",
+     "externe sur fracture fermee",
+     "fixateur externe sur fracture",
+     "fracture fermee du femur",
+     "pose d un fixateur",
+     "sur fracture fermee du"
+    ],
+    "text": "la pose d'un fixateur externe sur fracture fermée du fémur') and split into atomic"
+   },
+   {
+    "file": "src/rag_sfar/retrieval/medical_lexicon.py",
+    "line": 11,
+    "eval_code": false,
+    "qids": [
+     "Q01"
+    ],
+    "n_hits": 1,
+    "bench_only_ngrams": [
+     "prothese totale de hanche"
+    ],
+    "sample": [
+     "prothese totale de hanche"
+    ],
+    "text": "\"PTH\": \"prothèse totale de hanche\","
+   },
+   {
+    "file": "src/rag_sfar/retrieval/medical_lexicon.py",
+    "line": 12,
+    "eval_code": false,
+    "qids": [
+     "Q03",
+     "Q139"
+    ],
+    "n_hits": 1,
+    "bench_only_ngrams": [
+     "prothese totale de genou"
+    ],
+    "sample": [
+     "prothese totale de genou"
+    ],
+    "text": "\"PTG\": \"prothèse totale de genou\","
+   },
+   {
+    "file": "src/rag_sfar/retrieval/medical_lexicon.py",
+    "line": 19,
+    "eval_code": false,
+    "qids": [
+     "Q13",
+     "Q140"
+    ],
+    "n_hits": 2,
+    "bench_only_ngrams": [],
+    "sample": [
+     "ablation de materiel d",
+     "de materiel d osteosynthese"
+    ],
+    "text": "\"AMO\": \"ablation de matériel d'ostéosynthèse\","
+   },
+   {
+    "file": "src/rag_sfar/retrieval/medical_lexicon.py",
+    "line": 69,
+    "eval_code": false,
+    "qids": [
+     "Q83"
+    ],
+    "n_hits": 1,
+    "bench_only_ngrams": [],
+    "sample": [
+     "interruption volontaire de grossesse"
+    ],
+    "text": "\"IVG\": \"interruption volontaire de grossesse\","
+   },
+   {
+    "file": "src/rag_sfar/retrieval/pipeline.py",
+    "line": 567,
+    "eval_code": false,
+    "qids": [
+     "Q15",
+     "Q143"
+    ],
+    "n_hits": 1,
+    "bench_only_ngrams": [],
+    "sample": [
+     "plaie de la main"
+    ],
+    "text": "query (e.g. `(hors main)` when the user asks about `plaie de la main`)."
+   },
+   {
+    "file": "src/rag_sfar/retrieval/pipeline.py",
+    "line": 569,
+    "eval_code": false,
+    "qids": [
+     "Q04"
+    ],
+    "n_hits": 2,
+    "bench_only_ngrams": [],
+    "sample": [
+     "de hanche par voie",
+     "hanche par voie anterieure"
+    ],
+    "text": "de hanche par voie antérieure...`, `En cas d'ablation avec ouverture articulaire ou"
+   },
+   {
+    "file": "src/rag_sfar/retrieval/pipeline.py",
+    "line": 664,
+    "eval_code": false,
+    "qids": [
+     "Q141",
+     "Q167"
+    ],
+    "n_hits": 3,
+    "bench_only_ngrams": [],
+    "sample": [
+     "cas d allergie aux",
+     "d allergie aux betalactamines",
+     "en cas d allergie"
+    ],
+    "text": "# Check for true specialty allergy boxes (\"En cas d'allergie aux bêtalactamines\")"
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 69,
+    "eval_code": true,
+    "qids": [
+     "Q03",
+     "Q139"
+    ],
+    "n_hits": 1,
+    "bench_only_ngrams": [
+     "prothese totale de genou"
+    ],
+    "sample": [
+     "prothese totale de genou"
+    ],
+    "text": "<tr><td>Prothèse totale de genou</td><td>Céfazoline</td><td>2g IVL</td><td>GRADE 1</td></tr>"
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 78,
+    "eval_code": true,
+    "qids": [
+     "Q03",
+     "Q139"
+    ],
+    "n_hits": 1,
+    "bench_only_ngrams": [
+     "prothese totale de genou"
+    ],
+    "sample": [
+     "prothese totale de genou"
+    ],
+    "text": "assert \"Prothèse totale de genou\" in md"
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 102,
+    "eval_code": true,
+    "qids": [
+     "Q15",
+     "Q17"
+    ],
+    "n_hits": 1,
+    "bench_only_ngrams": [],
+    "sample": [
+     "la prise en charge"
+    ],
+    "text": "fr_body = \"Les recommandations formalisées d'experts de la SFAR dans la prise en charge des patients chez l'adulte pour une chirurgie avec antibioprophylaxie. \" * 60"
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 129,
+    "eval_code": true,
+    "qids": [
+     "Q01"
+    ],
+    "n_hits": 1,
+    "bench_only_ngrams": [
+     "prothese totale de hanche"
+    ],
+    "sample": [
+     "prothese totale de hanche"
+    ],
+    "text": "assert \"prothèse totale de hanche\" in exp.lower()"
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 154,
+    "eval_code": true,
+    "qids": [
+     "Q03",
+     "Q139"
+    ],
+    "n_hits": 1,
+    "bench_only_ngrams": [
+     "prothese totale de genou"
+    ],
+    "sample": [
+     "prothese totale de genou"
+    ],
+    "text": "<tr><td>Prothèse totale de genou (PTG)</td><td>Céfazoline</td><td>2g IVL</td><td>GRADE 1</td></tr>"
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 159,
+    "eval_code": true,
+    "qids": [
+     "Q04",
+     "Q141",
+     "Q167"
+    ],
+    "n_hits": 7,
+    "bench_only_ngrams": [
+     "prothese de hanche par"
+    ],
+    "sample": [
+     "cas d allergie aux",
+     "clindamycine 900 mg ivl",
+     "d allergie aux betalactamines",
+     "de hanche par voie",
+     "en cas d allergie",
+     "hanche par voie anterieure"
+    ],
+    "text": "En cas d'allergie aux bêtalactamines, si antibioprophylaxie indiquée dans ce tableau : Clindamycine 900 mg IVL. En cas de prothèse de hanche par voie antérieure : préférer Vancomycine."
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 199,
+    "eval_code": true,
+    "qids": [
+     "Q03",
+     "Q139"
+    ],
+    "n_hits": 1,
+    "bench_only_ngrams": [
+     "prothese totale de genou"
+    ],
+    "sample": [
+     "prothese totale de genou"
+    ],
+    "text": "text=\"Prothèse totale de genou : Céfazoline 2g IVL (GRADE 1).\","
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 200,
+    "eval_code": true,
+    "qids": [
+     "Q03",
+     "Q139"
+    ],
+    "n_hits": 1,
+    "bench_only_ngrams": [
+     "prothese totale de genou"
+    ],
+    "sample": [
+     "prothese totale de genou"
+    ],
+    "text": "indexed_text=\"Prothèse totale de genou : Céfazoline 2g IVL (GRADE 1).\","
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 318,
+    "eval_code": true,
+    "qids": [
+     "Q90"
+    ],
+    "n_hits": 1,
+    "bench_only_ngrams": [],
+    "sample": [
+     "chez un patient porteur"
+    ],
+    "text": "qa = analyze_query(\"Antibioprophylaxie pour colectomie droite chez un patient porteur rectal de BLSE ?\")"
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 339,
+    "eval_code": true,
+    "qids": [
+     "Q01"
+    ],
+    "n_hits": 1,
+    "bench_only_ngrams": [
+     "prothese totale de hanche"
+    ],
+    "sample": [
+     "prothese totale de hanche"
+    ],
+    "text": "+ \"Pour la prothèse totale de hanche, il est recommandé d'administrer Céfazoline 2g IVL (GRADE 1).\""
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 438,
+    "eval_code": true,
+    "qids": [
+     "Q141",
+     "Q167"
+    ],
+    "n_hits": 1,
+    "bench_only_ngrams": [],
+    "sample": [
+     "en cas d allergie"
+    ],
+    "text": "_rc(\"c3\", \"callout_allergy\", 0.90, \"En cas d'allergie : Clindamycine\"),"
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 468,
+    "eval_code": true,
+    "qids": [
+     "Q166"
+    ],
+    "n_hits": 1,
+    "bench_only_ngrams": [
+     "facteurs de risque infectieux"
+    ],
+    "sample": [
+     "facteurs de risque infectieux"
+    ],
+    "text": "Texte introductif général sur la chirurgie ORL et les facteurs de risque infectieux postopératoires."
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 471,
+    "eval_code": true,
+    "qids": [
+     "Q141",
+     "Q167"
+    ],
+    "n_hits": 3,
+    "bench_only_ngrams": [],
+    "sample": [
+     "cas d allergie aux",
+     "d allergie aux betalactamines",
+     "en cas d allergie"
+    ],
+    "text": "En cas d'allergie aux bêtalactamines, si antibioprophylaxie indiquée dans ce tableau :"
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 472,
+    "eval_code": true,
+    "qids": [
+     "Q167"
+    ],
+    "n_hits": 1,
+    "bench_only_ngrams": [],
+    "sample": [
+     "clindamycine 900 mg ivl"
+    ],
+    "text": "**Clindamycine 900 mg IVL** (Avis d'experts)."
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 491,
+    "eval_code": true,
+    "qids": [
+     "Q141",
+     "Q167"
+    ],
+    "n_hits": 1,
+    "bench_only_ngrams": [],
+    "sample": [
+     "en cas d allergie"
+    ],
+    "text": "assert linked_allergies[0].text.lower().startswith(\"en cas d'allergie\")"
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 567,
+    "eval_code": true,
+    "qids": [
+     "Q140",
+     "Q146",
+     "Q154",
+     "Q155",
+     "Q171"
+    ],
+    "n_hits": 7,
+    "bench_only_ngrams": [
+     "ces interventions orl laquelle",
+     "interventions orl laquelle ne",
+     "laquelle ne necessite pas",
+     "ne necessite pas d",
+     "necessite pas d antibioprophylaxie",
+     "orl laquelle ne necessite",
+     "parmi ces interventions orl"
+    ],
+    "sample": [
+     "ces interventions orl laquelle",
+     "interventions orl laquelle ne",
+     "laquelle ne necessite pas",
+     "ne necessite pas d",
+     "necessite pas d antibioprophylaxie",
+     "orl laquelle ne necessite"
+    ],
+    "text": "\"Parmi ces interventions ORL, laquelle ne nécessite PAS d'antibioprophylaxie ?\\n\""
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 568,
+    "eval_code": true,
+    "qids": [
+     "Q146",
+     "Q164",
+     "Q171"
+    ],
+    "n_hits": 1,
+    "bench_only_ngrams": [
+     "pose d implant cochleaire"
+    ],
+    "sample": [
+     "pose d implant cochleaire"
+    ],
+    "text": "\"A. Pose d'implant cochléaire\\nB. Amygdalectomie\\nC. Laryngectomie totale\\nD. Trachéotomie chirurgicale\""
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 576,
+    "eval_code": true,
+    "qids": [
+     "Q04",
+     "Q141"
+    ],
+    "n_hits": 2,
+    "bench_only_ngrams": [
+     "pour une prothese de",
+     "une prothese de genou"
+    ],
+    "sample": [
+     "pour une prothese de",
+     "une prothese de genou"
+    ],
+    "text": "\"Alternative allergie pour une prothèse de genou ?\\n\""
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 577,
+    "eval_code": true,
+    "qids": [
+     "Q143"
+    ],
+    "n_hits": 1,
+    "bench_only_ngrams": [
+     "pas d antibioprophylaxie recommandee"
+    ],
+    "sample": [
+     "pas d antibioprophylaxie recommandee"
+    ],
+    "text": "\"A. Céfazoline 2g IVL\\nB. Amoxicilline/Clavulanate 2g IVL\\nC. Pas d'antibioprophylaxie recommandée\\nD. Clindamycine 900mg IVL\""
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 583,
+    "eval_code": true,
+    "qids": [
+     "Q16",
+     "Q95"
+    ],
+    "n_hits": 5,
+    "bench_only_ngrams": [
+     "antibioprophylaxie pour une splenectomie",
+     "d hemostase associee a",
+     "pour une splenectomie d",
+     "splenectomie d hemostase associee",
+     "une splenectomie d hemostase"
+    ],
+    "sample": [
+     "antibioprophylaxie pour une splenectomie",
+     "d hemostase associee a",
+     "pour une splenectomie d",
+     "splenectomie d hemostase associee",
+     "une splenectomie d hemostase"
+    ],
+    "text": "\"Quelle antibioprophylaxie pour une splénectomie d'hémostase associée à \""
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 584,
+    "eval_code": true,
+    "qids": [
+     "Q06",
+     "Q16"
+    ],
+    "n_hits": 10,
+    "bench_only_ngrams": [
+     "d un fixateur externe",
+     "du femur chez un",
+     "externe sur fracture fermee",
+     "femur chez un polytraumatise",
+     "fermee du femur chez",
+     "fixateur externe sur fracture",
+     "fracture fermee du femur",
+     "pose d un fixateur",
+     "sur fracture fermee du",
+     "un fixateur externe sur"
+    ],
+    "sample": [
+     "d un fixateur externe",
+     "du femur chez un",
+     "externe sur fracture fermee",
+     "femur chez un polytraumatise",
+     "fermee du femur chez",
+     "fixateur externe sur fracture"
+    ],
+    "text": "\"la pose d'un fixateur externe sur fracture fermée du fémur chez un polytraumatisé ?\""
+   }
+  ],
+  "answer": [
+   {
+    "file": "scripts/build_masterclass_pdf.py",
+    "line": 498,
+    "eval_code": true,
+    "answer": "Amoxicilline/Clavulanate",
+    "qids": [
+     "Q05",
+     "Q08",
+     "Q09",
+     "Q10",
+     "Q14",
+     "Q15",
+     "Q17",
+     "Q22",
+     "Q32",
+     "Q41",
+     "Q45",
+     "Q50",
+     "Q63",
+     "Q124",
+     "Q131",
+     "Q137"
+    ],
+    "text": "\"<b>C8 V3</b> enchaîne 2 sauts (<code>Amoxicilline/Clavulanate</code> [S1] → encadré Neurochirurgie [S2]) : <b><code>Triméthoprime/Sulfaméthoxazole (Bactrim) (SFAR 2026 [S2])</code></b> !</li>\""
+   },
+   {
+    "file": "scripts/build_masterclass_pdf.py",
+    "line": 498,
+    "eval_code": true,
+    "answer": "Triméthoprime/Sulfaméthoxazole",
+    "qids": [
+     "Q28"
+    ],
+    "text": "\"<b>C8 V3</b> enchaîne 2 sauts (<code>Amoxicilline/Clavulanate</code> [S1] → encadré Neurochirurgie [S2]) : <b><code>Triméthoprime/Sulfaméthoxazole (Bactrim) (SFAR 2026 [S2])</code></b> !</li>\""
+   },
+   {
+    "file": "scripts/build_masterclass_pdf.py",
+    "line": 1001,
+    "eval_code": true,
+    "answer": "Amoxicilline/Clavulanate",
+    "qids": [
+     "Q05",
+     "Q08",
+     "Q09",
+     "Q10",
+     "Q14",
+     "Q15",
+     "Q17",
+     "Q22",
+     "Q32",
+     "Q41",
+     "Q45",
+     "Q50",
+     "Q63",
+     "Q124",
+     "Q131",
+     "Q137"
+    ],
+    "text": "<code>[RFE SFAR 2026 V3.0 | CHAMP 2 &gt; PARTIE 2 ORL] Actes : Chirurgie rhinologique avec greffon • Schéma 1 : Molécules = Céfazoline | 2g IVL | GRADE 2 • Schéma 2 : Alternative = Amoxicilline/Clavul"
+   },
+   {
+    "file": "scripts/build_masterclass_pdf.py",
+    "line": 1022,
+    "eval_code": true,
+    "answer": "Fosfomycine-trométamol",
+    "qids": [
+     "Q108"
+    ],
+    "text": "<p><b>Forces en médecine</b> : précision chirurgicale sur les noms exacts de molécules (<code>céfoxitine</code>, <code>ertapénème</code>, <code>fosfomycine-trométamol</code>), les codes (<code>R1.2.1<"
+   },
+   {
+    "file": "scripts/build_masterclass_pdf.py",
+    "line": 1173,
+    "eval_code": true,
+    "answer": "Amoxicilline/Clavulanate",
+    "qids": [
+     "Q05",
+     "Q08",
+     "Q09",
+     "Q10",
+     "Q14",
+     "Q15",
+     "Q17",
+     "Q22",
+     "Q32",
+     "Q41",
+     "Q45",
+     "Q50",
+     "Q63",
+     "Q124",
+     "Q131",
+     "Q137"
+    ],
+    "text": "<tr><td><code>retrieval/bm25.py</code> + <code>subword.py</code></td><td>BM25+ médical FR (accent-folding, composés <code>amoxicilline/clavulanate</code>, <code>J-5</code>) + Char 3–5 N-Gram TF-IDF ré"
+   },
+   {
+    "file": "scripts/run_e2e_eval.py",
+    "line": 53,
+    "eval_code": false,
+    "answer": "Amoxicilline/Clavulanate",
+    "qids": [
+     "Q05",
+     "Q08",
+     "Q09",
+     "Q10",
+     "Q14",
+     "Q15",
+     "Q17",
+     "Q22",
+     "Q32",
+     "Q41",
+     "Q45",
+     "Q50",
+     "Q63",
+     "Q124",
+     "Q131",
+     "Q137"
+    ],
+    "text": "\"(ex : 'Céfazoline', 'Amoxicilline/Clavulanate', 'Clindamycine + Gentamicine'), \""
+   },
+   {
+    "file": "scripts/run_e2e_eval.py",
+    "line": 53,
+    "eval_code": false,
+    "answer": "Clindamycine + Gentamicine",
+    "qids": [
+     "Q12",
+     "Q43"
+    ],
+    "text": "\"(ex : 'Céfazoline', 'Amoxicilline/Clavulanate', 'Clindamycine + Gentamicine'), \""
+   },
+   {
+    "file": "src/rag_sfar/evaluation/benchmarks.py",
+    "line": 55,
+    "eval_code": true,
+    "answer": "Amoxicilline/Clavulanate",
+    "qids": [
+     "Q05",
+     "Q08",
+     "Q09",
+     "Q10",
+     "Q14",
+     "Q15",
+     "Q17",
+     "Q22",
+     "Q32",
+     "Q41",
+     "Q45",
+     "Q50",
+     "Q63",
+     "Q124",
+     "Q131",
+     "Q137"
+    ],
+    "text": "# Split drug combinations (`Clindamycine + Gentamicine`, `Amoxicilline/Clavulanate`)"
+   },
+   {
+    "file": "src/rag_sfar/evaluation/benchmarks.py",
+    "line": 55,
+    "eval_code": true,
+    "answer": "Clindamycine + Gentamicine",
+    "qids": [
+     "Q12",
+     "Q43"
+    ],
+    "text": "# Split drug combinations (`Clindamycine + Gentamicine`, `Amoxicilline/Clavulanate`)"
+   },
+   {
+    "file": "src/rag_sfar/evaluation/benchmarks.py",
+    "line": 168,
+    "eval_code": true,
+    "answer": "Clindamycine + Gentamicine",
+    "qids": [
+     "Q12",
+     "Q43"
+    ],
+    "text": "expected_answer=\"Clindamycine + Gentamicine.\","
+   },
+   {
+    "file": "src/rag_sfar/evaluation/benchmarks.py",
+    "line": 180,
+    "eval_code": true,
+    "answer": "Amoxicilline/Clavulanate",
+    "qids": [
+     "Q05",
+     "Q08",
+     "Q09",
+     "Q10",
+     "Q14",
+     "Q15",
+     "Q17",
+     "Q22",
+     "Q32",
+     "Q41",
+     "Q45",
+     "Q50",
+     "Q63",
+     "Q124",
+     "Q131",
+     "Q137"
+    ],
+    "text": "expected_answer=\"Céfazoline 2g IVL (GRADE 2), alternative Amoxicilline/Clavulanate 2g IVL.\","
+   },
+   {
+    "file": "src/rag_sfar/generation/prompts.py",
+    "line": 34,
+    "eval_code": false,
+    "answer": "Amoxicilline/Clavulanate",
+    "qids": [
+     "Q05",
+     "Q08",
+     "Q09",
+     "Q10",
+     "Q14",
+     "Q15",
+     "Q17",
+     "Q22",
+     "Q32",
+     "Q41",
+     "Q45",
+     "Q50",
+     "Q63",
+     "Q124",
+     "Q131",
+     "Q137"
+    ],
+    "text": "- Si une allergie est mentionnée : (a) si une ligne d'exception correspond EXACTEMENT à l'acte demandé dans la question (ex. PTH voie antérieure ou prothèse d'épaule), applique cette exception en prio"
+   },
+   {
+    "file": "src/rag_sfar/generation/prompts.py",
+    "line": 35,
+    "eval_code": false,
+    "answer": "Amoxicilline/Clavulanate",
+    "qids": [
+     "Q05",
+     "Q08",
+     "Q09",
+     "Q10",
+     "Q14",
+     "Q15",
+     "Q17",
+     "Q22",
+     "Q32",
+     "Q41",
+     "Q45",
+     "Q50",
+     "Q63",
+     "Q124",
+     "Q131",
+     "Q137"
+    ],
+    "text": "Ligne 2 — RÉPONSE : Écris UNIQUEMENT le nom exact de la molécule ou association finale (ex : Céfazoline, Amoxicilline/Clavulanate, Clindamycine, Vancomycine, Triméthoprime/Sulfaméthoxazole, Clindamyci"
+   },
+   {
+    "file": "src/rag_sfar/generation/prompts.py",
+    "line": 35,
+    "eval_code": false,
+    "answer": "Clindamycine + Gentamicine",
+    "qids": [
+     "Q12",
+     "Q43"
+    ],
+    "text": "Ligne 2 — RÉPONSE : Écris UNIQUEMENT le nom exact de la molécule ou association finale (ex : Céfazoline, Amoxicilline/Clavulanate, Clindamycine, Vancomycine, Triméthoprime/Sulfaméthoxazole, Clindamyci"
+   },
+   {
+    "file": "src/rag_sfar/generation/prompts.py",
+    "line": 35,
+    "eval_code": false,
+    "answer": "Triméthoprime/Sulfaméthoxazole",
+    "qids": [
+     "Q28"
+    ],
+    "text": "Ligne 2 — RÉPONSE : Écris UNIQUEMENT le nom exact de la molécule ou association finale (ex : Céfazoline, Amoxicilline/Clavulanate, Clindamycine, Vancomycine, Triméthoprime/Sulfaméthoxazole, Clindamyci"
+   },
+   {
+    "file": "src/rag_sfar/ingestion/table_parser.py",
+    "line": 100,
+    "eval_code": false,
+    "answer": "Amoxicilline/Clavulanate",
+    "qids": [
+     "Q05",
+     "Q08",
+     "Q09",
+     "Q10",
+     "Q14",
+     "Q15",
+     "Q17",
+     "Q22",
+     "Q32",
+     "Q41",
+     "Q45",
+     "Q50",
+     "Q63",
+     "Q124",
+     "Q131",
+     "Q137"
+    ],
+    "text": "- Option 2 : Molécules = Alternative : Amoxicilline/Clavulanate | Dose initiale = 2g IVL | ..."
+   },
+   {
+    "file": "src/rag_sfar/retrieval/crag.py",
+    "line": 183,
+    "eval_code": false,
+    "answer": "Amoxicilline/Clavulanate",
+    "qids": [
+     "Q05",
+     "Q08",
+     "Q09",
+     "Q10",
+     "Q14",
+     "Q15",
+     "Q17",
+     "Q22",
+     "Q32",
+     "Q41",
+     "Q45",
+     "Q50",
+     "Q63",
+     "Q124",
+     "Q131",
+     "Q137"
+    ],
+    "text": "When an MCQ lists candidate drug/dosage answers (e.g. `A. Amoxicilline/Clavulanate`,"
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 50,
+    "eval_code": true,
+    "answer": "Amoxicilline/Clavulanate",
+    "qids": [
+     "Q05",
+     "Q08",
+     "Q09",
+     "Q10",
+     "Q14",
+     "Q15",
+     "Q17",
+     "Q22",
+     "Q32",
+     "Q41",
+     "Q45",
+     "Q50",
+     "Q63",
+     "Q124",
+     "Q131",
+     "Q137"
+    ],
+    "text": "<td><i>Alternative :</i> Amoxicilline/Clavulanate</td><td>2g IVL</td><td>Avis d'experts</td>"
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 64,
+    "eval_code": true,
+    "answer": "Amoxicilline/Clavulanate",
+    "qids": [
+     "Q05",
+     "Q08",
+     "Q09",
+     "Q10",
+     "Q14",
+     "Q15",
+     "Q17",
+     "Q22",
+     "Q32",
+     "Q41",
+     "Q45",
+     "Q50",
+     "Q63",
+     "Q124",
+     "Q131",
+     "Q137"
+    ],
+    "text": "assert \"Amoxicilline/Clavulanate\" in cards[0]"
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 143,
+    "eval_code": true,
+    "answer": "Amoxicilline/Clavulanate",
+    "qids": [
+     "Q05",
+     "Q08",
+     "Q09",
+     "Q10",
+     "Q14",
+     "Q15",
+     "Q17",
+     "Q22",
+     "Q32",
+     "Q41",
+     "Q45",
+     "Q50",
+     "Q63",
+     "Q124",
+     "Q131",
+     "Q137"
+    ],
+    "text": "toks = tokenize_medical_french(\"Amoxicilline/Clavulanate 2g IVL à J-3\")"
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 218,
+    "eval_code": true,
+    "answer": "Clindamycine + Gentamicine",
+    "qids": [
+     "Q12",
+     "Q43"
+    ],
+    "text": "assert score_antibioprophylaxie_answer(\"open\", \"Clindamycine + Gentamicine\", \"Clindamycine + Gentamicine.\")"
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 220,
+    "eval_code": true,
+    "answer": "Clindamycine + Gentamicine",
+    "qids": [
+     "Q12",
+     "Q43"
+    ],
+    "text": "assert not score_antibioprophylaxie_answer(\"open\", \"Clindamycine + Gentamicine\", \"Clindamycine\")"
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 293,
+    "eval_code": true,
+    "answer": "Amoxicilline/Clavulanate",
+    "qids": [
+     "Q05",
+     "Q08",
+     "Q09",
+     "Q10",
+     "Q14",
+     "Q15",
+     "Q17",
+     "Q22",
+     "Q32",
+     "Q41",
+     "Q45",
+     "Q50",
+     "Q63",
+     "Q124",
+     "Q131",
+     "Q137"
+    ],
+    "text": "\"Antibioprophylaxie morsure animale : amoxicilline/clavulanate 2g IVL.\","
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 367,
+    "eval_code": true,
+    "answer": "Amoxicilline/Clavulanate",
+    "qids": [
+     "Q05",
+     "Q08",
+     "Q09",
+     "Q10",
+     "Q14",
+     "Q15",
+     "Q17",
+     "Q22",
+     "Q32",
+     "Q41",
+     "Q45",
+     "Q50",
+     "Q63",
+     "Q124",
+     "Q131",
+     "Q137"
+    ],
+    "text": "choices={\"A\": \"Amoxicilline/Clavulanate\", \"B\": \"Céfazoline\", \"C\": \"Aucun ajout\"},"
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 371,
+    "eval_code": true,
+    "answer": "Amoxicilline/Clavulanate",
+    "qids": [
+     "Q05",
+     "Q08",
+     "Q09",
+     "Q10",
+     "Q14",
+     "Q15",
+     "Q17",
+     "Q22",
+     "Q32",
+     "Q41",
+     "Q45",
+     "Q50",
+     "Q63",
+     "Q124",
+     "Q131",
+     "Q137"
+    ],
+    "text": "assert \"A. Amoxicilline/Clavulanate\" in fmt and \"C. Aucun ajout\" in fmt"
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 436,
+    "eval_code": true,
+    "answer": "Amoxicilline/Clavulanate",
+    "qids": [
+     "Q05",
+     "Q08",
+     "Q09",
+     "Q10",
+     "Q14",
+     "Q15",
+     "Q17",
+     "Q22",
+     "Q32",
+     "Q41",
+     "Q45",
+     "Q50",
+     "Q63",
+     "Q124",
+     "Q131",
+     "Q137"
+    ],
+    "text": "_rc(\"c1\", \"table_row_card\", 0.99, \"Morsure : Amoxicilline/Clavulanate\"),"
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 437,
+    "eval_code": true,
+    "answer": "Amoxicilline/Clavulanate",
+    "qids": [
+     "Q05",
+     "Q08",
+     "Q09",
+     "Q10",
+     "Q14",
+     "Q15",
+     "Q17",
+     "Q22",
+     "Q32",
+     "Q41",
+     "Q45",
+     "Q50",
+     "Q63",
+     "Q124",
+     "Q131",
+     "Q137"
+    ],
+    "text": "_rc(\"c2\", \"table_row_card\", 0.92, \"Plaie contaminée : Amoxicilline/Clavulanate\"),"
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 459,
+    "eval_code": true,
+    "answer": "Amoxicilline/Clavulanate",
+    "qids": [
+     "Q05",
+     "Q08",
+     "Q09",
+     "Q10",
+     "Q14",
+     "Q15",
+     "Q17",
+     "Q22",
+     "Q32",
+     "Q41",
+     "Q45",
+     "Q50",
+     "Q63",
+     "Q124",
+     "Q131",
+     "Q137"
+    ],
+    "text": "\"Ligne 1 — Analyse : [S1] Acte exact = Morsure | Allergie = non | Molécule = Amoxicilline/Clavulanate\\n\""
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 460,
+    "eval_code": true,
+    "answer": "Amoxicilline/Clavulanate",
+    "qids": [
+     "Q05",
+     "Q08",
+     "Q09",
+     "Q10",
+     "Q14",
+     "Q15",
+     "Q17",
+     "Q22",
+     "Q32",
+     "Q41",
+     "Q45",
+     "Q50",
+     "Q63",
+     "Q124",
+     "Q131",
+     "Q137"
+    ],
+    "text": "\"Ligne 2 — Réponse : Amoxicilline/Clavulanate (SFAR 2026 [S1])\""
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 462,
+    "eval_code": true,
+    "answer": "Amoxicilline/Clavulanate",
+    "qids": [
+     "Q05",
+     "Q08",
+     "Q09",
+     "Q10",
+     "Q14",
+     "Q15",
+     "Q17",
+     "Q22",
+     "Q32",
+     "Q41",
+     "Q45",
+     "Q50",
+     "Q63",
+     "Q124",
+     "Q131",
+     "Q137"
+    ],
+    "text": "assert _extract_benchmark_final_line(raw) == \"Amoxicilline/Clavulanate (SFAR 2026 [S1])\""
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 477,
+    "eval_code": true,
+    "answer": "Amoxicilline/Clavulanate",
+    "qids": [
+     "Q05",
+     "Q08",
+     "Q09",
+     "Q10",
+     "Q14",
+     "Q15",
+     "Q17",
+     "Q22",
+     "Q32",
+     "Q41",
+     "Q45",
+     "Q50",
+     "Q63",
+     "Q124",
+     "Q131",
+     "Q137"
+    ],
+    "text": "<tbody><tr><td>Chirurgie carcinologique avec lambeau libre</td><td>Amoxicilline/Clavulanate</td><td>2g IVL</td></tr></tbody>"
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 577,
+    "eval_code": true,
+    "answer": "Amoxicilline/Clavulanate",
+    "qids": [
+     "Q05",
+     "Q08",
+     "Q09",
+     "Q10",
+     "Q14",
+     "Q15",
+     "Q17",
+     "Q22",
+     "Q32",
+     "Q41",
+     "Q45",
+     "Q50",
+     "Q63",
+     "Q124",
+     "Q131",
+     "Q137"
+    ],
+    "text": "\"A. Céfazoline 2g IVL\\nB. Amoxicilline/Clavulanate 2g IVL\\nC. Pas d'antibioprophylaxie recommandée\\nD. Clindamycine 900mg IVL\""
+   }
+  ],
+  "choice": [
+   {
+    "file": "scripts/audit_abp_v2_vs_v3.py",
+    "line": 23,
+    "eval_code": false,
+    "choice": "clindamycine",
+    "qids": [
+     "Q139",
+     "Q141"
+    ],
+    "text": "(\"Obésité (R1.5.2 Amox/Clav & R1.6 IMC Clindamycine)\", \"V3.0 p.25-30\", [r\"\\bob[èe]s\\w*\", r\"\\bimc\\b\", r\"100\\s*kg\", r\"120\\s*kg\"]),"
+   },
+   {
+    "file": "scripts/build_masterclass_pdf.py",
+    "line": 495,
+    "eval_code": true,
+    "choice": "clindamycine",
+    "qids": [
+     "Q139",
+     "Q141"
+    ],
+    "text": "\"<li><b>Q04 — PTH voie antérieure + allergie</b> : Zero-Shot se trompe (<code>Clindamycine+Gentamicine</code> sur 7B / <code>Céfazoline</code> sur 3B), \""
+   },
+   {
+    "file": "scripts/build_masterclass_pdf.py",
+    "line": 498,
+    "eval_code": true,
+    "choice": "amoxicilline/clavulanate",
+    "qids": [
+     "Q139",
+     "Q153",
+     "Q156"
+    ],
+    "text": "\"<b>C8 V3</b> enchaîne 2 sauts (<code>Amoxicilline/Clavulanate</code> [S1] → encadré Neurochirurgie [S2]) : <b><code>Triméthoprime/Sulfaméthoxazole (Bactrim) (SFAR 2026 [S2])</code></b> !</li>\""
+   },
+   {
+    "file": "scripts/build_masterclass_pdf.py",
+    "line": 1001,
+    "eval_code": true,
+    "choice": "amoxicilline/clavulanate",
+    "qids": [
+     "Q139",
+     "Q153",
+     "Q156"
+    ],
+    "text": "<code>[RFE SFAR 2026 V3.0 | CHAMP 2 &gt; PARTIE 2 ORL] Actes : Chirurgie rhinologique avec greffon • Schéma 1 : Molécules = Céfazoline | 2g IVL | GRADE 2 • Schéma 2 : Alternative = Amoxicilline/Clavul"
+   },
+   {
+    "file": "scripts/build_masterclass_pdf.py",
+    "line": 1173,
+    "eval_code": true,
+    "choice": "amoxicilline/clavulanate",
+    "qids": [
+     "Q139",
+     "Q153",
+     "Q156"
+    ],
+    "text": "<tr><td><code>retrieval/bm25.py</code> + <code>subword.py</code></td><td>BM25+ médical FR (accent-folding, composés <code>amoxicilline/clavulanate</code>, <code>J-5</code>) + Char 3–5 N-Gram TF-IDF ré"
+   },
+   {
+    "file": "scripts/run_e2e_eval.py",
+    "line": 53,
+    "eval_code": false,
+    "choice": "amoxicilline/clavulanate",
+    "qids": [
+     "Q139",
+     "Q153",
+     "Q156"
+    ],
+    "text": "\"(ex : 'Céfazoline', 'Amoxicilline/Clavulanate', 'Clindamycine + Gentamicine'), \""
+   },
+   {
+    "file": "scripts/run_e2e_eval.py",
+    "line": 53,
+    "eval_code": false,
+    "choice": "clindamycine",
+    "qids": [
+     "Q139",
+     "Q141"
+    ],
+    "text": "\"(ex : 'Céfazoline', 'Amoxicilline/Clavulanate', 'Clindamycine + Gentamicine'), \""
+   },
+   {
+    "file": "src/rag_sfar/evaluation/benchmarks.py",
+    "line": 55,
+    "eval_code": true,
+    "choice": "amoxicilline/clavulanate",
+    "qids": [
+     "Q139",
+     "Q153",
+     "Q156"
+    ],
+    "text": "# Split drug combinations (`Clindamycine + Gentamicine`, `Amoxicilline/Clavulanate`)"
+   },
+   {
+    "file": "src/rag_sfar/evaluation/benchmarks.py",
+    "line": 55,
+    "eval_code": true,
+    "choice": "clindamycine",
+    "qids": [
+     "Q139",
+     "Q141"
+    ],
+    "text": "# Split drug combinations (`Clindamycine + Gentamicine`, `Amoxicilline/Clavulanate`)"
+   },
+   {
+    "file": "src/rag_sfar/evaluation/benchmarks.py",
+    "line": 120,
+    "eval_code": true,
+    "choice": "clindamycine",
+    "qids": [
+     "Q139",
+     "Q141"
+    ],
+    "text": "expected_answer=\"Préférer la vancomycine ou la teicoplanine à la clindamycine.\","
+   },
+   {
+    "file": "src/rag_sfar/evaluation/benchmarks.py",
+    "line": 132,
+    "eval_code": true,
+    "choice": "clindamycine",
+    "qids": [
+     "Q139",
+     "Q141"
+    ],
+    "text": "expected_answer=\"Clindamycine (encadré allergie orthopédie).\","
+   },
+   {
+    "file": "src/rag_sfar/evaluation/benchmarks.py",
+    "line": 136,
+    "eval_code": true,
+    "choice": "clindamycine",
+    "qids": [
+     "Q139",
+     "Q141"
+    ],
+    "text": "required_evidence_terms=[\"clindamycine\"],"
+   },
+   {
+    "file": "src/rag_sfar/evaluation/benchmarks.py",
+    "line": 144,
+    "eval_code": true,
+    "choice": "clindamycine",
+    "qids": [
+     "Q139",
+     "Q141"
+    ],
+    "text": "expected_answer=\"Adaptation selon R1.5.2 (amoxicilline-clavulanate) et R1.6 (clindamycine, vancomycine, gentamicine chez l'obèse).\","
+   },
+   {
+    "file": "src/rag_sfar/evaluation/benchmarks.py",
+    "line": 168,
+    "eval_code": true,
+    "choice": "clindamycine",
+    "qids": [
+     "Q139",
+     "Q141"
+    ],
+    "text": "expected_answer=\"Clindamycine + Gentamicine.\","
+   },
+   {
+    "file": "src/rag_sfar/evaluation/benchmarks.py",
+    "line": 172,
+    "eval_code": true,
+    "choice": "clindamycine",
+    "qids": [
+     "Q139",
+     "Q141"
+    ],
+    "text": "required_evidence_terms=[\"clindamycine\", \"gentamicine\"],"
+   },
+   {
+    "file": "src/rag_sfar/evaluation/benchmarks.py",
+    "line": 180,
+    "eval_code": true,
+    "choice": "amoxicilline/clavulanate",
+    "qids": [
+     "Q139",
+     "Q153",
+     "Q156"
+    ],
+    "text": "expected_answer=\"Céfazoline 2g IVL (GRADE 2), alternative Amoxicilline/Clavulanate 2g IVL.\","
+   },
+   {
+    "file": "src/rag_sfar/evaluation/benchmarks.py",
+    "line": 180,
+    "eval_code": true,
+    "choice": "cefazoline 2g ivl",
+    "qids": [
+     "Q143",
+     "Q169"
+    ],
+    "text": "expected_answer=\"Céfazoline 2g IVL (GRADE 2), alternative Amoxicilline/Clavulanate 2g IVL.\","
+   },
+   {
+    "file": "src/rag_sfar/evaluation/benchmarks.py",
+    "line": 180,
+    "eval_code": true,
+    "choice": "amoxicilline/clavulanate 2g ivl",
+    "qids": [
+     "Q143",
+     "Q169"
+    ],
+    "text": "expected_answer=\"Céfazoline 2g IVL (GRADE 2), alternative Amoxicilline/Clavulanate 2g IVL.\","
+   },
+   {
+    "file": "src/rag_sfar/evaluation/benchmarks.py",
+    "line": 192,
+    "eval_code": true,
+    "choice": "metronidazole",
+    "qids": [
+     "Q141"
+    ],
+    "text": "expected_answer=\"Céphalosporine de 3e génération + métronidazole (imidazolé) ou alternative (R1.2.1, RFE 2026).\","
+   },
+   {
+    "file": "src/rag_sfar/evaluation/benchmarks.py",
+    "line": 196,
+    "eval_code": true,
+    "choice": "metronidazole",
+    "qids": [
+     "Q141"
+    ],
+    "text": "required_evidence_terms=[\"3\", \"metronidazole\"],"
+   },
+   {
+    "file": "src/rag_sfar/generation/prompts.py",
+    "line": 34,
+    "eval_code": false,
+    "choice": "amoxicilline/clavulanate",
+    "qids": [
+     "Q139",
+     "Q153",
+     "Q156"
+    ],
+    "text": "- Si une allergie est mentionnée : (a) si une ligne d'exception correspond EXACTEMENT à l'acte demandé dans la question (ex. PTH voie antérieure ou prothèse d'épaule), applique cette exception en prio"
+   },
+   {
+    "file": "src/rag_sfar/generation/prompts.py",
+    "line": 34,
+    "eval_code": false,
+    "choice": "prothese d'epaule",
+    "qids": [
+     "Q140"
+    ],
+    "text": "- Si une allergie est mentionnée : (a) si une ligne d'exception correspond EXACTEMENT à l'acte demandé dans la question (ex. PTH voie antérieure ou prothèse d'épaule), applique cette exception en prio"
+   },
+   {
+    "file": "src/rag_sfar/generation/prompts.py",
+    "line": 35,
+    "eval_code": false,
+    "choice": "amoxicilline/clavulanate",
+    "qids": [
+     "Q139",
+     "Q153",
+     "Q156"
+    ],
+    "text": "Ligne 2 — RÉPONSE : Écris UNIQUEMENT le nom exact de la molécule ou association finale (ex : Céfazoline, Amoxicilline/Clavulanate, Clindamycine, Vancomycine, Triméthoprime/Sulfaméthoxazole, Clindamyci"
+   },
+   {
+    "file": "src/rag_sfar/generation/prompts.py",
+    "line": 35,
+    "eval_code": false,
+    "choice": "clindamycine",
+    "qids": [
+     "Q139",
+     "Q141"
+    ],
+    "text": "Ligne 2 — RÉPONSE : Écris UNIQUEMENT le nom exact de la molécule ou association finale (ex : Céfazoline, Amoxicilline/Clavulanate, Clindamycine, Vancomycine, Triméthoprime/Sulfaméthoxazole, Clindamyci"
+   },
+   {
+    "file": "src/rag_sfar/ingestion/loader.py",
+    "line": 204,
+    "eval_code": false,
+    "choice": "amygdalectomie",
+    "qids": [
+     "Q146"
+    ],
+    "text": "\"amygdalectomie chez l’enfant\","
+   },
+   {
+    "file": "src/rag_sfar/ingestion/table_parser.py",
+    "line": 100,
+    "eval_code": false,
+    "choice": "amoxicilline/clavulanate",
+    "qids": [
+     "Q139",
+     "Q153",
+     "Q156"
+    ],
+    "text": "- Option 2 : Molécules = Alternative : Amoxicilline/Clavulanate | Dose initiale = 2g IVL | ..."
+   },
+   {
+    "file": "src/rag_sfar/retrieval/crag.py",
+    "line": 41,
+    "eval_code": false,
+    "choice": "clindamycine",
+    "qids": [
+     "Q139",
+     "Q141"
+    ],
+    "text": "\"patient obèse IMC adaptation dose posologie antibioprophylaxie R1.5 R1.6 céfazoline amoxicilline clindamycine\","
+   },
+   {
+    "file": "src/rag_sfar/retrieval/crag.py",
+    "line": 132,
+    "eval_code": false,
+    "choice": "clindamycine",
+    "qids": [
+     "Q139",
+     "Q141"
+    ],
+    "text": "r\"clavulanate|clindamycine|vancomycine|t[ée]icoplanine|gentamicine|m[ée]tronidazole|\""
+   },
+   {
+    "file": "src/rag_sfar/retrieval/crag.py",
+    "line": 149,
+    "eval_code": false,
+    "choice": "amygdalectomie",
+    "qids": [
+     "Q146"
+    ],
+    "text": "'Parmi ces interventions ORL... A. Implant cochléaire B. Amygdalectomie...'),"
+   },
+   {
+    "file": "src/rag_sfar/retrieval/crag.py",
+    "line": 183,
+    "eval_code": false,
+    "choice": "amoxicilline/clavulanate",
+    "qids": [
+     "Q139",
+     "Q153",
+     "Q156"
+    ],
+    "text": "When an MCQ lists candidate drug/dosage answers (e.g. `A. Amoxicilline/Clavulanate`,"
+   },
+   {
+    "file": "src/rag_sfar/retrieval/crag.py",
+    "line": 184,
+    "eval_code": false,
+    "choice": "clindamycine",
+    "qids": [
+     "Q139",
+     "Q141"
+    ],
+    "text": "`B. Céfazoline`, `C. Clindamycine`, `D. Vancomycine` -> `extract_mcq_option_subqueries == []`),"
+   },
+   {
+    "file": "src/rag_sfar/retrieval/medical_lexicon.py",
+    "line": 92,
+    "eval_code": false,
+    "choice": "metronidazole",
+    "qids": [
+     "Q141"
+    ],
+    "text": "\"flagyl\": \"métronidazole\","
+   },
+   {
+    "file": "src/rag_sfar/retrieval/medical_lexicon.py",
+    "line": 95,
+    "eval_code": false,
+    "choice": "clindamycine",
+    "qids": [
+     "Q139",
+     "Q141"
+    ],
+    "text": "\"dalacine\": \"clindamycine\","
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 50,
+    "eval_code": true,
+    "choice": "amoxicilline/clavulanate",
+    "qids": [
+     "Q139",
+     "Q153",
+     "Q156"
+    ],
+    "text": "<td><i>Alternative :</i> Amoxicilline/Clavulanate</td><td>2g IVL</td><td>Avis d'experts</td>"
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 64,
+    "eval_code": true,
+    "choice": "amoxicilline/clavulanate",
+    "qids": [
+     "Q139",
+     "Q153",
+     "Q156"
+    ],
+    "text": "assert \"Amoxicilline/Clavulanate\" in cards[0]"
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 143,
+    "eval_code": true,
+    "choice": "amoxicilline/clavulanate",
+    "qids": [
+     "Q139",
+     "Q153",
+     "Q156"
+    ],
+    "text": "toks = tokenize_medical_french(\"Amoxicilline/Clavulanate 2g IVL à J-3\")"
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 143,
+    "eval_code": true,
+    "choice": "amoxicilline/clavulanate 2g ivl",
+    "qids": [
+     "Q143",
+     "Q169"
+    ],
+    "text": "toks = tokenize_medical_french(\"Amoxicilline/Clavulanate 2g IVL à J-3\")"
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 159,
+    "eval_code": true,
+    "choice": "clindamycine",
+    "qids": [
+     "Q139",
+     "Q141"
+    ],
+    "text": "En cas d'allergie aux bêtalactamines, si antibioprophylaxie indiquée dans ce tableau : Clindamycine 900 mg IVL. En cas de prothèse de hanche par voie antérieure : préférer Vancomycine."
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 159,
+    "eval_code": true,
+    "choice": "clindamycine 900 mg ivl",
+    "qids": [
+     "Q167"
+    ],
+    "text": "En cas d'allergie aux bêtalactamines, si antibioprophylaxie indiquée dans ce tableau : Clindamycine 900 mg IVL. En cas de prothèse de hanche par voie antérieure : préférer Vancomycine."
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 190,
+    "eval_code": true,
+    "choice": "clindamycine",
+    "qids": [
+     "Q139",
+     "Q141"
+    ],
+    "text": "assert \"clindamycine\" in combined_text"
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 199,
+    "eval_code": true,
+    "choice": "cefazoline 2g ivl",
+    "qids": [
+     "Q143",
+     "Q169"
+    ],
+    "text": "text=\"Prothèse totale de genou : Céfazoline 2g IVL (GRADE 1).\","
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 200,
+    "eval_code": true,
+    "choice": "cefazoline 2g ivl",
+    "qids": [
+     "Q143",
+     "Q169"
+    ],
+    "text": "indexed_text=\"Prothèse totale de genou : Céfazoline 2g IVL (GRADE 1).\","
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 207,
+    "eval_code": true,
+    "choice": "cefazoline 2g ivl",
+    "qids": [
+     "Q143",
+     "Q169"
+    ],
+    "text": "rep_ok = verify_generation(\"Administrer Céfazoline 2g IVL [S1].\", retrieved)"
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 218,
+    "eval_code": true,
+    "choice": "clindamycine",
+    "qids": [
+     "Q139",
+     "Q141"
+    ],
+    "text": "assert score_antibioprophylaxie_answer(\"open\", \"Clindamycine + Gentamicine\", \"Clindamycine + Gentamicine.\")"
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 220,
+    "eval_code": true,
+    "choice": "clindamycine",
+    "qids": [
+     "Q139",
+     "Q141"
+    ],
+    "text": "assert not score_antibioprophylaxie_answer(\"open\", \"Clindamycine + Gentamicine\", \"Clindamycine\")"
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 292,
+    "eval_code": true,
+    "choice": "cefoxitine 2g ivl",
+    "qids": [
+     "Q169"
+    ],
+    "text": "\"Chirurgie colorectale programmée : céfoxitine 2g IVL.\","
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 293,
+    "eval_code": true,
+    "choice": "amoxicilline/clavulanate",
+    "qids": [
+     "Q139",
+     "Q153",
+     "Q156"
+    ],
+    "text": "\"Antibioprophylaxie morsure animale : amoxicilline/clavulanate 2g IVL.\","
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 293,
+    "eval_code": true,
+    "choice": "amoxicilline/clavulanate 2g ivl",
+    "qids": [
+     "Q143",
+     "Q169"
+    ],
+    "text": "\"Antibioprophylaxie morsure animale : amoxicilline/clavulanate 2g IVL.\","
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 339,
+    "eval_code": true,
+    "choice": "cefazoline 2g ivl",
+    "qids": [
+     "Q143",
+     "Q169"
+    ],
+    "text": "+ \"Pour la prothèse totale de hanche, il est recommandé d'administrer Céfazoline 2g IVL (GRADE 1).\""
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 342,
+    "eval_code": true,
+    "choice": "cefazoline 2g ivl",
+    "qids": [
+     "Q143",
+     "Q169"
+    ],
+    "text": "assert \"Céfazoline 2g IVL\" in pruned and len(pruned) < len(long_prose)"
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 367,
+    "eval_code": true,
+    "choice": "amoxicilline/clavulanate",
+    "qids": [
+     "Q139",
+     "Q153",
+     "Q156"
+    ],
+    "text": "choices={\"A\": \"Amoxicilline/Clavulanate\", \"B\": \"Céfazoline\", \"C\": \"Aucun ajout\"},"
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 371,
+    "eval_code": true,
+    "choice": "amoxicilline/clavulanate",
+    "qids": [
+     "Q139",
+     "Q153",
+     "Q156"
+    ],
+    "text": "assert \"A. Amoxicilline/Clavulanate\" in fmt and \"C. Aucun ajout\" in fmt"
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 388,
+    "eval_code": true,
+    "choice": "cefazoline 2g ivl",
+    "qids": [
+     "Q143",
+     "Q169"
+    ],
+    "text": "text=\"Prothèse de hanche : Céfazoline 2g IVL (GRADE 1).\","
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 389,
+    "eval_code": true,
+    "choice": "cefazoline 2g ivl",
+    "qids": [
+     "Q143",
+     "Q169"
+    ],
+    "text": "indexed_text=\"Prothèse de hanche : Céfazoline 2g IVL (GRADE 1).\","
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 436,
+    "eval_code": true,
+    "choice": "amoxicilline/clavulanate",
+    "qids": [
+     "Q139",
+     "Q153",
+     "Q156"
+    ],
+    "text": "_rc(\"c1\", \"table_row_card\", 0.99, \"Morsure : Amoxicilline/Clavulanate\"),"
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 437,
+    "eval_code": true,
+    "choice": "amoxicilline/clavulanate",
+    "qids": [
+     "Q139",
+     "Q153",
+     "Q156"
+    ],
+    "text": "_rc(\"c2\", \"table_row_card\", 0.92, \"Plaie contaminée : Amoxicilline/Clavulanate\"),"
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 438,
+    "eval_code": true,
+    "choice": "clindamycine",
+    "qids": [
+     "Q139",
+     "Q141"
+    ],
+    "text": "_rc(\"c3\", \"callout_allergy\", 0.90, \"En cas d'allergie : Clindamycine\"),"
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 459,
+    "eval_code": true,
+    "choice": "amoxicilline/clavulanate",
+    "qids": [
+     "Q139",
+     "Q153",
+     "Q156"
+    ],
+    "text": "\"Ligne 1 — Analyse : [S1] Acte exact = Morsure | Allergie = non | Molécule = Amoxicilline/Clavulanate\\n\""
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 460,
+    "eval_code": true,
+    "choice": "amoxicilline/clavulanate",
+    "qids": [
+     "Q139",
+     "Q153",
+     "Q156"
+    ],
+    "text": "\"Ligne 2 — Réponse : Amoxicilline/Clavulanate (SFAR 2026 [S1])\""
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 462,
+    "eval_code": true,
+    "choice": "amoxicilline/clavulanate",
+    "qids": [
+     "Q139",
+     "Q153",
+     "Q156"
+    ],
+    "text": "assert _extract_benchmark_final_line(raw) == \"Amoxicilline/Clavulanate (SFAR 2026 [S1])\""
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 472,
+    "eval_code": true,
+    "choice": "clindamycine",
+    "qids": [
+     "Q139",
+     "Q141"
+    ],
+    "text": "**Clindamycine 900 mg IVL** (Avis d'experts)."
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 472,
+    "eval_code": true,
+    "choice": "clindamycine 900 mg ivl",
+    "qids": [
+     "Q167"
+    ],
+    "text": "**Clindamycine 900 mg IVL** (Avis d'experts)."
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 477,
+    "eval_code": true,
+    "choice": "amoxicilline/clavulanate",
+    "qids": [
+     "Q139",
+     "Q153",
+     "Q156"
+    ],
+    "text": "<tbody><tr><td>Chirurgie carcinologique avec lambeau libre</td><td>Amoxicilline/Clavulanate</td><td>2g IVL</td></tr></tbody>"
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 492,
+    "eval_code": true,
+    "choice": "clindamycine",
+    "qids": [
+     "Q139",
+     "Q141"
+    ],
+    "text": "assert \"clindamycine\" in linked_allergies[0].text.lower()"
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 502,
+    "eval_code": true,
+    "choice": "metronidazole",
+    "qids": [
+     "Q141"
+    ],
+    "text": "text=\"R1.2.1 : Céfotaxime ou Ceftriaxone + Métronidazole (GRADE 1+).\","
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 503,
+    "eval_code": true,
+    "choice": "metronidazole",
+    "qids": [
+     "Q141"
+    ],
+    "text": "indexed_text=\"R1.2.1 : Céfotaxime ou Ceftriaxone + Métronidazole (GRADE 1+).\","
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 507,
+    "eval_code": true,
+    "choice": "metronidazole",
+    "qids": [
+     "Q141"
+    ],
+    "text": "ver = verify_generation(\"Alternative : Azithromycine + Métronidazole [S1].\", [src_chunk])"
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 568,
+    "eval_code": true,
+    "choice": "pose d'implant cochleaire",
+    "qids": [
+     "Q146",
+     "Q164",
+     "Q171"
+    ],
+    "text": "\"A. Pose d'implant cochléaire\\nB. Amygdalectomie\\nC. Laryngectomie totale\\nD. Trachéotomie chirurgicale\""
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 568,
+    "eval_code": true,
+    "choice": "amygdalectomie",
+    "qids": [
+     "Q146"
+    ],
+    "text": "\"A. Pose d'implant cochléaire\\nB. Amygdalectomie\\nC. Laryngectomie totale\\nD. Trachéotomie chirurgicale\""
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 568,
+    "eval_code": true,
+    "choice": "laryngectomie totale",
+    "qids": [
+     "Q146"
+    ],
+    "text": "\"A. Pose d'implant cochléaire\\nB. Amygdalectomie\\nC. Laryngectomie totale\\nD. Trachéotomie chirurgicale\""
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 568,
+    "eval_code": true,
+    "choice": "tracheotomie chirurgicale",
+    "qids": [
+     "Q146"
+    ],
+    "text": "\"A. Pose d'implant cochléaire\\nB. Amygdalectomie\\nC. Laryngectomie totale\\nD. Trachéotomie chirurgicale\""
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 572,
+    "eval_code": true,
+    "choice": "amygdalectomie",
+    "qids": [
+     "Q146"
+    ],
+    "text": "assert any(\"Amygdalectomie\" in sq for _, sq in opts)"
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 577,
+    "eval_code": true,
+    "choice": "amoxicilline/clavulanate",
+    "qids": [
+     "Q139",
+     "Q153",
+     "Q156"
+    ],
+    "text": "\"A. Céfazoline 2g IVL\\nB. Amoxicilline/Clavulanate 2g IVL\\nC. Pas d'antibioprophylaxie recommandée\\nD. Clindamycine 900mg IVL\""
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 577,
+    "eval_code": true,
+    "choice": "clindamycine",
+    "qids": [
+     "Q139",
+     "Q141"
+    ],
+    "text": "\"A. Céfazoline 2g IVL\\nB. Amoxicilline/Clavulanate 2g IVL\\nC. Pas d'antibioprophylaxie recommandée\\nD. Clindamycine 900mg IVL\""
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 577,
+    "eval_code": true,
+    "choice": "cefazoline 2g ivl",
+    "qids": [
+     "Q143",
+     "Q169"
+    ],
+    "text": "\"A. Céfazoline 2g IVL\\nB. Amoxicilline/Clavulanate 2g IVL\\nC. Pas d'antibioprophylaxie recommandée\\nD. Clindamycine 900mg IVL\""
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 577,
+    "eval_code": true,
+    "choice": "amoxicilline/clavulanate 2g ivl",
+    "qids": [
+     "Q143",
+     "Q169"
+    ],
+    "text": "\"A. Céfazoline 2g IVL\\nB. Amoxicilline/Clavulanate 2g IVL\\nC. Pas d'antibioprophylaxie recommandée\\nD. Clindamycine 900mg IVL\""
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 577,
+    "eval_code": true,
+    "choice": "pas d'antibioprophylaxie recommandee",
+    "qids": [
+     "Q143"
+    ],
+    "text": "\"A. Céfazoline 2g IVL\\nB. Amoxicilline/Clavulanate 2g IVL\\nC. Pas d'antibioprophylaxie recommandée\\nD. Clindamycine 900mg IVL\""
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 577,
+    "eval_code": true,
+    "choice": "clindamycine 900mg ivl",
+    "qids": [
+     "Q143"
+    ],
+    "text": "\"A. Céfazoline 2g IVL\\nB. Amoxicilline/Clavulanate 2g IVL\\nC. Pas d'antibioprophylaxie recommandée\\nD. Clindamycine 900mg IVL\""
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 597,
+    "eval_code": true,
+    "choice": "amygdalectomie",
+    "qids": [
+     "Q146"
+    ],
+    "text": "assert \"Amygdalectomie\" in strip_mcq_distractor_options(mcq_acts)"
+   }
+  ],
+  "dose": [
+   {
+    "file": "scripts/build_masterclass_pdf.py",
+    "line": 1001,
+    "eval_code": true,
+    "dose": "2givl",
+    "qids": [
+     "Q143",
+     "Q169"
+    ],
+    "text": "<code>[RFE SFAR 2026 V3.0 | CHAMP 2 &gt; PARTIE 2 ORL] Actes : Chirurgie rhinologique avec greffon • Schéma 1 : Molécules = Céfazoline | 2g IVL | GRADE 2 • Schéma 2 : Alternative = Amoxicilline/Clavul"
+   },
+   {
+    "file": "src/rag_sfar/evaluation/benchmarks.py",
+    "line": 180,
+    "eval_code": true,
+    "dose": "2givl",
+    "qids": [
+     "Q143",
+     "Q169"
+    ],
+    "text": "expected_answer=\"Céfazoline 2g IVL (GRADE 2), alternative Amoxicilline/Clavulanate 2g IVL.\","
+   },
+   {
+    "file": "src/rag_sfar/ingestion/table_parser.py",
+    "line": 99,
+    "eval_code": false,
+    "dose": "2givl",
+    "qids": [
+     "Q143",
+     "Q169"
+    ],
+    "text": "- Option 1 : Molécules = Céfazoline | Dose initiale = 2g IVL | Réinjections et durée = 1g si durée > 4h... | Force = GRADE 2"
+   },
+   {
+    "file": "src/rag_sfar/ingestion/table_parser.py",
+    "line": 100,
+    "eval_code": false,
+    "dose": "2givl",
+    "qids": [
+     "Q143",
+     "Q169"
+    ],
+    "text": "- Option 2 : Molécules = Alternative : Amoxicilline/Clavulanate | Dose initiale = 2g IVL | ..."
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 47,
+    "eval_code": true,
+    "dose": "2givl",
+    "qids": [
+     "Q143",
+     "Q169"
+    ],
+    "text": "<td>Céfazoline</td><td>2g IVL</td><td>GRADE 2</td>"
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 50,
+    "eval_code": true,
+    "dose": "2givl",
+    "qids": [
+     "Q143",
+     "Q169"
+    ],
+    "text": "<td><i>Alternative :</i> Amoxicilline/Clavulanate</td><td>2g IVL</td><td>Avis d'experts</td>"
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 69,
+    "eval_code": true,
+    "dose": "2givl",
+    "qids": [
+     "Q143",
+     "Q169"
+    ],
+    "text": "<tr><td>Prothèse totale de genou</td><td>Céfazoline</td><td>2g IVL</td><td>GRADE 1</td></tr>"
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 143,
+    "eval_code": true,
+    "dose": "2givl",
+    "qids": [
+     "Q143",
+     "Q169"
+    ],
+    "text": "toks = tokenize_medical_french(\"Amoxicilline/Clavulanate 2g IVL à J-3\")"
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 154,
+    "eval_code": true,
+    "dose": "2givl",
+    "qids": [
+     "Q143",
+     "Q169"
+    ],
+    "text": "<tr><td>Prothèse totale de genou (PTG)</td><td>Céfazoline</td><td>2g IVL</td><td>GRADE 1</td></tr>"
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 159,
+    "eval_code": true,
+    "dose": "900mgivl",
+    "qids": [
+     "Q143",
+     "Q167"
+    ],
+    "text": "En cas d'allergie aux bêtalactamines, si antibioprophylaxie indiquée dans ce tableau : Clindamycine 900 mg IVL. En cas de prothèse de hanche par voie antérieure : préférer Vancomycine."
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 199,
+    "eval_code": true,
+    "dose": "2givl",
+    "qids": [
+     "Q143",
+     "Q169"
+    ],
+    "text": "text=\"Prothèse totale de genou : Céfazoline 2g IVL (GRADE 1).\","
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 200,
+    "eval_code": true,
+    "dose": "2givl",
+    "qids": [
+     "Q143",
+     "Q169"
+    ],
+    "text": "indexed_text=\"Prothèse totale de genou : Céfazoline 2g IVL (GRADE 1).\","
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 207,
+    "eval_code": true,
+    "dose": "2givl",
+    "qids": [
+     "Q143",
+     "Q169"
+    ],
+    "text": "rep_ok = verify_generation(\"Administrer Céfazoline 2g IVL [S1].\", retrieved)"
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 292,
+    "eval_code": true,
+    "dose": "2givl",
+    "qids": [
+     "Q143",
+     "Q169"
+    ],
+    "text": "\"Chirurgie colorectale programmée : céfoxitine 2g IVL.\","
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 293,
+    "eval_code": true,
+    "dose": "2givl",
+    "qids": [
+     "Q143",
+     "Q169"
+    ],
+    "text": "\"Antibioprophylaxie morsure animale : amoxicilline/clavulanate 2g IVL.\","
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 308,
+    "eval_code": true,
+    "dose": "2givl",
+    "qids": [
+     "Q143",
+     "Q169"
+    ],
+    "text": "**R1.7.2 – En cas de positivité du dépistage de la colonisation rectale à E-BLSE, l'ertapénème 2g IVL est recommandé (Avis d'experts).**"
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 339,
+    "eval_code": true,
+    "dose": "2givl",
+    "qids": [
+     "Q143",
+     "Q169"
+    ],
+    "text": "+ \"Pour la prothèse totale de hanche, il est recommandé d'administrer Céfazoline 2g IVL (GRADE 1).\""
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 342,
+    "eval_code": true,
+    "dose": "2givl",
+    "qids": [
+     "Q143",
+     "Q169"
+    ],
+    "text": "assert \"Céfazoline 2g IVL\" in pruned and len(pruned) < len(long_prose)"
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 388,
+    "eval_code": true,
+    "dose": "2givl",
+    "qids": [
+     "Q143",
+     "Q169"
+    ],
+    "text": "text=\"Prothèse de hanche : Céfazoline 2g IVL (GRADE 1).\","
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 389,
+    "eval_code": true,
+    "dose": "2givl",
+    "qids": [
+     "Q143",
+     "Q169"
+    ],
+    "text": "indexed_text=\"Prothèse de hanche : Céfazoline 2g IVL (GRADE 1).\","
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 472,
+    "eval_code": true,
+    "dose": "900mgivl",
+    "qids": [
+     "Q143",
+     "Q167"
+    ],
+    "text": "**Clindamycine 900 mg IVL** (Avis d'experts)."
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 477,
+    "eval_code": true,
+    "dose": "2givl",
+    "qids": [
+     "Q143",
+     "Q169"
+    ],
+    "text": "<tbody><tr><td>Chirurgie carcinologique avec lambeau libre</td><td>Amoxicilline/Clavulanate</td><td>2g IVL</td></tr></tbody>"
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 577,
+    "eval_code": true,
+    "dose": "2givl",
+    "qids": [
+     "Q143",
+     "Q169"
+    ],
+    "text": "\"A. Céfazoline 2g IVL\\nB. Amoxicilline/Clavulanate 2g IVL\\nC. Pas d'antibioprophylaxie recommandée\\nD. Clindamycine 900mg IVL\""
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 577,
+    "eval_code": true,
+    "dose": "900mgivl",
+    "qids": [
+     "Q143",
+     "Q167"
+    ],
+    "text": "\"A. Céfazoline 2g IVL\\nB. Amoxicilline/Clavulanate 2g IVL\\nC. Pas d'antibioprophylaxie recommandée\\nD. Clindamycine 900mg IVL\""
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 608,
+    "eval_code": true,
+    "dose": "2givl",
+    "qids": [
+     "Q143",
+     "Q169"
+    ],
+    "text": "<tr><td>Céfazoline</td><td>2g IVL</td></tr>"
+   }
+  ],
+  "title": [
+   {
+    "file": "scripts/audit_abp_v2_vs_v3.py",
+    "line": 26,
+    "eval_code": false,
+    "qids": [
+     "Q63"
+    ],
+    "title_ngrams": [
+     "affirmation de genre"
+    ],
+    "text": "(\"Chirurgie d'affirmation de genre (vaginoplastie & encadré allergie céfoxitine)\", \"V3.0 p.60\", [r\"vaginoplastie\", r\"affirmation\\s+de\\s+genre\"]),"
+   },
+   {
+    "file": "scripts/audit_abp_v2_vs_v3.py",
+    "line": 29,
+    "eval_code": false,
+    "qids": [
+     "Q108"
+    ],
+    "title_ngrams": [
+     "biopsie prostate transrectale"
+    ],
+    "text": "(\"Biopsie prostate transrectale (délais fosfomycine précisés)\", \"V3.0 p.88\", [r\"biopsie.*prostate\", r\"prostate.*biopsie\", r\"fosfomycine\"]),"
+   },
+   {
+    "file": "scripts/build_masterclass_pdf.py",
+    "line": 495,
+    "eval_code": true,
+    "qids": [
+     "Q04"
+    ],
+    "title_ngrams": [
+     "pth voie anterieure",
+     "voie anterieure allergie"
+    ],
+    "text": "\"<li><b>Q04 — PTH voie antérieure + allergie</b> : Zero-Shot se trompe (<code>Clindamycine+Gentamicine</code> sur 7B / <code>Céfazoline</code> sur 3B), \""
+   },
+   {
+    "file": "scripts/build_masterclass_pdf.py",
+    "line": 497,
+    "eval_code": true,
+    "qids": [
+     "Q28"
+    ],
+    "title_ngrams": [
+     "cranio-cerebrale allergie penicillines",
+     "plaie cranio-cerebrale allergie"
+    ],
+    "text": "\"<li><b>Q28 — Plaie cranio-cérébrale + allergie pénicillines</b> : <code>C0</code> cite l'édition 2017 (<code>Vancomycine*</code>), \""
+   },
+   {
+    "file": "scripts/build_masterclass_pdf.py",
+    "line": 499,
+    "eval_code": true,
+    "qids": [
+     "Q16",
+     "Q171"
+    ],
+    "title_ngrams": [
+     "fixateur externe femur",
+     "pas d abp"
+    ],
+    "text": "\"<li><b>Q16 — Polytraumatisé (Splénectomie + fixateur externe fémur)</b> : <code>C0</code> rate la splénectomie (<code>Pas d'ABP</code>), \""
+   },
+   {
+    "file": "scripts/build_masterclass_pdf.py",
+    "line": 500,
+    "eval_code": true,
+    "qids": [
+     "Q171"
+    ],
+    "title_ngrams": [
+     "pas d abp"
+    ],
+    "text": "\"<b>C8 V3</b> décompose les 2 actes ([S5] Splénectomie = <code>Céfazoline</code> + [S1] Fixateur = <code>Pas d'ABP</code>) → <b><code>Céfazoline (SFAR 2026 [S5])</code></b> !</li>\""
+   },
+   {
+    "file": "scripts/build_masterclass_pdf.py",
+    "line": 1234,
+    "eval_code": true,
+    "qids": [
+     "Q04"
+    ],
+    "title_ngrams": [
+     "pth voie anterieure",
+     "voie anterieure allergie"
+    ],
+    "text": "<li><b>Démo Live 90s (3 questions tueuses)</b> : (a) <i>PTH voie antérieure + allergie</i> → Vancomycine/Teicoplanine 2026 + citation + Grounding 100 % ; (b) <i>Arrêt AOD neurochirurgie programmée (20"
+   },
+   {
+    "file": "scripts/run_clinical_showcase.py",
+    "line": 6,
+    "eval_code": false,
+    "qids": [
+     "Q04"
+    ],
+    "title_ngrams": [
+     "pth voie anterieure",
+     "voie anterieure allergie"
+    ],
+    "text": "1. Antibioprophylaxie V3.0 (2026): PTH voie antérieure + allergie bêtalactamines"
+   },
+   {
+    "file": "scripts/run_clinical_showcase.py",
+    "line": 7,
+    "eval_code": false,
+    "qids": [
+     "Q28"
+    ],
+    "title_ngrams": [
+     "cranio-cerebrale allergie penicillines",
+     "plaie cranio-cerebrale allergie"
+    ],
+    "text": "2. Antibioprophylaxie V3.0 (2026): Plaie cranio-cérébrale + allergie pénicillines (Neurochirurgie)"
+   },
+   {
+    "file": "scripts/run_clinical_showcase.py",
+    "line": 35,
+    "eval_code": false,
+    "qids": [
+     "Q04"
+    ],
+    "title_ngrams": [
+     "pth voie anterieure",
+     "voie anterieure allergie"
+    ],
+    "text": "\"1. Antibioprophylaxie 2026 — PTH voie antérieure + allergie (Exception + Encadré)\","
+   },
+   {
+    "file": "src/rag_sfar/evaluation/benchmarks.py",
+    "line": 117,
+    "eval_code": true,
+    "qids": [
+     "Q04"
+    ],
+    "title_ngrams": [
+     "pth voie anterieure",
+     "voie anterieure allergie"
+    ],
+    "text": "title=\"ABP PTH voie antérieure allergie (split-chunk allergy box)\","
+   },
+   {
+    "file": "src/rag_sfar/evaluation/benchmarks.py",
+    "line": 129,
+    "eval_code": true,
+    "qids": [
+     "Q03"
+    ],
+    "title_ngrams": [
+     "ptg allergie betalactamines"
+    ],
+    "text": "title=\"ABP PTG allergie bêtalactamines (split-chunk allergy box)\","
+   },
+   {
+    "file": "src/rag_sfar/evaluation/benchmarks.py",
+    "line": 165,
+    "eval_code": true,
+    "qids": [
+     "Q05",
+     "Q12"
+    ],
+    "title_ngrams": [
+     "fracture ouverte gustilo",
+     "gustilo 3 allergie",
+     "ouverte gustilo 3"
+    ],
+    "text": "title=\"ABP fracture ouverte Gustilo 3 allergie pénicillines\","
+   },
+   {
+    "file": "src/rag_sfar/evaluation/benchmarks.py",
+    "line": 167,
+    "eval_code": true,
+    "qids": [
+     "Q05",
+     "Q12"
+    ],
+    "title_ngrams": [
+     "fracture ouverte gustilo",
+     "ouverte gustilo 3"
+    ],
+    "text": "question=\"Quelle antibioprophylaxie prescrire pour une fracture ouverte Gustilo 3 chez un patient allergique aux pénicillines ?\","
+   },
+   {
+    "file": "src/rag_sfar/generation/client.py",
+    "line": 283,
+    "eval_code": false,
+    "qids": [
+     "Q169"
+    ],
+    "title_ngrams": [
+     "de 1re intention",
+     "molecule de 1re"
+    ],
+    "text": "\"Ne donne PAS la molécule de 1re intention (bêtalactamine) ; applique l'encadré allergie \""
+   },
+   {
+    "file": "src/rag_sfar/generation/client.py",
+    "line": 439,
+    "eval_code": false,
+    "qids": [
+     "Q169"
+    ],
+    "title_ngrams": [
+     "de 1re intention",
+     "molecule de 1re"
+    ],
+    "text": "\"Ne donne PAS la molécule de 1re intention (bêtalactamine) ; applique l'encadré allergie \""
+   },
+   {
+    "file": "src/rag_sfar/generation/prompts.py",
+    "line": 34,
+    "eval_code": false,
+    "qids": [
+     "Q04"
+    ],
+    "title_ngrams": [
+     "pth voie anterieure"
+    ],
+    "text": "- Si une allergie est mentionnée : (a) si une ligne d'exception correspond EXACTEMENT à l'acte demandé dans la question (ex. PTH voie antérieure ou prothèse d'épaule), applique cette exception en prio"
+   },
+   {
+    "file": "src/rag_sfar/interfaces/api.py",
+    "line": 120,
+    "eval_code": false,
+    "qids": [
+     "Q04"
+    ],
+    "title_ngrams": [
+     "pth voie anterieure",
+     "voie anterieure allergie"
+    ],
+    "text": "<input id=\"queryInput\" type=\"text\" placeholder=\"Posez une question clinique SFAR (ex : PTH voie antérieure allergie bêtalactamines, arrêt AOD avant neurochirurgie…)\" />"
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 567,
+    "eval_code": true,
+    "qids": [
+     "Q171"
+    ],
+    "title_ngrams": [
+     "laquelle ne necessite",
+     "ne necessite pas",
+     "necessite pas d",
+     "orl laquelle ne"
+    ],
+    "text": "\"Parmi ces interventions ORL, laquelle ne nécessite PAS d'antibioprophylaxie ?\\n\""
+   },
+   {
+    "file": "tests/test_rag_sfar.py",
+    "line": 599,
+    "eval_code": true,
+    "qids": [
+     "Q171"
+    ],
+    "title_ngrams": [
+     "pas d abp"
+    ],
+    "text": "# 5. 1-to-1 parallel <li> rowspan de-merging on contradictory PAS D'ABP vs Céfazoline tables"
+   }
+  ]
+ }
+}

@@ -1,0 +1,605 @@
+{
+ "summary": {
+  "n": 30,
+  "authored_by": "équipe système (src/rag_sfar/evaluation/benchmarks.py, aucun annotateur externe mentionné)",
+  "questions_paraphrasing_ABP_benchmark": [
+   "M02",
+   "M03",
+   "M06",
+   "M07",
+   "M21",
+   "M23"
+  ],
+  "questions_with_>=8_word_run_copied_from_target_doc": [
+   "M07",
+   "M14",
+   "M16",
+   "M19",
+   "M21",
+   "M22",
+   "M24",
+   "M25",
+   "M26",
+   "M28"
+  ],
+  "answers_with_>=6_word_run_copied_from_target_doc": [
+   "M01",
+   "M02",
+   "M09",
+   "M11",
+   "M14",
+   "M15",
+   "M16",
+   "M20",
+   "M28"
+  ],
+  "evidence_terms_in_>=30pct_of_target_chunks": [
+   "M21",
+   "M23",
+   "M25",
+   "M27",
+   "M28",
+   "M29",
+   "M30"
+  ],
+  "questions_triggering_hand_coded_rules": [
+   "M01",
+   "M02",
+   "M03",
+   "M04",
+   "M05",
+   "M06",
+   "M07",
+   "M09",
+   "M10",
+   "M16",
+   "M22",
+   "M23",
+   "M27",
+   "M29",
+   "M30"
+  ],
+  "expected_answer_is_not_a_clinical_answer (cite only a RFE/section)": [
+   "M12",
+   "M13",
+   "M18",
+   "M21",
+   "M22",
+   "M23",
+   "M24",
+   "M25",
+   "M26",
+   "M27",
+   "M28",
+   "M30"
+  ]
+ },
+ "rows": [
+  {
+   "id": "M01",
+   "category": "flagship_abp_2026",
+   "n_target_docs": 4,
+   "n_target_chunks": 1473,
+   "longest_question_run_in_target_doc": 5,
+   "longest_answer_run_in_target_doc": 14,
+   "evidence_terms": [
+    "60 minutes",
+    "incision"
+   ],
+   "frac_target_chunks_with_terms": 0.007,
+   "benchmark_ABP_overlap_5gram": [],
+   "system_rule_triggers": [
+    "crag:rec_id"
+   ],
+   "expected_answer": "Au plus tôt 60 minutes avant et au plus tard avant l'incision chirurgicale (R1.1, GRADE 1)."
+  },
+  {
+   "id": "M02",
+   "category": "flagship_abp_allergy",
+   "n_target_docs": 4,
+   "n_target_chunks": 1473,
+   "longest_question_run_in_target_doc": 5,
+   "longest_answer_run_in_target_doc": 9,
+   "evidence_terms": [
+    "vancomycine"
+   ],
+   "frac_target_chunks_with_terms": 0.071,
+   "benchmark_ABP_overlap_5gram": [
+    "Q03",
+    "Q04",
+    "Q12",
+    "Q27",
+    "Q28",
+    "Q43"
+   ],
+   "system_rule_triggers": [
+    "router:allergy"
+   ],
+   "expected_answer": "Préférer la vancomycine ou la teicoplanine à la clindamycine."
+  },
+  {
+   "id": "M03",
+   "category": "flagship_abp_allergy",
+   "n_target_docs": 4,
+   "n_target_chunks": 1473,
+   "longest_question_run_in_target_doc": 5,
+   "longest_answer_run_in_target_doc": 2,
+   "evidence_terms": [
+    "clindamycine"
+   ],
+   "frac_target_chunks_with_terms": 0.086,
+   "benchmark_ABP_overlap_5gram": [
+    "Q03",
+    "Q04",
+    "Q12",
+    "Q27",
+    "Q28",
+    "Q43"
+   ],
+   "system_rule_triggers": [
+    "router:allergy"
+   ],
+   "expected_answer": "Clindamycine (encadré allergie orthopédie)."
+  },
+  {
+   "id": "M04",
+   "category": "flagship_abp_2026",
+   "n_target_docs": 4,
+   "n_target_chunks": 1473,
+   "longest_question_run_in_target_doc": 5,
+   "longest_answer_run_in_target_doc": 4,
+   "evidence_terms": [
+    "obese",
+    "r1.6"
+   ],
+   "frac_target_chunks_with_terms": 0.003,
+   "benchmark_ABP_overlap_5gram": [],
+   "system_rule_triggers": [
+    "crag:obesity",
+    "router:allergy"
+   ],
+   "expected_answer": "Adaptation selon R1.5.2 (amoxicilline-clavulanate) et R1.6 (clindamycine, vancomycine, gentamicine chez l'obèse)."
+  },
+  {
+   "id": "M05",
+   "category": "flagship_abp_pediatrie",
+   "n_target_docs": 4,
+   "n_target_chunks": 1473,
+   "longest_question_run_in_target_doc": 3,
+   "longest_answer_run_in_target_doc": 2,
+   "evidence_terms": [
+    "cefazoline",
+    "mg/kg"
+   ],
+   "frac_target_chunks_with_terms": 0.131,
+   "benchmark_ABP_overlap_5gram": [],
+   "system_rule_triggers": [
+    "crag:pediatric"
+   ],
+   "expected_answer": "Champ 3 tableaux pédiatriques V3.0 (2026) — Céfazoline avec posologie pédiatrique en mg/kg."
+  },
+  {
+   "id": "M06",
+   "category": "flagship_abp_allergy",
+   "n_target_docs": 4,
+   "n_target_chunks": 1473,
+   "longest_question_run_in_target_doc": 4,
+   "longest_answer_run_in_target_doc": 2,
+   "evidence_terms": [
+    "clindamycine",
+    "gentamicine"
+   ],
+   "frac_target_chunks_with_terms": 0.052,
+   "benchmark_ABP_overlap_5gram": [
+    "Q03",
+    "Q04",
+    "Q12",
+    "Q27",
+    "Q28",
+    "Q43"
+   ],
+   "system_rule_triggers": [
+    "router:allergy"
+   ],
+   "expected_answer": "Clindamycine + Gentamicine."
+  },
+  {
+   "id": "M07",
+   "category": "flagship_abp_2026",
+   "n_target_docs": 4,
+   "n_target_chunks": 1473,
+   "longest_question_run_in_target_doc": 10,
+   "longest_answer_run_in_target_doc": 4,
+   "evidence_terms": [
+    "cefazoline",
+    "amoxicilline"
+   ],
+   "frac_target_chunks_with_terms": 0.027,
+   "benchmark_ABP_overlap_5gram": [
+    "Q87",
+    "Q128"
+   ],
+   "system_rule_triggers": [
+    "router:allergy"
+   ],
+   "expected_answer": "Céfazoline 2g IVL (GRADE 2), alternative Amoxicilline/Clavulanate 2g IVL."
+  },
+  {
+   "id": "M08",
+   "category": "flagship_iia_2026",
+   "n_target_docs": 4,
+   "n_target_chunks": 530,
+   "longest_question_run_in_target_doc": 4,
+   "longest_answer_run_in_target_doc": 4,
+   "evidence_terms": [
+    "3",
+    "metronidazole"
+   ],
+   "frac_target_chunks_with_terms": 0.034,
+   "benchmark_ABP_overlap_5gram": [],
+   "system_rule_triggers": [],
+   "expected_answer": "Céphalosporine de 3e génération + métronidazole (imidazolé) ou alternative (R1.2.1, RFE 2026)."
+  },
+  {
+   "id": "M09",
+   "category": "flagship_iia_2026",
+   "n_target_docs": 4,
+   "n_target_chunks": 530,
+   "longest_question_run_in_target_doc": 6,
+   "longest_answer_run_in_target_doc": 10,
+   "evidence_terms": [
+    "blse"
+   ],
+   "frac_target_chunks_with_terms": 0.079,
+   "benchmark_ABP_overlap_5gram": [],
+   "system_rule_triggers": [
+    "crag:blse"
+   ],
+   "expected_answer": "Non, il n'est pas recommandé de prendre en compte les E-BLSE sans sepsis/choc septique (R1.2.2)."
+  },
+  {
+   "id": "M10",
+   "category": "flagship_iia_2026",
+   "n_target_docs": 4,
+   "n_target_chunks": 530,
+   "longest_question_run_in_target_doc": 5,
+   "longest_answer_run_in_target_doc": 2,
+   "evidence_terms": [
+    "blse",
+    "choc septique"
+   ],
+   "frac_target_chunks_with_terms": 0.023,
+   "benchmark_ABP_overlap_5gram": [],
+   "system_rule_triggers": [
+    "crag:blse"
+   ],
+   "expected_answer": "Carbapénème selon R1.2.5 (RFE 2026)."
+  },
+  {
+   "id": "M11",
+   "category": "flagship_iia_2026",
+   "n_target_docs": 4,
+   "n_target_chunks": 530,
+   "longest_question_run_in_target_doc": 5,
+   "longest_answer_run_in_target_doc": 8,
+   "evidence_terms": [
+    "damage control"
+   ],
+   "frac_target_chunks_with_terms": 0.017,
+   "benchmark_ABP_overlap_5gram": [],
+   "system_rule_triggers": [],
+   "expected_answer": "Chirurgie de type Damage Control ou laparotomie écourtée (R1.1.2)."
+  },
+  {
+   "id": "M12",
+   "category": "flagship_iia_2026",
+   "n_target_docs": 4,
+   "n_target_chunks": 530,
+   "longest_question_run_in_target_doc": 2,
+   "longest_answer_run_in_target_doc": 2,
+   "evidence_terms": [
+    "hinchey"
+   ],
+   "frac_target_chunks_with_terms": 0.011,
+   "benchmark_ABP_overlap_5gram": [],
+   "system_rule_triggers": [],
+   "expected_answer": "Recommandation R1.1.5 (RFE IIA 2026)."
+  },
+  {
+   "id": "M13",
+   "category": "flagship_iia_2026",
+   "n_target_docs": 4,
+   "n_target_chunks": 530,
+   "longest_question_run_in_target_doc": 6,
+   "longest_answer_run_in_target_doc": 3,
+   "evidence_terms": [
+    "antifongique"
+   ],
+   "frac_target_chunks_with_terms": 0.087,
+   "benchmark_ABP_overlap_5gram": [],
+   "system_rule_triggers": [],
+   "expected_answer": "Section traitement probabiliste antifongique (RFE IIA 2026)."
+  },
+  {
+   "id": "M14",
+   "category": "flagship_anticoag_2026",
+   "n_target_docs": 5,
+   "n_target_chunks": 719,
+   "longest_question_run_in_target_doc": 8,
+   "longest_answer_run_in_target_doc": 8,
+   "evidence_terms": [
+    "warfarine",
+    "j-6",
+    "inr"
+   ],
+   "frac_target_chunks_with_terms": 0.019,
+   "benchmark_ABP_overlap_5gram": [],
+   "system_rule_triggers": [],
+   "expected_answer": "Dernière prise à J-6 pour la warfarine, J-5 pour la fluindione, J-4 pour l'acénocoumarol, contrôle INR la veille (3.1, GRADE 2+)."
+  },
+  {
+   "id": "M15",
+   "category": "flagship_anticoag_2026",
+   "n_target_docs": 5,
+   "n_target_chunks": 719,
+   "longest_question_run_in_target_doc": 6,
+   "longest_answer_run_in_target_doc": 8,
+   "evidence_terms": [
+    "vitamine k",
+    "1,5"
+   ],
+   "frac_target_chunks_with_terms": 0.025,
+   "benchmark_ABP_overlap_5gram": [],
+   "system_rule_triggers": [],
+   "expected_answer": "Seuil INR=1,5 (ou 1,2 en neurochirurgie/neuraxial), administrer 2 à 5 mg de vitamine K per os la veille et contrôler l'INR le lendemain (3.2)."
+  },
+  {
+   "id": "M16",
+   "category": "flagship_anticoag_2026",
+   "n_target_docs": 5,
+   "n_target_chunks": 719,
+   "longest_question_run_in_target_doc": 8,
+   "longest_answer_run_in_target_doc": 6,
+   "evidence_terms": [
+    "j-3",
+    "apixaban"
+   ],
+   "frac_target_chunks_with_terms": 0.028,
+   "benchmark_ABP_overlap_5gram": [],
+   "system_rule_triggers": [
+    "crag:renal"
+   ],
+   "expected_answer": "Dernière prise à J-3 en l'absence d'insuffisance rénale (3.3, GRADE 2+)."
+  },
+  {
+   "id": "M17",
+   "category": "flagship_anticoag_2026",
+   "n_target_docs": 5,
+   "n_target_chunks": 719,
+   "longest_question_run_in_target_doc": 4,
+   "longest_answer_run_in_target_doc": 5,
+   "evidence_terms": [
+    "j-5",
+    "neuraxial"
+   ],
+   "frac_target_chunks_with_terms": 0.019,
+   "benchmark_ABP_overlap_5gram": [],
+   "system_rule_triggers": [],
+   "expected_answer": "Dernière prise à J-5 (3.4, Avis d'experts, Accord fort)."
+  },
+  {
+   "id": "M18",
+   "category": "flagship_anticoag_2026",
+   "n_target_docs": 5,
+   "n_target_chunks": 719,
+   "longest_question_run_in_target_doc": 6,
+   "longest_answer_run_in_target_doc": 4,
+   "evidence_terms": [
+    "fibrillation atriale",
+    "coronaropathie"
+   ],
+   "frac_target_chunks_with_terms": 0.001,
+   "benchmark_ABP_overlap_5gram": [],
+   "system_rule_triggers": [],
+   "expected_answer": "Section FA associée à une coronaropathie (RFE Anticoagulants 2026)."
+  },
+  {
+   "id": "M19",
+   "category": "scope_separation_urgence",
+   "n_target_docs": 4,
+   "n_target_chunks": 403,
+   "longest_question_run_in_target_doc": 8,
+   "longest_answer_run_in_target_doc": 5,
+   "evidence_terms": [
+    "reverser",
+    "intracranienne"
+   ],
+   "frac_target_chunks_with_terms": 0.012,
+   "benchmark_ABP_overlap_5gram": [],
+   "system_rule_triggers": [],
+   "expected_answer": "Non, il est recommandé de réverser sans attendre le résultat des examens biologiques (R2.1.2, RFE Urgence 2024)."
+  },
+  {
+   "id": "M20",
+   "category": "scope_separation_urgence",
+   "n_target_docs": 4,
+   "n_target_chunks": 403,
+   "longest_question_run_in_target_doc": 4,
+   "longest_answer_run_in_target_doc": 17,
+   "evidence_terms": [
+    "tranexamique"
+   ],
+   "frac_target_chunks_with_terms": 0.01,
+   "benchmark_ABP_overlap_5gram": [],
+   "system_rule_triggers": [],
+   "expected_answer": "Il est recommandé d'administrer de l'acide tranexamique selon les mêmes indications qu'un patient non anticoagulé (R2.2.1, RFE Urgence 2024)."
+  },
+  {
+   "id": "M21",
+   "category": "supersession_2026",
+   "n_target_docs": 17,
+   "n_target_chunks": 1449,
+   "longest_question_run_in_target_doc": 13,
+   "longest_answer_run_in_target_doc": 4,
+   "evidence_terms": [
+    "intubation"
+   ],
+   "frac_target_chunks_with_terms": 0.426,
+   "benchmark_ABP_overlap_5gram": [
+    "Q15",
+    "Q17"
+   ],
+   "system_rule_triggers": [],
+   "expected_answer": "RFE Voies aériennes adulte au bloc opératoire 2026."
+  },
+  {
+   "id": "M22",
+   "category": "supersession_2025",
+   "n_target_docs": 2,
+   "n_target_chunks": 599,
+   "longest_question_run_in_target_doc": 8,
+   "longest_answer_run_in_target_doc": 2,
+   "evidence_terms": [
+    "tryptase"
+   ],
+   "frac_target_chunks_with_terms": 0.082,
+   "benchmark_ABP_overlap_5gram": [],
+   "system_rule_triggers": [
+    "router:allergy"
+   ],
+   "expected_answer": "RFE SFAR-SFA 2025 Hypersensibilité immédiate (adrénaline, tryptase)."
+  },
+  {
+   "id": "M23",
+   "category": "supersession_2025",
+   "n_target_docs": 8,
+   "n_target_chunks": 1201,
+   "longest_question_run_in_target_doc": 6,
+   "longest_answer_run_in_target_doc": 0,
+   "evidence_terms": [
+    "sepsis"
+   ],
+   "frac_target_chunks_with_terms": 0.493,
+   "benchmark_ABP_overlap_5gram": [
+    "Q15",
+    "Q17"
+   ],
+   "system_rule_triggers": [
+    "crag:pediatric"
+   ],
+   "expected_answer": "Recommandations HAS 2025 Sepsis."
+  },
+  {
+   "id": "M24",
+   "category": "supersession_2024",
+   "n_target_docs": 3,
+   "n_target_chunks": 404,
+   "longest_question_run_in_target_doc": 8,
+   "longest_answer_run_in_target_doc": 2,
+   "evidence_terms": [
+    "thromboembolique"
+   ],
+   "frac_target_chunks_with_terms": 0.257,
+   "benchmark_ABP_overlap_5gram": [],
+   "system_rule_triggers": [],
+   "expected_answer": "RFE Prévention MTEV péri-opératoire 2024."
+  },
+  {
+   "id": "M25",
+   "category": "supersession_2026",
+   "n_target_docs": 5,
+   "n_target_chunks": 806,
+   "longest_question_run_in_target_doc": 14,
+   "longest_answer_run_in_target_doc": 2,
+   "evidence_terms": [
+    "nutrition"
+   ],
+   "frac_target_chunks_with_terms": 0.665,
+   "benchmark_ABP_overlap_5gram": [],
+   "system_rule_triggers": [],
+   "expected_answer": "RFE Nutrition clinique 2026."
+  },
+  {
+   "id": "M26",
+   "category": "recent_2026",
+   "n_target_docs": 4,
+   "n_target_chunks": 1089,
+   "longest_question_run_in_target_doc": 17,
+   "longest_answer_run_in_target_doc": 0,
+   "evidence_terms": [
+    "ecbu",
+    "colonisation"
+   ],
+   "frac_target_chunks_with_terms": 0.173,
+   "benchmark_ABP_overlap_5gram": [],
+   "system_rule_triggers": [],
+   "expected_answer": "RPP ECBU urologie 2026."
+  },
+  {
+   "id": "M27",
+   "category": "supersession_2026",
+   "n_target_docs": 2,
+   "n_target_chunks": 251,
+   "longest_question_run_in_target_doc": 3,
+   "longest_answer_run_in_target_doc": 3,
+   "evidence_terms": [
+    "locoregionale"
+   ],
+   "frac_target_chunks_with_terms": 0.474,
+   "benchmark_ABP_overlap_5gram": [],
+   "system_rule_triggers": [
+    "crag:pediatric"
+   ],
+   "expected_answer": "RFE ALR en chirurgie pédiatrique 2026."
+  },
+  {
+   "id": "M28",
+   "category": "supersession_2026",
+   "n_target_docs": 2,
+   "n_target_chunks": 301,
+   "longest_question_run_in_target_doc": 10,
+   "longest_answer_run_in_target_doc": 9,
+   "evidence_terms": [
+    "sedation"
+   ],
+   "frac_target_chunks_with_terms": 0.571,
+   "benchmark_ABP_overlap_5gram": [],
+   "system_rule_triggers": [],
+   "expected_answer": "RFE Sédation procédurale en structure de Médecine d'Urgence 2026."
+  },
+  {
+   "id": "M29",
+   "category": "temporal_diff",
+   "n_target_docs": 4,
+   "n_target_chunks": 1473,
+   "longest_question_run_in_target_doc": 4,
+   "longest_answer_run_in_target_doc": 3,
+   "evidence_terms": [
+    "antibioprophylaxie"
+   ],
+   "frac_target_chunks_with_terms": 0.333,
+   "benchmark_ABP_overlap_5gram": [],
+   "system_rule_triggers": [
+    "router:TEMPORAL_DIFF"
+   ],
+   "expected_answer": "Ajout de la pédiatrie (Champ 3), nouvelles doses obèse (R1.5.2/R1.6), mises à jour allergies."
+  },
+  {
+   "id": "M30",
+   "category": "temporal_diff",
+   "n_target_docs": 4,
+   "n_target_chunks": 530,
+   "longest_question_run_in_target_doc": 6,
+   "longest_answer_run_in_target_doc": 0,
+   "evidence_terms": [
+    "intra-abdominale"
+   ],
+   "frac_target_chunks_with_terms": 0.309,
+   "benchmark_ABP_overlap_5gram": [],
+   "system_rule_triggers": [
+    "router:TEMPORAL_DIFF"
+   ],
+   "expected_answer": "Évolution entre RFE 2015 et RFE 2026."
+  }
+ ]
+}

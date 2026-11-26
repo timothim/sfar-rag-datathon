@@ -1,0 +1,340 @@
+{
+ "A_evidence": {
+  "abp_v3_non_reference_chunks": 787,
+  "questions_with_evidence_terms": 138,
+  "mcq_without_terms": 33,
+  "term_sets": [
+   [
+    "pas d'antibioprophylaxie",
+    59
+   ],
+   [
+    "Céfazoline",
+    42
+   ],
+   [
+    "Amoxicilline + Clavulanate",
+    16
+   ],
+   [
+    "Céfoxitine",
+    7
+   ],
+   [
+    "Clindamycine",
+    2
+   ],
+   [
+    "Clindamycine + Gentamicine",
+    2
+   ],
+   [
+    "Vancomycine",
+    1
+   ],
+   [
+    "Triméthoprime + Sulfaméthoxazole",
+    1
+   ],
+   [
+    "Céfuroxime",
+    1
+   ],
+   [
+    "Vancomycine + Ceftazidime",
+    1
+   ],
+   [
+    "Amoxicilline",
+    1
+   ],
+   [
+    "Céfazoline + Métronidazole",
+    1
+   ],
+   [
+    "Ertapénème",
+    1
+   ],
+   [
+    "Métronidazole",
+    1
+   ],
+   [
+    "Pipéracilline + Tazobactam",
+    1
+   ],
+   [
+    "Fosfomycine-trométamol",
+    1
+   ]
+  ],
+  "expected_recall_8_random_abp_v3_chunks": 0.8074,
+  "questions_where_term_in_>=20pct_of_v3_chunks": 101,
+  "questions_where_random8_p>=0.9": 101,
+  "hardest": [
+   {
+    "id": "Q108",
+    "terms": [
+     "Fosfomycine-trométamol"
+    ],
+    "frac_v3_chunks": 0.003,
+    "p_random8": 0.011
+   },
+   {
+    "id": "Q38",
+    "terms": [
+     "Vancomycine",
+     "Ceftazidime"
+    ],
+    "frac_v3_chunks": 0.003,
+    "p_random8": 0.017
+   },
+   {
+    "id": "Q28",
+    "terms": [
+     "Triméthoprime",
+     "Sulfaméthoxazole"
+    ],
+    "frac_v3_chunks": 0.003,
+    "p_random8": 0.023
+   },
+   {
+    "id": "Q90",
+    "terms": [
+     "Ertapénème"
+    ],
+    "frac_v3_chunks": 0.004,
+    "p_random8": 0.029
+   },
+   {
+    "id": "Q98",
+    "terms": [
+     "Pipéracilline",
+     "Tazobactam"
+    ],
+    "frac_v3_chunks": 0.006,
+    "p_random8": 0.049
+   },
+   {
+    "id": "Q70",
+    "terms": [
+     "Céfazoline",
+     "Métronidazole"
+    ],
+    "frac_v3_chunks": 0.017,
+    "p_random8": 0.236
+   },
+   {
+    "id": "Q91",
+    "terms": [
+     "Métronidazole"
+    ],
+    "frac_v3_chunks": 0.034,
+    "p_random8": 0.242
+   },
+   {
+    "id": "Q43",
+    "terms": [
+     "Clindamycine",
+     "Gentamicine"
+    ],
+    "frac_v3_chunks": 0.028,
+    "p_random8": 0.243
+   },
+   {
+    "id": "Q12",
+    "terms": [
+     "Clindamycine",
+     "Gentamicine"
+    ],
+    "frac_v3_chunks": 0.028,
+    "p_random8": 0.258
+   },
+   {
+    "id": "Q04",
+    "terms": [
+     "Vancomycine"
+    ],
+    "frac_v3_chunks": 0.046,
+    "p_random8": 0.283
+   },
+   {
+    "id": "Q86",
+    "terms": [
+     "Céfoxitine"
+    ],
+    "frac_v3_chunks": 0.083,
+    "p_random8": 0.484
+   },
+   {
+    "id": "Q97",
+    "terms": [
+     "Céfoxitine"
+    ],
+    "frac_v3_chunks": 0.083,
+    "p_random8": 0.489
+   }
+  ]
+ },
+ "B_answers": {
+  "open_answer_distribution": [
+   [
+    "Pas d'antibioprophylaxie",
+    59
+   ],
+   [
+    "Céfazoline",
+    42
+   ],
+   [
+    "Amoxicilline/Clavulanate",
+    16
+   ],
+   [
+    "Céfoxitine",
+    7
+   ],
+   [
+    "Clindamycine",
+    2
+   ],
+   [
+    "Clindamycine + Gentamicine",
+    2
+   ],
+   [
+    "Vancomycine",
+    1
+   ],
+   [
+    "Triméthoprime/Sulfaméthoxazole",
+    1
+   ],
+   [
+    "Céfuroxime",
+    1
+   ],
+   [
+    "Vancomycine + Ceftazidime",
+    1
+   ],
+   [
+    "Amoxicilline",
+    1
+   ],
+   [
+    "Céfazoline + Métronidazole",
+    1
+   ],
+   [
+    "Ertapénème",
+    1
+   ],
+   [
+    "Métronidazole",
+    1
+   ],
+   [
+    "Pipéracilline/Tazobactam",
+    1
+   ],
+   [
+    "Fosfomycine-trométamol",
+    1
+   ]
+  ],
+  "mcq_letter_distribution": [
+   [
+    "C",
+    21
+   ],
+   [
+    "B",
+    10
+   ],
+   [
+    "D",
+    2
+   ]
+  ],
+  "constant_baselines_official_scorer": {
+   "all_171": {
+    "n": 171,
+    "open": 138,
+    "constant 'Pas d'antibioprophylaxie' / QCM 'C'": "80/171 = 46.8%",
+    "constant 'Céfazoline' / QCM 'C'": "63/171 = 36.8%",
+    "shotgun 'Céfazoline, Amoxicilline/Clavulanate, Céfoxitine ou Pas d'antibioprophylaxie' / QCM 'C'": "146/171 = 85.4%"
+   },
+   "stratified_50": {
+    "n": 50,
+    "open": 40,
+    "constant 'Pas d'antibioprophylaxie' / QCM 'C'": "18/50 = 36.0%",
+    "constant 'Céfazoline' / QCM 'C'": "19/50 = 38.0%",
+    "shotgun 'Céfazoline, Amoxicilline/Clavulanate, Céfoxitine ou Pas d'antibioprophylaxie' / QCM 'C'": "36/50 = 72.0%"
+   },
+   "unseen_50": {
+    "n": 50,
+    "open": 38,
+    "constant 'Pas d'antibioprophylaxie' / QCM 'C'": "29/50 = 58.0%",
+    "constant 'Céfazoline' / QCM 'C'": "15/50 = 30.0%",
+    "shotgun 'Céfazoline, Amoxicilline/Clavulanate, Céfoxitine ou Pas d'antibioprophylaxie' / QCM 'C'": "45/50 = 90.0%"
+   }
+  }
+ },
+ "C_allergy": {
+  "is_allergy_questions": [
+   "Q03",
+   "Q04",
+   "Q12",
+   "Q27",
+   "Q28",
+   "Q43",
+   "Q141",
+   "Q167"
+  ],
+  "allergy_with_evidence_terms (retrieval 'Allergie Recall' denominator)": [
+   "Q03",
+   "Q04",
+   "Q12",
+   "Q27",
+   "Q28",
+   "Q43"
+  ],
+  "allergy_in_stratified_50": [
+   "Q03",
+   "Q04",
+   "Q12",
+   "Q141",
+   "Q167",
+   "Q27",
+   "Q28",
+   "Q43"
+  ],
+  "allergy_in_unseen_50": []
+ },
+ "D_system_answers": {
+  "reports/e2e_c8_v3_7b.json": {
+   "open_answers_with_>=2_distinct_candidate_answers": [
+    [
+     "Q70",
+     "Céfazoline / Métronidazole, SFAR 2026 [S1]."
+    ]
+   ],
+   "answers_containing_a_year (Sourcing)": "50/50",
+   "evidence_present_true": 50,
+   "mcq_evidence_present_true": "10/10"
+  },
+  "reports/e2e_heldout_unseen_50_7b.json": {
+   "open_answers_with_>=2_distinct_candidate_answers": [
+    [
+     "Q65",
+     "Céfazoline / Céfuroxime (SFAR 2026 [S1])."
+    ]
+   ],
+   "answers_containing_a_year (Sourcing)": "50/50",
+   "evidence_present_true": 48,
+   "mcq_evidence_present_true": "12/12"
+  }
+ }
+}
