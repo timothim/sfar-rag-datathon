@@ -40,9 +40,37 @@ from rag_sfar.retrieval.crag import (
 from rag_sfar.retrieval.embedder import BaseEmbedder
 from rag_sfar.retrieval.medical_lexicon import fold_accents
 from rag_sfar.retrieval.reranker import BaseReranker
-from rag_sfar.retrieval.router import analyze_query
+from rag_sfar.retrieval.router import analyze_query, strip_negated_background_for_retrieval
 from rag_sfar.retrieval.vector_store import LocalVectorStore
 from rag_sfar.schemas import Chunk, QueryAnalysis, RetrievedChunk
+
+_NEONATAL_QUERY_RE = re.compile(
+    r"\b(?:nouveau[- ]n[ée]e?s?|n[ée]onat\w*|pr[ée]matur[ée]e?s?|\d+\s*jours?\s*(?:de\s+vie)?\b)\b",
+    re.I,
+)
+_OLDER_CHILD_QUERY_RE = re.compile(
+    r"\b(?:adolescente?s?|(?:enfant|gar[çc]on|fille|fillette|adolescente?|patiente?)\s+de\s+(?:[1-9]|1[0-7])\s*ans?|\b(?:[1-9]|1[0-7])\s*ans?)\b",
+    re.I,
+)
+_NEONATAL_ONLY_SECTION_RE = re.compile(r"\bn[ée]onatal(?:e|ogique|ogie)\b", re.I)
+_FOOTNOTE_REF_RE = re.compile(r"(?:\*{1,3}(?!\w)|(?<!\w)#(?!\w)|†|‡)")
+
+
+def _query_subpopulation(query: str) -> str | None:
+    """Distinguish explicit neonatal (< 28d) vs older-child/adolescent queries."""
+    if _NEONATAL_QUERY_RE.search(query):
+        return "neonatal"
+    if _OLDER_CHILD_QUERY_RE.search(query):
+        return "child"
+    return None
+
+
+def _is_neonatal_only_chunk(chunk: Chunk) -> bool:
+    """True when a chunk belongs specifically to a neonatal-only section (not general pediatrics)."""
+    sec = (chunk.section_path or "").lower()
+    if "néonatalog" in sec or "neonatalog" in sec:
+        return True
+    return bool(_NEONATAL_ONLY_SECTION_RE.search(sec) and "pédiatr" not in sec and "pediatr" not in sec)
 
 
 def _dbsf_normalize(hits: list[tuple[int, float]]) -> dict[int, float]:
@@ -95,6 +123,7 @@ class SfarRagRetriever:
         t_q = time.perf_counter()
         raw_full_query = query
         retrieval_query = strip_mcq_distractor_options(query) if cfg.use_crag_multihop else query
+        retrieval_query = strip_negated_background_for_retrieval(retrieval_query)
         if cfg.use_query_router:
             analysis = analyze_query(retrieval_query, use_lexicon=cfg.use_medical_lexicon)
         else:
@@ -336,15 +365,25 @@ class SfarRagRetriever:
                 [r.chunk.indexed_text for r in rerank_pool],
             )
             max_fused = max((r.final_score for r in rerank_pool), default=1.0) or 1.0
+            subpop = _query_subpopulation(analysis.original_query)
             for r, ce in zip(rerank_pool, ce_scores):
                 r.rerank_score = round(ce, 5)
                 norm_prior = r.final_score / max_fused
                 blended = 0.68 * ce + 0.32 * norm_prior
                 # Population consistency: only when the query states the population.
                 if analysis.population == "pediatrie" and r.chunk.population_hint == "adulte":
-                    blended *= 0.72
+                    blended *= 0.68
                 elif analysis.population == "adulte" and r.chunk.population_hint == "pediatrie":
-                    blended *= 0.72
+                    blended *= 0.68
+                # Sub-population consistency: neonatal (<28j) vs older child/adolescent
+                if subpop == "neonatal" and _is_neonatal_only_chunk(r.chunk):
+                    blended *= 1.15
+                elif subpop == "child" and _is_neonatal_only_chunk(r.chunk):
+                    blended *= 0.68
+                # Do not let specialty allergy callout boxes crowd out procedure rows when
+                # the query has NO affirmed allergy (e.g. "sans allergie aux bêtalactamines").
+                if "allergy" not in analysis.modifiers and r.chunk.chunk_type == "callout_allergy":
+                    blended *= 0.65
                 blended *= self._compute_clinical_scope_multiplier(r.chunk, analysis)
                 r.final_score = round(blended, 6)
             rerank_pool.sort(key=lambda r: r.final_score, reverse=True)
@@ -441,9 +480,62 @@ class SfarRagRetriever:
         if analysis.temporal_mode != "all_versions":
             selected = sorted(selected, key=lambda r: r.final_score, reverse=True)
         selected = selected[: max(0, cfg.final_top_k)]
+        if cfg.context_window > 0 or cfg.expand_table_parent:
+            selected = self._window_expand(selected, cfg)
         timings["total_retrieval_ms"] = round((time.perf_counter() - t0) * 1000, 2)
 
         return selected, analysis, timings
+
+    def _window_expand(self, selected: list[RetrievedChunk], cfg: RetrievalConfig) -> list[RetrievedChunk]:
+        """Small-to-big context windows after ranking (generic, structure-based).
+
+        For each of the first `context_window_top` results: the parent table when the result is
+        a table row card, then +-`context_window` neighbouring chunks of the same document
+        (bibliography excluded). Expansions are placed right after their anchor, in reading
+        order, and stop at `context_char_budget` characters overall. Ranked results are never
+        dropped."""
+        seen = {r.chunk.chunk_id for r in selected}
+        budget = cfg.context_char_budget - sum(len(r.chunk.text) for r in selected)
+        out: list[RetrievedChunk] = []
+        for rank, item in enumerate(selected):
+            out.append(item)
+            if rank >= cfg.context_window_top or budget <= 0:
+                continue
+            extra: list = []
+            c = item.chunk
+            if cfg.expand_table_parent and c.chunk_type == "table_row_card":
+                cur = c
+                for _ in range(60):
+                    if not cur.prev_chunk_id:
+                        break
+                    cur = self.store.get_chunk(cur.prev_chunk_id)
+                    if cur is None or cur.doc_id != c.doc_id:
+                        break
+                    if cur.chunk_type == "table_markdown":
+                        extra.append(cur)
+                        break
+                    if cur.chunk_type != "table_row_card":
+                        break
+            if cfg.context_window > 0:
+                for direction in ("prev_chunk_id", "next_chunk_id"):
+                    cur = c
+                    for _ in range(cfg.context_window):
+                        nid = getattr(cur, direction)
+                        if not nid:
+                            break
+                        cur = self.store.get_chunk(nid)
+                        if cur is None or cur.doc_id != c.doc_id or cur.is_reference_section:
+                            break
+                        extra.append(cur)
+            extra.sort(key=lambda ch: ch.chunk_index)
+            for ch in extra:
+                if ch.chunk_id in seen or len(ch.text) > budget:
+                    continue
+                seen.add(ch.chunk_id)
+                budget -= len(ch.text)
+                out.append(RetrievedChunk(chunk=ch, final_score=round(item.final_score * 0.9, 6),
+                                          is_expanded_context=True, expansion_reason="context_window"))
+        return out
 
     def _crag_rescue_missing_facets(
         self,
@@ -542,6 +634,14 @@ class SfarRagRetriever:
 
         if "allergy" in analysis.modifiers and chunk.has_allergy_info:
             boost += 0.14
+        elif "allergy" not in analysis.modifiers and chunk.chunk_type == "callout_allergy":
+            boost -= 0.25
+
+        subpop = _query_subpopulation(analysis.original_query)
+        if subpop == "neonatal" and _is_neonatal_only_chunk(chunk):
+            boost += 0.22
+        elif subpop == "child" and _is_neonatal_only_chunk(chunk):
+            boost -= 0.22
 
         if "diff" in analysis.modifiers:
             txt_lo = chunk.text.lower()
@@ -642,9 +742,13 @@ class SfarRagRetriever:
                         reason = "specialty_allergy_box"
                     elif (
                         c_obj.chunk_type == "callout_footnote"
-                        and wants_callout
-                        and pulled_footnotes < 1
-                        and len(c_obj.text) <= 550
+                        and pulled_footnotes < 2
+                        and len(c_obj.text) <= 950
+                        and (
+                            wants_callout
+                            or item.chunk.population_hint == "pediatrie"
+                            or bool(_FOOTNOTE_REF_RE.search(item.chunk.text))
+                        )
                     ):
                         should_pull = True
                         pulled_footnotes += 1

@@ -107,6 +107,13 @@ class RetrievalConfig:
     expand_neighbors: bool = True
     expand_section_callouts: bool = True
     max_context_chars: int = 16000
+    # Post-ranking context windows (applied after the final_top_k cut, own character budget):
+    # +-context_window neighbouring chunks of the same document around each of the first
+    # context_window_top results, and the parent table of retrieved table rows.
+    context_window: int = 0
+    context_window_top: int = 8
+    expand_table_parent: bool = False
+    context_char_budget: int = 30000
 
     # Soft boost weights (applied additively/multiplicatively to RRF score)
     domain_boost: float = 0.18

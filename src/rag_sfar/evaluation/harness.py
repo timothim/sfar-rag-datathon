@@ -85,9 +85,22 @@ def passage_match(quote: str, chunk_text: str, threshold: float = 0.5) -> bool:
     return len(q & c) / len(q) >= threshold
 
 
+CURVE_KS = (1, 3, 5, 8, 12, 16, 20)
+
+
+def _first_rank(flags: list[bool]) -> int | None:
+    return next((i + 1 for i, f in enumerate(flags) if f), None)
+
+
 def retrieval_metrics(item: EvalItem, retrieved: list[RetrievedChunk], k: int = K_DEFAULT) -> dict[str, Any]:
     top = retrieved[:k]
     out: dict[str, Any] = {}
+    # Ranks over the whole retrieved list (for recall@k curves at any cutoff).
+    if item.gold_doc_ids:
+        out["doc_rank"] = _first_rank([rc.chunk.doc_id in set(item.gold_doc_ids) for rc in retrieved])
+    if item.gold_passages:
+        out["passage_rank"] = _first_rank([any(passage_match(gp.quote, rc.chunk.text) for gp in item.gold_passages) for rc in retrieved])
+        out["n_retrieved"] = len(retrieved)
     gold_docs = set(item.gold_doc_ids)
     if gold_docs:
         rels = [1 if rc.chunk.doc_id in gold_docs else 0 for rc in top]
@@ -233,17 +246,20 @@ def ablation_variants(base: RetrievalConfig, spec: str) -> list[RetrievalConfig]
     """One variant per item: `flag` -> flag=False, `field=value` -> field set (int/float/bool/str)."""
     out = []
     for item in [x.strip() for x in spec.split(",") if x.strip()]:
-        field, _, raw = item.partition("=")
-        if not hasattr(base, field):
-            raise SystemExit(f"Unknown RetrievalConfig field {field!r}")
-        cur = getattr(base, field)
-        if not raw:
-            value: Any = False
-            label = f"no_{field}"
-        else:
-            value = type(cur)(raw) if not isinstance(cur, bool) else raw.lower() in ("1", "true", "yes")
-            label = f"{field}={raw}"
-        out.append(dataclasses.replace(base, name=f"{base.name}-{label}", **{field: value}))
+        changes: dict[str, Any] = {}
+        labels = []
+        for part in item.split("+"):  # "a=1+b=true" sets several fields in one variant
+            field, _, raw = part.partition("=")
+            if not hasattr(base, field):
+                raise SystemExit(f"Unknown RetrievalConfig field {field!r}")
+            cur = getattr(base, field)
+            if not raw:
+                changes[field] = False
+                labels.append(f"no_{field}")
+            else:
+                changes[field] = type(cur)(raw) if not isinstance(cur, bool) else raw.lower() in ("1", "true", "yes")
+                labels.append(f"{field}={raw}")
+        out.append(dataclasses.replace(base, name=f"{base.name}-{'+'.join(labels)}", **changes))
     return out
 
 
@@ -266,8 +282,20 @@ METRIC_KEYS = [
 ]
 
 
+def recall_curve(rows: list[dict[str, Any]], key: str = "passage_rank", ks: tuple[int, ...] = CURVE_KS) -> dict[int, float]:
+    """hit@k for each k, over rows that have the rank field (None = never retrieved)."""
+    rs = [r for r in rows if key in r]
+    if not rs:
+        return {}
+    return {kk: sum(1 for r in rs if r[key] is not None and r[key] <= kk) / len(rs) for kk in ks}
+
+
 def summarize(rows: list[dict[str, Any]]) -> dict[str, Any]:
     summary: dict[str, Any] = {"n": len(rows)}
+    for key in ("passage_rank", "doc_rank"):
+        curve = recall_curve(rows, key)
+        if curve:
+            summary[f"{key.split('_')[0]}_hit_curve"] = curve
     for k in METRIC_KEYS + ["latency_ms"]:
         agg = _aggregate(rows, k)
         if agg:
