@@ -559,6 +559,38 @@ def normalize_disciplines(raw_discipline: str | None) -> list[str]:
     return seen
 
 
+def _fold_lower(text: str) -> str:
+    return "".join(
+        c for c in unicodedata.normalize("NFKD", text.lower()) if not unicodedata.combining(c)
+    )
+
+
+_DOMAIN_KEYWORD_RES: dict[str, list[re.Pattern[str]]] = {}
+
+
+def _domain_keyword_patterns(domain: str) -> list[re.Pattern[str]]:
+    """Word-anchored patterns for one domain's keywords (accent-folded, lower-case).
+
+    A keyword must start at a word boundary. Short keywords (<= 4 characters: sigles such as
+    "rac", "usc", "aod") must also end at a word boundary; longer keywords are stems
+    ("antibiothérapi", "pédiatr") and may be followed by a word ending. This stops substring
+    matches like "rac" in "fracture" or "usc" in "muscle"."""
+    if domain not in _DOMAIN_KEYWORD_RES:
+        pats = []
+        for kw in DOMAIN_KEYWORDS[domain]:
+            k = re.sub(r"\\?['’]", "['’]", re.escape(_fold_lower(kw)))
+            tail = r"(?![a-z0-9])" if len(kw) <= 4 else ""
+            pats.append(re.compile(rf"(?<![a-z0-9]){k}{tail}"))
+        _DOMAIN_KEYWORD_RES[domain] = pats
+    return _DOMAIN_KEYWORD_RES[domain]
+
+
+def infer_domains_from_text(text: str) -> list[str]:
+    """Canonical SFAR domains whose keywords occur as words in `text`."""
+    blob = _fold_lower(text)
+    return [d for d in DOMAIN_KEYWORDS if any(p.search(blob) for p in _domain_keyword_patterns(d))]
+
+
 def normalize_and_impute_domains(
     raw_subdomain: str | None, title: str, text_head: str
 ) -> tuple[list[str], bool]:
@@ -573,11 +605,8 @@ def normalize_and_impute_domains(
 
     # Always enrich with canonical domains derived from title (+ opening headings) so
     # recent 2023-2026 docs (which have raw_subdomain=None!) are never orphaned!
-    search_blob = f"{title} {text_head[:1500]}".lower()
-    inferred: list[str] = []
-    for domain, kws in DOMAIN_KEYWORDS.items():
-        if any(kw in search_blob for kw in kws):
-            inferred.append(domain)
+    # NB: takes effect on the stored metadata only after re-indexing.
+    inferred = infer_domains_from_text(f"{title} {text_head[:1500]}")
 
     was_imputed = len(domains) == 0 and len(inferred) > 0
     for d in inferred:

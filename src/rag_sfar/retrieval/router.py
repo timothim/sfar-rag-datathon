@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import re
 
-from rag_sfar.ingestion.loader import DOMAIN_KEYWORDS
+from rag_sfar.ingestion.loader import infer_domains_from_text
 from rag_sfar.retrieval.medical_lexicon import expand_medical_query, fold_accents
 from rag_sfar.schemas import PopulationScope, QueryAnalysis, SettingScope
 
@@ -22,12 +22,21 @@ TEMPORAL_DIFF_PATTERNS = [
     r"\bv[123]\.0\b",
 ]
 
+# Population is set only when the query states it. A bare duration ("6 mois", "3 ans") is not
+# an age: it needs an age context ("âgé de 6 mois", "enfant de 3 ans", "nourrisson de 2 mois").
+_AGE_CONTEXT = r"(?:[âa]g[ée]e?s?\s+de|enfant\s+de|nourrisson\s+de|gar[çc]on\s+de|fille\s+de|fillette\s+de|patiente?\s+de)"
 PEDIATRIC_QUERY_RE = re.compile(
-    r"\b(enfant|p[ée]diatr\w*|nourrisson|nouveau[- ]n[ée]|n[ée]onatal|b[ée]b[ée]|"
-    r"\d+\s*mois|\b[1-9]\s*ans?\b|1[0-5]\s*ans?)\b",
+    r"\b(enfants?|p[ée]diatr\w*|nourrissons?|nouveau[- ]n[ée]e?s?|n[ée]onat\w*|b[ée]b[ée]s?|"
+    r"adolescents?|fillettes?|gar[çc]onnets?|"
+    rf"{_AGE_CONTEXT}\s+\d+\s*(?:jours?|semaines?|mois)|"
+    rf"{_AGE_CONTEXT}\s+(?:[1-9]|1[0-7])\s*ans?)\b",
     re.I,
 )
-ADULT_QUERY_RE = re.compile(r"\b(adulte|adultes|sujet\s+[âa]g[ée]|grossesse|enceinte|c[ée]sarienne|prostate)\b", re.I)
+ADULT_QUERY_RE = re.compile(
+    r"\b(adultes?|sujets?\s+[âa]g[ée]s?|personnes?\s+[âa]g[ée]es?|"
+    rf"{_AGE_CONTEXT}\s+(?:1[89]|[2-9]\d|1[0-1]\d)\s*ans?)\b",
+    re.I,
+)
 
 URGENCE_QUERY_RE = re.compile(
     r"\b(urgences?|urgente?s?|non\s+programm[ée]e?s?|h[ée]morragie\s+grave|r[ée]vers\w*|antidote|"
@@ -42,7 +51,9 @@ PROGRAMME_QUERY_RE = re.compile(
 REA_QUERY_RE = re.compile(r"\b(r[ée]animation|soins\s+critiques|sdra|ventilation\s+m[ée]canique|choc\s+septique)\b", re.I)
 
 MODIFIER_PATTERNS: dict[str, re.Pattern[str]] = {
-    "allergy": re.compile(r"\b(allerg\w*|hypersensibilit\w*|intol[ée]ran\w*|alternative\w*|b[êe]talactamine\w*|p[ée]nicilline\w*)\b", re.I),
+    # Mentions of allergy / hypersensitivity only: a drug class ("pénicilline") or the word
+    # "alternative" is not an allergy.
+    "allergy": re.compile(r"\b(allerg\w*|hypersensibilit\w*)\b", re.I),
     "obesity": re.compile(r"\b(ob[èe]s\w*|imc|surpoids|poids\s*>\s*100|100\s*kg)\b", re.I),
     "renal": re.compile(r"\b(r[ée]nal\w*|clairance|dfg|clcr|cockcroft|dialys\w*|insuffisance\s+r[ée]nale)\b", re.I),
     "dosage": re.compile(r"\b(posologie\w*|dose\w*|dosage\w*|r[ée]injection\w*|dur[ée]e\w*|d[ée]lai\w*|arr[êe]t\w*|j-\d+|reprise\w*|relais)\b", re.I),
@@ -101,10 +112,8 @@ def analyze_query(query: str, use_lexicon: bool = True) -> QueryAnalysis:
         modifiers.append("diff")
 
     # 5. Soft domain hints (used for soft boosting — NEVER blind hard subdomain filtering!)
-    inferred_domains: list[str] = []
-    for domain, kws in DOMAIN_KEYWORDS.items():
-        if any(fold_accents(kw) in q_fold for kw in kws):
-            inferred_domains.append(domain)
+    # Word-anchored matching on the expanded query (no substring hits such as "rac" in "fracture").
+    inferred_domains = infer_domains_from_text(q_fold)
 
     return QueryAnalysis(
         original_query=query,
@@ -118,3 +127,30 @@ def analyze_query(query: str, use_lexicon: bool = True) -> QueryAnalysis:
         modifiers=modifiers,
         wants_references=("references" in modifiers),
     )
+
+
+# A patient allergy stated in the question ("allergique à X", "allergie aux X", "antécédent
+# d'allergie à X", "hypersensibilité à X"), unless negated ("pas d'allergie", "non allergique",
+# "sans allergie", "aucune allergie").
+_AFFIRMED_ALLERGY_RE = re.compile(
+    r"\b(?:allergiques?|allergies?|hypersensibilit[ée]s?)(?:\s+(?:connue|av[ée]r[ée]e|document[ée]e|"
+    r"imm[ée]diate|retard[ée]e|grave|s[ée]v[èe]re)s?)*\s+(?:[àa]|aux|au|envers)\s+[^,;.?!\n]{2,60}?"
+    r"(?=\s+(?:et|ou|pour|avec|chez|devant|lors|avant|apr[èe]s|qui|quel\w*)\b|\s*[,;.?!:\n]|\s*$)",
+    re.I,
+)
+_ALLERGY_NEGATION_RE = re.compile(
+    r"\b(?:pas|sans|aucune?|ni|non|jamais)\s+(?:d['’]\s*|de\s+|d['’]ant[ée]c[ée]dents?\s+d['’]\s*)?$",
+    re.I,
+)
+
+
+def detect_affirmed_allergy(query: str) -> str | None:
+    """Return the allergy statement made in the question (e.g. "allergique à la X"), or None.
+
+    Generic: no allergen class is assumed; the returned span is quoted back as written."""
+    for m in _AFFIRMED_ALLERGY_RE.finditer(query):
+        before = query[max(0, m.start() - 40) : m.start()]
+        if _ALLERGY_NEGATION_RE.search(before):
+            continue
+        return m.group(0).strip()
+    return None

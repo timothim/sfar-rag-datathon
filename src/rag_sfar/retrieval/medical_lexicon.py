@@ -32,7 +32,8 @@ MEDICAL_ACRONYMS: dict[str, str] = {
     "BMR": "bactérie multirésistante",
     "ECBU": "examen cytobactériologique des urines",
     "PAVM": "pneumonie acquise sous ventilation mécanique",
-    "PAS": "pneumonie associée aux soins",
+    # "PAS" (pneumonie associée aux soins) is deliberately absent: it collides with the French
+    # negation "pas", including in upper case ("NE PAS", "PAS D'…").
     # Coagulation & Antithrombotiques
     "AOD": "anticoagulant oral direct apixaban rivaroxaban dabigatran edoxaban",
     "AVK": "antivitamine K warfarine fluindione acénocoumarol",
@@ -136,15 +137,15 @@ def fold_accents(text: str) -> str:
 
 
 def expand_medical_query(query: str) -> tuple[str, dict[str, str]]:
-    """Expand recognized French anesthesia/ICU acronyms and brand names in a query."""
+    """Expand recognized French anesthesia/ICU acronyms and brand names in a query.
+
+    Acronyms are matched case-sensitively on whole tokens (as written in the dictionary, e.g.
+    "AOD", "ClCr"): a lower-case French word ("pas", "ira", "rac", "iso") is never read as an
+    acronym. Brand names and drug-class synonyms are matched case- and accent-insensitively."""
     expansions: dict[str, str] = {}
-    for tok in re.findall(r"\b[A-Za-zÀ-ÿ0-9]{2,12}\b", query):
+    for tok in re.findall(r"(?<!\w)[A-Za-zÀ-ÿ0-9]{2,12}(?!\w)", query):
         if tok in MEDICAL_ACRONYMS:
             expansions[tok] = MEDICAL_ACRONYMS[tok]
-        elif tok.upper() in MEDICAL_ACRONYMS and tok.upper() not in {
-            "ID", "FA", "MI", "MS", "TC", "EP", "AG", "HM"
-        }:
-            expansions[tok] = MEDICAL_ACRONYMS[tok.upper()]
         else:
             folded = fold_accents(tok.lower())
             if folded in CLINICAL_SYNONYMS:
