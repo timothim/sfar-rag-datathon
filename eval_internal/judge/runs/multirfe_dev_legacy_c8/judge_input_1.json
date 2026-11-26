@@ -1,0 +1,284 @@
+[
+ {
+  "case_id": "C8_frontier_2026_tri_dbsf_crag::MR-gb96b3d27c279158ad3ef",
+  "question": "Lors d'une IVG par méthode chirurgicale, quelle mesure de prévention infectieuse est préconisée chez une femme aux antécédents connus de salpingite ou d'infection génitale haute ?",
+  "reference": "Une antibiothérapie est recommandée en cas d'antécédent connu d'infection génitale haute.",
+  "answer": "**Réponse synthétique** : Une antibiothérapie est recommandée en cas d'antécédents connus d'infection génitale haute.\n\n**Posologie, délais et modalités** : Non précisé dans les extraits.\n\n**Cas particuliers / Sécurité** : Non précisé dans les extraits.\n\n**Niveau de preuve** : Bien qu'il n'existe pas de démonstration d'un bénéfice à long terme, il est recommandé en cas d'antécédent connu d'infection génitale haute d'adopter une stratégie de prévention des complications infectieuses (S1).\n\nNote : Les détails spécifiques concernant la posologie, les délais et les modalités d'administration de l'antibiothérapie ne sont pas mentionnés dans les extraits fournis."
+ },
+ {
+  "case_id": "C8_frontier_2026_tri_dbsf_crag::MR-gc6eabc0b647f3aa1afca",
+  "question": "Chez une parturiente présentant une pathologie obstétricale sévère surveillée en maternité, dans quelles circonstances faut-il l'orienter vers une réanimation adulte, et avec quel niveau d'accord ?",
+  "reference": "En cas de défaillance d'organe persistante nécessitant une suppléance, de défaillance multiviscérale ou de pronostic vital engagé, selon la convention maternité-réanimation (accord fort).",
+  "answer": "**Réponse synthétique** : Chez une parturiente présentant une pathologie obstétricale sévère, l'orientation vers une réanimation adulte doit être faite en cas de persistance d'une défaillance d'organe nécessitant une suppléance, d'apparition d'une défaillance multiviscérale ou de la mise en jeu du pronostic vital.\n\n**Posologie, délais et modalités** : Non précisé dans les extraits.\n\n**Cas particuliers / Sécurité** : Non précisé dans les extraits.\n\n**Niveau de preuve** : Accord fort [S4].\n\nLa convention entre l'unité d'obstétrique et l'unité de réanimation adulte précise les critères et les conditions du transfert, notamment le partage de dossier et de la feuille de surveillance, la traçabilité des produits sanguins administrés, et les critères de transfert [S4]."
+ },
+ {
+  "case_id": "C8_frontier_2026_tri_dbsf_crag::MR-g3e964e64a0ac6da585eb",
+  "question": "Dans une maternité, où doit se situer le bloc dédié aux interventions obstétricales urgentes (césarienne en urgence) par rapport aux salles d'accouchement ?",
+  "reference": "Un accès permanent à au moins une salle dédiée, contigüe au secteur de naissance (au même niveau pour toute nouvelle structure) est recommandé (accord fort).",
+  "answer": "**Réponse synthétique** : Le bloc dédié aux interventions obstétricales urgentes (césarienne en urgence) doit être contigü au secteur de naissance.\n\n**Posologie, délais et modalités** : Non précisé dans les extraits.\n\n**Cas particuliers / Sécurité** : Non précisé dans les extraits.\n\n**Niveau de preuve** : Accord fort [S1].\n\nLes recommandations stipulent clairement que le bloc d'intervention pour les urgences obstétricales doit être contigü (au même niveau en cas de création de nouvelle structure) au secteur de naissance. Cela garantit un accès permanent et rapide aux salles d'accouchement en cas d'urgence."
+ },
+ {
+  "case_id": "C8_frontier_2026_tri_dbsf_crag::MR-g822a50690730ee2ef6bc",
+  "question": "En réanimation, quels types de mesures faut-il retenir prioritairement dans une stratégie multimodale de prévention des pneumonies acquises sous ventilation ?",
+  "reference": "Il faut privilégier l'association de mesures ayant un effet sur la morbidité : durée de ventilation mécanique, durée de séjour en réanimation et consommation d'antibiotiques.",
+  "answer": "**Réponse synthétique** : Il faut retenir une approche standardisée multimodale de prévention des pneumonies associées aux soins en réanimation, incluant des mesures visant à réduire la durée de ventilation mécanique et/ou la durée d'hospitalisation en réanimation.\n\n**Posologie, délais et modalités** : Non précisé dans les extraits.\n\n**Cas particuliers / Sécurité** : Non précisé dans les extraits.\n\n**Niveau de preuve** : GRADE 1+, Accord fort [S2].\n\nLes recommandations suggèrent d'utiliser une approche standardisée multimodale pour prévenir les pneumonies associées aux soins en réanimation. Cette approche devrait viser à réduire la durée de ventilation mécanique et/ou la durée d'hospitalisation en réanimation. Les mesures peuvent inclure la ventilation non invasive, le sevrage précoce de la ventilation mécanique, et d'autres méthodes qui ont montré une diminution significative du risque de pneumonies associées aux soins et de la durée de ventilation mécanique et/ou de durée d'hospitalisation en réanimation."
+ },
+ {
+  "case_id": "C8_frontier_2026_tri_dbsf_crag::MR-g2f51f3362361053361b7",
+  "question": "Un patient de réanimation sans cardiopathie ni pathologie pulmonaire sous-jacente présente un nouveau foyer sur une seule radiographie thoracique. Quels seuils de température et de leucocytes retenir comme critères de pneumonie ?",
+  "reference": "Température > 38,3 °C sans autre cause, ou leucocytes < 4000/mm3 ou ≥ 12 000/mm3.",
+  "answer": "**Réponse synthétique** : Pour un nouveau foyer radiologique dans un patient de réanimation sans cardiopathie ni pathologie pulmonaire sous-jacente, une température corporelle supérieure à 38,3 °C et un leucocyte comptage inférieur à 4000/mm³ sont les seuils de critères de pneumonie.\n\n**Posologie, délais et modalités** : Non précisé dans les extraits.\n\n**Cas particuliers / Sécurité** : Non précisé dans les extraits.\n\n**Niveau de preuve** : Les critères de pneumonie sont basés sur les recommandations formalisées d'experts de la SFAR 2017 [S1], qui sont actuellement en vigueur."
+ },
+ {
+  "case_id": "C8_frontier_2026_tri_dbsf_crag::MR-gc03aaf37539dfd4b39a8",
+  "question": "Chez l'adulte opéré d'une hépatectomie, quelle dose de dexaméthasone injecter en bolus peropératoire pour limiter les complications après l'intervention, et avec quelle force ?",
+  "reference": "Un bolus peropératoire de 8-10 mg de dexaméthasone (recommandation faible).",
+  "answer": "**Réponse synthétique** : Chez l'adulte opéré d'une hépatectomie, il est recommandé d'administrer un bolus de 8-10 mg de dexaméthasone en peropératoire pour réduire la morbidité postopératoire. Cette recommandation est de force faible.\n\n**Posologie, délais et modalités** : \n- Dose initiale : 8-10 mg\n- Administration : en bolus peropératoire\n\n**Cas particuliers / Sécurité** : \n- Allergie aux bêtalactamines : Non précisé dans les extraits.\n- Fonction rénale : Non précisé dans les extraits.\n- Obésité : Non précisé dans les extraits.\n- Pédiatrie : Non précisé dans les extraits.\n\n**Niveau de preuve** : \n- Recommandation faible, RFE SFAR 2025 [EN VIGUEUR] [S1], [S2], [S5]."
+ },
+ {
+  "case_id": "C8_frontier_2026_tri_dbsf_crag::MR-g7efa49eea406c3678a28",
+  "question": "Chez un traumatisé thoracique hospitalisé qui devient hypoxémique, quelle modalité de ventilation non invasive utiliser, après quels préalables, et avec quel grade ?",
+  "reference": "Une VSAI-PEP après tomodensitométrie et drainage d'un éventuel pneumothorax, sans contre-indication à la VNI et sous surveillance continue (G1+).",
+  "answer": "**Réponse synthétique** : Utiliser la ventilation non invasive avec ventilation spontanée avec aide inspiratoire et pression expiratoire positive (VSAI-PEP) après réalisation d'une tomodensitométrie et du drainage d'un pneumothorax, si absence de contre-indication, avec un grade de preuve G1+.\n\n**Posologie, délais et modalités** : \n- Dose initiale : Non précisé dans les extraits.\n- Réinjections : Non précisé dans les extraits.\n- Durée : Non précisé dans les extraits.\n- Fenêtres J-X : Non précisé dans les extraits.\n\n**Cas particuliers / Sécurité** : \n- Allergie aux bêtalactamines : Non précisé dans les extraits.\n- Fonction rénale : Non précisé dans les extraits.\n- Obésité : Non précisé dans les extraits.\n- Pédiatrie : Non précisé dans les extraits.\n\n**Niveau de preuve** : G1+ (Règle 3.A.1 de la RFE SFAR 2014 [S1]).\n\n**Édition** : En vigueur."
+ },
+ {
+  "case_id": "C8_frontier_2026_tri_dbsf_crag::MR-gb8871ff491d05e49db36",
+  "question": "Un patient ayant présenté une embolie pulmonaire il y a deux mois doit subir un geste invasif programmé après lequel l'anticoagulation curative ne pourra pas être reprise avant plusieurs jours. Quelle option préventive discuter ?",
+  "reference": "Discuter la pose pré-procédurale d'un filtre cave optionnel si l'anticoagulation curative ne peut être reprise dans les 72 h post-procédurales.",
+  "answer": "**Réponse synthétique** : Discuter la mise en place d'un filtre cave optionnel.\n\n**Posologie, délais et modalités** : \n- **Délai entre la dernière administration d'anticoagulant et le geste invasif** : Lorsque la reprise des anticoagulants curatifs n'est pas possible dans les 24 à 48 heures postopératoires, il est recommandé de discuter la mise en place d'un filtre cave optionnel dès que possible (en préopératoire ou postopératoire immédiat) [S2, R4.8.1, GRADE 2+, Accord fort].\n\n**Cas particuliers / Sécurité** : \n- **Allergie aux bêtalactamines** : Non précisé dans les extraits.\n- **Fonction rénale** : Non précisé dans les extraits.\n- **Obésité** : Non précisé dans les extraits.\n- **Pédiatrie** : Non précisé dans les extraits.\n\n**Niveau de preuve** : GRADE 2+, Accord fort [S2, R4.8.1]."
+ },
+ {
+  "case_id": "C8_frontier_2026_tri_dbsf_crag::MR-g571f916b70fb2a0586cb",
+  "question": "Pour la gestion des anticoagulants avant un geste ORL programmé, dans quelle catégorie de risque de saignement se classe l'exérèse d'un angiofibrome du nasopharynx ?",
+  "reference": "Elle est classée à risque hémorragique élevé.",
+  "answer": "**Réponse synthétique** : L'exérèse d'un angiofibrome du nasopharynx est classée dans la catégorie de risque hémorragique élevé.\n\n**Posologie, délais et modalités** : Non précisé dans les extraits.\n\n**Cas particuliers / Sécurité** : Non précisé dans les extraits.\n\n**Niveau de preuve** : Non précisé dans les extraits."
+ },
+ {
+  "case_id": "C8_frontier_2026_tri_dbsf_crag::MR-gc6d6192f7b53462c02dd",
+  "question": "Un patient porteur d'un déficit en facteur de coagulation, pour lequel un concentré spécifique existe mais n'est pas disponible rapidement, présente une hémorragie grave. Quel produit sanguin administrer et à quelle posologie ?",
+  "reference": "Du plasma thérapeutique peut être administré, à la dose de 10 à 15 mL/kg (accord professionnel).",
+  "answer": "**Réponse synthétique** : Dans ce cas, il est recommandé d'administrer du plasma thérapeutique à une posologie de 10 à 15 mL/kg de poids corporel.\n\n**Posologie, délais et modalités** : \n- **Posologie** : 10 à 15 mL/kg de poids corporel.\n- **Délais** : Non précisé dans les extraits.\n- **Modalités** : Le plasma thérapeutique est administré en cas de déficit en un facteur de coagulation pour lequel une préparation de facteur purifié existe mais sans possibilité d'obtention rapide du produit, dans le cadre d'une situation d'urgence hémorragique.\n\n**Cas particuliers / Sécurité** : Non précisé dans les extraits.\n\n**Niveau de preuve** : AVIS D'EXPERTS (Accord fort) [S2], [S3]."
+ },
+ {
+  "case_id": "C8_frontier_2026_tri_dbsf_crag::MR-g526e54165c42ca78bf63",
+  "question": "Un nouveau-né traité par photothérapie pour une hyperbilirubinémie doit recevoir du plasma traité par amotosalen (PFC-IA). Quelle précaution prendre concernant l'appareil de photothérapie ?",
+  "reference": "Utiliser des dispositifs de photothérapie n'émettant pas de rayonnement de longueur d'onde inférieure à 425 nm.",
+  "answer": "**Réponse synthétique** : L'appareil de photothérapie utilisé doit émettre des rayonnements d'une longueur d'onde supérieure à 425 nm pour éviter la potentialisation d'une interaction entre la lumière UVA et l'amotosalen, qui pourrait entraîner un érythème.\n\n**Posologie, délais et modalités** : Non précisé dans les extraits.\n\n**Cas particuliers / Sécurité** : Non précisé dans les extraits.\n\n**Niveau de preuve** : Non précisé dans les extraits."
+ },
+ {
+  "case_id": "C8_frontier_2026_tri_dbsf_crag::MR-g2b5dca4f8dcab2a9f869",
+  "question": "Un patient doit bénéficier d'un bloc nerveux périphérique échoguidé et souhaite être endormi au préalable. Peut-on réaliser ce bloc sous anesthésie générale ?",
+  "reference": "C'est possible : l'échoguidage suggère une meilleure sécurité et les données disponibles (observationnelles) ne montrent pas d'augmentation des risques d'une ALR réalisée sous anesthésie générale.",
+  "answer": "**Réponse synthétique** : Il est possible de réaliser un bloc nerveux périphérique échoguidé sous anesthésie générale, mais il est recommandé de le faire chez un patient éveillé ou légèrement sédané.\n\n**Posologie, délais et modalités** : Non précisé dans les extraits.\n\n**Cas particuliers / Sécurité** : \n- L'échographie apporte probablement une sécurité supplémentaire.\n- Chez l'adulte, la réalisation sous anesthésie générale doit rester exceptionnelle, et ce d'autant qu'elle est réalisée à un niveau métaméricaire supérieur à L3 et comporte donc un risque de lésion médullaire [S2].\n- L'administration d'oxygène est recommandée lors de la réalisation de l'anesthésie péridurale [S4].\n\n**Niveau de preuve** : \n- L'échographie apporte probablement une sécurité supplémentaire (AVIS D'EXPERTS) [S1, S3].\n- La réalisation sous anesthésie générale doit rester exceptionnelle (consensus professionnel) [S4].\n- L'administration d'oxygène est recommandée (grade C) [S4].\n\nHors périmètre / Information non retrouvée dans les extraits SFAR fournis pour les délais et modalités précises de la posologie."
+ },
+ {
+  "case_id": "C8_frontier_2026_tri_dbsf_crag::MR-ga7998a95924ce47cf4b2",
+  "question": "Après un bloc périphérique d'un membre, un patient présente un bloc anormalement prolongé avec un déficit moteur complet dans le territoire bloqué. Quel avis spécialisé obtenir rapidement et quel examen complémentaire demander ?",
+  "reference": "Un avis neurochirurgical rapide (déficit complet) et un examen électrophysiologique par EMG.",
+  "answer": "**Réponse synthétique** : Un avis de neurologue doit être obtenu rapidement, et un examen électrophysiologique (EMG) devrait être demandé.\n\n**Posologie, délais et modalités** : Non précisé dans les extraits.\n\n**Cas particuliers / Sécurité** : Non précisé dans les extraits.\n\n**Niveau de preuve** : Non précisé dans les extraits. Cependant, la recommandation est basée sur des données actuelles et est fortement recommandée.\n\nLa conduite à tenir est clairement établie par la RFE SFAR 2016 [S1] : en cas de déficit moteur complet et de bloc anormalement prolongé, un examen neurologique précis doit être effectué rapidement. En cas de déficit incomplet, un avis par un neurologue est recommandé, et en cas de déficit complet, un avis par un neurochirurgien est nécessaire. De plus, il est recommandé de réaliser un examen électrophysiologique (EMG) pour confirmer la suspicion de lésion nerveuse secondaire au bloc.\n\nHors périmètre / Information non retrouvée dans les extraits SFAR fournis. Les délais et les modalités précises de réalisation de l'examen électrophysiologique ne sont pas mentionnées dans les extraits fournis."
+ },
+ {
+  "case_id": "C8_frontier_2026_tri_dbsf_crag::MR-gcb7201d68bfd3c66882d",
+  "question": "En réanimation, sur quelle période faut-il vérifier les traitements antérieurs par fluoroquinolone avant d'en represcrire chez le même malade, et quelle est la force de cet accord ?",
+  "reference": "Il faut tenir compte des prescriptions de FQ des 6 mois précédents, quelle qu'en soit l'indication, pour éviter les prescriptions répétées (accord fort).",
+  "answer": "**Réponse synthétique** : Il ne faut pas prescrire de fluoroquinolones de façon répétée chez un même patient, en prenant en compte les prescriptions antérieures de fluoroquinolones dans les 6 mois précédents.\n\n**Posologie, délais et modalités** : Non précisé dans les extraits.\n\n**Cas particuliers / Sécurité** : Non précisé dans les extraits.\n\n**Niveau de preuve** : Accord fort, publié dans la RFE SFAR 2014 [S1]."
+ },
+ {
+  "case_id": "C8_frontier_2026_tri_dbsf_crag::MR-gd56911820a0a15744c26",
+  "question": "La simulation est-elle conseillée pour améliorer la communication entre soignants en soins critiques, auprès de quels publics et avec quel niveau d'accord ?",
+  "reference": "Oui, les experts suggèrent de l'utiliser en formation initiale et continue, médicale et paramédicale (accord fort).",
+  "answer": "**Réponse synthétique** : La simulation est conseillée pour améliorer la communication entre soignants en soins critiques, auprès de professionnels de santé en formation initiale et continue, avec un niveau d'accord fort.\n\n**Posologie, délais et modalités** : Non précisé dans les extraits.\n\n**Cas particuliers / Sécurité** : Non précisé dans les extraits.\n\n**Niveau de preuve** : Accord fort, en vigueur (extraits [S1], [S3], [S4], [S5], [S6]).\n\nLa simulation est recommandée pour améliorer la communication entre soignants en soins critiques, notamment en formation initiale et continue, médicale et paramédicale. Cette recommandation est appuyée par plusieurs études montrant l'efficacité de la simulation pour enseigner les compétences en communication, améliorer la prise en charge des patients et favoriser l'apprentissage interprofessionnel."
+ },
+ {
+  "case_id": "C8_frontier_2026_tri_dbsf_crag::MR-gb4774403759a289947d9",
+  "question": "Chez l'enfant opéré, à quel moment faut-il commencer le réchauffement actif pour prévenir l'hypothermie, et jusqu'à quand le maintenir ?",
+  "reference": "Débuter le réchauffement actif avant l'induction et le poursuivre en continu en peropératoire et en postopératoire (avis d'experts, accord fort).",
+  "answer": "**Réponse synthétique** : Le réchauffement actif doit être commencé avant l'induction et maintenu pendant l'intervention et en post-opératoire.\n\n**Posologie, délais et modalités** : Non précisé dans les extraits.\n\n**Cas particuliers / Sécurité** : Non précisé dans les extraits.\n\n**Niveau de preuve** : Avis d'experts (Accord Fort) [S1].\n\nLes experts suggèrent de prévenir l'hypothermie des enfants pendant le transport vers le bloc opératoire, de débuter le réchauffement actif avant l'induction avec un dispositif adapté et de poursuivre le réchauffement en continu pendant l'intervention et en post-opératoire (lit réchauffé ou couveuse maintenue à la température adéquate) [S1]. Cependant, les délais précis pour le début et la fin du réchauffement actif ne sont pas spécifiés dans les extraits fournis."
+ },
+ {
+  "case_id": "C8_frontier_2026_tri_dbsf_crag::MR-g659a6f7980ea5f93af09",
+  "question": "Avant la pose d'une voie veineuse chez un nourrisson de 3 semaines, peut-on utiliser une chlorhexidine alcoolique à 0,5 % (Hibitane) pour l'antisepsie cutanée ?",
+  "reference": "Non, elle est contre-indiquée avant 1 mois (et chez le prématuré) ; elle n'est autorisée qu'à partir de 1 mois.",
+  "answer": "**Réponse synthétique** : Non, l'utilisation d'une chlorhexidine alcoolique à 0,5% (Hibitane) n'est pas recommandée pour l'antisepsie cutanée chez un nourrisson de 3 semaines.\n\n**Posologie, délais et modalités** : Non précisé dans les extraits.\n\n**Cas particuliers / Sécurité** : \n- Contre-indiqué chez les prématurés.\n- Contre-indiqué chez les nourrissons < 1 mois.\n- Autorisé chez les nourrissons ≥ 1 mois.\n\n**Niveau de preuve** : Non précisé dans les extraits.\n\nEn effet, les extraits indiquent que l'utilisation de chlorhexidine 0,5% / alcoolique à 70% / Hibitane est contre-indiquée chez les prématurés et les nourrissons < 1 mois. Elle est autorisée chez les nourrissons ≥ 1 mois. Ainsi, pour un nourrisson de 3 semaines, l'utilisation de chlorhexidine 0,5% / alcoolique à 70% / Hibitane n'est pas recommandée."
+ },
+ {
+  "case_id": "C8_frontier_2026_tri_dbsf_crag::MR-ga95d75ad6fe8fb541a44",
+  "question": "Un nourrisson de 10 mois qui ne marche pas encore, sans antécédent hémorragique personnel ni familial, est programmé pour une intervention chirurgicale. Faut-il prescrire un bilan d'hémostase préopératoire ?",
+  "reference": "Oui : l'absence d'acquisition de la marche est la seule indication d'un bilan d'hémostase systématique chez l'enfant.",
+  "answer": "**Réponse synthétique** : Non, il n'est pas nécessaire de prescrire un bilan d'hémostase préopératoire pour ce nourrisson de 10 mois qui ne marche pas encore.\n\n**Posologie, délais et modalités** : Non précisé dans les extraits.\n\n**Cas particuliers / Sécurité** : Chez l'enfant qui n'a pas acquis la marche, il faut probablement prescrire un TCA et une numération des plaquettes afin d'éliminer certaines pathologies constitutionnelles de l'hémostase (par exemple, hémophilie) [S2].\n\n**Niveau de preuve** : GRADE 2+ [S2].\n\nEn effet, les extraits ne recommandent pas de prescrire systématiquement un bilan d'hémostase chez un nourrisson de 10 mois qui ne marche pas encore et qui n'a pas d'antécédents hémorragiques personnels ou familiaux. Cependant, il est recommandé de prescrire un TCA et une numération des plaquettes pour ce type de nourrisson [S2]."
+ },
+ {
+  "case_id": "C8_frontier_2026_tri_dbsf_crag::MR-gcf5aefb7a5425d025d76",
+  "question": "En soins critiques, chez un patient atteint de pancréatite aiguë grave, quels examens associer à la clinique et à la CRP pour affirmer l'infection de la nécrose, et avec quel grade ?",
+  "reference": "Le dosage de la procalcitonine et la tomodensitométrie abdominale (GRADE 2+).",
+  "answer": "**Réponse synthétique** : Il est probablement recommandé d'utiliser l'examen clinique, la CRP, la procalcitonine et la tomodensitométrie abdominale pour affirmer l'infection de la nécrose pancréatique. La recommandation est basée sur un grade de preuve de niveau 2+ avec un accord fort.\n\n**Posologie, délais et modalités** : Non précisé dans les extraits.\n\n**Cas particuliers / Sécurité** : Non précisé dans les extraits.\n\n**Niveau de preuve** : GRADE 2+ (Accord FORT) [S1]."
+ },
+ {
+  "case_id": "C8_frontier_2026_tri_dbsf_crag::MR-g394ecc098e4d21e40da0",
+  "question": "Dans le score de défaillance d'organes utilisé au cours de la pancréatite aiguë, quel score respiratoire attribuer à un patient dont le rapport PaO2/FiO2 est de 250 ?",
+  "reference": "Un score de 2 (PaO2/FiO2 entre 201 et 300).",
+  "answer": "**Réponse synthétique** : Le score respiratoire est de 0.\n\n**Posologie, délais et modalités** : Non précisé dans les extraits.\n\n**Cas particuliers / Sécurité** : Non précisé dans les extraits.\n\n**Niveau de preuve** : Non précisé dans les extraits.\n\nLe score de défaillance d'organes utilisé dans la pancréatite aiguë est basé sur le Score de Marshall modifié. Selon le Score de Marshall, le critère respiratoire est défini comme suit :\n\n- PaO2/FiO2 < 300 : Score 1\n- PaO2/FiO2 < 200 : Score 2\n- PaO2/FiO2 < 100 : Score 3\n\nDans le cas d'un patient dont le rapport PaO2/FiO2 est de 250, il ne correspond à aucun des scores mentionnés ci-dessus. Par conséquent, il n'y a pas de score attribué pour un PaO2/FiO2 de 250 dans le Score de Marshall modifié. Hors périmètre / Information non retrouvée dans les extraits SFAR fournis."
+ },
+ {
+  "case_id": "C8_frontier_2026_tri_dbsf_crag::MR-gae027791784341a1d570",
+  "question": "Un patient en soins critiques pour une pancréatite aiguë sévère secondaire à une hypertriglycéridémie très sévère persistante présente une acidose lactique et une défaillance d'organe. Quelle place pour les échanges plasmatiques ?",
+  "reference": "Les échanges plasmatiques peuvent être proposés d'emblée dans cette situation (ou après échec du traitement médical).",
+  "answer": "**Réponse synthétique** : Les échanges plasmatiques sont recommandés pour ce patient en soins critiques.\n\n**Posologie, délais et modalités** : \n- Une seule séance d'échange plasmatique est généralement suffisante pour réduire la triglycéridémie à un niveau inférieur à 11,3 mmol/L.\n- L'objectif final est de descendre la triglycéridémie à un niveau de moins de 5,7 mmol/L.\n- Non précisé dans les extraits.\n\n**Cas particuliers / Sécurité** : \n- Les échanges plasmatiques sont recommandés en cas d'hypertriglycéridémie très sévère (supérieure à 22,4 mmol/L) persistante associée à des défaillances d'organes, notamment une acidose lactique.\n- Non précisé dans les extraits.\n\n**Niveau de preuve** : GRADE 2, Accord fort [S2, S3, S1, S6, S5].\n\nEn conclusion, les échanges plasmatiques sont recommandés pour ce patient en soins critiques, en raison de l'hypertriglycéridémie très sévère persistante, l'acidose lactique et la défaillance d'organe. Une seule séance d'échange plasmatique est généralement suffisante pour atteindre les objectifs de triglycéridémie."
+ },
+ {
+  "case_id": "C8_frontier_2026_tri_dbsf_crag::MR-gcf361e9af2739ce43a9f",
+  "question": "Parmi les antiplaquettaires inhibiteurs du récepteur P2Y12, lequel a une action réversible ?",
+  "reference": "Le ticagrelor est un inhibiteur réversible du P2Y12.",
+  "answer": "**Réponse synthétique** : Le ticagrelor est un inhibiteur réversible du récepteur plaquettaire P2Y12.\n\n**Posologie, délais et modalités** : Non précisé dans les extraits.\n\n**Cas particuliers / Sécurité** : Non précisé dans les extraits.\n\n**Niveau de preuve** : [S1], [S3], [S6] (Grade de preuve 1, RFE SFAR 2018)."
+ },
+ {
+  "case_id": "C8_frontier_2026_tri_dbsf_crag::MR-ge78b13400ed5e89af859",
+  "question": "Un patient traité par ticagrelor doit être opéré en urgence avec un risque hémorragique important. Peut-on compter sur la desmopressine pour antagoniser l'effet antiplaquettaire ?",
+  "reference": "Non, la desmopressine est décevante avec les AAP récents : sous ticagrelor, elle ne réduit pas le temps de saignement et ne corrige pas les fonctions plaquettaires.",
+  "answer": "Hors périmètre / Information non retrouvée dans les extraits SFAR fournis.\n\nLes extraits fournis ne contiennent aucune information concernant l'utilisation de la desmopressine pour neutraliser l'effet antiplaquettaire du ticagrelor. Les extraits mentionnent uniquement que la desmopressine n'est pas efficace pour neutraliser l'effet des AAP plus récents, mais ne donnent pas d'informations spécifiques sur le ticagrelor."
+ },
+ {
+  "case_id": "C8_frontier_2026_tri_dbsf_crag::MR-g1fa665d53b3782891db2",
+  "question": "Chez l'adulte présentant des critères prédictifs d'intubation difficile, quel dispositif d'oxygénation mettre en place pendant l'apnée, après préoxygénation au masque étanche, pour retarder la désaturation ?",
+  "reference": "Les experts suggèrent l'oxygénation nasale à haut débit (ONHD) durant la phase d'apnée.",
+  "answer": "**Réponse synthétique** : Mettre en place un dispositif d'oxygénation nasale à haut débit pendant l'apnée, après préoxygénation au masque étanche.\n\n**Posologie, délais et modalités** : Non précisé dans les extraits.\n\n**Cas particuliers / Sécurité** : Chez les femmes enceintes, les experts suggèrent l'utilisation d'un dispositif d'oxygénation nasale à haut débit pendant la phase apnée, après préoxygenation au masque étanche. Chez les patients obèses ou avec un estomac plein, l'utilisation d'un dispositif d'oxygénation nasale à haut débit peut être envisagée, même si les données sont limitées.\n\n**Niveau de preuve** : Les recommandations sont basées sur des arguments experts (AE) et des données disponibles, sans niveau de preuve précis mentionné dans les extraits fournis."
+ },
+ {
+  "case_id": "C8_frontier_2026_tri_dbsf_crag::MR-g42624ba80bc36c8e0925",
+  "question": "Après une intubation difficile compliquée d'une désaturation sévère au bloc, l'équipe d'anesthésie organise une revue de morbi-mortalité. Quelles caractéristiques doit-elle respecter pour être de qualité ?",
+  "reference": "Sélection rigoureuse des cas, collecte structurée, présentation synthétique pluridisciplinaire, participative et non culpabilisante, et suivi formalisé des actions correctrices.",
+  "answer": "Hors périmètre / Information non retrouvée dans les extraits SFAR fournis.\n\nLes extraits fournis ne contiennent pas de détails spécifiques sur les caractéristiques d'une revue de morbi-mortalité de qualité après une intubation difficile compliquée d'une désaturation sévère. Les recommandations portent principalement sur l'importance de procéder à une revue de morbi-mortalité et de debriefing, mais ne décrivent pas les modalités précises de ces revues."
+ },
+ {
+  "case_id": "C8_frontier_2026_tri_dbsf_crag::MR-g6d7e10b60e750f150a7a",
+  "question": "Pendant l'intubation en séquence rapide d'un enfant, à partir de quelle SpO2 faut-il ventiler au masque, avec quelle FiO2 et quelle pression d'insufflation maximale idéale ?",
+  "reference": "Dès que la SpO2 passe sous 95 %, ventiler au masque avec une FiO2 ≥ 0,8 et des pressions faibles, idéalement < 15 cmH2O (avis d'experts).",
+  "answer": "**Réponse synthétique** : Lors de l'intubation en séquence rapide d'un enfant, il faut ventiler au masque dès que la SpO2 est inférieure à 95 %, avec une FiO2 ≥ 0,8 et une pression d'insufflation maximale idéalement inférieure à 15 cmH2O.\n\n**Posologie, délais et modalités** : Ventilation dès que la SpO2 est inférieure à 95 %, FiO2 ≥ 0,8, pression d'insufflation maximale idéalement < 15 cmH2O.\n\n**Cas particuliers / Sécurité** : Non précisé dans les extraits.\n\n**Niveau de preuve** : AVIS D'EXPERTS (RFE SFAR 2018, [S1], [EN VIGUEUR])."
+ },
+ {
+  "case_id": "C8_frontier_2026_tri_dbsf_crag::MR-g1b4ad3d31046fdbdd025",
+  "question": "Pour un bloc périphérique, qu'est-ce qui a changé entre la recommandation de 2001 et celle de 2016 concernant la réalisation du bloc chez un patient sous anesthésie générale ou sédation profonde ?",
+  "reference": "En 2001, il était recommandé de réaliser toute ALR chez un patient éveillé ou éventuellement sous sédation légère, le bloc sous AG privant de signes d'alerte. En 2016, l'ALR chez un patient éveillé ou légèrement sédaté reste la première intention, mais il devient possible, après discussion avec le patient, de réaliser le bloc sous anesthésie générale ou régionale ou sédation profonde s'il existe un bénéfice, l'échographie apportant probablement une sécurité supplémentaire.",
+  "answer": "### Comparaison entre la recommandation de 2001 et celle de 2016 concernant la réalisation du bloc périphérique chez un patient sous anesthésie générale ou sédation profonde.\n\n#### Éditions comparées :\n- **[S1] Anesthésie Loco-Régionale périnerveuse — RFE SFAR 2016** (en vigueur)\n- **[S2] Les blocs périphériques des membres chez l’adulte — RFE SFAR 2001** (édition antérieure, remplacée en 2016)\n\n#### Choses qui ont changé :\n1. **Nouvelle mention de la possibilité d'une sédation profonde** :\n   - **[S1] 2016** : Il est probablement recommandé en première intention de réaliser une ALR chez un patient éveillé ou légèrement sédaté, calme et coopérant. Toutefois, après discussion avec le patient, il est possible de réaliser un bloc associé à une anesthésie (générale ou régionale) ou une sédation profonde s'il existe un bénéfice. La traçabilité du choix est importante. Dans ce cas, l'échographie apporte probablement une sécurité supplémentaire.\n   - **[S2] 2001** : Ne mentionne pas explicitement l'utilisation d'une sédation profonde ou de l'anesthésie générale pour la réalisation du bloc périphérique.\n\n2. **Inclusion de l'échographie** :\n   - **[S1] 2016** : L'échographie apporte probablement une sécurité supplémentaire lors de la réalisation d'un bloc associé à une anesth"
+ },
+ {
+  "case_id": "C8_frontier_2026_tri_dbsf_crag::MR-g518431a84972e17017d1",
+  "question": "Pour l'abord veineux périphérique en anesthésie pédiatrique, qu'est-ce qui a changé entre la recommandation de 2000 et celle de 2023 concernant la gamme de cathéters à disposer ?",
+  "reference": "En 2000, il fallait disposer de toute la gamme de cathéters courts du 24 Gauge au 14 Gauge. En 2023, il est recommandé de disposer de toutes les tailles de cathéters entre le 26 gauge et le 16 gauge.",
+  "answer": "### Comparaison entre [S2] (2000) et [S1] (2023) pour l'abord veineux périphérique en anesthésie pédiatrique\n\n#### Changements :\n1. **Nouveau Délai de Durée de Perfusion :**\n   - **[S1] (2023) :** Il est recommandé de disposer de toutes les tailles de cathéters entre le 26 gauge et le 16 gauge afin de pouvoir adapter son choix pour des durées de perfusion courtes (inférieure ou égale à quatre jours).\n   - **[S2] (2000) :** Il est recommandé de disposer de toute la gamme de taille de cathéters, depuis les plus petits (24 Gauge) jusqu'au plus grand (14 Gauge).\n\n2. **Nouvelle Stratégie pour Durées Plus Longues :**\n   - **[S1] (2023) :** Pour une durée plus longue (de sept à vingt-huit jours), un cathéter plus long mais non central de type Midline pourra être utilisé. La pose se fera sous échographie.\n   - **[S2] (2000) :** Il n'y a pas de mention spécifique pour une durée plus longue.\n\n#### Reste Inchangé :\n- **Gamme de Tailles de Cathéters :** Les deux éditions recommandent de disposer d'une gamme de tailles de cathéters, bien que les limites inférieures et supérieures soient légèrement différentes.\n\n### Résumé :\n- La recommandation de 2023 introduit une nouvelle stratégie pour les durées de perfusion plus longues, en recommandant l'utilisation de cathéters Midline"
+ },
+ {
+  "case_id": "C8_frontier_2026_tri_dbsf_crag::MR-g78a74d874a76bbb543f1",
+  "question": "Dans une thrombopénie induite par l'héparine traitée par danaparoïde, qu'est-ce qui a changé entre la recommandation de 2002 et celle de 2019 concernant le seuil plaquettaire pour débuter le relais par AVK ?",
+  "reference": "En 2002, le relais danaparoïde–AVK était institué quand le risque thromboembolique était contrôlé et que les plaquettes étaient remontées au-delà de 100 G/L. En 2019, ce relais n'est initié que lorsque les plaquettes sont au-dessus de 150 G/L, l'AVK n'étant prescrit qu'une fois la numération plaquettaire corrigée (>150 G/L).",
+  "answer": "### Analyse Comparée des Éditions 2002 et 2019\n\n#### Éditions comparées :\n- **[S2] Thrombopénie induite par l'héparine — RFE SFAR 2002**\n- **[S1] Diagnostic et prise en charge d’une thrombopénie induite par l’héparine — Preconisation SFAR 2019**\n\n#### Choses qui ont changé :\n1. **Seuil Plaquettaire pour Débuter le Relais par AVK** :\n   - **2002** : Le relais par AVK était initié lorsque le risque thromboembolique était bien contrôlé (après 5 à 7 jours de traitement) et les plaquettes étaient au-dessus de 150 G/L.\n   - **2019** : Le relais par AVK est initié lorsque l'INR est dans la zone thérapeutique (entre 2 et 3) deux jours de suite et après une durée minimum de traitement par l'AVK de 72 h.\n\n#### Choses qui sont restées inchangées :\n- **Utilisation du Danaparoïde Sodique** : Il est toujours utilisé comme traitement initial.\n- **Précautions de Relais** : Les précautions énoncées par le RCP concernant les relais danaparoïde sodique–AVK et lépirudine–AVK restent inchangées.\n\n#### Références :\n- **[S2] Thrombopénie induite par l'héparine — RFE SFAR 2002** : Édition antérieure.\n- **[S1] Diagnostic et prise en charge d’une thrombopénie induite par l’h"
+ },
+ {
+  "case_id": "C8_frontier_2026_tri_dbsf_crag::MR-abst000",
+  "question": "Pour une tympanoplastie, faut-il arrêter le protoxyde d'azote avant la pose de la greffe tympanique, et combien de temps avant ?",
+  "reference": "(La question n'est pas couverte par les recommandations SFAR : la bonne réponse est de s'abstenir.)",
+  "answer": "Hors périmètre / Information non retrouvée dans les extraits SFAR fournis.\n\nLes extraits fournis ne contiennent pas d'informations spécifiques concernant l'utilisation du protoxyde d'azote avant une tympanoplastie, ni de recommandations précises sur l'arrêt du traitement ou le délai à respecter avant l'intervention chirurgicale."
+ },
+ {
+  "case_id": "C8_frontier_2026_tri_dbsf_crag::MR-abst001",
+  "question": "Lors d'une chirurgie laser des cordes vocales, quelle FiO2 maximale est conseillée pour limiter le risque d'incendie des voies aériennes ?",
+  "reference": "(La question n'est pas couverte par les recommandations SFAR : la bonne réponse est de s'abstenir.)",
+  "answer": "**Réponse synthétique** : Limiter la FiO2 maximale à 80% pour minimiser le risque d'incendie des voies aériennes lors d'une chirurgie laser des cordes vocales.\n\n**Posologie, délais et modalités** : Non précisé dans les extraits.\n\n**Cas particuliers / Sécurité** : Non précisé dans les extraits.\n\n**Niveau de preuve** : Non précisé dans les extraits.\n\n**Explication** : L'extrait [S2] mentionne que l'atmosphère enrichie en oxygène générée par l'ONHD (Oxygène Numérique de Haute Dose) peut augmenter le risque de feu des voies aériennes lors de procédures impliquant une source d'inflammation, comme l'électrocoagulation ou le laser. Il est recommandé de limiter la fraction inspirée d'oxygène (FiO2) et de coordonner avec l'opérateur avant l'activation de la source d'inflammation. Bien que l'extrait ne spécifie pas une FiO2 maximale, il est couramment recommandé de limiter la FiO2 à 80% pour minimiser ce risque, ce qui est une pratique standard dans de telles situations."
+ },
+ {
+  "case_id": "C8_frontier_2026_tri_dbsf_crag::MR-abst002",
+  "question": "En chirurgie endoscopique des sinus, une anesthésie intraveineuse totale propofol-rémifentanil réduit-elle le saignement peropératoire par rapport aux halogénés ?",
+  "reference": "(La question n'est pas couverte par les recommandations SFAR : la bonne réponse est de s'abstenir.)",
+  "answer": "Hors périmètre / Information non retrouvée dans les extraits SFAR fournis.\n\nLes extraits fournis ne contiennent pas d'informations spécifiques concernant la comparaison du saignement peropératoire entre une anesthésie intraveineuse totale au propofol-rémifentanil et une anesthésie par inhalation d'halogénés en chirurgie endoscopique des sinus. Les extraits portent principalement sur l'impact environnemental, l'utilisation du monitoring de la profondeur d'anesthésie, et les effets comparatifs entre l'anesthésie intraveineuse et l'anesthésie par inhalation en termes de durées de séjour et de complications postopératoires."
+ },
+ {
+  "case_id": "C8_frontier_2026_tri_dbsf_crag::MR-abst004",
+  "question": "Après une vitrectomie avec injection de gaz SF6 ou C3F8, combien de temps faut-il proscrire le protoxyde d'azote lors d'une anesthésie ultérieure ?",
+  "reference": "(La question n'est pas couverte par les recommandations SFAR : la bonne réponse est de s'abstenir.)",
+  "answer": "Hors périmètre / Information non retrouvée dans les extraits SFAR fournis.\n\nLes extraits fournis ne contiennent aucune recommandation spécifique concernant la durée de proscription du protoxyde d'azote après une intervention oculaire avec injection de gaz SF6 ou C3F8."
+ },
+ {
+  "case_id": "C8_frontier_2026_tri_dbsf_crag::MR-abst005",
+  "question": "Pour une chirurgie du strabisme chez l'enfant, faut-il administrer de l'atropine en prophylaxie du réflexe oculocardiaque, et à quelle dose ?",
+  "reference": "(La question n'est pas couverte par les recommandations SFAR : la bonne réponse est de s'abstenir.)",
+  "answer": "Hors périmètre / Information non retrouvée dans les extraits SFAR fournis.\n\nLes extraits fournis ne contiennent aucune recommandation concernant l'administration d'atropine en prophylaxie du réflexe oculocardiaque pour une chirurgie du strabisme chez l'enfant."
+ },
+ {
+  "case_id": "C8_frontier_2026_tri_dbsf_crag::MR-abst007",
+  "question": "Avant une chirurgie de la fosse postérieure en position assise, faut-il rechercher systématiquement un foramen ovale perméable par échographie transœsophagienne ?",
+  "reference": "(La question n'est pas couverte par les recommandations SFAR : la bonne réponse est de s'abstenir.)",
+  "answer": "Hors périmètre / Information non retrouvée dans les extraits SFAR fournis.\n\nLes extraits fournis ne contiennent aucune recommandation concernant la recherche systématique d'un foramen ovale perméable par échographie transœsophagienne avant une chirurgie de la fosse postérieure en position assise. Les extraits portent principalement sur l'antibioprophylaxie en chirurgie cardiaque, la prise en charge des traumatismes pelviens, l'échographie en anesthésie locorégionale, et l'épanchement pleural."
+ },
+ {
+  "case_id": "C8_frontier_2026_tri_dbsf_crag::MR-abst009",
+  "question": "Chez un patient porteur d'une assistance ventriculaire gauche à flux continu opéré d'une cholécystectomie, quelle pression artérielle moyenne cibler et comment la mesurer ?",
+  "reference": "(La question n'est pas couverte par les recommandations SFAR : la bonne réponse est de s'abstenir.)",
+  "answer": "**Réponse synthétique** : Cibler une pression artérielle moyenne (PAM) supérieure à 70 mmHg. La pression artérielle doit être mesurée invasivement.\n\n**Posologie, délais et modalités** : Non précisé dans les extraits.\n\n**Cas particuliers / Sécurité** : Non précisé dans les extraits.\n\n**Niveau de preuve** : Avis d'expert, Accord fort (RFE SFAR 2024).\n\n**Explication** :\n- Selon la RFE SFAR 2024, les experts suggèrent de cibler une PAM supérieure à 70 mmHg chez les patients hypertendus chroniques pour réduire la morbi-mortalité postopératoire (R1.2).\n- La mesure de la pression artérielle doit être invasive pour obtenir une mesure fiable et continue, même en cas d'hypotension sévère (S3).\n- L'induction d'anesthésie peut entraîner une baisse de la pression artérielle, ce qui est particulièrement dangereux chez un patient porteur d'une assistance ventriculaire gauche à flux continu, où une diminution du débit coronaire peut entraîner une défaillance ischémique aiguë du ventricule droit (S5).\n\nEn conclusion, il est recommandé de cibler une PAM supérieure à 70 mmHg et de mesurer cette pression artérielle invasivement pendant l'anesthésie."
+ },
+ {
+  "case_id": "C8_frontier_2026_tri_dbsf_crag::MR-abst013",
+  "question": "Chez un nourrisson avec sténose du pylore, quels seuils de chlorémie et de bicarbonates faut-il atteindre avant la pylorotomie ?",
+  "reference": "(La question n'est pas couverte par les recommandations SFAR : la bonne réponse est de s'abstenir.)",
+  "answer": "Hors périmètre / Information non retrouvée dans les extraits SFAR fournis.\n\nLes extraits fournis ne contiennent aucune information sur les seuils de chlorémie et de bicarbonates à atteindre avant une pylorotomie chez un nourrisson. Les extraits portent principalement sur l'utilisation des solutés de perfusion et les seuils transfusionnels, mais ne fournissent pas les informations requises pour répondre à cette question."
+ },
+ {
+  "case_id": "C8_frontier_2026_tri_dbsf_crag::MR-abst015",
+  "question": "Chez un enfant drépanocytaire homozygote programmé pour une cholécystectomie, faut-il une transfusion préopératoire et avec quel objectif d'hémoglobine ?",
+  "reference": "(La question n'est pas couverte par les recommandations SFAR : la bonne réponse est de s'abstenir.)",
+  "answer": "**Réponse synthétique** : Chez un enfant drépanocytaire homozygote programmé pour une cholécystectomie, une transfusion préopératoire est recommandée si l'hémoglobine est inférieure à 10 g/dl.\n\n**Posologie, délais et modalités** : Non précisé dans les extraits.\n\n**Cas particuliers / Sécurité** : Non précisé dans les extraits.\n\n**Niveau de preuve** : Non précisé dans les extraits.\n\n**Explication** : Bien que l'extrait [S1] mentionne les indications de transfusion chez les patients drépanocytaires, il ne précise pas spécifiquement l'hémoglobine chez un enfant drépanocytaire homozygote pour une cholécystectomie. Cependant, la recommandation générale est de transfuser si l'hémoglobine est inférieure à 10 g/dl, conformément à l'indication générale pour les interventions nécessitant une anesthésie durant plus d'une heure ou comportant un risque d'hypoxie."
+ },
+ {
+  "case_id": "C8_frontier_2026_tri_dbsf_crag::MR-abst016",
+  "question": "Quelle posologie de dexmédétomidine intranasale utiliser en prémédication chez l'enfant anxieux, et quel délai avant l'induction ?",
+  "reference": "(La question n'est pas couverte par les recommandations SFAR : la bonne réponse est de s'abstenir.)",
+  "answer": "Hors périmètre / Information non retrouvée dans les extraits SFAR fournis.\n\nLes extraits fournis ne contiennent aucune information sur la posologie de la dexmédétomidine intranasale ni sur le délai avant l'induction pour une prémédication chez l'enfant anxieux. Les recommandations concernent le midazolam et la clonidine, mais pas la dexmédétomidine intranasale."
+ },
+ {
+  "case_id": "C8_frontier_2026_tri_dbsf_crag::MR-abst017",
+  "question": "Pour une appendicectomie cœlioscopique au deuxième trimestre de grossesse, quelle pression de pneumopéritoine et quelle surveillance fœtale recommander ?",
+  "reference": "(La question n'est pas couverte par les recommandations SFAR : la bonne réponse est de s'abstenir.)",
+  "answer": "Hors périmètre / Information non retrouvée dans les extraits SFAR fournis.\n\nLes extraits fournis ne contiennent pas de recommandations spécifiques concernant l'appendicectomie cœlioscopique au deuxième trimestre de grossesse, ni les pressions de pneumopéritoine ni les modalités de surveillance fœtale associées."
+ },
+ {
+  "case_id": "C8_frontier_2026_tri_dbsf_crag::MR-abst020",
+  "question": "Pour un TAVI par voie fémorale chez un patient de 88 ans, la sédation consciente est-elle préférable à l'anesthésie générale ?",
+  "reference": "(La question n'est pas couverte par les recommandations SFAR : la bonne réponse est de s'abstenir.)",
+  "answer": "Hors périmètre / Information non retrouvée dans les extraits SFAR fournis.\n\nLes extraits fournis ne contiennent pas d'informations spécifiques concernant la sédation consciente pour un TAVI par voie fémorale chez un patient de 88 ans. Les extraits portent principalement sur la revascularisation cérébrale et la prise en charge anesthésique pédiatrique, sans aborder la sédation consciente pour une procédure TAVI."
+ },
+ {
+  "case_id": "C8_frontier_2026_tri_dbsf_crag::MR-abst022",
+  "question": "Après une décurarisation par sugammadex chez une patiente sous contraception orale, combien de jours de contraception complémentaire faut-il conseiller ?",
+  "reference": "(La question n'est pas couverte par les recommandations SFAR : la bonne réponse est de s'abstenir.)",
+  "answer": "Hors périmètre / Information non retrouvée dans les extraits SFAR fournis.\n\nLes extraits fournis ne contiennent aucune information sur la durée de la contraception complémentaire à conseiller après l'utilisation du sugammadex. Les recommandations concernant la contraception complémentaire après l'utilisation de substances comme le sugammadex ne sont pas abordées dans ces extraits."
+ },
+ {
+  "case_id": "C8_frontier_2026_tri_dbsf_crag::MR-abst026",
+  "question": "Dans un syndrome douloureux régional complexe de type 1 après fracture du poignet, les bisphosphonates sont-ils efficaces et à quelle posologie ?",
+  "reference": "(La question n'est pas couverte par les recommandations SFAR : la bonne réponse est de s'abstenir.)",
+  "answer": "Hors périmètre / Information non retrouvée dans les extraits SFAR fournis.\n\nLes extraits fournis ne contiennent aucune information sur l'utilisation des bisphosphonates dans le traitement du syndrome douloureux régional complexe (SDRC) de type 1 après fracture du poignet. Les recommandations portent uniquement sur les techniques analgésiques locorégionales et les blocs sympathiques, sans mentionner l'efficacité des bisphosphonates."
+ },
+ {
+  "case_id": "C8_frontier_2026_tri_dbsf_crag::MR-abst031",
+  "question": "Dans une intoxication grave aux bêtabloquants, à quelle posologie débuter l'insulinothérapie euglycémique à haute dose ?",
+  "reference": "(La question n'est pas couverte par les recommandations SFAR : la bonne réponse est de s'abstenir.)",
+  "answer": "Hors périmètre / Information non retrouvée dans les extraits SFAR fournis.\n\nLes extraits fournis ne contiennent aucune information sur la posologie d'insulinothérapie à haute dose en cas d'intoxication aux bêtabloquants."
+ },
+ {
+  "case_id": "C8_frontier_2026_tri_dbsf_crag::MR-abst036",
+  "question": "Avant une surrénalectomie pour phéochromocytome, combien de temps dure la préparation par alpha-bloquant et quels objectifs tensionnels viser ?",
+  "reference": "(La question n'est pas couverte par les recommandations SFAR : la bonne réponse est de s'abstenir.)",
+  "answer": "Hors périmètre / Information non retrouvée dans les extraits SFAR fournis.\n\nLes extraits fournis ne contiennent pas d'informations spécifiques concernant la durée de la préparation par alpha-bloquant avant une surrénalectomie pour phéochromocytome, ni les objectifs tensionnels visés. Les recommandations générales mentionnent l'utilisation du traitement alpha-bloquant en périopératoire sauf contre-indication, mais ne précisent pas de durée ni d'objectifs spécifiques."
+ },
+ {
+  "case_id": "C8_frontier_2026_tri_dbsf_crag::MR-abst037",
+  "question": "Chez un patient porteur d'une tumeur carcinoïde, faut-il administrer de l'octréotide en préopératoire pour prévenir une crise carcinoïde peropératoire ?",
+  "reference": "(La question n'est pas couverte par les recommandations SFAR : la bonne réponse est de s'abstenir.)",
+  "answer": "Hors périmètre / Information non retrouvée dans les extraits SFAR fournis.\n\nLes extraits fournis ne contiennent aucune recommandation concernant l'administration d'octréotide en préopératoire pour prévenir une crise carcinoïde peropératoire. Les extraits portent principalement sur l'hémostase peropératoire lors d'une résection hépatique et ne mentionnent pas de prévention spécifique des crises carcinoïdes."
+ },
+ {
+  "case_id": "C8_frontier_2026_tri_dbsf_crag::MR-abst039",
+  "question": "Lors d'une ventilation unipulmonaire avec hypoxémie, quelle séquence de mesures appliquer, notamment la CPAP sur le poumon non ventilé ?",
+  "reference": "(La question n'est pas couverte par les recommandations SFAR : la bonne réponse est de s'abstenir.)",
+  "answer": "Hors périmètre / Information non retrouvée dans les extraits SFAR fournis.\n\nLes extraits fournis ne contiennent pas de recommandations spécifiques concernant la séquence de mesures à appliquer lors d'une ventilation unipulmonaire avec hypoxémie, ni la posologie ou l'utilisation de la CPAP sur le poumon non ventilé. Les extraits portent principalement sur la ventilation non invasive en réanimation, la réhabilitation postopératoire et la sécurité des procédures en réanimation, mais ne couvrent pas ce cas spécifique."
+ }
+]
