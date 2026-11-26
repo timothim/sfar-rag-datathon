@@ -1,0 +1,254 @@
+familles (landing_url/titre): 180 dont multi-fichiers: 56
+docs avec mention explicite d'une version antérieure datée: 47
+paires de titres inter-années: 59 | dans la même lignée loader: 41 | ancienne non marquée superseded: 17
+
+=== Éditions candidates manquées par le loader (titre similaire, année différente) ===
+  2003→2008 J=1.0 C=1.0 mention=False
+     OLD Recommandations pour une formation spécifique et une reconnaissance du métier d’infirmier 
+     NEW Recommandations pour une formation spécifique et une reconnaissance du métier d’infirmier 
+  2002→2008 J=1.0 C=1.0 mention=False
+     OLD Recommandations pour une formation spécifique et une reconnaissance du métier d’infirmier 
+     NEW Recommandations pour une formation spécifique et une reconnaissance du métier d’infirmier 
+  2002→2003 J=1.0 C=1.0 mention=False
+     OLD Recommandations pour une formation spécifique et une reconnaissance du métier d’infirmier 
+     NEW Recommandations pour une formation spécifique et une reconnaissance du métier d’infirmier 
+  2016→2017 J=0.67 C=0.86 mention=False
+     OLD Prise en charge des traumatisés crâniens graves à la phase précoce (24 premières heures)
+     NEW Prise en charges des traumatises pelviens graves à la phase précoce (24 premières heures)
+  2016→2017 J=0.67 C=0.86 mention=False
+     OLD Prise en charge des traumatisés crâniens graves à la phase précoce (24 premières heures)
+     NEW Prise en charges des traumatises pelviens graves à la phase précoce (24 premières heures)
+  2016→2017 J=0.67 C=0.86 mention=False
+     OLD Prise en charge des traumatisés crâniens graves à la phase précoce (24 premières heures)
+     NEW Prise en charges des traumatises pelviens graves à la phase précoce (24 premières heures)
+  2016→2017 J=0.67 C=0.86 mention=False
+     OLD Prise en charge des traumatisés crâniens graves à la phase précoce (24 premières heures)
+     NEW Prise en charges des traumatises pelviens graves à la phase précoce (24 premières heures)
+  2018→2026 J=0.5 C=0.75 mention=False
+     OLD Gestion des agents antiplaquettaires pour une procédure invasive programmée
+     NEW Gestion des anticoagulants pour une procédure invasive programmée
+  2018→2026 J=0.5 C=0.75 mention=False
+     OLD Gestion des agents antiplaquettaires pour une procédure invasive programmée
+     NEW Gestion des anticoagulants pour une procédure invasive programmée
+  2014→2019 J=0.5 C=0.75 mention=False
+     OLD Traumatisme Thoracique : Prise en charge des 48 premières heures
+     NEW Prise en charge du traumatisme abdominal grave de l’adulte : les 48 premières heures
+  2014→2019 J=0.5 C=0.75 mention=False
+     OLD Traumatisme Thoracique : Prise en charge des 48 premières heures
+     NEW Prise en charge du traumatisme abdominal grave de l’adulte : les 48 premières heures
+  2014→2019 J=0.5 C=0.75 mention=False
+     OLD Traumatisme Thoracique : Prise en charge des 48 premières heures
+     NEW Prise en charge du traumatisme abdominal grave de l’adulte : les 48 premières heures
+  2014→2019 J=0.5 C=0.75 mention=False
+     OLD Traumatisme Thoracique : Prise en charge des 48 premières heures
+     NEW Prise en charge du traumatisme abdominal grave de l’adulte : les 48 premières heures
+  2019→2021 J=0.38 C=0.75 mention=False
+     OLD Gestion et prévention de l’anémie (hors hémorragie aigüe) chez le patient adulte de soins 
+     NEW Pancréatite aigüe du patient adulte en soins critiques
+  2019→2021 J=0.38 C=0.75 mention=False
+     OLD Gestion et prévention de l’anémie (hors hémorragie aigüe) chez le patient adulte de soins 
+     NEW Pancréatite aigüe du patient adulte en soins critiques
+  2018→2026 J=0.33 C=0.75 mention=False
+     OLD Gestion des agents antiplaquettaires en cas de procédure invasive non programmée ou d’hémo
+     NEW Gestion des anticoagulants pour une procédure invasive programmée
+  2018→2026 J=0.33 C=0.75 mention=False
+     OLD Gestion des agents antiplaquettaires en cas de procédure invasive non programmée ou d’hémo
+     NEW Gestion des anticoagulants pour une procédure invasive programmée
+
+=== Supersessions du loader : recouvrement de titre / mention explicite ===
+  [agents_antiplaquettaires_programme] 2006→2018 overlap=[] mention=non
+     OLD Gestion du traitement antiplaquettaire oral chez les patients porteurs d’endopro
+     NEW Gestion des agents antiplaquettaires pour une procédure invasive programmée
+  [agents_antiplaquettaires_programme] 2001→2018 overlap=['agents', 'antiplaquettaires'] mention=non
+     OLD Agents antiplaquettaires et période périopératoire
+     NEW Gestion des agents antiplaquettaires pour une procédure invasive programmée
+  [agents_antiplaquettaires_programme] 2001→2018 overlap=['agents', 'antiplaquettaires'] mention=non
+     OLD Agents antiplaquettaires et période périopératoire
+     NEW Gestion des agents antiplaquettaires pour une procédure invasive programmée
+  [alr_pediatrique] 2010→2026 overlap=['anesthesie'] mention=OUI
+     OLD Anesthésie loco-régionale en pédiatrie
+     NEW Anesthésie locorégionale en chirurgie pédiatrique
+  [antibioprophylaxie] 2018→2026 overlap=['antibioprophylaxie', 'chirurgie', 'interventionnelle', 'medecine'] mention=non
+     OLD Antibioprophylaxie en chirurgie et médecine interventionnelle (patients adultes)
+     NEW Antibioprophylaxie en chirurgie et médecine interventionnelle
+  [antibioprophylaxie] 2017→2026 overlap=['antibioprophylaxie', 'chirurgie', 'interventionnelle', 'medecine'] mention=non
+     OLD Antibioprophylaxie en chirurgie et médecine interventionnelle (patients adultes)
+     NEW Antibioprophylaxie en chirurgie et médecine interventionnelle
+  [antibioprophylaxie] 2017→2026 overlap=['antibioprophylaxie', 'chirurgie', 'interventionnelle', 'medecine'] mention=non
+     OLD Antibioprophylaxie en chirurgie et médecine interventionnelle (patients adultes)
+     NEW Antibioprophylaxie en chirurgie et médecine interventionnelle
+  [anticoagulants_procedure_programmee] 2021→2026 overlap=[] mention=non
+     OLD Gestion perioperatoire des patients sous AOD pour un acte programmé
+     NEW Gestion des anticoagulants pour une procédure invasive programmée
+  [anticoagulants_procedure_programmee] 2015→2026 overlap=[] mention=non
+     OLD La gestion périopératoire des patients sous AOD pour un acte programmé
+     NEW Gestion des anticoagulants pour une procédure invasive programmée
+  [anticoagulants_procedure_programmee] 2008→2026 overlap=[] mention=non
+     OLD Recommandations AVK
+     NEW Gestion des anticoagulants pour une procédure invasive programmée
+  [anticoagulants_urgence] 2021→2024 overlap=['urgence'] mention=non
+     OLD Gestion des patients sous AOD (dabigatran) en urgence
+     NEW Gestion de l’anticoagulation dans un contexte d’urgence
+  [anticoagulants_urgence] 2013→2024 overlap=['urgence'] mention=non
+     OLD Gestion périopératoire des AOD en urgence
+     NEW Gestion de l’anticoagulation dans un contexte d’urgence
+  [blocs_peripheriques_adulte] 2001→2016 overlap=[] mention=non
+     OLD Les blocs périphériques des membres chez l’adulte
+     NEW Anesthésie Loco-Régionale périnerveuse
+  [douleur_postoperatoire] 2008→2016 overlap=['douleur', 'postoperatoire'] mention=non
+     OLD Prise en charge de la douleur postopératoire chez l’adulte et l’enfant
+     NEW Réactualisation de la recommandation sur la douleur postopératoire
+  [douleur_postoperatoire] 2008→2016 overlap=['douleur', 'postoperatoire'] mention=non
+     OLD Prise en charge de la douleur postopératoire chez l’adulte et l’enfant
+     NEW Réactualisation de la recommandation sur la douleur postopératoire
+  [hypersensibilite_allergie_perioperatoire] 2011→2025 overlap=[] mention=OUI
+     OLD Prévention du risque allergique peranesthésique
+     NEW Diagnostic et prise en charge des réactions d’hypersensibilité immédiate périopé
+  [hyperthermie_maligne] 2013→2019 overlap=['hyperthermie', 'maligne'] mention=OUI
+     OLD Recommandations d’Experts pour le Risque d’HYPERTHERMIE MALIGNE en Anesthésie Ré
+     NEW Prise en charge de l’Hyperthermie Maligne
+  [infections_intra_abdominales] 2015→2026 overlap=['abdominales', 'infections', 'intra'] mention=OUI
+     OLD Prise en charge des infections intra-abdominales
+     NEW Prise en charge thérapeutique des Infections intra-abdominales de l’adulte
+  [infections_intra_abdominales] 2015→2026 overlap=['abdominales', 'infections', 'intra'] mention=OUI
+     OLD Prise en charge des infections intra-abdominales
+     NEW Prise en charge thérapeutique des Infections intra-abdominales de l’adulte
+  [nutrition_clinique_adulte] 2014→2026 overlap=['nutrition'] mention=non
+     OLD Nutrition artificielle en réanimation
+     NEW Nutrition clinique de l’adulte en contexte périopératoire et en soins critiques
+  [nutrition_clinique_adulte] 2010→2026 overlap=['nutrition', 'perioperatoire'] mention=non
+     OLD Recommandations de bonnes pratiques cliniques sur la nutrition périopératoire
+     NEW Nutrition clinique de l’adulte en contexte périopératoire et en soins critiques
+  [optimisation_hemodynamique_adulte] 2012→2024 overlap=['perioperatoire'] mention=non
+     OLD Stratégie du remplissage vasculaire périopératoire
+     NEW Optimisation hémodynamique périopératoire – Adulte dont obstétrique
+  [optimisation_hemodynamique_adulte] 2012→2024 overlap=['perioperatoire'] mention=non
+     OLD Stratégie du remplissage vasculaire périopératoire
+     NEW Optimisation hémodynamique périopératoire – Adulte dont obstétrique
+  [organisation_anesthesie_pediatrique] 2000→2023 overlap=['anesthesie', 'pediatrique'] mention=non
+     OLD Recommandations pour les structures et le matériel de l’anesthésie pédiatrique
+     NEW Organisation de l’anesthésie pédiatrique
+  [organisation_usc] 2002→2018 overlap=[] mention=non
+     OLD Recommandations SFAR-SRLF d’organisation des unités de surveillance continue
+     NEW Recommandations pour le fonctionnement des USC dans les établissements de santé
+  [pancreatite_aigue] 2001→2021 overlap=['aigue', 'pancreatite'] mention=non
+     OLD Pancréatite aiguë
+     NEW Pancréatite aigüe du patient adulte en soins critiques
+  [preeclampsie_severe] 2009→2020 overlap=[] mention=OUI
+     OLD Prise en charge multidisciplinaire des formes graves de prééclampsie
+     NEW Prise en charge de la patiente avec une pré-éclampsie sévère
+  [prevention_erreurs_medicamenteuses] 2016→2024 overlap=['erreurs', 'medicamenteuses', 'prevention'] mention=non
+     OLD Prévention des erreurs médicamenteuses en A-R
+     NEW Prévention des erreurs médicamenteuses
+  [prevention_erreurs_medicamenteuses] 2016→2024 overlap=['erreurs', 'medicamenteuses', 'prevention'] mention=non
+     OLD Prévention des erreurs médicamenteuses en A-R
+     NEW Prévention des erreurs médicamenteuses
+  [prevention_erreurs_medicamenteuses] 2006→2024 overlap=['erreurs', 'medicamenteuses', 'prevention'] mention=non
+     OLD Prévention des erreurs médicamenteuses en anesthésie
+     NEW Prévention des erreurs médicamenteuses
+  [prevention_mtev_perioperatoire] 2011→2024 overlap=['maladie', 'prevention', 'thromboembolique', 'veineuse'] mention=OUI
+     OLD Prévention de la maladie thromboembolique veineuse postopératoire
+     NEW Prévention de la maladie thromboembolique veineuse péri-opératoire
+  [sedation_urgences] 2010→2026 overlap=['sedation', 'urgence'] mention=OUI
+     OLD Sédation et analgésie en Structures d’Urgence
+     NEW Sédation procédurale en structure de Médecine d’Urgence
+  [sepsis_general] 2006→2025 overlap=['enfant'] mention=non
+     OLD Prise en charge initiale des états septiques graves de l’adulte et de l’enfant
+     NEW Prise en charge du sepsis du nouveau-né, de l’enfant et de l’adulte – HAS 2025
+  [sepsis_general] 2005→2025 overlap=['nouveau', 'sepsis'] mention=non
+     OLD Prise en charge hémodynamique du sepsis sévère (nouveau-né exclu)
+     NEW Prise en charge du sepsis du nouveau-né, de l’enfant et de l’adulte – HAS 2025
+  [sepsis_general] 2005→2025 overlap=['nouveau', 'sepsis'] mention=non
+     OLD Prise en charge hémodynamique du sepsis sévère (nouveau-né exclu)
+     NEW Prise en charge du sepsis du nouveau-né, de l’enfant et de l’adulte – HAS 2025
+  [sepsis_general] 2004→2025 overlap=[] mention=non
+     OLD Antibiothérapie probabiliste des états septiques graves
+     NEW Prise en charge du sepsis du nouveau-né, de l’enfant et de l’adulte – HAS 2025
+  [thrombopenie_induite_heparine] 2002→2019 overlap=['heparine', 'induite', 'thrombopenie'] mention=OUI
+     OLD Thrombopénie induite par l’héparine
+     NEW Diagnostic et prise en charge d’une thrombopénie induite par l’héparine
+  [traumatisme_vertebro_medullaire] 2003→2019 overlap=['presentant', 'traumatisme'] mention=OUI
+     OLD Prise en charge d’un blessé adulte présentant un traumatisme vertébro-médullaire
+     NEW Prise en charge des patients présentant, ou à risque, de traumatisme vertébroméd
+  [voies_aeriennes_adulte_bloc] 2017→2026 overlap=[] mention=non
+     OLD Intubation difficile et extubation en anesthésie chez l’adulte
+     NEW Prise en charge des voies aériennes de l’adulte au bloc opératoire
+  [voies_aeriennes_adulte_bloc] 2003→2026 overlap=['aeriennes', 'voies'] mention=non
+     OLD Prise en charge des voies aériennes en anesthésie adulte à l’exception de l’intu
+     NEW Prise en charge des voies aériennes de l’adulte au bloc opératoire
+  [voies_aeriennes_adulte_bloc] 2003→2026 overlap=['aeriennes', 'voies'] mention=non
+     OLD Prise en charge des voies aériennes en anesthésie adulte à l’exception de l’intu
+     NEW Prise en charge des voies aériennes de l’adulte au bloc opératoire
+  [voies_aeriennes_adulte_bloc] 2015→2026 overlap=[] mention=non
+     OLD Intubation difficile
+     NEW Prise en charge des voies aériennes de l’adulte au bloc opératoire
+  [voies_aeriennes_adulte_bloc] 1996→2026 overlap=[] mention=non
+     OLD Intubation difficile
+     NEW Prise en charge des voies aériennes de l’adulte au bloc opératoire
+  [voies_aeriennes_adulte_bloc] 2006→2026 overlap=[] mention=non
+     OLD Intubation difficile
+     NEW Prise en charge des voies aériennes de l’adulte au bloc opératoire
+
+=== Mentions explicites (extraits) ===
+  data/sfar_recommendations/output/chandra/2002/REANIMATION_Prise-en-charge-des-crises-dasthme-aigues-graves-de-ladulte-et-de-lenfant-/REANIMATION_Prise-en-charge-des-crises-dasthme-aigues-graves-de-ladulte-et-de-lenfant-.md:1 [1988]  «## Révision de la troisième Conférence de consensus en réanimation et médecine d'Urgence de 1988 : Prise en charge des crises d'asthme aiguës graves de l'adulte et de l'enfant (à l'exclusion du nourri»
+  data/sfar_recommendations/output/chandra/2008/2a_AFAR_Prise-en-charge-de-la-douleur-postoperatoire-chez-ladulte-et-lenfant/2a_AFAR_Prise-en-charge-de-la-douleur-postoperatoire-chez-ladulte-et-lenfant.md:23 [1997]  «La méthodologie de la recommandation formalisée d'experts (RFE), explicitée plus loin, est plus légère que celle de la conférence de consensus de 1997 et permet de proposer une révision de la conféren»
+  data/sfar_recommendations/output/chandra/2008/2a_AFAR_Prise-en-charge-de-la-douleur-postoperatoire-chez-ladulte-et-lenfant/2a_AFAR_Prise-en-charge-de-la-douleur-postoperatoire-chez-ladulte-et-lenfant.md:1 [1997]  «☆ Actualisation de la conférence de consensus de 1997»
+  data/sfar_recommendations/output/chandra/2008/2b_AFAR_ANGLAISEExpert-panel-guidelines-2008.-Postoperative-pain-management-in-adults-and-children.-SFAR-Committees-on-Pain-and-Local-Regional-Anaesthesia-and-on-Standards./2b_AFAR_ANGLAISEExpert-panel-guidelines-2008.-Postoperative-pain-management-in-adults-and-children.-SFAR-Committees-on-Pain-and-Local-Regional-Anaesthesia-and-on-Standards..md:1 [1997]  «☆ Update of the 1997 consensus conference guidelines»
+  data/sfar_recommendations/output/chandra/2009/2_SFAR_Prise-en-charge-pre-et-interhospitaliere-des-formes-graves-de-preeclampsie/2_SFAR_Prise-en-charge-pre-et-interhospitaliere-des-formes-graves-de-preeclampsie.md:23 [2000]  «Ce travail d'actualisation d'une conférence d'experts datant de 2000 a été initié par le comité des référentiels de la SFAR avec l'aval du conseil d'administration»
+  data/sfar_recommendations/output/chandra/2010/2_AFAR_Nutrition-artificielle-perioperatoire-en-chirurgie-programmee-de-ladulte/2_AFAR_Nutrition-artificielle-perioperatoire-en-chirurgie-programmee-de-ladulte.md:3 [2010, 1994]  «Actualisation 2010 de la conférence de consensus de 1994 sur la « Nutrition artificielle périopératoire en chirurgie programmée de l'adulte » ☆ **»
+  data/sfar_recommendations/output/chandra/2010/2_AFAR_Nutrition-artificielle-perioperatoire-en-chirurgie-programmee-de-ladulte/2_AFAR_Nutrition-artificielle-perioperatoire-en-chirurgie-programmee-de-ladulte.md:5 [1994]  «Update of the 1994 consensus conference on “Perioperative artificial nutrition after elective surgery in adults”**»
+  data/sfar_recommendations/output/chandra/2010/2_AFAR_Sedation-analgesie-en-structure-d-urgence/2_AFAR_Sedation-analgesie-en-structure-d-urgence.md:6 [1999]  «### Sédation et analgésie en structure d'urgence (Réactualisation de la Conférence d'experts de la Sfar de 1999)»
+  data/sfar_recommendations/output/chandra/2010/2_AFAR_Sedation-analgesie-en-structure-d-urgence/2_AFAR_Sedation-analgesie-en-structure-d-urgence.md:68 [1993]  «Ce document ne prétend donc pas réactualiser la conférence de consensus réalisée par la Société francophone des urgences médicales en 1993»
+  data/sfar_recommendations/output/chandra/2010/2_ANAES_Prise-en-charge-de-l-interruption-volontaire-de-grossesse-jusqu-a-14-semaines/2_ANAES_Prise-en-charge-de-l-interruption-volontaire-de-grossesse-jusqu-a-14-semaines.md:7 [2010]  «**Concernant l'IVG par méthode médicamenteuse, se référer aux recommandations de la HAS finalisées en décembre 2010, qui actualisent les recommandations ci-dessous»
+  data/sfar_recommendations/output/chandra/2010/2_SFAR_Anesthesie-loco-regionale-en-pediatrie/2_SFAR_Anesthesie-loco-regionale-en-pediatrie.md:7 [1997]  «Ces recommandations formalisées actualisent la Conférence d'Experts organisée par la Société Française d'Anesthésie et de Réanimation (SFAR) en 1997»
+  data/sfar_recommendations/output/chandra/2010/2a_HAS_texte-court_Delivrance-de-linformation-a-la-personne-sur-son-etat-de-sante/2a_HAS_texte-court_Delivrance-de-linformation-a-la-personne-sur-son-etat-de-sante.md:19 [2000]  «Cette recommandation de bonne pratique actualise celle sur « Information des patients - Recommandations destinées aux médecins » de mars 2000»
+  data/sfar_recommendations/output/chandra/2011/2_AFAR_Prevention-du-risque-allergique-peranesthesique/2_AFAR_Prevention-du-risque-allergique-peranesthesique.md:27 [2001, 2002]  «Les recommandations réactualisées avaient été élaborées en 2001 à l'initiative de la Sfar et de la Société française d'allergologie et d'immunologie (SFAIC devenue SFA) et publiées en 2002»
+  data/sfar_recommendations/output/chandra/2012/2_HAS_Texte-court-ransfusion-de-plasma-therapeutique-Produits-indications/2_HAS_Texte-court-ransfusion-de-plasma-therapeutique-Produits-indications.md:56 [2011, 1991]  «Depuis l'abrogation le 13 juillet 2011 de l'arrêté du 3 décembre 1991, les recommandations de l'ANSM constituent l'unique référence officielle pour ce qui concerne la prescription du plasma»
+  data/sfar_recommendations/output/chandra/2012/2_HAS_Texte-court-ransfusion-de-plasma-therapeutique-Produits-indications/2_HAS_Texte-court-ransfusion-de-plasma-therapeutique-Produits-indications.md:60 [2008]  «L'actualisation des recommandations s'est faite dans un contexte de réévaluation du bénéfice-risque d'une des méthodes de préparation des plasmas, la technique de viro-atténuation par le bleu de méthy»
+  data/sfar_recommendations/output/chandra/2012/3_AFAR_LONG_Bris-dentaires-perianesthesiques-copie/3_AFAR_LONG_Bris-dentaires-perianesthesiques-copie.md:149 [2006]  «** Les critères prédictifs d'intubation difficile ont été précisés dans la conférence d'experts réactualisée en 2006 [12]»
+  data/sfar_recommendations/output/chandra/2012/AFAR_Examens-preinterventionnels-systematiques/AFAR_Examens-preinterventionnels-systematiques.md:106 [1998]  «L'objectif de cette recommandation formalisée d'experts (RFE) est d'assurer une réactualisation des recommandations éditées par l'Agence nationale d'accréditation et d'évaluation en santé (Anaes) en 1»
+  data/sfar_recommendations/output/chandra/2014/2_HAS_transfusion_de_globules_rouges_homologues_-_produits_indications_alternatives_-_recommandations/2_HAS_transfusion_de_globules_rouges_homologues_-_produits_indications_alternatives_-_recommandations.md:131 [2002]  «Il était demandé à la HAS d'actualiser les recommandations de l'Afssaps de 2002 intitulées « Transfusions de globules rouges homologues : produits, indications, alternatives »»
+  data/sfar_recommendations/output/chandra/2014/2_HAS_transfusion_de_globules_rouges_homologues_-_produits_indications_alternatives_-_recommandations/2_HAS_transfusion_de_globules_rouges_homologues_-_produits_indications_alternatives_-_recommandations.md:135 [2002]  «L'objectif est d'actualiser les recommandations de l'Afssaps de 2002 intitulées « Transfusions de globules rouges homologues : produits, indications, alternatives »»
+  data/sfar_recommendations/output/chandra/2015/Reactualisation-GIHP_AOD_actes-programmes_Septembre-20151/Reactualisation-GIHP_AOD_actes-programmes_Septembre-20151.md:3 [2015]  «## **Gestion des Anticoagulants Oraux Directs pour la chirurgie et les actes invasifs programmés : propositions réactualisées du Groupe d'Intérêt en Hémostase Périopératoire (GIHP)-Septembre 2015**»
+  data/sfar_recommendations/output/chandra/2016/2-SFAR-RFE-tabac_proposition-CRC/2-SFAR-RFE-tabac_proposition-CRC.md:101 [2005]  «pourquoi la SFAR, au travers de son Conseil d'Administration, a décidé en lien avec la SFT, le CNCT, la SOFCOT, le CNP de Chirurgie Plastique et le CNP de Chirurgie Thoracique et Cardio-vasculaire de »
+  data/sfar_recommendations/output/chandra/2016/RFE-ANREA-Organisation-de-l-anesthesie-reanimation-obstetricale/RFE-ANREA-Organisation-de-l-anesthesie-reanimation-obstetricale.md:135 [1992]  «Pour mettre à jour les recommandations sur l'analgesie obstétricale éditée par la Société française d'anesthésie et de réanimation (Sfar) en 1992, les RP sont formalisées à partir des textes réglement»
+  data/sfar_recommendations/output/chandra/2016/RFE-Guidelines-on-smoking-management-during-the-perioperative-period/RFE-Guidelines-on-smoking-management-during-the-perioperative-period.md:91 [2005]  «l contre le tabagisme*), the *SOFCOT* (*Société française de chirurgie orthopédique et traumatologique*), the *CNP de chirurgie plastique* and the *CNP de chirurgie thoracique et cardiovasculaire* to »
+  data/sfar_recommendations/output/chandra/2016/RFE-Management-of-severe-traumatic-brain-injury/RFE-Management-of-severe-traumatic-brain-injury.md:126 [1998]  «A large part of the 1998 guidelines remains valid and we present updated recommendations in the present material»
+  data/sfar_recommendations/output/chandra/2016/rfe-anesthesie-loco-regionale-perinerveuse/rfe-anesthesie-loco-regionale-perinerveuse.md:43 [2003, 2003]  «iffusé en 2003 par la Société française d'anesthésie et de réanimation (recommandations pour la pratique clinique en ALR, RPC-ALR 2003), détaillant les données anatomocliniques et les techniques, une »
+  data/sfar_recommendations/output/chandra/2016/rfe-anesthesie-loco-regionale-perinerveuse/rfe-anesthesie-loco-regionale-perinerveuse.md:59 [2003]  «*Since the former French guidelines, published in 2003, on perineural anaesthesia (PNA) dealing about anatomical data and detailed practices, an update appeared relevant, as new tools and knowledge sh»
+  data/sfar_recommendations/output/chandra/2016/rfe-revision-of-expert-panel-guidelines-on-postoperative-pain-management/rfe-revision-of-expert-panel-guidelines-on-postoperative-pain-management.md:47 [2008]  «This was an update of the 2008 guidelines»
+  data/sfar_recommendations/output/chandra/2017/Antibioprophylaxie-version-2017-CRC_CA_MODIF/Antibioprophylaxie-version-2017-CRC_CA_MODIF.md:108 [1992]  «Depuis 1992 la Sfar a établi et régulièrement actualisé des recommandations pour encadrer la prescription de l'ABP en chirurgie et en médecine interventionnelle pour les patients adultes»
+  data/sfar_recommendations/output/chandra/2017/Antibioprophylaxie-version-2017-CRC_CA_MODIF/Antibioprophylaxie-version-2017-CRC_CA_MODIF.md:108 [2010]  «Les dernières recommandations ont été établies en 2010 et font l'objet d'une actualisation en fonction des données de la littérature publiées depuis cette date»
+  data/sfar_recommendations/output/chandra/2017/RFE-ANREA-Intubation-difficile-et-extubation-en-anesthesie-chez-l-adulte/RFE-ANREA-Intubation-difficile-et-extubation-en-anesthesie-chez-l-adulte.md:88 [2006]  «Ces recommandations formalisées sont le résultat du travail d'un groupe d'experts réunis par la Société française d'anesthésie et de réanimation (SFAR) afin de réactualiser la Conférence d'experts/int»
+  data/sfar_recommendations/output/chandra/2018/2_RFE-CURARE-3/2_RFE-CURARE-3.md:17 [1999]  «** Mettre à jour le référentiel français sur l'utilisation des curares en anesthésie qui datait de 1999»
+  data/sfar_recommendations/output/chandra/2018/2_RFE-CURARE-3/2_RFE-CURARE-3.md:27 [1999]  «** To provide an update to French guidelines about « Muscle relaxants and reversal in anaesthesia 1999»»
+  data/sfar_recommendations/output/chandra/2018/Antibioprophylaxie-RFE-mise-a-jour-2018/Antibioprophylaxie-RFE-mise-a-jour-2018.md:106 [1992]  «Depuis 1992 la Sfar a établi et régulièrement actualisé des recommandations pour encadrer la prescription de l'ABP en chirurgie et en médecine interventionnelle pour les patients adultes»
+  data/sfar_recommendations/output/chandra/2018/Antibioprophylaxie-RFE-mise-a-jour-2018/Antibioprophylaxie-RFE-mise-a-jour-2018.md:106 [2010]  «Les dernières recommandations ont été établies en 2010 et font l'objet d'une actualisation en fonction des données de la littérature publiées depuis cette date»
+  data/sfar_recommendations/output/chandra/2019/diagnostic-et-prise-ne-charge-dune-TIH/diagnostic-et-prise-ne-charge-dune-TIH.md:27 [2002]  «Un premier texte reprenant les données actualisées de la littérature et des recommandations britanniques (3), de l'ACCP (2) ainsi que celles plus récemment émises par l'ASH (4) a été écrit en partant »
+  data/sfar_recommendations/output/chandra/2019/propositions-tih-gihp-gfht-sfar%20/propositions-tih-gihp-gfht-sfar%20.md:27 [2002]  «Un premier texte reprenant les données actualisées de la littérature et des recommandations britanniques (3), de l'ACCP (2) ainsi que celles plus récemment émises par l'ASH (4) a été écrit en partant »
+  data/sfar_recommendations/output/chandra/2019/rfe-trauma-vertebro-medulaire/rfe-trauma-vertebro-medulaire.md:99 [2004]  «** Mettre à jour le référentiel français de « Prise en charge d'un blessé adulte présentant un traumatisme vertébro-médullaire » datant de 2004»
+  data/sfar_recommendations/output/chandra/2019/rfe-trauma-vertebro-medulaire/rfe-trauma-vertebro-medulaire.md:123 [2003]  «Ces recommandations sont donc une actualisation des recommandations de 2003, à la lumière de la progression dans la connaissance des patients traumatisés vertébro-médullaires au cours des dix dernière»
+  data/sfar_recommendations/output/chandra/2019/rpp-hyperthermie-maligne/rpp-hyperthermie-maligne.md:13 [2013]  «*Ce document est une mise à jour des Recommandations d'Experts pour le risque d'HYPERTHERMIE MALIGNE en anesthésie-réanimation de septembre 2013»
+  data/sfar_recommendations/output/chandra/2020/RFE%20pr%C3%A9-%C3%A9clampsie_finale/RFE%20pr%C3%A9-%C3%A9clampsie_finale.md:71 [2009]  «Les objectifs de ces nouvelles recommandations sont non seulement de proposer une définition actualisée de la pré-éclampsie sévère et de mettre à jour celles émises en 2009, tel l'algorithme de prise »
+  data/sfar_recommendations/output/chandra/2021/Gestion%20perioperatoire%20des%20patients%20sous%20AOD%20en%20urgence/Gestion%20perioperatoire%20des%20patients%20sous%20AOD%20en%20urgence.md:1 [2016]  «### Réactualisation des propositions du Groupe d'Intérêt en Hémostase Périopératoire (GIHP) - septembre 2016»
+  data/sfar_recommendations/output/chandra/2021/Gestion%20perioperatoire%20des%20patients%20sous%20AOD%20pour%20un%20acte%20programm%C3%A9/Gestion%20perioperatoire%20des%20patients%20sous%20AOD%20pour%20un%20acte%20programm%C3%A9.md:5 [2015]  «## **Gestion des Anticoagulants Oraux Directs pour la chirurgie et les actes invasifs programmés : propositions réactualisées du Groupe d'Intérêt en Hémostase Périopératoire (GIHP)--Septembre 2015**»
+  data/sfar_recommendations/output/chandra/2022/RPP%20SFAR%20COVID_Version%20Avril%202022_finale%20sans%20marque/RPP%20SFAR%20COVID_Version%20Avril%202022_finale%20sans%20marque.md:65 [2022]  «Vous trouverez ci-dessous une version actualisée des Recommandations de Pratiques Professionnelles intitulées : « Préconisations pour l'adaptation de l'offre de soins en anesthésie-réanimation dans le»
+  data/sfar_recommendations/output/chandra/2022/RPP-SFAR-COVID_Version-Avril-2022_abrogee-010723/RPP-SFAR-COVID_Version-Avril-2022_abrogee-010723.md:63 [2022]  «Vous trouverez ci-dessous une version actualisée des Recommandations de Pratiques Professionnelles intitulées : « Préconisations pour l'adaptation de l'offre de soins en anesthésie-réanimation dans le»
+  data/sfar_recommendations/output/chandra/2022/RPP-Trauma-cranien-leger_pour-mise-sur-site_autorship-complet/RPP-Trauma-cranien-leger_pour-mise-sur-site_autorship-complet.md:171 [2013]  «Un scanner cérébral avec injection doit être pratiqué devant les signes cliniques évocateurs de dissection carotidienne (*conférence d'actualisation 2013 : lésions traumatiques des vaisseaux du cou*) »
+  data/sfar_recommendations/output/chandra/2023/RPP-Anestheesie-adulte-porteur-CC_fiches-pratiques_pour-mise-sur-site/RPP-Anestheesie-adulte-porteur-CC_fiches-pratiques_pour-mise-sur-site.md:142 [2015]  «[3] Gestion des Anticoagulants Oraux Directs pour la chirurgie et les actes invasifs programmés : propositions réactualisées du Groupe d'Intérêt en Hémostase Périopératoire (GIHP)-Septembre 2015»
+  data/sfar_recommendations/output/chandra/2024/240516-Txt-definitif-/240516-Txt-definitif-.md:25 [2011]  «**Actualisation des recommandations formalisées d'experts de la SFAR de 2011**»
+  data/sfar_recommendations/output/chandra/2024/240516-Txt-definitif-/240516-Txt-definitif-.md:296 [2011]  «Un premier texte reprenant les recommandations de 2011 et les données actualisées de la littérature a été écrit»
+  data/sfar_recommendations/output/chandra/2025/2025_SFAR-SFA_RFE-Diagnostic-et-prise-en-charge-des-reactions-dhypersensibilite-immediate-perioperatoires/2025_SFAR-SFA_RFE-Diagnostic-et-prise-en-charge-des-reactions-dhypersensibilite-immediate-perioperatoires.md:143 [2011]  «Ces recommandations formalisées d'experts sont une actualisation des recommandations conjointes éditées par la SFAR et la SFA en 2011 sous le titre initial : Prévention du risque allergique peranesthé»
+  data/sfar_recommendations/output/chandra/2025/2025_SFAR-SFA_RFE-Diagnostic-et-prise-en-charge-des-reactions-dhypersensibilite-immediate-perioperatoires/2025_SFAR-SFA_RFE-Diagnostic-et-prise-en-charge-des-reactions-dhypersensibilite-immediate-perioperatoires.md:191 [2011]  «Reducing the Risk of Anaphylaxis During Anesthesia: 2011 Updated Guidelines for Clinical Practice»
+  data/sfar_recommendations/output/chandra/2026/RFE-Infections-intra-abdominales-version-lecture-doc-finale-14-08-26-depose-site-sans-filigrane/RFE-Infections-intra-abdominales-version-lecture-doc-finale-14-08-26-depose-site-sans-filigrane.md:143 [2015]  «Cette actualisation a suivi la méthodologie GRADE, permettant une analyse rigoureuse de la littérature, et conduit à certains ajustements de gradation par rapport aux RFE de 2015»
+  data/sfar_recommendations/output/chandra/2026/RFE-Infections-intra-abdominales-version-lecture-doc-finale-14-08-26-depose-site-sans-filigrane/RFE-Infections-intra-abdominales-version-lecture-doc-finale-14-08-26-depose-site-sans-filigrane.md:183 [2024]  «2024 Clinical Practice Guideline Update by the Infectious Diseases Society of America on Complicated Intra-abdominal Infections: Risk Assessment, Diagnostic Imaging, and Microbiological Evaluation in »
+  data/sfar_recommendations/output/chandra/2026/RFE_sedationproceduraleUrgences_24juin2026/RFE_sedationproceduraleUrgences_24juin2026.md:99 [2010]  «*Contexte et justification* : Vingt-six ans après la première conférence d'experts de la SFAR [1] et seize ans après la recommandation conjointe SFMU-SFAR de 2010 [2], une réactualisation des recomman»
+  data/sfar_recommendations/output/chandra/2026/TEXTE-RFE-ALR-PEDIA-VERSION-FINALE-010926/TEXTE-RFE-ALR-PEDIA-VERSION-FINALE-010926.md:113 [2010]  «jointement par la Société Française d'Anesthésie Réanimation (SFAR) et l'Association Des Anesthésistes-Réanimateurs Pédiatriques d'Expression Française (ADARPEF), ont pour objectif de compléter et de »
+  data/sfar_recommendations/output/chandra/2026/TEXTE-RFE-ALR-PEDIA-VERSION-FINALE-010926/TEXTE-RFE-ALR-PEDIA-VERSION-FINALE-010926.md:119 [2010, 1997]  «Les précédentes recommandations formalisées d'experts sur l'anesthésie locorégionale pédiatrique ont été publiées en 2010 par la SFAR et l'ADARPEF [1], actualisant une conférence d'experts de 1997»
+  data/sfar_recommendations/output/chandra/2026/Version-courte/Version-courte.md:191 [2023]  «Les recommandations européennes actualisées en 2023 distinguent ainsi [25] :»
+  data/sfar_recommendations/output/chandra/2026/Version-longue/Version-longue.md:189 [2023]  «Les recommandations européennes actualisées en 2023 distinguent ainsi [25] :»
+  data/sfar_recommendations/output/chandra/unknown/2a_SFAR_texte_court_Intubation-difficile/2a_SFAR_texte_court_Intubation-difficile.md:34 [1996]  «Cette conférence d'experts est une réactualisation de la conférence d'experts organisée par la Société française d'anesthésie et de réanimation (Sfar) en 1996»
+  data/sfar_recommendations/output/chandra/unknown/2b_AFAR_Texte-Long_Intubation-difficile/2b_AFAR_Texte-Long_Intubation-difficile.md:7 [1996]  «La conférence d'experts publiée en 1996 [1] vient d'être réactualisée»
+  data/sfar_recommendations/output/chandra/unknown/BJA-2015-reco-ventilation-et-IOT1/BJA-2015-reco-ventilation-et-IOT1.md:80 [2012]  «The Difficult Airway Society commissioned a working group to update the guidelines in April 2012»
+  data/sfar_recommendations/output/chandra/unknown/BJA-2015-reco-ventilation-et-IOT1/BJA-2015-reco-ventilation-et-IOT1.md:84 [2013, 2014]  «Presentations were given at the 2013 and 2014 DAS Annual Scientific meetings, updates were posted on the DAS website, and members were invited to complete an online survey about which areas of the exi»
+  data/sfar_recommendations/output/chandra/unknown/recommandations_-_delivrance_de_linformation_a_la_personne_sur_son_etat_de_sante/recommandations_-_delivrance_de_linformation_a_la_personne_sur_son_etat_de_sante.md:19 [2000]  «Cette recommandation de bonne pratique actualise celle sur « Information des patients - Recommandations destinées aux médecins » de mars 2000»

@@ -1,0 +1,327 @@
+{
+ "corpus_totals": {
+  "ctrl_or_nul": 266,
+  "replacement_char": 0,
+  "private_use": 0,
+  "latex_inline": 4133,
+  "math_tag": 586,
+  "sup_tag": 6082,
+  "sub_tag": 1210,
+  "image_alt": 1130,
+  "mermaid_block": 0,
+  "checkbox": 549,
+  "glued_heading": 1707,
+  "table_then_text_glued": 507,
+  "html_entity": 2051,
+  "hyphen_break": 89,
+  "double_numbering": 1833,
+  "double_bullet": 10588,
+  "page_number_line": 40,
+  "ligature": 0,
+  "nbsp_like": 1891,
+  "repeated_lines_occ": 1135,
+  "cut_sentences": 505,
+  "image_alt_chars": 100874,
+  "image_alt_english": 1050,
+  "non_nfc_docs": 0
+ },
+ "docs_with_defect": {
+  "ctrl_or_nul": 2,
+  "replacement_char": 0,
+  "private_use": 0,
+  "latex_inline": 192,
+  "math_tag": 70,
+  "sup_tag": 211,
+  "sub_tag": 110,
+  "image_alt": 201,
+  "mermaid_block": 0,
+  "checkbox": 13,
+  "glued_heading": 210,
+  "table_then_text_glued": 119,
+  "html_entity": 124,
+  "hyphen_break": 54,
+  "double_numbering": 97,
+  "double_bullet": 229,
+  "page_number_line": 11,
+  "ligature": 0,
+  "nbsp_like": 29,
+  "repeated_lines_occ": 56,
+  "cut_sentences": 106
+ },
+ "units_occurrences": {
+  "µg (micro sign U+00B5)": 492,
+  "μg (grec U+03BC)": 0,
+  "mcg": 10,
+  "mg/kg": 1094,
+  "mg.kg-1 / mg·kg−1": 6,
+  "UI/kg": 163,
+  "≥ (unicode)": 362,
+  "\\geq (LaTeX)": 541,
+  ">= (ascii)": 33,
+  "décimale virgule (ex 0,5 mg)": 1077,
+  "décimale point (ex 0.5 mg)": 163
+ },
+ "units_docs": {
+  "µg (micro sign U+00B5)": 66,
+  "μg (grec U+03BC)": 0,
+  "mcg": 3,
+  "mg/kg": 80,
+  "mg.kg-1 / mg·kg−1": 2,
+  "UI/kg": 23,
+  "≥ (unicode)": 74,
+  "\\geq (LaTeX)": 112,
+  ">= (ascii)": 4,
+  "décimale virgule (ex 0,5 mg)": 114,
+  "décimale point (ex 0.5 mg)": 34
+ },
+ "worst_docs": {
+  "ctrl_or_nul": [
+   [
+    198,
+    "data/sfar_recommendations/output/chandra/2022/RFE-Programme-doptimisation-perioperatoire_pour-mise-sur-site_260922/RFE-Programme-doptimisation-perioperatoire_pour-mise-sur-site_260922.md"
+   ],
+   [
+    68,
+    "data/sfar_recommendations/output/chandra/2025/RESECTION_-HEPATIQUE_-RECOMMANDATIONS_MEL/RESECTION_-HEPATIQUE_-RECOMMANDATIONS_MEL.md"
+   ],
+   [
+    0,
+    "data/sfar_recommendations/output/chandra/unknown/recommandations_-_delivrance_de_linformation_a_la_personne_sur_son_etat_de_sante/recommandations_-_delivrance_de_linformation_a_la_personne_sur_son_etat_de_sante.md"
+   ],
+   [
+    0,
+    "data/sfar_recommendations/output/chandra/unknown/livretadaptationIDEReanimation/livretadaptationIDEReanimation.md"
+   ],
+   [
+    0,
+    "data/sfar_recommendations/output/chandra/unknown/guide-mise-en-place-gestion-reanimation-ephemere/guide-mise-en-place-gestion-reanimation-ephemere.md"
+   ]
+  ],
+  "repeated_lines_occ": [
+   [
+    201,
+    "data/sfar_recommendations/output/chandra/2023/RFE-antibioprophylaxie-2023_V3.0_pour-mise-sur-site-juin-2026_sans-code-CCAM/RFE-antibioprophylaxie-2023_V3.0_pour-mise-sur-site-juin-2026_sans-code-CCAM.md"
+   ],
+   [
+    66,
+    "data/sfar_recommendations/output/chandra/2016/RFE-ANREA-Prise-en-charge-des-traumatises-craniens-graves-a-la-phase-precoce/RFE-ANREA-Prise-en-charge-des-traumatises-craniens-graves-a-la-phase-precoce.md"
+   ],
+   [
+    62,
+    "data/sfar_recommendations/output/chandra/2026/Reco_ECBU_Argumentaire_04.03.2026_MEL/Reco_ECBU_Argumentaire_04.03.2026_MEL.md"
+   ],
+   [
+    55,
+    "data/sfar_recommendations/output/chandra/2022/RPP-SFAR-COVID_Version-Avril-2022_abrogee-010723/RPP-SFAR-COVID_Version-Avril-2022_abrogee-010723.md"
+   ],
+   [
+    55,
+    "data/sfar_recommendations/output/chandra/2022/RPP%20SFAR%20COVID_Version%20Avril%202022_finale%20sans%20marque/RPP%20SFAR%20COVID_Version%20Avril%202022_finale%20sans%20marque.md"
+   ]
+  ],
+  "cut_sentences": [
+   [
+    24,
+    "data/sfar_recommendations/output/chandra/unknown/2b_AFAR_Texte-Long_Intubation-difficile/2b_AFAR_Texte-Long_Intubation-difficile.md"
+   ],
+   [
+    24,
+    "data/sfar_recommendations/output/chandra/2013/2_PUROL_Recommandations-chirurgie-ambulatoire-en-urologie/2_PUROL_Recommandations-chirurgie-ambulatoire-en-urologie.md"
+   ],
+   [
+    23,
+    "data/sfar_recommendations/output/chandra/2016/Intubation-et-extubation-du-patient-en-reanimation-ANREA/Intubation-et-extubation-du-patient-en-reanimation-ANREA.md"
+   ],
+   [
+    19,
+    "data/sfar_recommendations/output/chandra/2004/2b_AFAR_texte-long_Hemorragies-sous-arachnoidienne/2b_AFAR_texte-long_Hemorragies-sous-arachnoidienne.md"
+   ],
+   [
+    16,
+    "data/sfar_recommendations/output/chandra/2008/2b_AFAR_texte-long_Securisation-des-procedures-a-risques-en-reanimation/2b_AFAR_texte-long_Securisation-des-procedures-a-risques-en-reanimation.md"
+   ]
+  ],
+  "hyphen_break": [
+   [
+    8,
+    "data/sfar_recommendations/output/chandra/2025/RBP_-SFAR_AFEF_ACHBPT_RESECTION_-HEPATIQUE_-ARGUMENTAIRE_VF-1-AB-modif-ok/RBP_-SFAR_AFEF_ACHBPT_RESECTION_-HEPATIQUE_-ARGUMENTAIRE_VF-1-AB-modif-ok.md"
+   ],
+   [
+    6,
+    "data/sfar_recommendations/output/chandra/2019/rac-orthepedie-lourde/rac-orthepedie-lourde.md"
+   ],
+   [
+    4,
+    "data/sfar_recommendations/output/chandra/2025/RESECTION_-HEPATIQUE_-RECOMMANDATIONS_MEL/RESECTION_-HEPATIQUE_-RECOMMANDATIONS_MEL.md"
+   ],
+   [
+    4,
+    "data/sfar_recommendations/output/chandra/2021/RFE%20SFAR-SFCTCV%20RAC%20chirurgie%20cardiaque_finale_220921/RFE%20SFAR-SFCTCV%20RAC%20chirurgie%20cardiaque_finale_220921.md"
+   ],
+   [
+    3,
+    "data/sfar_recommendations/output/chandra/unknown/2b_SFAR-Anglais/2b_SFAR-Anglais.md"
+   ]
+  ],
+  "glued_heading": [
+   [
+    53,
+    "data/sfar_recommendations/output/chandra/2023/RFE-antibioprophylaxie-2023_V3.0_pour-mise-sur-site-juin-2026_sans-code-CCAM/RFE-antibioprophylaxie-2023_V3.0_pour-mise-sur-site-juin-2026_sans-code-CCAM.md"
+   ],
+   [
+    45,
+    "data/sfar_recommendations/output/chandra/2026/Reco_ECBU_Argumentaire_04.03.2026_MEL/Reco_ECBU_Argumentaire_04.03.2026_MEL.md"
+   ],
+   [
+    45,
+    "data/sfar_recommendations/output/chandra/2026/RFE-20.4.2026-deifinitif-et-validei/RFE-20.4.2026-deifinitif-et-validei.md"
+   ],
+   [
+    45,
+    "data/sfar_recommendations/output/chandra/2025/argu_sepsis/argu_sepsis.md"
+   ],
+   [
+    37,
+    "data/sfar_recommendations/output/chandra/2025/reco_sepsis/reco_sepsis.md"
+   ]
+  ],
+  "latex_inline": [
+   [
+    364,
+    "data/sfar_recommendations/output/chandra/2026/Version-longue/Version-longue.md"
+   ],
+   [
+    149,
+    "data/sfar_recommendations/output/chandra/2026/Reco_ECBU_Argumentaire_04.03.2026_MEL/Reco_ECBU_Argumentaire_04.03.2026_MEL.md"
+   ],
+   [
+    132,
+    "data/sfar_recommendations/output/chandra/unknown/2b_AFAR_Texte-Long_Intubation-difficile/2b_AFAR_Texte-Long_Intubation-difficile.md"
+   ],
+   [
+    115,
+    "data/sfar_recommendations/output/chandra/2019/rfe-rac-lobectomie-pulmonaire/rfe-rac-lobectomie-pulmonaire.md"
+   ],
+   [
+    108,
+    "data/sfar_recommendations/output/chandra/2018/RPP_beta-lactamines-en-soins-critiques_041018_logoSFPT/RPP_beta-lactamines-en-soins-critiques_041018_logoSFPT.md"
+   ]
+  ],
+  "image_alt": [
+   [
+    73,
+    "data/sfar_recommendations/output/chandra/2016/texte-long-Preconisations-2016-erreurs-med-SFAR-SFPC-version-finale-25-oct-2016/texte-long-Preconisations-2016-erreurs-med-SFAR-SFPC-version-finale-25-oct-2016.md"
+   ],
+   [
+    62,
+    "data/sfar_recommendations/output/chandra/2023/RFE-antibioprophylaxie-2023_V3.0_pour-mise-sur-site-juin-2026_sans-code-CCAM/RFE-antibioprophylaxie-2023_V3.0_pour-mise-sur-site-juin-2026_sans-code-CCAM.md"
+   ],
+   [
+    35,
+    "data/sfar_recommendations/output/chandra/2026/Figures-RFE-Nutrition/Figures-RFE-Nutrition.md"
+   ],
+   [
+    33,
+    "data/sfar_recommendations/output/chandra/2023/RPP-Anestheesie-adulte-porteur-CC_fiches-pratiques_pour-mise-sur-site/RPP-Anestheesie-adulte-porteur-CC_fiches-pratiques_pour-mise-sur-site.md"
+   ],
+   [
+    21,
+    "data/sfar_recommendations/output/chandra/2023/RPP-Anesthesie-adulte-porteur-de-CC_pour-mise-sur-site/RPP-Anesthesie-adulte-porteur-de-CC_pour-mise-sur-site.md"
+   ]
+  ]
+ },
+ "pdf_comparison": {
+  "pdf": "data/antibioprophylaxie_benchmark/datasets/sfar_antibioprophylaxie/RFE-antibioprophylaxie-SFAR-v2.0.pdf",
+  "md": "data/sfar_recommendations/output/chandra/2023/RFE-antibioprophylaxie-2023_V3.0_pour-mise-sur-site-juin-2026_sans-code-CCAM/RFE-antibioprophylaxie-2023_V3.0_pour-mise-sur-site-juin-2026_sans-code-CCAM.md",
+  "pdf_pages": 91,
+  "pages_compared": 90,
+  "median_5gram_recall": 0.8795,
+  "median_word_recall": 0.996,
+  "pages_5gram_lt_0.7": [
+   [
+    1,
+    0.477
+   ],
+   [
+    6,
+    0.084
+   ],
+   [
+    7,
+    0.014
+   ],
+   [
+    15,
+    0.682
+   ],
+   [
+    28,
+    0.65
+   ],
+   [
+    31,
+    0.331
+   ],
+   [
+    40,
+    0.598
+   ]
+  ],
+  "dose_tokens_total": 881,
+  "dose_recall_weighted": 0.993
+ }
+}
+
+Échantillon :
+doc                                                  chars ctrl_or_n latex_inl  math_tag image_alt glued_hea repeated_ page_numb hyphen_br cut_sente double_nu double_bu html_enti
+2_SFAR_Corticotherapie-au-cours-du-choc-septiq       15854         0         2         0         0         0         0         0         0         0         0         5         0
+cc_pancreatiteaigue20010                             33706         0         4         0         2         5         0         0         0         0         0        20         3
+86-civdccons                                         14248         0         1         0         2         1         0         0         0         0         2         3         3
+2b_AFAR_texte-long_Hemorragies-sous-arachnoidi      423507         0        92         8        12         4        32         0         2        19         0        66         7
+2_AFAR_Blocs-perimedullaires-chez-ladulte           183009         0        18         0         0         3         0         0         0        11         0        20         1
+3_REANIMATION_Prise-en-charge-en-situation-dur       46276         0         1         0         2         1         0         0         0         1         0        19         0
+2_SFAR_Anesthesie-loco-regionale-en-pediatrie        31045         0         3         3         2         4         0         0         0         0         0       105         2
+AFAR_Examens-preinterventionnels-systematiques       65096         0        11         0         0         1         6         0         0         7         0        46         2
+2_REANIMATION_epuration-extrarenale-en-reanima      131547         0        33         0         0         7         0         0         0         6        40         9         0
+RFE-ANREA-Reactualisation-de-la-recommandation       45631         0         2         0         1         3         5         0         0         2        13        35         0
+2_RFE-CURARE-3                                      141991         0        21         6         2        15         4         0         0         0         2        39         1
+rfe-trauma-abdominale                                77806         0        10         0         4         8         0         0         0         0         0         0         1
+RFE_TSM_2020                                        141581         0         9         0         2         6         0         0         0         0         5        21        20
+RPP-Trauma-cranien-leger_pour-mise-sur-site_au       82107         0         1         0         2        10         4         0         1         0        13        47        13
+RFE-antibioprophylaxie-2023_V3.0_pour-mise-sur      379423         0        52         4        62        53       201         0         1         0         0        31       259
+240516-Txt-definitif-                               255261         0        61         1         7        14         0         0         1         1         0        80        13
+2025_SFAR-SFA_RFE-Diagnostic-et-prise-en-charg      411019         0        30         5        12        20         0         0         1         0         0        90        32
+RFE-Infections-intra-abdominales-version-lectu      291771         0        69        12         9         8         0         0         2         0         0        61        24
+TEXTE-RFE-ALR-PEDIA-VERSION-FINALE-010926           183136         0        23        10         8         9         0         0         1         0         0        31         1
+2b_AFAR_Texte-Long_Intubation-difficile             348867         0       132        16         3         8        12         0         0        24         0        69        49
+
+Lignes répétées (exemples) :
+  Dossier-AnesthRea-SFAR [('.....<br/>', 11), ('Nom patronymique : .....', 4)]
+  art54_dossierarannpre [('– Docteur', 5)]
+  2b_AFAR_texte-long_Hemorragies-sous-arachnoidienne [('\\* Auteur correspondant.', 12), ("Conférence d'experts", 11)]
+  2_AFAR_Prise-en-charge-de-larret-cardiaque-1 [('graph TD', 5)]
+  2b_HAS_TEXTE-LONG_Prise-en-charge-de-linfarctus-du [('graph TD', 4)]
+  2b_AFAR_texte-long_Securisation-des-procedures-a-r [('© 2008 Elsevier Masson SAS. Tous droits réservés.', 12), ('\\* Auteur correspondant.', 8)]
+  2_AFAR_Gestion-perioperatoire-des-traitements-chro [("Société française d'anesthésie et de réanimation", 5)]
+  3_AFAR_LONG_Bris-dentaires-perianesthesiques-copie [('oui \xa0\xa0\xa0\xa0 non', 4)]
+  AFAR_Examens-preinterventionnels-systematiques [("L'ensemble des travaux est de bas niveau de preuve.", 6)]
+  2_PUROL_Recommandations-chirurgie-ambulatoire-en-u [('Elsevier Masson France', 4), ('EM|consulte', 4)]
+  2_HAS_transfusion_de_globules_rouges_homologues_-_ [('Voir également la partie 4 « Néonatologie ».', 6)]
+  2_AFAR_Prise-en-charge-des-infections-intra-abdomi [('(Grade 2+) Accord FORT', 18), ('(Grade 1+) Accord FORT', 7)]
+  ANREA_132_RFE-IRA- [('(Grade 2+) Accord Fort', 6), ("(Avis d'experts) Accord Fort", 5)]
+  RFE-Guidelines-for-management-of-intra-abdominal-i [('(Grade 2+) STRONG agreement', 17), ('(Expert opinion) STRONG agreement', 7)]
+  RFE-Guidelines-on-the-use-of-ultrasound-guidance-f [('In all, positive aspects clearly outweigh negative aspects a', 4)]
+  RFE-IRA-anglais [('(Grade 2+) strong agreement', 10), ('(Grade 1–) strong agreement', 5)]
+  Intubation-et-extubation-du-patient-en-reanimation [('(Grade 2+) Accord FORT', 25), ('(Grade 1+) Accord FORT', 16)]
+  Protection-oculaire-en-Anesthesie-et-Reanimation-1 [("(Avis d'experts)", 8)]
+  RFE-ANREA-Prise-en-charge-des-traumatises-craniens [('Argumentaire :', 32), ('(GRADE 2+) Accord FORT', 15)]
+  RFE-ANREA-Reactualisation-de-la-recommandation-sur [('G1+, Accord fort.', 5)]
+
+PDF V2.0 vs Chandra V3.0, pages à faible recouvrement :
+  p 1 0.477 1.0 0 None []
+  p 6 0.084 0.871 0 None ['resume', 'xx', 'collaboré', 'conception', 'composé', 'xxx', 'réuni', 'éventuels']
+  p 7 0.014 0.599 0 None ['abstract', 'objective', 'provide', 'xx', 'society', 'intensive', 'was', 'convened']
+  p 15 0.682 0.926 0 None ['jeunesse', 'sports', 'lamarsalle', 'hunt', 'schauf', 'szwarcensztein', 'valentine', 'evaluating']
+  p 28 0.65 0.953 20 1.0 ['cplasm', 'cadipeux', 'dépassant', 'déviation', 'investigateur', 'nationale', 'swissnoso', 'ssi']
+  p 31 0.331 0.957 22 0.818 ['m2', 'due', 'multiplier', 'préconisée', 'ostéomyélite', 'devait', 'compilant', 'multicentriques']
+  p 40 0.598 0.979 1 1.0 ['jérome', 'concentrant', 'montre', 'éthmoidectomie', 'sphénoidectomie']

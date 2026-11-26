@@ -1,0 +1,10 @@
+264 docs chargés en 1.1 s
+langue Counter({'fr': 215, 'bilingual': 25, 'en': 24})
+doc_role Counter({'recommandation': 175, 'traduction_en': 24, 'argumentaire': 19, 'texte_court': 15, 'aide_cognitive': 10, 'annexe': 9, 'tableaux_synthese': 6, 'algorithme': 5, 'abrogee': 1})
+superseded 44
+docs avec lignée 94 lignées 26
+année imputée 18 | domaine imputé 57 | raw_subdomain None 57
+domaines=[Général] 0
+nb domaines par doc [(1, 42), (2, 80), (3, 73), (4, 42), (5, 16), (6, 10), (7, 1)]
+ref ratio global 0.254
+tables 2056

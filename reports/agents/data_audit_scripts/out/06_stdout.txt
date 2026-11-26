@@ -1,0 +1,2 @@
+Méthode A (sections titrées) : 0.264 ; docs sans section repérée : 153/267
+Méthode B (lignes de citation) : 0.193

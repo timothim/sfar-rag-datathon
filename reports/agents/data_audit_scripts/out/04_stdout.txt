@@ -1,0 +1,262 @@
+{
+ "n_docs": 267,
+ "n_main_fr": 202,
+ "format_all": {
+  "Conférence de consensus (jury)": 2,
+  "Narratif / non structuré": 105,
+  "Gradation ancienne (A/B/C, niveaux de preuve)": 30,
+  "Cotation d'accord seule (accord fort/faible, RAND/UCLA)": 22,
+  "GRADE sans identifiants": 19,
+  "Identifiants Rx.y seuls": 1,
+  "GRADE_SFAR (Rx.y + GRADE + accord)": 68,
+  "Avis d'experts / RPP (Rx.y sans GRADE)": 20
+ },
+ "format_main_fr": {
+  "Conférence de consensus (jury)": 2,
+  "Narratif / non structuré": 62,
+  "Gradation ancienne (A/B/C, niveaux de preuve)": 26,
+  "Cotation d'accord seule (accord fort/faible, RAND/UCLA)": 22,
+  "GRADE sans identifiants": 14,
+  "Identifiants Rx.y seuls": 1,
+  "GRADE_SFAR (Rx.y + GRADE + accord)": 57,
+  "Avis d'experts / RPP (Rx.y sans GRADE)": 18
+ },
+ "format_main_by_period": {
+  "2000-2004": {
+   "Conférence de consensus (jury)": 1,
+   "Narratif / non structuré": 16,
+   "Gradation ancienne (A/B/C, niveaux de preuve)": 7,
+   "Cotation d'accord seule (accord fort/faible, RAND/UCLA)": 1,
+   "GRADE sans identifiants": 1
+  },
+  "2005-2009": {
+   "Narratif / non structuré": 17,
+   "Cotation d'accord seule (accord fort/faible, RAND/UCLA)": 6,
+   "Gradation ancienne (A/B/C, niveaux de preuve)": 6,
+   "GRADE sans identifiants": 5,
+   "Conférence de consensus (jury)": 1
+  },
+  "2010-2014": {
+   "Identifiants Rx.y seuls": 1,
+   "GRADE_SFAR (Rx.y + GRADE + accord)": 4,
+   "Cotation d'accord seule (accord fort/faible, RAND/UCLA)": 6,
+   "Narratif / non structuré": 8,
+   "Gradation ancienne (A/B/C, niveaux de preuve)": 4,
+   "GRADE sans identifiants": 5
+  },
+  "2015-2019": {
+   "GRADE_SFAR (Rx.y + GRADE + accord)": 27,
+   "GRADE sans identifiants": 1,
+   "Gradation ancienne (A/B/C, niveaux de preuve)": 1,
+   "Narratif / non structuré": 6,
+   "Cotation d'accord seule (accord fort/faible, RAND/UCLA)": 6,
+   "Avis d'experts / RPP (Rx.y sans GRADE)": 4
+  },
+  "2020-2022": {
+   "GRADE_SFAR (Rx.y + GRADE + accord)": 7,
+   "Avis d'experts / RPP (Rx.y sans GRADE)": 7,
+   "Narratif / non structuré": 5,
+   "Cotation d'accord seule (accord fort/faible, RAND/UCLA)": 1
+  },
+  "2023-2026": {
+   "GRADE_SFAR (Rx.y + GRADE + accord)": 19,
+   "Avis d'experts / RPP (Rx.y sans GRADE)": 7,
+   "GRADE sans identifiants": 1,
+   "Cotation d'accord seule (accord fort/faible, RAND/UCLA)": 1,
+   "Gradation ancienne (A/B/C, niveaux de preuve)": 3
+  },
+  "inconnue": {
+   "Narratif / non structuré": 10,
+   "Gradation ancienne (A/B/C, niveaux de preuve)": 5,
+   "GRADE sans identifiants": 1,
+   "Cotation d'accord seule (accord fort/faible, RAND/UCLA)": 1
+  }
+ },
+ "docs_with_marker": {
+  "faible_neg": 57,
+  "forte_neg": 123,
+  "faible_pos": 82,
+  "forte_pos": 189,
+  "experts": 124,
+  "grade_label": 103,
+  "accord": 113,
+  "old_abc": 82,
+  "jury": 5,
+  "pico": 72,
+  "argumentaire_head": 86,
+  "champ_head": 39,
+  "question_head": 66,
+  "ref_heading": 109,
+  "remplace_mention": 22
+ },
+ "main_docs_with_marker": {
+  "faible_neg": 57,
+  "forte_neg": 121,
+  "faible_pos": 81,
+  "forte_pos": 182,
+  "experts": 116,
+  "grade_label": 81,
+  "accord": 109,
+  "old_abc": 74,
+  "jury": 5,
+  "pico": 64,
+  "argumentaire_head": 83,
+  "champ_head": 38,
+  "question_head": 61,
+  "ref_heading": 89,
+  "remplace_mention": 18
+ },
+ "total_marker_occurrences": {
+  "faible_neg": 249,
+  "forte_neg": 620,
+  "faible_pos": 950,
+  "forte_pos": 3943,
+  "experts": 3241,
+  "grade_label": 2175,
+  "accord": 3180,
+  "old_abc": 1373,
+  "jury": 29,
+  "pico": 234,
+  "argumentaire_head": 1368,
+  "champ_head": 417,
+  "question_head": 761,
+  "ref_heading": 675,
+  "remplace_mention": 27
+ },
+ "units_total": 2976,
+ "units_with_grade": 1897,
+ "units_with_accord": 1439,
+ "units_with_strength": 2460,
+ "units_avis_experts": 1383,
+ "docs_with_units": 89,
+ "units_by_mode": {
+  "id": 2722,
+  "row": 254
+ },
+ "units_dedup_total": 2355,
+ "phrase_x_grade": {
+  "experts | AE": 844,
+  "faible_pos | 2+": 286,
+  "experts | aucune": 281,
+  "aucune | aucune": 262,
+  "forte_pos | 1+": 199,
+  "forte_pos | 2": 171,
+  "forte_pos | 1": 109,
+  "aucune | 2+": 87,
+  "forte_pos | AE": 81,
+  "aucune | AE": 60,
+  "forte_neg | 1-": 59,
+  "faible_neg | 2-": 58,
+  "faible_pos | 2": 53,
+  "aucune | 1+": 51,
+  "forte_neg | 2": 45,
+  "forte_pos | aucune": 43,
+  "forte_neg | 1": 36,
+  "forte_neg | AE": 34,
+  "faible_pos | AE": 31,
+  "faible_neg | 2": 31,
+  "aucune | 1": 23,
+  "faible_pos | aucune": 22,
+  "forte_neg | aucune": 18,
+  "aucune | 2": 15,
+  "experts | 2+": 12,
+  "experts | 1": 11,
+  "aucune | 2-": 10,
+  "aucune | 1-": 8,
+  "faible_neg | aucune": 7,
+  "faible_neg | AE": 5,
+  "faible_neg | 2+": 5,
+  "experts | 1+": 5,
+  "faible_pos | 1+": 3,
+  "experts | 2": 3,
+  "experts | 1-": 3,
+  "forte_neg | 1+": 2,
+  "forte_pos | 2+": 1,
+  "forte_neg | 2-": 1,
+  "forte_neg | 2+": 1
+ },
+ "declared_count_docs": 45,
+ "declared_exact_match": 9,
+ "declared_within_10pct": 25
+}
+
+Déclaré vs extrait :
+  déclaré=  76 extrait=   0  2_SFAR_Prise-en-charge-pre-et-interhospitaliere-des-formes-graves-de-preeclampsi
+  déclaré=  15 extrait=  16  Pneumonies-associees-au-soins-de-reanimation-ANREA
+  déclaré=  30 extrait=  29  2_RFE-CURARE-3
+  déclaré=  18 extrait=  14  RFE-IH-soins-critiques
+  déclaré=  21 extrait=  22  RPP_beta-lactamines-en-soins-critiques_041018_logoSFPT
+  déclaré=  23 extrait=  22  rac-orthepedie-lourde
+  déclaré=  10 extrait=   7  rfe-gestion-anemie-reanimation
+  déclaré=  32 extrait=  31  rfe-rac-lobectomie-pulmonaire
+  déclaré=  15 extrait=  14  rfe-trauma-abdominale
+  déclaré=  19 extrait=  19  rfe-trauma-vertebro-medulaire
+  déclaré=  24 extrait=  25  rpp-prise-en-charge-du-brule-grave%20
+  déclaré=  25 extrait=  25  RFE%20pr%C3%A9-%C3%A9clampsie_finale
+  déclaré=  19 extrait=  17  RFE_TSM_2020
+  déclaré=   8 extrait=   7  RPP_PLYO_2020
+  déclaré=  24 extrait=  21  RFE%20SFAR%20pancreatite%20aigue_finale_220921
+  déclaré=  13 extrait=  16  RFE%20SFAR-SF2H%20Tenue%20vestimentaire%20au%20bloc_finale_220921
+  déclaré=  33 extrait=  32  RFE%20SFAR-SFCTCV%20RAC%20chirurgie%20cardiaque_finale_220921
+  déclaré=   9 extrait=   9  RFE-SFAR-SFMU-Solute%CC%81s-de-remplissage_finale_220921
+  déclaré=  30 extrait=  27  RFE-Programme-doptimisation-perioperatoire_pour-mise-sur-site_260922
+  déclaré=  68 extrait=  60  RPP%20SFAR%20COVID_Version%20Avril%202022_finale%20sans%20marque
+  déclaré=  21 extrait=  18  RPP-FHS_pour-mise-sur-site
+  déclaré=  68 extrait=  60  RPP-SFAR-COVID_Version-Avril-2022_abrogee-010723
+  déclaré=  13 extrait=  13  RPP-Trauma-cranien-leger_pour-mise-sur-site_autorship-complet
+  déclaré=  17 extrait=  17  RPP-reduction-impact-environnemental_pour-mise-sur-site
+  déclaré=  15 extrait=  16  rpp-urgences-obstetricales-en-medecine-durgence
+  déclaré=  11 extrait=   9  RFE-antibioprophylaxie-2023_V3.0_pour-mise-sur-site-juin-2026_sans-code-CCAM
+  déclaré=  24 extrait=  14  2024_RFE-optimisation-hemodynamique-perioperatoire_adulte-dont-obstretriqueV2-1
+  déclaré=   9 extrait=   9  PEDIA_RPP-Optimisation-Hemodynamique-Perioperatoire_Pediatrie
+  déclaré= 103 extrait= 126  RFE-gestion-de-lanticoagulation-dans-un-contexte-durgence_23.02.2024-1
+  déclaré=  29 extrait=  33  RPP-Prevention-des-erreurs-medicamenteuses
+  déclaré=  32 extrait=  32  2025_RFE-Intubation-adulte-hors-bloc-hors-rea-
+  déclaré=  70 extrait= 104  2025_SFAR-SFA_RFE-Diagnostic-et-prise-en-charge-des-reactions-dhypersensibilite-
+  déclaré=  39 extrait=  42  RBP_-SFAR_AFEF_ACHBPT_RESECTION_-HEPATIQUE_-ARGUMENTAIRE_VF-1-AB-modif-ok
+  déclaré=  39 extrait=  42  RESECTION_-HEPATIQUE_-RECOMMANDATIONS_MEL
+  déclaré=   9 extrait=   9  RFE-LAT-final-mai-2026-
+  déclaré=  39 extrait=  38  RFE-analgesie-obstetricale-texte-long
+  déclaré=  45 extrait=  60  RPP-Trauma-cranio-encephaliques-V1-finalisee
+  déclaré=  36 extrait=  40  RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-ARGUMENTAIRE_CD_20260903_FIN
+  déclaré=  42 extrait=  42  RFE-Infections-intra-abdominales-version-lecture-doc-finale-14-08-26-depose-site
+  déclaré=  33 extrait=  25  RFE_sedationproceduraleUrgences_24juin2026
+  déclaré=  34 extrait=  30  TEXTE-RFE-ALR-PEDIA-VERSION-FINALE-010926
+  déclaré=  40 extrait=  41  Version-courte
+  déclaré=  40 extrait=  41  Version-longue
+  déclaré=  27 extrait=  31  gestion_voies_aeriennes_argumentaire_mel_vd
+  déclaré=  27 extrait=  31  gestion_voies_aeriennes_recommandations_mel_vd
+
+Exemples :
+jury
+    data/sfar_recommendations/output/chandra/2000/2_SFAR_Corticotherapie-au-cours-du-choc-septique-et-du-SDRA/2_SFAR_Corticotherapie-au-cours-du-choc-septique-et-du-SDRA.md:90  «En pratique, le jury recommande un dosage systématique de la cortisolémie avant le début du traitement glucocorticoïde (GC) [2], pour détecter les rares IS abso»
+    data/sfar_recommendations/output/chandra/2006/2a_HAS_TEXTE-COURT_Prise-en-charge-de-linfarctus-du-myocarde/2a_HAS_TEXTE-COURT_Prise-en-charge-de-linfarctus-du-myocarde.md:114  «Le sujet de la conférence de consensus étant la prise en charge de l'IDM à la phase aiguë *en dehors des services de cardiologie*, le jury recommande de scinder»
+    data/sfar_recommendations/output/chandra/2006/2b_HAS_TEXTE-LONG_Prise-en-charge-de-linfarctus-du-myocarde/2b_HAS_TEXTE-LONG_Prise-en-charge-de-linfarctus-du-myocarde.md:347  «Pour continuer à respecter ce délai de 90 minutes, le jury recommande comme seuil décisionnel pour le *délai porte à porte cardio* une valeur de 45 minutes. Ce »
+experts
+    data/sfar_recommendations/output/chandra/2001/2_AFAR_Les-blocs-peripheriques-des-membres-chez-l-adulte/2_AFAR_Les-blocs-peripheriques-des-membres-chez-l-adulte.md:57  «Niveau V: Études de cas. Avis d'experts.»
+    data/sfar_recommendations/output/chandra/2001/Annales-de-Readaptation-et-de-Medecine-Physique_Les-traumatises-craniens-adultes-en-medecine-physique-et-readaptation/Annales-de-Readaptation-et-de-Medecine-Physique_Les-traumatises-craniens-adultes-en-medecine-physique-et-readaptation.md:120  «III Études descriptives (série de cas, étude de cas) Avis d'experts»
+    data/sfar_recommendations/output/chandra/2002/1-s2.0-S1624069303000513-main/1-s2.0-S1624069303000513-main.md:485  «Aucune étude ne permet de répondre formellement. Ces recommandations sont fondées sur l'avis d'experts :»
+forte_neg
+    data/sfar_recommendations/output/chandra/2001/2_AFAR_Les-blocs-peripheriques-des-membres-chez-l-adulte/2_AFAR_Les-blocs-peripheriques-des-membres-chez-l-adulte.md:187  «- • Les ALRIV du membre inférieur ou les ALR intrartérielles ne sont pas recommandées (B).»
+    data/sfar_recommendations/output/chandra/2001/2_SFAR_Sevrage-de-la-ventilation-mecanique/2_SFAR_Sevrage-de-la-ventilation-mecanique.md:178  «Si l'épreuve est effectuée en AI, le ballonnet sera maintenu gonflé. Il n'est pas recommandé d'ajouter à ce niveau d'AI, une pression expiratoire positive [3]. »
+    data/sfar_recommendations/output/chandra/2001/cc_pancreatiteaigue20010/cc_pancreatiteaigue20010.md:323  «La ponction n'est indiquée que chez les malades présentant un faisceau d'arguments cliniques, TDM et biologiques faisant suspecter l'infection de la nécrose. La»
+old_abc
+    data/sfar_recommendations/output/chandra/2001/2_AFAR_Les-blocs-peripheriques-des-membres-chez-l-adulte/2_AFAR_Les-blocs-peripheriques-des-membres-chez-l-adulte.md:37  «Grade A: 2 (ou plus...) études de niveau I.»
+    data/sfar_recommendations/output/chandra/2001/Annales-de-Readaptation-et-de-Medecine-Physique_Les-traumatises-craniens-adultes-en-medecine-physique-et-readaptation/Annales-de-Readaptation-et-de-Medecine-Physique_Les-traumatises-craniens-adultes-en-medecine-physique-et-readaptation.md:126  «Parmi les recommandations de grade C, celles issues d'avis d'experts ont été identifiées dans le texte. Les recommandations correspondant à un « accord professi»
+    data/sfar_recommendations/output/chandra/2001/cc_pancreatiteaigue20010/cc_pancreatiteaigue20010.md:226  «Grade A : pancréas normal  (0pt)»
+accord
+    data/sfar_recommendations/output/chandra/2001/Annales-de-Readaptation-et-de-Medecine-Physique_Les-traumatises-craniens-adultes-en-medecine-physique-et-readaptation/Annales-de-Readaptation-et-de-Medecine-Physique_Les-traumatises-craniens-adultes-en-medecine-physique-et-readaptation.md:126  «Parmi les recommandations de grade C, celles issues d'avis d'experts ont été identifiées dans le texte. Les recommandations correspondant à un « accord professi»
+    data/sfar_recommendations/output/chandra/2005/2a_SFAR_TEXTE-COURT_Anesthesie-pour-amygdalectomie-chez-lenfant/2a_SFAR_TEXTE-COURT_Anesthesie-pour-amygdalectomie-chez-lenfant.md:122  «- – La consultation d'anesthésie en prévision d'une amygdalectomie a deux buts essentiels : l'évaluation des risques inhérents à l'acte et l'information du pati»
+    data/sfar_recommendations/output/chandra/2006/2_AFAR_Blocs-perimedullaires-chez-ladulte/2_AFAR_Blocs-perimedullaires-chez-ladulte.md:45  «Accord professionnel (pas d'études, pas de niveaux de preuve)»
+grade_label
+    data/sfar_recommendations/output/chandra/2004/2b_AFAR_texte-long_Hemorragies-sous-arachnoidienne/2b_AFAR_texte-long_Hemorragies-sous-arachnoidienne.md:164  «GOS grade 1–3 à 6 mois (%) a»
+    data/sfar_recommendations/output/chandra/2005/2b_TEXTE-LONG_AFAR_Prise-en-charge-hemodynamique-du-sepsis-grave/2b_TEXTE-LONG_AFAR_Prise-en-charge-hemodynamique-du-sepsis-grave.md:736  «G1 --> H1[PAM normale»
+    data/sfar_recommendations/output/chandra/2006/2C_SFAR_EPP_Ventilation-Non-Invasive-au-cours-del-insuffisance-respiratoire-aigue/2C_SFAR_EPP_Ventilation-Non-Invasive-au-cours-del-insuffisance-respiratoire-aigue.md:41  «Le système choisi pour la cotation des recommandations de la conférence est le système GRADE. Dans ce système, seuls les éléments majeurs sont cotés. Les niveau»
+faible_neg
+    data/sfar_recommendations/output/chandra/2006/2C_SFAR_EPP_Ventilation-Non-Invasive-au-cours-del-insuffisance-respiratoire-aigue/2C_SFAR_EPP_Ventilation-Non-Invasive-au-cours-del-insuffisance-respiratoire-aigue.md:41  «Le système choisi pour la cotation des recommandations de la conférence est le système GRADE. Dans ce système, seuls les éléments majeurs sont cotés. Les niveau»
+    data/sfar_recommendations/output/chandra/2006/2a_SFAR_texte-court_Ventilation-Non-Invasive-au-cours-del-insuffisance-respiratoire-aigue/2a_SFAR_texte-court_Ventilation-Non-Invasive-au-cours-del-insuffisance-respiratoire-aigue.md:27  «Le système choisi de cotation des recommandations est le système GRADE (BMJ 2004; 328: 1490-8). Les niveaux de preuves sont pondérés par la balance bénéfices/ri»
+    data/sfar_recommendations/output/chandra/2006/2b_SFAR_texte-long_Ventilation-Non-Invasive-au-cours-del-insuffisance-respiratoire-aigue/2b_SFAR_texte-long_Ventilation-Non-Invasive-au-cours-del-insuffisance-respiratoire-aigue.md:41  «- ▪ Des pathologies pour lesquelles aucun avantage de la VNI n'est démontrée et qu'il ne faut probablement pas entreprendre dans ces situations : la pneumopathi»
+faible_pos
+    data/sfar_recommendations/output/chandra/2006/2C_SFAR_EPP_Ventilation-Non-Invasive-au-cours-del-insuffisance-respiratoire-aigue/2C_SFAR_EPP_Ventilation-Non-Invasive-au-cours-del-insuffisance-respiratoire-aigue.md:41  «Le système choisi pour la cotation des recommandations de la conférence est le système GRADE. Dans ce système, seuls les éléments majeurs sont cotés. Les niveau»
+    data/sfar_recommendations/output/chandra/2006/2a_SFAR_texte-court_Ventilation-Non-Invasive-au-cours-del-insuffisance-respiratoire-aigue/2a_SFAR_texte-court_Ventilation-Non-Invasive-au-cours-del-insuffisance-respiratoire-aigue.md:27  «Le système choisi de cotation des recommandations est le système GRADE (BMJ 2004; 328: 1490-8). Les niveaux de preuves sont pondérés par la balance bénéfices/ri»
+    data/sfar_recommendations/output/chandra/2007/2_AFAR_Prise-en-charge-des-nausees-et-vomissements-postoperatoires/2_AFAR_Prise-en-charge-des-nausees-et-vomissements-postoperatoires.md:19  «G2+ = il faut probablement faire.»

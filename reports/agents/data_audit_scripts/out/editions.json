@@ -1,0 +1,3165 @@
+{
+ "families_multi_files": {
+  "https://sfar.org/dossier-anesthesique/": [
+   "data/sfar_recommendations/output/chandra/2001/Dossier-AnesthRea-SFAR/Dossier-AnesthRea-SFAR.md",
+   "data/sfar_recommendations/output/chandra/2001/art54_dossieraranncomplet/art54_dossieraranncomplet.md",
+   "data/sfar_recommendations/output/chandra/2001/art54_dossieraranninform/art54_dossieraranninform.md",
+   "data/sfar_recommendations/output/chandra/2001/art54_dossierarannperpost/art54_dossierarannperpost.md",
+   "data/sfar_recommendations/output/chandra/2001/art54_dossierarannpre/art54_dossierarannpre.md"
+  ],
+  "https://sfar.org/prise-en-charge-des-voies-aeriennes-en-anesthesie-adulte-a-lexception-de-lintubation-difficile/": [
+   "data/sfar_recommendations/output/chandra/2003/1-2a_SFAR_Texte-court-Controle-des-voies-aeriennes-en-anesthesie-en-dehors-de-l-intubation-difficile/1-2a_SFAR_Texte-court-Controle-des-voies-aeriennes-en-anesthesie-en-dehors-de-l-intubation-difficile.md",
+   "data/sfar_recommendations/output/chandra/2003/2b_AFAR_Texte-Long_/2b_AFAR_Texte-Long_.md"
+  ],
+  "https://sfar.org/hemorragie-sous-arachnoidienne-hsa-grave/": [
+   "data/sfar_recommendations/output/chandra/2004/2a_SFAR_texte-court_Hemorragies-sous-arachnoidienne/2a_SFAR_texte-court_Hemorragies-sous-arachnoidienne.md",
+   "data/sfar_recommendations/output/chandra/2004/2b_AFAR_texte-long_Hemorragies-sous-arachnoidienne/2b_AFAR_texte-long_Hemorragies-sous-arachnoidienne.md"
+  ],
+  "https://sfar.org/anesthesie-pour-amygdalectomie-chez-lenfant/": [
+   "data/sfar_recommendations/output/chandra/2005/2a_SFAR_TEXTE-COURT_Anesthesie-pour-amygdalectomie-chez-lenfant/2a_SFAR_TEXTE-COURT_Anesthesie-pour-amygdalectomie-chez-lenfant.md",
+   "data/sfar_recommendations/output/chandra/2005/2b_AFAR_TEXTE-LONG_Anesthesie-pour-amygdalectomie-chez-lenfant/2b_AFAR_TEXTE-LONG_Anesthesie-pour-amygdalectomie-chez-lenfant.md"
+  ],
+  "https://sfar.org/prise-en-charge-hemodynamique-du-sepsis-grave-nouveau-ne-exclu/": [
+   "data/sfar_recommendations/output/chandra/2005/2a_TEXTE-COURT_Prise-en-charge-hemodynamique-du-sepsis-grave/2a_TEXTE-COURT_Prise-en-charge-hemodynamique-du-sepsis-grave.md",
+   "data/sfar_recommendations/output/chandra/2005/2b_TEXTE-LONG_AFAR_Prise-en-charge-hemodynamique-du-sepsis-grave/2b_TEXTE-LONG_AFAR_Prise-en-charge-hemodynamique-du-sepsis-grave.md"
+  ],
+  "https://sfar.org/ventilation-non-invasive%E2%80%A8au-cours-de-linsuffisance-respiratoire-aigue-nouveau-ne-exclu/": [
+   "data/sfar_recommendations/output/chandra/2006/2C_SFAR_EPP_Ventilation-Non-Invasive-au-cours-del-insuffisance-respiratoire-aigue/2C_SFAR_EPP_Ventilation-Non-Invasive-au-cours-del-insuffisance-respiratoire-aigue.md",
+   "data/sfar_recommendations/output/chandra/2006/2a_SFAR_texte-court_Ventilation-Non-Invasive-au-cours-del-insuffisance-respiratoire-aigue/2a_SFAR_texte-court_Ventilation-Non-Invasive-au-cours-del-insuffisance-respiratoire-aigue.md",
+   "data/sfar_recommendations/output/chandra/2006/2b_SFAR_texte-long_Ventilation-Non-Invasive-au-cours-del-insuffisance-respiratoire-aigue/2b_SFAR_texte-long_Ventilation-Non-Invasive-au-cours-del-insuffisance-respiratoire-aigue.md"
+  ],
+  "https://sfar.org/prise-en-charge-de-linfarctus-du-myocarde-a-la-phase-aigue-en-dehors-des-services-de-cardiologie/": [
+   "data/sfar_recommendations/output/chandra/2006/2a_HAS_TEXTE-COURT_Prise-en-charge-de-linfarctus-du-myocarde/2a_HAS_TEXTE-COURT_Prise-en-charge-de-linfarctus-du-myocarde.md",
+   "data/sfar_recommendations/output/chandra/2006/2b_HAS_TEXTE-LONG_Prise-en-charge-de-linfarctus-du-myocarde/2b_HAS_TEXTE-LONG_Prise-en-charge-de-linfarctus-du-myocarde.md"
+  ],
+  "https://sfar.org/sedation-et-analgesie-en-reanimation-nouveau-ne-exclu/": [
+   "data/sfar_recommendations/output/chandra/2007/2a_AFAR_Texte_court_Sedation-et-analgesie-en-reanimation_nouveau-ne-exclu/2a_AFAR_Texte_court_Sedation-et-analgesie-en-reanimation_nouveau-ne-exclu.md",
+   "data/sfar_recommendations/output/chandra/2007/2b_AFAR_aspet-pediatriques/2b_AFAR_aspet-pediatriques.md",
+   "data/sfar_recommendations/output/chandra/2007/2c_AFAR_Texte_long_Sedation-et-analgesie-en-reanimation_nouveau-ne-exclu/2c_AFAR_Texte_long_Sedation-et-analgesie-en-reanimation_nouveau-ne-exclu.md"
+  ],
+  "https://sfar.org/prise-en-charge-de-la-douleur-postoperatoire-chez-ladulte-et-lenfant-2/": [
+   "data/sfar_recommendations/output/chandra/2008/2a_AFAR_Prise-en-charge-de-la-douleur-postoperatoire-chez-ladulte-et-lenfant/2a_AFAR_Prise-en-charge-de-la-douleur-postoperatoire-chez-ladulte-et-lenfant.md",
+   "data/sfar_recommendations/output/chandra/2008/2b_AFAR_ANGLAISEExpert-panel-guidelines-2008.-Postoperative-pain-management-in-adults-and-children.-SFAR-Committees-on-Pain-and-Local-Regional-Anaesthesia-and-on-Standards./2b_AFAR_ANGLAISEExpert-panel-guidelines-2008.-Postoperative-pain-management-in-adults-and-children.-SFAR-Committees-on-Pain-and-Local-Regional-Anaesthesia-and-on-Standards..md"
+  ],
+  "https://sfar.org/securisation-des-procedures-a-risques-en-reanimation-risque-infectieux-exclu/": [
+   "data/sfar_recommendations/output/chandra/2008/2a_AFAR_Texte_court_Securisation-des-procedures-a-risques-en-reanimation/2a_AFAR_Texte_court_Securisation-des-procedures-a-risques-en-reanimation.md",
+   "data/sfar_recommendations/output/chandra/2008/2b_AFAR_texte-long_Securisation-des-procedures-a-risques-en-reanimation/2b_AFAR_texte-long_Securisation-des-procedures-a-risques-en-reanimation.md"
+  ],
+  "https://sfar.org/controle-de-la-glycemie-en-reanimation-et-en-anesthesie/": [
+   "data/sfar_recommendations/output/chandra/2009/2a_AFAR_UPDATE_Controle-de-la-glycemie-en-reanimation-et-en-anesthesie_une-reactualisation-necessaire/2a_AFAR_UPDATE_Controle-de-la-glycemie-en-reanimation-et-en-anesthesie_une-reactualisation-necessaire.md",
+   "data/sfar_recommendations/output/chandra/2009/2b_AFAR_Contrele-de-la-glycemie-en-reanimation-et-en-anesthesie_une-reactualisation-necessaire/2b_AFAR_Contrele-de-la-glycemie-en-reanimation-et-en-anesthesie_une-reactualisation-necessaire.md"
+  ],
+  "https://sfar.org/delivrance-de-linformation-a-la-personne-sur-son-etat-de-sante/": [
+   "data/sfar_recommendations/output/chandra/2010/2a_HAS_texte-court_Delivrance-de-linformation-a-la-personne-sur-son-etat-de-sante/2a_HAS_texte-court_Delivrance-de-linformation-a-la-personne-sur-son-etat-de-sante.md",
+   "data/sfar_recommendations/output/chandra/2010/2b_HAS_Texte_Long-Delivrance-de-l-information-a-la-personne-sur-son-etat-de-sante/2b_HAS_Texte_Long-Delivrance-de-l-information-a-la-personne-sur-son-etat-de-sante.md"
+  ],
+  "https://sfar.org/bris-dentaires-perianesthesiques/": [
+   "data/sfar_recommendations/output/chandra/2012/2_AFAR_COURT_Bris-dentaires-perianesthesiques-copie/2_AFAR_COURT_Bris-dentaires-perianesthesiques-copie.md",
+   "data/sfar_recommendations/output/chandra/2012/3_AFAR_LONG_Bris-dentaires-perianesthesiques-copie/3_AFAR_LONG_Bris-dentaires-perianesthesiques-copie.md"
+  ],
+  "https://sfar.org/strategie-du-remplissage-vasculaire-perioperatoire-2/": [
+   "data/sfar_recommendations/output/chandra/2012/2a_AFAR_FRANCAIS_Strategie-du-remplissage-vasculaire-perioperatoire/2a_AFAR_FRANCAIS_Strategie-du-remplissage-vasculaire-perioperatoire.md",
+   "data/sfar_recommendations/output/chandra/2012/2b_AFAR_ANGLAIS_Strategie-du-remplissage-vasculaire-perioperatoire/2b_AFAR_ANGLAIS_Strategie-du-remplissage-vasculaire-perioperatoire.md"
+  ],
+  "https://sfar.org/techniques-analgesiques-locoregionales-et-douleur-chronique/": [
+   "data/sfar_recommendations/output/chandra/2013/2a_AFAR_Techniques-analgesiques-locoregionales-et-douleur-chronique/2a_AFAR_Techniques-analgesiques-locoregionales-et-douleur-chronique.md",
+   "data/sfar_recommendations/output/chandra/2013/2b_Annexe_SFAR_TableauxRFEDCALR2/2b_Annexe_SFAR_TableauxRFEDCALR2.md"
+  ],
+  "https://sfar.org/traumatisme-thoracique-prise-en-charge-des-48-premieres-heures/": [
+   "data/sfar_recommendations/output/chandra/2014/2_AFAR_Traumatisme-thoracique-_prise-en-charge-des-48-premieres-heures/2_AFAR_Traumatisme-thoracique-_prise-en-charge-des-48-premieres-heures.md",
+   "data/sfar_recommendations/output/chandra/2014/RFE-Chest-trauma-First-48-hours-management/RFE-Chest-trauma-First-48-hours-management.md"
+  ],
+  "https://sfar.org/prise-en-charge-des-infections-intra-abdominales/": [
+   "data/sfar_recommendations/output/chandra/2015/2_AFAR_Prise-en-charge-des-infections-intra-abdominales/2_AFAR_Prise-en-charge-des-infections-intra-abdominales.md",
+   "data/sfar_recommendations/output/chandra/2015/RFE-Guidelines-for-management-of-intra-abdominal-infections/RFE-Guidelines-for-management-of-intra-abdominal-infections.md"
+  ],
+  "https://sfar.org/recommandations-sur-lutilisation-de-lechographie-lors-de-la-mise-en-place-des-acces-vasculaires/": [
+   "data/sfar_recommendations/output/chandra/2015/2_AFAR_utilisation-de-lechographie-lors-de-la-mise-en-place-des-acces-vasculaires/2_AFAR_utilisation-de-lechographie-lors-de-la-mise-en-place-des-acces-vasculaires.md",
+   "data/sfar_recommendations/output/chandra/2015/RFE-Guidelines-on-the-use-of-ultrasound-guidance-for-vascular-access/RFE-Guidelines-on-the-use-of-ultrasound-guidance-for-vascular-access.md"
+  ],
+  "https://sfar.org/insuffisance-renale-aigue/": [
+   "data/sfar_recommendations/output/chandra/2015/ANREA_132_RFE-IRA-/ANREA_132_RFE-IRA-.md",
+   "data/sfar_recommendations/output/chandra/2015/RFE-IRA-anglais/RFE-IRA-anglais.md"
+  ],
+  "https://sfar.org/recommandations-sur-la-prise-en-charge-du-tabagisme-en-periode-perioperatoire/": [
+   "data/sfar_recommendations/output/chandra/2016/2-SFAR-RFE-tabac_proposition-CRC/2-SFAR-RFE-tabac_proposition-CRC.md",
+   "data/sfar_recommendations/output/chandra/2016/Anti-Tabac-Pour-un-parcours-patient-securise-1/Anti-Tabac-Pour-un-parcours-patient-securise-1.md",
+   "data/sfar_recommendations/output/chandra/2016/Anti-Tabac-Pour-un-parcours-patient-securise-1-Sans-fond/Anti-Tabac-Pour-un-parcours-patient-securise-1-Sans-fond.md",
+   "data/sfar_recommendations/output/chandra/2016/Anti-Tabac-Pour-un-parcours-patient-securise-2/Anti-Tabac-Pour-un-parcours-patient-securise-2.md",
+   "data/sfar_recommendations/output/chandra/2016/Anti-Tabac-Pour-un-parcours-patient-securise-2-Sans-fond/Anti-Tabac-Pour-un-parcours-patient-securise-2-Sans-fond.md",
+   "data/sfar_recommendations/output/chandra/2016/RFE-Guidelines-on-smoking-management-during-the-perioperative-period/RFE-Guidelines-on-smoking-management-during-the-perioperative-period.md"
+  ],
+  "https://sfar.org/reactualisation-de-la-recommandation-sur-la-douleur-postoperatoire/": [
+   "data/sfar_recommendations/output/chandra/2016/3-Tableaux-Reactualisation-de-la-recommandation-sur-la-douleur-postoperatoire/3-Tableaux-Reactualisation-de-la-recommandation-sur-la-douleur-postoperatoire.md",
+   "data/sfar_recommendations/output/chandra/2016/RFE-ANREA-Reactualisation-de-la-recommandation-sur-la-douleur-postoperatoire/RFE-ANREA-Reactualisation-de-la-recommandation-sur-la-douleur-postoperatoire.md",
+   "data/sfar_recommendations/output/chandra/2016/rfe-revision-of-expert-panel-guidelines-on-postoperative-pain-management/rfe-revision-of-expert-panel-guidelines-on-postoperative-pain-management.md"
+  ],
+  "https://sfar.org/intubation-et-extubation-du-patient-de-reanimation/": [
+   "data/sfar_recommendations/output/chandra/2016/Intubation-et-extubation-du-patient-en-reanimation-ANREA/Intubation-et-extubation-du-patient-en-reanimation-ANREA.md",
+   "data/sfar_recommendations/output/chandra/2016/RFE-Intubation-and-extubation-of-the-ICU-patient/RFE-Intubation-and-extubation-of-the-ICU-patient.md"
+  ],
+  "https://sfar.org/protection-oculaire-en-anesthesie-et-reanimation/": [
+   "data/sfar_recommendations/output/chandra/2016/Protection-oculaire-en-Anesthesie-et-Reanimation-1/Protection-oculaire-en-Anesthesie-et-Reanimation-1.md",
+   "data/sfar_recommendations/output/chandra/2016/RFE-ACCPM-Eye-protection-in-anaesthesia-and-intensive-care/RFE-ACCPM-Eye-protection-in-anaesthesia-and-intensive-care.md"
+  ],
+  "https://sfar.org/prise-en-charge-des-traumatises-craniens-graves-a-la-phase-precoce/": [
+   "data/sfar_recommendations/output/chandra/2016/RFE-ANREA-Prise-en-charge-des-traumatises-craniens-graves-a-la-phase-precoce/RFE-ANREA-Prise-en-charge-des-traumatises-craniens-graves-a-la-phase-precoce.md",
+   "data/sfar_recommendations/output/chandra/2016/RFE-Management-of-severe-traumatic-brain-injury/RFE-Management-of-severe-traumatic-brain-injury.md"
+  ],
+  "https://sfar.org/controle-cible-de-la-temperature-en-reanimation-hors-nouveau-nes/": [
+   "data/sfar_recommendations/output/chandra/2016/RFE-Targeted-temperature-management-in-the-ICU-Guidelines-from-a-French-expert-panel/RFE-Targeted-temperature-management-in-the-ICU-Guidelines-from-a-French-expert-panel.md",
+   "data/sfar_recommendations/output/chandra/2016/rfe-controle-cible-de-la-temperature-en-reanimation/rfe-controle-cible-de-la-temperature-en-reanimation.md"
+  ],
+  "https://sfar.org/preconisations-2016-prevention-des-erreurs-medicamenteuses-en-a-r/": [
+   "data/sfar_recommendations/output/chandra/2016/texte-court-preco-erreurs-med-2016-SFAR-SFPC-version-finale-25-oct-2016/texte-court-preco-erreurs-med-2016-SFAR-SFPC-version-finale-25-oct-2016.md",
+   "data/sfar_recommendations/output/chandra/2016/texte-long-Preconisations-2016-erreurs-med-SFAR-SFPC-version-finale-25-oct-2016/texte-long-Preconisations-2016-erreurs-med-SFAR-SFPC-version-finale-25-oct-2016.md"
+  ],
+  "https://sfar.org/antibioprophylaxie-en-chirurgie-et-medecine-interventionnelle-patients-adultes-2017/": [
+   "data/sfar_recommendations/output/chandra/2017/Antibioprophylaxie-version-2017-CRC_CA_MODIF/Antibioprophylaxie-version-2017-CRC_CA_MODIF.md",
+   "data/sfar_recommendations/output/chandra/2017/rfe-antibioprophylaxie-in-surgery-and-interventional-medicine/rfe-antibioprophylaxie-in-surgery-and-interventional-medicine.md"
+  ],
+  "https://sfar.org/pneumonies-associees-aux-soins-de-reanimation/": [
+   "data/sfar_recommendations/output/chandra/2017/Pneumonies-associees-au-soins-de-reanimation-ANREA/Pneumonies-associees-au-soins-de-reanimation-ANREA.md",
+   "data/sfar_recommendations/output/chandra/2017/RFE-Hospital-acquired-pneumonia-in-ICU/RFE-Hospital-acquired-pneumonia-in-ICU.md"
+  ],
+  "https://sfar.org/tracheotomie-en-reanimation/": [
+   "data/sfar_recommendations/output/chandra/2017/Tracheotomie-en-reanimation-ANREA/Tracheotomie-en-reanimation-ANREA.md",
+   "data/sfar_recommendations/output/chandra/2017/Tracheotomy-in-the-ICU-ACCPM/Tracheotomy-in-the-ICU-ACCPM.md"
+  ],
+  "https://sfar.org/prise-charges-traumatises-pelviens-graves-a-phase-precoce-24-premieres-heures/": [
+   "data/sfar_recommendations/output/chandra/2017/rfe-early-management-of-severe-pelvic-injury/rfe-early-management-of-severe-pelvic-injury.md",
+   "data/sfar_recommendations/output/chandra/2017/rfe-prise-en-charge-des-traumatises-pelviens-graves-a-la-phase-precoce/rfe-prise-en-charge-des-traumatises-pelviens-graves-a-la-phase-precoce.md"
+  ],
+  "https://sfar.org/gestion-agents-antiplaquettaires-procedure-invasive-programmee/": [
+   "data/sfar_recommendations/output/chandra/2018/2_Gestion-des-agents-antiplaquettaires-pour-une-procedure-invasive-programmee/2_Gestion-des-agents-antiplaquettaires-pour-une-procedure-invasive-programmee.md",
+   "data/sfar_recommendations/output/chandra/2018/ACCPM-335/ACCPM-335.md"
+  ],
+  "https://sfar.org/gestion-des-agents-antiplaquettaires-en-cas-de-procedure-invasive-non-programmee-ou-dhemorragie/": [
+   "data/sfar_recommendations/output/chandra/2018/management-of-antiplatelet-therapy-for-non-elective-invasive-procedures-or-bleeding-complications/management-of-antiplatelet-therapy-for-non-elective-invasive-procedures-or-bleeding-complications.md",
+   "data/sfar_recommendations/output/chandra/2018/rfe-gestion-des-agents-antiplaquettaires/rfe-gestion-des-agents-antiplaquettaires.md"
+  ],
+  "https://sfar.org/prise-en-charge-du-brule-grave-a-la-phase-aigue-chez-ladulte-et-lenfant/": [
+   "data/sfar_recommendations/output/chandra/2019/Recommandations-incendies-France/Recommandations-incendies-France.md",
+   "data/sfar_recommendations/output/chandra/2019/liste-des-centres-de-traitement-des-brules-francais-et-transfrontaliers/liste-des-centres-de-traitement-des-brules-francais-et-transfrontaliers.md",
+   "data/sfar_recommendations/output/chandra/2019/rpp-prise-en-charge-du-brule-grave%20/rpp-prise-en-charge-du-brule-grave%20.md",
+   "data/sfar_recommendations/output/chandra/2019/rpp-urgence-brule-fiches-synthese/rpp-urgence-brule-fiches-synthese.md"
+  ],
+  "https://sfar.org/gestion-et-prevention-de-lanemie-hors-hemorragie-aigue-chez-le-patient-adulte-de-soins-critiques/": [
+   "data/sfar_recommendations/output/chandra/2019/rfe-anemie-arbre-diagnostic-anemie/rfe-anemie-arbre-diagnostic-anemie.md",
+   "data/sfar_recommendations/output/chandra/2019/rfe-gestion-anemie-reanimation/rfe-gestion-anemie-reanimation.md"
+  ],
+  "https://sfar.org/prise-en-charge-du-traumatisme-abdominal-grave-de-ladulte-les-48-premieres-heures/": [
+   "data/sfar_recommendations/output/chandra/2019/rfe-trauma-abdominal-fiche-synthese/rfe-trauma-abdominal-fiche-synthese.md",
+   "data/sfar_recommendations/output/chandra/2019/rfe-trauma-abdominale/rfe-trauma-abdominale.md"
+  ],
+  "https://sfar.org/prise-en-charge-des-patients-presentant-ou-a-risque-de-traumatisme-vertebromedullaire/": [
+   "data/sfar_recommendations/output/chandra/2019/rfe-trauma-vertebro-medulaire/rfe-trauma-vertebro-medulaire.md",
+   "data/sfar_recommendations/output/chandra/2019/rfe-vertebro-medullaire-fiche-synthese/rfe-vertebro-medullaire-fiche-synthese.md"
+  ],
+  "https://sfar.org/prise-en-charge-de-lhyperthermie-maligne/": [
+   "data/sfar_recommendations/output/chandra/2019/rpp-hyperthermie-maligne/rpp-hyperthermie-maligne.md",
+   "data/sfar_recommendations/output/chandra/2019/rpp-hyperthermie-malinge-fiches-synthese/rpp-hyperthermie-malinge-fiches-synthese.md"
+  ],
+  "https://sfar.org/prise-en-charge-de-la-patiente-avec-une-pre-eclampsie-severe/": [
+   "data/sfar_recommendations/output/chandra/2020/RFE%20pr%C3%A9-%C3%A9clampsie_finale/RFE%20pr%C3%A9-%C3%A9clampsie_finale.md",
+   "data/sfar_recommendations/output/chandra/2020/RFE-pre-eclampsie_Fiches-pratiques/RFE-pre-eclampsie_Fiches-pratiques.md"
+  ],
+  "https://sfar.org/prise-en-charge-des-patients-presentant-un-traumatisme-severe-de-membres/": [
+   "data/sfar_recommendations/output/chandra/2020/RFE_TSM_2020/RFE_TSM_2020.md",
+   "data/sfar_recommendations/output/chandra/2020/RFE_TSM_Fiches_pratiques/RFE_TSM_Fiches_pratiques.md"
+  ],
+  "https://sfar.org/teleconsultation-danesthesie/": [
+   "data/sfar_recommendations/output/chandra/2021/Document%20Patient%20pour%20CAMR%20mars%202021/Document%20Patient%20pour%20CAMR%20mars%202021.md",
+   "data/sfar_recommendations/output/chandra/2021/Examen%20clinique%20Visio%20CAMR%20mars%202021/Examen%20clinique%20Visio%20CAMR%20mars%202021.md",
+   "data/sfar_recommendations/output/chandra/2021/Facturation%20TLC%20CAMR%20mars%202021/Facturation%20TLC%20CAMR%20mars%202021.md",
+   "data/sfar_recommendations/output/chandra/2021/Proposition%20fiche%20TLC%20CAMR%20mars%202021/Proposition%20fiche%20TLC%20CAMR%20mars%202021.md",
+   "data/sfar_recommendations/output/chandra/2021/fonctionnalites%20des%20plateformes%20de%20TLC%20CAMR%20mars%202021/fonctionnalites%20des%20plateformes%20de%20TLC%20CAMR%20mars%202021.md"
+  ],
+  "https://sfar.org/preconisations-pour-ladaptation-de-loffre-de-soins-en-anesthesie-reanimation-dans-le-contexte-de-pandemie-de-covid-19/": [
+   "data/sfar_recommendations/output/chandra/2022/RPP%20SFAR%20COVID_Version%20Avril%202022_finale%20sans%20marque/RPP%20SFAR%20COVID_Version%20Avril%202022_finale%20sans%20marque.md",
+   "data/sfar_recommendations/output/chandra/2022/RPP-SFAR-COVID_Version-Avril-2022_abrogee-010723/RPP-SFAR-COVID_Version-Avril-2022_abrogee-010723.md"
+  ],
+  "https://sfar.org/anesthesie-pour-chirurgie-non-cardiaque-des-patients-adultes-porteurs-de-cardiopathie-congenitale/": [
+   "data/sfar_recommendations/output/chandra/2023/RPP-Anestheesie-adulte-porteur-CC_fiches-pratiques_pour-mise-sur-site/RPP-Anestheesie-adulte-porteur-CC_fiches-pratiques_pour-mise-sur-site.md",
+   "data/sfar_recommendations/output/chandra/2023/RPP-Anesthesie-adulte-porteur-de-CC_pour-mise-sur-site/RPP-Anesthesie-adulte-porteur-de-CC_pour-mise-sur-site.md"
+  ],
+  "https://sfar.org/gestion-de-lanticoagulation-dans-un-contexte-durgence/": [
+   "data/sfar_recommendations/output/chandra/2024/Algorithmes_RFE-gestion-de-lanticoagulation-dans-un-contexte-durgence_2024/Algorithmes_RFE-gestion-de-lanticoagulation-dans-un-contexte-durgence_2024.md",
+   "data/sfar_recommendations/output/chandra/2024/RFE-gestion-de-lanticoagulation-dans-un-contexte-durgence_23.02.2024-1/RFE-gestion-de-lanticoagulation-dans-un-contexte-durgence_23.02.2024-1.md"
+  ],
+  "https://sfar.org/prise-en-charge-neurochirurgicales-des-traumatismes-cranio-encephaliques-de-ladulte-et-de-lenfant-a-la-phase-initiale/": [
+   "data/sfar_recommendations/output/chandra/2025/Figure-1-Fiche-synthese-FR/Figure-1-Fiche-synthese-FR.md",
+   "data/sfar_recommendations/output/chandra/2025/RPP-Trauma-cranio-encephaliques-V1-finalisee/RPP-Trauma-cranio-encephaliques-V1-finalisee.md"
+  ],
+  "https://sfar.org/prise-en-charge-peri-operatoire-du-patient-adulte-lors-dune-resection-hepatique/": [
+   "data/sfar_recommendations/output/chandra/2025/RBP_-SFAR_AFEF_ACHBPT_RESECTION_-HEPATIQUE_-ARGUMENTAIRE_VF-1-AB-modif-ok/RBP_-SFAR_AFEF_ACHBPT_RESECTION_-HEPATIQUE_-ARGUMENTAIRE_VF-1-AB-modif-ok.md",
+   "data/sfar_recommendations/output/chandra/2025/RESECTION_-HEPATIQUE_-RECOMMANDATIONS_MEL/RESECTION_-HEPATIQUE_-RECOMMANDATIONS_MEL.md"
+  ],
+  "https://sfar.org/prise-en-charge-de-la-douleur-de-laccouchement-analgesie-perimedullaire-et-alternatives-medicamenteuses/": [
+   "data/sfar_recommendations/output/chandra/2025/RFE-analgesie-obstetricale-texte-court/RFE-analgesie-obstetricale-texte-court.md",
+   "data/sfar_recommendations/output/chandra/2025/RFE-analgesie-obstetricale-texte-long/RFE-analgesie-obstetricale-texte-long.md"
+  ],
+  "https://sfar.org/prise-en-charge-du-sepsis-du-nouveau-ne-de-lenfant-et-de-ladulte-has-2025/": [
+   "data/sfar_recommendations/output/chandra/2025/argu_sepsis/argu_sepsis.md",
+   "data/sfar_recommendations/output/chandra/2025/fiche_sepsis_amont/fiche_sepsis_amont.md",
+   "data/sfar_recommendations/output/chandra/2025/fiche_sepsis_aval/fiche_sepsis_aval.md",
+   "data/sfar_recommendations/output/chandra/2025/reco_sepsis/reco_sepsis.md"
+  ],
+  "https://sfar.org/prise-en-charge-des-voies-aeriennes-de-ladulte-au-bloc-operatoire/": [
+   "data/sfar_recommendations/output/chandra/2026/1_algorithme-difficultes_previsibles_gestion_voies_aeriennes_adulte_au_bloc/1_algorithme-difficultes_previsibles_gestion_voies_aeriennes_adulte_au_bloc.md",
+   "data/sfar_recommendations/output/chandra/2026/2_algorithme_gestion_des_voies_aeriennes_adulte___strategie_en_apnee/2_algorithme_gestion_des_voies_aeriennes_adulte___strategie_en_apnee.md",
+   "data/sfar_recommendations/output/chandra/2026/3_aide_cognitive_realisation_intubation_tracheale_ventilation_spontanee/3_aide_cognitive_realisation_intubation_tracheale_ventilation_spontanee.md",
+   "data/sfar_recommendations/output/chandra/2026/4_cricothyroidotomie_par_technique_sms/4_cricothyroidotomie_par_technique_sms.md",
+   "data/sfar_recommendations/output/chandra/2026/5_aide_cognitive_a_la_realisation_dun_briefing/5_aide_cognitive_a_la_realisation_dun_briefing.md",
+   "data/sfar_recommendations/output/chandra/2026/6_aide_cognitive_a_la_realisation_dun_debriefing/6_aide_cognitive_a_la_realisation_dun_debriefing.md",
+   "data/sfar_recommendations/output/chandra/2026/7_certificat_de_voies_aeriennes_difficiles/7_certificat_de_voies_aeriennes_difficiles.md",
+   "data/sfar_recommendations/output/chandra/2026/ACAR-Intubation-difficile-en-apnee-au-bloc/ACAR-Intubation-difficile-en-apnee-au-bloc.md",
+   "data/sfar_recommendations/output/chandra/2026/gestion_voies_aeriennes_argumentaire_mel_vd/gestion_voies_aeriennes_argumentaire_mel_vd.md",
+   "data/sfar_recommendations/output/chandra/2026/gestion_voies_aeriennes_recommandations_mel_vd/gestion_voies_aeriennes_recommandations_mel_vd.md"
+  ],
+  "https://sfar.org/organisation-de-la-prise-en-charge-des-urgences-vitales-intra-hospitalieres/": [
+   "data/sfar_recommendations/output/chandra/2026/Aides-cognitives-Organisation-de-la-prise-en-charge-des-urgences-vitales-intra-hospitalieres-ADULTE/Aides-cognitives-Organisation-de-la-prise-en-charge-des-urgences-vitales-intra-hospitalieres-ADULTE.md",
+   "data/sfar_recommendations/output/chandra/2026/Aides-cognitives-Organisation-de-la-prise-en-charge-des-urgences-vitales-intra-hospitalieres-ENFANT/Aides-cognitives-Organisation-de-la-prise-en-charge-des-urgences-vitales-intra-hospitalieres-ENFANT.md",
+   "data/sfar_recommendations/output/chandra/2026/RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-ARGUMENTAIRE_CD_20260903_FIN/RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-ARGUMENTAIRE_CD_20260903_FIN.md"
+  ],
+  "https://sfar.org/nutrition-clinique-de-ladulte-en-contexte-perioperatoire-et-en-soins-critiques/": [
+   "data/sfar_recommendations/output/chandra/2026/Figures-RFE-Nutrition/Figures-RFE-Nutrition.md",
+   "data/sfar_recommendations/output/chandra/2026/Version-courte/Version-courte.md",
+   "data/sfar_recommendations/output/chandra/2026/Version-longue/Version-longue.md"
+  ],
+  "https://sfar.org/prise-en-charge-therapeutique-des-infections-intra-abdominales-de-ladulte/": [
+   "data/sfar_recommendations/output/chandra/2026/RFE-Infections-intra-abdominales-version-lecture-doc-finale-14-08-26-depose-site-sans-filigrane/RFE-Infections-intra-abdominales-version-lecture-doc-finale-14-08-26-depose-site-sans-filigrane.md",
+   "data/sfar_recommendations/output/chandra/2026/algo_synthese_IIA_RFE_moderne-defitives-depot-site-SFAR/algo_synthese_IIA_RFE_moderne-defitives-depot-site-SFAR.md"
+  ],
+  "https://sfar.org/recommandation-de-bonne-pratique-place-de-lecbu-avant-une-prise-en-charge-urologique-chirurgicale-ou-interventionnelle-chez-ladulte-et-modalites-de-traitement-en-cas-de-coloni/": [
+   "data/sfar_recommendations/output/chandra/2026/RecoCIAFU_ECBU_Note-de-cadrage_10.10.2024/RecoCIAFU_ECBU_Note-de-cadrage_10.10.2024.md",
+   "data/sfar_recommendations/output/chandra/2026/Reco_ECBU_Argumentaire_04.03.2026_MEL/Reco_ECBU_Argumentaire_04.03.2026_MEL.md",
+   "data/sfar_recommendations/output/chandra/2026/Reco_ECBU_Synthese_04.03.2026_MEL/Reco_ECBU_Synthese_04.03.2026_MEL.md",
+   "data/sfar_recommendations/output/chandra/2026/Tableau-de-synthese_04.03.2026_MEL/Tableau-de-synthese_04.03.2026_MEL.md"
+  ],
+  "https://sfar.org/agents-antiplaquettaires-et-periode-perioperatoire/": [
+   "data/sfar_recommendations/output/chandra/unknown/2a_SFAR-Francais/2a_SFAR-Francais.md",
+   "data/sfar_recommendations/output/chandra/unknown/2b_SFAR-Anglais/2b_SFAR-Anglais.md"
+  ],
+  "https://sfar.org/reactualisation-de-la-conference-dexperts-sur-lintubation-difficile/": [
+   "data/sfar_recommendations/output/chandra/unknown/2a_SFAR_texte_court_Intubation-difficile/2a_SFAR_texte_court_Intubation-difficile.md",
+   "data/sfar_recommendations/output/chandra/unknown/2b_AFAR_Texte-Long_Intubation-difficile/2b_AFAR_Texte-Long_Intubation-difficile.md",
+   "data/sfar_recommendations/output/chandra/unknown/BJA-2015-reco-ventilation-et-IOT1/BJA-2015-reco-ventilation-et-IOT1.md"
+  ],
+  "https://sfar.org/une-formation-specifique-et-une-reconnaissance-du-metier-dinfirmier-de-reanimation/": [
+   "data/sfar_recommendations/output/chandra/unknown/MANIFESTEformationIDEReanimation/MANIFESTEformationIDEReanimation.md",
+   "data/sfar_recommendations/output/chandra/unknown/ReferentielcompetencesIDEReanimation/ReferentielcompetencesIDEReanimation.md",
+   "data/sfar_recommendations/output/chandra/unknown/livretadaptationIDEReanimation/livretadaptationIDEReanimation.md"
+  ],
+  "https://sfar.org/antalgiques-en-chirurgie-orl/": [
+   "data/sfar_recommendations/output/chandra/unknown/Recommandation_Prise_en_charge_douleurs_induites_par_traitement_cancers_VADS_2014_TC11/Recommandation_Prise_en_charge_douleurs_induites_par_traitement_cancers_VADS_2014_TC11.md",
+   "data/sfar_recommendations/output/chandra/unknown/Recommandation_antalgique_post_amygdalectomie_2014_TC2/Recommandation_antalgique_post_amygdalectomie_2014_TC2.md"
+  ]
+ },
+ "n_families": 180,
+ "n_families_multi": 56,
+ "mentions": {
+  "data/sfar_recommendations/output/chandra/2002/REANIMATION_Prise-en-charge-des-crises-dasthme-aigues-graves-de-ladulte-et-de-lenfant-/REANIMATION_Prise-en-charge-des-crises-dasthme-aigues-graves-de-ladulte-et-de-lenfant-.md": [
+   {
+    "years": [
+     1988
+    ],
+    "snippet": "## Révision de la troisième Conférence de consensus en réanimation et médecine d'Urgence de 1988 : Prise en charge des crises d'asthme aiguës graves de l'adulte et de l'enfant (à l'exclusion du nourrisson)",
+    "line": 1
+   }
+  ],
+  "data/sfar_recommendations/output/chandra/2008/2a_AFAR_Prise-en-charge-de-la-douleur-postoperatoire-chez-ladulte-et-lenfant/2a_AFAR_Prise-en-charge-de-la-douleur-postoperatoire-chez-ladulte-et-lenfant.md": [
+   {
+    "years": [
+     1997
+    ],
+    "snippet": "La méthodologie de la recommandation formalisée d'experts (RFE), explicitée plus loin, est plus légère que celle de la conférence de consensus de 1997 et permet de proposer une révision de la conférence de consensus sur huit aspects identifiés comme prioritair",
+    "line": 23
+   },
+   {
+    "years": [
+     1997
+    ],
+    "snippet": "☆ Actualisation de la conférence de consensus de 1997",
+    "line": 1
+   }
+  ],
+  "data/sfar_recommendations/output/chandra/2008/2b_AFAR_ANGLAISEExpert-panel-guidelines-2008.-Postoperative-pain-management-in-adults-and-children.-SFAR-Committees-on-Pain-and-Local-Regional-Anaesthesia-and-on-Standards./2b_AFAR_ANGLAISEExpert-panel-guidelines-2008.-Postoperative-pain-management-in-adults-and-children.-SFAR-Committees-on-Pain-and-Local-Regional-Anaesthesia-and-on-Standards..md": [
+   {
+    "years": [
+     1997
+    ],
+    "snippet": "☆ Update of the 1997 consensus conference guidelines",
+    "line": 1
+   }
+  ],
+  "data/sfar_recommendations/output/chandra/2009/2_SFAR_Prise-en-charge-pre-et-interhospitaliere-des-formes-graves-de-preeclampsie/2_SFAR_Prise-en-charge-pre-et-interhospitaliere-des-formes-graves-de-preeclampsie.md": [
+   {
+    "years": [
+     2000
+    ],
+    "snippet": "Ce travail d'actualisation d'une conférence d'experts datant de 2000 a été initié par le comité des référentiels de la SFAR avec l'aval du conseil d'administration",
+    "line": 23
+   }
+  ],
+  "data/sfar_recommendations/output/chandra/2010/2_AFAR_Nutrition-artificielle-perioperatoire-en-chirurgie-programmee-de-ladulte/2_AFAR_Nutrition-artificielle-perioperatoire-en-chirurgie-programmee-de-ladulte.md": [
+   {
+    "years": [
+     2010,
+     1994
+    ],
+    "snippet": "Actualisation 2010 de la conférence de consensus de 1994 sur la « Nutrition artificielle périopératoire en chirurgie programmée de l'adulte » ☆ **",
+    "line": 3
+   },
+   {
+    "years": [
+     1994
+    ],
+    "snippet": "Update of the 1994 consensus conference on “Perioperative artificial nutrition after elective surgery in adults”**",
+    "line": 5
+   }
+  ],
+  "data/sfar_recommendations/output/chandra/2010/2_AFAR_Sedation-analgesie-en-structure-d-urgence/2_AFAR_Sedation-analgesie-en-structure-d-urgence.md": [
+   {
+    "years": [
+     1999
+    ],
+    "snippet": "### Sédation et analgésie en structure d'urgence (Réactualisation de la Conférence d'experts de la Sfar de 1999)",
+    "line": 6
+   },
+   {
+    "years": [
+     1993
+    ],
+    "snippet": "Ce document ne prétend donc pas réactualiser la conférence de consensus réalisée par la Société francophone des urgences médicales en 1993",
+    "line": 68
+   },
+   {
+    "years": [
+     2010
+    ],
+    "snippet": "La réalisation des référentiels ayant évolué avec le temps, cette réactualisation de 2010 a utilisé la méthode « GRADE » (Grading of Recommendations Assessment, Development and Evaluation, [www",
+    "line": 74
+   }
+  ],
+  "data/sfar_recommendations/output/chandra/2010/2_ANAES_Prise-en-charge-de-l-interruption-volontaire-de-grossesse-jusqu-a-14-semaines/2_ANAES_Prise-en-charge-de-l-interruption-volontaire-de-grossesse-jusqu-a-14-semaines.md": [
+   {
+    "years": [
+     2010
+    ],
+    "snippet": "**Concernant l'IVG par méthode médicamenteuse, se référer aux recommandations de la HAS finalisées en décembre 2010, qui actualisent les recommandations ci-dessous",
+    "line": 7
+   }
+  ],
+  "data/sfar_recommendations/output/chandra/2010/2_SFAR_Anesthesie-loco-regionale-en-pediatrie/2_SFAR_Anesthesie-loco-regionale-en-pediatrie.md": [
+   {
+    "years": [
+     1997
+    ],
+    "snippet": "Ces recommandations formalisées actualisent la Conférence d'Experts organisée par la Société Française d'Anesthésie et de Réanimation (SFAR) en 1997",
+    "line": 7
+   }
+  ],
+  "data/sfar_recommendations/output/chandra/2010/2a_HAS_texte-court_Delivrance-de-linformation-a-la-personne-sur-son-etat-de-sante/2a_HAS_texte-court_Delivrance-de-linformation-a-la-personne-sur-son-etat-de-sante.md": [
+   {
+    "years": [
+     2000
+    ],
+    "snippet": "Cette recommandation de bonne pratique actualise celle sur « Information des patients - Recommandations destinées aux médecins » de mars 2000",
+    "line": 19
+   }
+  ],
+  "data/sfar_recommendations/output/chandra/2011/2_AFAR_Prevention-du-risque-allergique-peranesthesique/2_AFAR_Prevention-du-risque-allergique-peranesthesique.md": [
+   {
+    "years": [
+     2001,
+     2002
+    ],
+    "snippet": "Les recommandations réactualisées avaient été élaborées en 2001 à l'initiative de la Sfar et de la Société française d'allergologie et d'immunologie (SFAIC devenue SFA) et publiées en 2002",
+    "line": 27
+   }
+  ],
+  "data/sfar_recommendations/output/chandra/2012/2_HAS_Texte-court-ransfusion-de-plasma-therapeutique-Produits-indications/2_HAS_Texte-court-ransfusion-de-plasma-therapeutique-Produits-indications.md": [
+   {
+    "years": [
+     2011,
+     1991
+    ],
+    "snippet": "Depuis l'abrogation le 13 juillet 2011 de l'arrêté du 3 décembre 1991, les recommandations de l'ANSM constituent l'unique référence officielle pour ce qui concerne la prescription du plasma",
+    "line": 56
+   },
+   {
+    "years": [
+     2008
+    ],
+    "snippet": "L'actualisation des recommandations s'est faite dans un contexte de réévaluation du bénéfice-risque d'une des méthodes de préparation des plasmas, la technique de viro-atténuation par le bleu de méthylène, mise en œuvre depuis 2008, et définitivement retirée d",
+    "line": 60
+   }
+  ],
+  "data/sfar_recommendations/output/chandra/2012/3_AFAR_LONG_Bris-dentaires-perianesthesiques-copie/3_AFAR_LONG_Bris-dentaires-perianesthesiques-copie.md": [
+   {
+    "years": [
+     2006
+    ],
+    "snippet": "** Les critères prédictifs d'intubation difficile ont été précisés dans la conférence d'experts réactualisée en 2006 [12]",
+    "line": 149
+   }
+  ],
+  "data/sfar_recommendations/output/chandra/2012/AFAR_Examens-preinterventionnels-systematiques/AFAR_Examens-preinterventionnels-systematiques.md": [
+   {
+    "years": [
+     1998
+    ],
+    "snippet": "L'objectif de cette recommandation formalisée d'experts (RFE) est d'assurer une réactualisation des recommandations éditées par l'Agence nationale d'accréditation et d'évaluation en santé (Anaes) en 1998",
+    "line": 106
+   }
+  ],
+  "data/sfar_recommendations/output/chandra/2014/2_HAS_transfusion_de_globules_rouges_homologues_-_produits_indications_alternatives_-_recommandations/2_HAS_transfusion_de_globules_rouges_homologues_-_produits_indications_alternatives_-_recommandations.md": [
+   {
+    "years": [
+     2002
+    ],
+    "snippet": "Il était demandé à la HAS d'actualiser les recommandations de l'Afssaps de 2002 intitulées « Transfusions de globules rouges homologues : produits, indications, alternatives »",
+    "line": 131
+   },
+   {
+    "years": [
+     2002
+    ],
+    "snippet": "L'objectif est d'actualiser les recommandations de l'Afssaps de 2002 intitulées « Transfusions de globules rouges homologues : produits, indications, alternatives »",
+    "line": 135
+   }
+  ],
+  "data/sfar_recommendations/output/chandra/2015/Reactualisation-GIHP_AOD_actes-programmes_Septembre-20151/Reactualisation-GIHP_AOD_actes-programmes_Septembre-20151.md": [
+   {
+    "years": [
+     2015
+    ],
+    "snippet": "## **Gestion des Anticoagulants Oraux Directs pour la chirurgie et les actes invasifs programmés : propositions réactualisées du Groupe d'Intérêt en Hémostase Périopératoire (GIHP)-Septembre 2015**",
+    "line": 3
+   }
+  ],
+  "data/sfar_recommendations/output/chandra/2016/2-SFAR-RFE-tabac_proposition-CRC/2-SFAR-RFE-tabac_proposition-CRC.md": [
+   {
+    "years": [
+     2005
+    ],
+    "snippet": "pourquoi la SFAR, au travers de son Conseil d'Administration, a décidé en lien avec la SFT, le CNCT, la SOFCOT, le CNP de Chirurgie Plastique et le CNP de Chirurgie Thoracique et Cardio-vasculaire de réactualiser les recommandations produites en 2005 en saisis",
+    "line": 101
+   }
+  ],
+  "data/sfar_recommendations/output/chandra/2016/RFE-ANREA-Organisation-de-l-anesthesie-reanimation-obstetricale/RFE-ANREA-Organisation-de-l-anesthesie-reanimation-obstetricale.md": [
+   {
+    "years": [
+     1992
+    ],
+    "snippet": "Pour mettre à jour les recommandations sur l'analgesie obstétricale éditée par la Société française d'anesthésie et de réanimation (Sfar) en 1992, les RP sont formalisées à partir des textes réglementaires, d'autres recommandations professionnelles et des avis",
+    "line": 135
+   }
+  ],
+  "data/sfar_recommendations/output/chandra/2016/RFE-Guidelines-on-smoking-management-during-the-perioperative-period/RFE-Guidelines-on-smoking-management-during-the-perioperative-period.md": [
+   {
+    "years": [
+     2005
+    ],
+    "snippet": "l contre le tabagisme*), the *SOFCOT* (*Société française de chirurgie orthopédique et traumatologique*), the *CNP de chirurgie plastique* and the *CNP de chirurgie thoracique et cardiovasculaire* to update the 2005 guidelines by asking the clinical benchmarki",
+    "line": 91
+   }
+  ],
+  "data/sfar_recommendations/output/chandra/2016/RFE-Management-of-severe-traumatic-brain-injury/RFE-Management-of-severe-traumatic-brain-injury.md": [
+   {
+    "years": [
+     1998
+    ],
+    "snippet": "A large part of the 1998 guidelines remains valid and we present updated recommendations in the present material",
+    "line": 126
+   }
+  ],
+  "data/sfar_recommendations/output/chandra/2016/rfe-anesthesie-loco-regionale-perinerveuse/rfe-anesthesie-loco-regionale-perinerveuse.md": [
+   {
+    "years": [
+     2003,
+     2003
+    ],
+    "snippet": "iffusé en 2003 par la Société française d'anesthésie et de réanimation (recommandations pour la pratique clinique en ALR, RPC-ALR 2003), détaillant les données anatomocliniques et les techniques, une mise à jour était nécessaire en raison des nouvelles techniq",
+    "line": 43
+   },
+   {
+    "years": [
+     2003
+    ],
+    "snippet": "*Since the former French guidelines, published in 2003, on perineural anaesthesia (PNA) dealing about anatomical data and detailed practices, an update appeared relevant, as new tools and knowledge showed up recently, able to modify PNA skills and processes",
+    "line": 59
+   },
+   {
+    "years": [
+     2003
+    ],
+    "snippet": "Finally, few updates on previous recommendations from the 2003 guidelines have been done",
+    "line": 59
+   },
+   {
+    "years": [
+     2003
+    ],
+    "snippet": "Le texte présenté ne vise pas à remplacer la RPC 2003, dont les objectifs étaient centrés sur la description de réalisation de l'ALR en pratique clinique, avec comme technique de référence la neurostimulation ; de plus les données anatomocliniques rapportées s",
+    "line": 138
+   },
+   {
+    "years": [
+     2003,
+     2003
+    ],
+    "snippet": "Pour chaque thème, une brève section intitulée : relecture de la RPC 2003 – Points d'actualisation (en sus des recommandations), est renseignée si nécessaire, afin de préciser, les points de la RPC 2003 qui ne sont plus valides",
+    "line": 159
+   },
+   {
+    "years": [
+     2003
+    ],
+    "snippet": "**Relecture de la RPC 2003 – Points d'actualisation (en sus des recommandations)**",
+    "line": 214
+   },
+   {
+    "years": [
+     2003
+    ],
+    "snippet": "Relecture de la RPC 2003 – Points d'actualisation (en sus des recommandations)",
+    "line": 214
+   },
+   {
+    "years": [
+     2003
+    ],
+    "snippet": "Par rapport aux recommandations de 2003 qui mettaient en relation indications opératoires et ALR, plusieurs points sont à préciser, au titre de l'actualisation des recommandations :",
+    "line": 270
+   }
+  ],
+  "data/sfar_recommendations/output/chandra/2016/rfe-revision-of-expert-panel-guidelines-on-postoperative-pain-management/rfe-revision-of-expert-panel-guidelines-on-postoperative-pain-management.md": [
+   {
+    "years": [
+     2008
+    ],
+    "snippet": "This was an update of the 2008 guidelines",
+    "line": 47
+   }
+  ],
+  "data/sfar_recommendations/output/chandra/2017/Antibioprophylaxie-version-2017-CRC_CA_MODIF/Antibioprophylaxie-version-2017-CRC_CA_MODIF.md": [
+   {
+    "years": [
+     1992
+    ],
+    "snippet": "Depuis 1992 la Sfar a établi et régulièrement actualisé des recommandations pour encadrer la prescription de l'ABP en chirurgie et en médecine interventionnelle pour les patients adultes",
+    "line": 108
+   },
+   {
+    "years": [
+     2010
+    ],
+    "snippet": "Les dernières recommandations ont été établies en 2010 et font l'objet d'une actualisation en fonction des données de la littérature publiées depuis cette date",
+    "line": 108
+   }
+  ],
+  "data/sfar_recommendations/output/chandra/2017/RFE-ANREA-Intubation-difficile-et-extubation-en-anesthesie-chez-l-adulte/RFE-ANREA-Intubation-difficile-et-extubation-en-anesthesie-chez-l-adulte.md": [
+   {
+    "years": [
+     2006
+    ],
+    "snippet": "Ces recommandations formalisées sont le résultat du travail d'un groupe d'experts réunis par la Société française d'anesthésie et de réanimation (SFAR) afin de réactualiser la Conférence d'experts/intubation difficile de 2006",
+    "line": 88
+   }
+  ],
+  "data/sfar_recommendations/output/chandra/2018/2_RFE-CURARE-3/2_RFE-CURARE-3.md": [
+   {
+    "years": [
+     1999
+    ],
+    "snippet": "** Mettre à jour le référentiel français sur l'utilisation des curares en anesthésie qui datait de 1999",
+    "line": 17
+   },
+   {
+    "years": [
+     1999
+    ],
+    "snippet": "** To provide an update to French guidelines about « Muscle relaxants and reversal in anaesthesia 1999»",
+    "line": 27
+   },
+   {
+    "years": [
+     2010,
+     1999
+    ],
+    "snippet": "Réactualisation 2010 de la Conférence d'experts de la Sfar de 1999",
+    "line": 174
+   }
+  ],
+  "data/sfar_recommendations/output/chandra/2018/Antibioprophylaxie-RFE-mise-a-jour-2018/Antibioprophylaxie-RFE-mise-a-jour-2018.md": [
+   {
+    "years": [
+     1992
+    ],
+    "snippet": "Depuis 1992 la Sfar a établi et régulièrement actualisé des recommandations pour encadrer la prescription de l'ABP en chirurgie et en médecine interventionnelle pour les patients adultes",
+    "line": 106
+   },
+   {
+    "years": [
+     2010
+    ],
+    "snippet": "Les dernières recommandations ont été établies en 2010 et font l'objet d'une actualisation en fonction des données de la littérature publiées depuis cette date",
+    "line": 106
+   }
+  ],
+  "data/sfar_recommendations/output/chandra/2019/diagnostic-et-prise-ne-charge-dune-TIH/diagnostic-et-prise-ne-charge-dune-TIH.md": [
+   {
+    "years": [
+     2002
+    ],
+    "snippet": "Un premier texte reprenant les données actualisées de la littérature et des recommandations britanniques (3), de l'ACCP (2) ainsi que celles plus récemment émises par l'ASH (4) a été écrit en partant de la conférence d'experts de 2002 (1)",
+    "line": 27
+   }
+  ],
+  "data/sfar_recommendations/output/chandra/2019/propositions-tih-gihp-gfht-sfar%20/propositions-tih-gihp-gfht-sfar%20.md": [
+   {
+    "years": [
+     2002
+    ],
+    "snippet": "Un premier texte reprenant les données actualisées de la littérature et des recommandations britanniques (3), de l'ACCP (2) ainsi que celles plus récemment émises par l'ASH (4) a été écrit en partant de la conférence d'experts de 2002 (1)",
+    "line": 27
+   }
+  ],
+  "data/sfar_recommendations/output/chandra/2019/rfe-trauma-vertebro-medulaire/rfe-trauma-vertebro-medulaire.md": [
+   {
+    "years": [
+     2004
+    ],
+    "snippet": "** Mettre à jour le référentiel français de « Prise en charge d'un blessé adulte présentant un traumatisme vertébro-médullaire » datant de 2004",
+    "line": 99
+   },
+   {
+    "years": [
+     2003
+    ],
+    "snippet": "Ces recommandations sont donc une actualisation des recommandations de 2003, à la lumière de la progression dans la connaissance des patients traumatisés vertébro-médullaires au cours des dix dernières années",
+    "line": 123
+   }
+  ],
+  "data/sfar_recommendations/output/chandra/2019/rpp-hyperthermie-maligne/rpp-hyperthermie-maligne.md": [
+   {
+    "years": [
+     2013
+    ],
+    "snippet": "*Ce document est une mise à jour des Recommandations d'Experts pour le risque d'HYPERTHERMIE MALIGNE en anesthésie-réanimation de septembre 2013",
+    "line": 13
+   }
+  ],
+  "data/sfar_recommendations/output/chandra/2020/RFE%20pr%C3%A9-%C3%A9clampsie_finale/RFE%20pr%C3%A9-%C3%A9clampsie_finale.md": [
+   {
+    "years": [
+     2009
+    ],
+    "snippet": "Les objectifs de ces nouvelles recommandations sont non seulement de proposer une définition actualisée de la pré-éclampsie sévère et de mettre à jour celles émises en 2009, tel l'algorithme de prise en charge de l'hypertension artérielle, mais également d'abo",
+    "line": 71
+   }
+  ],
+  "data/sfar_recommendations/output/chandra/2021/Gestion%20perioperatoire%20des%20patients%20sous%20AOD%20en%20urgence/Gestion%20perioperatoire%20des%20patients%20sous%20AOD%20en%20urgence.md": [
+   {
+    "years": [
+     2016
+    ],
+    "snippet": "### Réactualisation des propositions du Groupe d'Intérêt en Hémostase Périopératoire (GIHP) - septembre 2016",
+    "line": 1
+   }
+  ],
+  "data/sfar_recommendations/output/chandra/2021/Gestion%20perioperatoire%20des%20patients%20sous%20AOD%20pour%20un%20acte%20programm%C3%A9/Gestion%20perioperatoire%20des%20patients%20sous%20AOD%20pour%20un%20acte%20programm%C3%A9.md": [
+   {
+    "years": [
+     2015
+    ],
+    "snippet": "## **Gestion des Anticoagulants Oraux Directs pour la chirurgie et les actes invasifs programmés : propositions réactualisées du Groupe d'Intérêt en Hémostase Périopératoire (GIHP)--Septembre 2015**",
+    "line": 5
+   }
+  ],
+  "data/sfar_recommendations/output/chandra/2022/RPP%20SFAR%20COVID_Version%20Avril%202022_finale%20sans%20marque/RPP%20SFAR%20COVID_Version%20Avril%202022_finale%20sans%20marque.md": [
+   {
+    "years": [
+     2022
+    ],
+    "snippet": "Vous trouverez ci-dessous une version actualisée des Recommandations de Pratiques Professionnelles intitulées : « Préconisations pour l'adaptation de l'offre de soins en anesthésie-réanimation dans le contexte de pandémie de COVID-19 » (version [Avril 2022](#)",
+    "line": 65
+   }
+  ],
+  "data/sfar_recommendations/output/chandra/2022/RPP-SFAR-COVID_Version-Avril-2022_abrogee-010723/RPP-SFAR-COVID_Version-Avril-2022_abrogee-010723.md": [
+   {
+    "years": [
+     2022
+    ],
+    "snippet": "Vous trouverez ci-dessous une version actualisée des Recommandations de Pratiques Professionnelles intitulées : « Préconisations pour l'adaptation de l'offre de soins en anesthésie-réanimation dans le contexte de pandémie de COVID-19 » (version [Avril 2022](#)",
+    "line": 63
+   }
+  ],
+  "data/sfar_recommendations/output/chandra/2022/RPP-Trauma-cranien-leger_pour-mise-sur-site_autorship-complet/RPP-Trauma-cranien-leger_pour-mise-sur-site_autorship-complet.md": [
+   {
+    "years": [
+     2013
+    ],
+    "snippet": "Un scanner cérébral avec injection doit être pratiqué devant les signes cliniques évocateurs de dissection carotidienne (*conférence d'actualisation 2013 : lésions traumatiques des vaisseaux du cou*) : fracture du rachis cervical, déficit neurologique non expl",
+    "line": 171
+   }
+  ],
+  "data/sfar_recommendations/output/chandra/2023/RPP-Anestheesie-adulte-porteur-CC_fiches-pratiques_pour-mise-sur-site/RPP-Anestheesie-adulte-porteur-CC_fiches-pratiques_pour-mise-sur-site.md": [
+   {
+    "years": [
+     2015
+    ],
+    "snippet": "[3] Gestion des Anticoagulants Oraux Directs pour la chirurgie et les actes invasifs programmés : propositions réactualisées du Groupe d'Intérêt en Hémostase Périopératoire (GIHP)-Septembre 2015",
+    "line": 142
+   }
+  ],
+  "data/sfar_recommendations/output/chandra/2024/240516-Txt-definitif-/240516-Txt-definitif-.md": [
+   {
+    "years": [
+     2011
+    ],
+    "snippet": "**Actualisation des recommandations formalisées d'experts de la SFAR de 2011**",
+    "line": 25
+   },
+   {
+    "years": [
+     2011
+    ],
+    "snippet": "Un premier texte reprenant les recommandations de 2011 et les données actualisées de la littérature a été écrit",
+    "line": 296
+   }
+  ],
+  "data/sfar_recommendations/output/chandra/2025/2025_SFAR-SFA_RFE-Diagnostic-et-prise-en-charge-des-reactions-dhypersensibilite-immediate-perioperatoires/2025_SFAR-SFA_RFE-Diagnostic-et-prise-en-charge-des-reactions-dhypersensibilite-immediate-perioperatoires.md": [
+   {
+    "years": [
+     2011
+    ],
+    "snippet": "Ces recommandations formalisées d'experts sont une actualisation des recommandations conjointes éditées par la SFAR et la SFA en 2011 sous le titre initial : Prévention du risque allergique peranesthésique [1]",
+    "line": 143
+   },
+   {
+    "years": [
+     2011
+    ],
+    "snippet": "Reducing the Risk of Anaphylaxis During Anesthesia: 2011 Updated Guidelines for Clinical Practice",
+    "line": 191
+   }
+  ],
+  "data/sfar_recommendations/output/chandra/2026/RFE-Infections-intra-abdominales-version-lecture-doc-finale-14-08-26-depose-site-sans-filigrane/RFE-Infections-intra-abdominales-version-lecture-doc-finale-14-08-26-depose-site-sans-filigrane.md": [
+   {
+    "years": [
+     2015
+    ],
+    "snippet": "Cette actualisation a suivi la méthodologie GRADE, permettant une analyse rigoureuse de la littérature, et conduit à certains ajustements de gradation par rapport aux RFE de 2015",
+    "line": 143
+   },
+   {
+    "years": [
+     2024
+    ],
+    "snippet": "2024 Clinical Practice Guideline Update by the Infectious Diseases Society of America on Complicated Intra-abdominal Infections: Risk Assessment, Diagnostic Imaging, and Microbiological Evaluation in Adults, Children, and Pregnant People",
+    "line": 183
+   }
+  ],
+  "data/sfar_recommendations/output/chandra/2026/RFE_sedationproceduraleUrgences_24juin2026/RFE_sedationproceduraleUrgences_24juin2026.md": [
+   {
+    "years": [
+     2010
+    ],
+    "snippet": "*Contexte et justification* : Vingt-six ans après la première conférence d'experts de la SFAR [1] et seize ans après la recommandation conjointe SFMU-SFAR de 2010 [2], une réactualisation des recommandations sur la sédation procédurale en contexte d'urgence ét",
+    "line": 99
+   }
+  ],
+  "data/sfar_recommendations/output/chandra/2026/TEXTE-RFE-ALR-PEDIA-VERSION-FINALE-010926/TEXTE-RFE-ALR-PEDIA-VERSION-FINALE-010926.md": [
+   {
+    "years": [
+     2010
+    ],
+    "snippet": "jointement par la Société Française d'Anesthésie Réanimation (SFAR) et l'Association Des Anesthésistes-Réanimateurs Pédiatriques d'Expression Française (ADARPEF), ont pour objectif de compléter et de mettre à jour les recommandations formalisées d'experts sur ",
+    "line": 113
+   },
+   {
+    "years": [
+     2010,
+     1997
+    ],
+    "snippet": "Les précédentes recommandations formalisées d'experts sur l'anesthésie locorégionale pédiatrique ont été publiées en 2010 par la SFAR et l'ADARPEF [1], actualisant une conférence d'experts de 1997",
+    "line": 119
+   }
+  ],
+  "data/sfar_recommendations/output/chandra/2026/Version-courte/Version-courte.md": [
+   {
+    "years": [
+     2023
+    ],
+    "snippet": "Les recommandations européennes actualisées en 2023 distinguent ainsi [25] :",
+    "line": 191
+   }
+  ],
+  "data/sfar_recommendations/output/chandra/2026/Version-longue/Version-longue.md": [
+   {
+    "years": [
+     2023
+    ],
+    "snippet": "Les recommandations européennes actualisées en 2023 distinguent ainsi [25] :",
+    "line": 189
+   }
+  ],
+  "data/sfar_recommendations/output/chandra/unknown/2a_SFAR_texte_court_Intubation-difficile/2a_SFAR_texte_court_Intubation-difficile.md": [
+   {
+    "years": [
+     1996
+    ],
+    "snippet": "Cette conférence d'experts est une réactualisation de la conférence d'experts organisée par la Société française d'anesthésie et de réanimation (Sfar) en 1996",
+    "line": 34
+   }
+  ],
+  "data/sfar_recommendations/output/chandra/unknown/2b_AFAR_Texte-Long_Intubation-difficile/2b_AFAR_Texte-Long_Intubation-difficile.md": [
+   {
+    "years": [
+     1996
+    ],
+    "snippet": "La conférence d'experts publiée en 1996 [1] vient d'être réactualisée",
+    "line": 7
+   }
+  ],
+  "data/sfar_recommendations/output/chandra/unknown/BJA-2015-reco-ventilation-et-IOT1/BJA-2015-reco-ventilation-et-IOT1.md": [
+   {
+    "years": [
+     2012
+    ],
+    "snippet": "The Difficult Airway Society commissioned a working group to update the guidelines in April 2012",
+    "line": 80
+   },
+   {
+    "years": [
+     2013,
+     2014
+    ],
+    "snippet": "Presentations were given at the 2013 and 2014 DAS Annual Scientific meetings, updates were posted on the DAS website, and members were invited to complete an online survey about which areas of the existing guidelines needed updating",
+    "line": 84
+   }
+  ],
+  "data/sfar_recommendations/output/chandra/unknown/recommandations_-_delivrance_de_linformation_a_la_personne_sur_son_etat_de_sante/recommandations_-_delivrance_de_linformation_a_la_personne_sur_son_etat_de_sante.md": [
+   {
+    "years": [
+     2000
+    ],
+    "snippet": "Cette recommandation de bonne pratique actualise celle sur « Information des patients - Recommandations destinées aux médecins » de mars 2000",
+    "line": 19
+   }
+  ]
+ },
+ "title_pairs": [
+  {
+   "old": "data/sfar_recommendations/output/chandra/2015/RFE-Guidelines-for-management-of-intra-abdominal-infections/RFE-Guidelines-for-management-of-intra-abdominal-infections.md",
+   "new": "data/sfar_recommendations/output/chandra/2026/RFE-Infections-intra-abdominales-version-lecture-doc-finale-14-08-26-depose-site-sans-filigrane/RFE-Infections-intra-abdominales-version-lecture-doc-finale-14-08-26-depose-site-sans-filigrane.md",
+   "old_year": 2015,
+   "new_year": 2026,
+   "old_title": "Prise en charge des infections intra-abdominales",
+   "new_title": "Prise en charge thérapeutique des Infections intra-abdominales de l’adulte",
+   "jac": 0.75,
+   "cont": 1.0,
+   "same_lineage": true,
+   "loader_old_superseded": true,
+   "text_mentions_old_year": true
+  },
+  {
+   "old": "data/sfar_recommendations/output/chandra/2015/2_AFAR_Prise-en-charge-des-infections-intra-abdominales/2_AFAR_Prise-en-charge-des-infections-intra-abdominales.md",
+   "new": "data/sfar_recommendations/output/chandra/2026/RFE-Infections-intra-abdominales-version-lecture-doc-finale-14-08-26-depose-site-sans-filigrane/RFE-Infections-intra-abdominales-version-lecture-doc-finale-14-08-26-depose-site-sans-filigrane.md",
+   "old_year": 2015,
+   "new_year": 2026,
+   "old_title": "Prise en charge des infections intra-abdominales",
+   "new_title": "Prise en charge thérapeutique des Infections intra-abdominales de l’adulte",
+   "jac": 0.75,
+   "cont": 1.0,
+   "same_lineage": true,
+   "loader_old_superseded": true,
+   "text_mentions_old_year": true
+  },
+  {
+   "old": "data/sfar_recommendations/output/chandra/2015/RFE-Guidelines-for-management-of-intra-abdominal-infections/RFE-Guidelines-for-management-of-intra-abdominal-infections.md",
+   "new": "data/sfar_recommendations/output/chandra/2026/algo_synthese_IIA_RFE_moderne-defitives-depot-site-SFAR/algo_synthese_IIA_RFE_moderne-defitives-depot-site-SFAR.md",
+   "old_year": 2015,
+   "new_year": 2026,
+   "old_title": "Prise en charge des infections intra-abdominales",
+   "new_title": "Prise en charge thérapeutique des Infections intra-abdominales de l’adulte",
+   "jac": 0.75,
+   "cont": 1.0,
+   "same_lineage": true,
+   "loader_old_superseded": true,
+   "text_mentions_old_year": false
+  },
+  {
+   "old": "data/sfar_recommendations/output/chandra/2015/2_AFAR_Prise-en-charge-des-infections-intra-abdominales/2_AFAR_Prise-en-charge-des-infections-intra-abdominales.md",
+   "new": "data/sfar_recommendations/output/chandra/2026/algo_synthese_IIA_RFE_moderne-defitives-depot-site-SFAR/algo_synthese_IIA_RFE_moderne-defitives-depot-site-SFAR.md",
+   "old_year": 2015,
+   "new_year": 2026,
+   "old_title": "Prise en charge des infections intra-abdominales",
+   "new_title": "Prise en charge thérapeutique des Infections intra-abdominales de l’adulte",
+   "jac": 0.75,
+   "cont": 1.0,
+   "same_lineage": true,
+   "loader_old_superseded": true,
+   "text_mentions_old_year": false
+  },
+  {
+   "old": "data/sfar_recommendations/output/chandra/2018/management-of-antiplatelet-therapy-for-non-elective-invasive-procedures-or-bleeding-complications/management-of-antiplatelet-therapy-for-non-elective-invasive-procedures-or-bleeding-complications.md",
+   "new": "data/sfar_recommendations/output/chandra/2026/RFE-20.4.2026-deifinitif-et-validei/RFE-20.4.2026-deifinitif-et-validei.md",
+   "old_year": 2018,
+   "new_year": 2026,
+   "old_title": "Gestion des agents antiplaquettaires en cas de procédure invasive non programmée ou d’hémorragie",
+   "new_title": "Gestion des anticoagulants pour une procédure invasive programmée",
+   "jac": 0.33,
+   "cont": 0.75,
+   "same_lineage": false,
+   "loader_old_superseded": false,
+   "text_mentions_old_year": false
+  },
+  {
+   "old": "data/sfar_recommendations/output/chandra/2018/rfe-gestion-des-agents-antiplaquettaires/rfe-gestion-des-agents-antiplaquettaires.md",
+   "new": "data/sfar_recommendations/output/chandra/2026/RFE-20.4.2026-deifinitif-et-validei/RFE-20.4.2026-deifinitif-et-validei.md",
+   "old_year": 2018,
+   "new_year": 2026,
+   "old_title": "Gestion des agents antiplaquettaires en cas de procédure invasive non programmée ou d’hémorragie",
+   "new_title": "Gestion des anticoagulants pour une procédure invasive programmée",
+   "jac": 0.33,
+   "cont": 0.75,
+   "same_lineage": false,
+   "loader_old_superseded": false,
+   "text_mentions_old_year": false
+  },
+  {
+   "old": "data/sfar_recommendations/output/chandra/2018/ACCPM-335/ACCPM-335.md",
+   "new": "data/sfar_recommendations/output/chandra/2026/RFE-20.4.2026-deifinitif-et-validei/RFE-20.4.2026-deifinitif-et-validei.md",
+   "old_year": 2018,
+   "new_year": 2026,
+   "old_title": "Gestion des agents antiplaquettaires pour une procédure invasive programmée",
+   "new_title": "Gestion des anticoagulants pour une procédure invasive programmée",
+   "jac": 0.5,
+   "cont": 0.75,
+   "same_lineage": false,
+   "loader_old_superseded": false,
+   "text_mentions_old_year": false
+  },
+  {
+   "old": "data/sfar_recommendations/output/chandra/2018/2_Gestion-des-agents-antiplaquettaires-pour-une-procedure-invasive-programmee/2_Gestion-des-agents-antiplaquettaires-pour-une-procedure-invasive-programmee.md",
+   "new": "data/sfar_recommendations/output/chandra/2026/RFE-20.4.2026-deifinitif-et-validei/RFE-20.4.2026-deifinitif-et-validei.md",
+   "old_year": 2018,
+   "new_year": 2026,
+   "old_title": "Gestion des agents antiplaquettaires pour une procédure invasive programmée",
+   "new_title": "Gestion des anticoagulants pour une procédure invasive programmée",
+   "jac": 0.5,
+   "cont": 0.75,
+   "same_lineage": false,
+   "loader_old_superseded": false,
+   "text_mentions_old_year": false
+  },
+  {
+   "old": "data/sfar_recommendations/output/chandra/2011/2_AFAR_Prevention-de-la-maladie-thromboembolique-veineuse-postoperatoire-copie/2_AFAR_Prevention-de-la-maladie-thromboembolique-veineuse-postoperatoire-copie.md",
+   "new": "data/sfar_recommendations/output/chandra/2024/240516-Txt-definitif-/240516-Txt-definitif-.md",
+   "old_year": 2011,
+   "new_year": 2024,
+   "old_title": "Prévention de la maladie thromboembolique veineuse postopératoire",
+   "new_title": "Prévention de la maladie thromboembolique veineuse péri-opératoire",
+   "jac": 0.57,
+   "cont": 0.8,
+   "same_lineage": true,
+   "loader_old_superseded": true,
+   "text_mentions_old_year": true
+  },
+  {
+   "old": "data/sfar_recommendations/output/chandra/2016/texte-court-preco-erreurs-med-2016-SFAR-SFPC-version-finale-25-oct-2016/texte-court-preco-erreurs-med-2016-SFAR-SFPC-version-finale-25-oct-2016.md",
+   "new": "data/sfar_recommendations/output/chandra/2024/RPP-Prevention-des-erreurs-medicamenteuses/RPP-Prevention-des-erreurs-medicamenteuses.md",
+   "old_year": 2016,
+   "new_year": 2024,
+   "old_title": "Prévention des erreurs médicamenteuses en A-R",
+   "new_title": "Prévention des erreurs médicamenteuses",
+   "jac": 1.0,
+   "cont": 1.0,
+   "same_lineage": true,
+   "loader_old_superseded": true,
+   "text_mentions_old_year": false
+  },
+  {
+   "old": "data/sfar_recommendations/output/chandra/2016/texte-long-Preconisations-2016-erreurs-med-SFAR-SFPC-version-finale-25-oct-2016/texte-long-Preconisations-2016-erreurs-med-SFAR-SFPC-version-finale-25-oct-2016.md",
+   "new": "data/sfar_recommendations/output/chandra/2024/RPP-Prevention-des-erreurs-medicamenteuses/RPP-Prevention-des-erreurs-medicamenteuses.md",
+   "old_year": 2016,
+   "new_year": 2024,
+   "old_title": "Prévention des erreurs médicamenteuses en A-R",
+   "new_title": "Prévention des erreurs médicamenteuses",
+   "jac": 1.0,
+   "cont": 1.0,
+   "same_lineage": true,
+   "loader_old_superseded": true,
+   "text_mentions_old_year": false
+  },
+  {
+   "old": "data/sfar_recommendations/output/chandra/2006/preverreurmedic_recos/preverreurmedic_recos.md",
+   "new": "data/sfar_recommendations/output/chandra/2024/RPP-Prevention-des-erreurs-medicamenteuses/RPP-Prevention-des-erreurs-medicamenteuses.md",
+   "old_year": 2006,
+   "new_year": 2024,
+   "old_title": "Prévention des erreurs médicamenteuses en anesthésie",
+   "new_title": "Prévention des erreurs médicamenteuses",
+   "jac": 0.75,
+   "cont": 1.0,
+   "same_lineage": true,
+   "loader_old_superseded": true,
+   "text_mentions_old_year": false
+  },
+  {
+   "old": "data/sfar_recommendations/output/chandra/2018/Antibioprophylaxie-RFE-mise-a-jour-2018/Antibioprophylaxie-RFE-mise-a-jour-2018.md",
+   "new": "data/sfar_recommendations/output/chandra/2023/RFE-antibioprophylaxie-2023_V3.0_pour-mise-sur-site-juin-2026_sans-code-CCAM/RFE-antibioprophylaxie-2023_V3.0_pour-mise-sur-site-juin-2026_sans-code-CCAM.md",
+   "old_year": 2018,
+   "new_year": 2026,
+   "old_title": "Antibioprophylaxie en chirurgie et médecine interventionnelle (patients adultes)",
+   "new_title": "Antibioprophylaxie en chirurgie et médecine interventionnelle",
+   "jac": 1.0,
+   "cont": 1.0,
+   "same_lineage": true,
+   "loader_old_superseded": true,
+   "text_mentions_old_year": false
+  },
+  {
+   "old": "data/sfar_recommendations/output/chandra/2017/rfe-antibioprophylaxie-in-surgery-and-interventional-medicine/rfe-antibioprophylaxie-in-surgery-and-interventional-medicine.md",
+   "new": "data/sfar_recommendations/output/chandra/2023/RFE-antibioprophylaxie-2023_V3.0_pour-mise-sur-site-juin-2026_sans-code-CCAM/RFE-antibioprophylaxie-2023_V3.0_pour-mise-sur-site-juin-2026_sans-code-CCAM.md",
+   "old_year": 2017,
+   "new_year": 2026,
+   "old_title": "Antibioprophylaxie en chirurgie et médecine interventionnelle (patients adultes)",
+   "new_title": "Antibioprophylaxie en chirurgie et médecine interventionnelle",
+   "jac": 1.0,
+   "cont": 1.0,
+   "same_lineage": true,
+   "loader_old_superseded": true,
+   "text_mentions_old_year": false
+  },
+  {
+   "old": "data/sfar_recommendations/output/chandra/2017/Antibioprophylaxie-version-2017-CRC_CA_MODIF/Antibioprophylaxie-version-2017-CRC_CA_MODIF.md",
+   "new": "data/sfar_recommendations/output/chandra/2023/RFE-antibioprophylaxie-2023_V3.0_pour-mise-sur-site-juin-2026_sans-code-CCAM/RFE-antibioprophylaxie-2023_V3.0_pour-mise-sur-site-juin-2026_sans-code-CCAM.md",
+   "old_year": 2017,
+   "new_year": 2026,
+   "old_title": "Antibioprophylaxie en chirurgie et médecine interventionnelle (patients adultes)",
+   "new_title": "Antibioprophylaxie en chirurgie et médecine interventionnelle",
+   "jac": 1.0,
+   "cont": 1.0,
+   "same_lineage": true,
+   "loader_old_superseded": true,
+   "text_mentions_old_year": false
+  },
+  {
+   "old": "data/sfar_recommendations/output/chandra/2015/Reactualisation-GIHP_AOD_actes-programmes_Septembre-20151/Reactualisation-GIHP_AOD_actes-programmes_Septembre-20151.md",
+   "new": "data/sfar_recommendations/output/chandra/2021/Gestion%20perioperatoire%20des%20patients%20sous%20AOD%20pour%20un%20acte%20programm%C3%A9/Gestion%20perioperatoire%20des%20patients%20sous%20AOD%20pour%20un%20acte%20programm%C3%A9.md",
+   "old_year": 2015,
+   "new_year": 2021,
+   "old_title": "La gestion périopératoire des patients sous AOD pour un acte programmé",
+   "new_title": "Gestion perioperatoire des patients sous AOD pour un acte programmé",
+   "jac": 1.0,
+   "cont": 1.0,
+   "same_lineage": true,
+   "loader_old_superseded": true,
+   "text_mentions_old_year": true
+  },
+  {
+   "old": "data/sfar_recommendations/output/chandra/2002/2_AFAR_Thrombopenie-induite-par-lheparine/2_AFAR_Thrombopenie-induite-par-lheparine.md",
+   "new": "data/sfar_recommendations/output/chandra/2019/diagnostic-et-prise-ne-charge-dune-TIH/diagnostic-et-prise-ne-charge-dune-TIH.md",
+   "old_year": 2002,
+   "new_year": 2019,
+   "old_title": "Thrombopénie induite par l’héparine",
+   "new_title": "Diagnostic et prise en charge d’une thrombopénie induite par l’héparine",
+   "jac": 0.75,
+   "cont": 1.0,
+   "same_lineage": true,
+   "loader_old_superseded": true,
+   "text_mentions_old_year": true
+  },
+  {
+   "old": "data/sfar_recommendations/output/chandra/2019/rfe-gestion-anemie-reanimation/rfe-gestion-anemie-reanimation.md",
+   "new": "data/sfar_recommendations/output/chandra/2021/RFE%20SFAR%20pancreatite%20aigue_finale_220921/RFE%20SFAR%20pancreatite%20aigue_finale_220921.md",
+   "old_year": 2019,
+   "new_year": 2021,
+   "old_title": "Gestion et prévention de l’anémie (hors hémorragie aigüe) chez le patient adulte de soins critiques",
+   "new_title": "Pancréatite aigüe du patient adulte en soins critiques",
+   "jac": 0.38,
+   "cont": 0.75,
+   "same_lineage": false,
+   "loader_old_superseded": false,
+   "text_mentions_old_year": false
+  },
+  {
+   "old": "data/sfar_recommendations/output/chandra/2019/rfe-anemie-arbre-diagnostic-anemie/rfe-anemie-arbre-diagnostic-anemie.md",
+   "new": "data/sfar_recommendations/output/chandra/2021/RFE%20SFAR%20pancreatite%20aigue_finale_220921/RFE%20SFAR%20pancreatite%20aigue_finale_220921.md",
+   "old_year": 2019,
+   "new_year": 2021,
+   "old_title": "Gestion et prévention de l’anémie (hors hémorragie aigüe) chez le patient adulte de soins critiques",
+   "new_title": "Pancréatite aigüe du patient adulte en soins critiques",
+   "jac": 0.38,
+   "cont": 0.75,
+   "same_lineage": false,
+   "loader_old_superseded": false,
+   "text_mentions_old_year": false
+  },
+  {
+   "old": "data/sfar_recommendations/output/chandra/2001/cc_pancreatiteaigue20010/cc_pancreatiteaigue20010.md",
+   "new": "data/sfar_recommendations/output/chandra/2021/RFE%20SFAR%20pancreatite%20aigue_finale_220921/RFE%20SFAR%20pancreatite%20aigue_finale_220921.md",
+   "old_year": 2001,
+   "new_year": 2021,
+   "old_title": "Pancréatite aiguë",
+   "new_title": "Pancréatite aigüe du patient adulte en soins critiques",
+   "jac": 0.5,
+   "cont": 1.0,
+   "same_lineage": true,
+   "loader_old_superseded": true,
+   "text_mentions_old_year": false
+  },
+  {
+   "old": "data/sfar_recommendations/output/chandra/2002/2_AFAR_Thrombopenie-induite-par-lheparine/2_AFAR_Thrombopenie-induite-par-lheparine.md",
+   "new": "data/sfar_recommendations/output/chandra/2019/propositions-tih-gihp-gfht-sfar%20/propositions-tih-gihp-gfht-sfar%20.md",
+   "old_year": 2002,
+   "new_year": 2019,
+   "old_title": "Thrombopénie induite par l’héparine",
+   "new_title": "Propositions du GIHP et du GFHT pour le diagnostic et la prise en charge d’une thrombopénie induite par l’héparine",
+   "jac": 0.43,
+   "cont": 1.0,
+   "same_lineage": true,
+   "loader_old_superseded": true,
+   "text_mentions_old_year": true
+  },
+  {
+   "old": "data/sfar_recommendations/output/chandra/2013/2_SFAR_HyperthermieMaligne/2_SFAR_HyperthermieMaligne.md",
+   "new": "data/sfar_recommendations/output/chandra/2019/rpp-hyperthermie-maligne/rpp-hyperthermie-maligne.md",
+   "old_year": 2013,
+   "new_year": 2019,
+   "old_title": "Recommandations d’Experts pour le Risque d’HYPERTHERMIE MALIGNE en Anesthésie Réanimation",
+   "new_title": "Prise en charge de l’Hyperthermie Maligne",
+   "jac": 0.4,
+   "cont": 1.0,
+   "same_lineage": true,
+   "loader_old_superseded": true,
+   "text_mentions_old_year": true
+  },
+  {
+   "old": "data/sfar_recommendations/output/chandra/2013/2_SFAR_HyperthermieMaligne/2_SFAR_HyperthermieMaligne.md",
+   "new": "data/sfar_recommendations/output/chandra/2019/rpp-hyperthermie-malinge-fiches-synthese/rpp-hyperthermie-malinge-fiches-synthese.md",
+   "old_year": 2013,
+   "new_year": 2019,
+   "old_title": "Recommandations d’Experts pour le Risque d’HYPERTHERMIE MALIGNE en Anesthésie Réanimation",
+   "new_title": "Prise en charge de l’Hyperthermie Maligne",
+   "jac": 0.4,
+   "cont": 1.0,
+   "same_lineage": true,
+   "loader_old_superseded": true,
+   "text_mentions_old_year": false
+  },
+  {
+   "old": "data/sfar_recommendations/output/chandra/2014/RFE-Chest-trauma-First-48-hours-management/RFE-Chest-trauma-First-48-hours-management.md",
+   "new": "data/sfar_recommendations/output/chandra/2019/rfe-trauma-abdominale/rfe-trauma-abdominale.md",
+   "old_year": 2014,
+   "new_year": 2019,
+   "old_title": "Traumatisme Thoracique : Prise en charge des 48 premières heures",
+   "new_title": "Prise en charge du traumatisme abdominal grave de l’adulte : les 48 premières heures",
+   "jac": 0.5,
+   "cont": 0.75,
+   "same_lineage": false,
+   "loader_old_superseded": false,
+   "text_mentions_old_year": false
+  },
+  {
+   "old": "data/sfar_recommendations/output/chandra/2014/2_AFAR_Traumatisme-thoracique-_prise-en-charge-des-48-premieres-heures/2_AFAR_Traumatisme-thoracique-_prise-en-charge-des-48-premieres-heures.md",
+   "new": "data/sfar_recommendations/output/chandra/2019/rfe-trauma-abdominale/rfe-trauma-abdominale.md",
+   "old_year": 2014,
+   "new_year": 2019,
+   "old_title": "Traumatisme Thoracique : Prise en charge des 48 premières heures",
+   "new_title": "Prise en charge du traumatisme abdominal grave de l’adulte : les 48 premières heures",
+   "jac": 0.5,
+   "cont": 0.75,
+   "same_lineage": false,
+   "loader_old_superseded": false,
+   "text_mentions_old_year": false
+  },
+  {
+   "old": "data/sfar_recommendations/output/chandra/2014/RFE-Chest-trauma-First-48-hours-management/RFE-Chest-trauma-First-48-hours-management.md",
+   "new": "data/sfar_recommendations/output/chandra/2019/rfe-trauma-abdominal-fiche-synthese/rfe-trauma-abdominal-fiche-synthese.md",
+   "old_year": 2014,
+   "new_year": 2019,
+   "old_title": "Traumatisme Thoracique : Prise en charge des 48 premières heures",
+   "new_title": "Prise en charge du traumatisme abdominal grave de l’adulte : les 48 premières heures",
+   "jac": 0.5,
+   "cont": 0.75,
+   "same_lineage": false,
+   "loader_old_superseded": false,
+   "text_mentions_old_year": false
+  },
+  {
+   "old": "data/sfar_recommendations/output/chandra/2014/2_AFAR_Traumatisme-thoracique-_prise-en-charge-des-48-premieres-heures/2_AFAR_Traumatisme-thoracique-_prise-en-charge-des-48-premieres-heures.md",
+   "new": "data/sfar_recommendations/output/chandra/2019/rfe-trauma-abdominal-fiche-synthese/rfe-trauma-abdominal-fiche-synthese.md",
+   "old_year": 2014,
+   "new_year": 2019,
+   "old_title": "Traumatisme Thoracique : Prise en charge des 48 premières heures",
+   "new_title": "Prise en charge du traumatisme abdominal grave de l’adulte : les 48 premières heures",
+   "jac": 0.5,
+   "cont": 0.75,
+   "same_lineage": false,
+   "loader_old_superseded": false,
+   "text_mentions_old_year": false
+  },
+  {
+   "old": "data/sfar_recommendations/output/chandra/2017/rfe-antibioprophylaxie-in-surgery-and-interventional-medicine/rfe-antibioprophylaxie-in-surgery-and-interventional-medicine.md",
+   "new": "data/sfar_recommendations/output/chandra/2018/Antibioprophylaxie-RFE-mise-a-jour-2018/Antibioprophylaxie-RFE-mise-a-jour-2018.md",
+   "old_year": 2017,
+   "new_year": 2018,
+   "old_title": "Antibioprophylaxie en chirurgie et médecine interventionnelle (patients adultes)",
+   "new_title": "Antibioprophylaxie en chirurgie et médecine interventionnelle (patients adultes)",
+   "jac": 1.0,
+   "cont": 1.0,
+   "same_lineage": true,
+   "loader_old_superseded": true,
+   "text_mentions_old_year": false
+  },
+  {
+   "old": "data/sfar_recommendations/output/chandra/2017/Antibioprophylaxie-version-2017-CRC_CA_MODIF/Antibioprophylaxie-version-2017-CRC_CA_MODIF.md",
+   "new": "data/sfar_recommendations/output/chandra/2018/Antibioprophylaxie-RFE-mise-a-jour-2018/Antibioprophylaxie-RFE-mise-a-jour-2018.md",
+   "old_year": 2017,
+   "new_year": 2018,
+   "old_title": "Antibioprophylaxie en chirurgie et médecine interventionnelle (patients adultes)",
+   "new_title": "Antibioprophylaxie en chirurgie et médecine interventionnelle (patients adultes)",
+   "jac": 1.0,
+   "cont": 1.0,
+   "same_lineage": true,
+   "loader_old_superseded": true,
+   "text_mentions_old_year": false
+  },
+  {
+   "old": "data/sfar_recommendations/output/chandra/2016/RFE-Management-of-severe-traumatic-brain-injury/RFE-Management-of-severe-traumatic-brain-injury.md",
+   "new": "data/sfar_recommendations/output/chandra/2017/rfe-early-management-of-severe-pelvic-injury/rfe-early-management-of-severe-pelvic-injury.md",
+   "old_year": 2016,
+   "new_year": 2017,
+   "old_title": "Prise en charge des traumatisés crâniens graves à la phase précoce (24 premières heures)",
+   "new_title": "Prise en charges des traumatises pelviens graves à la phase précoce (24 premières heures)",
+   "jac": 0.67,
+   "cont": 0.86,
+   "same_lineage": false,
+   "loader_old_superseded": false,
+   "text_mentions_old_year": false
+  },
+  {
+   "old": "data/sfar_recommendations/output/chandra/2016/RFE-ANREA-Prise-en-charge-des-traumatises-craniens-graves-a-la-phase-precoce/RFE-ANREA-Prise-en-charge-des-traumatises-craniens-graves-a-la-phase-precoce.md",
+   "new": "data/sfar_recommendations/output/chandra/2017/rfe-early-management-of-severe-pelvic-injury/rfe-early-management-of-severe-pelvic-injury.md",
+   "old_year": 2016,
+   "new_year": 2017,
+   "old_title": "Prise en charge des traumatisés crâniens graves à la phase précoce (24 premières heures)",
+   "new_title": "Prise en charges des traumatises pelviens graves à la phase précoce (24 premières heures)",
+   "jac": 0.67,
+   "cont": 0.86,
+   "same_lineage": false,
+   "loader_old_superseded": false,
+   "text_mentions_old_year": false
+  },
+  {
+   "old": "data/sfar_recommendations/output/chandra/2016/RFE-Management-of-severe-traumatic-brain-injury/RFE-Management-of-severe-traumatic-brain-injury.md",
+   "new": "data/sfar_recommendations/output/chandra/2017/rfe-prise-en-charge-des-traumatises-pelviens-graves-a-la-phase-precoce/rfe-prise-en-charge-des-traumatises-pelviens-graves-a-la-phase-precoce.md",
+   "old_year": 2016,
+   "new_year": 2017,
+   "old_title": "Prise en charge des traumatisés crâniens graves à la phase précoce (24 premières heures)",
+   "new_title": "Prise en charges des traumatises pelviens graves à la phase précoce (24 premières heures)",
+   "jac": 0.67,
+   "cont": 0.86,
+   "same_lineage": false,
+   "loader_old_superseded": false,
+   "text_mentions_old_year": false
+  },
+  {
+   "old": "data/sfar_recommendations/output/chandra/2016/RFE-ANREA-Prise-en-charge-des-traumatises-craniens-graves-a-la-phase-precoce/RFE-ANREA-Prise-en-charge-des-traumatises-craniens-graves-a-la-phase-precoce.md",
+   "new": "data/sfar_recommendations/output/chandra/2017/rfe-prise-en-charge-des-traumatises-pelviens-graves-a-la-phase-precoce/rfe-prise-en-charge-des-traumatises-pelviens-graves-a-la-phase-precoce.md",
+   "old_year": 2016,
+   "new_year": 2017,
+   "old_title": "Prise en charge des traumatisés crâniens graves à la phase précoce (24 premières heures)",
+   "new_title": "Prise en charges des traumatises pelviens graves à la phase précoce (24 premières heures)",
+   "jac": 0.67,
+   "cont": 0.86,
+   "same_lineage": false,
+   "loader_old_superseded": false,
+   "text_mentions_old_year": false
+  },
+  {
+   "old": "data/sfar_recommendations/output/chandra/2003/2b_AFAR_Texte-Long_/2b_AFAR_Texte-Long_.md",
+   "new": "data/sfar_recommendations/output/chandra/2017/RFE-ANREA-Intubation-difficile-et-extubation-en-anesthesie-chez-l-adulte/RFE-ANREA-Intubation-difficile-et-extubation-en-anesthesie-chez-l-adulte.md",
+   "old_year": 2003,
+   "new_year": 2017,
+   "old_title": "Prise en charge des voies aériennes en anesthésie adulte à l’exception de l’intubation difficile",
+   "new_title": "Intubation difficile et extubation en anesthésie chez l’adulte",
+   "jac": 0.43,
+   "cont": 0.75,
+   "same_lineage": true,
+   "loader_old_superseded": true,
+   "text_mentions_old_year": false
+  },
+  {
+   "old": "data/sfar_recommendations/output/chandra/2003/1-2a_SFAR_Texte-court-Controle-des-voies-aeriennes-en-anesthesie-en-dehors-de-l-intubation-difficile/1-2a_SFAR_Texte-court-Controle-des-voies-aeriennes-en-anesthesie-en-dehors-de-l-intubation-difficile.md",
+   "new": "data/sfar_recommendations/output/chandra/2017/RFE-ANREA-Intubation-difficile-et-extubation-en-anesthesie-chez-l-adulte/RFE-ANREA-Intubation-difficile-et-extubation-en-anesthesie-chez-l-adulte.md",
+   "old_year": 2003,
+   "new_year": 2017,
+   "old_title": "Prise en charge des voies aériennes en anesthésie adulte à l’exception de l’intubation difficile",
+   "new_title": "Intubation difficile et extubation en anesthésie chez l’adulte",
+   "jac": 0.43,
+   "cont": 0.75,
+   "same_lineage": true,
+   "loader_old_superseded": true,
+   "text_mentions_old_year": false
+  },
+  {
+   "old": "data/sfar_recommendations/output/chandra/unknown/BJA-2015-reco-ventilation-et-IOT1/BJA-2015-reco-ventilation-et-IOT1.md",
+   "new": "data/sfar_recommendations/output/chandra/2017/RFE-ANREA-Intubation-difficile-et-extubation-en-anesthesie-chez-l-adulte/RFE-ANREA-Intubation-difficile-et-extubation-en-anesthesie-chez-l-adulte.md",
+   "old_year": 2015,
+   "new_year": 2017,
+   "old_title": "Intubation difficile",
+   "new_title": "Intubation difficile et extubation en anesthésie chez l’adulte",
+   "jac": 0.5,
+   "cont": 1.0,
+   "same_lineage": true,
+   "loader_old_superseded": true,
+   "text_mentions_old_year": false
+  },
+  {
+   "old": "data/sfar_recommendations/output/chandra/unknown/2b_AFAR_Texte-Long_Intubation-difficile/2b_AFAR_Texte-Long_Intubation-difficile.md",
+   "new": "data/sfar_recommendations/output/chandra/2017/RFE-ANREA-Intubation-difficile-et-extubation-en-anesthesie-chez-l-adulte/RFE-ANREA-Intubation-difficile-et-extubation-en-anesthesie-chez-l-adulte.md",
+   "old_year": 1996,
+   "new_year": 2017,
+   "old_title": "Intubation difficile",
+   "new_title": "Intubation difficile et extubation en anesthésie chez l’adulte",
+   "jac": 0.5,
+   "cont": 1.0,
+   "same_lineage": true,
+   "loader_old_superseded": true,
+   "text_mentions_old_year": false
+  },
+  {
+   "old": "data/sfar_recommendations/output/chandra/unknown/2a_SFAR_texte_court_Intubation-difficile/2a_SFAR_texte_court_Intubation-difficile.md",
+   "new": "data/sfar_recommendations/output/chandra/2017/RFE-ANREA-Intubation-difficile-et-extubation-en-anesthesie-chez-l-adulte/RFE-ANREA-Intubation-difficile-et-extubation-en-anesthesie-chez-l-adulte.md",
+   "old_year": 2006,
+   "new_year": 2017,
+   "old_title": "Intubation difficile",
+   "new_title": "Intubation difficile et extubation en anesthésie chez l’adulte",
+   "jac": 0.5,
+   "cont": 1.0,
+   "same_lineage": true,
+   "loader_old_superseded": true,
+   "text_mentions_old_year": true
+  },
+  {
+   "old": "data/sfar_recommendations/output/chandra/2010/2_SFAR_Anesthesie-loco-regionale-en-pediatrie/2_SFAR_Anesthesie-loco-regionale-en-pediatrie.md",
+   "new": "data/sfar_recommendations/output/chandra/2016/rfe-anesthesie-loco-regionale-perinerveuse/rfe-anesthesie-loco-regionale-perinerveuse.md",
+   "old_year": 2010,
+   "new_year": 2016,
+   "old_title": "Anesthésie loco-régionale en pédiatrie",
+   "new_title": "Anesthésie Loco-Régionale périnerveuse",
+   "jac": 0.6,
+   "cont": 0.75,
+   "same_lineage": false,
+   "loader_old_superseded": true,
+   "text_mentions_old_year": false
+  },
+  {
+   "old": "data/sfar_recommendations/output/chandra/2006/preverreurmedic_recos/preverreurmedic_recos.md",
+   "new": "data/sfar_recommendations/output/chandra/2016/texte-court-preco-erreurs-med-2016-SFAR-SFPC-version-finale-25-oct-2016/texte-court-preco-erreurs-med-2016-SFAR-SFPC-version-finale-25-oct-2016.md",
+   "old_year": 2006,
+   "new_year": 2016,
+   "old_title": "Prévention des erreurs médicamenteuses en anesthésie",
+   "new_title": "Prévention des erreurs médicamenteuses en A-R",
+   "jac": 0.75,
+   "cont": 1.0,
+   "same_lineage": true,
+   "loader_old_superseded": true,
+   "text_mentions_old_year": false
+  },
+  {
+   "old": "data/sfar_recommendations/output/chandra/2006/preverreurmedic_recos/preverreurmedic_recos.md",
+   "new": "data/sfar_recommendations/output/chandra/2016/texte-long-Preconisations-2016-erreurs-med-SFAR-SFPC-version-finale-25-oct-2016/texte-long-Preconisations-2016-erreurs-med-SFAR-SFPC-version-finale-25-oct-2016.md",
+   "old_year": 2006,
+   "new_year": 2016,
+   "old_title": "Prévention des erreurs médicamenteuses en anesthésie",
+   "new_title": "Prévention des erreurs médicamenteuses en A-R",
+   "jac": 0.75,
+   "cont": 1.0,
+   "same_lineage": true,
+   "loader_old_superseded": true,
+   "text_mentions_old_year": false
+  },
+  {
+   "old": "data/sfar_recommendations/output/chandra/2008/2b_AFAR_ANGLAISEExpert-panel-guidelines-2008.-Postoperative-pain-management-in-adults-and-children.-SFAR-Committees-on-Pain-and-Local-Regional-Anaesthesia-and-on-Standards./2b_AFAR_ANGLAISEExpert-panel-guidelines-2008.-Postoperative-pain-management-in-adults-and-children.-SFAR-Committees-on-Pain-and-Local-Regional-Anaesthesia-and-on-Standards..md",
+   "new": "data/sfar_recommendations/output/chandra/2016/rfe-revision-of-expert-panel-guidelines-on-postoperative-pain-management/rfe-revision-of-expert-panel-guidelines-on-postoperative-pain-management.md",
+   "old_year": 2008,
+   "new_year": 2016,
+   "old_title": "Prise en charge de la douleur postopératoire chez l’adulte et l’enfant",
+   "new_title": "Réactualisation de la recommandation sur la douleur postopératoire",
+   "jac": 0.5,
+   "cont": 0.67,
+   "same_lineage": true,
+   "loader_old_superseded": true,
+   "text_mentions_old_year": true
+  },
+  {
+   "old": "data/sfar_recommendations/output/chandra/2008/2a_AFAR_Prise-en-charge-de-la-douleur-postoperatoire-chez-ladulte-et-lenfant/2a_AFAR_Prise-en-charge-de-la-douleur-postoperatoire-chez-ladulte-et-lenfant.md",
+   "new": "data/sfar_recommendations/output/chandra/2016/rfe-revision-of-expert-panel-guidelines-on-postoperative-pain-management/rfe-revision-of-expert-panel-guidelines-on-postoperative-pain-management.md",
+   "old_year": 2008,
+   "new_year": 2016,
+   "old_title": "Prise en charge de la douleur postopératoire chez l’adulte et l’enfant",
+   "new_title": "Réactualisation de la recommandation sur la douleur postopératoire",
+   "jac": 0.5,
+   "cont": 0.67,
+   "same_lineage": true,
+   "loader_old_superseded": true,
+   "text_mentions_old_year": true
+  },
+  {
+   "old": "data/sfar_recommendations/output/chandra/2008/2b_AFAR_ANGLAISEExpert-panel-guidelines-2008.-Postoperative-pain-management-in-adults-and-children.-SFAR-Committees-on-Pain-and-Local-Regional-Anaesthesia-and-on-Standards./2b_AFAR_ANGLAISEExpert-panel-guidelines-2008.-Postoperative-pain-management-in-adults-and-children.-SFAR-Committees-on-Pain-and-Local-Regional-Anaesthesia-and-on-Standards..md",
+   "new": "data/sfar_recommendations/output/chandra/2016/RFE-ANREA-Reactualisation-de-la-recommandation-sur-la-douleur-postoperatoire/RFE-ANREA-Reactualisation-de-la-recommandation-sur-la-douleur-postoperatoire.md",
+   "old_year": 2008,
+   "new_year": 2016,
+   "old_title": "Prise en charge de la douleur postopératoire chez l’adulte et l’enfant",
+   "new_title": "Réactualisation de la recommandation sur la douleur postopératoire",
+   "jac": 0.5,
+   "cont": 0.67,
+   "same_lineage": true,
+   "loader_old_superseded": true,
+   "text_mentions_old_year": false
+  },
+  {
+   "old": "data/sfar_recommendations/output/chandra/2008/2a_AFAR_Prise-en-charge-de-la-douleur-postoperatoire-chez-ladulte-et-lenfant/2a_AFAR_Prise-en-charge-de-la-douleur-postoperatoire-chez-ladulte-et-lenfant.md",
+   "new": "data/sfar_recommendations/output/chandra/2016/RFE-ANREA-Reactualisation-de-la-recommandation-sur-la-douleur-postoperatoire/RFE-ANREA-Reactualisation-de-la-recommandation-sur-la-douleur-postoperatoire.md",
+   "old_year": 2008,
+   "new_year": 2016,
+   "old_title": "Prise en charge de la douleur postopératoire chez l’adulte et l’enfant",
+   "new_title": "Réactualisation de la recommandation sur la douleur postopératoire",
+   "jac": 0.5,
+   "cont": 0.67,
+   "same_lineage": true,
+   "loader_old_superseded": true,
+   "text_mentions_old_year": false
+  },
+  {
+   "old": "data/sfar_recommendations/output/chandra/2008/2b_AFAR_ANGLAISEExpert-panel-guidelines-2008.-Postoperative-pain-management-in-adults-and-children.-SFAR-Committees-on-Pain-and-Local-Regional-Anaesthesia-and-on-Standards./2b_AFAR_ANGLAISEExpert-panel-guidelines-2008.-Postoperative-pain-management-in-adults-and-children.-SFAR-Committees-on-Pain-and-Local-Regional-Anaesthesia-and-on-Standards..md",
+   "new": "data/sfar_recommendations/output/chandra/2016/3-Tableaux-Reactualisation-de-la-recommandation-sur-la-douleur-postoperatoire/3-Tableaux-Reactualisation-de-la-recommandation-sur-la-douleur-postoperatoire.md",
+   "old_year": 2008,
+   "new_year": 2016,
+   "old_title": "Prise en charge de la douleur postopératoire chez l’adulte et l’enfant",
+   "new_title": "Réactualisation de la recommandation sur la douleur postopératoire",
+   "jac": 0.5,
+   "cont": 0.67,
+   "same_lineage": true,
+   "loader_old_superseded": true,
+   "text_mentions_old_year": false
+  },
+  {
+   "old": "data/sfar_recommendations/output/chandra/2008/2a_AFAR_Prise-en-charge-de-la-douleur-postoperatoire-chez-ladulte-et-lenfant/2a_AFAR_Prise-en-charge-de-la-douleur-postoperatoire-chez-ladulte-et-lenfant.md",
+   "new": "data/sfar_recommendations/output/chandra/2016/3-Tableaux-Reactualisation-de-la-recommandation-sur-la-douleur-postoperatoire/3-Tableaux-Reactualisation-de-la-recommandation-sur-la-douleur-postoperatoire.md",
+   "old_year": 2008,
+   "new_year": 2016,
+   "old_title": "Prise en charge de la douleur postopératoire chez l’adulte et l’enfant",
+   "new_title": "Réactualisation de la recommandation sur la douleur postopératoire",
+   "jac": 0.5,
+   "cont": 0.67,
+   "same_lineage": true,
+   "loader_old_superseded": true,
+   "text_mentions_old_year": false
+  },
+  {
+   "old": "data/sfar_recommendations/output/chandra/2003/2b_AFAR_Texte-Long_/2b_AFAR_Texte-Long_.md",
+   "new": "data/sfar_recommendations/output/chandra/unknown/BJA-2015-reco-ventilation-et-IOT1/BJA-2015-reco-ventilation-et-IOT1.md",
+   "old_year": 2003,
+   "new_year": 2015,
+   "old_title": "Prise en charge des voies aériennes en anesthésie adulte à l’exception de l’intubation difficile",
+   "new_title": "Intubation difficile",
+   "jac": 0.33,
+   "cont": 1.0,
+   "same_lineage": true,
+   "loader_old_superseded": true,
+   "text_mentions_old_year": false
+  },
+  {
+   "old": "data/sfar_recommendations/output/chandra/unknown/2b_AFAR_Texte-Long_Intubation-difficile/2b_AFAR_Texte-Long_Intubation-difficile.md",
+   "new": "data/sfar_recommendations/output/chandra/2003/2b_AFAR_Texte-Long_/2b_AFAR_Texte-Long_.md",
+   "old_year": 1996,
+   "new_year": 2003,
+   "old_title": "Intubation difficile",
+   "new_title": "Prise en charge des voies aériennes en anesthésie adulte à l’exception de l’intubation difficile",
+   "jac": 0.33,
+   "cont": 1.0,
+   "same_lineage": true,
+   "loader_old_superseded": true,
+   "text_mentions_old_year": false
+  },
+  {
+   "old": "data/sfar_recommendations/output/chandra/2003/2b_AFAR_Texte-Long_/2b_AFAR_Texte-Long_.md",
+   "new": "data/sfar_recommendations/output/chandra/unknown/2a_SFAR_texte_court_Intubation-difficile/2a_SFAR_texte_court_Intubation-difficile.md",
+   "old_year": 2003,
+   "new_year": 2006,
+   "old_title": "Prise en charge des voies aériennes en anesthésie adulte à l’exception de l’intubation difficile",
+   "new_title": "Intubation difficile",
+   "jac": 0.33,
+   "cont": 1.0,
+   "same_lineage": true,
+   "loader_old_superseded": true,
+   "text_mentions_old_year": false
+  },
+  {
+   "old": "data/sfar_recommendations/output/chandra/2003/1-2a_SFAR_Texte-court-Controle-des-voies-aeriennes-en-anesthesie-en-dehors-de-l-intubation-difficile/1-2a_SFAR_Texte-court-Controle-des-voies-aeriennes-en-anesthesie-en-dehors-de-l-intubation-difficile.md",
+   "new": "data/sfar_recommendations/output/chandra/unknown/BJA-2015-reco-ventilation-et-IOT1/BJA-2015-reco-ventilation-et-IOT1.md",
+   "old_year": 2003,
+   "new_year": 2015,
+   "old_title": "Prise en charge des voies aériennes en anesthésie adulte à l’exception de l’intubation difficile",
+   "new_title": "Intubation difficile",
+   "jac": 0.33,
+   "cont": 1.0,
+   "same_lineage": true,
+   "loader_old_superseded": true,
+   "text_mentions_old_year": false
+  },
+  {
+   "old": "data/sfar_recommendations/output/chandra/unknown/2b_AFAR_Texte-Long_Intubation-difficile/2b_AFAR_Texte-Long_Intubation-difficile.md",
+   "new": "data/sfar_recommendations/output/chandra/2003/1-2a_SFAR_Texte-court-Controle-des-voies-aeriennes-en-anesthesie-en-dehors-de-l-intubation-difficile/1-2a_SFAR_Texte-court-Controle-des-voies-aeriennes-en-anesthesie-en-dehors-de-l-intubation-difficile.md",
+   "old_year": 1996,
+   "new_year": 2003,
+   "old_title": "Intubation difficile",
+   "new_title": "Prise en charge des voies aériennes en anesthésie adulte à l’exception de l’intubation difficile",
+   "jac": 0.33,
+   "cont": 1.0,
+   "same_lineage": true,
+   "loader_old_superseded": true,
+   "text_mentions_old_year": false
+  },
+  {
+   "old": "data/sfar_recommendations/output/chandra/2003/1-2a_SFAR_Texte-court-Controle-des-voies-aeriennes-en-anesthesie-en-dehors-de-l-intubation-difficile/1-2a_SFAR_Texte-court-Controle-des-voies-aeriennes-en-anesthesie-en-dehors-de-l-intubation-difficile.md",
+   "new": "data/sfar_recommendations/output/chandra/unknown/2a_SFAR_texte_court_Intubation-difficile/2a_SFAR_texte_court_Intubation-difficile.md",
+   "old_year": 2003,
+   "new_year": 2006,
+   "old_title": "Prise en charge des voies aériennes en anesthésie adulte à l’exception de l’intubation difficile",
+   "new_title": "Intubation difficile",
+   "jac": 0.33,
+   "cont": 1.0,
+   "same_lineage": true,
+   "loader_old_superseded": true,
+   "text_mentions_old_year": false
+  },
+  {
+   "old": "data/sfar_recommendations/output/chandra/unknown/MANIFESTEformationIDEReanimation/MANIFESTEformationIDEReanimation.md",
+   "new": "data/sfar_recommendations/output/chandra/unknown/livretadaptationIDEReanimation/livretadaptationIDEReanimation.md",
+   "old_year": 2003,
+   "new_year": 2008,
+   "old_title": "Recommandations pour une formation spécifique et une reconnaissance du métier d’infirmier de réanimation",
+   "new_title": "Recommandations pour une formation spécifique et une reconnaissance du métier d’infirmier de réanimation",
+   "jac": 1.0,
+   "cont": 1.0,
+   "same_lineage": false,
+   "loader_old_superseded": false,
+   "text_mentions_old_year": false
+  },
+  {
+   "old": "data/sfar_recommendations/output/chandra/unknown/ReferentielcompetencesIDEReanimation/ReferentielcompetencesIDEReanimation.md",
+   "new": "data/sfar_recommendations/output/chandra/unknown/livretadaptationIDEReanimation/livretadaptationIDEReanimation.md",
+   "old_year": 2002,
+   "new_year": 2008,
+   "old_title": "Recommandations pour une formation spécifique et une reconnaissance du métier d’infirmier de réanimation",
+   "new_title": "Recommandations pour une formation spécifique et une reconnaissance du métier d’infirmier de réanimation",
+   "jac": 1.0,
+   "cont": 1.0,
+   "same_lineage": false,
+   "loader_old_superseded": false,
+   "text_mentions_old_year": false
+  },
+  {
+   "old": "data/sfar_recommendations/output/chandra/unknown/ReferentielcompetencesIDEReanimation/ReferentielcompetencesIDEReanimation.md",
+   "new": "data/sfar_recommendations/output/chandra/unknown/MANIFESTEformationIDEReanimation/MANIFESTEformationIDEReanimation.md",
+   "old_year": 2002,
+   "new_year": 2003,
+   "old_title": "Recommandations pour une formation spécifique et une reconnaissance du métier d’infirmier de réanimation",
+   "new_title": "Recommandations pour une formation spécifique et une reconnaissance du métier d’infirmier de réanimation",
+   "jac": 1.0,
+   "cont": 1.0,
+   "same_lineage": false,
+   "loader_old_superseded": false,
+   "text_mentions_old_year": false
+  },
+  {
+   "old": "data/sfar_recommendations/output/chandra/unknown/2b_AFAR_Texte-Long_Intubation-difficile/2b_AFAR_Texte-Long_Intubation-difficile.md",
+   "new": "data/sfar_recommendations/output/chandra/unknown/BJA-2015-reco-ventilation-et-IOT1/BJA-2015-reco-ventilation-et-IOT1.md",
+   "old_year": 1996,
+   "new_year": 2015,
+   "old_title": "Intubation difficile",
+   "new_title": "Intubation difficile",
+   "jac": 1.0,
+   "cont": 1.0,
+   "same_lineage": true,
+   "loader_old_superseded": true,
+   "text_mentions_old_year": false
+  },
+  {
+   "old": "data/sfar_recommendations/output/chandra/unknown/2a_SFAR_texte_court_Intubation-difficile/2a_SFAR_texte_court_Intubation-difficile.md",
+   "new": "data/sfar_recommendations/output/chandra/unknown/BJA-2015-reco-ventilation-et-IOT1/BJA-2015-reco-ventilation-et-IOT1.md",
+   "old_year": 2006,
+   "new_year": 2015,
+   "old_title": "Intubation difficile",
+   "new_title": "Intubation difficile",
+   "jac": 1.0,
+   "cont": 1.0,
+   "same_lineage": true,
+   "loader_old_superseded": true,
+   "text_mentions_old_year": false
+  },
+  {
+   "old": "data/sfar_recommendations/output/chandra/unknown/2b_AFAR_Texte-Long_Intubation-difficile/2b_AFAR_Texte-Long_Intubation-difficile.md",
+   "new": "data/sfar_recommendations/output/chandra/unknown/2a_SFAR_texte_court_Intubation-difficile/2a_SFAR_texte_court_Intubation-difficile.md",
+   "old_year": 1996,
+   "new_year": 2006,
+   "old_title": "Intubation difficile",
+   "new_title": "Intubation difficile",
+   "jac": 1.0,
+   "cont": 1.0,
+   "same_lineage": true,
+   "loader_old_superseded": true,
+   "text_mentions_old_year": true
+  }
+ ],
+ "lineage_eval": [
+  {
+   "lineage": "voies_aeriennes_adulte_bloc",
+   "old": "data/sfar_recommendations/output/chandra/2017/RFE-ANREA-Intubation-difficile-et-extubation-en-anesthesie-chez-l-adulte/RFE-ANREA-Intubation-difficile-et-extubation-en-anesthesie-chez-l-adulte.md",
+   "old_year": 2017,
+   "old_title": "Intubation difficile et extubation en anesthésie chez l’adulte",
+   "new": "data/sfar_recommendations/output/chandra/2026/gestion_voies_aeriennes_recommandations_mel_vd/gestion_voies_aeriennes_recommandations_mel_vd.md",
+   "new_year": 2026,
+   "new_title": "Prise en charge des voies aériennes de l’adulte au bloc opératoire",
+   "title_overlap": [],
+   "explicit_mention_in_new": []
+  },
+  {
+   "lineage": "voies_aeriennes_adulte_bloc",
+   "old": "data/sfar_recommendations/output/chandra/2003/2b_AFAR_Texte-Long_/2b_AFAR_Texte-Long_.md",
+   "old_year": 2003,
+   "old_title": "Prise en charge des voies aériennes en anesthésie adulte à l’exception de l’intubation difficile",
+   "new": "data/sfar_recommendations/output/chandra/2026/gestion_voies_aeriennes_recommandations_mel_vd/gestion_voies_aeriennes_recommandations_mel_vd.md",
+   "new_year": 2026,
+   "new_title": "Prise en charge des voies aériennes de l’adulte au bloc opératoire",
+   "title_overlap": [
+    "aeriennes",
+    "voies"
+   ],
+   "explicit_mention_in_new": []
+  },
+  {
+   "lineage": "voies_aeriennes_adulte_bloc",
+   "old": "data/sfar_recommendations/output/chandra/2003/1-2a_SFAR_Texte-court-Controle-des-voies-aeriennes-en-anesthesie-en-dehors-de-l-intubation-difficile/1-2a_SFAR_Texte-court-Controle-des-voies-aeriennes-en-anesthesie-en-dehors-de-l-intubation-difficile.md",
+   "old_year": 2003,
+   "old_title": "Prise en charge des voies aériennes en anesthésie adulte à l’exception de l’intubation difficile",
+   "new": "data/sfar_recommendations/output/chandra/2026/gestion_voies_aeriennes_recommandations_mel_vd/gestion_voies_aeriennes_recommandations_mel_vd.md",
+   "new_year": 2026,
+   "new_title": "Prise en charge des voies aériennes de l’adulte au bloc opératoire",
+   "title_overlap": [
+    "aeriennes",
+    "voies"
+   ],
+   "explicit_mention_in_new": []
+  },
+  {
+   "lineage": "voies_aeriennes_adulte_bloc",
+   "old": "data/sfar_recommendations/output/chandra/unknown/BJA-2015-reco-ventilation-et-IOT1/BJA-2015-reco-ventilation-et-IOT1.md",
+   "old_year": 2015,
+   "old_title": "Intubation difficile",
+   "new": "data/sfar_recommendations/output/chandra/2026/gestion_voies_aeriennes_recommandations_mel_vd/gestion_voies_aeriennes_recommandations_mel_vd.md",
+   "new_year": 2026,
+   "new_title": "Prise en charge des voies aériennes de l’adulte au bloc opératoire",
+   "title_overlap": [],
+   "explicit_mention_in_new": []
+  },
+  {
+   "lineage": "voies_aeriennes_adulte_bloc",
+   "old": "data/sfar_recommendations/output/chandra/unknown/2b_AFAR_Texte-Long_Intubation-difficile/2b_AFAR_Texte-Long_Intubation-difficile.md",
+   "old_year": 1996,
+   "old_title": "Intubation difficile",
+   "new": "data/sfar_recommendations/output/chandra/2026/gestion_voies_aeriennes_recommandations_mel_vd/gestion_voies_aeriennes_recommandations_mel_vd.md",
+   "new_year": 2026,
+   "new_title": "Prise en charge des voies aériennes de l’adulte au bloc opératoire",
+   "title_overlap": [],
+   "explicit_mention_in_new": []
+  },
+  {
+   "lineage": "voies_aeriennes_adulte_bloc",
+   "old": "data/sfar_recommendations/output/chandra/unknown/2a_SFAR_texte_court_Intubation-difficile/2a_SFAR_texte_court_Intubation-difficile.md",
+   "old_year": 2006,
+   "old_title": "Intubation difficile",
+   "new": "data/sfar_recommendations/output/chandra/2026/gestion_voies_aeriennes_recommandations_mel_vd/gestion_voies_aeriennes_recommandations_mel_vd.md",
+   "new_year": 2026,
+   "new_title": "Prise en charge des voies aériennes de l’adulte au bloc opératoire",
+   "title_overlap": [],
+   "explicit_mention_in_new": []
+  },
+  {
+   "lineage": "nutrition_clinique_adulte",
+   "old": "data/sfar_recommendations/output/chandra/2014/2_AFAR_Nutrition-artificielle-en-reanimation/2_AFAR_Nutrition-artificielle-en-reanimation.md",
+   "old_year": 2014,
+   "old_title": "Nutrition artificielle en réanimation",
+   "new": "data/sfar_recommendations/output/chandra/2026/Figures-RFE-Nutrition/Figures-RFE-Nutrition.md",
+   "new_year": 2026,
+   "new_title": "Nutrition clinique de l’adulte en contexte périopératoire et en soins critiques",
+   "title_overlap": [
+    "nutrition"
+   ],
+   "explicit_mention_in_new": []
+  },
+  {
+   "lineage": "nutrition_clinique_adulte",
+   "old": "data/sfar_recommendations/output/chandra/2010/2_AFAR_Nutrition-artificielle-perioperatoire-en-chirurgie-programmee-de-ladulte/2_AFAR_Nutrition-artificielle-perioperatoire-en-chirurgie-programmee-de-ladulte.md",
+   "old_year": 2010,
+   "old_title": "Recommandations de bonnes pratiques cliniques sur la nutrition périopératoire",
+   "new": "data/sfar_recommendations/output/chandra/2026/Figures-RFE-Nutrition/Figures-RFE-Nutrition.md",
+   "new_year": 2026,
+   "new_title": "Nutrition clinique de l’adulte en contexte périopératoire et en soins critiques",
+   "title_overlap": [
+    "nutrition",
+    "perioperatoire"
+   ],
+   "explicit_mention_in_new": []
+  },
+  {
+   "lineage": "alr_pediatrique",
+   "old": "data/sfar_recommendations/output/chandra/2010/2_SFAR_Anesthesie-loco-regionale-en-pediatrie/2_SFAR_Anesthesie-loco-regionale-en-pediatrie.md",
+   "old_year": 2010,
+   "old_title": "Anesthésie loco-régionale en pédiatrie",
+   "new": "data/sfar_recommendations/output/chandra/2026/TEXTE-RFE-ALR-PEDIA-VERSION-FINALE-010926/TEXTE-RFE-ALR-PEDIA-VERSION-FINALE-010926.md",
+   "new_year": 2026,
+   "new_title": "Anesthésie locorégionale en chirurgie pédiatrique",
+   "title_overlap": [
+    "anesthesie"
+   ],
+   "explicit_mention_in_new": [
+    "jointement par la Société Française d'Anesthésie Réanimation (SFAR) et l'Association Des Anesthésistes-Réanimateurs Pédiatriques d'Expression Française (ADARPEF), ont pour objectif"
+   ]
+  },
+  {
+   "lineage": "infections_intra_abdominales",
+   "old": "data/sfar_recommendations/output/chandra/2015/RFE-Guidelines-for-management-of-intra-abdominal-infections/RFE-Guidelines-for-management-of-intra-abdominal-infections.md",
+   "old_year": 2015,
+   "old_title": "Prise en charge des infections intra-abdominales",
+   "new": "data/sfar_recommendations/output/chandra/2026/RFE-Infections-intra-abdominales-version-lecture-doc-finale-14-08-26-depose-site-sans-filigrane/RFE-Infections-intra-abdominales-version-lecture-doc-finale-14-08-26-depose-site-sans-filigrane.md",
+   "new_year": 2026,
+   "new_title": "Prise en charge thérapeutique des Infections intra-abdominales de l’adulte",
+   "title_overlap": [
+    "abdominales",
+    "infections",
+    "intra"
+   ],
+   "explicit_mention_in_new": [
+    "Cette actualisation a suivi la méthodologie GRADE, permettant une analyse rigoureuse de la littérature, et conduit à certains ajustements de gradation par rapport aux RFE de 2015"
+   ]
+  },
+  {
+   "lineage": "infections_intra_abdominales",
+   "old": "data/sfar_recommendations/output/chandra/2015/2_AFAR_Prise-en-charge-des-infections-intra-abdominales/2_AFAR_Prise-en-charge-des-infections-intra-abdominales.md",
+   "old_year": 2015,
+   "old_title": "Prise en charge des infections intra-abdominales",
+   "new": "data/sfar_recommendations/output/chandra/2026/RFE-Infections-intra-abdominales-version-lecture-doc-finale-14-08-26-depose-site-sans-filigrane/RFE-Infections-intra-abdominales-version-lecture-doc-finale-14-08-26-depose-site-sans-filigrane.md",
+   "new_year": 2026,
+   "new_title": "Prise en charge thérapeutique des Infections intra-abdominales de l’adulte",
+   "title_overlap": [
+    "abdominales",
+    "infections",
+    "intra"
+   ],
+   "explicit_mention_in_new": [
+    "Cette actualisation a suivi la méthodologie GRADE, permettant une analyse rigoureuse de la littérature, et conduit à certains ajustements de gradation par rapport aux RFE de 2015"
+   ]
+  },
+  {
+   "lineage": "sedation_urgences",
+   "old": "data/sfar_recommendations/output/chandra/2010/2_AFAR_Sedation-analgesie-en-structure-d-urgence/2_AFAR_Sedation-analgesie-en-structure-d-urgence.md",
+   "old_year": 2010,
+   "old_title": "Sédation et analgésie en Structures d’Urgence",
+   "new": "data/sfar_recommendations/output/chandra/2026/RFE_sedationproceduraleUrgences_24juin2026/RFE_sedationproceduraleUrgences_24juin2026.md",
+   "new_year": 2026,
+   "new_title": "Sédation procédurale en structure de Médecine d’Urgence",
+   "title_overlap": [
+    "sedation",
+    "urgence"
+   ],
+   "explicit_mention_in_new": [
+    "*Contexte et justification* : Vingt-six ans après la première conférence d'experts de la SFAR [1] et seize ans après la recommandation conjointe SFMU-SFAR de 2010 [2], une réactual"
+   ]
+  },
+  {
+   "lineage": "anticoagulants_procedure_programmee",
+   "old": "data/sfar_recommendations/output/chandra/2021/Gestion%20perioperatoire%20des%20patients%20sous%20AOD%20pour%20un%20acte%20programm%C3%A9/Gestion%20perioperatoire%20des%20patients%20sous%20AOD%20pour%20un%20acte%20programm%C3%A9.md",
+   "old_year": 2021,
+   "old_title": "Gestion perioperatoire des patients sous AOD pour un acte programmé",
+   "new": "data/sfar_recommendations/output/chandra/2026/RFE-20.4.2026-deifinitif-et-validei/RFE-20.4.2026-deifinitif-et-validei.md",
+   "new_year": 2026,
+   "new_title": "Gestion des anticoagulants pour une procédure invasive programmée",
+   "title_overlap": [],
+   "explicit_mention_in_new": []
+  },
+  {
+   "lineage": "anticoagulants_procedure_programmee",
+   "old": "data/sfar_recommendations/output/chandra/2015/Reactualisation-GIHP_AOD_actes-programmes_Septembre-20151/Reactualisation-GIHP_AOD_actes-programmes_Septembre-20151.md",
+   "old_year": 2015,
+   "old_title": "La gestion périopératoire des patients sous AOD pour un acte programmé",
+   "new": "data/sfar_recommendations/output/chandra/2026/RFE-20.4.2026-deifinitif-et-validei/RFE-20.4.2026-deifinitif-et-validei.md",
+   "new_year": 2026,
+   "new_title": "Gestion des anticoagulants pour une procédure invasive programmée",
+   "title_overlap": [],
+   "explicit_mention_in_new": []
+  },
+  {
+   "lineage": "anticoagulants_procedure_programmee",
+   "old": "data/sfar_recommendations/output/chandra/2008/2_HAS_Prise-en-charge-des-surdosages-en-antivitamines-K/2_HAS_Prise-en-charge-des-surdosages-en-antivitamines-K.md",
+   "old_year": 2008,
+   "old_title": "Recommandations AVK",
+   "new": "data/sfar_recommendations/output/chandra/2026/RFE-20.4.2026-deifinitif-et-validei/RFE-20.4.2026-deifinitif-et-validei.md",
+   "new_year": 2026,
+   "new_title": "Gestion des anticoagulants pour une procédure invasive programmée",
+   "title_overlap": [],
+   "explicit_mention_in_new": []
+  },
+  {
+   "lineage": "hypersensibilite_allergie_perioperatoire",
+   "old": "data/sfar_recommendations/output/chandra/2011/2_AFAR_Prevention-du-risque-allergique-peranesthesique/2_AFAR_Prevention-du-risque-allergique-peranesthesique.md",
+   "old_year": 2011,
+   "old_title": "Prévention du risque allergique peranesthésique",
+   "new": "data/sfar_recommendations/output/chandra/2025/2025_SFAR-SFA_RFE-Diagnostic-et-prise-en-charge-des-reactions-dhypersensibilite-immediate-perioperatoires/2025_SFAR-SFA_RFE-Diagnostic-et-prise-en-charge-des-reactions-dhypersensibilite-immediate-perioperatoires.md",
+   "new_year": 2025,
+   "new_title": "Diagnostic et prise en charge des réactions d’hypersensibilité immédiate périopératoires",
+   "title_overlap": [],
+   "explicit_mention_in_new": [
+    "Ces recommandations formalisées d'experts sont une actualisation des recommandations conjointes éditées par la SFAR et la SFA en 2011 sous le titre initial : Prévention du risque a"
+   ]
+  },
+  {
+   "lineage": "prevention_mtev_perioperatoire",
+   "old": "data/sfar_recommendations/output/chandra/2011/2_AFAR_Prevention-de-la-maladie-thromboembolique-veineuse-postoperatoire-copie/2_AFAR_Prevention-de-la-maladie-thromboembolique-veineuse-postoperatoire-copie.md",
+   "old_year": 2011,
+   "old_title": "Prévention de la maladie thromboembolique veineuse postopératoire",
+   "new": "data/sfar_recommendations/output/chandra/2024/240516-Txt-definitif-/240516-Txt-definitif-.md",
+   "new_year": 2024,
+   "new_title": "Prévention de la maladie thromboembolique veineuse péri-opératoire",
+   "title_overlap": [
+    "maladie",
+    "prevention",
+    "thromboembolique",
+    "veineuse"
+   ],
+   "explicit_mention_in_new": [
+    "**Actualisation des recommandations formalisées d'experts de la SFAR de 2011**"
+   ]
+  },
+  {
+   "lineage": "optimisation_hemodynamique_adulte",
+   "old": "data/sfar_recommendations/output/chandra/2012/2b_AFAR_ANGLAIS_Strategie-du-remplissage-vasculaire-perioperatoire/2b_AFAR_ANGLAIS_Strategie-du-remplissage-vasculaire-perioperatoire.md",
+   "old_year": 2012,
+   "old_title": "Stratégie du remplissage vasculaire périopératoire",
+   "new": "data/sfar_recommendations/output/chandra/2024/2024_RFE-optimisation-hemodynamique-perioperatoire_adulte-dont-obstretriqueV2-1/2024_RFE-optimisation-hemodynamique-perioperatoire_adulte-dont-obstretriqueV2-1.md",
+   "new_year": 2024,
+   "new_title": "Optimisation hémodynamique périopératoire – Adulte dont obstétrique",
+   "title_overlap": [
+    "perioperatoire"
+   ],
+   "explicit_mention_in_new": []
+  },
+  {
+   "lineage": "optimisation_hemodynamique_adulte",
+   "old": "data/sfar_recommendations/output/chandra/2012/2a_AFAR_FRANCAIS_Strategie-du-remplissage-vasculaire-perioperatoire/2a_AFAR_FRANCAIS_Strategie-du-remplissage-vasculaire-perioperatoire.md",
+   "old_year": 2012,
+   "old_title": "Stratégie du remplissage vasculaire périopératoire",
+   "new": "data/sfar_recommendations/output/chandra/2024/2024_RFE-optimisation-hemodynamique-perioperatoire_adulte-dont-obstretriqueV2-1/2024_RFE-optimisation-hemodynamique-perioperatoire_adulte-dont-obstretriqueV2-1.md",
+   "new_year": 2024,
+   "new_title": "Optimisation hémodynamique périopératoire – Adulte dont obstétrique",
+   "title_overlap": [
+    "perioperatoire"
+   ],
+   "explicit_mention_in_new": []
+  },
+  {
+   "lineage": "sepsis_general",
+   "old": "data/sfar_recommendations/output/chandra/2006/2_AFAR_Prise-en-charge-initiale-des-etats-septiques-graves-de-ladulte-et-de-lenfant/2_AFAR_Prise-en-charge-initiale-des-etats-septiques-graves-de-ladulte-et-de-lenfant.md",
+   "old_year": 2006,
+   "old_title": "Prise en charge initiale des états septiques graves de l’adulte et de l’enfant",
+   "new": "data/sfar_recommendations/output/chandra/2025/reco_sepsis/reco_sepsis.md",
+   "new_year": 2025,
+   "new_title": "Prise en charge du sepsis du nouveau-né, de l’enfant et de l’adulte – HAS 2025",
+   "title_overlap": [
+    "enfant"
+   ],
+   "explicit_mention_in_new": []
+  },
+  {
+   "lineage": "sepsis_general",
+   "old": "data/sfar_recommendations/output/chandra/2005/2b_TEXTE-LONG_AFAR_Prise-en-charge-hemodynamique-du-sepsis-grave/2b_TEXTE-LONG_AFAR_Prise-en-charge-hemodynamique-du-sepsis-grave.md",
+   "old_year": 2005,
+   "old_title": "Prise en charge hémodynamique du sepsis sévère (nouveau-né exclu)",
+   "new": "data/sfar_recommendations/output/chandra/2025/reco_sepsis/reco_sepsis.md",
+   "new_year": 2025,
+   "new_title": "Prise en charge du sepsis du nouveau-né, de l’enfant et de l’adulte – HAS 2025",
+   "title_overlap": [
+    "nouveau",
+    "sepsis"
+   ],
+   "explicit_mention_in_new": []
+  },
+  {
+   "lineage": "sepsis_general",
+   "old": "data/sfar_recommendations/output/chandra/2005/2a_TEXTE-COURT_Prise-en-charge-hemodynamique-du-sepsis-grave/2a_TEXTE-COURT_Prise-en-charge-hemodynamique-du-sepsis-grave.md",
+   "old_year": 2005,
+   "old_title": "Prise en charge hémodynamique du sepsis sévère (nouveau-né exclu)",
+   "new": "data/sfar_recommendations/output/chandra/2025/reco_sepsis/reco_sepsis.md",
+   "new_year": 2025,
+   "new_title": "Prise en charge du sepsis du nouveau-né, de l’enfant et de l’adulte – HAS 2025",
+   "title_overlap": [
+    "nouveau",
+    "sepsis"
+   ],
+   "explicit_mention_in_new": []
+  },
+  {
+   "lineage": "sepsis_general",
+   "old": "data/sfar_recommendations/output/chandra/2004/2_AFAR_Antibiotherapie-probabiliste-des-etats-septiques-graves/2_AFAR_Antibiotherapie-probabiliste-des-etats-septiques-graves.md",
+   "old_year": 2004,
+   "old_title": "Antibiothérapie probabiliste des états septiques graves",
+   "new": "data/sfar_recommendations/output/chandra/2025/reco_sepsis/reco_sepsis.md",
+   "new_year": 2025,
+   "new_title": "Prise en charge du sepsis du nouveau-né, de l’enfant et de l’adulte – HAS 2025",
+   "title_overlap": [],
+   "explicit_mention_in_new": []
+  },
+  {
+   "lineage": "anticoagulants_urgence",
+   "old": "data/sfar_recommendations/output/chandra/2021/Gestion%20perioperatoire%20des%20patients%20sous%20AOD%20en%20urgence/Gestion%20perioperatoire%20des%20patients%20sous%20AOD%20en%20urgence.md",
+   "old_year": 2021,
+   "old_title": "Gestion des patients sous AOD (dabigatran) en urgence",
+   "new": "data/sfar_recommendations/output/chandra/2024/RFE-gestion-de-lanticoagulation-dans-un-contexte-durgence_23.02.2024-1/RFE-gestion-de-lanticoagulation-dans-un-contexte-durgence_23.02.2024-1.md",
+   "new_year": 2024,
+   "new_title": "Gestion de l’anticoagulation dans un contexte d’urgence",
+   "title_overlap": [
+    "urgence"
+   ],
+   "explicit_mention_in_new": []
+  },
+  {
+   "lineage": "anticoagulants_urgence",
+   "old": "data/sfar_recommendations/output/chandra/2021/2013%20AFAR%20GIHP/2013%20AFAR%20GIHP.md",
+   "old_year": 2013,
+   "old_title": "Gestion périopératoire des AOD en urgence",
+   "new": "data/sfar_recommendations/output/chandra/2024/RFE-gestion-de-lanticoagulation-dans-un-contexte-durgence_23.02.2024-1/RFE-gestion-de-lanticoagulation-dans-un-contexte-durgence_23.02.2024-1.md",
+   "new_year": 2024,
+   "new_title": "Gestion de l’anticoagulation dans un contexte d’urgence",
+   "title_overlap": [
+    "urgence"
+   ],
+   "explicit_mention_in_new": []
+  },
+  {
+   "lineage": "prevention_erreurs_medicamenteuses",
+   "old": "data/sfar_recommendations/output/chandra/2016/texte-court-preco-erreurs-med-2016-SFAR-SFPC-version-finale-25-oct-2016/texte-court-preco-erreurs-med-2016-SFAR-SFPC-version-finale-25-oct-2016.md",
+   "old_year": 2016,
+   "old_title": "Prévention des erreurs médicamenteuses en A-R",
+   "new": "data/sfar_recommendations/output/chandra/2024/RPP-Prevention-des-erreurs-medicamenteuses/RPP-Prevention-des-erreurs-medicamenteuses.md",
+   "new_year": 2024,
+   "new_title": "Prévention des erreurs médicamenteuses",
+   "title_overlap": [
+    "erreurs",
+    "medicamenteuses",
+    "prevention"
+   ],
+   "explicit_mention_in_new": []
+  },
+  {
+   "lineage": "prevention_erreurs_medicamenteuses",
+   "old": "data/sfar_recommendations/output/chandra/2016/texte-long-Preconisations-2016-erreurs-med-SFAR-SFPC-version-finale-25-oct-2016/texte-long-Preconisations-2016-erreurs-med-SFAR-SFPC-version-finale-25-oct-2016.md",
+   "old_year": 2016,
+   "old_title": "Prévention des erreurs médicamenteuses en A-R",
+   "new": "data/sfar_recommendations/output/chandra/2024/RPP-Prevention-des-erreurs-medicamenteuses/RPP-Prevention-des-erreurs-medicamenteuses.md",
+   "new_year": 2024,
+   "new_title": "Prévention des erreurs médicamenteuses",
+   "title_overlap": [
+    "erreurs",
+    "medicamenteuses",
+    "prevention"
+   ],
+   "explicit_mention_in_new": []
+  },
+  {
+   "lineage": "prevention_erreurs_medicamenteuses",
+   "old": "data/sfar_recommendations/output/chandra/2006/preverreurmedic_recos/preverreurmedic_recos.md",
+   "old_year": 2006,
+   "old_title": "Prévention des erreurs médicamenteuses en anesthésie",
+   "new": "data/sfar_recommendations/output/chandra/2024/RPP-Prevention-des-erreurs-medicamenteuses/RPP-Prevention-des-erreurs-medicamenteuses.md",
+   "new_year": 2024,
+   "new_title": "Prévention des erreurs médicamenteuses",
+   "title_overlap": [
+    "erreurs",
+    "medicamenteuses",
+    "prevention"
+   ],
+   "explicit_mention_in_new": []
+  },
+  {
+   "lineage": "antibioprophylaxie",
+   "old": "data/sfar_recommendations/output/chandra/2018/Antibioprophylaxie-RFE-mise-a-jour-2018/Antibioprophylaxie-RFE-mise-a-jour-2018.md",
+   "old_year": 2018,
+   "old_title": "Antibioprophylaxie en chirurgie et médecine interventionnelle (patients adultes)",
+   "new": "data/sfar_recommendations/output/chandra/2023/RFE-antibioprophylaxie-2023_V3.0_pour-mise-sur-site-juin-2026_sans-code-CCAM/RFE-antibioprophylaxie-2023_V3.0_pour-mise-sur-site-juin-2026_sans-code-CCAM.md",
+   "new_year": 2026,
+   "new_title": "Antibioprophylaxie en chirurgie et médecine interventionnelle",
+   "title_overlap": [
+    "antibioprophylaxie",
+    "chirurgie",
+    "interventionnelle",
+    "medecine"
+   ],
+   "explicit_mention_in_new": []
+  },
+  {
+   "lineage": "antibioprophylaxie",
+   "old": "data/sfar_recommendations/output/chandra/2017/rfe-antibioprophylaxie-in-surgery-and-interventional-medicine/rfe-antibioprophylaxie-in-surgery-and-interventional-medicine.md",
+   "old_year": 2017,
+   "old_title": "Antibioprophylaxie en chirurgie et médecine interventionnelle (patients adultes)",
+   "new": "data/sfar_recommendations/output/chandra/2023/RFE-antibioprophylaxie-2023_V3.0_pour-mise-sur-site-juin-2026_sans-code-CCAM/RFE-antibioprophylaxie-2023_V3.0_pour-mise-sur-site-juin-2026_sans-code-CCAM.md",
+   "new_year": 2026,
+   "new_title": "Antibioprophylaxie en chirurgie et médecine interventionnelle",
+   "title_overlap": [
+    "antibioprophylaxie",
+    "chirurgie",
+    "interventionnelle",
+    "medecine"
+   ],
+   "explicit_mention_in_new": []
+  },
+  {
+   "lineage": "antibioprophylaxie",
+   "old": "data/sfar_recommendations/output/chandra/2017/Antibioprophylaxie-version-2017-CRC_CA_MODIF/Antibioprophylaxie-version-2017-CRC_CA_MODIF.md",
+   "old_year": 2017,
+   "old_title": "Antibioprophylaxie en chirurgie et médecine interventionnelle (patients adultes)",
+   "new": "data/sfar_recommendations/output/chandra/2023/RFE-antibioprophylaxie-2023_V3.0_pour-mise-sur-site-juin-2026_sans-code-CCAM/RFE-antibioprophylaxie-2023_V3.0_pour-mise-sur-site-juin-2026_sans-code-CCAM.md",
+   "new_year": 2026,
+   "new_title": "Antibioprophylaxie en chirurgie et médecine interventionnelle",
+   "title_overlap": [
+    "antibioprophylaxie",
+    "chirurgie",
+    "interventionnelle",
+    "medecine"
+   ],
+   "explicit_mention_in_new": []
+  },
+  {
+   "lineage": "organisation_anesthesie_pediatrique",
+   "old": "data/sfar_recommendations/output/chandra/2000/2_SFAR_Recommandations-pour-les-structures-et-le-materiel-de-lanesthesie-pediatrique/2_SFAR_Recommandations-pour-les-structures-et-le-materiel-de-lanesthesie-pediatrique.md",
+   "old_year": 2000,
+   "old_title": "Recommandations pour les structures et le matériel de l’anesthésie pédiatrique",
+   "new": "data/sfar_recommendations/output/chandra/2023/RPP-Organisation-Anesthesie-Pediatrique_-Version-pour-mise-sur-site-SFAR_220323/RPP-Organisation-Anesthesie-Pediatrique_-Version-pour-mise-sur-site-SFAR_220323.md",
+   "new_year": 2023,
+   "new_title": "Organisation de l’anesthésie pédiatrique",
+   "title_overlap": [
+    "anesthesie",
+    "pediatrique"
+   ],
+   "explicit_mention_in_new": []
+  },
+  {
+   "lineage": "thrombopenie_induite_heparine",
+   "old": "data/sfar_recommendations/output/chandra/2002/2_AFAR_Thrombopenie-induite-par-lheparine/2_AFAR_Thrombopenie-induite-par-lheparine.md",
+   "old_year": 2002,
+   "old_title": "Thrombopénie induite par l’héparine",
+   "new": "data/sfar_recommendations/output/chandra/2019/diagnostic-et-prise-ne-charge-dune-TIH/diagnostic-et-prise-ne-charge-dune-TIH.md",
+   "new_year": 2019,
+   "new_title": "Diagnostic et prise en charge d’une thrombopénie induite par l’héparine",
+   "title_overlap": [
+    "heparine",
+    "induite",
+    "thrombopenie"
+   ],
+   "explicit_mention_in_new": [
+    "Un premier texte reprenant les données actualisées de la littérature et des recommandations britanniques (3), de l'ACCP (2) ainsi que celles plus récemment émises par l'ASH (4) a é"
+   ]
+  },
+  {
+   "lineage": "pancreatite_aigue",
+   "old": "data/sfar_recommendations/output/chandra/2001/cc_pancreatiteaigue20010/cc_pancreatiteaigue20010.md",
+   "old_year": 2001,
+   "old_title": "Pancréatite aiguë",
+   "new": "data/sfar_recommendations/output/chandra/2021/RFE%20SFAR%20pancreatite%20aigue_finale_220921/RFE%20SFAR%20pancreatite%20aigue_finale_220921.md",
+   "new_year": 2021,
+   "new_title": "Pancréatite aigüe du patient adulte en soins critiques",
+   "title_overlap": [
+    "aigue",
+    "pancreatite"
+   ],
+   "explicit_mention_in_new": []
+  },
+  {
+   "lineage": "hyperthermie_maligne",
+   "old": "data/sfar_recommendations/output/chandra/2013/2_SFAR_HyperthermieMaligne/2_SFAR_HyperthermieMaligne.md",
+   "old_year": 2013,
+   "old_title": "Recommandations d’Experts pour le Risque d’HYPERTHERMIE MALIGNE en Anesthésie Réanimation",
+   "new": "data/sfar_recommendations/output/chandra/2019/rpp-hyperthermie-maligne/rpp-hyperthermie-maligne.md",
+   "new_year": 2019,
+   "new_title": "Prise en charge de l’Hyperthermie Maligne",
+   "title_overlap": [
+    "hyperthermie",
+    "maligne"
+   ],
+   "explicit_mention_in_new": [
+    "*Ce document est une mise à jour des Recommandations d'Experts pour le risque d'HYPERTHERMIE MALIGNE en anesthésie-réanimation de septembre 2013"
+   ]
+  },
+  {
+   "lineage": "preeclampsie_severe",
+   "old": "data/sfar_recommendations/output/chandra/2009/2_SFAR_Prise-en-charge-pre-et-interhospitaliere-des-formes-graves-de-preeclampsie/2_SFAR_Prise-en-charge-pre-et-interhospitaliere-des-formes-graves-de-preeclampsie.md",
+   "old_year": 2009,
+   "old_title": "Prise en charge multidisciplinaire des formes graves de prééclampsie",
+   "new": "data/sfar_recommendations/output/chandra/2020/RFE%20pr%C3%A9-%C3%A9clampsie_finale/RFE%20pr%C3%A9-%C3%A9clampsie_finale.md",
+   "new_year": 2020,
+   "new_title": "Prise en charge de la patiente avec une pré-éclampsie sévère",
+   "title_overlap": [],
+   "explicit_mention_in_new": [
+    "Les objectifs de ces nouvelles recommandations sont non seulement de proposer une définition actualisée de la pré-éclampsie sévère et de mettre à jour celles émises en 2009, tel l'"
+   ]
+  },
+  {
+   "lineage": "traumatisme_vertebro_medullaire",
+   "old": "data/sfar_recommendations/output/chandra/2003/2_AFAR_Prise-en-charge-d-un-blesse-adulte-presentant-un-traumatisme-vertebro-medullaire/2_AFAR_Prise-en-charge-d-un-blesse-adulte-presentant-un-traumatisme-vertebro-medullaire.md",
+   "old_year": 2003,
+   "old_title": "Prise en charge d’un blessé adulte présentant un traumatisme vertébro-médullaire",
+   "new": "data/sfar_recommendations/output/chandra/2019/rfe-trauma-vertebro-medulaire/rfe-trauma-vertebro-medulaire.md",
+   "new_year": 2019,
+   "new_title": "Prise en charge des patients présentant, ou à risque, de traumatisme vertébromédullaire",
+   "title_overlap": [
+    "presentant",
+    "traumatisme"
+   ],
+   "explicit_mention_in_new": [
+    "Ces recommandations sont donc une actualisation des recommandations de 2003, à la lumière de la progression dans la connaissance des patients traumatisés vertébro-médullaires au co"
+   ]
+  },
+  {
+   "lineage": "agents_antiplaquettaires_programme",
+   "old": "data/sfar_recommendations/output/chandra/2006/2_AFAR_Gestion-du-traitement-anti-plaquettaire-/2_AFAR_Gestion-du-traitement-anti-plaquettaire-.md",
+   "old_year": 2006,
+   "old_title": "Gestion du traitement antiplaquettaire oral chez les patients porteurs d’endoprothèses coronaires",
+   "new": "data/sfar_recommendations/output/chandra/2018/2_Gestion-des-agents-antiplaquettaires-pour-une-procedure-invasive-programmee/2_Gestion-des-agents-antiplaquettaires-pour-une-procedure-invasive-programmee.md",
+   "new_year": 2018,
+   "new_title": "Gestion des agents antiplaquettaires pour une procédure invasive programmée",
+   "title_overlap": [],
+   "explicit_mention_in_new": []
+  },
+  {
+   "lineage": "agents_antiplaquettaires_programme",
+   "old": "data/sfar_recommendations/output/chandra/unknown/2b_SFAR-Anglais/2b_SFAR-Anglais.md",
+   "old_year": 2001,
+   "old_title": "Agents antiplaquettaires et période périopératoire",
+   "new": "data/sfar_recommendations/output/chandra/2018/2_Gestion-des-agents-antiplaquettaires-pour-une-procedure-invasive-programmee/2_Gestion-des-agents-antiplaquettaires-pour-une-procedure-invasive-programmee.md",
+   "new_year": 2018,
+   "new_title": "Gestion des agents antiplaquettaires pour une procédure invasive programmée",
+   "title_overlap": [
+    "agents",
+    "antiplaquettaires"
+   ],
+   "explicit_mention_in_new": []
+  },
+  {
+   "lineage": "agents_antiplaquettaires_programme",
+   "old": "data/sfar_recommendations/output/chandra/unknown/2a_SFAR-Francais/2a_SFAR-Francais.md",
+   "old_year": 2001,
+   "old_title": "Agents antiplaquettaires et période périopératoire",
+   "new": "data/sfar_recommendations/output/chandra/2018/2_Gestion-des-agents-antiplaquettaires-pour-une-procedure-invasive-programmee/2_Gestion-des-agents-antiplaquettaires-pour-une-procedure-invasive-programmee.md",
+   "new_year": 2018,
+   "new_title": "Gestion des agents antiplaquettaires pour une procédure invasive programmée",
+   "title_overlap": [
+    "agents",
+    "antiplaquettaires"
+   ],
+   "explicit_mention_in_new": []
+  },
+  {
+   "lineage": "organisation_usc",
+   "old": "data/sfar_recommendations/output/chandra/unknown/200502-Recommandations_SFAR_SRLF-OrganisationDesUSC/200502-Recommandations_SFAR_SRLF-OrganisationDesUSC.md",
+   "old_year": 2002,
+   "old_title": "Recommandations SFAR-SRLF d’organisation des unités de surveillance continue",
+   "new": "data/sfar_recommendations/output/chandra/2018/EXTE-USC-CNP/EXTE-USC-CNP.md",
+   "new_year": 2018,
+   "new_title": "Recommandations pour le fonctionnement des USC dans les établissements de santé",
+   "title_overlap": [],
+   "explicit_mention_in_new": []
+  },
+  {
+   "lineage": "blocs_peripheriques_adulte",
+   "old": "data/sfar_recommendations/output/chandra/2001/2_AFAR_Les-blocs-peripheriques-des-membres-chez-l-adulte/2_AFAR_Les-blocs-peripheriques-des-membres-chez-l-adulte.md",
+   "old_year": 2001,
+   "old_title": "Les blocs périphériques des membres chez l’adulte",
+   "new": "data/sfar_recommendations/output/chandra/2016/rfe-anesthesie-loco-regionale-perinerveuse/rfe-anesthesie-loco-regionale-perinerveuse.md",
+   "new_year": 2016,
+   "new_title": "Anesthésie Loco-Régionale périnerveuse",
+   "title_overlap": [],
+   "explicit_mention_in_new": []
+  },
+  {
+   "lineage": "douleur_postoperatoire",
+   "old": "data/sfar_recommendations/output/chandra/2008/2b_AFAR_ANGLAISEExpert-panel-guidelines-2008.-Postoperative-pain-management-in-adults-and-children.-SFAR-Committees-on-Pain-and-Local-Regional-Anaesthesia-and-on-Standards./2b_AFAR_ANGLAISEExpert-panel-guidelines-2008.-Postoperative-pain-management-in-adults-and-children.-SFAR-Committees-on-Pain-and-Local-Regional-Anaesthesia-and-on-Standards..md",
+   "old_year": 2008,
+   "old_title": "Prise en charge de la douleur postopératoire chez l’adulte et l’enfant",
+   "new": "data/sfar_recommendations/output/chandra/2016/RFE-ANREA-Reactualisation-de-la-recommandation-sur-la-douleur-postoperatoire/RFE-ANREA-Reactualisation-de-la-recommandation-sur-la-douleur-postoperatoire.md",
+   "new_year": 2016,
+   "new_title": "Réactualisation de la recommandation sur la douleur postopératoire",
+   "title_overlap": [
+    "douleur",
+    "postoperatoire"
+   ],
+   "explicit_mention_in_new": []
+  },
+  {
+   "lineage": "douleur_postoperatoire",
+   "old": "data/sfar_recommendations/output/chandra/2008/2a_AFAR_Prise-en-charge-de-la-douleur-postoperatoire-chez-ladulte-et-lenfant/2a_AFAR_Prise-en-charge-de-la-douleur-postoperatoire-chez-ladulte-et-lenfant.md",
+   "old_year": 2008,
+   "old_title": "Prise en charge de la douleur postopératoire chez l’adulte et l’enfant",
+   "new": "data/sfar_recommendations/output/chandra/2016/RFE-ANREA-Reactualisation-de-la-recommandation-sur-la-douleur-postoperatoire/RFE-ANREA-Reactualisation-de-la-recommandation-sur-la-douleur-postoperatoire.md",
+   "new_year": 2016,
+   "new_title": "Réactualisation de la recommandation sur la douleur postopératoire",
+   "title_overlap": [
+    "douleur",
+    "postoperatoire"
+   ],
+   "explicit_mention_in_new": []
+  }
+ ],
+ "missed_candidates": [
+  {
+   "old": "data/sfar_recommendations/output/chandra/2018/management-of-antiplatelet-therapy-for-non-elective-invasive-procedures-or-bleeding-complications/management-of-antiplatelet-therapy-for-non-elective-invasive-procedures-or-bleeding-complications.md",
+   "new": "data/sfar_recommendations/output/chandra/2026/RFE-20.4.2026-deifinitif-et-validei/RFE-20.4.2026-deifinitif-et-validei.md",
+   "old_year": 2018,
+   "new_year": 2026,
+   "old_title": "Gestion des agents antiplaquettaires en cas de procédure invasive non programmée ou d’hémorragie",
+   "new_title": "Gestion des anticoagulants pour une procédure invasive programmée",
+   "jac": 0.33,
+   "cont": 0.75,
+   "same_lineage": false,
+   "loader_old_superseded": false,
+   "text_mentions_old_year": false
+  },
+  {
+   "old": "data/sfar_recommendations/output/chandra/2018/rfe-gestion-des-agents-antiplaquettaires/rfe-gestion-des-agents-antiplaquettaires.md",
+   "new": "data/sfar_recommendations/output/chandra/2026/RFE-20.4.2026-deifinitif-et-validei/RFE-20.4.2026-deifinitif-et-validei.md",
+   "old_year": 2018,
+   "new_year": 2026,
+   "old_title": "Gestion des agents antiplaquettaires en cas de procédure invasive non programmée ou d’hémorragie",
+   "new_title": "Gestion des anticoagulants pour une procédure invasive programmée",
+   "jac": 0.33,
+   "cont": 0.75,
+   "same_lineage": false,
+   "loader_old_superseded": false,
+   "text_mentions_old_year": false
+  },
+  {
+   "old": "data/sfar_recommendations/output/chandra/2018/ACCPM-335/ACCPM-335.md",
+   "new": "data/sfar_recommendations/output/chandra/2026/RFE-20.4.2026-deifinitif-et-validei/RFE-20.4.2026-deifinitif-et-validei.md",
+   "old_year": 2018,
+   "new_year": 2026,
+   "old_title": "Gestion des agents antiplaquettaires pour une procédure invasive programmée",
+   "new_title": "Gestion des anticoagulants pour une procédure invasive programmée",
+   "jac": 0.5,
+   "cont": 0.75,
+   "same_lineage": false,
+   "loader_old_superseded": false,
+   "text_mentions_old_year": false
+  },
+  {
+   "old": "data/sfar_recommendations/output/chandra/2018/2_Gestion-des-agents-antiplaquettaires-pour-une-procedure-invasive-programmee/2_Gestion-des-agents-antiplaquettaires-pour-une-procedure-invasive-programmee.md",
+   "new": "data/sfar_recommendations/output/chandra/2026/RFE-20.4.2026-deifinitif-et-validei/RFE-20.4.2026-deifinitif-et-validei.md",
+   "old_year": 2018,
+   "new_year": 2026,
+   "old_title": "Gestion des agents antiplaquettaires pour une procédure invasive programmée",
+   "new_title": "Gestion des anticoagulants pour une procédure invasive programmée",
+   "jac": 0.5,
+   "cont": 0.75,
+   "same_lineage": false,
+   "loader_old_superseded": false,
+   "text_mentions_old_year": false
+  },
+  {
+   "old": "data/sfar_recommendations/output/chandra/2019/rfe-gestion-anemie-reanimation/rfe-gestion-anemie-reanimation.md",
+   "new": "data/sfar_recommendations/output/chandra/2021/RFE%20SFAR%20pancreatite%20aigue_finale_220921/RFE%20SFAR%20pancreatite%20aigue_finale_220921.md",
+   "old_year": 2019,
+   "new_year": 2021,
+   "old_title": "Gestion et prévention de l’anémie (hors hémorragie aigüe) chez le patient adulte de soins critiques",
+   "new_title": "Pancréatite aigüe du patient adulte en soins critiques",
+   "jac": 0.38,
+   "cont": 0.75,
+   "same_lineage": false,
+   "loader_old_superseded": false,
+   "text_mentions_old_year": false
+  },
+  {
+   "old": "data/sfar_recommendations/output/chandra/2019/rfe-anemie-arbre-diagnostic-anemie/rfe-anemie-arbre-diagnostic-anemie.md",
+   "new": "data/sfar_recommendations/output/chandra/2021/RFE%20SFAR%20pancreatite%20aigue_finale_220921/RFE%20SFAR%20pancreatite%20aigue_finale_220921.md",
+   "old_year": 2019,
+   "new_year": 2021,
+   "old_title": "Gestion et prévention de l’anémie (hors hémorragie aigüe) chez le patient adulte de soins critiques",
+   "new_title": "Pancréatite aigüe du patient adulte en soins critiques",
+   "jac": 0.38,
+   "cont": 0.75,
+   "same_lineage": false,
+   "loader_old_superseded": false,
+   "text_mentions_old_year": false
+  },
+  {
+   "old": "data/sfar_recommendations/output/chandra/2014/RFE-Chest-trauma-First-48-hours-management/RFE-Chest-trauma-First-48-hours-management.md",
+   "new": "data/sfar_recommendations/output/chandra/2019/rfe-trauma-abdominale/rfe-trauma-abdominale.md",
+   "old_year": 2014,
+   "new_year": 2019,
+   "old_title": "Traumatisme Thoracique : Prise en charge des 48 premières heures",
+   "new_title": "Prise en charge du traumatisme abdominal grave de l’adulte : les 48 premières heures",
+   "jac": 0.5,
+   "cont": 0.75,
+   "same_lineage": false,
+   "loader_old_superseded": false,
+   "text_mentions_old_year": false
+  },
+  {
+   "old": "data/sfar_recommendations/output/chandra/2014/2_AFAR_Traumatisme-thoracique-_prise-en-charge-des-48-premieres-heures/2_AFAR_Traumatisme-thoracique-_prise-en-charge-des-48-premieres-heures.md",
+   "new": "data/sfar_recommendations/output/chandra/2019/rfe-trauma-abdominale/rfe-trauma-abdominale.md",
+   "old_year": 2014,
+   "new_year": 2019,
+   "old_title": "Traumatisme Thoracique : Prise en charge des 48 premières heures",
+   "new_title": "Prise en charge du traumatisme abdominal grave de l’adulte : les 48 premières heures",
+   "jac": 0.5,
+   "cont": 0.75,
+   "same_lineage": false,
+   "loader_old_superseded": false,
+   "text_mentions_old_year": false
+  },
+  {
+   "old": "data/sfar_recommendations/output/chandra/2014/RFE-Chest-trauma-First-48-hours-management/RFE-Chest-trauma-First-48-hours-management.md",
+   "new": "data/sfar_recommendations/output/chandra/2019/rfe-trauma-abdominal-fiche-synthese/rfe-trauma-abdominal-fiche-synthese.md",
+   "old_year": 2014,
+   "new_year": 2019,
+   "old_title": "Traumatisme Thoracique : Prise en charge des 48 premières heures",
+   "new_title": "Prise en charge du traumatisme abdominal grave de l’adulte : les 48 premières heures",
+   "jac": 0.5,
+   "cont": 0.75,
+   "same_lineage": false,
+   "loader_old_superseded": false,
+   "text_mentions_old_year": false
+  },
+  {
+   "old": "data/sfar_recommendations/output/chandra/2014/2_AFAR_Traumatisme-thoracique-_prise-en-charge-des-48-premieres-heures/2_AFAR_Traumatisme-thoracique-_prise-en-charge-des-48-premieres-heures.md",
+   "new": "data/sfar_recommendations/output/chandra/2019/rfe-trauma-abdominal-fiche-synthese/rfe-trauma-abdominal-fiche-synthese.md",
+   "old_year": 2014,
+   "new_year": 2019,
+   "old_title": "Traumatisme Thoracique : Prise en charge des 48 premières heures",
+   "new_title": "Prise en charge du traumatisme abdominal grave de l’adulte : les 48 premières heures",
+   "jac": 0.5,
+   "cont": 0.75,
+   "same_lineage": false,
+   "loader_old_superseded": false,
+   "text_mentions_old_year": false
+  },
+  {
+   "old": "data/sfar_recommendations/output/chandra/2016/RFE-Management-of-severe-traumatic-brain-injury/RFE-Management-of-severe-traumatic-brain-injury.md",
+   "new": "data/sfar_recommendations/output/chandra/2017/rfe-early-management-of-severe-pelvic-injury/rfe-early-management-of-severe-pelvic-injury.md",
+   "old_year": 2016,
+   "new_year": 2017,
+   "old_title": "Prise en charge des traumatisés crâniens graves à la phase précoce (24 premières heures)",
+   "new_title": "Prise en charges des traumatises pelviens graves à la phase précoce (24 premières heures)",
+   "jac": 0.67,
+   "cont": 0.86,
+   "same_lineage": false,
+   "loader_old_superseded": false,
+   "text_mentions_old_year": false
+  },
+  {
+   "old": "data/sfar_recommendations/output/chandra/2016/RFE-ANREA-Prise-en-charge-des-traumatises-craniens-graves-a-la-phase-precoce/RFE-ANREA-Prise-en-charge-des-traumatises-craniens-graves-a-la-phase-precoce.md",
+   "new": "data/sfar_recommendations/output/chandra/2017/rfe-early-management-of-severe-pelvic-injury/rfe-early-management-of-severe-pelvic-injury.md",
+   "old_year": 2016,
+   "new_year": 2017,
+   "old_title": "Prise en charge des traumatisés crâniens graves à la phase précoce (24 premières heures)",
+   "new_title": "Prise en charges des traumatises pelviens graves à la phase précoce (24 premières heures)",
+   "jac": 0.67,
+   "cont": 0.86,
+   "same_lineage": false,
+   "loader_old_superseded": false,
+   "text_mentions_old_year": false
+  },
+  {
+   "old": "data/sfar_recommendations/output/chandra/2016/RFE-Management-of-severe-traumatic-brain-injury/RFE-Management-of-severe-traumatic-brain-injury.md",
+   "new": "data/sfar_recommendations/output/chandra/2017/rfe-prise-en-charge-des-traumatises-pelviens-graves-a-la-phase-precoce/rfe-prise-en-charge-des-traumatises-pelviens-graves-a-la-phase-precoce.md",
+   "old_year": 2016,
+   "new_year": 2017,
+   "old_title": "Prise en charge des traumatisés crâniens graves à la phase précoce (24 premières heures)",
+   "new_title": "Prise en charges des traumatises pelviens graves à la phase précoce (24 premières heures)",
+   "jac": 0.67,
+   "cont": 0.86,
+   "same_lineage": false,
+   "loader_old_superseded": false,
+   "text_mentions_old_year": false
+  },
+  {
+   "old": "data/sfar_recommendations/output/chandra/2016/RFE-ANREA-Prise-en-charge-des-traumatises-craniens-graves-a-la-phase-precoce/RFE-ANREA-Prise-en-charge-des-traumatises-craniens-graves-a-la-phase-precoce.md",
+   "new": "data/sfar_recommendations/output/chandra/2017/rfe-prise-en-charge-des-traumatises-pelviens-graves-a-la-phase-precoce/rfe-prise-en-charge-des-traumatises-pelviens-graves-a-la-phase-precoce.md",
+   "old_year": 2016,
+   "new_year": 2017,
+   "old_title": "Prise en charge des traumatisés crâniens graves à la phase précoce (24 premières heures)",
+   "new_title": "Prise en charges des traumatises pelviens graves à la phase précoce (24 premières heures)",
+   "jac": 0.67,
+   "cont": 0.86,
+   "same_lineage": false,
+   "loader_old_superseded": false,
+   "text_mentions_old_year": false
+  },
+  {
+   "old": "data/sfar_recommendations/output/chandra/unknown/MANIFESTEformationIDEReanimation/MANIFESTEformationIDEReanimation.md",
+   "new": "data/sfar_recommendations/output/chandra/unknown/livretadaptationIDEReanimation/livretadaptationIDEReanimation.md",
+   "old_year": 2003,
+   "new_year": 2008,
+   "old_title": "Recommandations pour une formation spécifique et une reconnaissance du métier d’infirmier de réanimation",
+   "new_title": "Recommandations pour une formation spécifique et une reconnaissance du métier d’infirmier de réanimation",
+   "jac": 1.0,
+   "cont": 1.0,
+   "same_lineage": false,
+   "loader_old_superseded": false,
+   "text_mentions_old_year": false
+  },
+  {
+   "old": "data/sfar_recommendations/output/chandra/unknown/ReferentielcompetencesIDEReanimation/ReferentielcompetencesIDEReanimation.md",
+   "new": "data/sfar_recommendations/output/chandra/unknown/livretadaptationIDEReanimation/livretadaptationIDEReanimation.md",
+   "old_year": 2002,
+   "new_year": 2008,
+   "old_title": "Recommandations pour une formation spécifique et une reconnaissance du métier d’infirmier de réanimation",
+   "new_title": "Recommandations pour une formation spécifique et une reconnaissance du métier d’infirmier de réanimation",
+   "jac": 1.0,
+   "cont": 1.0,
+   "same_lineage": false,
+   "loader_old_superseded": false,
+   "text_mentions_old_year": false
+  },
+  {
+   "old": "data/sfar_recommendations/output/chandra/unknown/ReferentielcompetencesIDEReanimation/ReferentielcompetencesIDEReanimation.md",
+   "new": "data/sfar_recommendations/output/chandra/unknown/MANIFESTEformationIDEReanimation/MANIFESTEformationIDEReanimation.md",
+   "old_year": 2002,
+   "new_year": 2003,
+   "old_title": "Recommandations pour une formation spécifique et une reconnaissance du métier d’infirmier de réanimation",
+   "new_title": "Recommandations pour une formation spécifique et une reconnaissance du métier d’infirmier de réanimation",
+   "jac": 1.0,
+   "cont": 1.0,
+   "same_lineage": false,
+   "loader_old_superseded": false,
+   "text_mentions_old_year": false
+  }
+ ],
+ "lineages": {
+  "voies_aeriennes_adulte_bloc": [
+   [
+    1996,
+    "fr",
+    "argumentaire",
+    false,
+    "Intubation difficile"
+   ],
+   [
+    2003,
+    "fr",
+    "argumentaire",
+    false,
+    "Prise en charge des voies aériennes en anesthésie adulte à l’exception"
+   ],
+   [
+    2003,
+    "fr",
+    "texte_court",
+    false,
+    "Prise en charge des voies aériennes en anesthésie adulte à l’exception"
+   ],
+   [
+    2006,
+    "fr",
+    "texte_court",
+    false,
+    "Intubation difficile"
+   ],
+   [
+    2015,
+    "en",
+    "traduction_en",
+    false,
+    "Intubation difficile"
+   ],
+   [
+    2017,
+    "fr",
+    "recommandation",
+    false,
+    "Intubation difficile et extubation en anesthésie chez l’adulte"
+   ],
+   [
+    2026,
+    "fr",
+    "recommandation",
+    true,
+    "Prise en charge des voies aériennes de l’adulte au bloc opératoire"
+   ],
+   [
+    2026,
+    "fr",
+    "argumentaire",
+    true,
+    "Prise en charge des voies aériennes de l’adulte au bloc opératoire"
+   ],
+   [
+    2026,
+    "fr",
+    "algorithme",
+    true,
+    "Prise en charge des voies aériennes de l’adulte au bloc opératoire"
+   ],
+   [
+    2026,
+    "fr",
+    "algorithme",
+    true,
+    "Prise en charge des voies aériennes de l’adulte au bloc opératoire"
+   ],
+   [
+    2026,
+    "fr",
+    "aide_cognitive",
+    true,
+    "Prise en charge des voies aériennes de l’adulte au bloc opératoire"
+   ],
+   [
+    2026,
+    "fr",
+    "aide_cognitive",
+    true,
+    "Prise en charge des voies aériennes de l’adulte au bloc opératoire"
+   ],
+   [
+    2026,
+    "fr",
+    "recommandation",
+    true,
+    "Prise en charge des voies aériennes de l’adulte au bloc opératoire"
+   ],
+   [
+    2026,
+    "fr",
+    "aide_cognitive",
+    true,
+    "Prise en charge des voies aériennes de l’adulte au bloc opératoire"
+   ],
+   [
+    2026,
+    "fr",
+    "aide_cognitive",
+    true,
+    "Prise en charge des voies aériennes de l’adulte au bloc opératoire"
+   ],
+   [
+    2026,
+    "fr",
+    "annexe",
+    true,
+    "Prise en charge des voies aériennes de l’adulte au bloc opératoire"
+   ]
+  ],
+  "nutrition_clinique_adulte": [
+   [
+    2010,
+    "fr",
+    "recommandation",
+    false,
+    "Recommandations de bonnes pratiques cliniques sur la nutrition périopé"
+   ],
+   [
+    2014,
+    "fr",
+    "recommandation",
+    false,
+    "Nutrition artificielle en réanimation"
+   ],
+   [
+    2026,
+    "fr",
+    "argumentaire",
+    true,
+    "Nutrition clinique de l’adulte en contexte périopératoire et en soins "
+   ],
+   [
+    2026,
+    "fr",
+    "texte_court",
+    true,
+    "Nutrition clinique de l’adulte en contexte périopératoire et en soins "
+   ],
+   [
+    2026,
+    "fr",
+    "recommandation",
+    true,
+    "Nutrition clinique de l’adulte en contexte périopératoire et en soins "
+   ]
+  ],
+  "alr_pediatrique": [
+   [
+    2010,
+    "fr",
+    "recommandation",
+    false,
+    "Anesthésie loco-régionale en pédiatrie"
+   ],
+   [
+    2026,
+    "bilingual",
+    "recommandation",
+    true,
+    "Anesthésie locorégionale en chirurgie pédiatrique"
+   ]
+  ],
+  "infections_intra_abdominales": [
+   [
+    2015,
+    "en",
+    "traduction_en",
+    false,
+    "Prise en charge des infections intra-abdominales"
+   ],
+   [
+    2015,
+    "bilingual",
+    "recommandation",
+    false,
+    "Prise en charge des infections intra-abdominales"
+   ],
+   [
+    2026,
+    "bilingual",
+    "recommandation",
+    true,
+    "Prise en charge thérapeutique des Infections intra-abdominales de l’ad"
+   ],
+   [
+    2026,
+    "fr",
+    "algorithme",
+    true,
+    "Prise en charge thérapeutique des Infections intra-abdominales de l’ad"
+   ]
+  ],
+  "sedation_urgences": [
+   [
+    2010,
+    "fr",
+    "recommandation",
+    false,
+    "Sédation et analgésie en Structures d’Urgence"
+   ],
+   [
+    2026,
+    "fr",
+    "recommandation",
+    true,
+    "Sédation procédurale en structure de Médecine d’Urgence"
+   ]
+  ],
+  "anticoagulants_procedure_programmee": [
+   [
+    2008,
+    "fr",
+    "recommandation",
+    false,
+    "Recommandations AVK"
+   ],
+   [
+    2015,
+    "fr",
+    "recommandation",
+    false,
+    "La gestion périopératoire des patients sous AOD pour un acte programmé"
+   ],
+   [
+    2021,
+    "fr",
+    "recommandation",
+    false,
+    "Gestion perioperatoire des patients sous AOD pour un acte programmé"
+   ],
+   [
+    2026,
+    "fr",
+    "recommandation",
+    true,
+    "Gestion des anticoagulants pour une procédure invasive programmée"
+   ]
+  ],
+  "hypersensibilite_allergie_perioperatoire": [
+   [
+    2011,
+    "fr",
+    "recommandation",
+    false,
+    "Prévention du risque allergique peranesthésique"
+   ],
+   [
+    2025,
+    "bilingual",
+    "recommandation",
+    true,
+    "Diagnostic et prise en charge des réactions d’hypersensibilité immédia"
+   ]
+  ],
+  "prevention_mtev_perioperatoire": [
+   [
+    2011,
+    "fr",
+    "recommandation",
+    false,
+    "Prévention de la maladie thromboembolique veineuse postopératoire"
+   ],
+   [
+    2024,
+    "bilingual",
+    "recommandation",
+    true,
+    "Prévention de la maladie thromboembolique veineuse péri-opératoire"
+   ]
+  ],
+  "optimisation_hemodynamique_adulte": [
+   [
+    2012,
+    "en",
+    "traduction_en",
+    false,
+    "Stratégie du remplissage vasculaire périopératoire"
+   ],
+   [
+    2012,
+    "fr",
+    "recommandation",
+    false,
+    "Stratégie du remplissage vasculaire périopératoire"
+   ],
+   [
+    2024,
+    "bilingual",
+    "recommandation",
+    true,
+    "Optimisation hémodynamique périopératoire – Adulte dont obstétrique"
+   ]
+  ],
+  "sepsis_general": [
+   [
+    2004,
+    "fr",
+    "recommandation",
+    false,
+    "Antibiothérapie probabiliste des états septiques graves"
+   ],
+   [
+    2005,
+    "fr",
+    "argumentaire",
+    false,
+    "Prise en charge hémodynamique du sepsis sévère (nouveau-né exclu)"
+   ],
+   [
+    2005,
+    "fr",
+    "texte_court",
+    false,
+    "Prise en charge hémodynamique du sepsis sévère (nouveau-né exclu)"
+   ],
+   [
+    2006,
+    "fr",
+    "recommandation",
+    false,
+    "Prise en charge initiale des états septiques graves de l’adulte et de "
+   ],
+   [
+    2025,
+    "fr",
+    "recommandation",
+    true,
+    "Prise en charge du sepsis du nouveau-né, de l’enfant et de l’adulte – "
+   ],
+   [
+    2025,
+    "fr",
+    "argumentaire",
+    true,
+    "Prise en charge du sepsis du nouveau-né, de l’enfant et de l’adulte – "
+   ],
+   [
+    2025,
+    "fr",
+    "aide_cognitive",
+    true,
+    "Prise en charge du sepsis du nouveau-né, de l’enfant et de l’adulte – "
+   ],
+   [
+    2025,
+    "fr",
+    "aide_cognitive",
+    true,
+    "Prise en charge du sepsis du nouveau-né, de l’enfant et de l’adulte – "
+   ]
+  ],
+  "anticoagulants_urgence": [
+   [
+    2013,
+    "fr",
+    "recommandation",
+    false,
+    "Gestion périopératoire des AOD en urgence"
+   ],
+   [
+    2021,
+    "fr",
+    "recommandation",
+    false,
+    "Gestion des patients sous AOD (dabigatran) en urgence"
+   ],
+   [
+    2024,
+    "fr",
+    "recommandation",
+    true,
+    "Gestion de l’anticoagulation dans un contexte d’urgence"
+   ],
+   [
+    2024,
+    "fr",
+    "algorithme",
+    true,
+    "Gestion de l’anticoagulation dans un contexte d’urgence"
+   ]
+  ],
+  "prevention_erreurs_medicamenteuses": [
+   [
+    2006,
+    "fr",
+    "recommandation",
+    false,
+    "Prévention des erreurs médicamenteuses en anesthésie"
+   ],
+   [
+    2016,
+    "fr",
+    "texte_court",
+    false,
+    "Prévention des erreurs médicamenteuses en A-R"
+   ],
+   [
+    2016,
+    "fr",
+    "argumentaire",
+    false,
+    "Prévention des erreurs médicamenteuses en A-R"
+   ],
+   [
+    2024,
+    "bilingual",
+    "recommandation",
+    true,
+    "Prévention des erreurs médicamenteuses"
+   ]
+  ],
+  "antibioprophylaxie": [
+   [
+    2017,
+    "en",
+    "traduction_en",
+    false,
+    "Antibioprophylaxie en chirurgie et médecine interventionnelle (patient"
+   ],
+   [
+    2017,
+    "bilingual",
+    "recommandation",
+    false,
+    "Antibioprophylaxie en chirurgie et médecine interventionnelle (patient"
+   ],
+   [
+    2018,
+    "bilingual",
+    "recommandation",
+    false,
+    "Antibioprophylaxie en chirurgie et médecine interventionnelle (patient"
+   ],
+   [
+    2026,
+    "bilingual",
+    "recommandation",
+    true,
+    "Antibioprophylaxie en chirurgie et médecine interventionnelle"
+   ]
+  ],
+  "organisation_anesthesie_pediatrique": [
+   [
+    2000,
+    "fr",
+    "recommandation",
+    false,
+    "Recommandations pour les structures et le matériel de l’anesthésie péd"
+   ],
+   [
+    2023,
+    "fr",
+    "recommandation",
+    true,
+    "Organisation de l’anesthésie pédiatrique"
+   ]
+  ],
+  "thrombopenie_induite_heparine": [
+   [
+    2002,
+    "fr",
+    "recommandation",
+    false,
+    "Thrombopénie induite par l’héparine"
+   ],
+   [
+    2019,
+    "fr",
+    "recommandation",
+    true,
+    "Diagnostic et prise en charge d’une thrombopénie induite par l’héparin"
+   ],
+   [
+    2019,
+    "fr",
+    "recommandation",
+    true,
+    "Propositions du GIHP et du GFHT pour le diagnostic et la prise en char"
+   ]
+  ],
+  "pancreatite_aigue": [
+   [
+    2001,
+    "fr",
+    "recommandation",
+    false,
+    "Pancréatite aiguë"
+   ],
+   [
+    2021,
+    "fr",
+    "recommandation",
+    true,
+    "Pancréatite aigüe du patient adulte en soins critiques"
+   ]
+  ],
+  "hyperthermie_maligne": [
+   [
+    2013,
+    "fr",
+    "recommandation",
+    false,
+    "Recommandations d’Experts pour le Risque d’HYPERTHERMIE MALIGNE en Ane"
+   ],
+   [
+    2019,
+    "fr",
+    "recommandation",
+    true,
+    "Prise en charge de l’Hyperthermie Maligne"
+   ],
+   [
+    2019,
+    "fr",
+    "aide_cognitive",
+    true,
+    "Prise en charge de l’Hyperthermie Maligne"
+   ]
+  ],
+  "preeclampsie_severe": [
+   [
+    2009,
+    "fr",
+    "recommandation",
+    false,
+    "Prise en charge multidisciplinaire des formes graves de prééclampsie"
+   ],
+   [
+    2020,
+    "fr",
+    "recommandation",
+    true,
+    "Prise en charge de la patiente avec une pré-éclampsie sévère"
+   ],
+   [
+    2020,
+    "fr",
+    "recommandation",
+    true,
+    "Prise en charge de la patiente avec une pré-éclampsie sévère"
+   ]
+  ],
+  "traumatisme_vertebro_medullaire": [
+   [
+    2003,
+    "fr",
+    "recommandation",
+    false,
+    "Prise en charge d’un blessé adulte présentant un traumatisme vertébro-"
+   ],
+   [
+    2019,
+    "bilingual",
+    "recommandation",
+    true,
+    "Prise en charge des patients présentant, ou à risque, de traumatisme v"
+   ],
+   [
+    2019,
+    "en",
+    "traduction_en",
+    true,
+    "Prise en charge des patients présentant, ou à risque, de traumatisme v"
+   ]
+  ],
+  "agents_antiplaquettaires_programme": [
+   [
+    2001,
+    "en",
+    "traduction_en",
+    false,
+    "Agents antiplaquettaires et période périopératoire"
+   ],
+   [
+    2001,
+    "fr",
+    "recommandation",
+    false,
+    "Agents antiplaquettaires et période périopératoire"
+   ],
+   [
+    2006,
+    "fr",
+    "recommandation",
+    false,
+    "Gestion du traitement antiplaquettaire oral chez les patients porteurs"
+   ],
+   [
+    2018,
+    "en",
+    "traduction_en",
+    true,
+    "Gestion des agents antiplaquettaires pour une procédure invasive progr"
+   ],
+   [
+    2018,
+    "fr",
+    "recommandation",
+    true,
+    "Gestion des agents antiplaquettaires pour une procédure invasive progr"
+   ]
+  ],
+  "organisation_usc": [
+   [
+    2002,
+    "fr",
+    "recommandation",
+    false,
+    "Recommandations SFAR-SRLF d’organisation des unités de surveillance co"
+   ],
+   [
+    2018,
+    "fr",
+    "recommandation",
+    true,
+    "Recommandations pour le fonctionnement des USC dans les établissements"
+   ]
+  ],
+  "blocs_peripheriques_adulte": [
+   [
+    2001,
+    "fr",
+    "recommandation",
+    false,
+    "Les blocs périphériques des membres chez l’adulte"
+   ],
+   [
+    2016,
+    "fr",
+    "recommandation",
+    true,
+    "Anesthésie Loco-Régionale périnerveuse"
+   ]
+  ],
+  "douleur_postoperatoire": [
+   [
+    2008,
+    "en",
+    "traduction_en",
+    false,
+    "Prise en charge de la douleur postopératoire chez l’adulte et l’enfant"
+   ],
+   [
+    2008,
+    "fr",
+    "recommandation",
+    false,
+    "Prise en charge de la douleur postopératoire chez l’adulte et l’enfant"
+   ],
+   [
+    2016,
+    "en",
+    "traduction_en",
+    true,
+    "Réactualisation de la recommandation sur la douleur postopératoire"
+   ],
+   [
+    2016,
+    "fr",
+    "recommandation",
+    true,
+    "Réactualisation de la recommandation sur la douleur postopératoire"
+   ],
+   [
+    2016,
+    "fr",
+    "tableaux_synthese",
+    true,
+    "Réactualisation de la recommandation sur la douleur postopératoire"
+   ]
+  ],
+  "echographie_alr": [
+   [
+    2011,
+    "fr",
+    "recommandation",
+    true,
+    "Échographie en anesthésie locorégionale"
+   ]
+  ],
+  "urgences_obstetricales_extrahospitalieres": [
+   [
+    2010,
+    "fr",
+    "recommandation",
+    true,
+    "Urgences Obstétricales Extrahospitalières"
+   ]
+  ],
+  "delivrance_information_sante": [
+   [
+    2010,
+    "fr",
+    "argumentaire",
+    true,
+    "Délivrance de l’information à la personne sur son état de santé"
+   ],
+   [
+    2010,
+    "fr",
+    "texte_court",
+    true,
+    "Délivrance de l’information à la personne sur son état de santé"
+   ]
+  ]
+ }
+}

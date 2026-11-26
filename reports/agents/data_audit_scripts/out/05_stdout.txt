@@ -1,0 +1,118 @@
+{
+ "tables": 2060,
+ "docs_with_tables": 185,
+ "markdown_pipe_tables": 0,
+ "with_header_th": 1049,
+ "without_header": 1011,
+ "contiguous_with_previous": 467,
+ "continuation_guess_noheader_samecols": 325,
+ "with_rowspan": 240,
+ "with_colspan": 540,
+ "with_math_or_latex": 161,
+ "empty_cells_share": 0.207,
+ "tables_gt_50pct_empty": 135,
+ "single_cell_tables": 55,
+ "one_col_tables": 174,
+ "text_chars_median": 606.5,
+ "text_chars_p90": 2243,
+ "tables_gt_2000_textchars(~500tok)": 258,
+ "tables_gt_6000_textchars(~1500tok)": 0,
+ "glued_text_after_table": 504,
+ "kinds": {
+  "score_classification_criteres": 149,
+  "autre_descriptif": 881,
+  "posologie_therapeutique": 291,
+  "methodologie_gradation": 162,
+  "checklist_formulaire": 79,
+  "synthese_etudes": 46,
+  "encadre_recommandation": 452
+ },
+ "kinds_docs": {
+  "score_classification_criteres": 64,
+  "autre_descriptif": 154,
+  "posologie_therapeutique": 59,
+  "methodologie_gradation": 54,
+  "checklist_formulaire": 28,
+  "synthese_etudes": 15,
+  "encadre_recommandation": 44
+ },
+ "table_char_share_corpus": 0.125,
+ "top_docs": [
+  [
+   138,
+   "data/sfar_recommendations/output/chandra/2023/RFE-antibioprophylaxie-2023_V3.0_pour-mise-sur-site-juin-2026_sans-code-CCAM/RFE-antibioprophylaxie-2023_V3.0_pour-mise-sur-site-juin-2026_sans-code-CCAM.md"
+  ],
+  [
+   102,
+   "data/sfar_recommendations/output/chandra/2014/2_HAS_transfusion_de_globules_rouges_homologues_-_produits_indications_alternatives_-_recommandations/2_HAS_transfusion_de_globules_rouges_homologues_-_produits_indications_alternatives_-_recommandations.md"
+  ],
+  [
+   99,
+   "data/sfar_recommendations/output/chandra/2016/3-Tableaux-Reactualisation-de-la-recommandation-sur-la-douleur-postoperatoire/3-Tableaux-Reactualisation-de-la-recommandation-sur-la-douleur-postoperatoire.md"
+  ],
+  [
+   91,
+   "data/sfar_recommendations/output/chandra/2013/2b_Annexe_SFAR_TableauxRFEDCALR2/2b_Annexe_SFAR_TableauxRFEDCALR2.md"
+  ],
+  [
+   85,
+   "data/sfar_recommendations/output/chandra/2026/Reco_ECBU_Argumentaire_04.03.2026_MEL/Reco_ECBU_Argumentaire_04.03.2026_MEL.md"
+  ],
+  [
+   64,
+   "data/sfar_recommendations/output/chandra/2001/Dossier-AnesthRea-SFAR/Dossier-AnesthRea-SFAR.md"
+  ],
+  [
+   63,
+   "data/sfar_recommendations/output/chandra/2026/RFE-20.4.2026-deifinitif-et-validei/RFE-20.4.2026-deifinitif-et-validei.md"
+  ],
+  [
+   58,
+   "data/sfar_recommendations/output/chandra/2025/RBP_-SFAR_AFEF_ACHBPT_RESECTION_-HEPATIQUE_-ARGUMENTAIRE_VF-1-AB-modif-ok/RBP_-SFAR_AFEF_ACHBPT_RESECTION_-HEPATIQUE_-ARGUMENTAIRE_VF-1-AB-modif-ok.md"
+  ]
+ ],
+ "examples": {
+  "score_classification_criteres": [
+   "data/sfar_recommendations/output/chandra/2000/2_SFAR_Corticotherapie-au-cours-du-choc-septique-et-du-SDRA/2_SFAR_Corticotherapie-au-cours-du-choc-septique-et-du-SDRA.md:134 « Score d'évaluation des références : »",
+   "data/sfar_recommendations/output/chandra/2001/art54_dossierarannperpost/art54_dossierarannperpost.md:1114 « RÉVEIL AMBULATOIRE Date : _____ IDE : _____ Date : _____ IDE : _____ PRESCRIPTION PRESCRIPTION Score ALDRETE »",
+   "data/sfar_recommendations/output/chandra/2003/2b_AFAR_Texte-Long_/2b_AFAR_Texte-Long_.md:126 « Critères Valeur simplifiée Antécédents d'ID 10 Pathologies favorisantes 5 Symptômes respiratoires 3 OB &gt; 5»"
+  ],
+  "autre_descriptif": [
+   "data/sfar_recommendations/output/chandra/2001/196-reco-anesth-chir-autres-2001/196-reco-anesth-chir-autres-2001.md:7 « PREFACE ..... 2 PREAMBULE ..... 3 1. LES PRINCIPES DEONTOLOGIQUES ..... 4 1. 1. Généralités ..... 4 1. 2. L'o»",
+   "data/sfar_recommendations/output/chandra/2001/2_AFAR_Les-blocs-peripheriques-des-membres-chez-l-adulte/2_AFAR_Les-blocs-peripheriques-des-membres-chez-l-adulte.md:303 « Indications chirurgicales Type de bloc Cathéter Prothèse d'épaule BIS + Rupture coiffe des rotateurs BIS + Ar»",
+   "data/sfar_recommendations/output/chandra/2001/Dossier-AnesthRea-SFAR/Dossier-AnesthRea-SFAR.md:380 « Antécédents Médicaux Antécédents Chirurgicaux »"
+  ],
+  "posologie_therapeutique": [
+   "data/sfar_recommendations/output/chandra/2001/2_AFAR_Les-blocs-peripheriques-des-membres-chez-l-adulte/2_AFAR_Les-blocs-peripheriques-des-membres-chez-l-adulte.md:649 « Agent Bloc au membre supérieur Bloc au membre inférieur lidocaïne adrénalinée 500 mg 700 mg mépipacaïne * 400»",
+   "data/sfar_recommendations/output/chandra/2001/art54_dossieraranninform/art54_dossieraranninform.md:461 « Acte posé Introduction manuelle Famille Encodé 10:35:50 Circuit en O2 pur 10:46:30 10:35:50 Induction 10:46:1»",
+   "data/sfar_recommendations/output/chandra/2004/2_AFAR_Antibiotherapie-probabiliste-des-etats-septiques-graves/2_AFAR_Antibiotherapie-probabiliste-des-etats-septiques-graves.md:281 « Familles Antibiotiques (DCI) Posologie de la première injection Mode d'administration Bêtalactamines Amoxicil»"
+  ],
+  "methodologie_gradation": [
+   "data/sfar_recommendations/output/chandra/2001/Annales-de-Readaptation-et-de-Medecine-Physique_Les-traumatises-craniens-adultes-en-medecine-physique-et-readaptation/Annales-de-Readaptation-et-de-Medecine-Physique_Les-traumatises-craniens-adultes-en-medecine-physique-et-readaptation.md:95 « Niveaux d'efficacité d'une intervention médicale Grade des recommandations I Preuves obtenues par au moins : »",
+   "data/sfar_recommendations/output/chandra/2001/Annales-de-Readaptation-et-de-Medecine-Physique_Les-traumatises-craniens-adultes-en-medecine-physique-et-readaptation/Annales-de-Readaptation-et-de-Medecine-Physique_Les-traumatises-craniens-adultes-en-medecine-physique-et-readaptation.md:128 « Force des recommandations Grade des recommandations Preuves obtenues par au moins : A - une étude pronostique»",
+   "data/sfar_recommendations/output/chandra/2001/cc_pancreatiteaigue20010/cc_pancreatiteaigue20010.md:223 « Grade A : pancréas normal (0pt) Pas de nécrose* (0pt) Grade B : élargissement focal ou diffus du pancréas (1p»"
+  ],
+  "checklist_formulaire": [
+   "data/sfar_recommendations/output/chandra/2001/Dossier-AnesthRea-SFAR/Dossier-AnesthRea-SFAR.md:322 « Médecin anesthésiste réanimateur consultant : : ..... Date de la consultation / / Lieu consultation bloc unit»",
+   "data/sfar_recommendations/output/chandra/2001/Dossier-AnesthRea-SFAR/Dossier-AnesthRea-SFAR.md:339 « Nom de l'opérateur : : ..... Date prévue de l'intervention / / Type d'intervention (pathologie causale) Techn»",
+   "data/sfar_recommendations/output/chandra/2001/Dossier-AnesthRea-SFAR/Dossier-AnesthRea-SFAR.md:363 « Circonstances de l'anesthésie Programmé Non programmé Estomac plein Garde Urgence Ambulatoire »"
+  ],
+  "synthese_etudes": [
+   "data/sfar_recommendations/output/chandra/2003/2b_AFAR_Texte-Long_/2b_AFAR_Texte-Long_.md:43 « Niveau I Étude randomisée avec un faible risque de faux positifs ( \\alpha ) et de faux négatifs ( \\beta = 5 à»",
+   "data/sfar_recommendations/output/chandra/2003/2b_AFAR_Texte-Long_/2b_AFAR_Texte-Long_.md:69 « A Deux (ou plus) études de niveau I B Une étude de niveau I C Étude(s) de niveau II D Une étude (ou plus) de »",
+   "data/sfar_recommendations/output/chandra/2006/2_AFAR_Prise-en-charge-initiale-des-etats-septiques-graves-de-ladulte-et-de-lenfant/2_AFAR_Prise-en-charge-initiale-des-etats-septiques-graves-de-ladulte-et-de-lenfant.md:104 « Étude [Réf.] Prévalence en réanimation Estimation rapportée à la population b p. 100 000 (IC 95 %) Prévalence»"
+  ],
+  "encadre_recommandation": [
+   "data/sfar_recommendations/output/chandra/2006/2a_SFAR_texte-court_Ventilation-Non-Invasive-au-cours-del-insuffisance-respiratoire-aigue/2a_SFAR_texte-court_Ventilation-Non-Invasive-au-cours-del-insuffisance-respiratoire-aigue.md:52 « Tableau 2 – Niveaux de recommandation pour les indications de la VNI Intérêt certain Il faut faire (G1+) Déco»",
+   "data/sfar_recommendations/output/chandra/2006/2b_HAS_TEXTE-LONG_Prise-en-charge-de-linfarctus-du-myocarde/2b_HAS_TEXTE-LONG_Prise-en-charge-de-linfarctus-du-myocarde.md:1006 « 1. Sur un patient monitoré (scope, PNI, SpO 2 ), placer les électrodes : • antérieure : parasternale gauche, »",
+   "data/sfar_recommendations/output/chandra/2014/2_HAS_transfusion_de_globules_rouges_homologues_-_produits_indications_alternatives_-_recommandations/2_HAS_transfusion_de_globules_rouges_homologues_-_produits_indications_alternatives_-_recommandations.md:269 « B Il est recommandé de prescrire la transformation « irradiation » des CGR dans les situations suivantes : • »"
+  ]
+ },
+ "continuation_examples": [
+  "data/sfar_recommendations/output/chandra/2001/Dossier-AnesthRea-SFAR/Dossier-AnesthRea-SFAR.md:339 cols=2",
+  "data/sfar_recommendations/output/chandra/2001/Dossier-AnesthRea-SFAR/Dossier-AnesthRea-SFAR.md:560 cols=1",
+  "data/sfar_recommendations/output/chandra/2001/Dossier-AnesthRea-SFAR/Dossier-AnesthRea-SFAR.md:1191 cols=2",
+  "data/sfar_recommendations/output/chandra/2001/Dossier-AnesthRea-SFAR/Dossier-AnesthRea-SFAR.md:2043 cols=4",
+  "data/sfar_recommendations/output/chandra/2001/Dossier-AnesthRea-SFAR/Dossier-AnesthRea-SFAR.md:2102 cols=4"
+ ]
+}

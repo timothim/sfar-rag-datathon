@@ -1,0 +1,282 @@
+{
+ "discovery_entries": 272,
+ "discovery_without_filename": 5,
+ "md_files": 267,
+ "md_unmatched_to_discovery": 0,
+ "discovery_with_md": 267,
+ "pdf_files": 267,
+ "pdf_found_for_md": 267,
+ "pdf_sha_mismatch_vs_discovery": 266,
+ "pdf_lfs_pointers": 267,
+ "lfs_oid_equals_discovery_sha": 266,
+ "by_year_folder": {
+  "2000": 2,
+  "2001": 10,
+  "2002": 4,
+  "2003": 4,
+  "2004": 6,
+  "2005": 5,
+  "2006": 11,
+  "2007": 5,
+  "2008": 8,
+  "2009": 7,
+  "2010": 9,
+  "2011": 4,
+  "2012": 6,
+  "2013": 4,
+  "2014": 8,
+  "2015": 8,
+  "2016": 22,
+  "2017": 11,
+  "2018": 12,
+  "2019": 18,
+  "2020": 6,
+  "2021": 15,
+  "2022": 8,
+  "2023": 5,
+  "2024": 8,
+  "2025": 14,
+  "2026": 25,
+  "unknown": 22
+ },
+ "by_type": {
+  "RFE": 226,
+  "Preconisation": 15,
+  "HAS": 5,
+  "RPP": 21
+ },
+ "by_form": {
+  "texte_principal": 164,
+  "texte_court": 19,
+  "texte_long_argumentaire": 19,
+  "traduction_en": 22,
+  "annexe": 14,
+  "algorithme_figure": 9,
+  "aide_cognitive_fiche": 19,
+  "abrogee": 1
+ },
+ "by_lang": {
+  "fr": 207,
+  "bilingue": 12,
+  "indetermine": 26,
+  "en": 22
+ },
+ "nature_markers_head": {
+  "conference_consensus": 25,
+  "RBP_HAS": 55,
+  "referentiel_guide": 99,
+  "avis_experts_reco_experts": 26,
+  "conference_experts": 22,
+  "RFE_formalisees_experts": 83,
+  "propositions_GIHP": 21,
+  "preconisations": 7,
+  "RPP_pratiques_professionnelles": 21
+ },
+ "no_nature_marker": 69,
+ "distinct_titles": 176,
+ "titles_with_multiple_files": 58,
+ "distinct_landing_urls": 152,
+ "chars_total": 23315154,
+ "approx_tokens_total": 5828685,
+ "chandra_tokens_total": 10109407,
+ "chars_median": 57297,
+ "chars_p10_p90": [
+  6689,
+  191819
+ ],
+ "chars_max": [
+  479229,
+  "data/sfar_recommendations/output/chandra/2026/Reco_ECBU_Argumentaire_04.03.2026_MEL/Reco_ECBU_Argumentaire_04.03.2026_MEL.md"
+ ],
+ "pages_total_chandra": 6825,
+ "tables_total": 2064,
+ "docs_with_tables": 185,
+ "exact_md_duplicates": [],
+ "exact_pdf_duplicates": [
+  [
+   "data/sfar_recommendations/output/chandra/2010/2_AFAR_Urgences-Obstetricales-Extrahospitalieres/2_AFAR_Urgences-Obstetricales-Extrahospitalieres.md",
+   "data/sfar_recommendations/output/chandra/unknown/Urgences-obstetricales-extrahospitalieres/Urgences-obstetricales-extrahospitalieres.md"
+  ],
+  [
+   "data/sfar_recommendations/output/chandra/2010/2a_HAS_texte-court_Delivrance-de-linformation-a-la-personne-sur-son-etat-de-sante/2a_HAS_texte-court_Delivrance-de-linformation-a-la-personne-sur-son-etat-de-sante.md",
+   "data/sfar_recommendations/output/chandra/unknown/recommandations_-_delivrance_de_linformation_a_la_personne_sur_son_etat_de_sante/recommandations_-_delivrance_de_linformation_a_la_personne_sur_son_etat_de_sante.md"
+  ],
+  [
+   "data/sfar_recommendations/output/chandra/2011/2_AFAR_echographie-en-anesthesie-locoregionale/2_AFAR_echographie-en-anesthesie-locoregionale.md",
+   "data/sfar_recommendations/output/chandra/unknown/2_AFAR_echographie-en-anesthesie-locoregionale/2_AFAR_echographie-en-anesthesie-locoregionale.md"
+  ]
+ ],
+ "discovery_sha_duplicates": {
+  "c3717d1a87b72e2144430bc7b12bb28b453acb3bc42a3bbd38b4c8c27911766b": 2,
+  "47ad8572c6368c37f3ed7a22de891bd87d7ca87c2bf30a346d744a3bd29305fb": 2,
+  "a3d9aad7916797eb053a3bae4d04be25603d49a67cffa3240b31a5bac334779f": 2
+ },
+ "near_duplicate_pairs_jacc>=0.5": 12,
+ "containment_pairs>=0.5": 37,
+ "small_docs_lt3000": [
+  [
+   "data/sfar_recommendations/output/chandra/2016/Anti-Tabac-Pour-un-parcours-patient-securise-1/Anti-Tabac-Pour-un-parcours-patient-securise-1.md",
+   1607
+  ],
+  [
+   "data/sfar_recommendations/output/chandra/2016/Anti-Tabac-Pour-un-parcours-patient-securise-1-Sans-fond/Anti-Tabac-Pour-un-parcours-patient-securise-1-Sans-fond.md",
+   1546
+  ],
+  [
+   "data/sfar_recommendations/output/chandra/2016/Anti-Tabac-Pour-un-parcours-patient-securise-2/Anti-Tabac-Pour-un-parcours-patient-securise-2.md",
+   961
+  ],
+  [
+   "data/sfar_recommendations/output/chandra/2016/Anti-Tabac-Pour-un-parcours-patient-securise-2-Sans-fond/Anti-Tabac-Pour-un-parcours-patient-securise-2-Sans-fond.md",
+   942
+  ],
+  [
+   "data/sfar_recommendations/output/chandra/2021/Examen%20clinique%20Visio%20CAMR%20mars%202021/Examen%20clinique%20Visio%20CAMR%20mars%202021.md",
+   2606
+  ],
+  [
+   "data/sfar_recommendations/output/chandra/2021/Facturation%20TLC%20CAMR%20mars%202021/Facturation%20TLC%20CAMR%20mars%202021.md",
+   2557
+  ],
+  [
+   "data/sfar_recommendations/output/chandra/2021/fonctionnalites%20des%20plateformes%20de%20TLC%20CAMR%20mars%202021/fonctionnalites%20des%20plateformes%20de%20TLC%20CAMR%20mars%202021.md",
+   2116
+  ],
+  [
+   "data/sfar_recommendations/output/chandra/2026/1_algorithme-difficultes_previsibles_gestion_voies_aeriennes_adulte_au_bloc/1_algorithme-difficultes_previsibles_gestion_voies_aeriennes_adulte_au_bloc.md",
+   1230
+  ],
+  [
+   "data/sfar_recommendations/output/chandra/2026/2_algorithme_gestion_des_voies_aeriennes_adulte___strategie_en_apnee/2_algorithme_gestion_des_voies_aeriennes_adulte___strategie_en_apnee.md",
+   1922
+  ],
+  [
+   "data/sfar_recommendations/output/chandra/2026/5_aide_cognitive_a_la_realisation_dun_briefing/5_aide_cognitive_a_la_realisation_dun_briefing.md",
+   1525
+  ],
+  [
+   "data/sfar_recommendations/output/chandra/2026/6_aide_cognitive_a_la_realisation_dun_debriefing/6_aide_cognitive_a_la_realisation_dun_debriefing.md",
+   2121
+  ],
+  [
+   "data/sfar_recommendations/output/chandra/2026/ACAR-Intubation-difficile-en-apnee-au-bloc/ACAR-Intubation-difficile-en-apnee-au-bloc.md",
+   2000
+  ],
+  [
+   "data/sfar_recommendations/output/chandra/unknown/GIHP%20thrombose%20post%20vaccination%20/GIHP%20thrombose%20post%20vaccination%20.md",
+   1395
+  ],
+  [
+   "data/sfar_recommendations/output/chandra/unknown/Prise%20en%20charge%20en%20urgence%20Thromboses%20post%20vaccination%20anticovid%20SFNV%20SFMV%20GFHT%2028%20avril/Prise%20en%20charge%20en%20urgence%20Thromboses%20post%20vaccination%20anticovid%20SFNV%20SFMV%20GFHT%2028%20avril.md",
+   1604
+  ]
+ ],
+ "page_mismatch_pdf_vs_chandra": [],
+ "low_density_main_texts": [],
+ "docs_with_low_token_pages": 15,
+ "low_token_pages_total": 21,
+ "missing_discovery_fields_all272": {
+  "title": 0,
+  "type": 0,
+  "year": 22,
+  "discipline": 11,
+  "subdomain": 58,
+  "landing_url": 29,
+  "filename": 5,
+  "sha256": 5
+ },
+ "missing_fields_267_loaded": {
+  "year": 22,
+  "discipline": 11,
+  "subdomain": 57,
+  "landing_url": 28
+ },
+ "tokens_by_year": {
+  "2000": 8787,
+  "2001": 122599,
+  "2002": 35108,
+  "2003": 54300,
+  "2004": 145677,
+  "2005": 88573,
+  "2006": 160602,
+  "2007": 58814,
+  "2008": 145530,
+  "2009": 93420,
+  "2010": 224637,
+  "2011": 32137,
+  "2012": 73997,
+  "2013": 148692,
+  "2014": 202976,
+  "2015": 137255,
+  "2016": 344263,
+  "2017": 236629,
+  "2018": 314181,
+  "2019": 294140,
+  "2020": 98972,
+  "2021": 219579,
+  "2022": 338161,
+  "2023": 204035,
+  "2024": 270351,
+  "2025": 667646,
+  "2026": 719729,
+  "unknown": 387895
+ }
+}
+
+Top near-duplicates / containment:
+  J=1.00 C=1.00  diagnostic-et-prise-ne-charge-dune-TIH  <->  propositions-tih-gihp-gfht-sfar%20
+  J=0.99 C=1.00  2a_HAS_texte-court_Delivrance-de-linformation-a-la-pers  <->  recommandations_-_delivrance_de_linformation_a_la_perso
+  J=0.99 C=1.00  2_AFAR_echographie-en-anesthesie-locoregionale  <->  2_AFAR_echographie-en-anesthesie-locoregionale
+  J=0.98 C=0.99  rfe-gestion-des-agents-antiplaquettaires  <->  Gestion%20perioperatoire%20des%20patients%20sous%20AAP%
+  J=0.95 C=0.98  2_AFAR_Urgences-Obstetricales-Extrahospitalieres  <->  Urgences-obstetricales-extrahospitalieres
+  J=0.94 C=0.97  RPP%20SFAR%20COVID_Version%20Avril%202022_finale%20sans  <->  RPP-SFAR-COVID_Version-Avril-2022_abrogee-010723
+  J=0.04 C=0.96  Reco_ECBU_Synthese_04.03.2026_MEL  <->  Tableau-de-synthese_04.03.2026_MEL
+  J=0.35 C=0.95  Version-courte  <->  Version-longue
+  J=0.01 C=0.94  Reco_ECBU_Argumentaire_04.03.2026_MEL  <->  Tableau-de-synthese_04.03.2026_MEL
+  J=0.60 C=0.93  RBP_-SFAR_AFEF_ACHBPT_RESECTION_-HEPATIQUE_-ARGUMENTAIR  <->  RESECTION_-HEPATIQUE_-RECOMMANDATIONS_MEL
+  J=0.83 C=0.93  Reactualisation-GIHP_AOD_actes-programmes_Septembre-201  <->  Gestion%20perioperatoire%20des%20patients%20sous%20AOD%
+  J=0.22 C=0.93  rpp-hyperthermie-maligne  <->  rpp-hyperthermie-malinge-fiches-synthese
+  J=0.09 C=0.91  RFE_TSM_2020  <->  RFE_TSM_Fiches_pratiques
+  J=0.62 C=0.91  gestion_voies_aeriennes_argumentaire_mel_vd  <->  gestion_voies_aeriennes_recommandations_mel_vd
+  J=0.01 C=0.90  7_certificat_de_voies_aeriennes_difficiles  <->  gestion_voies_aeriennes_recommandations_mel_vd
+  J=0.77 C=0.88  Antibioprophylaxie-version-2017-CRC_CA_MODIF  <->  Antibioprophylaxie-RFE-mise-a-jour-2018
+  J=0.03 C=0.87  Aides-cognitives-Organisation-de-la-prise-en-charge-des  <->  RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-ARGUMENTAIR
+  J=0.27 C=0.84  argu_sepsis  <->  reco_sepsis
+  J=0.14 C=0.84  RecoCIAFU_ECBU_Note-de-cadrage_10.10.2024  <->  Reco_ECBU_Argumentaire_04.03.2026_MEL
+  J=0.71 C=0.84  Anti-Tabac-Pour-un-parcours-patient-securise-1  <->  Anti-Tabac-Pour-un-parcours-patient-securise-1-Sans-fon
+  J=0.38 C=0.84  RFE-analgesie-obstetricale-texte-court  <->  RFE-analgesie-obstetricale-texte-long
+  J=0.22 C=0.83  Reco_ECBU_Argumentaire_04.03.2026_MEL  <->  Reco_ECBU_Synthese_04.03.2026_MEL
+  J=0.01 C=0.80  2_algorithme_gestion_des_voies_aeriennes_adulte___strat  <->  gestion_voies_aeriennes_recommandations_mel_vd
+  J=0.20 C=0.72  texte-court-preco-erreurs-med-2016-SFAR-SFPC-version-fi  <->  texte-long-Preconisations-2016-erreurs-med-SFAR-SFPC-ve
+  J=0.04 C=0.71  fiche_sepsis_aval  <->  reco_sepsis
+  J=0.01 C=0.71  6_aide_cognitive_a_la_realisation_dun_debriefing  <->  gestion_voies_aeriennes_recommandations_mel_vd
+  J=0.02 C=0.68  Figures-RFE-Nutrition  <->  Version-longue
+  J=0.06 C=0.68  Figures-RFE-Nutrition  <->  Version-courte
+  J=0.50 C=0.67  Anti-Tabac-Pour-un-parcours-patient-securise-2  <->  Anti-Tabac-Pour-un-parcours-patient-securise-2-Sans-fon
+  J=0.01 C=0.65  2_algorithme_gestion_des_voies_aeriennes_adulte___strat  <->  gestion_voies_aeriennes_argumentaire_mel_vd
+  J=0.02 C=0.65  4_cricothyroidotomie_par_technique_sms  <->  gestion_voies_aeriennes_recommandations_mel_vd
+  J=0.20 C=0.64  2a_HAS_TEXTE-COURT_Prise-en-charge-de-linfarctus-du-myo  <->  2b_HAS_TEXTE-LONG_Prise-en-charge-de-linfarctus-du-myoc
+  J=0.01 C=0.62  7_certificat_de_voies_aeriennes_difficiles  <->  gestion_voies_aeriennes_argumentaire_mel_vd
+  J=0.03 C=0.61  rfe-trauma-abdominal-fiche-synthese  <->  rfe-trauma-abdominale
+  J=0.02 C=0.60  Aides-cognitives-Organisation-de-la-prise-en-charge-des  <->  RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-ARGUMENTAIR
+  J=0.04 C=0.58  fiche_sepsis_amont  <->  reco_sepsis
+  J=0.08 C=0.54  preverreurmedic_recos  <->  texte-long-Preconisations-2016-erreurs-med-SFAR-SFPC-ve
+  J=0.02 C=0.49  rfe-trauma-vertebro-medulaire  <->  rfe-vertebro-medullaire-fiche-synthese
+  J=0.04 C=0.47  2a_HAS_texte-court_Delivrance-de-linformation-a-la-pers  <->  2b_HAS_Texte_Long-Delivrance-de-l-information-a-la-pers
+  J=0.04 C=0.47  2b_HAS_Texte_Long-Delivrance-de-l-information-a-la-pers  <->  recommandations_-_delivrance_de_linformation_a_la_perso
+  J=0.22 C=0.47  RecoCIAFU_ECBU_Note-de-cadrage_10.10.2024  <->  Reco_ECBU_Synthese_04.03.2026_MEL
+  J=0.27 C=0.46  Pneumonies-associees-au-soins-de-reanimation-ANREA  <->  RFE-Hospital-acquired-pneumonia-in-ICU
+  J=0.27 C=0.46  RFE-ANREA-Prise-en-charge-des-traumatises-craniens-grav  <->  RFE-Management-of-severe-traumatic-brain-injury
+  J=0.11 C=0.43  1-2a_SFAR_Texte-court-Controle-des-voies-aeriennes-en-a  <->  2b_AFAR_Texte-Long_
+  J=0.24 C=0.42  2_SFAR_HyperthermieMaligne  <->  rpp-hyperthermie-maligne
+  J=0.03 C=0.42  Algorithmes_RFE-gestion-de-lanticoagulation-dans-un-con  <->  RFE-gestion-de-lanticoagulation-dans-un-contexte-durgen
+  J=0.02 C=0.42  RFE%20pr%C3%A9-%C3%A9clampsie_finale  <->  RFE-pre-eclampsie_Fiches-pratiques
+  J=0.25 C=0.41  ANREA_132_RFE-IRA-  <->  RFE-IRA-anglais
+  J=0.01 C=0.41  argu_sepsis  <->  fiche_sepsis_aval
+  J=0.01 C=0.40  argu_sepsis  <->  fiche_sepsis_amont
+  J=0.22 C=0.40  art54_dossieraranncomplet  <->  art54_dossierarannpre
+  J=0.15 C=0.39  Anti-Tabac-Pour-un-parcours-patient-securise-1  <->  Anti-Tabac-Pour-un-parcours-patient-securise-2
+  J=0.19 C=0.34  2_AFAR_Traumatisme-thoracique-_prise-en-charge-des-48-p  <->  RFE-Chest-trauma-First-48-hours-management
+  J=0.17 C=0.33  Tracheotomie-en-reanimation-ANREA  <->  Tracheotomy-in-the-ICU-ACCPM
+  J=0.15 C=0.29  management-of-antiplatelet-therapy-for-non-elective-inv  <->  Gestion%20perioperatoire%20des%20patients%20sous%20AAP%
+  J=0.15 C=0.29  management-of-antiplatelet-therapy-for-non-elective-inv  <->  rfe-gestion-des-agents-antiplaquettaires

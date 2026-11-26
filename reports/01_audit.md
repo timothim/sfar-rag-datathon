@@ -60,7 +60,28 @@ Code mort (PgVectorStore jamais appelé, `LIMIT` sans `ORDER BY`), ordre en U du
 
 ## Données
 
-*(section complétée à réception de `reports/agents/audit_donnees.md`)*
+Source : `reports/agents/audit_donnees.md` (scripts relançables : `reports/agents/data_audit_scripts/run_all.sh`).
+
+- **Taille réelle.** 267 fichiers Markdown, 264 après déduplication, mais **176 titres distincts et 202 textes principaux en français** : le reste est fait de traductions, d'argumentaires, d'annexes et de textes courts. Le corpus fait environ 5,8 M tokens (médiane ~14 k par fichier). « 264 recommandations » est trompeur.
+- **OCR fidèle, défauts réparables.** Sur la seule comparaison possible au PDF (les PDF de `pdfs/` sont des pointeurs Git LFS jamais tirés), 99,6 % des mots et 99,3 % des 881 posologies sont retrouvés. Défauts systématiques :
+  - 4 133 formules LaTeX et 586 balises `<math>` ;
+  - 2 051 entités HTML (`&gt;` dans les doses) ;
+  - 1 707 titres collés au texte ;
+  - 1 130 descriptions d'images générées en anglais ;
+  - 161 organigrammes Mermaid ;
+  - des octets NUL dans 2 documents.
+
+  Il n'y a aucune marque de page : on ne peut pas citer une page depuis le Markdown.
+- **La structure GRADE est exploitable, mais pas partout.** Le format SFAR complet (champs, recommandations cotées, accord) couvre 28 % des textes principaux, et 44 % au sens large. La part passe d'environ 4–32 % avant 2015 à 71 % en 2015–2019 et 87 % en 2023–2026 ; 31 % restent narratifs.
+
+  Un prototype d'extraction par regex sort 2 355 recommandations dans 89 documents. L'écart avec le nombre annoncé par le document est inférieur à 10 % pour 25 documents sur 45, et 27 des 30 unités vérifiées sont correctes.
+
+  Piège : dans le gabarit HAS 2024–2026, « Il est recommandé » peut être coté GRADE 2 (171 cas). La force se lit dans la cellule de cotation, pas dans la formulation.
+- **Éditions.** Les 44 éditions remplacées sont confirmées, mais seulement 10 sont attestées par le texte et 6 sont douteuses (sepsis, AVK, recommandation BJA). Il y a 2 erreurs : Urgences obstétricales 2010 reste en vigueur malgré la RPP 2022, et une RPP COVID abrogée reste active par son quasi-doublon. L'année de `discovery.json` est parfois la date de mise en ligne.
+- **Domaines.** L'imputation par sous-chaîne ajoute de faux domaines à 102 documents (« rac » dans « caractéristiques »).
+- **Tableaux.** 2 060 tableaux, tous en HTML. 49 % n'ont pas d'en-tête, mais seulement ~16 % sont des suites de pages (le README dit 49 %). 452 sont des encadrés de recommandation. Les références font 19–26 % du texte.
+
+**Conséquences génériques pour le plan :** nettoyage OCR déterministe (entités, LaTeX simple, NUL, titres collés) ; unités « recommandation » extraites pour les ~90 documents structurés, avec repli sur les chunks ailleurs ; force GRADE lue dans la cotation ; lignées d'éditions recalculées et les 2 erreurs corrigées ; domaines par mots entiers.
 
 ## Plan d'amélioration priorisé
 

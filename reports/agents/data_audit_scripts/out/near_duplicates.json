@@ -1,0 +1,450 @@
+[
+ {
+  "a": "data/sfar_recommendations/output/chandra/2019/diagnostic-et-prise-ne-charge-dune-TIH/diagnostic-et-prise-ne-charge-dune-TIH.md",
+  "b": "data/sfar_recommendations/output/chandra/2019/propositions-tih-gihp-gfht-sfar%20/propositions-tih-gihp-gfht-sfar%20.md",
+  "jaccard": 0.999,
+  "containment_min": 1.0,
+  "chars_a": 130840,
+  "chars_b": 130821
+ },
+ {
+  "a": "data/sfar_recommendations/output/chandra/2010/2a_HAS_texte-court_Delivrance-de-linformation-a-la-personne-sur-son-etat-de-sante/2a_HAS_texte-court_Delivrance-de-linformation-a-la-personne-sur-son-etat-de-sante.md",
+  "b": "data/sfar_recommendations/output/chandra/unknown/recommandations_-_delivrance_de_linformation_a_la_personne_sur_son_etat_de_sante/recommandations_-_delivrance_de_linformation_a_la_personne_sur_son_etat_de_sante.md",
+  "jaccard": 0.993,
+  "containment_min": 0.997,
+  "chars_a": 49122,
+  "chars_b": 49128
+ },
+ {
+  "a": "data/sfar_recommendations/output/chandra/2011/2_AFAR_echographie-en-anesthesie-locoregionale/2_AFAR_echographie-en-anesthesie-locoregionale.md",
+  "b": "data/sfar_recommendations/output/chandra/unknown/2_AFAR_echographie-en-anesthesie-locoregionale/2_AFAR_echographie-en-anesthesie-locoregionale.md",
+  "jaccard": 0.993,
+  "containment_min": 0.997,
+  "chars_a": 9898,
+  "chars_b": 9898
+ },
+ {
+  "a": "data/sfar_recommendations/output/chandra/2018/rfe-gestion-des-agents-antiplaquettaires/rfe-gestion-des-agents-antiplaquettaires.md",
+  "b": "data/sfar_recommendations/output/chandra/2021/Gestion%20perioperatoire%20des%20patients%20sous%20AAP%20en%20urgence/Gestion%20perioperatoire%20des%20patients%20sous%20AAP%20en%20urgence.md",
+  "jaccard": 0.983,
+  "containment_min": 0.994,
+  "chars_a": 113298,
+  "chars_b": 114130
+ },
+ {
+  "a": "data/sfar_recommendations/output/chandra/2010/2_AFAR_Urgences-Obstetricales-Extrahospitalieres/2_AFAR_Urgences-Obstetricales-Extrahospitalieres.md",
+  "b": "data/sfar_recommendations/output/chandra/unknown/Urgences-obstetricales-extrahospitalieres/Urgences-obstetricales-extrahospitalieres.md",
+  "jaccard": 0.955,
+  "containment_min": 0.977,
+  "chars_a": 74116,
+  "chars_b": 73884
+ },
+ {
+  "a": "data/sfar_recommendations/output/chandra/2022/RPP%20SFAR%20COVID_Version%20Avril%202022_finale%20sans%20marque/RPP%20SFAR%20COVID_Version%20Avril%202022_finale%20sans%20marque.md",
+  "b": "data/sfar_recommendations/output/chandra/2022/RPP-SFAR-COVID_Version-Avril-2022_abrogee-010723/RPP-SFAR-COVID_Version-Avril-2022_abrogee-010723.md",
+  "jaccard": 0.935,
+  "containment_min": 0.967,
+  "chars_a": 233151,
+  "chars_b": 232756
+ },
+ {
+  "a": "data/sfar_recommendations/output/chandra/2026/Reco_ECBU_Synthese_04.03.2026_MEL/Reco_ECBU_Synthese_04.03.2026_MEL.md",
+  "b": "data/sfar_recommendations/output/chandra/2026/Tableau-de-synthese_04.03.2026_MEL/Tableau-de-synthese_04.03.2026_MEL.md",
+  "jaccard": 0.042,
+  "containment_min": 0.963,
+  "chars_a": 113331,
+  "chars_b": 5336
+ },
+ {
+  "a": "data/sfar_recommendations/output/chandra/2026/Version-courte/Version-courte.md",
+  "b": "data/sfar_recommendations/output/chandra/2026/Version-longue/Version-longue.md",
+  "jaccard": 0.347,
+  "containment_min": 0.949,
+  "chars_a": 118921,
+  "chars_b": 351411
+ },
+ {
+  "a": "data/sfar_recommendations/output/chandra/2026/Reco_ECBU_Argumentaire_04.03.2026_MEL/Reco_ECBU_Argumentaire_04.03.2026_MEL.md",
+  "b": "data/sfar_recommendations/output/chandra/2026/Tableau-de-synthese_04.03.2026_MEL/Tableau-de-synthese_04.03.2026_MEL.md",
+  "jaccard": 0.011,
+  "containment_min": 0.938,
+  "chars_a": 479229,
+  "chars_b": 5336
+ },
+ {
+  "a": "data/sfar_recommendations/output/chandra/2025/RBP_-SFAR_AFEF_ACHBPT_RESECTION_-HEPATIQUE_-ARGUMENTAIRE_VF-1-AB-modif-ok/RBP_-SFAR_AFEF_ACHBPT_RESECTION_-HEPATIQUE_-ARGUMENTAIRE_VF-1-AB-modif-ok.md",
+  "b": "data/sfar_recommendations/output/chandra/2025/RESECTION_-HEPATIQUE_-RECOMMANDATIONS_MEL/RESECTION_-HEPATIQUE_-RECOMMANDATIONS_MEL.md",
+  "jaccard": 0.6,
+  "containment_min": 0.933,
+  "chars_a": 417251,
+  "chars_b": 191819
+ },
+ {
+  "a": "data/sfar_recommendations/output/chandra/2015/Reactualisation-GIHP_AOD_actes-programmes_Septembre-20151/Reactualisation-GIHP_AOD_actes-programmes_Septembre-20151.md",
+  "b": "data/sfar_recommendations/output/chandra/2021/Gestion%20perioperatoire%20des%20patients%20sous%20AOD%20pour%20un%20acte%20programm%C3%A9/Gestion%20perioperatoire%20des%20patients%20sous%20AOD%20pour%20un%20acte%20programm%C3%A9.md",
+  "jaccard": 0.834,
+  "containment_min": 0.929,
+  "chars_a": 26556,
+  "chars_b": 24472
+ },
+ {
+  "a": "data/sfar_recommendations/output/chandra/2019/rpp-hyperthermie-maligne/rpp-hyperthermie-maligne.md",
+  "b": "data/sfar_recommendations/output/chandra/2019/rpp-hyperthermie-malinge-fiches-synthese/rpp-hyperthermie-malinge-fiches-synthese.md",
+  "jaccard": 0.224,
+  "containment_min": 0.927,
+  "chars_a": 24242,
+  "chars_b": 5962
+ },
+ {
+  "a": "data/sfar_recommendations/output/chandra/2020/RFE_TSM_2020/RFE_TSM_2020.md",
+  "b": "data/sfar_recommendations/output/chandra/2020/RFE_TSM_Fiches_pratiques/RFE_TSM_Fiches_pratiques.md",
+  "jaccard": 0.086,
+  "containment_min": 0.913,
+  "chars_a": 141581,
+  "chars_b": 18095
+ },
+ {
+  "a": "data/sfar_recommendations/output/chandra/2026/gestion_voies_aeriennes_argumentaire_mel_vd/gestion_voies_aeriennes_argumentaire_mel_vd.md",
+  "b": "data/sfar_recommendations/output/chandra/2026/gestion_voies_aeriennes_recommandations_mel_vd/gestion_voies_aeriennes_recommandations_mel_vd.md",
+  "jaccard": 0.625,
+  "containment_min": 0.906,
+  "chars_a": 222172,
+  "chars_b": 160585
+ },
+ {
+  "a": "data/sfar_recommendations/output/chandra/2026/7_certificat_de_voies_aeriennes_difficiles/7_certificat_de_voies_aeriennes_difficiles.md",
+  "b": "data/sfar_recommendations/output/chandra/2026/gestion_voies_aeriennes_recommandations_mel_vd/gestion_voies_aeriennes_recommandations_mel_vd.md",
+  "jaccard": 0.01,
+  "containment_min": 0.901,
+  "chars_a": 3554,
+  "chars_b": 160585
+ },
+ {
+  "a": "data/sfar_recommendations/output/chandra/2017/Antibioprophylaxie-version-2017-CRC_CA_MODIF/Antibioprophylaxie-version-2017-CRC_CA_MODIF.md",
+  "b": "data/sfar_recommendations/output/chandra/2018/Antibioprophylaxie-RFE-mise-a-jour-2018/Antibioprophylaxie-RFE-mise-a-jour-2018.md",
+  "jaccard": 0.772,
+  "containment_min": 0.878,
+  "chars_a": 95053,
+  "chars_b": 99146
+ },
+ {
+  "a": "data/sfar_recommendations/output/chandra/2026/Aides-cognitives-Organisation-de-la-prise-en-charge-des-urgences-vitales-intra-hospitalieres-ENFANT/Aides-cognitives-Organisation-de-la-prise-en-charge-des-urgences-vitales-intra-hospitalieres-ENFANT.md",
+  "b": "data/sfar_recommendations/output/chandra/2026/RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-ARGUMENTAIRE_CD_20260903_FIN/RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-ARGUMENTAIRE_CD_20260903_FIN.md",
+  "jaccard": 0.029,
+  "containment_min": 0.87,
+  "chars_a": 10630,
+  "chars_b": 263146
+ },
+ {
+  "a": "data/sfar_recommendations/output/chandra/2025/argu_sepsis/argu_sepsis.md",
+  "b": "data/sfar_recommendations/output/chandra/2025/reco_sepsis/reco_sepsis.md",
+  "jaccard": 0.265,
+  "containment_min": 0.844,
+  "chars_a": 411527,
+  "chars_b": 140261
+ },
+ {
+  "a": "data/sfar_recommendations/output/chandra/2026/RecoCIAFU_ECBU_Note-de-cadrage_10.10.2024/RecoCIAFU_ECBU_Note-de-cadrage_10.10.2024.md",
+  "b": "data/sfar_recommendations/output/chandra/2026/Reco_ECBU_Argumentaire_04.03.2026_MEL/Reco_ECBU_Argumentaire_04.03.2026_MEL.md",
+  "jaccard": 0.14,
+  "containment_min": 0.843,
+  "chars_a": 72104,
+  "chars_b": 479229
+ },
+ {
+  "a": "data/sfar_recommendations/output/chandra/2016/Anti-Tabac-Pour-un-parcours-patient-securise-1/Anti-Tabac-Pour-un-parcours-patient-securise-1.md",
+  "b": "data/sfar_recommendations/output/chandra/2016/Anti-Tabac-Pour-un-parcours-patient-securise-1-Sans-fond/Anti-Tabac-Pour-un-parcours-patient-securise-1-Sans-fond.md",
+  "jaccard": 0.707,
+  "containment_min": 0.839,
+  "chars_a": 1607,
+  "chars_b": 1546
+ },
+ {
+  "a": "data/sfar_recommendations/output/chandra/2025/RFE-analgesie-obstetricale-texte-court/RFE-analgesie-obstetricale-texte-court.md",
+  "b": "data/sfar_recommendations/output/chandra/2025/RFE-analgesie-obstetricale-texte-long/RFE-analgesie-obstetricale-texte-long.md",
+  "jaccard": 0.384,
+  "containment_min": 0.837,
+  "chars_a": 120326,
+  "chars_b": 345738
+ },
+ {
+  "a": "data/sfar_recommendations/output/chandra/2026/Reco_ECBU_Argumentaire_04.03.2026_MEL/Reco_ECBU_Argumentaire_04.03.2026_MEL.md",
+  "b": "data/sfar_recommendations/output/chandra/2026/Reco_ECBU_Synthese_04.03.2026_MEL/Reco_ECBU_Synthese_04.03.2026_MEL.md",
+  "jaccard": 0.22,
+  "containment_min": 0.828,
+  "chars_a": 479229,
+  "chars_b": 113331
+ },
+ {
+  "a": "data/sfar_recommendations/output/chandra/2026/2_algorithme_gestion_des_voies_aeriennes_adulte___strategie_en_apnee/2_algorithme_gestion_des_voies_aeriennes_adulte___strategie_en_apnee.md",
+  "b": "data/sfar_recommendations/output/chandra/2026/gestion_voies_aeriennes_recommandations_mel_vd/gestion_voies_aeriennes_recommandations_mel_vd.md",
+  "jaccard": 0.01,
+  "containment_min": 0.804,
+  "chars_a": 1922,
+  "chars_b": 160585
+ },
+ {
+  "a": "data/sfar_recommendations/output/chandra/2016/texte-court-preco-erreurs-med-2016-SFAR-SFPC-version-finale-25-oct-2016/texte-court-preco-erreurs-med-2016-SFAR-SFPC-version-finale-25-oct-2016.md",
+  "b": "data/sfar_recommendations/output/chandra/2016/texte-long-Preconisations-2016-erreurs-med-SFAR-SFPC-version-finale-25-oct-2016/texte-long-Preconisations-2016-erreurs-med-SFAR-SFPC-version-finale-25-oct-2016.md",
+  "jaccard": 0.205,
+  "containment_min": 0.723,
+  "chars_a": 34728,
+  "chars_b": 119987
+ },
+ {
+  "a": "data/sfar_recommendations/output/chandra/2025/fiche_sepsis_aval/fiche_sepsis_aval.md",
+  "b": "data/sfar_recommendations/output/chandra/2025/reco_sepsis/reco_sepsis.md",
+  "jaccard": 0.042,
+  "containment_min": 0.713,
+  "chars_a": 6797,
+  "chars_b": 140261
+ },
+ {
+  "a": "data/sfar_recommendations/output/chandra/2026/6_aide_cognitive_a_la_realisation_dun_debriefing/6_aide_cognitive_a_la_realisation_dun_debriefing.md",
+  "b": "data/sfar_recommendations/output/chandra/2026/gestion_voies_aeriennes_recommandations_mel_vd/gestion_voies_aeriennes_recommandations_mel_vd.md",
+  "jaccard": 0.011,
+  "containment_min": 0.712,
+  "chars_a": 2121,
+  "chars_b": 160585
+ },
+ {
+  "a": "data/sfar_recommendations/output/chandra/2026/Figures-RFE-Nutrition/Figures-RFE-Nutrition.md",
+  "b": "data/sfar_recommendations/output/chandra/2026/Version-longue/Version-longue.md",
+  "jaccard": 0.023,
+  "containment_min": 0.684,
+  "chars_a": 13800,
+  "chars_b": 351411
+ },
+ {
+  "a": "data/sfar_recommendations/output/chandra/2026/Figures-RFE-Nutrition/Figures-RFE-Nutrition.md",
+  "b": "data/sfar_recommendations/output/chandra/2026/Version-courte/Version-courte.md",
+  "jaccard": 0.06,
+  "containment_min": 0.682,
+  "chars_a": 13800,
+  "chars_b": 118921
+ },
+ {
+  "a": "data/sfar_recommendations/output/chandra/2016/Anti-Tabac-Pour-un-parcours-patient-securise-2/Anti-Tabac-Pour-un-parcours-patient-securise-2.md",
+  "b": "data/sfar_recommendations/output/chandra/2016/Anti-Tabac-Pour-un-parcours-patient-securise-2-Sans-fond/Anti-Tabac-Pour-un-parcours-patient-securise-2-Sans-fond.md",
+  "jaccard": 0.5,
+  "containment_min": 0.669,
+  "chars_a": 961,
+  "chars_b": 942
+ },
+ {
+  "a": "data/sfar_recommendations/output/chandra/2026/2_algorithme_gestion_des_voies_aeriennes_adulte___strategie_en_apnee/2_algorithme_gestion_des_voies_aeriennes_adulte___strategie_en_apnee.md",
+  "b": "data/sfar_recommendations/output/chandra/2026/gestion_voies_aeriennes_argumentaire_mel_vd/gestion_voies_aeriennes_argumentaire_mel_vd.md",
+  "jaccard": 0.006,
+  "containment_min": 0.654,
+  "chars_a": 1922,
+  "chars_b": 222172
+ },
+ {
+  "a": "data/sfar_recommendations/output/chandra/2026/4_cricothyroidotomie_par_technique_sms/4_cricothyroidotomie_par_technique_sms.md",
+  "b": "data/sfar_recommendations/output/chandra/2026/gestion_voies_aeriennes_recommandations_mel_vd/gestion_voies_aeriennes_recommandations_mel_vd.md",
+  "jaccard": 0.023,
+  "containment_min": 0.645,
+  "chars_a": 4275,
+  "chars_b": 160585
+ },
+ {
+  "a": "data/sfar_recommendations/output/chandra/2006/2a_HAS_TEXTE-COURT_Prise-en-charge-de-linfarctus-du-myocarde/2a_HAS_TEXTE-COURT_Prise-en-charge-de-linfarctus-du-myocarde.md",
+  "b": "data/sfar_recommendations/output/chandra/2006/2b_HAS_TEXTE-LONG_Prise-en-charge-de-linfarctus-du-myocarde/2b_HAS_TEXTE-LONG_Prise-en-charge-de-linfarctus-du-myocarde.md",
+  "jaccard": 0.203,
+  "containment_min": 0.64,
+  "chars_a": 42264,
+  "chars_b": 113943
+ },
+ {
+  "a": "data/sfar_recommendations/output/chandra/2026/7_certificat_de_voies_aeriennes_difficiles/7_certificat_de_voies_aeriennes_difficiles.md",
+  "b": "data/sfar_recommendations/output/chandra/2026/gestion_voies_aeriennes_argumentaire_mel_vd/gestion_voies_aeriennes_argumentaire_mel_vd.md",
+  "jaccard": 0.005,
+  "containment_min": 0.621,
+  "chars_a": 3554,
+  "chars_b": 222172
+ },
+ {
+  "a": "data/sfar_recommendations/output/chandra/2019/rfe-trauma-abdominal-fiche-synthese/rfe-trauma-abdominal-fiche-synthese.md",
+  "b": "data/sfar_recommendations/output/chandra/2019/rfe-trauma-abdominale/rfe-trauma-abdominale.md",
+  "jaccard": 0.031,
+  "containment_min": 0.614,
+  "chars_a": 4204,
+  "chars_b": 77806
+ },
+ {
+  "a": "data/sfar_recommendations/output/chandra/2026/Aides-cognitives-Organisation-de-la-prise-en-charge-des-urgences-vitales-intra-hospitalieres-ADULTE/Aides-cognitives-Organisation-de-la-prise-en-charge-des-urgences-vitales-intra-hospitalieres-ADULTE.md",
+  "b": "data/sfar_recommendations/output/chandra/2026/RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-ARGUMENTAIRE_CD_20260903_FIN/RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-ARGUMENTAIRE_CD_20260903_FIN.md",
+  "jaccard": 0.019,
+  "containment_min": 0.604,
+  "chars_a": 7361,
+  "chars_b": 263146
+ },
+ {
+  "a": "data/sfar_recommendations/output/chandra/2025/fiche_sepsis_amont/fiche_sepsis_amont.md",
+  "b": "data/sfar_recommendations/output/chandra/2025/reco_sepsis/reco_sepsis.md",
+  "jaccard": 0.036,
+  "containment_min": 0.58,
+  "chars_a": 10595,
+  "chars_b": 140261
+ },
+ {
+  "a": "data/sfar_recommendations/output/chandra/2006/preverreurmedic_recos/preverreurmedic_recos.md",
+  "b": "data/sfar_recommendations/output/chandra/2016/texte-long-Preconisations-2016-erreurs-med-SFAR-SFPC-version-finale-25-oct-2016/texte-long-Preconisations-2016-erreurs-med-SFAR-SFPC-version-finale-25-oct-2016.md",
+  "jaccard": 0.084,
+  "containment_min": 0.537,
+  "chars_a": 18768,
+  "chars_b": 119987
+ },
+ {
+  "a": "data/sfar_recommendations/output/chandra/2019/rfe-trauma-vertebro-medulaire/rfe-trauma-vertebro-medulaire.md",
+  "b": "data/sfar_recommendations/output/chandra/2019/rfe-vertebro-medullaire-fiche-synthese/rfe-vertebro-medullaire-fiche-synthese.md",
+  "jaccard": 0.022,
+  "containment_min": 0.49,
+  "chars_a": 87639,
+  "chars_b": 3754
+ },
+ {
+  "a": "data/sfar_recommendations/output/chandra/2010/2a_HAS_texte-court_Delivrance-de-linformation-a-la-personne-sur-son-etat-de-sante/2a_HAS_texte-court_Delivrance-de-linformation-a-la-personne-sur-son-etat-de-sante.md",
+  "b": "data/sfar_recommendations/output/chandra/2010/2b_HAS_Texte_Long-Delivrance-de-l-information-a-la-personne-sur-son-etat-de-sante/2b_HAS_Texte_Long-Delivrance-de-l-information-a-la-personne-sur-son-etat-de-sante.md",
+  "jaccard": 0.045,
+  "containment_min": 0.468,
+  "chars_a": 49122,
+  "chars_b": 451177
+ },
+ {
+  "a": "data/sfar_recommendations/output/chandra/2010/2b_HAS_Texte_Long-Delivrance-de-l-information-a-la-personne-sur-son-etat-de-sante/2b_HAS_Texte_Long-Delivrance-de-l-information-a-la-personne-sur-son-etat-de-sante.md",
+  "b": "data/sfar_recommendations/output/chandra/unknown/recommandations_-_delivrance_de_linformation_a_la_personne_sur_son_etat_de_sante/recommandations_-_delivrance_de_linformation_a_la_personne_sur_son_etat_de_sante.md",
+  "jaccard": 0.045,
+  "containment_min": 0.468,
+  "chars_a": 451177,
+  "chars_b": 49128
+ },
+ {
+  "a": "data/sfar_recommendations/output/chandra/2026/RecoCIAFU_ECBU_Note-de-cadrage_10.10.2024/RecoCIAFU_ECBU_Note-de-cadrage_10.10.2024.md",
+  "b": "data/sfar_recommendations/output/chandra/2026/Reco_ECBU_Synthese_04.03.2026_MEL/Reco_ECBU_Synthese_04.03.2026_MEL.md",
+  "jaccard": 0.217,
+  "containment_min": 0.467,
+  "chars_a": 72104,
+  "chars_b": 113331
+ },
+ {
+  "a": "data/sfar_recommendations/output/chandra/2017/Pneumonies-associees-au-soins-de-reanimation-ANREA/Pneumonies-associees-au-soins-de-reanimation-ANREA.md",
+  "b": "data/sfar_recommendations/output/chandra/2017/RFE-Hospital-acquired-pneumonia-in-ICU/RFE-Hospital-acquired-pneumonia-in-ICU.md",
+  "jaccard": 0.266,
+  "containment_min": 0.461,
+  "chars_a": 113336,
+  "chars_b": 109715
+ },
+ {
+  "a": "data/sfar_recommendations/output/chandra/2016/RFE-ANREA-Prise-en-charge-des-traumatises-craniens-graves-a-la-phase-precoce/RFE-ANREA-Prise-en-charge-des-traumatises-craniens-graves-a-la-phase-precoce.md",
+  "b": "data/sfar_recommendations/output/chandra/2016/RFE-Management-of-severe-traumatic-brain-injury/RFE-Management-of-severe-traumatic-brain-injury.md",
+  "jaccard": 0.266,
+  "containment_min": 0.46,
+  "chars_a": 146885,
+  "chars_b": 128350
+ },
+ {
+  "a": "data/sfar_recommendations/output/chandra/2003/1-2a_SFAR_Texte-court-Controle-des-voies-aeriennes-en-anesthesie-en-dehors-de-l-intubation-difficile/1-2a_SFAR_Texte-court-Controle-des-voies-aeriennes-en-anesthesie-en-dehors-de-l-intubation-difficile.md",
+  "b": "data/sfar_recommendations/output/chandra/2003/2b_AFAR_Texte-Long_/2b_AFAR_Texte-Long_.md",
+  "jaccard": 0.107,
+  "containment_min": 0.428,
+  "chars_a": 22011,
+  "chars_b": 84578
+ },
+ {
+  "a": "data/sfar_recommendations/output/chandra/2013/2_SFAR_HyperthermieMaligne/2_SFAR_HyperthermieMaligne.md",
+  "b": "data/sfar_recommendations/output/chandra/2019/rpp-hyperthermie-maligne/rpp-hyperthermie-maligne.md",
+  "jaccard": 0.243,
+  "containment_min": 0.424,
+  "chars_a": 20558,
+  "chars_b": 24242
+ },
+ {
+  "a": "data/sfar_recommendations/output/chandra/2024/Algorithmes_RFE-gestion-de-lanticoagulation-dans-un-contexte-durgence_2024/Algorithmes_RFE-gestion-de-lanticoagulation-dans-un-contexte-durgence_2024.md",
+  "b": "data/sfar_recommendations/output/chandra/2024/RFE-gestion-de-lanticoagulation-dans-un-contexte-durgence_23.02.2024-1/RFE-gestion-de-lanticoagulation-dans-un-contexte-durgence_23.02.2024-1.md",
+  "jaccard": 0.03,
+  "containment_min": 0.422,
+  "chars_a": 20850,
+  "chars_b": 239503
+ },
+ {
+  "a": "data/sfar_recommendations/output/chandra/2020/RFE%20pr%C3%A9-%C3%A9clampsie_finale/RFE%20pr%C3%A9-%C3%A9clampsie_finale.md",
+  "b": "data/sfar_recommendations/output/chandra/2020/RFE-pre-eclampsie_Fiches-pratiques/RFE-pre-eclampsie_Fiches-pratiques.md",
+  "jaccard": 0.024,
+  "containment_min": 0.42,
+  "chars_a": 130455,
+  "chars_b": 6102
+ },
+ {
+  "a": "data/sfar_recommendations/output/chandra/2015/ANREA_132_RFE-IRA-/ANREA_132_RFE-IRA-.md",
+  "b": "data/sfar_recommendations/output/chandra/2015/RFE-IRA-anglais/RFE-IRA-anglais.md",
+  "jaccard": 0.251,
+  "containment_min": 0.414,
+  "chars_a": 118545,
+  "chars_b": 113843
+ },
+ {
+  "a": "data/sfar_recommendations/output/chandra/2025/argu_sepsis/argu_sepsis.md",
+  "b": "data/sfar_recommendations/output/chandra/2025/fiche_sepsis_aval/fiche_sepsis_aval.md",
+  "jaccard": 0.008,
+  "containment_min": 0.412,
+  "chars_a": 411527,
+  "chars_b": 6797
+ },
+ {
+  "a": "data/sfar_recommendations/output/chandra/2025/argu_sepsis/argu_sepsis.md",
+  "b": "data/sfar_recommendations/output/chandra/2025/fiche_sepsis_amont/fiche_sepsis_amont.md",
+  "jaccard": 0.008,
+  "containment_min": 0.404,
+  "chars_a": 411527,
+  "chars_b": 10595
+ },
+ {
+  "a": "data/sfar_recommendations/output/chandra/2001/art54_dossieraranncomplet/art54_dossieraranncomplet.md",
+  "b": "data/sfar_recommendations/output/chandra/2001/art54_dossierarannpre/art54_dossierarannpre.md",
+  "jaccard": 0.222,
+  "containment_min": 0.402,
+  "chars_a": 41698,
+  "chars_b": 27336
+ },
+ {
+  "a": "data/sfar_recommendations/output/chandra/2016/Anti-Tabac-Pour-un-parcours-patient-securise-1/Anti-Tabac-Pour-un-parcours-patient-securise-1.md",
+  "b": "data/sfar_recommendations/output/chandra/2016/Anti-Tabac-Pour-un-parcours-patient-securise-2/Anti-Tabac-Pour-un-parcours-patient-securise-2.md",
+  "jaccard": 0.152,
+  "containment_min": 0.39,
+  "chars_a": 1607,
+  "chars_b": 961
+ },
+ {
+  "a": "data/sfar_recommendations/output/chandra/2014/2_AFAR_Traumatisme-thoracique-_prise-en-charge-des-48-premieres-heures/2_AFAR_Traumatisme-thoracique-_prise-en-charge-des-48-premieres-heures.md",
+  "b": "data/sfar_recommendations/output/chandra/2014/RFE-Chest-trauma-First-48-hours-management/RFE-Chest-trauma-First-48-hours-management.md",
+  "jaccard": 0.193,
+  "containment_min": 0.336,
+  "chars_a": 83565,
+  "chars_b": 71947
+ },
+ {
+  "a": "data/sfar_recommendations/output/chandra/2017/Tracheotomie-en-reanimation-ANREA/Tracheotomie-en-reanimation-ANREA.md",
+  "b": "data/sfar_recommendations/output/chandra/2017/Tracheotomy-in-the-ICU-ACCPM/Tracheotomy-in-the-ICU-ACCPM.md",
+  "jaccard": 0.166,
+  "containment_min": 0.326,
+  "chars_a": 77434,
+  "chars_b": 74330
+ },
+ {
+  "a": "data/sfar_recommendations/output/chandra/2018/management-of-antiplatelet-therapy-for-non-elective-invasive-procedures-or-bleeding-complications/management-of-antiplatelet-therapy-for-non-elective-invasive-procedures-or-bleeding-complications.md",
+  "b": "data/sfar_recommendations/output/chandra/2021/Gestion%20perioperatoire%20des%20patients%20sous%20AAP%20en%20urgence/Gestion%20perioperatoire%20des%20patients%20sous%20AAP%20en%20urgence.md",
+  "jaccard": 0.154,
+  "containment_min": 0.288,
+  "chars_a": 101444,
+  "chars_b": 114130
+ },
+ {
+  "a": "data/sfar_recommendations/output/chandra/2018/management-of-antiplatelet-therapy-for-non-elective-invasive-procedures-or-bleeding-complications/management-of-antiplatelet-therapy-for-non-elective-invasive-procedures-or-bleeding-complications.md",
+  "b": "data/sfar_recommendations/output/chandra/2018/rfe-gestion-des-agents-antiplaquettaires/rfe-gestion-des-agents-antiplaquettaires.md",
+  "jaccard": 0.153,
+  "containment_min": 0.286,
+  "chars_a": 101444,
+  "chars_b": 113298
+ }
+]
