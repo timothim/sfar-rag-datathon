@@ -66,6 +66,14 @@ class SentenceTransformerEmbedder(BaseEmbedder):
             self._model, "get_embedding_dimension", self._model.get_sentence_embedding_dimension
         )
         self.dim = int(dim_fn())
+        # Instruction-tuned embedders (Qwen3-Embedding, EmbeddingGemma...) ship their own
+        # query/document prompts in the sentence-transformers config: use them when present.
+        prompts = getattr(self._model, "prompts", None) or {}
+        self._query_prompt = "query" if "query" in prompts and not self._is_e5 else None
+        self._doc_prompt = next((n for n in ("document", "passage") if n in prompts), None) if not self._is_e5 else None
+        # Cap sequence length: long-context embedders default to 8k-32k tokens, far beyond our chunks.
+        if getattr(self._model, "max_seq_length", 512) and self._model.max_seq_length > 1024:
+            self._model.max_seq_length = 1024
 
     def embed_documents(self, texts: list[str], batch_size: int = 32) -> np.ndarray:
         if not texts:
@@ -73,6 +81,7 @@ class SentenceTransformerEmbedder(BaseEmbedder):
         prefixed = [f"passage: {t}" for t in texts] if self._is_e5 else texts
         vecs = self._model.encode(
             prefixed,
+            prompt_name=self._doc_prompt,
             batch_size=batch_size,
             show_progress_bar=len(texts) > 200,
             normalize_embeddings=True,
@@ -84,6 +93,7 @@ class SentenceTransformerEmbedder(BaseEmbedder):
         text = f"query: {query}" if self._is_e5 else query
         vec = self._model.encode(
             [text],
+            prompt_name=self._query_prompt,
             batch_size=1,
             show_progress_bar=False,
             normalize_embeddings=True,

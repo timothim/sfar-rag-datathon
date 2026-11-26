@@ -174,7 +174,7 @@ def score_answer(item: EvalItem, answer: str) -> dict[str, Any]:
 # ---------------------------------------------------------------- loading systems
 
 
-def load_retrievers(index_root: Path, strategies: Iterable[str], reranker_provider: str, reranker_model: str, device: str | None = None):
+def load_retrievers(index_root: Path, strategies: Iterable[str], reranker_provider: str, reranker_model: str, device: str | None = None, index_map: dict[str, str] | None = None):
     from rag_sfar.retrieval.embedder import build_embedder
     from rag_sfar.retrieval.pipeline import SfarRagRetriever
     from rag_sfar.retrieval.reranker import build_reranker
@@ -185,7 +185,7 @@ def load_retrievers(index_root: Path, strategies: Iterable[str], reranker_provid
     cache: dict[tuple[str, str], Any] = {}
     out = {}
     for strat in strategies:
-        idx = index_root / strat
+        idx = index_root / (index_map or {}).get(strat, strat)
         if not (idx / "metadata.sqlite").exists():
             continue
         store = LocalVectorStore.load(idx)

@@ -235,8 +235,10 @@ def _run_unified_eval(args: argparse.Namespace) -> None:
         configs = [configs[0]] + harness.ablation_variants(configs[0], args.ablate)
     strategies = sorted({c.chunking_strategy for c in configs})
     device = "cpu" if (not args.retrieval_only and args.backend == "mlx") else None
+    index_map = dict(kv.split("=", 1) for kv in args.index_map.split(",") if kv.strip())
+    reranker_model = args.reranker_override or args.reranker_model
     retrievers = harness.load_retrievers(
-        args.index_root, strategies, args.reranker_provider, args.reranker_model, device=device
+        args.index_root, strategies, args.reranker_provider, reranker_model, device=device, index_map=index_map
     )
 
     factory = None
@@ -272,6 +274,8 @@ def _run_unified_eval(args: argparse.Namespace) -> None:
         args.suite, args.split, configs, retrievers, k=args.k, answer_fn_factory=factory,
         generator_label=label, limit=args.limit, progress=lambda m: console.print(f"[dim]{m}[/dim]"),
     )
+    report["index_map"] = index_map
+    report["reranker_model"] = reranker_model
     jp, mp = harness.save_report(report, tag=args.tag)
     console.print(harness.to_markdown(report))
     console.print(f"[bold green]Saved {jp} and {mp}[/bold green]")
@@ -302,6 +306,8 @@ def eval_cmd() -> None:
     parser.add_argument("--tag", default="")
     parser.add_argument("--allow-test", action="store_true", help="Required to evaluate the locked test split.")
     parser.add_argument("--baseline", choices=["constant"], default=None, help="Score a corpus-free baseline instead of configs.")
+    parser.add_argument("--index-map", default="", help="strategy=folder pairs to load another index for a chunking strategy, e.g. table_aware_sota=tas_qwen3emb06")
+    parser.add_argument("--reranker", dest="reranker_override", default="", help="Override reranker model for this run.")
     parser.add_argument("--ablate", default="", help="Comma list of RetrievalConfig flags/fields: one variant of the first config per item (flag=false or field=value).")
     args = parser.parse_args()
 
