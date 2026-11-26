@@ -1,0 +1,308 @@
+[
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q01",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une prothèse totale de hanche ?",
+  "reference": "Céfazoline",
+  "answer": "Pour une prothèse de hanche, l'antibioprophylaxie recommandée est la céfazoline 2g IVL, avec réinjection de 1g si la durée dépasse 4h, puis toutes les 4h jusqu'à la fin de la chirurgie [S1][S2]. En cas de chirurgie prothétique de hanche par voie antérieure et d'allergie aux bêtalactamines, il est préférable d'utiliser la vancomycine ou la teicoplanine plutôt que la clindamycine [S6].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1), avis d’experts."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q02",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une arthroscopie diagnostique du genou sans mise en place de matériel ?",
+  "reference": "Pas d'antibioprophylaxie",
+  "answer": "Pour une arthroscopie diagnostique du genou sans mise en place de matériel, il n'y a pas d'antibioprophylaxie [S2][S3].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1), avis d’experts."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q03",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une prothèse totale de genou chez un patient allergique aux bêtalactamines ?",
+  "reference": "Clindamycine",
+  "answer": "Pour une prothèse de genou, l'antibioprophylaxie recommandée est la céfazoline 2g IVL, avec réinjection de 1g si la durée dépasse 4h, puis toutes les 4h jusqu'à la fin de la chirurgie [S3]. Les extraits fournis ne précisent pas d'alternative en cas d'allergie aux bêtalactamines pour la prothèse de genou : la préférence pour la vancomycine ou la teicoplanine plutôt que la clindamycine n'est indiquée que pour la chirurgie prothétique de hanche par voie antérieure [S3].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1), avis d’experts."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q05",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une fracture ouverte de jambe Gustilo 2 ?",
+  "reference": "Amoxicilline/Clavulanate",
+  "answer": "Pour une fracture ouverte de jambe Gustilo 2, l'antibioprophylaxie recommandée est l'amoxicilline/clavulanate 2g IVL, avec réinjection de 1g si la durée dépasse 2h, puis toutes les 2h jusqu'à la fin de la chirurgie [S1][S4].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1), avis d’experts."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q07",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une arthrodèse lombaire instrumentée en un temps ?",
+  "reference": "Céfazoline",
+  "answer": "Pour une chirurgie instrumentée du rachis avec mise en place de matériel en 1 temps, l'antibioprophylaxie recommandée est la céfazoline 2g IVL, avec réinjection de 1g si la durée dépasse 4h, puis toutes les 4h jusqu'à la fin de la chirurgie [S2][S3]. Une antibioprophylaxie prolongée n'est pas supérieure à une administration pré et peropératoire uniquement [S7].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1), GRADE 2."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q09",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour un écrasement complexe de la main nécessitant une chirurgie de plus de 2 heures ?",
+  "reference": "Amoxicilline/Clavulanate",
+  "answer": "Pour un traumatisme complexe de la main (écrasement, ou durée de chirurgie prévue > 2h), l'antibioprophylaxie recommandée est l'amoxicilline/clavulanate 2g IVL, avec réinjection de 1g si la durée dépasse 2h, puis toutes les 2h jusqu'à la fin de la chirurgie [S1][S2].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1), avis d’experts."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q18",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une craniotomie ?",
+  "reference": "Céfazoline",
+  "answer": "Pour une craniotomie, l'antibioprophylaxie recommandée est la céfazoline 2g IVL, avec réinjection de 1g si la durée dépasse 4h, puis toutes les 4h jusqu'à la fin de la chirurgie [S3][S6]. L'antibioprophylaxie a montré une diminution indiscutable du risque infectieux pour les chirurgies par craniotomie [S1].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1), GRADE 2."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q19",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une biopsie cérébrale ?",
+  "reference": "Pas d'antibioprophylaxie",
+  "answer": "Pour une biopsie cérébrale, il n'y a pas d'antibioprophylaxie [S1][S5]. Cela vaut aussi pour la biopsie cérébrale stéréotaxique [S3].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1), avis d’experts."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q20",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour la pose d'une dérivation ventriculaire externe (DVE) ?",
+  "reference": "Pas d'antibioprophylaxie",
+  "answer": "Pour la pose d'une dérivation ventriculaire externe (DVE), il n'y a pas d'antibioprophylaxie [S1]. L'application d'un protocole standardisé de mesures préventives a montré son efficacité, contrairement à l'antibioprophylaxie [S2].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1), avis d’experts."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q25",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour la pose d'une électrode de stimulation cérébrale profonde ?",
+  "reference": "Céfazoline",
+  "answer": "Pour la pose d'une électrode de stimulation cérébrale, l'antibioprophylaxie recommandée est la céfazoline 2g IVL, avec réinjection de 1g si la durée dépasse 4h, puis toutes les 4h jusqu'à la fin de la chirurgie [S1].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1), avis d’experts."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q26",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour l'embolisation d'un anévrysme cérébral ?",
+  "reference": "Pas d'antibioprophylaxie",
+  "answer": "Pour l'embolisation d'un anévrysme cérébral, il n'y a pas d'antibioprophylaxie [S1][S2][S6].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1), avis d’experts."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q27",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une craniotomie chez un patient allergique aux bêtalactamines ?",
+  "reference": "Clindamycine",
+  "answer": "Dans le tableau d'antibioprophylaxie en neurochirurgie, en cas d'allergie aux bêtalactamines, si la céfazoline est indiquée, la molécule de remplacement est la clindamycine 900 mg IV [S1]. Les extraits fournis ne reprennent pas la ligne « craniotomie » de ce tableau.\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1), avis d’experts."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q28",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une plaie cranio-cérébrale chez un patient allergique aux pénicillines ?",
+  "reference": "Triméthoprime/Sulfaméthoxazole",
+  "answer": "Pour une plaie cranio-cérébrale, pénétrante ou non, l'antibioprophylaxie recommandée est l'amoxicilline/clavulanate 2g IVL, avec réinjection de 1g si la durée dépasse 2h, puis toutes les 2h jusqu'à la fin de la chirurgie [S4]. Les extraits fournis ne précisent pas d'alternative en cas d'allergie aux pénicillines pour la neurochirurgie : les schémas d'allergie présentés concernent la chirurgie otologique, la traumatologie maxillo-faciale et la neuroradiologie interventionnelle [S2][S3][S6].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1), avis d’experts."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q30",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une thyroïdectomie totale ?",
+  "reference": "Pas d'antibioprophylaxie",
+  "answer": "Pour une thyroïdectomie totale, il n'y a pas d'antibioprophylaxie [S1][S2].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1), avis d’experts."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q31",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une chirurgie sinusienne de polypose nasale ?",
+  "reference": "Pas d'antibioprophylaxie",
+  "answer": "Pour une chirurgie sinusienne de polypose ou de sinusite chronique (méatotomie, éthmoïdectomie, sphénoïdectomie, polypectomie), il n'y a pas d'antibioprophylaxie [S1][S2].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1), avis d’experts."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q36",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une chirurgie de la cataracte ?",
+  "reference": "Céfuroxime",
+  "answer": "Pour une chirurgie de la cataracte, l'antibioprophylaxie recommandée est le céfuroxime 1 mg/0,1 mL en injection intracamérulaire en fin d'intervention, en dose unique [S5]. L'antibioprophylaxie par collyres, par voie sous-conjonctivale ou dans le liquide d'irrigation intraoculaire n'est pas recommandée [S1].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1), GRADE 1."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q37",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une chirurgie du glaucome ?",
+  "reference": "Pas d'antibioprophylaxie",
+  "answer": "Pour une chirurgie du glaucome, il n'y a pas d'antibioprophylaxie [S3][S4]. Si elle est réalisée dans le même temps opératoire qu'une chirurgie de la cataracte, elle relève de la chirurgie de la cataracte combinée [S1][S4].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1), avis d’experts."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q40",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour l'extraction d'une dent incluse ?",
+  "reference": "Amoxicilline",
+  "answer": "Les recommandations SFAR fournies ne traitent pas cette question."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q41",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une fracture ouverte de mandibule ?",
+  "reference": "Amoxicilline/Clavulanate",
+  "answer": "Pour une fracture ouverte de mandibule, l'antibioprophylaxie recommandée est l'amoxicilline/clavulanate 2g IVL, avec réinjection de 1g si la durée dépasse 2h, puis toutes les 2h jusqu'à la fin de la chirurgie [S1][S6].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1), GRADE 2."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q42",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une chirurgie orthognatique ?",
+  "reference": "Céfazoline",
+  "answer": "Pour une chirurgie orthognatique, l'antibioprophylaxie recommandée est la céfazoline 2g IVL, avec réinjection de 1g si la durée dépasse 4h, puis toutes les 4h jusqu'à la fin de la chirurgie, puis 1g/6h postopératoire pendant 48h maximum [S7].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1), GRADE 2."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q43",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une chirurgie carcinologique cervico-faciale avec lambeau chez un patient allergique aux bêtalactamines ?",
+  "reference": "Clindamycine + Gentamicine",
+  "answer": "Pour une chirurgie carcinologique cervico-faciale avec lambeau chez un patient allergique aux bêtalactamines, il faut rajouter la gentamicine 6-7 mg/kg IVL à la clindamycine [S1][S3]. La clindamycine est indiquée à la dose de 900 mg IVL dans l'encadré allergie aux bêtalactamines de la chirurgie stomatologique et maxillo-faciale [S5].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1), avis d’experts."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q44",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour un remplacement valvulaire aortique sous circulation extracorporelle (CEC) ?",
+  "reference": "Céfazoline",
+  "answer": "Pour un remplacement valvulaire aortique sous CEC, l'antibioprophylaxie recommandée est la céfazoline 2g IVL, avec réinjection de 1g si la durée dépasse 4h, puis toutes les 4h jusqu'à la fin de la chirurgie, et 1g lors du priming si CEC [S4][S6].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1), GRADE 1."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q45",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour la pose d'une bioprothèse de valve aortique par voie transcutanée (TAVI) ?",
+  "reference": "Amoxicilline/Clavulanate",
+  "answer": "Pour la pose d'une bioprothèse de valve aortique par voie transcutanée (TAVI), l'antibioprophylaxie recommandée est l'amoxicilline/clavulanate 2g IVL, avec réinjection de 1g si la durée dépasse 2h, puis toutes les 2h jusqu'à la fin de la procédure [S1][S2].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1), avis d’experts."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q46",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour l'implantation d'un stimulateur cardiaque (pacemaker) ?",
+  "reference": "Céfazoline",
+  "answer": "Pour l'implantation d'un stimulateur cardiaque, l'antibioprophylaxie recommandée est la céfazoline 2g IVL, avec réinjection de 1g si la durée dépasse 4h, puis toutes les 4h jusqu'à la fin de la chirurgie [S1][S2].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1), GRADE 1."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q48",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour la mise en place d'une ECMO percutanée (sans abord chirurgical) ?",
+  "reference": "Pas d'antibioprophylaxie",
+  "answer": "Pour une assistance de courte durée (ECMO) avec mise en place percutanée sans abord chirurgical, il n'y a pas d'antibioprophylaxie [S2][S3].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1), avis d’experts."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q50",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une amputation de membre (hors contexte septique) ?",
+  "reference": "Amoxicilline/Clavulanate",
+  "answer": "Pour une amputation de membre (hors contexte septique), l'antibioprophylaxie recommandée est l'amoxicilline/clavulanate 2g IVL, avec réinjection de 1g si la durée dépasse 2h, puis toutes les 2h jusqu'à la fin de la chirurgie, puis 50 mg/kg/j en 3 ou 4 injections IVL pendant 48h [S1][S2].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1), GRADE 2."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q51",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une chirurgie des varices sans abord chirurgical du scarpa ?",
+  "reference": "Pas d'antibioprophylaxie",
+  "answer": "Aucune antibioprophylaxie n'est recommandée pour la chirurgie des varices sans abord chirurgical du scarpa [S1][S3].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; Avis d'experts."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q52",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour la pose d'un drain thoracique ?",
+  "reference": "Pas d'antibioprophylaxie",
+  "answer": "Aucune antibioprophylaxie n'est recommandée pour le drainage thoracique, tunnellisé ou non [S6]. Dans le traumatisme thoracique fermé, les experts ne proposent pas d'antibioprophylaxie avant drainage thoracique [S7]. En cas de traumatisme pénétrant du thorax, ils suggèrent une antibioprophylaxie, par exemple amoxicilline + acide clavulanique pendant 24 à 48 h [S8].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) (Avis d'experts) ; Traumatisme Thoracique : Prise en charge des 48 premières heures, RFE SFAR 2014 (G2- pour les traumatismes fermés, G2+ pour les traumatismes pénétrants)."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q53",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une médiastinoscopie avec biopsies ?",
+  "reference": "Pas d'antibioprophylaxie",
+  "answer": "Aucune antibioprophylaxie n'est recommandée pour une médiastinoscopie, avec ou sans biopsie [S1].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; Avis d'experts."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q59",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une lipoaspiration sous anesthésie générale ?",
+  "reference": "Pas d'antibioprophylaxie",
+  "answer": "Aucune antibioprophylaxie n'est recommandée pour une lipoaspiration sous anesthésie générale ou locale [S1][S2].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; Avis d'experts."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q61",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une reconstruction par lambeau libre microchirurgical ?",
+  "reference": "Céfazoline",
+  "answer": "Pour les lambeaux libres microchirurgicaux ou pédiculés en chirurgie plastique pédiatrique, l'antibioprophylaxie recommandée est la céfazoline 30 mg/kg IVL, avec 30 mg/kg si durée > 4h puis toutes les 4h jusqu'à fin de chirurgie [S6]. Pour la chirurgie carcinologique cervico-faciale avec lambeau libre ou pédiculé chez l'adulte, il s'agit d'amoxicilline/clavulanate 2g IVL, avec 1g si durée > 2h puis toutes les 2h jusqu'à fin de chirurgie [S7].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; Avis d'experts."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q62",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une greffe cutanée (hors patient brûlé) ?",
+  "reference": "Pas d'antibioprophylaxie",
+  "answer": "Aucune antibioprophylaxie n'est recommandée pour une greffe cutanée hors brûlures [S1][S7].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; Avis d'experts."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q67",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une chirurgie du mamelon ou de la plaque aréolo-mamelonnaire ?",
+  "reference": "Pas d'antibioprophylaxie",
+  "answer": "Aucune antibioprophylaxie n'est recommandée pour la chirurgie du mamelon ou de la plaque aréolo-mamelonnaire [S1][S2].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; Avis d'experts."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q69",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une annexectomie par voie coelioscopique ?",
+  "reference": "Céfazoline",
+  "answer": "Pour une annexectomie par voie coelioscopique : céfazoline 2 g IVL, avec 1g si durée > 4h puis toutes les 4h jusqu'à fin de chirurgie [S6][S7].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; GRADE 2."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q70",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une résection de lésions endométriosiques avec atteinte rectale par coelioscopie ?",
+  "reference": "Céfazoline + Métronidazole",
+  "answer": "Pour la résection de lésions endométriosiques avec atteinte rectale par coelioscopie : céfazoline 2 g IVL (1g si durée > 4h puis toutes les 4h jusqu'à fin de chirurgie) associée à métronidazole 1 g IVL en dose unique [S1][S7].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; Avis d'experts."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q71",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une hystérectomie totale sans annexectomie par laparotomie ?",
+  "reference": "Céfoxitine",
+  "answer": "Pour une hystérectomie totale sans annexectomie par laparotomie : céfoxitine 2g IVL, avec 1g si durée > 2h puis toutes les 2h jusqu'à fin de chirurgie [S1][S3].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; Avis d'experts."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q73",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une conisation du col utérin ?",
+  "reference": "Pas d'antibioprophylaxie",
+  "answer": "Aucune antibioprophylaxie n'est recommandée pour une conisation du col utérin [S1].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; Avis d'experts."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q74",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une hystéroscopie diagnostique ?",
+  "reference": "Pas d'antibioprophylaxie",
+  "answer": "Les recommandations SFAR fournies ne traitent pas cette question."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q75",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une biopsie de l'endomètre par hystéroscopie ?",
+  "reference": "Pas d'antibioprophylaxie",
+  "answer": "Aucune antibioprophylaxie n'est recommandée pour une biopsie de l'endomètre par hystéroscopie [S1]. Une antibioprophylaxie par céfazoline limitée à la période opératoire peut être considérée en cas d'endométriose, d'antécédent de chirurgies pelviennes ou d'infection génitale haute [S1].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; GRADE 1 pour l'absence d'antibioprophylaxie, Avis d'experts pour la céfazoline en situation à risque."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q78",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une nymphoplastie de réduction ?",
+  "reference": "Pas d'antibioprophylaxie",
+  "answer": "Aucune antibioprophylaxie n'est recommandée pour une nymphoplastie de réduction [S1].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; GRADE 2."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q79",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une césarienne programmée ?",
+  "reference": "Céfazoline",
+  "answer": "Pour une césarienne programmée : céfazoline 2g IVL, avec 1g si durée > 4h puis toutes les 4h jusqu'à fin de chirurgie [S2][S7]. L'injection est faite, autant que possible, avant l'incision [S5][S7]. Aucune alternative à la céfazoline n'est proposée pour la césarienne [S3].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; GRADE 2."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q80",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour un cerclage du col de l'utérus au cours de la grossesse par voie transvaginale ?",
+  "reference": "Pas d'antibioprophylaxie",
+  "answer": "Aucune antibioprophylaxie n'est recommandée pour un cerclage du col de l'utérus au cours de la grossesse par voie transvaginale [S1][S3].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; Avis d'experts."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q81",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une révision de la cavité utérine après l'accouchement ?",
+  "reference": "Céfazoline",
+  "answer": "Pour une révision de la cavité de l'utérus après délivrance naturelle : céfazoline 2g IVL en dose unique lors de la révision ou de la délivrance manuelle [S2].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; Avis d'experts."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q83",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une interruption volontaire de grossesse par aspiration au premier trimestre ?",
+  "reference": "Pas d'antibioprophylaxie",
+  "answer": "Aucune antibioprophylaxie n'est recommandée pour l'évacuation d'un utérus gravide par aspiration et/ou curetage au 1er trimestre de la grossesse [S1].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; GRADE 2."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q84",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour un prélèvement d'ovocytes par voie transvaginale avec échoguidage (PMA) ?",
+  "reference": "Pas d'antibioprophylaxie",
+  "answer": "Aucune antibioprophylaxie n'est recommandée pour un prélèvement d'ovocytes par voie transvaginale avec échoguidage [S1]. Une antibioprophylaxie par céfazoline limitée à la période opératoire peut être considérée en cas d'endométriose, d'antécédent de chirurgies pelviennes ou d'infection génitale haute [S1].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; GRADE 1 pour l'absence d'antibioprophylaxie, Avis d'experts pour la céfazoline en situation à risque."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q85",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une oesophagectomie ?",
+  "reference": "Céfazoline",
+  "answer": "Pour une oesophagectomie : céfazoline 2g IVL, avec 1g si durée > 4h puis toutes les 4h jusqu'à fin de chirurgie [S1][S2].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; Avis d'experts."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q87",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour la mise en place d'un anneau gastrique (chirurgie bariatrique) ?",
+  "reference": "Céfazoline",
+  "answer": "Pour la mise en place d'un anneau gastrique : céfazoline 2g IVL, avec 1g si durée > 4h puis toutes les 4h jusqu'à fin de chirurgie [S1]. Cette dose s'applique jusqu'à un IMC ≤ 50 kg/m² en respectant les intervalles de réinjection, et le céfuroxime n'est pas proposé en alternative dans cette chirurgie [S7].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; Avis d'experts."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q88",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une résection de l'intestin grêle par laparotomie ?",
+  "reference": "Céfoxitine",
+  "answer": "Pour une résection de l'intestin grêle par laparotomie : céfoxitine 2g IVL, avec 1g si durée > 2h puis toutes les 2h jusqu'à fin de chirurgie [S1].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; Avis d'experts."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q89",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une appendicectomie programmée ?",
+  "reference": "Céfoxitine",
+  "answer": "Pour une appendicectomie programmée : céfoxitine 2 g IVL, avec 1g si durée > 2h puis toutes les 2h jusqu'à fin de chirurgie [S1][S5].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; Avis d'experts."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q91",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une chirurgie des hémorroïdes ?",
+  "reference": "Métronidazole",
+  "answer": "Pour la chirurgie des hémorroïdes chez l'adulte : métronidazole 1g IVL en dose unique [S2]. Chez l'enfant : métronidazole 15 mg/kg IVL en dose unique [S1].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; Avis d'experts."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-ctx12+claude-sonnet-5-5::Q95",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une splénectomie programmée par laparotomie ?",
+  "reference": "Céfazoline",
+  "answer": "Pour une splénectomie programmée par laparotomie : céfazoline 2g IVL, avec 1g si durée > 4h puis toutes les 4h jusqu'à fin de chirurgie [S1][S3].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; Avis d'experts."
+ }
+]

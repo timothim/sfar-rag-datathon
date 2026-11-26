@@ -1,0 +1,106 @@
+[
+ {
+  "case_id": "Q51",
+  "answer": "Aucune antibioprophylaxie n'est recommandée pour la chirurgie des varices sans abord chirurgical du scarpa [S1][S3].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; Avis d'experts."
+ },
+ {
+  "case_id": "Q52",
+  "answer": "Aucune antibioprophylaxie n'est recommandée pour le drainage thoracique, tunnellisé ou non [S6]. Dans le traumatisme thoracique fermé, les experts ne proposent pas d'antibioprophylaxie avant drainage thoracique [S7]. En cas de traumatisme pénétrant du thorax, ils suggèrent une antibioprophylaxie, par exemple amoxicilline + acide clavulanique pendant 24 à 48 h [S8].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) (Avis d'experts) ; Traumatisme Thoracique : Prise en charge des 48 premières heures, RFE SFAR 2014 (G2- pour les traumatismes fermés, G2+ pour les traumatismes pénétrants)."
+ },
+ {
+  "case_id": "Q53",
+  "answer": "Aucune antibioprophylaxie n'est recommandée pour une médiastinoscopie, avec ou sans biopsie [S1].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; Avis d'experts."
+ },
+ {
+  "case_id": "Q59",
+  "answer": "Aucune antibioprophylaxie n'est recommandée pour une lipoaspiration sous anesthésie générale ou locale [S1][S2].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; Avis d'experts."
+ },
+ {
+  "case_id": "Q61",
+  "answer": "Pour les lambeaux libres microchirurgicaux ou pédiculés en chirurgie plastique pédiatrique, l'antibioprophylaxie recommandée est la céfazoline 30 mg/kg IVL, avec 30 mg/kg si durée > 4h puis toutes les 4h jusqu'à fin de chirurgie [S6]. Pour la chirurgie carcinologique cervico-faciale avec lambeau libre ou pédiculé chez l'adulte, il s'agit d'amoxicilline/clavulanate 2g IVL, avec 1g si durée > 2h puis toutes les 2h jusqu'à fin de chirurgie [S7].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; Avis d'experts."
+ },
+ {
+  "case_id": "Q62",
+  "answer": "Aucune antibioprophylaxie n'est recommandée pour une greffe cutanée hors brûlures [S1][S7].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; Avis d'experts."
+ },
+ {
+  "case_id": "Q67",
+  "answer": "Aucune antibioprophylaxie n'est recommandée pour la chirurgie du mamelon ou de la plaque aréolo-mamelonnaire [S1][S2].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; Avis d'experts."
+ },
+ {
+  "case_id": "Q69",
+  "answer": "Pour une annexectomie par voie coelioscopique : céfazoline 2 g IVL, avec 1g si durée > 4h puis toutes les 4h jusqu'à fin de chirurgie [S6][S7].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; GRADE 2."
+ },
+ {
+  "case_id": "Q70",
+  "answer": "Pour la résection de lésions endométriosiques avec atteinte rectale par coelioscopie : céfazoline 2 g IVL (1g si durée > 4h puis toutes les 4h jusqu'à fin de chirurgie) associée à métronidazole 1 g IVL en dose unique [S1][S7].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; Avis d'experts."
+ },
+ {
+  "case_id": "Q71",
+  "answer": "Pour une hystérectomie totale sans annexectomie par laparotomie : céfoxitine 2g IVL, avec 1g si durée > 2h puis toutes les 2h jusqu'à fin de chirurgie [S1][S3].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; Avis d'experts."
+ },
+ {
+  "case_id": "Q73",
+  "answer": "Aucune antibioprophylaxie n'est recommandée pour une conisation du col utérin [S1].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; Avis d'experts."
+ },
+ {
+  "case_id": "Q74",
+  "answer": "Les recommandations SFAR fournies ne traitent pas cette question."
+ },
+ {
+  "case_id": "Q75",
+  "answer": "Aucune antibioprophylaxie n'est recommandée pour une biopsie de l'endomètre par hystéroscopie [S1]. Une antibioprophylaxie par céfazoline limitée à la période opératoire peut être considérée en cas d'endométriose, d'antécédent de chirurgies pelviennes ou d'infection génitale haute [S1].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; GRADE 1 pour l'absence d'antibioprophylaxie, Avis d'experts pour la céfazoline en situation à risque."
+ },
+ {
+  "case_id": "Q78",
+  "answer": "Aucune antibioprophylaxie n'est recommandée pour une nymphoplastie de réduction [S1].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; GRADE 2."
+ },
+ {
+  "case_id": "Q79",
+  "answer": "Pour une césarienne programmée : céfazoline 2g IVL, avec 1g si durée > 4h puis toutes les 4h jusqu'à fin de chirurgie [S2][S7]. L'injection est faite, autant que possible, avant l'incision [S5][S7]. Aucune alternative à la céfazoline n'est proposée pour la césarienne [S3].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; GRADE 2."
+ },
+ {
+  "case_id": "Q80",
+  "answer": "Aucune antibioprophylaxie n'est recommandée pour un cerclage du col de l'utérus au cours de la grossesse par voie transvaginale [S1][S3].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; Avis d'experts."
+ },
+ {
+  "case_id": "Q81",
+  "answer": "Pour une révision de la cavité de l'utérus après délivrance naturelle : céfazoline 2g IVL en dose unique lors de la révision ou de la délivrance manuelle [S2].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; Avis d'experts."
+ },
+ {
+  "case_id": "Q83",
+  "answer": "Aucune antibioprophylaxie n'est recommandée pour l'évacuation d'un utérus gravide par aspiration et/ou curetage au 1er trimestre de la grossesse [S1].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; GRADE 2."
+ },
+ {
+  "case_id": "Q84",
+  "answer": "Aucune antibioprophylaxie n'est recommandée pour un prélèvement d'ovocytes par voie transvaginale avec échoguidage [S1]. Une antibioprophylaxie par céfazoline limitée à la période opératoire peut être considérée en cas d'endométriose, d'antécédent de chirurgies pelviennes ou d'infection génitale haute [S1].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; GRADE 1 pour l'absence d'antibioprophylaxie, Avis d'experts pour la céfazoline en situation à risque."
+ },
+ {
+  "case_id": "Q85",
+  "answer": "Pour une oesophagectomie : céfazoline 2g IVL, avec 1g si durée > 4h puis toutes les 4h jusqu'à fin de chirurgie [S1][S2].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; Avis d'experts."
+ },
+ {
+  "case_id": "Q87",
+  "answer": "Pour la mise en place d'un anneau gastrique : céfazoline 2g IVL, avec 1g si durée > 4h puis toutes les 4h jusqu'à fin de chirurgie [S1]. Cette dose s'applique jusqu'à un IMC ≤ 50 kg/m² en respectant les intervalles de réinjection, et le céfuroxime n'est pas proposé en alternative dans cette chirurgie [S7].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; Avis d'experts."
+ },
+ {
+  "case_id": "Q88",
+  "answer": "Pour une résection de l'intestin grêle par laparotomie : céfoxitine 2g IVL, avec 1g si durée > 2h puis toutes les 2h jusqu'à fin de chirurgie [S1].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; Avis d'experts."
+ },
+ {
+  "case_id": "Q89",
+  "answer": "Pour une appendicectomie programmée : céfoxitine 2 g IVL, avec 1g si durée > 2h puis toutes les 2h jusqu'à fin de chirurgie [S1][S5].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; Avis d'experts."
+ },
+ {
+  "case_id": "Q91",
+  "answer": "Pour la chirurgie des hémorroïdes chez l'adulte : métronidazole 1g IVL en dose unique [S2]. Chez l'enfant : métronidazole 15 mg/kg IVL en dose unique [S1].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; Avis d'experts."
+ },
+ {
+  "case_id": "Q95",
+  "answer": "Pour une splénectomie programmée par laparotomie : céfazoline 2g IVL, avec 1g si durée > 4h puis toutes les 4h jusqu'à fin de chirurgie [S1][S3].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; Avis d'experts."
+ },
+ {
+  "case_id": "Q96",
+  "answer": "Pour une pancréatectomie gauche avec ou sans conservation de la rate : céfazoline 2g IVL, avec 1g si durée > 4h puis toutes les 4h jusqu'à fin de chirurgie [S1][S2].\nSource : Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026 (V3.1 (10/07/2026)) ; GRADE 2."
+ }
+]
