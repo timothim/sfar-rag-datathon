@@ -25,6 +25,8 @@ Phase 2 (fondation d'évaluation) en cours ; phase 3 étape 1 (C8 générique) l
 | Baseline constante | abp171 dev | 47,1 % [37–57] | plancher de référence |
 | C8 générique (retrait fuites + correctifs sécurité) vs ancien C8, retrieval | abp171 dev | doc hit 100 % = ; MRR n.s. | gardé (aucune perte) |
 | idem | multirfe_synth dev | doc MRR +0,033 [+0,006 ; +0,071], passage hit +1,3 pt n.s., latence −18 % | gardé : nouvelle référence |
+| Ablation C8 composant par composant (10) | les deux dev | seuls dense et reranker utiles (IC excluant 0) | les 8 autres retirés de C9 |
+| C9 simple (BM25+dense+RRF+reranker+routeur) vs C8 | les deux dev | toutes différences n.s. (MRR −0,03 tendance) | C9 candidat, à confirmer en génération |
 
 ## Décisions
 - 2026-11-26 : pas d'API (clé invalide) → jeu interne généré/vérifié par sous-agents Claude Code ; juge : backend local d'abord.

@@ -216,6 +216,32 @@ def build_standard_ablation_configs() -> list[RetrievalConfig]:
             use_context_pruning=True,
             final_top_k=8,
         ),
+        # C9: simplification of C8 after one-at-a-time ablation on the internal dev set
+        # (2026-11-26): only dense retrieval and the cross-encoder showed a measurable gain.
+        # CRAG, char n-grams, DBSF, metadata boost, lexicon, neighbour/callout expansion removed.
+        # The query router is kept for edition-comparison detection (functional, too rare to measure).
+        RetrievalConfig(
+            name="C9_simple_hybrid_rerank",
+            chunking_strategy="table_aware_sota",
+            use_bm25=True,
+            use_subword=False,
+            use_dense=True,
+            use_dbsf_fusion=False,
+            use_crag_multihop=False,
+            use_medical_lexicon=False,
+            use_query_router=True,
+            exclude_references=True,
+            prefer_french=True,
+            latest_edition_only=True,
+            exclude_abrogated=True,
+            use_soft_metadata_boost=False,
+            use_reranker=True,
+            expand_neighbors=False,
+            expand_section_callouts=False,
+            use_u_shape_ordering=True,
+            use_context_pruning=True,
+            final_top_k=8,
+        ),
     ]
 
 
