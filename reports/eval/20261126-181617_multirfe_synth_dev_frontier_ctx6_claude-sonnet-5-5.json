@@ -1,0 +1,3412 @@
+{
+ "suite": "multirfe_synth",
+ "split": "dev",
+ "k": 8,
+ "n_items": 94,
+ "generator": "claude-sonnet-5-5 (Claude Code subagent, prompts captured from the engine, variant ctx6)",
+ "timestamp": "2026-11-26T18:16:15",
+ "runs": [
+  {
+   "config": "C9_simple_hybrid_rerank+claude-sonnet-5-5",
+   "config_params": {
+    "name": "C9_simple_hybrid_rerank",
+    "chunking_strategy": "table_aware_sota",
+    "use_bm25": true,
+    "use_subword": false,
+    "use_dense": true,
+    "bm25_weight": 1.0,
+    "subword_weight": 0.65,
+    "dense_weight": 1.0,
+    "rrf_k": 60,
+    "use_dbsf_fusion": false,
+    "dbsf_blend": 0.35,
+    "use_crag_multihop": false,
+    "use_u_shape_ordering": true,
+    "use_context_pruning": true,
+    "use_medical_lexicon": false,
+    "use_query_router": true,
+    "exclude_references": true,
+    "prefer_french": true,
+    "latest_edition_only": true,
+    "exclude_abrogated": true,
+    "use_soft_metadata_boost": false,
+    "use_hard_subdomain_filter": false,
+    "use_reranker": true,
+    "initial_candidates": 45,
+    "rerank_top_k": 24,
+    "final_top_k": 8,
+    "dedup_by_content": true,
+    "max_chunks_per_doc": 7,
+    "expand_neighbors": false,
+    "expand_section_callouts": false,
+    "max_context_chars": 16000,
+    "domain_boost": 0.18,
+    "population_boost": 0.25,
+    "population_mismatch_penalty": 0.35,
+    "setting_boost": 0.2,
+    "role_boost_map": {
+     "recommandation": 0.12,
+     "texte_court": 0.12,
+     "tableaux_synthese": 0.15,
+     "algorithme": 0.1,
+     "aide_cognitive": 0.08,
+     "argumentaire": -0.04,
+     "annexe": -0.05
+    },
+    "table_card_boost": 0.1
+   },
+   "summary": {
+    "n": 94,
+    "doc_hit": {
+     "mean": 0.9473684210526315,
+     "ci_low": 0.8947368421052632,
+     "ci_high": 0.9868421052631579,
+     "n": 76
+    },
+    "doc_mrr": {
+     "mean": 0.8524122807017543,
+     "ci_low": 0.7793859649122807,
+     "ci_high": 0.9182017543859649,
+     "n": 76
+    },
+    "doc_recall": {
+     "mean": 0.9473684210526315,
+     "ci_low": 0.8947368421052632,
+     "ci_high": 0.9868421052631579,
+     "n": 76
+    },
+    "doc_ndcg": {
+     "mean": 0.6563137201574282,
+     "ci_low": 0.5835329305285132,
+     "ci_high": 0.7278427902028355,
+     "n": 76
+    },
+    "passage_hit": {
+     "mean": 0.8289473684210527,
+     "ci_low": 0.7368421052631579,
+     "ci_high": 0.9078947368421053,
+     "n": 76
+    },
+    "passage_mrr": {
+     "mean": 0.6714912280701754,
+     "ci_low": 0.5826754385964912,
+     "ci_high": 0.7629385964912281,
+     "n": 76
+    },
+    "passage_recall": {
+     "mean": 0.8223684210526315,
+     "ci_low": 0.7368421052631579,
+     "ci_high": 0.9013157894736842,
+     "n": 76
+    },
+    "obsolete_intrusion": {
+     "mean": 0.0,
+     "ci_low": 0.0,
+     "ci_high": 0.0,
+     "n": 73
+    },
+    "answer_terms_in_context": {
+     "mean": 0.9078947368421053,
+     "ci_low": 0.8421052631578947,
+     "ci_high": 0.9605263157894737,
+     "n": 76
+    },
+    "correct": {
+     "mean": 0.7368421052631579,
+     "ci_low": 0.631578947368421,
+     "ci_high": 0.8289473684210527,
+     "n": 76
+    },
+    "abstention_correct": {
+     "mean": 1.0,
+     "ci_low": 1.0,
+     "ci_high": 1.0,
+     "n": 18
+    },
+    "false_abstention": {
+     "mean": 0.07894736842105263,
+     "ci_low": 0.02631578947368421,
+     "ci_high": 0.14473684210526316,
+     "n": 76
+    },
+    "sourced": {
+     "mean": 0.7553191489361702,
+     "ci_low": 0.6702127659574468,
+     "ci_high": 0.8404255319148937,
+     "n": 94
+    },
+    "by_question_type": {
+     "abstention": {
+      "abstention_correct": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 18
+      },
+      "sourced": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 18
+      },
+      "n": 18
+     },
+     "clinical_case": {
+      "doc_hit": {
+       "mean": 0.8571428571428571,
+       "ci_low": 0.6666666666666666,
+       "ci_high": 1.0,
+       "n": 21
+      },
+      "doc_mrr": {
+       "mean": 0.7634920634920636,
+       "ci_low": 0.5857142857142857,
+       "ci_high": 0.9238095238095237,
+       "n": 21
+      },
+      "doc_recall": {
+       "mean": 0.8571428571428571,
+       "ci_low": 0.6666666666666666,
+       "ci_high": 1.0,
+       "n": 21
+      },
+      "doc_ndcg": {
+       "mean": 0.5141984791326991,
+       "ci_low": 0.3633323029986037,
+       "ci_high": 0.6495707671388196,
+       "n": 21
+      },
+      "passage_hit": {
+       "mean": 0.7142857142857143,
+       "ci_low": 0.5238095238095238,
+       "ci_high": 0.9047619047619048,
+       "n": 21
+      },
+      "passage_mrr": {
+       "mean": 0.5809523809523809,
+       "ci_low": 0.38095238095238093,
+       "ci_high": 0.7714285714285714,
+       "n": 21
+      },
+      "passage_recall": {
+       "mean": 0.7142857142857143,
+       "ci_low": 0.5238095238095238,
+       "ci_high": 0.9047619047619048,
+       "n": 21
+      },
+      "obsolete_intrusion": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 21
+      },
+      "answer_terms_in_context": {
+       "mean": 0.8095238095238095,
+       "ci_low": 0.6190476190476191,
+       "ci_high": 0.9523809523809523,
+       "n": 21
+      },
+      "correct": {
+       "mean": 0.7142857142857143,
+       "ci_low": 0.5238095238095238,
+       "ci_high": 0.9047619047619048,
+       "n": 21
+      },
+      "false_abstention": {
+       "mean": 0.23809523809523808,
+       "ci_low": 0.09523809523809523,
+       "ci_high": 0.42857142857142855,
+       "n": 21
+      },
+      "sourced": {
+       "mean": 0.8095238095238095,
+       "ci_low": 0.6190476190476191,
+       "ci_high": 0.9523809523809523,
+       "n": 21
+      },
+      "n": 21
+     },
+     "comparison": {
+      "doc_hit": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 3
+      },
+      "doc_mrr": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 3
+      },
+      "doc_recall": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 3
+      },
+      "doc_ndcg": {
+       "mean": 0.9495662644168644,
+       "ci_low": 0.8486987932505933,
+       "ci_high": 1.0,
+       "n": 3
+      },
+      "passage_hit": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 3
+      },
+      "passage_mrr": {
+       "mean": 0.7777777777777778,
+       "ci_low": 0.3333333333333333,
+       "ci_high": 1.0,
+       "n": 3
+      },
+      "passage_recall": {
+       "mean": 0.8333333333333334,
+       "ci_low": 0.5,
+       "ci_high": 1.0,
+       "n": 3
+      },
+      "answer_terms_in_context": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 3
+      },
+      "correct": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 3
+      },
+      "false_abstention": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 3
+      },
+      "sourced": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 3
+      },
+      "n": 3
+     },
+     "open": {
+      "doc_hit": {
+       "mean": 0.9743589743589743,
+       "ci_low": 0.9230769230769231,
+       "ci_high": 1.0,
+       "n": 39
+      },
+      "doc_mrr": {
+       "mean": 0.8696581196581196,
+       "ci_low": 0.7756410256410257,
+       "ci_high": 0.9529914529914529,
+       "n": 39
+      },
+      "doc_recall": {
+       "mean": 0.9743589743589743,
+       "ci_low": 0.9230769230769231,
+       "ci_high": 1.0,
+       "n": 39
+      },
+      "doc_ndcg": {
+       "mean": 0.6685890035228946,
+       "ci_low": 0.575103087134428,
+       "ci_high": 0.7624738255093895,
+       "n": 39
+      },
+      "passage_hit": {
+       "mean": 0.9487179487179487,
+       "ci_low": 0.8717948717948718,
+       "ci_high": 1.0,
+       "n": 39
+      },
+      "passage_mrr": {
+       "mean": 0.7606837606837608,
+       "ci_low": 0.6517094017094017,
+       "ci_high": 0.8611111111111112,
+       "n": 39
+      },
+      "passage_recall": {
+       "mean": 0.9487179487179487,
+       "ci_low": 0.8717948717948718,
+       "ci_high": 1.0,
+       "n": 39
+      },
+      "obsolete_intrusion": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 39
+      },
+      "answer_terms_in_context": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 39
+      },
+      "correct": {
+       "mean": 0.7948717948717948,
+       "ci_low": 0.6666666666666666,
+       "ci_high": 0.9230769230769231,
+       "n": 39
+      },
+      "false_abstention": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 39
+      },
+      "sourced": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 39
+      },
+      "n": 39
+     },
+     "table": {
+      "doc_hit": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 13
+      },
+      "doc_mrr": {
+       "mean": 0.9102564102564104,
+       "ci_low": 0.782051282051282,
+       "ci_high": 1.0,
+       "n": 13
+      },
+      "doc_recall": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 13
+      },
+      "doc_ndcg": {
+       "mean": 0.7813849799641831,
+       "ci_low": 0.6230867191022459,
+       "ci_high": 0.9081930175378913,
+       "n": 13
+      },
+      "passage_hit": {
+       "mean": 0.6153846153846154,
+       "ci_low": 0.3076923076923077,
+       "ci_high": 0.8461538461538461,
+       "n": 13
+      },
+      "passage_mrr": {
+       "mean": 0.5256410256410257,
+       "ci_low": 0.2692307692307692,
+       "ci_high": 0.7692307692307693,
+       "n": 13
+      },
+      "passage_recall": {
+       "mean": 0.6153846153846154,
+       "ci_low": 0.3076923076923077,
+       "ci_high": 0.8461538461538461,
+       "n": 13
+      },
+      "obsolete_intrusion": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 13
+      },
+      "answer_terms_in_context": {
+       "mean": 0.7692307692307693,
+       "ci_low": 0.46153846153846156,
+       "ci_high": 1.0,
+       "n": 13
+      },
+      "correct": {
+       "mean": 0.5384615384615384,
+       "ci_low": 0.23076923076923078,
+       "ci_high": 0.7692307692307693,
+       "n": 13
+      },
+      "false_abstention": {
+       "mean": 0.07692307692307693,
+       "ci_low": 0.0,
+       "ci_high": 0.23076923076923078,
+       "n": 13
+      },
+      "sourced": {
+       "mean": 0.9230769230769231,
+       "ci_low": 0.7692307692307693,
+       "ci_high": 1.0,
+       "n": 13
+      },
+      "n": 13
+     }
+    },
+    "by_tag": {
+     "abstention": {
+      "abstention_correct": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 18
+      },
+      "sourced": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 18
+      },
+      "n": 18
+     },
+     "contraindication": {
+      "doc_hit": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 5
+      },
+      "doc_mrr": {
+       "mean": 0.8333333333333334,
+       "ci_low": 0.5,
+       "ci_high": 1.0,
+       "n": 5
+      },
+      "doc_recall": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 5
+      },
+      "doc_ndcg": {
+       "mean": 0.6290680720311286,
+       "ci_low": 0.348606494042062,
+       "ci_high": 0.8899517325446474,
+       "n": 5
+      },
+      "passage_hit": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 5
+      },
+      "passage_mrr": {
+       "mean": 0.8666666666666666,
+       "ci_low": 0.6,
+       "ci_high": 1.0,
+       "n": 5
+      },
+      "passage_recall": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 5
+      },
+      "obsolete_intrusion": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 5
+      },
+      "answer_terms_in_context": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 5
+      },
+      "correct": {
+       "mean": 0.8,
+       "ci_low": 0.4,
+       "ci_high": 1.0,
+       "n": 5
+      },
+      "false_abstention": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 5
+      },
+      "sourced": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 5
+      },
+      "n": 5
+     },
+     "dosage": {
+      "doc_hit": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 4
+      },
+      "doc_mrr": {
+       "mean": 0.8333333333333334,
+       "ci_low": 0.5,
+       "ci_high": 1.0,
+       "n": 4
+      },
+      "doc_recall": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 4
+      },
+      "doc_ndcg": {
+       "mean": 0.48311394622110737,
+       "ci_low": 0.2854831066930919,
+       "ci_high": 0.7448087374813203,
+       "n": 4
+      },
+      "passage_hit": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 4
+      },
+      "passage_mrr": {
+       "mean": 0.8333333333333334,
+       "ci_low": 0.5,
+       "ci_high": 1.0,
+       "n": 4
+      },
+      "passage_recall": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 4
+      },
+      "obsolete_intrusion": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 4
+      },
+      "answer_terms_in_context": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 4
+      },
+      "correct": {
+       "mean": 0.75,
+       "ci_low": 0.25,
+       "ci_high": 1.0,
+       "n": 4
+      },
+      "false_abstention": {
+       "mean": 0.25,
+       "ci_low": 0.0,
+       "ci_high": 0.75,
+       "n": 4
+      },
+      "sourced": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 4
+      },
+      "n": 4
+     },
+     "drug_choice": {
+      "doc_hit": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 8
+      },
+      "doc_mrr": {
+       "mean": 0.6458333333333334,
+       "ci_low": 0.3958333333333333,
+       "ci_high": 0.8958333333333334,
+       "n": 8
+      },
+      "doc_recall": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 8
+      },
+      "doc_ndcg": {
+       "mean": 0.37658374062917466,
+       "ci_low": 0.20831943241371095,
+       "ci_high": 0.5804468810010294,
+       "n": 8
+      },
+      "passage_hit": {
+       "mean": 0.875,
+       "ci_low": 0.625,
+       "ci_high": 1.0,
+       "n": 8
+      },
+      "passage_mrr": {
+       "mean": 0.6875,
+       "ci_low": 0.375,
+       "ci_high": 1.0,
+       "n": 8
+      },
+      "passage_recall": {
+       "mean": 0.875,
+       "ci_low": 0.625,
+       "ci_high": 1.0,
+       "n": 8
+      },
+      "obsolete_intrusion": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 8
+      },
+      "answer_terms_in_context": {
+       "mean": 0.875,
+       "ci_low": 0.625,
+       "ci_high": 1.0,
+       "n": 8
+      },
+      "correct": {
+       "mean": 0.875,
+       "ci_low": 0.625,
+       "ci_high": 1.0,
+       "n": 8
+      },
+      "false_abstention": {
+       "mean": 0.125,
+       "ci_low": 0.0,
+       "ci_high": 0.375,
+       "n": 8
+      },
+      "sourced": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 8
+      },
+      "n": 8
+     },
+     "edition_diff": {
+      "doc_hit": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 3
+      },
+      "doc_mrr": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 3
+      },
+      "doc_recall": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 3
+      },
+      "doc_ndcg": {
+       "mean": 0.9495662644168644,
+       "ci_low": 0.8486987932505933,
+       "ci_high": 1.0,
+       "n": 3
+      },
+      "passage_hit": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 3
+      },
+      "passage_mrr": {
+       "mean": 0.7777777777777778,
+       "ci_low": 0.3333333333333333,
+       "ci_high": 1.0,
+       "n": 3
+      },
+      "passage_recall": {
+       "mean": 0.8333333333333334,
+       "ci_low": 0.5,
+       "ci_high": 1.0,
+       "n": 3
+      },
+      "answer_terms_in_context": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 3
+      },
+      "correct": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 3
+      },
+      "false_abstention": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 3
+      },
+      "sourced": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 3
+      },
+      "n": 3
+     },
+     "emergency": {
+      "doc_hit": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 12
+      },
+      "doc_mrr": {
+       "mean": 0.9333333333333332,
+       "ci_low": 0.7999999999999999,
+       "ci_high": 1.0,
+       "n": 12
+      },
+      "doc_recall": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 12
+      },
+      "doc_ndcg": {
+       "mean": 0.707541970417075,
+       "ci_low": 0.5578692193969289,
+       "ci_high": 0.8653993799638724,
+       "n": 12
+      },
+      "passage_hit": {
+       "mean": 0.9166666666666666,
+       "ci_low": 0.75,
+       "ci_high": 1.0,
+       "n": 12
+      },
+      "passage_mrr": {
+       "mean": 0.8611111111111112,
+       "ci_low": 0.6666666666666666,
+       "ci_high": 1.0,
+       "n": 12
+      },
+      "passage_recall": {
+       "mean": 0.9166666666666666,
+       "ci_low": 0.75,
+       "ci_high": 1.0,
+       "n": 12
+      },
+      "obsolete_intrusion": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 12
+      },
+      "answer_terms_in_context": {
+       "mean": 0.9166666666666666,
+       "ci_low": 0.75,
+       "ci_high": 1.0,
+       "n": 12
+      },
+      "correct": {
+       "mean": 0.6666666666666666,
+       "ci_low": 0.4166666666666667,
+       "ci_high": 0.9166666666666666,
+       "n": 12
+      },
+      "false_abstention": {
+       "mean": 0.08333333333333333,
+       "ci_low": 0.0,
+       "ci_high": 0.25,
+       "n": 12
+      },
+      "sourced": {
+       "mean": 0.9166666666666666,
+       "ci_low": 0.75,
+       "ci_high": 1.0,
+       "n": 12
+      },
+      "n": 12
+     },
+     "icu": {
+      "doc_hit": {
+       "mean": 0.9642857142857143,
+       "ci_low": 0.8928571428571429,
+       "ci_high": 1.0,
+       "n": 28
+      },
+      "doc_mrr": {
+       "mean": 0.8851190476190477,
+       "ci_low": 0.7613095238095238,
+       "ci_high": 0.9761904761904762,
+       "n": 28
+      },
+      "doc_recall": {
+       "mean": 0.9642857142857143,
+       "ci_low": 0.8928571428571429,
+       "ci_high": 1.0,
+       "n": 28
+      },
+      "doc_ndcg": {
+       "mean": 0.7033749019348565,
+       "ci_low": 0.582784868344693,
+       "ci_high": 0.8081527759028032,
+       "n": 28
+      },
+      "passage_hit": {
+       "mean": 0.8214285714285714,
+       "ci_low": 0.6785714285714286,
+       "ci_high": 0.9642857142857143,
+       "n": 28
+      },
+      "passage_mrr": {
+       "mean": 0.6589285714285714,
+       "ci_low": 0.5148809523809523,
+       "ci_high": 0.8119047619047619,
+       "n": 28
+      },
+      "passage_recall": {
+       "mean": 0.8214285714285714,
+       "ci_low": 0.6785714285714286,
+       "ci_high": 0.9642857142857143,
+       "n": 28
+      },
+      "obsolete_intrusion": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 28
+      },
+      "answer_terms_in_context": {
+       "mean": 0.8571428571428571,
+       "ci_low": 0.7142857142857143,
+       "ci_high": 0.9642857142857143,
+       "n": 28
+      },
+      "correct": {
+       "mean": 0.75,
+       "ci_low": 0.6071428571428571,
+       "ci_high": 0.8928571428571429,
+       "n": 28
+      },
+      "false_abstention": {
+       "mean": 0.10714285714285714,
+       "ci_low": 0.0,
+       "ci_high": 0.25,
+       "n": 28
+      },
+      "sourced": {
+       "mean": 0.8928571428571429,
+       "ci_low": 0.75,
+       "ci_high": 1.0,
+       "n": 28
+      },
+      "n": 28
+     },
+     "obstetric": {
+      "doc_hit": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 6
+      },
+      "doc_mrr": {
+       "mean": 0.875,
+       "ci_low": 0.625,
+       "ci_high": 1.0,
+       "n": 6
+      },
+      "doc_recall": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 6
+      },
+      "doc_ndcg": {
+       "mean": 0.6700589287132118,
+       "ci_low": 0.41798497526181877,
+       "ci_high": 0.9103076643360085,
+       "n": 6
+      },
+      "passage_hit": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 6
+      },
+      "passage_mrr": {
+       "mean": 0.7916666666666666,
+       "ci_low": 0.5416666666666666,
+       "ci_high": 1.0,
+       "n": 6
+      },
+      "passage_recall": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 6
+      },
+      "obsolete_intrusion": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 6
+      },
+      "answer_terms_in_context": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 6
+      },
+      "correct": {
+       "mean": 0.8333333333333334,
+       "ci_low": 0.5,
+       "ci_high": 1.0,
+       "n": 6
+      },
+      "false_abstention": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 6
+      },
+      "sourced": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 6
+      },
+      "n": 6
+     },
+     "other": {
+      "doc_hit": {
+       "mean": 0.8571428571428571,
+       "ci_low": 0.6666666666666666,
+       "ci_high": 1.0,
+       "n": 21
+      },
+      "doc_mrr": {
+       "mean": 0.7634920634920636,
+       "ci_low": 0.5857142857142857,
+       "ci_high": 0.9238095238095237,
+       "n": 21
+      },
+      "doc_recall": {
+       "mean": 0.8571428571428571,
+       "ci_low": 0.6666666666666666,
+       "ci_high": 1.0,
+       "n": 21
+      },
+      "doc_ndcg": {
+       "mean": 0.5141984791326991,
+       "ci_low": 0.3633323029986037,
+       "ci_high": 0.6495707671388196,
+       "n": 21
+      },
+      "passage_hit": {
+       "mean": 0.7142857142857143,
+       "ci_low": 0.5238095238095238,
+       "ci_high": 0.9047619047619048,
+       "n": 21
+      },
+      "passage_mrr": {
+       "mean": 0.5809523809523809,
+       "ci_low": 0.38095238095238093,
+       "ci_high": 0.7714285714285714,
+       "n": 21
+      },
+      "passage_recall": {
+       "mean": 0.7142857142857143,
+       "ci_low": 0.5238095238095238,
+       "ci_high": 0.9047619047619048,
+       "n": 21
+      },
+      "obsolete_intrusion": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 21
+      },
+      "answer_terms_in_context": {
+       "mean": 0.8095238095238095,
+       "ci_low": 0.6190476190476191,
+       "ci_high": 0.9523809523809523,
+       "n": 21
+      },
+      "correct": {
+       "mean": 0.7142857142857143,
+       "ci_low": 0.5238095238095238,
+       "ci_high": 0.9047619047619048,
+       "n": 21
+      },
+      "false_abstention": {
+       "mean": 0.23809523809523808,
+       "ci_low": 0.09523809523809523,
+       "ci_high": 0.42857142857142855,
+       "n": 21
+      },
+      "sourced": {
+       "mean": 0.8095238095238095,
+       "ci_low": 0.6190476190476191,
+       "ci_high": 0.9523809523809523,
+       "n": 21
+      },
+      "n": 21
+     },
+     "pediatric": {
+      "doc_hit": {
+       "mean": 0.9,
+       "ci_low": 0.7,
+       "ci_high": 1.0,
+       "n": 10
+      },
+      "doc_mrr": {
+       "mean": 0.7833333333333333,
+       "ci_low": 0.55,
+       "ci_high": 1.0,
+       "n": 10
+      },
+      "doc_recall": {
+       "mean": 0.9,
+       "ci_low": 0.7,
+       "ci_high": 1.0,
+       "n": 10
+      },
+      "doc_ndcg": {
+       "mean": 0.6188852412380539,
+       "ci_low": 0.3965497367668972,
+       "ci_high": 0.8302602413498814,
+       "n": 10
+      },
+      "passage_hit": {
+       "mean": 0.9,
+       "ci_low": 0.7,
+       "ci_high": 1.0,
+       "n": 10
+      },
+      "passage_mrr": {
+       "mean": 0.7833333333333333,
+       "ci_low": 0.55,
+       "ci_high": 1.0,
+       "n": 10
+      },
+      "passage_recall": {
+       "mean": 0.9,
+       "ci_low": 0.7,
+       "ci_high": 1.0,
+       "n": 10
+      },
+      "obsolete_intrusion": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 10
+      },
+      "answer_terms_in_context": {
+       "mean": 0.9,
+       "ci_low": 0.7,
+       "ci_high": 1.0,
+       "n": 10
+      },
+      "correct": {
+       "mean": 0.7,
+       "ci_low": 0.4,
+       "ci_high": 1.0,
+       "n": 10
+      },
+      "false_abstention": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 10
+      },
+      "sourced": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 10
+      },
+      "n": 10
+     },
+     "reco": {
+      "doc_hit": {
+       "mean": 0.9743589743589743,
+       "ci_low": 0.9230769230769231,
+       "ci_high": 1.0,
+       "n": 39
+      },
+      "doc_mrr": {
+       "mean": 0.8696581196581196,
+       "ci_low": 0.7756410256410257,
+       "ci_high": 0.9529914529914529,
+       "n": 39
+      },
+      "doc_recall": {
+       "mean": 0.9743589743589743,
+       "ci_low": 0.9230769230769231,
+       "ci_high": 1.0,
+       "n": 39
+      },
+      "doc_ndcg": {
+       "mean": 0.6685890035228946,
+       "ci_low": 0.575103087134428,
+       "ci_high": 0.7624738255093895,
+       "n": 39
+      },
+      "passage_hit": {
+       "mean": 0.9487179487179487,
+       "ci_low": 0.8717948717948718,
+       "ci_high": 1.0,
+       "n": 39
+      },
+      "passage_mrr": {
+       "mean": 0.7606837606837608,
+       "ci_low": 0.6517094017094017,
+       "ci_high": 0.8611111111111112,
+       "n": 39
+      },
+      "passage_recall": {
+       "mean": 0.9487179487179487,
+       "ci_low": 0.8717948717948718,
+       "ci_high": 1.0,
+       "n": 39
+      },
+      "obsolete_intrusion": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 39
+      },
+      "answer_terms_in_context": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 39
+      },
+      "correct": {
+       "mean": 0.7948717948717948,
+       "ci_low": 0.6666666666666666,
+       "ci_high": 0.9230769230769231,
+       "n": 39
+      },
+      "false_abstention": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 39
+      },
+      "sourced": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 39
+      },
+      "n": 39
+     },
+     "table": {
+      "doc_hit": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 13
+      },
+      "doc_mrr": {
+       "mean": 0.9102564102564104,
+       "ci_low": 0.782051282051282,
+       "ci_high": 1.0,
+       "n": 13
+      },
+      "doc_recall": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 13
+      },
+      "doc_ndcg": {
+       "mean": 0.7813849799641831,
+       "ci_low": 0.6230867191022459,
+       "ci_high": 0.9081930175378913,
+       "n": 13
+      },
+      "passage_hit": {
+       "mean": 0.6153846153846154,
+       "ci_low": 0.3076923076923077,
+       "ci_high": 0.8461538461538461,
+       "n": 13
+      },
+      "passage_mrr": {
+       "mean": 0.5256410256410257,
+       "ci_low": 0.2692307692307692,
+       "ci_high": 0.7692307692307693,
+       "n": 13
+      },
+      "passage_recall": {
+       "mean": 0.6153846153846154,
+       "ci_low": 0.3076923076923077,
+       "ci_high": 0.8461538461538461,
+       "n": 13
+      },
+      "obsolete_intrusion": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 13
+      },
+      "answer_terms_in_context": {
+       "mean": 0.7692307692307693,
+       "ci_low": 0.46153846153846156,
+       "ci_high": 1.0,
+       "n": 13
+      },
+      "correct": {
+       "mean": 0.5384615384615384,
+       "ci_low": 0.23076923076923078,
+       "ci_high": 0.7692307692307693,
+       "n": 13
+      },
+      "false_abstention": {
+       "mean": 0.07692307692307693,
+       "ci_low": 0.0,
+       "ci_high": 0.23076923076923078,
+       "n": 13
+      },
+      "sourced": {
+       "mean": 0.9230769230769231,
+       "ci_low": 0.7692307692307693,
+       "ci_high": 1.0,
+       "n": 13
+      },
+      "n": 13
+     },
+     "threshold": {
+      "doc_hit": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 9
+      },
+      "doc_mrr": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 9
+      },
+      "doc_recall": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 9
+      },
+      "doc_ndcg": {
+       "mean": 0.7683382014886736,
+       "ci_low": 0.6603316214159266,
+       "ci_high": 0.8811347193961168,
+       "n": 9
+      },
+      "passage_hit": {
+       "mean": 0.6666666666666666,
+       "ci_low": 0.3333333333333333,
+       "ci_high": 1.0,
+       "n": 9
+      },
+      "passage_mrr": {
+       "mean": 0.5777777777777778,
+       "ci_low": 0.26666666666666666,
+       "ci_high": 0.8888888888888888,
+       "n": 9
+      },
+      "passage_recall": {
+       "mean": 0.6666666666666666,
+       "ci_low": 0.3333333333333333,
+       "ci_high": 1.0,
+       "n": 9
+      },
+      "obsolete_intrusion": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 9
+      },
+      "answer_terms_in_context": {
+       "mean": 0.8888888888888888,
+       "ci_low": 0.6666666666666666,
+       "ci_high": 1.0,
+       "n": 9
+      },
+      "correct": {
+       "mean": 0.6666666666666666,
+       "ci_low": 0.3333333333333333,
+       "ci_high": 1.0,
+       "n": 9
+      },
+      "false_abstention": {
+       "mean": 0.1111111111111111,
+       "ci_low": 0.0,
+       "ci_high": 0.3333333333333333,
+       "n": 9
+      },
+      "sourced": {
+       "mean": 0.8888888888888888,
+       "ci_low": 0.6666666666666666,
+       "ci_high": 1.0,
+       "n": 9
+      },
+      "n": 9
+     },
+     "timing": {
+      "doc_hit": {
+       "mean": 0.75,
+       "ci_low": 0.25,
+       "ci_high": 1.0,
+       "n": 4
+      },
+      "doc_mrr": {
+       "mean": 0.75,
+       "ci_low": 0.25,
+       "ci_high": 1.0,
+       "n": 4
+      },
+      "doc_recall": {
+       "mean": 0.75,
+       "ci_low": 0.25,
+       "ci_high": 1.0,
+       "n": 4
+      },
+      "doc_ndcg": {
+       "mean": 0.35579806234858424,
+       "ci_low": 0.10491625165919426,
+       "ci_high": 0.5574554070721192,
+       "n": 4
+      },
+      "passage_hit": {
+       "mean": 0.75,
+       "ci_low": 0.25,
+       "ci_high": 1.0,
+       "n": 4
+      },
+      "passage_mrr": {
+       "mean": 0.75,
+       "ci_low": 0.25,
+       "ci_high": 1.0,
+       "n": 4
+      },
+      "passage_recall": {
+       "mean": 0.75,
+       "ci_low": 0.25,
+       "ci_high": 1.0,
+       "n": 4
+      },
+      "obsolete_intrusion": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 4
+      },
+      "answer_terms_in_context": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 4
+      },
+      "correct": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 4
+      },
+      "false_abstention": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 4
+      },
+      "sourced": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 4
+      },
+      "n": 4
+     }
+    }
+   },
+   "rows": [
+    {
+     "id": "MR-g3b9708b3518cddf9bccf",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "open",
+     "tags": [
+      "emergency",
+      "reco"
+     ],
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 1.0,
+     "passage_hit": 1.0,
+     "passage_mrr": 1.0,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 0.0,
+     "correct": 0.0,
+     "sourced": 1.0,
+     "answer": "Oui, après une imagerie cérébrale normale, un patient sous anticoagulant peut être autorisé à rentrer à domicile, sous réserve de répondre aux éléments cliniques requis [S1]. Les critères sont : l'absence d'intoxication associée, l'absence de vomissements itératifs, l'absence de céphalées importantes persistantes, un Score de Glasgow à 15, l'absence de déficit neurologique et l'absence d'autres motifs pouvant justifier une hospitalisation [S1].\nSource : Prise en charge des patients présentant un traumatisme crânien léger de l’adulte — RPP SFAR 2022 (avis d'experts, accord fort)."
+    },
+    {
+     "id": "MR-gfff2848a70957ac0b7b5",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "clinical_case",
+     "tags": [
+      "emergency",
+      "other"
+     ],
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 0.7653606369886217,
+     "passage_hit": 1.0,
+     "passage_mrr": 1.0,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 0.0,
+     "correct": 1.0,
+     "sourced": 1.0,
+     "answer": "Il faut réaliser un scanner cérébral avec injection, car le syndrome de Claude Bernard Horner et la fracture du rachis cervical sont des signes cliniques évocateurs de dissection carotidienne [S1][S2].\nSource : Prise en charge des patients présentant un traumatisme crânien léger de l’adulte — RPP SFAR 2022 (avis d'experts, accord fort)."
+    },
+    {
+     "id": "MR-g8f23afa63325b0d08bd8",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "clinical_case",
+     "tags": [
+      "emergency",
+      "other"
+     ],
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 0.45390362024822023,
+     "passage_hit": 1.0,
+     "passage_mrr": 1.0,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 0.0,
+     "correct": 1.0,
+     "sourced": 1.0,
+     "answer": "En cas d'hémopéritoine abondant avec un scanner incompatible avec l'état du patient, la conduite est un traitement opératoire précoce [S1][S3]. Il s'agit d'une laparotomie selon les règles de « damage control » : procédure écourtée, abord xypho-pubien, contrôle simple des sites hémorragiques, packing hépatique, coprostase, fermeture par VAC ou fermeture cutanée seule [S3]. Le délai avant laparotomie majore la mortalité, de 1% par tranche de 3 min en cas d'instabilité hémodynamique après traumatisme abdominal fermé [S5].\nSource : Prise en charge du traumatisme abdominal grave de l’adulte : les 48 premières heures — RFE SFAR 2019."
+    },
+    {
+     "id": "MR-g8e54d9655989718c1639",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "open",
+     "tags": [
+      "contraindication",
+      "icu",
+      "reco"
+     ],
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 1.0,
+     "passage_hit": 1.0,
+     "passage_mrr": 1.0,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 0.0,
+     "correct": 1.0,
+     "sourced": 1.0,
+     "answer": "Non : chez un patient dans le coma avec une méningite bactérienne, en l'absence d'HTIC, il ne faut probablement pas pratiquer d'hypothermie, en comparaison avec une normothermie, dans le but d'améliorer la survie avec bon pronostic neurologique [S2].\nSource : Contrôle cible de la température en réanimation (hors nouveau-nés) — RFE SFAR 2016 (R4.3, avis d'experts)."
+    },
+    {
+     "id": "MR-gd1b252c6b18be4bca7b6",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "clinical_case",
+     "tags": [
+      "icu",
+      "other",
+      "threshold"
+     ],
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 0.6577779270716586,
+     "passage_hit": 1.0,
+     "passage_mrr": 0.2,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 0.0,
+     "correct": 1.0,
+     "sourced": 1.0,
+     "answer": "Non : les études ne montrent pas de bénéfice supplémentaire sur la PIC à diminuer la température à 31 °C en cas d'HTIC persistante à 34 °C [S5]. Chez les traumatisés crâniens avec hypertension intracrânienne malgré un traitement médical bien conduit, il faut probablement pratiquer un CCT entre 34 et 35 °C dans le but de faire baisser la pression intracrânienne [S4][S2]. Un CCT entre 32 et 35 °C pour traiter une HTIC peut entraîner des effets secondaires proportionnels à la durée et à la profondeur de l'hypothermie [S5].\nSource : Contrôle cible de la température en réanimation (hors nouveau-nés) — RFE SFAR 2016 (R2.3, Grade 2+, accord fort) ; Prise en charge des traumatisés crâniens graves à la phase précoce (24 premières heures) — RFE SFAR 2016 (R12.3, GRADE 2+, accord fort)."
+    },
+    {
+     "id": "MR-gd9a325c36650ee68a17f",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "open",
+     "tags": [
+      "icu",
+      "pediatric",
+      "reco"
+     ],
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 1.0,
+     "passage_hit": 1.0,
+     "passage_mrr": 0.5,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 0.0,
+     "correct": 1.0,
+     "sourced": 1.0,
+     "answer": "Oui : les données rapportées chez l'adulte concernant le CCT visant la normothermie au cours de l'état de mal épileptique peuvent, selon les experts pédiatres, s'appliquer à l'enfant [S2]. Chez l'enfant présentant un état de mal épileptique, il faut probablement réaliser un CCT (normothermie) à visée neuroprotectrice [S4].\nSource : Contrôle cible de la température en réanimation (hors nouveau-nés) — RFE SFAR 2016 (avis d'experts)."
+    },
+    {
+     "id": "MR-ge6178ab7ed0b124f3edc",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "open",
+     "tags": [
+      "reco"
+     ],
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 0.6992148198508501,
+     "passage_hit": 1.0,
+     "passage_mrr": 1.0,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 0.0,
+     "correct": 0.0,
+     "sourced": 1.0,
+     "answer": "Non : il est recommandé de ne pas prescrire de manière systématique une radiographie de thorax préinterventionnelle en chirurgie non cardiothoracique, quel que soit l'âge du patient, sauf en cas de pathologie cardiopulmonaire évolutive ou aiguë [S1]. Il n'existe pas d'argument permettant de recommander la réalisation d'une radiographie de thorax d'un âge seuil [S2].\nSource : Examens pré-interventionnels systématiques — RFE SFAR 2012 (GRADE 1-)."
+    },
+    {
+     "id": "MR-g2c188878f4fca6996f4b",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "table",
+     "tags": [
+      "table",
+      "threshold"
+     ],
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 0.7039180890341347,
+     "passage_hit": 1.0,
+     "passage_mrr": 1.0,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 0.0,
+     "correct": 0.0,
+     "sourced": 1.0,
+     "answer": "Une endartériectomie carotidienne se situe dans la catégorie de risque intermédiaire (1 % à 5 % de décès + infarctus du myocarde) [S1]. Les chirurgies vasculaires sont considérées comme à haut risque, hormis l'endartériectomie carotidienne [S2].\nSource : Examens pré-interventionnels systématiques — RFE SFAR 2012 (annexe A) ; Prise en charge du coronarien qui doit être opéré en chirurgie non cardiaque — RFE SFAR 2010."
+    },
+    {
+     "id": "MR-gae3cda1acd4e903f01fd",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "clinical_case",
+     "tags": [
+      "other"
+     ],
+     "doc_hit": 0.0,
+     "doc_mrr": 0.0,
+     "doc_recall": 0.0,
+     "doc_ndcg": 0.0,
+     "passage_hit": 0.0,
+     "passage_mrr": 0.0,
+     "passage_recall": 0.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 1.0,
+     "correct": 0.0,
+     "sourced": 0.0,
+     "answer": "Les recommandations SFAR fournies ne traitent pas cette question."
+    },
+    {
+     "id": "MR-geb9482ee3d54334a43fd",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "open",
+     "tags": [
+      "pediatric",
+      "reco",
+      "timing"
+     ],
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 0.419665006636777,
+     "passage_hit": 1.0,
+     "passage_mrr": 1.0,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 0.0,
+     "correct": 1.0,
+     "sourced": 1.0,
+     "answer": "Programmer l'intervention le plus tôt possible dans la matinée, afin de permettre la sortie après une surveillance postopératoire de six heures [S1]. La sortie est autorisée seulement après une surveillance de six heures au minimum dans l'unité d'ambulatoire [S3].\nSource : Anesthésie pour amygdalectomie chez l’enfant — RFE SFAR 2005 (accord fort)."
+    },
+    {
+     "id": "MR-g9dbb7b8cb49592f9fa97",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "clinical_case",
+     "tags": [
+      "other",
+      "pediatric"
+     ],
+     "doc_hit": 1.0,
+     "doc_mrr": 0.3333333333333333,
+     "doc_recall": 1.0,
+     "doc_ndcg": 0.15130120674940675,
+     "passage_hit": 1.0,
+     "passage_mrr": 0.3333333333333333,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 0.0,
+     "correct": 1.0,
+     "sourced": 1.0,
+     "answer": "Oui : lorsque l'évaluation préopératoire ne peut être considérée comme fiable, notamment chez l'enfant de moins de trois ans, une étude de l'hémostase doit être réalisée [S3]. L'interrogatoire n'est pas fiable chez l'enfant en deçà de l'âge de la marche, généralement fixé à trois ans [S1]. Si des examens d'hémostase sont prescrits, le temps de céphaline avec activateur et la numération plaquettaire sont les tests les plus utiles [S3].\nSource : Anesthésie pour amygdalectomie chez l’enfant — RFE SFAR 2005 (accord fort)."
+    },
+    {
+     "id": "MR-gbe3dad7d7f9b1ae34b88",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "table",
+     "tags": [
+      "icu",
+      "table"
+     ],
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 1.0,
+     "passage_hit": 1.0,
+     "passage_mrr": 1.0,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 0.0,
+     "correct": 1.0,
+     "sourced": 1.0,
+     "answer": "Il faut surveiller l'hypokaliémie, l'hypomagnésémie et l'insuffisance rénale, ainsi que la fièvre et les frissons lors de l'injection et la cytopénie [S1][S2].\nSource : Prise en charge des candidoses et aspergilloses invasives de l’adulte — RFE SFAR 2004."
+    },
+    {
+     "id": "MR-gc1eeae015b45990b618e",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "clinical_case",
+     "tags": [
+      "icu",
+      "other"
+     ],
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 0.46927872602275644,
+     "passage_hit": 1.0,
+     "passage_mrr": 1.0,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 0.0,
+     "correct": 1.0,
+     "sourced": 1.0,
+     "answer": "La présence de Candida sp. dans les sécrétions provenant des voies aériennes inférieures, y compris le lavage broncho-alvéolaire, n'a pas de valeur diagnostique (B3) [S1].\nSource : Prise en charge des candidoses et aspergilloses invasives de l’adulte — RFE SFAR 2004 (B3)."
+    },
+    {
+     "id": "MR-g28ea0199f37013bf91f9",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "open",
+     "tags": [
+      "reco"
+     ],
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 0.6131471927654584,
+     "passage_hit": 1.0,
+     "passage_mrr": 1.0,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 0.0,
+     "correct": 1.0,
+     "sourced": 1.0,
+     "answer": "La décision finale de l'indication d'anesthésie et de ses modalités relève de la responsabilité du médecin anesthésiste-réanimateur [S1]. Une concertation réelle et sérieuse doit précéder les décisions en cas de désaccord entre les intervenants [S1].\nSource : Recommandations concernant les relations entre anesthésistes-réanimateurs et chirurgiens, autres spécialistes ou professionnels de santé — RFE SFAR 2001."
+    },
+    {
+     "id": "MR-g6951bd8344b814c79f7e",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "table",
+     "tags": [
+      "dosage",
+      "icu",
+      "table"
+     ],
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 0.8922108454754891,
+     "passage_hit": 1.0,
+     "passage_mrr": 0.3333333333333333,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 0.0,
+     "correct": 0.0,
+     "sourced": 1.0,
+     "answer": "Il faut l'absence de réponse après 2 jours consécutifs d'arrêt des diurétiques et de remplissage vasculaire par de l'albumine (1 g/kg) [S3]. Cette épreuve s'inscrit dans la prise en charge de l'IRA du cirrhotique avec administration d'albumine 1 g/kg pendant 48 h au stade 2-3 [S4].\nSource : Insuffisance hépatique en soins critiques — RFE SFAR 2018."
+    },
+    {
+     "id": "MR-g392fcc10d6909f623c73",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "clinical_case",
+     "tags": [
+      "dosage",
+      "drug_choice",
+      "other"
+     ],
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 0.3026024134988135,
+     "passage_hit": 1.0,
+     "passage_mrr": 1.0,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 1.0,
+     "correct": 1.0,
+     "sourced": 1.0,
+     "answer": "Chez les patients hospitalisés avec COVID-19, la prévention de la maladie thromboembolique par une HBPM est l'option de choix, mais il est vraisemblable que les posologies validées en médecine soient fréquemment insuffisantes, notamment dans les formes sévères et en cas d'obésité [S1]. Il est suggéré d'ajuster l'anticoagulation au poids ou à l'IMC des patients COVID-19 [S3]. Les patients avec une forme sévère (oxygénothérapie à plus de 6 L/min ou ventilation mécanique) devraient recevoir au moins une anticoagulation prophylactique à dose intermédiaire [S2].\nSource : Traitement anticoagulants patients COVID-19 — RFE SFAR 2020 ; Prévention du risque thromboembolique veineux et surveillance de l’hémostase chez les patients hospitalisés pour covid-19 : propositions réactualisées (avril 2021) — RFE SFAR 2021 (suggestions)."
+    },
+    {
+     "id": "MR-g6d75a0524a3097e36863",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "open",
+     "tags": [
+      "emergency",
+      "reco"
+     ],
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 1.0,
+     "passage_hit": 1.0,
+     "passage_mrr": 1.0,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 0.0,
+     "correct": 1.0,
+     "sourced": 1.0,
+     "answer": "Les deux objectifs initiaux sont le contrôle de l'hémorragie et de la contamination périnéale [S1]. Il est aussi probablement recommandé de prendre en charge ces traumatismes dans des centres de référence [S1].\nSource : Prise en charge des traumatisés pelviens graves à la phase précoce (24 premières heures) — RFE SFAR 2017 (R2.17, GRADE 1+, accord fort ; R2.16, GRADE 2+, accord fort)."
+    },
+    {
+     "id": "MR-g424483aecf041277fed5",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "open",
+     "tags": [
+      "reco"
+     ],
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 1.0,
+     "passage_hit": 1.0,
+     "passage_mrr": 0.5,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 0.0,
+     "correct": 1.0,
+     "sourced": 1.0,
+     "answer": "Il est recommandé d'utiliser un programme de réhabilitation améliorée après chirurgie, incluant la mobilisation précoce postopératoire, pour diminuer l'incidence de complications postopératoires et la durée d'hospitalisation [S2]. Il est probablement recommandé de favoriser les approches minimalement invasives par thoracoscopie, et il est recommandé de ne placer qu'un seul drain thoracique [S6][S5]. L'utilisation préventive de la VNI n'est probablement pas recommandée [S1].\nSource : Réhabilitation améliorée après lobectomie pulmonaire — RFE SFAR 2019 (R5.4, GRADE 1+ ; R4.1, GRADE 2+ ; R4.4.1, GRADE 1+, accord fort)."
+    },
+    {
+     "id": "MR-ga86840965e184a4c0f3d",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "clinical_case",
+     "tags": [
+      "other"
+     ],
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 0.3026024134988135,
+     "passage_hit": 1.0,
+     "passage_mrr": 1.0,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 0.0,
+     "correct": 1.0,
+     "sourced": 1.0,
+     "answer": "Un supplément d'information apporté par un support vidéo permet une réduction significative des scores d'anxiété et une amélioration de la satisfaction globale chez les patients de chirurgie thoracique [S1].\nSource : Réhabilitation améliorée après lobectomie pulmonaire — RFE SFAR 2019."
+    },
+    {
+     "id": "MR-g26cc210b12a24bc1dcf5",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "clinical_case",
+     "tags": [
+      "icu",
+      "other"
+     ],
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 0.7860137352654724,
+     "passage_hit": 1.0,
+     "passage_mrr": 0.3333333333333333,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 0.0,
+     "correct": 1.0,
+     "sourced": 1.0,
+     "answer": "Chez l'homme, le poids théorique (kg) = 50 + 0,91 × [taille (cm) − 152,4] [S3].\nSource : Recommandations pour la prise en charge du SDRA — RFE SFAR 2018."
+    },
+    {
+     "id": "MR-gb9a942c3d4de87e96a69",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "open",
+     "tags": [
+      "icu",
+      "reco"
+     ],
+     "doc_hit": 1.0,
+     "doc_mrr": 0.3333333333333333,
+     "doc_recall": 1.0,
+     "doc_ndcg": 0.37615295441188124,
+     "passage_hit": 1.0,
+     "passage_mrr": 0.3333333333333333,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 0.0,
+     "correct": 1.0,
+     "sourced": 1.0,
+     "answer": "Il est probablement recommandé que les patients adultes atteints de SDRA modéré à sévère soient ventilés avec une PEP élevée plutôt qu'avec une PEP basse [S3]. En cas de sepsis, il est suggéré d'utiliser un niveau élevé de PEP après élimination d'une défaillance cardiaque droite [S4].\nSource : Recommandations pour la prise en charge du SDRA — RFE SFAR 2018 (R4, GRADE 2+) ; Prise en charge du sepsis du nouveau-né, de l’enfant et de l’adulte — HAS SFAR 2025 (recommandation conditionnelle, faible niveau de certitude)."
+    },
+    {
+     "id": "MR-g448aac5e0ca03eebb7fb",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "open",
+     "tags": [
+      "contraindication",
+      "icu",
+      "reco"
+     ],
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 0.419665006636777,
+     "passage_hit": 1.0,
+     "passage_mrr": 1.0,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 0.0,
+     "correct": 1.0,
+     "sourced": 1.0,
+     "answer": "La VNI ne fait pas la preuve d'un avantage et il ne faut probablement pas l'entreprendre dans la pneumopathie hypoxémiante, le syndrome de détresse respiratoire aiguë, le traitement de l'insuffisance respiratoire aiguë post extubation et les maladies neuromusculaires aiguës réversibles [S1]. Pour l'asthme aigu grave et le syndrome d'obésité hypoventilation, il n'a pas été possible de déterminer l'attitude [S1].\nSource : Ventilation Non Invasive au cours de l’insuffisance respiratoire aiguë (nouveau-né exclu) — RFE SFAR 2006."
+    },
+    {
+     "id": "MR-gace2db46f6d0fbc9a4b7",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "clinical_case",
+     "tags": [
+      "emergency",
+      "icu",
+      "other"
+     ],
+     "doc_hit": 1.0,
+     "doc_mrr": 0.2,
+     "doc_recall": 1.0,
+     "doc_ndcg": 0.13120507751234178,
+     "passage_hit": 0.0,
+     "passage_mrr": 0.0,
+     "passage_recall": 0.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 0.0,
+     "false_abstention": 1.0,
+     "correct": 0.0,
+     "sourced": 0.0,
+     "answer": "Les recommandations SFAR fournies ne traitent pas cette question."
+    },
+    {
+     "id": "MR-gfc720f85a7e4c8f6d739",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "open",
+     "tags": [
+      "reco"
+     ],
+     "doc_hit": 1.0,
+     "doc_mrr": 0.5,
+     "doc_recall": 1.0,
+     "doc_ndcg": 0.30798345931689824,
+     "passage_hit": 1.0,
+     "passage_mrr": 0.5,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 0.0,
+     "correct": 1.0,
+     "sourced": 1.0,
+     "answer": "Il faut probablement recommander une gouttière sur mesure plutôt qu'une gouttière standard, et tracer l'information dans le dossier « incité à fournir un protège-dents sur mesure » [S3][S2]. La gouttière sur mesure permet une protection des dents maxillaires de meilleure qualité que les gouttières standards, sans aggraver les conditions d'intubation [S6].\nSource : Bris dentaires périanesthésiques — RFE SFAR 2012."
+    },
+    {
+     "id": "MR-g655c1a5b2a8ff63dc61f",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "open",
+     "tags": [
+      "pediatric",
+      "reco"
+     ],
+     "doc_hit": 1.0,
+     "doc_mrr": 0.5,
+     "doc_recall": 1.0,
+     "doc_ndcg": 0.38685280723454163,
+     "passage_hit": 1.0,
+     "passage_mrr": 1.0,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 0.0,
+     "correct": 1.0,
+     "sourced": 1.0,
+     "answer": "Non : chez l'enfant, il ne faut pas réimplanter une dent temporaire en cas de luxation complète, au risque d'altérer le bourgeon dentaire de la dent définitive [S1][S2]. La dent temporaire luxée est remise aux parents [S1].\n\nSource : Bris dentaires périanesthésiques, RFE SFAR 2012."
+    },
+    {
+     "id": "MR-g32226ce0e89926e25109",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "table",
+     "tags": [
+      "table",
+      "threshold"
+     ],
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 0.6131471927654584,
+     "passage_hit": 0.0,
+     "passage_mrr": 0.0,
+     "passage_recall": 0.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 0.0,
+     "correct": 1.0,
+     "sourced": 1.0,
+     "answer": "Avec une HbA1c à 10 % (> 9 %), il faut différer la chirurgie [S1].\n\nSource : Prise en charge du patient diabétique en péri opératoire, Préconisation SFAR 2025."
+    },
+    {
+     "id": "MR-g9f4e50ab33c87f6858b4",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "open",
+     "tags": [
+      "icu",
+      "reco"
+     ],
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 0.644824486427155,
+     "passage_hit": 1.0,
+     "passage_mrr": 1.0,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 0.0,
+     "correct": 0.0,
+     "sourced": 1.0,
+     "answer": "Le consultant doit être au moins un médecin extérieur à l'équipe, sans aucun rapport hiérarchique avec elle (« consultant extérieur ») [S6]. Il donne un avis motivé au praticien en charge du patient et ne peut donc pas être son chef de service ou de pôle [S1][S2]. L'avis motivé d'un deuxième consultant est demandé si l'un des deux médecins l'estime utile [S1][S2].\n\nSource : Décisions de limitation et d'arrêt de traitements (LAT) en soins critiques de l'adulte, RFE SFAR 2026 (Mise à jour 2026) ; Recommandations de bonnes pratiques cliniques concernant l'application de la loi n° 2005-370 du 22 avril 2005, RFE SFAR 2005."
+    },
+    {
+     "id": "MR-gb3d45a182edaa9519369",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "clinical_case",
+     "tags": [
+      "icu",
+      "other"
+     ],
+     "doc_hit": 0.0,
+     "doc_mrr": 0.0,
+     "doc_recall": 0.0,
+     "doc_ndcg": 0.0,
+     "passage_hit": 0.0,
+     "passage_mrr": 0.0,
+     "passage_recall": 0.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 0.0,
+     "false_abstention": 1.0,
+     "correct": 0.0,
+     "sourced": 0.0,
+     "answer": "Les recommandations SFAR fournies ne traitent pas cette question."
+    },
+    {
+     "id": "MR-g3bd1e3f5c8f306008b76",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "open",
+     "tags": [
+      "emergency",
+      "reco"
+     ],
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 0.7526136409516658,
+     "passage_hit": 1.0,
+     "passage_mrr": 0.3333333333333333,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 0.0,
+     "correct": 1.0,
+     "sourced": 1.0,
+     "answer": "Non : en cas d'hématome extradural d'origine veineuse, les experts suggèrent d'évaluer la balance bénéfice-risque d'une prise en charge conservatrice au cas par cas, y compris en présence de signe de gravité clinique ou radiologique [S3]. Si un traitement conservateur est décidé, il est probablement recommandé d'effectuer une surveillance clinique rapprochée dans un centre doté d'un service de neurochirurgie [S3] et un scanner de contrôle systématiquement à 6 heures post-traumatisme, si le premier scanner a été fait avant H6, ou plus précocement en cas d'aggravation clinique [S6].\n\nSource : Prise en charge neurochirurgicales des traumatismes cranio-encéphaliques de l'adulte et de l'enfant à la phase initiale, RPP SFAR 2025 (avis d'experts, accord fort ; GRADE 2, accord fort pour le scanner de contrôle)."
+    },
+    {
+     "id": "MR-g83a9315591cd44551dbc",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "open",
+     "tags": [
+      "reco"
+     ],
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 1.0,
+     "passage_hit": 1.0,
+     "passage_mrr": 0.25,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 0.0,
+     "correct": 1.0,
+     "sourced": 1.0,
+     "answer": "Chez un patient curarisé, les moniteurs de profondeur d'anesthésie pourraient permettre de détecter un sous- ou un surdosage anesthésique, les signes cliniques d'anesthésie étant modifiés par les curares [S4].\n\nSource : Monitorage de l'adéquation / profondeur de l'anesthésie à partir de l'analyse de l'EEG cortical, RFE SFAR 2010 (avis d'experts)."
+    },
+    {
+     "id": "MR-gbc67a0eb3b22c1690c0c",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "table",
+     "tags": [
+      "table",
+      "threshold"
+     ],
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 1.0,
+     "passage_hit": 0.0,
+     "passage_mrr": 0.0,
+     "passage_recall": 0.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 0.0,
+     "correct": 1.0,
+     "sourced": 1.0,
+     "answer": "À 0,5 CAM de sévoflurane, l'index bispectral attendu est de 45 [S1].\n\nSource : Monitorage de l'adéquation / profondeur de l'anesthésie à partir de l'analyse de l'EEG cortical, RFE SFAR 2010."
+    },
+    {
+     "id": "MR-gff794cd57325dca363d6",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "clinical_case",
+     "tags": [
+      "other"
+     ],
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 0.6787553679106948,
+     "passage_hit": 1.0,
+     "passage_mrr": 0.3333333333333333,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 0.0,
+     "correct": 1.0,
+     "sourced": 1.0,
+     "answer": "Les moniteurs de profondeur de l'anesthésie pourraient être utiles pour affiner le raisonnement médical chez les patients pour lesquels la relation dose - concentration - effets des médicaments anesthésiques est inhabituelle [S3]. Ils peuvent permettre de détecter plus facilement le sous- et le surdosage anesthésique dans ces populations [S3].\n\nSource : Monitorage de l'adéquation / profondeur de l'anesthésie à partir de l'analyse de l'EEG cortical, RFE SFAR 2010."
+    },
+    {
+     "id": "MR-gcb6edd578e226e2bf83b",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "open",
+     "tags": [
+      "icu",
+      "reco",
+      "threshold"
+     ],
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 1.0,
+     "passage_hit": 1.0,
+     "passage_mrr": 1.0,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 0.0,
+     "correct": 1.0,
+     "sourced": 1.0,
+     "answer": "En hémofiltration réalisée en post-dilution, il faut ajuster le débit sanguin de façon à garder une fraction de filtration inférieure à 25 % [S1][S2].\n\nSource : Epuration extrarénale continue en réanimation (à l'exclusion de la dialyse péritonéale), RFE SFAR 2014 (avis d'experts, accord fort)."
+    },
+    {
+     "id": "MR-g0979ab4dc4ec3f5dbd2f",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "open",
+     "tags": [
+      "icu",
+      "pediatric",
+      "reco"
+     ],
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 1.0,
+     "passage_hit": 1.0,
+     "passage_mrr": 1.0,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 0.0,
+     "correct": 1.0,
+     "sourced": 1.0,
+     "answer": "Oui, en pédiatrie et chez le nouveau-né, il est possible de faire de la dialyse péritonéale, en particulier en période postopératoire de chirurgie cardiaque à but de déplétion, en raison de sa facilité d'utilisation [S1].\n\nSource : Epuration extrarénale continue en réanimation (à l'exclusion de la dialyse péritonéale), RFE SFAR 2014 (accord faible)."
+    },
+    {
+     "id": "MR-gf761346ec9be5d6ba346",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "open",
+     "tags": [
+      "icu",
+      "reco"
+     ],
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 0.3026024134988135,
+     "passage_hit": 0.0,
+     "passage_mrr": 0.0,
+     "passage_recall": 0.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 0.0,
+     "correct": 0.0,
+     "sourced": 1.0,
+     "answer": "Pour diminuer les conflits, il est proposé d'expliquer de façon efficace les soins de confort aux familles et de perfectionner les échanges entre les soignants et les proches autour de l'évaluation clinique du patient (douleur, anxiété) [S1].\n\nSource : Décisions de limitation et d'arrêt de traitements (LAT) en soins critiques de l'adulte, RFE SFAR 2026 (Mise à jour 2026)."
+    },
+    {
+     "id": "MR-g0aba15fbdfface749f92",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "table",
+     "tags": [
+      "icu",
+      "table"
+     ],
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 1.0,
+     "passage_hit": 0.0,
+     "passage_mrr": 0.0,
+     "passage_recall": 0.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 0.0,
+     "false_abstention": 0.0,
+     "correct": 0.0,
+     "sourced": 1.0,
+     "answer": "Les experts suggèrent d'utiliser un protocole de service d'aide à la décision et de communication avec les proches et au sein de l'équipe soignante [S3][S6]. La personne de confiance ou, à défaut, la famille ou l'un des proches est informé dès que la décision de mettre en œuvre la procédure collégiale a été prise [S1].\n\nSource : Décisions de limitation et d'arrêt de traitements (LAT) en soins critiques de l'adulte, RFE SFAR 2026 (Mise à jour 2026) (R 1.3 : avis d'experts)."
+    },
+    {
+     "id": "MR-gfd6492bcff9d310fa822",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "open",
+     "tags": [
+      "reco"
+     ],
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 1.0,
+     "passage_hit": 1.0,
+     "passage_mrr": 1.0,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 0.0,
+     "correct": 1.0,
+     "sourced": 1.0,
+     "answer": "Oui : il faut probablement mesurer la glycémie peropératoire au cours des interventions à risque [S1][S3]. Chez les patients à risque, il faut aussi réaliser une mesure de glycémie durant le séjour en salle de surveillance post-interventionnelle (SSPI) [S1].\n\nSource : Contrôle de la glycémie en réanimation et en anesthésie, RFE SFAR 2009 (accord fort ; NGP faible pour la mesure peropératoire)."
+    },
+    {
+     "id": "MR-g43a751763308810eda5b",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "open",
+     "tags": [
+      "icu",
+      "reco"
+     ],
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 1.0,
+     "passage_hit": 1.0,
+     "passage_mrr": 1.0,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 0.0,
+     "correct": 1.0,
+     "sourced": 1.0,
+     "answer": "Il faut abandonner les protocoles de contrôle glycémique statiques, qui déterminent le débit d'insuline uniquement à partir de la glycémie la plus récente [S1].\n\nSource : Contrôle de la glycémie en réanimation et en anesthésie, RFE SFAR 2009 (NGP modéré, accord fort)."
+    },
+    {
+     "id": "MR-ga82b7f724c31133396b0",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "open",
+     "tags": [
+      "reco"
+     ],
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 1.0,
+     "passage_hit": 1.0,
+     "passage_mrr": 0.5,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 0.0,
+     "correct": 1.0,
+     "sourced": 1.0,
+     "answer": "Non : il n'est pas recommandé de laisser une sonde nasogastrique après une chirurgie colorectale [S2]. L'abandon de la pose d'une sonde nasogastrique systématique à titre prophylactique est associé à un niveau de preuves I [S1].\n\nSource : Réhabilitation rapide après une chirurgie colorectale programmée, RFE SFAR 2014 (GRADE 1-, accord fort)."
+    },
+    {
+     "id": "MR-g3940cdb7b78acbdfb13d",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "table",
+     "tags": [
+      "drug_choice",
+      "table"
+     ],
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 0.8922108454754891,
+     "passage_hit": 0.0,
+     "passage_mrr": 0.0,
+     "passage_recall": 0.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 0.0,
+     "false_abstention": 0.0,
+     "correct": 0.0,
+     "sourced": 1.0,
+     "answer": "Il est recommandé de prescrire une technique d'analgésie multimodale privilégiant les agents antalgiques non morphiniques et/ou une technique d'analgésie locorégionale [S3]. Après une chirurgie par laparoscopie, l'analgésie péridurale thoracique n'est probablement pas recommandée [S1].\n\nSource : Réhabilitation rapide après une chirurgie colorectale programmée, RFE SFAR 2014 (analgésie multimodale : GRADE 1+, accord fort ; péridurale thoracique après laparoscopie : GRADE 2-, accord faible)."
+    },
+    {
+     "id": "MR-g508df1f5f5c7dacd7171",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "open",
+     "tags": [
+      "icu",
+      "reco",
+      "threshold"
+     ],
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 0.5616927747727312,
+     "passage_hit": 1.0,
+     "passage_mrr": 1.0,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 0.0,
+     "correct": 1.0,
+     "sourced": 1.0,
+     "answer": "L'épreuve de ventilation spontanée en aide inspiratoire se fait avec un faible niveau d'aide de l'ordre de 7 cm H2O, le patient restant connecté au respirateur [S1]. Le niveau minimal est de 7 cmH2O, pour une durée minimale de 30 min [S2].\n\nSource : Sevrage de la ventilation mécanique (à l'exclusion du nouveau-né et du réveil d'anesthésie), RFE SFAR 2001 ; Sécurisation des procédures à risques en réanimation : risque infectieux exclu, RFE SFAR 2008 (accord fort)."
+    },
+    {
+     "id": "MR-gaaba8d034741e6533aee",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "clinical_case",
+     "tags": [
+      "icu",
+      "other"
+     ],
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 1.0,
+     "passage_hit": 1.0,
+     "passage_mrr": 1.0,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 0.0,
+     "correct": 1.0,
+     "sourced": 1.0,
+     "answer": "Ces patients sont assimilés à la population générale, hormis l'existence en chirurgie thoracique et abdominale d'une dysfonction diaphragmatique postopératoire transitoire et de la douleur, qui doit être traitée [S1]. Ils ont le taux d'échec d'extubation le plus faible [S1].\n\nSource : Sevrage de la ventilation mécanique (à l'exclusion du nouveau-né et du réveil d'anesthésie), RFE SFAR 2001."
+    },
+    {
+     "id": "MR-g76063f88d9909f319d85",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "open",
+     "tags": [
+      "drug_choice",
+      "reco"
+     ],
+     "doc_hit": 1.0,
+     "doc_mrr": 0.16666666666666666,
+     "doc_recall": 1.0,
+     "doc_ndcg": 0.10778915452451095,
+     "passage_hit": 1.0,
+     "passage_mrr": 0.16666666666666666,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 0.0,
+     "correct": 1.0,
+     "sourced": 1.0,
+     "answer": "Oui, en hospitalisation ambulatoire, il est possible de prescrire une prémédication anxiolytique et/ou analgésique [S6]. Il n'est toutefois pas recommandé de prescrire systématiquement une prémédication sédative avant une intervention afin de réduire la survenue de complications postopératoires [S2].\n\nSource : Prise en charge anesthésique des patients en hospitalisation ambulatoire, RFE SFAR 2009 ; Programme d'optimisation périopératoire du patient adulte, RFE SFAR 2022 (GRADE 1-, accord fort)."
+    },
+    {
+     "id": "MR-g293148d474c4b595ab24",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "open",
+     "tags": [
+      "contraindication",
+      "drug_choice",
+      "reco"
+     ],
+     "doc_hit": 1.0,
+     "doc_mrr": 0.16666666666666666,
+     "doc_recall": 1.0,
+     "doc_ndcg": 0.10778915452451095,
+     "passage_hit": 1.0,
+     "passage_mrr": 0.3333333333333333,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 0.0,
+     "correct": 1.0,
+     "sourced": 1.0,
+     "answer": "Il faut éviter les benzodiazépines en préopératoire chez la personne âgée opérée en ambulatoire, car elles augmentent l'incidence des troubles du comportement postopératoire [S6][S3]. La prémédication doit être adaptée en évitant la prise de benzodiazépines [S1].\n\nSource : Prise en charge anesthésique des patients en hospitalisation ambulatoire, RFE SFAR 2009 ; Recommandations AFU/SFAR/AFCA/ANAP sur la Chirurgie Ambulatoire en Urologie, RFE SFAR 2013."
+    },
+    {
+     "id": "MR-gf79873a2c51a5380fe66",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "open",
+     "tags": [
+      "obstetric",
+      "reco"
+     ],
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 0.8486987932505933,
+     "passage_hit": 1.0,
+     "passage_mrr": 0.5,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 0.0,
+     "correct": 1.0,
+     "sourced": 1.0,
+     "answer": "Les experts suggèrent d'identifier la sidération et le soin psychique d'urgence (defusing) en postpartum, puis, à distance, de diagnostiquer l'état de stress post-traumatique (ESPT) en explorant le bien-être maternel et la relation mère-enfant [S2]. Ils suggèrent ensuite de confier la patiente à des spécialistes de l'ESPT pour une prise en charge par des techniques adaptées de psychothérapie [S2]. Il est aussi suggéré de tracer l'insuffisance d'analgésie, d'accompagner la naissance puis de débriefer l'expérience douloureuse avec l'équipe [S2].\n\nSource : Insuffisance d'analgésie au cours de la césarienne sous anesthésie périmédullaire, Préconisation SFAR 2021 (formulation « les experts suggèrent »)."
+    },
+    {
+     "id": "MR-g55e468b6df0cb295c14b",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "table",
+     "tags": [
+      "obstetric",
+      "table"
+     ],
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 1.0,
+     "passage_hit": 1.0,
+     "passage_mrr": 1.0,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 0.0,
+     "correct": 1.0,
+     "sourced": 1.0,
+     "answer": "L'entretien de l'analgésie péridurale par perfusion continue plutôt que par PCEA ou PIEB figure parmi les facteurs de risque d'échec de l'extension péridurale pour césarienne [S1].\n\nSource : Insuffisance d'analgésie au cours de la césarienne sous anesthésie périmédullaire, Préconisation SFAR 2021."
+    },
+    {
+     "id": "MR-g0c4e1de8af1e9b05f324",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "clinical_case",
+     "tags": [
+      "emergency",
+      "obstetric",
+      "other"
+     ],
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 1.0,
+     "passage_hit": 1.0,
+     "passage_mrr": 1.0,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 0.0,
+     "correct": 1.0,
+     "sourced": 1.0,
+     "answer": "Les experts suggèrent de réaliser une anesthésie générale en cas d'insuffisance d'anesthésie constatée juste avant ou dès l'incision pour césarienne code rouge [S1][S3]. L'insuffisance d'analgésie doit être tracée, avec accompagnement de la naissance puis débriefing de l'expérience douloureuse avec l'équipe [S1].\n\nSource : Insuffisance d'analgésie au cours de la césarienne sous anesthésie périmédullaire, Préconisation SFAR 2021 (formulation « les experts suggèrent »)."
+    },
+    {
+     "id": "MR-gb96b3d27c279158ad3ef",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "open",
+     "tags": [
+      "obstetric",
+      "reco"
+     ],
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 0.6131471927654584,
+     "passage_hit": 1.0,
+     "passage_mrr": 1.0,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 0.0,
+     "correct": 1.0,
+     "sourced": 1.0,
+     "answer": "En cas d'IVG chirurgicale chez une femme avec antécédent connu d'infection génitale haute, il est recommandé d'adopter une stratégie de prévention des complications infectieuses faisant appel à une antibiothérapie [S1].\n\nSource : Prise en charge de l'interruption volontaire de grossesse jusqu'à 14 semaines, RFE SFAR 2010."
+    },
+    {
+     "id": "MR-gc6eabc0b647f3aa1afca",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "open",
+     "tags": [
+      "icu",
+      "obstetric",
+      "reco"
+     ],
+     "doc_hit": 1.0,
+     "doc_mrr": 0.25,
+     "doc_recall": 1.0,
+     "doc_ndcg": 0.16812753627111746,
+     "passage_hit": 1.0,
+     "passage_mrr": 0.25,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 0.0,
+     "correct": 1.0,
+     "sourced": 1.0,
+     "answer": "Orienter la patiente vers une unité de réanimation en cas de persistance d'une défaillance d'organe nécessitant une suppléance, d'apparition d'une défaillance multiviscérale ou de mise en jeu du pronostic vital, selon la convention établie entre chaque unité d'obstétrique et une unité de réanimation adulte, notamment si la maternité n'en dispose pas [S4]. Il est également recommandé d'anticiper et d'organiser la surveillance continue des patientes présentant ou susceptibles de présenter une ou plusieurs défaillances d'organe [S4].\n\nSource : Organisation de l'Anesthésie-Réanimation Obstétricale, RFE SFAR 2016 (RP 3.13, accord fort)."
+    },
+    {
+     "id": "MR-g3e964e64a0ac6da585eb",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "open",
+     "tags": [
+      "emergency",
+      "obstetric",
+      "reco"
+     ],
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 0.3903800499921017,
+     "passage_hit": 1.0,
+     "passage_mrr": 1.0,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 0.0,
+     "correct": 0.0,
+     "sourced": 1.0,
+     "answer": "Le bloc dédié à la chirurgie obstétricale d'urgence doit être contigu au secteur de naissance (au même niveau en cas de création de nouvelle structure), avec un accès permanent à au moins une salle d'intervention dédiée [S1].\n\nSource : Organisation de l'Anesthésie-Réanimation Obstétricale, RFE SFAR 2016 (RP 1, accord fort et disposition légale)."
+    },
+    {
+     "id": "MR-g822a50690730ee2ef6bc",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "open",
+     "tags": [
+      "icu",
+      "reco"
+     ],
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 0.8922108454754891,
+     "passage_hit": 1.0,
+     "passage_mrr": 0.5,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 0.0,
+     "correct": 1.0,
+     "sourced": 1.0,
+     "answer": "Il faut utiliser une approche standardisée multimodale de prévention des pneumonies associées aux soins pour diminuer la morbidité des patients de réanimation [S3]. Il faut privilégier l'association de mesures ayant un effet sur la morbidité, notamment les durées de ventilation mécanique, d'hospitalisation en réanimation et la consommation d'antibiotique [S2].\n\nSource : Pneumonies associées aux soins de réanimation, RFE SFAR 2017 (R1.1 : GRADE 1+, accord fort)."
+    },
+    {
+     "id": "MR-g2f51f3362361053361b7",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "clinical_case",
+     "tags": [
+      "icu",
+      "other",
+      "threshold"
+     ],
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 0.6131471927654584,
+     "passage_hit": 1.0,
+     "passage_mrr": 1.0,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 0.0,
+     "correct": 1.0,
+     "sourced": 1.0,
+     "answer": "Retenir une température corporelle > 38,3 °C sans autre cause et des leucocytes < 4000/mm³ ou ≥ 12 000/mm³ (au moins un de ces deux signes) [S1]. En l'absence d'antécédents de cardiopathie ou de maladie pulmonaire sous-jacentes, un seul examen radiologique suffit [S1].\n\nSource : Pneumonies associées aux soins de réanimation, RFE SFAR 2017."
+    },
+    {
+     "id": "MR-gc03aaf37539dfd4b39a8",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "table",
+     "tags": [
+      "dosage",
+      "drug_choice",
+      "table"
+     ],
+     "doc_hit": 1.0,
+     "doc_mrr": 0.3333333333333333,
+     "doc_recall": 1.0,
+     "doc_ndcg": 0.2683637998873703,
+     "passage_hit": 1.0,
+     "passage_mrr": 1.0,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 0.0,
+     "correct": 1.0,
+     "sourced": 1.0,
+     "answer": "Il est recommandé d'administrer en peropératoire un bolus de 8-10 mg de dexaméthasone pour réduire la morbidité postopératoire [S1][S3]. La force de cette recommandation est faible (R 2.2.1) [S1][S3].\n\nSource : Prise en charge péri-opératoire du patient adulte lors d'une résection hépatique, RFE SFAR 2025 (recommandation faible)."
+    },
+    {
+     "id": "MR-g7efa49eea406c3678a28",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "open",
+     "tags": [
+      "emergency",
+      "icu",
+      "reco"
+     ],
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 0.7751482523375256,
+     "passage_hit": 1.0,
+     "passage_mrr": 1.0,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 0.0,
+     "correct": 1.0,
+     "sourced": 1.0,
+     "answer": "Délivrer une ventilation non invasive de type ventilation spontanée avec aide inspiratoire et pression expiratoire positive (VSAI-PEP) [S1]. Cela se fait après réalisation d'une tomodensitométrie et du drainage d'un pneumothorax lorsqu'il est indiqué, en l'absence de contre-indication à la VNI et dans un environnement disposant d'une surveillance continue [S1]. Le grade est G1+ [S1].\n\nSource : Traumatisme Thoracique : Prise en charge des 48 premières heures, RFE SFAR 2014 (G1+)."
+    },
+    {
+     "id": "MR-gb8871ff491d05e49db36",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "open",
+     "tags": [
+      "reco",
+      "timing"
+     ],
+     "doc_hit": 0.0,
+     "doc_mrr": 0.0,
+     "doc_recall": 0.0,
+     "doc_ndcg": 0.0,
+     "passage_hit": 0.0,
+     "passage_mrr": 0.0,
+     "passage_recall": 0.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 0.0,
+     "correct": 1.0,
+     "sourced": 1.0,
+     "answer": "Les experts suggèrent de discuter la mise en place d'un filtre cave optionnel lorsque la procédure doit être réalisée 1 à 3 mois après une thrombose veineuse profonde proximale et/ou une embolie pulmonaire et que la reprise de l'anticoagulation à dose curative ne peut pas être envisagée dans les 72h postopératoires [S1]. Il est recommandé de retirer le filtre quand le traitement anticoagulant curatif a pu être repris sans complication et qu'un nouvel arrêt n'est pas prévu à court terme [S1].\n\nSource : Gestion de l'anticoagulation dans un contexte d'urgence, RFE SFAR 2024 (R4.8.2 : avis d'experts, accord fort ; R4.8.3 : GRADE 1+, accord fort) ; extrait issu du chapitre sur les procédures invasives non programmées sous anticoagulant."
+    },
+    {
+     "id": "MR-g571f916b70fb2a0586cb",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "table",
+     "tags": [
+      "table"
+     ],
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 1.0,
+     "passage_hit": 1.0,
+     "passage_mrr": 0.5,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 0.0,
+     "correct": 1.0,
+     "sourced": 1.0,
+     "answer": "L'exérèse d'un angiofibrome nasopharyngé se classe dans la catégorie à risque hémorragique élevé [S2]. La chirurgie de l'angiofibrome nasopharyngé est à très haut risque de saignement, qui peut être diminué par une dévascularisation préopératoire (niveau de preuve 1) [S1].\n\nSource : Gestion des anticoagulants pour une procédure invasive programmée, RFE SFAR 2026 (niveau de preuve 1 pour la dévascularisation préopératoire)."
+    },
+    {
+     "id": "MR-gc6d6192f7b53462c02dd",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "open",
+     "tags": [
+      "dosage",
+      "emergency",
+      "reco"
+     ],
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 0.46927872602275644,
+     "passage_hit": 1.0,
+     "passage_mrr": 1.0,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 0.0,
+     "correct": 1.0,
+     "sourced": 1.0,
+     "answer": "Administrer du plasma thérapeutique à la dose de 10 à 15 mL/kg de poids corporel, dans le cadre d'une situation d'urgence hémorragique, lorsqu'une préparation de facteur purifié existe mais ne peut pas être obtenue rapidement [S1]. Il s'agit d'un accord professionnel [S1].\n\nSource : Transfusion de plasma thérapeutique : produits, indications, RFE SFAR 2012 (accord professionnel)."
+    },
+    {
+     "id": "MR-g526e54165c42ca78bf63",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "clinical_case",
+     "tags": [
+      "contraindication",
+      "other",
+      "pediatric"
+     ],
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 0.7860137352654724,
+     "passage_hit": 1.0,
+     "passage_mrr": 1.0,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 0.0,
+     "correct": 1.0,
+     "sourced": 1.0,
+     "answer": "Utiliser un dispositif de photothérapie n'émettant pas de rayonnements d'une longueur d'onde inférieure à 425 nm, afin d'éviter la potentialisation théorique d'une interaction entre la lumière UVA et l'amotosalen, pouvant conduire à un érythème [S1]. Le choix du plasma doit tenir compte des longueurs d'onde du matériel utilisé en photothérapie [S2].\n\nSource : Transfusion de plasma thérapeutique : produits, indications, RFE SFAR 2012 ; Transfusion de globules rouges homologues : produits, indications alternatives, RFE SFAR 2014."
+    },
+    {
+     "id": "MR-g2b5dca4f8dcab2a9f869",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "clinical_case",
+     "tags": [
+      "other"
+     ],
+     "doc_hit": 1.0,
+     "doc_mrr": 0.5,
+     "doc_recall": 1.0,
+     "doc_ndcg": 0.24630238874073,
+     "passage_hit": 0.0,
+     "passage_mrr": 0.0,
+     "passage_recall": 0.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 0.0,
+     "correct": 0.0,
+     "sourced": 1.0,
+     "answer": "Oui, après discussion avec le patient, il est possible de réaliser un bloc associé à une anesthésie (générale ou régionale) ou une sédation profonde s'il existe un bénéfice, la traçabilité du choix étant importante [S2]. Toutefois, il est probablement recommandé en première intention de réaliser l'ALR chez un patient éveillé ou légèrement sédaté, calme et coopérant [S2][S1]. Dans ce cas, l'échographie apporte probablement une sécurité supplémentaire [S2][S1].\n\nSource : Anesthésie Loco-Régionale périnerveuse, RFE SFAR 2016 (R5.2, avis d'experts) ; Échographie en anesthésie locorégionale, RFE SFAR 2011."
+    },
+    {
+     "id": "MR-ga7998a95924ce47cf4b2",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "open",
+     "tags": [
+      "reco"
+     ],
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 0.6131471927654584,
+     "passage_hit": 1.0,
+     "passage_mrr": 1.0,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 0.0,
+     "correct": 0.0,
+     "sourced": 1.0,
+     "answer": "Obtenir rapidement un avis neurochirurgical en cas de déficit complet [S1]. Un examen neurologique précis doit être fait, et en cas de suspicion de lésion nerveuse secondaire au bloc, il est recommandé de réaliser un examen électrophysiologique par EMG [S1].\n\nSource : Anesthésie Loco-Régionale périnerveuse, RFE SFAR 2016."
+    },
+    {
+     "id": "MR-gcb7201d68bfd3c66882d",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "open",
+     "tags": [
+      "drug_choice",
+      "icu",
+      "reco",
+      "timing"
+     ],
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 0.3903800499921017,
+     "passage_hit": 1.0,
+     "passage_mrr": 1.0,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 0.0,
+     "correct": 1.0,
+     "sourced": 1.0,
+     "answer": "Il faut prendre en compte les prescriptions antérieures de fluoroquinolones dans les 6 mois précédents, quelle qu'en soit l'indication, et ne pas en prescrire de façon répétée chez un même patient [S1]. Cet accord est fort [S1].\n\nSource : Stratégies de réduction de l'utilisation des antibiotiques à visée curative en réanimation, RFE SFAR 2014 (accord fort)."
+    },
+    {
+     "id": "MR-gd56911820a0a15744c26",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "open",
+     "tags": [
+      "icu",
+      "reco"
+     ],
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 0.8486987932505933,
+     "passage_hit": 1.0,
+     "passage_mrr": 1.0,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 0.0,
+     "correct": 1.0,
+     "sourced": 1.0,
+     "answer": "Oui : les experts suggèrent d'utiliser la simulation pour améliorer les compétences en communication entre professionnels en soins critiques, en formation initiale et continue, médicale et paramédicale [S1][S3]. L'accord est fort [S1][S3].\n\nSource : Intérêts de l'apprentissage par simulation en soins critiques, RFE SFAR 2019 (R2.4, accord fort) ; Facteurs humains en situations critiques, RPP SFAR 2022 (avis d'experts, accord fort)."
+    },
+    {
+     "id": "MR-gb4774403759a289947d9",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "open",
+     "tags": [
+      "pediatric",
+      "reco",
+      "timing"
+     ],
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 0.6131471927654584,
+     "passage_hit": 1.0,
+     "passage_mrr": 1.0,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 0.0,
+     "correct": 1.0,
+     "sourced": 1.0,
+     "answer": "Les experts suggèrent de débuter le réchauffement actif avant l'induction avec un dispositif adapté et un contrôle de la température de la salle [S1]. Il faut le poursuivre en continu pendant l'intervention et en post-opératoire (lit réchauffé ou couveuse maintenue à la température adéquate) [S1].\n\nSource : Organisation de l'anesthésie pédiatrique, RPP SFAR 2023 (R2.6.2, avis d'experts, accord fort)."
+    },
+    {
+     "id": "MR-g659a6f7980ea5f93af09",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "table",
+     "tags": [
+      "contraindication",
+      "pediatric",
+      "table"
+     ],
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 0.8318724637288826,
+     "passage_hit": 1.0,
+     "passage_mrr": 1.0,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 0.0,
+     "correct": 0.0,
+     "sourced": 1.0,
+     "answer": "Non : la chlorhexidine 0,5 % / alcoolique à 70 % (Hibitane) est contre-indiquée chez les nourrissons de moins d'un mois [S1][S2]. Sont autorisés dès la naissance la chlorhexidine 0,25 % / alcoolique à 4 % (Biseptine) [S3] et la chlorée Amukine [S2].\n\nSource : Organisation de l'anesthésie pédiatrique, RPP SFAR 2023 (annexe 2 : matériel d'abord veineux pédiatrique)."
+    },
+    {
+     "id": "MR-ga95d75ad6fe8fb541a44",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "clinical_case",
+     "tags": [
+      "other",
+      "pediatric"
+     ],
+     "doc_hit": 0.0,
+     "doc_mrr": 0.0,
+     "doc_recall": 0.0,
+     "doc_ndcg": 0.0,
+     "passage_hit": 0.0,
+     "passage_mrr": 0.0,
+     "passage_recall": 0.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 0.0,
+     "false_abstention": 0.0,
+     "correct": 0.0,
+     "sourced": 1.0,
+     "answer": "Oui : chez l'enfant qui n'a pas acquis la marche, il faut probablement prescrire un TCA et une numération des plaquettes pour éliminer certaines pathologies constitutionnelles de l'hémostase [S2]. L'absence de bilan d'hémostase systématique ne s'applique pas aux enfants qui n'ont pas acquis la marche [S3], et l'interrogatoire n'est pas fiable avant l'âge de la marche [S1].\n\nSource : Examens pré-interventionnels systématiques, RFE SFAR 2012 (GRADE 2+)."
+    },
+    {
+     "id": "MR-gcf5aefb7a5425d025d76",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "open",
+     "tags": [
+      "icu",
+      "reco"
+     ],
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 1.0,
+     "passage_hit": 1.0,
+     "passage_mrr": 1.0,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 0.0,
+     "correct": 1.0,
+     "sourced": 1.0,
+     "answer": "Il est probablement recommandé de se servir de l'apport diagnostique du dosage de la procalcitonine et de la tomodensitométrie abdominale, sans se limiter à l'examen clinique et à la mesure de la CRP, pour établir le diagnostic d'infection de nécrose pancréatique [S1]. Le grade est GRADE 2+ (accord fort) [S1].\n\nSource : Pancréatite aigüe du patient adulte en soins critiques, RFE SFAR 2021 (R3.2, GRADE 2+, accord fort)."
+    },
+    {
+     "id": "MR-g394ecc098e4d21e40da0",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "table",
+     "tags": [
+      "icu",
+      "table",
+      "threshold"
+     ],
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 0.7653606369886217,
+     "passage_hit": 0.0,
+     "passage_mrr": 0.0,
+     "passage_recall": 0.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 0.0,
+     "false_abstention": 1.0,
+     "correct": 0.0,
+     "sourced": 0.0,
+     "answer": "Les recommandations SFAR fournies ne traitent pas cette question."
+    },
+    {
+     "id": "MR-gae027791784341a1d570",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "clinical_case",
+     "tags": [
+      "icu",
+      "other"
+     ],
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 1.0,
+     "passage_hit": 1.0,
+     "passage_mrr": 1.0,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 0.0,
+     "correct": 1.0,
+     "sourced": 1.0,
+     "answer": "Chez un patient en soins critiques ayant une pancréatite aigüe grave hypertriglycéridémique persistante sévère ou très sévère associée à une acidose hyperlactatémique et/ou à une défaillance d'organe, il semble pertinent de proposer d'emblée les échanges plasmatiques [S1]. En cas d'échec du traitement médical, les experts suggèrent d'initier une thérapie par échanges plasmatiques pour diminuer rapidement l'hypertriglycéridémie sévère [S3]. Cette approche est à considérer en cas d'hypertriglycéridémie sévère (> 11,3 mmol/L) ou très sévère (> 22,4 mmol/L) et persistante, associée à des défaillances d'organes, l'objectif final étant < 5,7 mmol/L [S2].\n\nSource : Pancréatite aigüe du patient adulte en soins critiques, RFE SFAR 2021 (avis d'experts, accord fort)."
+    },
+    {
+     "id": "MR-gcf361e9af2739ce43a9f",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "table",
+     "tags": [
+      "drug_choice",
+      "table"
+     ],
+     "doc_hit": 1.0,
+     "doc_mrr": 0.5,
+     "doc_recall": 1.0,
+     "doc_ndcg": 0.1909208661789347,
+     "passage_hit": 1.0,
+     "passage_mrr": 1.0,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 0.0,
+     "correct": 1.0,
+     "sourced": 1.0,
+     "answer": "Le ticagrélor est l'inhibiteur réversible du récepteur plaquettaire P2Y12 de l'ADP, alors que le clopidogrel et le prasugrel en sont des inhibiteurs irréversibles [S1][S2].\n\nSource : Gestion des agents antiplaquettaires en cas de procédure invasive non programmée ou d'hémorragie, RFE SFAR 2018 ; Gestion perioperatoire des patients sous AAP en urgence, Preconisation SFAR 2021."
+    },
+    {
+     "id": "MR-ge78b13400ed5e89af859",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "clinical_case",
+     "tags": [
+      "drug_choice",
+      "emergency",
+      "other"
+     ],
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 0.7526136409516658,
+     "passage_hit": 1.0,
+     "passage_mrr": 1.0,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 0.0,
+     "correct": 1.0,
+     "sourced": 1.0,
+     "answer": "Non : il est proposé de ne pas utiliser de desmopressine pour neutraliser les AAP (accord fort) [S3]. Chez des volontaires sains ayant reçu du ticagrelor, la desmopressine ne réduit pas le temps de saignement et ne corrige pas les fonctions plaquettaires [S1]. Il est proposé d'administrer de l'acide tranexamique pour son efficacité à réduire le saignement, que le patient soit ou non traité par AAP (accord fort) [S3].\n\nSource : Gestion perioperatoire des patients sous AAP en urgence, Preconisation SFAR 2021 (accord fort)."
+    },
+    {
+     "id": "MR-g1fa665d53b3782891db2",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "open",
+     "tags": [
+      "reco"
+     ],
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 0.7526136409516658,
+     "passage_hit": 1.0,
+     "passage_mrr": 1.0,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 0.0,
+     "correct": 0.0,
+     "sourced": 1.0,
+     "answer": "Mettre en place un dispositif d'oxygénation nasale à haut débit pendant la laryngoscopie, après une préoxygénation bien conduite, afin de prolonger le temps sans désaturation, y compris chez le patient obèse ou estomac plein [S4][S5]. Cette recommandation concerne l'intubation difficile prévue sans indication au maintien de la ventilation spontanée [S4][S5].\n\nSource : Prise en charge des voies aériennes de l'adulte au bloc opératoire, RFE SFAR 2026 (R2.1.1, avis d'experts)."
+    },
+    {
+     "id": "MR-g42624ba80bc36c8e0925",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "clinical_case",
+     "tags": [
+      "other"
+     ],
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 0.7012899792965543,
+     "passage_hit": 0.0,
+     "passage_mrr": 0.0,
+     "passage_recall": 0.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 0.0,
+     "false_abstention": 1.0,
+     "correct": 0.0,
+     "sourced": 0.0,
+     "answer": "Les recommandations SFAR fournies ne traitent pas cette question."
+    },
+    {
+     "id": "MR-g6d7e10b60e750f150a7a",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "open",
+     "tags": [
+      "emergency",
+      "pediatric",
+      "reco",
+      "threshold"
+     ],
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 1.0,
+     "passage_hit": 1.0,
+     "passage_mrr": 1.0,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 0.0,
+     "correct": 0.0,
+     "sourced": 1.0,
+     "answer": "Lors d'une induction en séquence rapide chez l'enfant, il est suggéré de ventiler au masque dès que la SpO2 est inférieure à 95 % [S1]. La ventilation se fait avec une FiO2 ≥ 0,8 et de faibles niveaux de pression, juste suffisants pour soulever le thorax et éviter une insufflation gastrique, idéalement < 15 cmH2O [S1].\n\nSource : Gestion des voies aériennes de l'enfant, RFE SFAR 2018 (avis d'experts)."
+    },
+    {
+     "id": "MR-g1b4ad3d31046fdbdd025",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "comparison",
+     "tags": [
+      "edition_diff"
+     ],
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 1.0,
+     "passage_hit": 1.0,
+     "passage_mrr": 1.0,
+     "passage_recall": 0.5,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 0.0,
+     "correct": 1.0,
+     "sourced": 1.0,
+     "answer": "**Éditions comparées**\n- RFE SFAR 2001, « Les blocs périphériques des membres chez l'adulte » (édition antérieure, remplacée) [S2, S5] (2001)\n- RFE SFAR 2016, « Anesthésie Loco-Régionale périnerveuse » (en vigueur) [S1] (2016)\n\n**Ce qui a changé**\n- 2001 : les extraits ne décrivent que la réalisation du bloc avec une sédation légère, réactivité conservée aux stimulations verbales, chez des patients coopérants ; ils ne traitent pas explicitement du bloc réalisé sous anesthésie générale ou sous sédation profonde [S2, S5] (2001).\n- 2016 : l'ALR est probablement recommandée en première intention chez un patient éveillé ou légèrement sédaté, calme et coopérant ; toutefois, après discussion avec le patient, il est possible de réaliser un bloc associé à une anesthésie (générale ou régionale) ou une sédation profonde s'il existe un bénéfice [S1] (2016).\n- 2016 : la traçabilité du choix est importante, et dans ce cas l'échographie apporte probablement une sécurité supplémentaire [S1] (2016).\n- Niveau de preuve : en 2016 cette recommandation (R5.2) relève d'un avis d'experts [S1] (2016) ; en 2001 les mentions sont des accords d'experts avec grade (C) pour la sédation légère peropératoire [S5] (2001).\n\n**Ce qui est resté inchangé**\n- La situation de référence reste le patient coopérant, éveillé ou légèrement sédaté (sédation légère, réactivité conservée) [S2, S5] (2001) ; [S1] (2016).\n\nSource : Anesthésie Loco-Régionale périnerveuse, RFE SFAR 2016 (avis d'experts) ; Les blocs périphériques des membres chez l'adulte, RFE SFAR 2001 (édition antérieure)."
+    },
+    {
+     "id": "MR-g518431a84972e17017d1",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "comparison",
+     "tags": [
+      "edition_diff"
+     ],
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 1.0,
+     "passage_hit": 1.0,
+     "passage_mrr": 1.0,
+     "passage_recall": 1.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 0.0,
+     "correct": 1.0,
+     "sourced": 1.0,
+     "answer": "**Éditions comparées**\n- RFE SFAR 2000, « Recommandations pour les structures et le matériel de l'anesthésie pédiatrique » (édition antérieure, remplacée) [S2] (2000)\n- RPP SFAR 2023, « Organisation de l'anesthésie pédiatrique » (en vigueur) [S1] (2023)\n\n**Ce qui a changé**\n- Gamme de cathéters veineux périphériques : en 2000, disposer de toute la gamme de tailles, depuis les plus petits (24 Gauge) jusqu'au plus grand (14 Gauge) [S2] (2000) ; en 2023, disposer de toutes les tailles entre le 26 gauge et le 16 gauge [S1] (2023).\n- La gamme est donc décalée : la plus petite taille passe de 24 G à 26 G et la plus grande de 14 G à 16 G [S2] (2000) ; [S1] (2023).\n- En 2023, les extraits ajoutent : se poser la question de la difficulté prévisible de l'abord veineux, cathéters courts pour des durées de perfusion ≤ 4 jours, Midline pour 7 à 28 jours sous échographie, cathéters sécurisés sans supériorité démontrée (choix selon les habitudes de l'équipe) [S1] (2023).\n\n**Ce qui est resté inchangé**\n- L'utilisation de cathéters courts pour l'abord veineux périphérique et la nécessité de disposer de toute la gamme de tailles pour adapter le choix [S2] (2000) ; [S1] (2023).\n\nSource : Organisation de l'anesthésie pédiatrique, RPP SFAR 2023 ; Recommandations pour les structures et le matériel de l'anesthésie pédiatrique, RFE SFAR 2000 (édition antérieure). Les extraits ne mentionnent pas de force de recommandation pour ces passages."
+    },
+    {
+     "id": "MR-g78a74d874a76bbb543f1",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "comparison",
+     "tags": [
+      "edition_diff"
+     ],
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 0.8486987932505933,
+     "passage_hit": 1.0,
+     "passage_mrr": 0.3333333333333333,
+     "passage_recall": 1.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 0.0,
+     "correct": 1.0,
+     "sourced": 1.0,
+     "answer": "**Éditions comparées**\n- RFE SFAR 2002, « Thrombopénie induite par l'héparine » (édition antérieure, remplacée) [S4] (2002)\n- RFE/Préconisation SFAR 2019, « Diagnostic et prise en charge d'une thrombopénie induite par l'héparine » (en vigueur) [S1, S3] (2019)\n\n**Ce qui a changé**\n- Seuil plaquettaire pour débuter le relais danaparoïde sodique–AVK : plaquettes remontées au-delà de 100 g/L en 2002 [S4] (2002) ; plaquettes au-dessus de 150 G/L en 2019 [S3] (2019).\n- En 2019, la coumadine est privilégiée et administrée au plus tôt lorsque la ré-ascension plaquettaire est confirmée (plaquettes > 150 G/L), et les AVK ne sont jamais utilisés seuls à la phase aiguë, uniquement sous couvert d'un anticoagulant parentéral efficace (danaparoïde sodique ou argatroban) [S1] (2019).\n\n**Ce qui est resté inchangé**\n- Le relais danaparoïde sodique–AVK n'est initié que lorsque le risque thromboembolique est bien contrôlé, soit 5 à 7 jours de traitement [S4] (2002) ; [S3] (2019).\n- Le danaparoïde n'est arrêté que lorsque l'INR est dans la zone thérapeutique deux jours de suite et après au moins 72 h d'AVK (zone 2 à 3 précisée en 2019) [S4] (2002) ; [S3] (2019).\n\nSource : Diagnostic et prise en charge d'une thrombopénie induite par l'héparine, RFE SFAR 2019 ; Thrombopénie induite par l'héparine, RFE SFAR 2002 (édition antérieure). Les extraits ne mentionnent pas de force de recommandation pour ces passages."
+    },
+    {
+     "id": "MR-abst000",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "abstention",
+     "tags": [
+      "abstention"
+     ],
+     "abstention_correct": 1.0,
+     "sourced": 0.0,
+     "answer": "Les recommandations SFAR fournies ne traitent pas cette question."
+    },
+    {
+     "id": "MR-abst001",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "abstention",
+     "tags": [
+      "abstention"
+     ],
+     "abstention_correct": 1.0,
+     "sourced": 0.0,
+     "answer": "Les recommandations SFAR fournies ne traitent pas cette question."
+    },
+    {
+     "id": "MR-abst002",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "abstention",
+     "tags": [
+      "abstention"
+     ],
+     "abstention_correct": 1.0,
+     "sourced": 0.0,
+     "answer": "Les recommandations SFAR fournies ne traitent pas cette question."
+    },
+    {
+     "id": "MR-abst004",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "abstention",
+     "tags": [
+      "abstention"
+     ],
+     "abstention_correct": 1.0,
+     "sourced": 0.0,
+     "answer": "Les recommandations SFAR fournies ne traitent pas cette question."
+    },
+    {
+     "id": "MR-abst005",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "abstention",
+     "tags": [
+      "abstention"
+     ],
+     "abstention_correct": 1.0,
+     "sourced": 0.0,
+     "answer": "Les recommandations SFAR fournies ne traitent pas cette question."
+    },
+    {
+     "id": "MR-abst007",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "abstention",
+     "tags": [
+      "abstention"
+     ],
+     "abstention_correct": 1.0,
+     "sourced": 0.0,
+     "answer": "Les recommandations SFAR fournies ne traitent pas cette question."
+    },
+    {
+     "id": "MR-abst009",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "abstention",
+     "tags": [
+      "abstention"
+     ],
+     "abstention_correct": 1.0,
+     "sourced": 0.0,
+     "answer": "Les recommandations SFAR fournies ne traitent pas cette question."
+    },
+    {
+     "id": "MR-abst013",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "abstention",
+     "tags": [
+      "abstention"
+     ],
+     "abstention_correct": 1.0,
+     "sourced": 0.0,
+     "answer": "Les recommandations SFAR fournies ne traitent pas cette question."
+    },
+    {
+     "id": "MR-abst015",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "abstention",
+     "tags": [
+      "abstention"
+     ],
+     "abstention_correct": 1.0,
+     "sourced": 0.0,
+     "answer": "Les recommandations SFAR fournies ne traitent pas cette question."
+    },
+    {
+     "id": "MR-abst016",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "abstention",
+     "tags": [
+      "abstention"
+     ],
+     "abstention_correct": 1.0,
+     "sourced": 0.0,
+     "answer": "Les recommandations SFAR fournies ne traitent pas cette question."
+    },
+    {
+     "id": "MR-abst017",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "abstention",
+     "tags": [
+      "abstention"
+     ],
+     "abstention_correct": 1.0,
+     "sourced": 0.0,
+     "answer": "Les recommandations SFAR fournies ne traitent pas cette question."
+    },
+    {
+     "id": "MR-abst020",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "abstention",
+     "tags": [
+      "abstention"
+     ],
+     "abstention_correct": 1.0,
+     "sourced": 0.0,
+     "answer": "Les recommandations SFAR fournies ne traitent pas cette question."
+    },
+    {
+     "id": "MR-abst022",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "abstention",
+     "tags": [
+      "abstention"
+     ],
+     "abstention_correct": 1.0,
+     "sourced": 0.0,
+     "answer": "Les recommandations SFAR fournies ne traitent pas cette question."
+    },
+    {
+     "id": "MR-abst026",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "abstention",
+     "tags": [
+      "abstention"
+     ],
+     "abstention_correct": 1.0,
+     "sourced": 0.0,
+     "answer": "Les recommandations SFAR fournies ne traitent pas cette question."
+    },
+    {
+     "id": "MR-abst031",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "abstention",
+     "tags": [
+      "abstention"
+     ],
+     "abstention_correct": 1.0,
+     "sourced": 0.0,
+     "answer": "Les recommandations SFAR fournies ne traitent pas cette question."
+    },
+    {
+     "id": "MR-abst036",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "abstention",
+     "tags": [
+      "abstention"
+     ],
+     "abstention_correct": 1.0,
+     "sourced": 0.0,
+     "answer": "Les recommandations SFAR fournies ne traitent pas cette question."
+    },
+    {
+     "id": "MR-abst037",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "abstention",
+     "tags": [
+      "abstention"
+     ],
+     "abstention_correct": 1.0,
+     "sourced": 0.0,
+     "answer": "Les recommandations SFAR fournies ne traitent pas cette question."
+    },
+    {
+     "id": "MR-abst039",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "abstention",
+     "tags": [
+      "abstention"
+     ],
+     "abstention_correct": 1.0,
+     "sourced": 0.0,
+     "answer": "Les recommandations SFAR fournies ne traitent pas cette question."
+    }
+   ]
+  }
+ ],
+ "comparisons": []
+}

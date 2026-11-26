@@ -1,0 +1,98 @@
+[
+ {
+  "case_id": "MR-g3b9708b3518cddf9bccf",
+  "answer": "Oui, après une imagerie cérébrale normale, un patient sous anticoagulant peut être autorisé à rentrer à domicile, sous réserve de répondre aux éléments cliniques requis [S1]. Les critères sont : l'absence d'intoxication associée, l'absence de vomissements itératifs, l'absence de céphalées importantes persistantes, un Score de Glasgow à 15, l'absence de déficit neurologique et l'absence d'autres motifs pouvant justifier une hospitalisation [S1].\nSource : Prise en charge des patients présentant un traumatisme crânien léger de l’adulte — RPP SFAR 2022 (avis d'experts, accord fort)."
+ },
+ {
+  "case_id": "MR-gfff2848a70957ac0b7b5",
+  "answer": "Il faut réaliser un scanner cérébral avec injection, car le syndrome de Claude Bernard Horner et la fracture du rachis cervical sont des signes cliniques évocateurs de dissection carotidienne [S1][S2].\nSource : Prise en charge des patients présentant un traumatisme crânien léger de l’adulte — RPP SFAR 2022 (avis d'experts, accord fort)."
+ },
+ {
+  "case_id": "MR-g8f23afa63325b0d08bd8",
+  "answer": "En cas d'hémopéritoine abondant avec un scanner incompatible avec l'état du patient, la conduite est un traitement opératoire précoce [S1][S3]. Il s'agit d'une laparotomie selon les règles de « damage control » : procédure écourtée, abord xypho-pubien, contrôle simple des sites hémorragiques, packing hépatique, coprostase, fermeture par VAC ou fermeture cutanée seule [S3]. Le délai avant laparotomie majore la mortalité, de 1% par tranche de 3 min en cas d'instabilité hémodynamique après traumatisme abdominal fermé [S5].\nSource : Prise en charge du traumatisme abdominal grave de l’adulte : les 48 premières heures — RFE SFAR 2019."
+ },
+ {
+  "case_id": "MR-g8e54d9655989718c1639",
+  "answer": "Non : chez un patient dans le coma avec une méningite bactérienne, en l'absence d'HTIC, il ne faut probablement pas pratiquer d'hypothermie, en comparaison avec une normothermie, dans le but d'améliorer la survie avec bon pronostic neurologique [S2].\nSource : Contrôle cible de la température en réanimation (hors nouveau-nés) — RFE SFAR 2016 (R4.3, avis d'experts)."
+ },
+ {
+  "case_id": "MR-gd1b252c6b18be4bca7b6",
+  "answer": "Non : les études ne montrent pas de bénéfice supplémentaire sur la PIC à diminuer la température à 31 °C en cas d'HTIC persistante à 34 °C [S5]. Chez les traumatisés crâniens avec hypertension intracrânienne malgré un traitement médical bien conduit, il faut probablement pratiquer un CCT entre 34 et 35 °C dans le but de faire baisser la pression intracrânienne [S4][S2]. Un CCT entre 32 et 35 °C pour traiter une HTIC peut entraîner des effets secondaires proportionnels à la durée et à la profondeur de l'hypothermie [S5].\nSource : Contrôle cible de la température en réanimation (hors nouveau-nés) — RFE SFAR 2016 (R2.3, Grade 2+, accord fort) ; Prise en charge des traumatisés crâniens graves à la phase précoce (24 premières heures) — RFE SFAR 2016 (R12.3, GRADE 2+, accord fort)."
+ },
+ {
+  "case_id": "MR-gd9a325c36650ee68a17f",
+  "answer": "Oui : les données rapportées chez l'adulte concernant le CCT visant la normothermie au cours de l'état de mal épileptique peuvent, selon les experts pédiatres, s'appliquer à l'enfant [S2]. Chez l'enfant présentant un état de mal épileptique, il faut probablement réaliser un CCT (normothermie) à visée neuroprotectrice [S4].\nSource : Contrôle cible de la température en réanimation (hors nouveau-nés) — RFE SFAR 2016 (avis d'experts)."
+ },
+ {
+  "case_id": "MR-ge6178ab7ed0b124f3edc",
+  "answer": "Non : il est recommandé de ne pas prescrire de manière systématique une radiographie de thorax préinterventionnelle en chirurgie non cardiothoracique, quel que soit l'âge du patient, sauf en cas de pathologie cardiopulmonaire évolutive ou aiguë [S1]. Il n'existe pas d'argument permettant de recommander la réalisation d'une radiographie de thorax d'un âge seuil [S2].\nSource : Examens pré-interventionnels systématiques — RFE SFAR 2012 (GRADE 1-)."
+ },
+ {
+  "case_id": "MR-g2c188878f4fca6996f4b",
+  "answer": "Une endartériectomie carotidienne se situe dans la catégorie de risque intermédiaire (1 % à 5 % de décès + infarctus du myocarde) [S1]. Les chirurgies vasculaires sont considérées comme à haut risque, hormis l'endartériectomie carotidienne [S2].\nSource : Examens pré-interventionnels systématiques — RFE SFAR 2012 (annexe A) ; Prise en charge du coronarien qui doit être opéré en chirurgie non cardiaque — RFE SFAR 2010."
+ },
+ {
+  "case_id": "MR-gae3cda1acd4e903f01fd",
+  "answer": "Les recommandations SFAR fournies ne traitent pas cette question."
+ },
+ {
+  "case_id": "MR-geb9482ee3d54334a43fd",
+  "answer": "Programmer l'intervention le plus tôt possible dans la matinée, afin de permettre la sortie après une surveillance postopératoire de six heures [S1]. La sortie est autorisée seulement après une surveillance de six heures au minimum dans l'unité d'ambulatoire [S3].\nSource : Anesthésie pour amygdalectomie chez l’enfant — RFE SFAR 2005 (accord fort)."
+ },
+ {
+  "case_id": "MR-g9dbb7b8cb49592f9fa97",
+  "answer": "Oui : lorsque l'évaluation préopératoire ne peut être considérée comme fiable, notamment chez l'enfant de moins de trois ans, une étude de l'hémostase doit être réalisée [S3]. L'interrogatoire n'est pas fiable chez l'enfant en deçà de l'âge de la marche, généralement fixé à trois ans [S1]. Si des examens d'hémostase sont prescrits, le temps de céphaline avec activateur et la numération plaquettaire sont les tests les plus utiles [S3].\nSource : Anesthésie pour amygdalectomie chez l’enfant — RFE SFAR 2005 (accord fort)."
+ },
+ {
+  "case_id": "MR-gbe3dad7d7f9b1ae34b88",
+  "answer": "Il faut surveiller l'hypokaliémie, l'hypomagnésémie et l'insuffisance rénale, ainsi que la fièvre et les frissons lors de l'injection et la cytopénie [S1][S2].\nSource : Prise en charge des candidoses et aspergilloses invasives de l’adulte — RFE SFAR 2004."
+ },
+ {
+  "case_id": "MR-gc1eeae015b45990b618e",
+  "answer": "La présence de Candida sp. dans les sécrétions provenant des voies aériennes inférieures, y compris le lavage broncho-alvéolaire, n'a pas de valeur diagnostique (B3) [S1].\nSource : Prise en charge des candidoses et aspergilloses invasives de l’adulte — RFE SFAR 2004 (B3)."
+ },
+ {
+  "case_id": "MR-g28ea0199f37013bf91f9",
+  "answer": "La décision finale de l'indication d'anesthésie et de ses modalités relève de la responsabilité du médecin anesthésiste-réanimateur [S1]. Une concertation réelle et sérieuse doit précéder les décisions en cas de désaccord entre les intervenants [S1].\nSource : Recommandations concernant les relations entre anesthésistes-réanimateurs et chirurgiens, autres spécialistes ou professionnels de santé — RFE SFAR 2001."
+ },
+ {
+  "case_id": "MR-g6951bd8344b814c79f7e",
+  "answer": "Il faut l'absence de réponse après 2 jours consécutifs d'arrêt des diurétiques et de remplissage vasculaire par de l'albumine (1 g/kg) [S3]. Cette épreuve s'inscrit dans la prise en charge de l'IRA du cirrhotique avec administration d'albumine 1 g/kg pendant 48 h au stade 2-3 [S4].\nSource : Insuffisance hépatique en soins critiques — RFE SFAR 2018."
+ },
+ {
+  "case_id": "MR-g392fcc10d6909f623c73",
+  "answer": "Chez les patients hospitalisés avec COVID-19, la prévention de la maladie thromboembolique par une HBPM est l'option de choix, mais il est vraisemblable que les posologies validées en médecine soient fréquemment insuffisantes, notamment dans les formes sévères et en cas d'obésité [S1]. Il est suggéré d'ajuster l'anticoagulation au poids ou à l'IMC des patients COVID-19 [S3]. Les patients avec une forme sévère (oxygénothérapie à plus de 6 L/min ou ventilation mécanique) devraient recevoir au moins une anticoagulation prophylactique à dose intermédiaire [S2].\nSource : Traitement anticoagulants patients COVID-19 — RFE SFAR 2020 ; Prévention du risque thromboembolique veineux et surveillance de l’hémostase chez les patients hospitalisés pour covid-19 : propositions réactualisées (avril 2021) — RFE SFAR 2021 (suggestions)."
+ },
+ {
+  "case_id": "MR-g6d75a0524a3097e36863",
+  "answer": "Les deux objectifs initiaux sont le contrôle de l'hémorragie et de la contamination périnéale [S1]. Il est aussi probablement recommandé de prendre en charge ces traumatismes dans des centres de référence [S1].\nSource : Prise en charge des traumatisés pelviens graves à la phase précoce (24 premières heures) — RFE SFAR 2017 (R2.17, GRADE 1+, accord fort ; R2.16, GRADE 2+, accord fort)."
+ },
+ {
+  "case_id": "MR-g424483aecf041277fed5",
+  "answer": "Il est recommandé d'utiliser un programme de réhabilitation améliorée après chirurgie, incluant la mobilisation précoce postopératoire, pour diminuer l'incidence de complications postopératoires et la durée d'hospitalisation [S2]. Il est probablement recommandé de favoriser les approches minimalement invasives par thoracoscopie, et il est recommandé de ne placer qu'un seul drain thoracique [S6][S5]. L'utilisation préventive de la VNI n'est probablement pas recommandée [S1].\nSource : Réhabilitation améliorée après lobectomie pulmonaire — RFE SFAR 2019 (R5.4, GRADE 1+ ; R4.1, GRADE 2+ ; R4.4.1, GRADE 1+, accord fort)."
+ },
+ {
+  "case_id": "MR-ga86840965e184a4c0f3d",
+  "answer": "Un supplément d'information apporté par un support vidéo permet une réduction significative des scores d'anxiété et une amélioration de la satisfaction globale chez les patients de chirurgie thoracique [S1].\nSource : Réhabilitation améliorée après lobectomie pulmonaire — RFE SFAR 2019."
+ },
+ {
+  "case_id": "MR-g26cc210b12a24bc1dcf5",
+  "answer": "Chez l'homme, le poids théorique (kg) = 50 + 0,91 × [taille (cm) − 152,4] [S3].\nSource : Recommandations pour la prise en charge du SDRA — RFE SFAR 2018."
+ },
+ {
+  "case_id": "MR-gb9a942c3d4de87e96a69",
+  "answer": "Il est probablement recommandé que les patients adultes atteints de SDRA modéré à sévère soient ventilés avec une PEP élevée plutôt qu'avec une PEP basse [S3]. En cas de sepsis, il est suggéré d'utiliser un niveau élevé de PEP après élimination d'une défaillance cardiaque droite [S4].\nSource : Recommandations pour la prise en charge du SDRA — RFE SFAR 2018 (R4, GRADE 2+) ; Prise en charge du sepsis du nouveau-né, de l’enfant et de l’adulte — HAS SFAR 2025 (recommandation conditionnelle, faible niveau de certitude)."
+ },
+ {
+  "case_id": "MR-g448aac5e0ca03eebb7fb",
+  "answer": "La VNI ne fait pas la preuve d'un avantage et il ne faut probablement pas l'entreprendre dans la pneumopathie hypoxémiante, le syndrome de détresse respiratoire aiguë, le traitement de l'insuffisance respiratoire aiguë post extubation et les maladies neuromusculaires aiguës réversibles [S1]. Pour l'asthme aigu grave et le syndrome d'obésité hypoventilation, il n'a pas été possible de déterminer l'attitude [S1].\nSource : Ventilation Non Invasive au cours de l’insuffisance respiratoire aiguë (nouveau-né exclu) — RFE SFAR 2006."
+ },
+ {
+  "case_id": "MR-gace2db46f6d0fbc9a4b7",
+  "answer": "Les recommandations SFAR fournies ne traitent pas cette question."
+ },
+ {
+  "case_id": "MR-gfc720f85a7e4c8f6d739",
+  "answer": "Il faut probablement recommander une gouttière sur mesure plutôt qu'une gouttière standard, et tracer l'information dans le dossier « incité à fournir un protège-dents sur mesure » [S3][S2]. La gouttière sur mesure permet une protection des dents maxillaires de meilleure qualité que les gouttières standards, sans aggraver les conditions d'intubation [S6].\nSource : Bris dentaires périanesthésiques — RFE SFAR 2012."
+ }
+]
