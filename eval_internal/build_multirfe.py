@@ -474,6 +474,72 @@ def write() -> None:
     print(f"{len(items)} items -> {OUT}")
 
 
+
+# ------------------------------------------------------------------ agent-based path (no API)
+# When the API is unavailable, generation and verification are done by Claude Code subagents
+# that read work/gen_input_*.json / work/verify_input_*.json and write work/*_out_*.json.
+# These commands convert their outputs into the same cache files as the Batch API path.
+
+
+def _cache_rec(custom_id: str, obj: dict, model: str) -> dict:
+    return {"custom_id": custom_id, "status": "succeeded", "text": json.dumps(obj, ensure_ascii=False),
+            "model": model, "usage": {}, "stop_reason": "end_turn"}
+
+
+def import_gen(model_label: str) -> None:
+    recs = []
+    for f in sorted(WORK.glob("gen_out_[0-9]*.json")):
+        for g in json.loads(f.read_text(encoding="utf-8")):
+            obj = {k: g.get(k, "" if k not in ("key_terms", "tags") else []) for k in GEN_SCHEMA["properties"]}
+            obj["usable"] = bool(g.get("usable"))
+            recs.append(_cache_rec(_cid("q::" + g["anchor_id"]), obj, model_label))
+    cf = WORK / "gen_out_compare.json"
+    if cf.exists():
+        for g in json.loads(cf.read_text(encoding="utf-8")):
+            obj = {k: g.get(k, "" if k != "key_terms" else []) for k in COMP_SCHEMA["properties"]}
+            obj["usable"] = bool(g.get("usable"))
+            recs.append(_cache_rec(_cid("c::compare::" + g["lineage"]) if not g["anchor_id"].startswith("compare::") else _cid("c::" + g["anchor_id"]), obj, model_label))
+    af = WORK / "gen_out_abstention.json"
+    if af.exists():
+        recs.append(_cache_rec(_cid("abstention"), {"questions": json.loads(af.read_text(encoding="utf-8"))}, model_label))
+    with (WORK / "gen_results.jsonl").open("w", encoding="utf-8") as f:
+        for r in recs:
+            f.write(json.dumps(r, ensure_ascii=False) + "\n")
+    print(f"{len(recs)} generation records -> {WORK / 'gen_results.jsonl'}")
+
+
+def prepare_verify(n_parts: int) -> None:
+    cands = _candidates()
+    todo = []
+    rejected = 0
+    for c in cands:
+        if c["kind"] == "abstention":
+            todo.append({"cand_id": c["cand_id"], "kind": "abstention", "question": c["gen"]["question"],
+                         "passages": _bm25_top(c["gen"]["question"])})
+        elif c["checks"]["quote_in_passage"] and c["checks"]["max_copied_words"] < 8:
+            todo.append({"cand_id": c["cand_id"], "kind": c["kind"], "source_text": c["source_text"],
+                         "question": c["gen"]["question"], "reference_answer": c["gen"]["reference_answer"]})
+        else:
+            rejected += 1
+    size = -(-len(todo) // n_parts)
+    for i in range(n_parts):
+        part = todo[i * size : (i + 1) * size]
+        (WORK / f"verify_input_{i}.json").write_text(json.dumps(part, ensure_ascii=False, indent=1), encoding="utf-8")
+        print(f"verify_input_{i}.json: {len(part)}")
+    print(f"{len(todo)} to verify, {rejected} rejected by programmatic checks")
+
+
+def import_verify(model_label: str) -> None:
+    recs = []
+    for f in sorted(WORK.glob("verify_out_*.json")):
+        for v in json.loads(f.read_text(encoding="utf-8")):
+            cid = v.pop("cand_id")
+            recs.append(_cache_rec("v" + cid, v, model_label))
+    with (WORK / "verify_results.jsonl").open("w", encoding="utf-8") as f:
+        for r in recs:
+            f.write(json.dumps(r, ensure_ascii=False) + "\n")
+    print(f"{len(recs)} verification records -> {WORK / 'verify_results.jsonl'}")
+
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     sub = ap.add_subparsers(dest="cmd", required=True)
@@ -483,5 +549,15 @@ if __name__ == "__main__":
     sub.add_parser("generate")
     sub.add_parser("verify")
     sub.add_parser("write")
+    ig = sub.add_parser("import-gen")
+    ig.add_argument("--model-label", default="claude-opus-5-5 (Claude Code subagent)")
+    pv = sub.add_parser("prepare-verify")
+    pv.add_argument("--parts", type=int, default=3)
+    iv = sub.add_parser("import-verify")
+    iv.add_argument("--model-label", default="claude-opus-5-5 (Claude Code subagent)")
     args = ap.parse_args()
-    {"sample": lambda: sample(args.n_docs, args.per_doc), "generate": generate, "verify": verify, "write": write}[args.cmd]()
+    {
+        "sample": lambda: sample(args.n_docs, args.per_doc), "generate": generate, "verify": verify, "write": write,
+        "import-gen": lambda: import_gen(args.model_label), "prepare-verify": lambda: prepare_verify(args.parts),
+        "import-verify": lambda: import_verify(args.model_label),
+    }[args.cmd]()

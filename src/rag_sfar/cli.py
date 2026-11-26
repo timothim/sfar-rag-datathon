@@ -224,6 +224,12 @@ def _run_unified_eval(args: argparse.Namespace) -> None:
 
     if args.split == "test" and not args.allow_test:
         raise SystemExit("The test split is locked: evaluate it only on final configs, with --allow-test.")
+    if args.baseline == "constant":
+        report = harness.run_constant_baseline(args.suite, args.split)
+        jp, mp = harness.save_report(report, tag=args.tag or "baseline_constant")
+        console.print(harness.to_markdown(report))
+        console.print(f"[bold green]Saved {jp} and {mp}[/bold green]")
+        return
     configs = harness.select_configs(args.configs)
     strategies = sorted({c.chunking_strategy for c in configs})
     device = "cpu" if (not args.retrieval_only and args.backend == "mlx") else None
@@ -293,6 +299,7 @@ def eval_cmd() -> None:
     parser.add_argument("--gen-mode", default="auto", help="Prompt mode; 'auto' = benchmark_mcq for MCQ else clinical_detailed.")
     parser.add_argument("--tag", default="")
     parser.add_argument("--allow-test", action="store_true", help="Required to evaluate the locked test split.")
+    parser.add_argument("--baseline", choices=["constant"], default=None, help="Score a corpus-free baseline instead of configs.")
     args = parser.parse_args()
 
     if args.suite:

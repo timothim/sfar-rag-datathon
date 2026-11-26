@@ -404,6 +404,43 @@ def run_eval(
     }
 
 
+# ---------------------------------------------------------------- baselines
+
+
+def constant_answers(dev_items: list[EvalItem]) -> dict[str, str]:
+    """Most frequent reference answer per question type in dev (the 'always say X' floor)."""
+    from collections import Counter
+
+    by_type: dict[str, Counter] = defaultdict(Counter)
+    for it in dev_items:
+        key = it.answer_key
+        ans = key.get("mcq") or key.get("label") or (" + ".join(key["all_of"]) if "all_of" in key else it.reference_answer)
+        if ans:
+            by_type[it.question_type][ans] += 1
+    return {t: c.most_common(1)[0][0] for t, c in by_type.items()}
+
+
+def run_constant_baseline(suite: str, split: str, progress: Callable[[str], None] | None = None) -> dict[str, Any]:
+    """Score a system that ignores the corpus and always gives the dev majority answer."""
+    dev = load_suite(suite, "dev")
+    answers = constant_answers(dev)
+    items = load_suite(suite, split)  # type: ignore[arg-type]
+    rows = []
+    for it in items:
+        ans = answers.get(it.question_type, "")
+        row = {"id": it.id, "suite": it.suite, "provenance": it.provenance, "question_type": it.question_type,
+               "tags": it.tags, "answer": ans}
+        row.update(score_answer(it, ans))
+        row.pop("sourced", None)
+        rows.append(row)
+    return {
+        "suite": suite, "split": split, "k": 0, "n_items": len(items),
+        "generator": f"constant baseline {answers}", "timestamp": dt.datetime.now().isoformat(timespec="seconds"),
+        "runs": [{"config": "BASELINE_constant", "config_params": {"answers": answers}, "summary": summarize(rows), "rows": rows}],
+        "comparisons": [],
+    }
+
+
 def save_report(report: dict[str, Any], out_dir: Path = Path("reports/eval"), tag: str = "") -> tuple[Path, Path]:
     out_dir.mkdir(parents=True, exist_ok=True)
     stamp = dt.datetime.now().strftime("%Y%m%d-%H%M%S")
