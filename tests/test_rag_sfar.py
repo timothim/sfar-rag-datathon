@@ -156,7 +156,7 @@ def test_section_allergy_box_linking_and_expansion():
   </tbody>
 </table>
 
-En cas d'allergie aux bêtalactamines, si antibioprophylaxie indiquée dans ce tableau : Clindamycine 900 mg IVL. En cas de prothèse de hanche par voie antérieure : préférer Vancomycine.
+En cas d'allergie aux bêtalactamines, si antibioprophylaxie indiquée dans ce tableau : Clindamycine 900 mg IVL.
 
 #### Références
 1. Smith et al. Cefazolin vs Clindamycin in total knee arthroplasty. 2019.
@@ -360,15 +360,16 @@ def test_mcq_choices_formatting_and_sourcing_scorer():
     from rag_sfar.evaluation.benchmark_adapter import score_sourcing_present
     from rag_sfar.evaluation.benchmarks import EvalQuestion
 
+    # Synthetic item (not taken from any evaluation set)
     q = EvalQuestion(
-        id="Q163",
+        id="SYN-1",
         question_type="mcq",
-        question="Quelle conduite est INCORRECTE ?",
-        choices={"A": "Amoxicilline/Clavulanate", "B": "Céfazoline", "C": "Aucun ajout"},
+        question="Quelle conduite est inexacte ?",
+        choices={"A": "Dose unique préopératoire", "B": "Réinjection peropératoire", "C": "Aucune prophylaxie"},
         expected_answer="C",
     )
     fmt = q.formatted_query()
-    assert "A. Amoxicilline/Clavulanate" in fmt and "C. Aucun ajout" in fmt
+    assert "A. Dose unique préopératoire" in fmt and "C. Aucune prophylaxie" in fmt
     assert score_antibioprophylaxie_answer("mcq", "C", "C (SFAR 2026 [S1])")
     assert score_antibioprophylaxie_answer("open", "Céfazoline", "Céfazoline (SFAR 2026 [S1])")
     assert score_antibioprophylaxie_answer(
@@ -557,44 +558,48 @@ def test_balanced_temporal_diff_and_macrolide_guard():
 
 
 def test_mcq_option_composite_and_scope_guard():
+    """Synthetic questions only (CLAUDE.md, principle 1): none is taken from an evaluation set."""
     from rag_sfar.retrieval.crag import (
         extract_composite_procedure_subqueries,
         extract_mcq_option_subqueries,
+        strip_mcq_distractor_options,
     )
 
-    # 1. Comparative MCQ with distinct clinical acts triggers option-aware retrieval
+    # 1. Comparative MCQ whose choices are distinct clinical situations -> one sub-query each
     mcq_acts = (
-        "Parmi ces interventions ORL, laquelle ne nécessite PAS d'antibioprophylaxie ?\n"
-        "A. Pose d'implant cochléaire\nB. Amygdalectomie\nC. Laryngectomie totale\nD. Trachéotomie chirurgicale"
+        "Parmi ces gestes, lequel ne nécessite pas de bilan d'hémostase systématique ?\n"
+        "A. Pose de cathéter péridural\nB. Extraction dentaire simple\nC. Ponction lombaire\n"
+        "D. Biopsie hépatique transpariétale\nE. Bloc du plexus brachial"
     )
     opts = extract_mcq_option_subqueries(mcq_acts)
-    assert len(opts) == 4
-    assert any("Amygdalectomie" in sq for _, sq in opts)
+    assert [letter for letter, _ in opts] == ["A", "B", "C", "D", "E"]
+    assert any("Extraction dentaire" in sq for _, sq in opts)
+    assert all("hemostase" in sq for _, sq in opts)  # stem topic carried by every sub-query
 
-    # 2. Pure drug-only MCQ does NOT trigger noisy option subqueries
+    # 2. Drug/dosage-only MCQ (INN stems + doses) does NOT trigger option sub-queries
     mcq_drugs = (
-        "Alternative allergie pour une prothèse de genou ?\n"
-        "A. Céfazoline 2g IVL\nB. Amoxicilline/Clavulanate 2g IVL\nC. Pas d'antibioprophylaxie recommandée\nD. Clindamycine 900mg IVL"
+        "Quel curare en première intention pour une induction en séquence rapide chez l'adulte ?\n"
+        "A. Rocuronium 1,2 mg/kg\nB. Cisatracurium 0,15 mg/kg\nC. Pas de curare\nD. Vécuronium 0,1 mg/kg"
     )
     assert extract_mcq_option_subqueries(mcq_drugs) == []
 
-    # 3. Composite multi-act surgical query decomposes into atomic sub-queries
+    # 3. Explicitly associated situations are split; a banal "et d'une" is not
     comp = (
-        "Quelle antibioprophylaxie pour une splénectomie d'hémostase associée à "
-        "la pose d'un fixateur externe sur fracture fermée du fémur chez un polytraumatisé ?"
+        "Quelle analgésie postopératoire pour une cholécystectomie coelioscopique associée à "
+        "une cure de hernie inguinale chez l'adulte ?"
     )
     subqs = extract_composite_procedure_subqueries(comp)
     assert len(subqs) == 2
-    assert any("splénectomie" in s.lower() for s in subqs)
-    assert any("fixateur externe" in s.lower() for s in subqs)
+    assert any("cholécystectomie" in s.lower() for s in subqs)
+    assert any("hernie inguinale" in s.lower() for s in subqs)
+    assert extract_composite_procedure_subqueries(
+        "Conduite à tenir devant la survenue d'une hypotension et d'une bradycardie lors d'une rachianesthésie ?"
+    ) == []
 
-    # 4. Drug-only MCQ strips distractor drug options before retrieval (prevents distractor leakage!)
-    from rag_sfar.retrieval.crag import strip_mcq_distractor_options
-
+    # 4. Drug-only MCQ strips distractor options before retrieval; comparative MCQ keeps them
     stripped = strip_mcq_distractor_options(mcq_drugs)
-    assert "Amoxicilline" not in stripped and "prothèse de genou" in stripped
-    # Comparative act MCQ preserves full options for option-aware retrieval
-    assert "Amygdalectomie" in strip_mcq_distractor_options(mcq_acts)
+    assert "Rocuronium" not in stripped and "séquence rapide" in stripped
+    assert "Extraction dentaire" in strip_mcq_distractor_options(mcq_acts)
 
     # 5. 1-to-1 parallel <li> rowspan de-merging on contradictory PAS D'ABP vs Céfazoline tables
     html_tbl = """
