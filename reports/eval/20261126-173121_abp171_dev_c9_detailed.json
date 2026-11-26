@@ -342,6 +342,27 @@
       },
       "n": 37
      }
+    },
+    "judge_correct": {
+     "mean": 0.7647058823529411,
+     "ci_low": 0.6862745098039216,
+     "ci_high": 0.8431372549019608,
+     "n": 102
+    },
+    "judge_correct_or_partial": {
+     "mean": 0.8627450980392157,
+     "ci_low": 0.7941176470588235,
+     "ci_high": 0.9313725490196079,
+     "n": 102
+    },
+    "judge_serious_error": {
+     "mean": 0.058823529411764705,
+     "ci_low": 0.0196078431372549,
+     "ci_high": 0.10784313725490197,
+     "n": 102
+    },
+    "judge_serious_error_types": {
+     "wrong_drug": 6
     }
    },
    "rows": [
@@ -392,7 +413,18 @@
       "completion_tokens": 147,
       "total_tokens": 3352
      },
-     "latency_ms": 15707.159709010739
+     "latency_ms": 15707.159709010739,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q01",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La céfazoline est recommandée comme dans la référence pour une prothèse totale de hanche."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q02",
@@ -443,7 +475,18 @@
       "completion_tokens": 131,
       "total_tokens": 3220
      },
-     "latency_ms": 15874.760750040878
+     "latency_ms": 15874.760750040878,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q02",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse conclut à l'absence d'antibioprophylaxie, comme la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q03",
@@ -490,7 +533,18 @@
       "completion_tokens": 78,
       "total_tokens": 2618
      },
-     "latency_ms": 9854.729417013004
+     "latency_ms": 9854.729417013004,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q03",
+      "correctness": "incorrect",
+      "abstained": false,
+      "serious_error": "wrong_drug",
+      "faithful": null,
+      "justification": "La gentamicine est proposée alors que la référence attend la clindamycine."
+     },
+     "judge_correct": 0.0,
+     "judge_correct_or_partial": 0.0,
+     "judge_serious_error": 1.0
     },
     {
      "id": "Q05",
@@ -539,7 +593,18 @@
       "completion_tokens": 118,
       "total_tokens": 3154
      },
-     "latency_ms": 14060.755499987863
+     "latency_ms": 14060.755499987863,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q05",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "L'amoxicilline/acide clavulanique est recommandée, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q07",
@@ -588,7 +653,18 @@
       "completion_tokens": 141,
       "total_tokens": 3594
      },
-     "latency_ms": 13229.784916969948
+     "latency_ms": 13229.784916969948,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q07",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La céfazoline est recommandée pour l'arthrodèse lombaire, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q09",
@@ -629,7 +705,18 @@
       "completion_tokens": 170,
       "total_tokens": 2371
      },
-     "latency_ms": 10667.460749973543
+     "latency_ms": 10667.460749973543,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q09",
+      "correctness": "partial",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse propose l'amoxicilline/acide clavulanate et la céfazoline sans trancher, la référence n'en retient qu'une."
+     },
+     "judge_correct": 0.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q18",
@@ -678,7 +765,18 @@
       "completion_tokens": 324,
       "total_tokens": 3489
      },
-     "latency_ms": 17052.537749987096
+     "latency_ms": 17052.537749987096,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q18",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La céfazoline est recommandée pour la craniotomie, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q19",
@@ -729,7 +827,18 @@
       "completion_tokens": 103,
       "total_tokens": 2828
      },
-     "latency_ms": 10577.609415980987
+     "latency_ms": 10577.609415980987,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q19",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse conclut à l'absence d'antibioprophylaxie pour la biopsie cérébrale, comme la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q20",
@@ -780,7 +889,18 @@
       "completion_tokens": 107,
       "total_tokens": 2698
      },
-     "latency_ms": 10482.88737499388
+     "latency_ms": 10482.88737499388,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q20",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse conclut à l'absence d'antibioprophylaxie pour la DVE, comme la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q25",
@@ -817,7 +937,18 @@
       "completion_tokens": 378,
       "total_tokens": 1952
      },
-     "latency_ms": 14781.25091700349
+     "latency_ms": 14781.25091700349,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q25",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La céfazoline est recommandée pour l'électrode de stimulation cérébrale profonde, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q26",
@@ -852,7 +983,18 @@
       "completion_tokens": 96,
       "total_tokens": 1457
      },
-     "latency_ms": 7907.704083016142
+     "latency_ms": 7907.704083016142,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q26",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse conclut à l'absence d'antibioprophylaxie pour l'embolisation, comme la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q27",
@@ -903,7 +1045,18 @@
       "completion_tokens": 123,
       "total_tokens": 2843
      },
-     "latency_ms": 11413.95358304726
+     "latency_ms": 11413.95358304726,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q27",
+      "correctness": "incorrect",
+      "abstained": true,
+      "serious_error": "other",
+      "faithful": null,
+      "justification": "La réponse s'abstient alors que la référence donne une conduite (clindamycine) pour ce cas."
+     },
+     "judge_correct": 0.0,
+     "judge_correct_or_partial": 0.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q28",
@@ -954,7 +1107,18 @@
       "completion_tokens": 129,
       "total_tokens": 2548
      },
-     "latency_ms": 11979.729666025378
+     "latency_ms": 11979.729666025378,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q28",
+      "correctness": "incorrect",
+      "abstained": false,
+      "serious_error": "wrong_drug",
+      "faithful": null,
+      "justification": "La clindamycine et la gentamicine sont proposées au lieu du triméthoprime/sulfaméthoxazole attendu."
+     },
+     "judge_correct": 0.0,
+     "judge_correct_or_partial": 0.0,
+     "judge_serious_error": 1.0
     },
     {
      "id": "Q30",
@@ -1001,7 +1165,18 @@
       "completion_tokens": 101,
       "total_tokens": 2404
      },
-     "latency_ms": 11033.167125016917
+     "latency_ms": 11033.167125016917,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q30",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse conclut à l'absence d'antibioprophylaxie pour la thyroïdectomie totale, comme la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q31",
@@ -1052,7 +1227,18 @@
       "completion_tokens": 141,
       "total_tokens": 2914
      },
-     "latency_ms": 17856.452958018053
+     "latency_ms": 17856.452958018053,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q31",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse conclut à l'absence d'antibioprophylaxie pour la chirurgie sinusienne, comme la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q36",
@@ -1101,7 +1287,18 @@
       "completion_tokens": 182,
       "total_tokens": 3306
      },
-     "latency_ms": 23648.25737499632
+     "latency_ms": 23648.25737499632,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q36",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La céfuroxime en injection intracamérulaire est recommandée, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q37",
@@ -1152,7 +1349,18 @@
       "completion_tokens": 154,
       "total_tokens": 3284
      },
-     "latency_ms": 16288.335249992087
+     "latency_ms": 16288.335249992087,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q37",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse conclut à l'absence d'antibioprophylaxie pour la chirurgie du glaucome, comme la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q40",
@@ -1185,7 +1393,18 @@
       "completion_tokens": 170,
       "total_tokens": 1518
      },
-     "latency_ms": 10187.518499966245
+     "latency_ms": 10187.518499966245,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q40",
+      "correctness": "incorrect",
+      "abstained": false,
+      "serious_error": "other",
+      "faithful": null,
+      "justification": "La réponse conclut à l'absence d'antibioprophylaxie alors que la référence attend l'amoxicilline."
+     },
+     "judge_correct": 0.0,
+     "judge_correct_or_partial": 0.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q41",
@@ -1234,7 +1453,18 @@
       "completion_tokens": 140,
       "total_tokens": 3167
      },
-     "latency_ms": 15088.565209007356
+     "latency_ms": 15088.565209007356,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q41",
+      "correctness": "partial",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse propose l'amoxicilline/acide clavulanate ou la céfazoline sans trancher, la référence n'en retient qu'une."
+     },
+     "judge_correct": 0.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q42",
@@ -1283,7 +1513,18 @@
       "completion_tokens": 172,
       "total_tokens": 2638
      },
-     "latency_ms": 13182.690832996741
+     "latency_ms": 13182.690832996741,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q42",
+      "correctness": "incorrect",
+      "abstained": false,
+      "serious_error": "other",
+      "faithful": null,
+      "justification": "La réponse conclut à l'absence d'antibioprophylaxie alors que la référence attend la céfazoline."
+     },
+     "judge_correct": 0.0,
+     "judge_correct_or_partial": 0.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q43",
@@ -1334,7 +1575,18 @@
       "completion_tokens": 101,
       "total_tokens": 2919
      },
-     "latency_ms": 12270.749000017531
+     "latency_ms": 12270.749000017531,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q43",
+      "correctness": "partial",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La clindamycine est correctement proposée mais la gentamicine attendue par la référence est omise."
+     },
+     "judge_correct": 0.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q44",
@@ -1383,7 +1635,18 @@
       "completion_tokens": 187,
       "total_tokens": 3232
      },
-     "latency_ms": 15362.255333981011
+     "latency_ms": 15362.255333981011,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q44",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La céfazoline est recommandée pour le remplacement valvulaire aortique, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q45",
@@ -1424,7 +1687,18 @@
       "completion_tokens": 229,
       "total_tokens": 3335
      },
-     "latency_ms": 16704.979625006672
+     "latency_ms": 16704.979625006672,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q45",
+      "correctness": "partial",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse propose l'amoxicilline/acide clavulanate ou la céfazoline sans trancher, la référence n'en retient qu'une."
+     },
+     "judge_correct": 0.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q46",
@@ -1473,7 +1747,18 @@
       "completion_tokens": 121,
       "total_tokens": 3221
      },
-     "latency_ms": 12814.12470905343
+     "latency_ms": 12814.12470905343,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q46",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La céfazoline est recommandée pour le pacemaker, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q48",
@@ -1524,7 +1809,18 @@
       "completion_tokens": 83,
       "total_tokens": 3195
      },
-     "latency_ms": 11025.782458018512
+     "latency_ms": 11025.782458018512,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q48",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse conclut à l'absence d'antibioprophylaxie pour l'ECMO percutanée, comme la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q50",
@@ -1573,7 +1869,18 @@
       "completion_tokens": 144,
       "total_tokens": 3203
      },
-     "latency_ms": 12399.067750026006
+     "latency_ms": 12399.067750026006,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q50",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "L'amoxicilline/acide clavulanate est recommandée pour l'amputation, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q51",
@@ -1624,7 +1931,18 @@
       "completion_tokens": 79,
       "total_tokens": 2948
      },
-     "latency_ms": 14000.668416032568
+     "latency_ms": 14000.668416032568,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q51",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse conclut à l'absence d'antibioprophylaxie pour la chirurgie des varices, comme la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q52",
@@ -1675,7 +1993,18 @@
       "completion_tokens": 96,
       "total_tokens": 3069
      },
-     "latency_ms": 12671.634458994959
+     "latency_ms": 12671.634458994959,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q52",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse conclut à l'absence d'antibioprophylaxie pour le drain thoracique, comme la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q53",
@@ -1726,7 +2055,18 @@
       "completion_tokens": 99,
       "total_tokens": 2680
      },
-     "latency_ms": 11444.771374983247
+     "latency_ms": 11444.771374983247,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q53",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse conclut à l'absence d'antibioprophylaxie pour la médiastinoscopie, comme la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q59",
@@ -1765,7 +2105,18 @@
       "completion_tokens": 79,
       "total_tokens": 2133
      },
-     "latency_ms": 9122.599166003056
+     "latency_ms": 9122.599166003056,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q59",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse conclut à l'absence d'antibioprophylaxie pour la lipoaspiration, comme la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q61",
@@ -1814,7 +2165,18 @@
       "completion_tokens": 140,
       "total_tokens": 2642
      },
-     "latency_ms": 12267.954916984309
+     "latency_ms": 12267.954916984309,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q61",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La céfazoline est recommandée pour le lambeau libre, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q62",
@@ -1865,7 +2227,18 @@
       "completion_tokens": 99,
       "total_tokens": 2955
      },
-     "latency_ms": 12240.794208017178
+     "latency_ms": 12240.794208017178,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q62",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse conclut à l'absence d'antibioprophylaxie pour la greffe cutanée, comme la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q67",
@@ -1916,7 +2289,18 @@
       "completion_tokens": 79,
       "total_tokens": 3323
      },
-     "latency_ms": 12893.447874987032
+     "latency_ms": 12893.447874987032,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q67",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse conclut à l'absence d'antibioprophylaxie pour la chirurgie du mamelon, comme la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q69",
@@ -1965,7 +2349,18 @@
       "completion_tokens": 97,
       "total_tokens": 2861
      },
-     "latency_ms": 11879.458207986318
+     "latency_ms": 11879.458207986318,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q69",
+      "correctness": "incorrect",
+      "abstained": false,
+      "serious_error": "other",
+      "faithful": null,
+      "justification": "La réponse conclut à l'absence d'antibioprophylaxie alors que la référence attend la céfazoline."
+     },
+     "judge_correct": 0.0,
+     "judge_correct_or_partial": 0.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q70",
@@ -2014,7 +2409,18 @@
       "completion_tokens": 125,
       "total_tokens": 3002
      },
-     "latency_ms": 13080.274332955014
+     "latency_ms": 13080.274332955014,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q70",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La céfazoline associée au métronidazole est recommandée, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q71",
@@ -2063,7 +2469,18 @@
       "completion_tokens": 164,
       "total_tokens": 2953
      },
-     "latency_ms": 14213.166500034276
+     "latency_ms": 14213.166500034276,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q71",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La céfoxitine est recommandée pour l'hystérectomie, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q73",
@@ -2114,7 +2531,18 @@
       "completion_tokens": 88,
       "total_tokens": 2766
      },
-     "latency_ms": 11657.383874990046
+     "latency_ms": 11657.383874990046,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q73",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse conclut à l'absence d'antibioprophylaxie pour la conisation, comme la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q74",
@@ -2165,7 +2593,18 @@
       "completion_tokens": 79,
       "total_tokens": 2623
      },
-     "latency_ms": 10842.8935839911
+     "latency_ms": 10842.8935839911,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q74",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse conclut à l'absence d'antibioprophylaxie pour l'hystéroscopie diagnostique, comme la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q75",
@@ -2212,7 +2651,18 @@
       "completion_tokens": 141,
       "total_tokens": 2775
      },
-     "latency_ms": 12782.85495802993
+     "latency_ms": 12782.85495802993,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q75",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse conclut à l'absence d'antibioprophylaxie pour la biopsie endométriale, comme la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q78",
@@ -2263,7 +2713,18 @@
       "completion_tokens": 123,
       "total_tokens": 3291
      },
-     "latency_ms": 13883.964959008154
+     "latency_ms": 13883.964959008154,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q78",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse conclut à l'absence d'antibioprophylaxie pour la nymphoplastie, comme la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q79",
@@ -2312,7 +2773,18 @@
       "completion_tokens": 135,
       "total_tokens": 2764
      },
-     "latency_ms": 12619.067499996163
+     "latency_ms": 12619.067499996163,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q79",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La céfazoline est recommandée pour la césarienne programmée, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q80",
@@ -2363,7 +2835,18 @@
       "completion_tokens": 83,
       "total_tokens": 3236
      },
-     "latency_ms": 12726.150915957987
+     "latency_ms": 12726.150915957987,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q80",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse conclut à l'absence d'antibioprophylaxie pour le cerclage, comme la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q81",
@@ -2408,7 +2891,18 @@
       "completion_tokens": 104,
       "total_tokens": 2782
      },
-     "latency_ms": 11901.392041996587
+     "latency_ms": 11901.392041996587,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q81",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La céfazoline est donnée comme option principale, la céfuroxime n'étant qu'une alternative secondaire."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q83",
@@ -2447,7 +2941,18 @@
       "completion_tokens": 72,
       "total_tokens": 1709
      },
-     "latency_ms": 7638.6436659959145
+     "latency_ms": 7638.6436659959145,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q83",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse conclut à l'absence d'antibioprophylaxie pour l'IVG par aspiration, comme la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q84",
@@ -2490,7 +2995,18 @@
       "completion_tokens": 110,
       "total_tokens": 2253
      },
-     "latency_ms": 10218.112000031397
+     "latency_ms": 10218.112000031397,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q84",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse conclut à l'absence d'antibioprophylaxie pour le prélèvement d'ovocytes, comme la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q85",
@@ -2539,7 +3055,18 @@
       "completion_tokens": 255,
       "total_tokens": 3098
      },
-     "latency_ms": 16483.708708023187
+     "latency_ms": 16483.708708023187,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q85",
+      "correctness": "partial",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse propose la céfazoline ou la céfuroxime sans trancher, la référence n'en retient que la céfazoline."
+     },
+     "judge_correct": 0.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q87",
@@ -2588,7 +3115,18 @@
       "completion_tokens": 133,
       "total_tokens": 2775
      },
-     "latency_ms": 12587.156582972966
+     "latency_ms": 12587.156582972966,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q87",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La céfazoline est recommandée pour l'anneau gastrique, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q88",
@@ -2637,7 +3175,18 @@
       "completion_tokens": 118,
       "total_tokens": 3663
      },
-     "latency_ms": 15089.657167030964
+     "latency_ms": 15089.657167030964,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q88",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La céfoxitine est recommandée pour la résection de l'intestin grêle, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q89",
@@ -2686,7 +3235,18 @@
       "completion_tokens": 161,
       "total_tokens": 3169
      },
-     "latency_ms": 14541.610540996771
+     "latency_ms": 14541.610540996771,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q89",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La céfoxitine est recommandée pour l'appendicectomie programmée, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q91",
@@ -2735,7 +3295,18 @@
       "completion_tokens": 87,
       "total_tokens": 3229
      },
-     "latency_ms": 14147.339208982885
+     "latency_ms": 14147.339208982885,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q91",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Le métronidazole est recommandé pour les hémorroïdes, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q95",
@@ -2784,7 +3355,18 @@
       "completion_tokens": 129,
       "total_tokens": 3286
      },
-     "latency_ms": 15595.730874978472
+     "latency_ms": 15595.730874978472,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q95",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La céfazoline est recommandée pour la splénectomie, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q96",
@@ -2821,7 +3403,18 @@
       "completion_tokens": 136,
       "total_tokens": 1952
      },
-     "latency_ms": 10476.62179096369
+     "latency_ms": 10476.62179096369,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q96",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Céfazoline est recommandée, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q97",
@@ -2870,7 +3463,18 @@
       "completion_tokens": 108,
       "total_tokens": 2903
      },
-     "latency_ms": 12375.943915976677
+     "latency_ms": 12375.943915976677,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q97",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Céfoxitine est recommandée, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q98",
@@ -2919,7 +3523,18 @@
       "completion_tokens": 179,
       "total_tokens": 3144
      },
-     "latency_ms": 14797.41225001635
+     "latency_ms": 14797.41225001635,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q98",
+      "correctness": "incorrect",
+      "abstained": false,
+      "serious_error": "wrong_drug",
+      "faithful": null,
+      "justification": "La réponse propose la céfoxitine alors que la référence attend la pipéracilline/tazobactam."
+     },
+     "judge_correct": 0.0,
+     "judge_correct_or_partial": 0.0,
+     "judge_serious_error": 1.0
     },
     {
      "id": "Q99",
@@ -2968,7 +3583,18 @@
       "completion_tokens": 150,
       "total_tokens": 3082
      },
-     "latency_ms": 13806.005415972322
+     "latency_ms": 13806.005415972322,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q99",
+      "correctness": "incorrect",
+      "abstained": false,
+      "serious_error": "other",
+      "faithful": null,
+      "justification": "La réponse ne nomme aucune molécule et renvoie à une conduite individualisée, alors que la référence attend la céfoxitine."
+     },
+     "judge_correct": 0.0,
+     "judge_correct_or_partial": 0.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q100",
@@ -3017,7 +3643,18 @@
       "completion_tokens": 185,
       "total_tokens": 3205
      },
-     "latency_ms": 14983.07754198322
+     "latency_ms": 14983.07754198322,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q100",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Céfazoline est recommandée, conforme à la référence ; la posologie en mg/kg est un détail supplémentaire non contredit."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q101",
@@ -3068,7 +3705,18 @@
       "completion_tokens": 147,
       "total_tokens": 3160
      },
-     "latency_ms": 12376.81408401113
+     "latency_ms": 12376.81408401113,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q101",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse conclut à l'absence d'antibioprophylaxie, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q102",
@@ -3117,7 +3765,18 @@
       "completion_tokens": 228,
       "total_tokens": 3355
      },
-     "latency_ms": 14614.371125004254
+     "latency_ms": 14614.371125004254,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q102",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Céfazoline est recommandée, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q104",
@@ -3168,7 +3827,18 @@
       "completion_tokens": 72,
       "total_tokens": 2964
      },
-     "latency_ms": 9992.736000043806
+     "latency_ms": 9992.736000043806,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q104",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse conclut à l'absence d'antibioprophylaxie, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q105",
@@ -3219,7 +3889,18 @@
       "completion_tokens": 109,
       "total_tokens": 2556
      },
-     "latency_ms": 9574.28791600978
+     "latency_ms": 9574.28791600978,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q105",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse conclut à l'absence d'antibioprophylaxie, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q107",
@@ -3270,7 +3951,18 @@
       "completion_tokens": 179,
       "total_tokens": 2889
      },
-     "latency_ms": 12019.932790950406
+     "latency_ms": 12019.932790950406,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q107",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse conclut à l'absence d'antibioprophylaxie, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q108",
@@ -3319,7 +4011,18 @@
       "completion_tokens": 330,
       "total_tokens": 2823
      },
-     "latency_ms": 15166.560583980754
+     "latency_ms": 15166.560583980754,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q108",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La fosfomycine-trométamol est recommandée, conforme à la référence ; la ciprofloxacine en alternative allergique est un détail supplémentaire."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q109",
@@ -3370,7 +4073,18 @@
       "completion_tokens": 286,
       "total_tokens": 2683
      },
-     "latency_ms": 13690.468041982967
+     "latency_ms": 13690.468041982967,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q109",
+      "correctness": "partial",
+      "abstained": true,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse conclut à l'absence de recommandation, mais affirme aussi que les extraits ne couvrent pas le geste et contient des propos contradictoires."
+     },
+     "judge_correct": 0.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q111",
@@ -3407,7 +4121,18 @@
       "completion_tokens": 126,
       "total_tokens": 1852
      },
-     "latency_ms": 8130.908042017836
+     "latency_ms": 8130.908042017836,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q111",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Céfoxitine est recommandée, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q114",
@@ -3456,7 +4181,18 @@
       "completion_tokens": 252,
       "total_tokens": 3005
      },
-     "latency_ms": 13882.19549995847
+     "latency_ms": 13882.19549995847,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q114",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La céfazoline est présentée comme recommandation principale, conforme à la référence, la céfuroxime n'étant donnée qu'en alternative."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q115",
@@ -3507,7 +4243,18 @@
       "completion_tokens": 140,
       "total_tokens": 2499
      },
-     "latency_ms": 10099.804707977455
+     "latency_ms": 10099.804707977455,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q115",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse conclut à l'absence d'antibioprophylaxie, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q117",
@@ -3550,7 +4297,18 @@
       "completion_tokens": 113,
       "total_tokens": 2396
      },
-     "latency_ms": 9374.800792022143
+     "latency_ms": 9374.800792022143,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q117",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse conclut à l'absence d'antibioprophylaxie, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q118",
@@ -3593,7 +4351,18 @@
       "completion_tokens": 162,
       "total_tokens": 2448
      },
-     "latency_ms": 10459.93983297376
+     "latency_ms": 10459.93983297376,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q118",
+      "correctness": "partial",
+      "abstained": true,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La conclusion d'absence d'antibioprophylaxie est conforme, mais la réponse indique ensuite qu'aucune recommandation spécifique n'est présente dans les extraits."
+     },
+     "judge_correct": 0.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q119",
@@ -3640,7 +4409,18 @@
       "completion_tokens": 88,
       "total_tokens": 2885
      },
-     "latency_ms": 10074.337416968774
+     "latency_ms": 10074.337416968774,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q119",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse conclut à l'absence d'antibioprophylaxie, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q120",
@@ -3691,7 +4471,18 @@
       "completion_tokens": 72,
       "total_tokens": 2952
      },
-     "latency_ms": 9945.769291953184
+     "latency_ms": 9945.769291953184,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q120",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse conclut à l'absence d'antibioprophylaxie, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q121",
@@ -3742,7 +4533,18 @@
       "completion_tokens": 169,
       "total_tokens": 2921
      },
-     "latency_ms": 12023.738667019643
+     "latency_ms": 12023.738667019643,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q121",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse conclut à l'absence d'antibioprophylaxie, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q122",
@@ -3789,7 +4591,18 @@
       "completion_tokens": 280,
       "total_tokens": 2812
      },
-     "latency_ms": 14607.242292026058
+     "latency_ms": 14607.242292026058,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q122",
+      "correctness": "partial",
+      "abstained": true,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse s'abstient de conclure et suggère de consulter des protocoles, sans contresens explicite par rapport à la référence d'absence d'antibioprophylaxie."
+     },
+     "judge_correct": 0.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q127",
@@ -3840,7 +4653,18 @@
       "completion_tokens": 76,
       "total_tokens": 3648
      },
-     "latency_ms": 13003.66279098671
+     "latency_ms": 13003.66279098671,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q127",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse conclut à l'absence d'antibioprophylaxie, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q128",
@@ -3889,7 +4713,18 @@
       "completion_tokens": 148,
       "total_tokens": 3421
      },
-     "latency_ms": 12964.484792028088
+     "latency_ms": 12964.484792028088,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q128",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Céfazoline est recommandée, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q129",
@@ -3938,7 +4773,18 @@
       "completion_tokens": 126,
       "total_tokens": 2747
      },
-     "latency_ms": 10574.833416962065
+     "latency_ms": 10574.833416962065,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q129",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Céfazoline est recommandée, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q131",
@@ -3987,7 +4833,18 @@
       "completion_tokens": 182,
       "total_tokens": 3519
      },
-     "latency_ms": 13906.683208013419
+     "latency_ms": 13906.683208013419,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q131",
+      "correctness": "incorrect",
+      "abstained": false,
+      "serious_error": "wrong_drug",
+      "faithful": null,
+      "justification": "La réponse propose la céfazoline alors que la référence attend l'amoxicilline/clavulanate."
+     },
+     "judge_correct": 0.0,
+     "judge_correct_or_partial": 0.0,
+     "judge_serious_error": 1.0
     },
     {
      "id": "Q132",
@@ -4036,7 +4893,18 @@
       "completion_tokens": 315,
       "total_tokens": 3681
      },
-     "latency_ms": 17249.727957998402
+     "latency_ms": 17249.727957998402,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q132",
+      "correctness": "partial",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse cite céfazoline et céfuroxime comme options équivalentes sans trancher, la céfazoline étant la référence."
+     },
+     "judge_correct": 0.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q133",
@@ -4077,7 +4945,18 @@
       "completion_tokens": 131,
       "total_tokens": 2717
      },
-     "latency_ms": 10547.439832997043
+     "latency_ms": 10547.439832997043,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q133",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Céfazoline est recommandée, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q134",
@@ -4120,7 +4999,18 @@
       "completion_tokens": 100,
       "total_tokens": 2528
      },
-     "latency_ms": 9370.955541031435
+     "latency_ms": 9370.955541031435,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q134",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse conclut à l'absence d'antibioprophylaxie, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q135",
@@ -4171,7 +5061,18 @@
       "completion_tokens": 79,
       "total_tokens": 3332
      },
-     "latency_ms": 11093.130499997642
+     "latency_ms": 11093.130499997642,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q135",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse conclut à l'absence d'antibioprophylaxie, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q136",
@@ -4218,7 +5119,18 @@
       "completion_tokens": 92,
       "total_tokens": 2374
      },
-     "latency_ms": 8801.774666993879
+     "latency_ms": 8801.774666993879,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q136",
+      "correctness": "partial",
+      "abstained": true,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse s'abstient en disant que les extraits ne couvrent pas le geste, sans donner la conduite d'absence d'antibioprophylaxie attendue."
+     },
+     "judge_correct": 0.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q137",
@@ -4267,7 +5179,18 @@
       "completion_tokens": 163,
       "total_tokens": 3574
      },
-     "latency_ms": 13552.110249991529
+     "latency_ms": 13552.110249991529,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q137",
+      "correctness": "incorrect",
+      "abstained": false,
+      "serious_error": "wrong_drug",
+      "faithful": null,
+      "justification": "La réponse propose la céfazoline alors que la référence attend l'amoxicilline/clavulanate."
+     },
+     "judge_correct": 0.0,
+     "judge_correct_or_partial": 0.0,
+     "judge_serious_error": 1.0
     },
     {
      "id": "Q138",
@@ -4316,7 +5239,18 @@
       "completion_tokens": 228,
       "total_tokens": 3626
      },
-     "latency_ms": 15181.018792034592
+     "latency_ms": 15181.018792034592,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q138",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Céfazoline est recommandée, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q139",
@@ -4368,7 +5302,18 @@
       "completion_tokens": 189,
       "total_tokens": 3356
      },
-     "latency_ms": 13516.010457999073
+     "latency_ms": 13516.010457999073,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q139",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse donne B (céfazoline), conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q141",
@@ -4418,7 +5363,18 @@
       "completion_tokens": 252,
       "total_tokens": 2981
      },
-     "latency_ms": 13888.272584008519
+     "latency_ms": 13888.272584008519,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q141",
+      "correctness": "incorrect",
+      "abstained": false,
+      "serious_error": "wrong_drug",
+      "faithful": null,
+      "justification": "La réponse donne B (vancomycine) alors que la référence attend C (clindamycine)."
+     },
+     "judge_correct": 0.0,
+     "judge_correct_or_partial": 0.0,
+     "judge_serious_error": 1.0
     },
     {
      "id": "Q144",
@@ -4470,7 +5426,18 @@
       "completion_tokens": 190,
       "total_tokens": 3363
      },
-     "latency_ms": 13652.985541964881
+     "latency_ms": 13652.985541964881,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q144",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse donne C (DVP), conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q147",
@@ -4522,7 +5489,18 @@
       "completion_tokens": 205,
       "total_tokens": 3589
      },
-     "latency_ms": 14503.491749987006
+     "latency_ms": 14503.491749987006,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q147",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse donne B (céfuroxime intracamérulaire), conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q149",
@@ -4574,7 +5552,18 @@
       "completion_tokens": 216,
       "total_tokens": 3847
      },
-     "latency_ms": 15665.822457987815
+     "latency_ms": 15665.822457987815,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q149",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse donne D, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q153",
@@ -4626,7 +5615,18 @@
       "completion_tokens": 125,
       "total_tokens": 2908
      },
-     "latency_ms": 10980.221000034362
+     "latency_ms": 10980.221000034362,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q153",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse donne B (céfoxitine), conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q154",
@@ -4678,7 +5678,18 @@
       "completion_tokens": 320,
       "total_tokens": 3257
      },
-     "latency_ms": 16140.940625045914
+     "latency_ms": 16140.940625045914,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q154",
+      "correctness": "incorrect",
+      "abstained": false,
+      "serious_error": "other",
+      "faithful": null,
+      "justification": "La réponse désigne le curage pelvien comme nécessitant une antibioprophylaxie, alors que la question demande l'intervention qui n'en nécessite pas (référence C)."
+     },
+     "judge_correct": 0.0,
+     "judge_correct_or_partial": 0.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q156",
@@ -4730,7 +5741,18 @@
       "completion_tokens": 205,
       "total_tokens": 3380
      },
-     "latency_ms": 13970.017000043299
+     "latency_ms": 13970.017000043299,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q156",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse donne C (céfazoline + métronidazole), conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q157",
@@ -4782,7 +5804,18 @@
       "completion_tokens": 278,
       "total_tokens": 2987
      },
-     "latency_ms": 14617.882833001204
+     "latency_ms": 14617.882833001204,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q157",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse donne B, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q158",
@@ -4830,7 +5863,18 @@
       "completion_tokens": 196,
       "total_tokens": 3641
      },
-     "latency_ms": 14631.519999995362
+     "latency_ms": 14631.519999995362,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q158",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse donne B, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q159",
@@ -4878,7 +5922,18 @@
       "completion_tokens": 293,
       "total_tokens": 3317
      },
-     "latency_ms": 15727.536124992184
+     "latency_ms": 15727.536124992184,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q159",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse donne B, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q160",
@@ -4926,7 +5981,18 @@
       "completion_tokens": 235,
       "total_tokens": 3162
      },
-     "latency_ms": 14270.647874975111
+     "latency_ms": 14270.647874975111,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q160",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse donne C, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q161",
@@ -4978,7 +6044,18 @@
       "completion_tokens": 239,
       "total_tokens": 3087
      },
-     "latency_ms": 13918.938707967754
+     "latency_ms": 13918.938707967754,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q161",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse donne C, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q163",
@@ -5030,7 +6107,18 @@
       "completion_tokens": 201,
       "total_tokens": 3493
      },
-     "latency_ms": 14365.459833992645
+     "latency_ms": 14365.459833992645,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q163",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse donne C, conforme à la référence (option incorrecte)."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q164",
@@ -5082,7 +6170,18 @@
       "completion_tokens": 184,
       "total_tokens": 3784
      },
-     "latency_ms": 14710.339249984827
+     "latency_ms": 14710.339249984827,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q164",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse donne C (implant cochléaire), conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q165",
@@ -5134,7 +6233,18 @@
       "completion_tokens": 203,
       "total_tokens": 2778
      },
-     "latency_ms": 12404.754791001324
+     "latency_ms": 12404.754791001324,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q165",
+      "correctness": "incorrect",
+      "abstained": false,
+      "serious_error": "other",
+      "faithful": null,
+      "justification": "La réponse donne B (jamais d'antibioprophylaxie) alors que la référence attend C (uniquement en cas d'accès par la cavité bucco-pharyngée)."
+     },
+     "judge_correct": 0.0,
+     "judge_correct_or_partial": 0.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q166",
@@ -5186,7 +6296,18 @@
       "completion_tokens": 196,
       "total_tokens": 3090
      },
-     "latency_ms": 13020.976208033971
+     "latency_ms": 13020.976208033971,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q166",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse donne D, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q168",
@@ -5238,7 +6359,18 @@
       "completion_tokens": 320,
       "total_tokens": 3473
      },
-     "latency_ms": 16640.91391704278
+     "latency_ms": 16640.91391704278,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q168",
+      "correctness": "incorrect",
+      "abstained": false,
+      "serious_error": "other",
+      "faithful": null,
+      "justification": "La réponse donne D (recommandée uniquement en l'absence de matériel prothétique) alors que la référence attend C."
+     },
+     "judge_correct": 0.0,
+     "judge_correct_or_partial": 0.0,
+     "judge_serious_error": 0.0
     },
     {
      "id": "Q171",
@@ -5290,12 +6422,28 @@
       "completion_tokens": 252,
       "total_tokens": 2731
      },
-     "latency_ms": 13243.846042023506
+     "latency_ms": 13243.846042023506,
+     "judge": {
+      "case_id": "C9_simple_hybrid_rerank::Q171",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "La réponse donne C (parathyroïdectomie), conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
     }
    ]
   }
  ],
  "comparisons": [],
  "index_map": {},
- "reranker_model": "cross-encoder/mmarco-mMiniLMv2-L12-H384-v1"
+ "reranker_model": "cross-encoder/mmarco-mMiniLMv2-L12-H384-v1",
+ "judge": {
+  "label": "claude-haiku-5-5 subagent (κ=0.88)",
+  "dir": "eval_internal/judge/runs/abp_c9_detailed",
+  "missing": 0
+ }
 }
