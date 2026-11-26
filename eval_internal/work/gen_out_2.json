@@ -1,0 +1,852 @@
+[
+ {
+  "anchor_id": "2024_PEDIA_RPP-Optimisation-Hemodynamique-Perioperatoire_Pediatrie_c6d39a::2024_PEDIA_RPP-Optimisation-Hemodynamique-Perioperatoire_Pediatrie_c6d39a__c0113_1d01a38d",
+  "usable": true,
+  "question": "Chez un enfant de 2 ans éveillé, quelle valeur de pression artérielle systolique (formule 2 × âge + 65, 5e percentile) définit l'hypotension artérielle ?",
+  "question_type": "table",
+  "reference_answer": "Une PAS de 69 mmHg (5e percentile, 2 × âge + 65) définit l'hypotension à 2 ans.",
+  "key_terms": [
+   "69"
+  ],
+  "gold_quote": "Haque 2007 [4] / 50 ème percent / 2xâge* +65*ans : 89 | 5 ème percent = hypoTA / 2 x âge*+65*ans : 69",
+  "tags": [
+   "pediatric",
+   "threshold"
+  ]
+ },
+ {
+  "anchor_id": "2024_PEDIA_RPP-Optimisation-Hemodynamique-Perioperatoire_Pediatrie_c6d39a::2024_PEDIA_RPP-Optimisation-Hemodynamique-Perioperatoire_Pediatrie_c6d39a__c0017_a2d6a60d",
+  "usable": false,
+  "question": "",
+  "question_type": "",
+  "reference_answer": "",
+  "key_terms": [],
+  "gold_quote": "",
+  "tags": []
+ },
+ {
+  "anchor_id": "2010_2_ANAES_Prise-en-charge-de-l-interruption-volontaire-de-grossess_06d022::2010_2_ANAES_Prise-en-charge-de-l-interruption-volontaire-de-grossess_06d022__c0027_dfc436d4",
+  "usable": true,
+  "question": "Lors d'une IVG par méthode chirurgicale, quelle mesure de prévention infectieuse est préconisée chez une femme aux antécédents connus de salpingite ou d'infection génitale haute ?",
+  "question_type": "open",
+  "reference_answer": "Une antibiothérapie est recommandée en cas d'antécédent connu d'infection génitale haute.",
+  "key_terms": [
+   "antibiothérapie"
+  ],
+  "gold_quote": "une antibiothérapie en cas d'antécédent connu d'infection génitale haute",
+  "tags": [
+   "obstetric"
+  ]
+ },
+ {
+  "anchor_id": "2010_2_ANAES_Prise-en-charge-de-l-interruption-volontaire-de-grossess_06d022::2010_2_ANAES_Prise-en-charge-de-l-interruption-volontaire-de-grossess_06d022__c0005_f6b9d4db",
+  "usable": false,
+  "question": "",
+  "question_type": "",
+  "reference_answer": "",
+  "key_terms": [],
+  "gold_quote": "",
+  "tags": []
+ },
+ {
+  "anchor_id": "2016_RFE-ANREA-Organisation-de-l-anesthesie-reanimation-obstetricale_5a9973::2016_RFE-ANREA-Organisation-de-l-anesthesie-reanimation-obstetricale_5a9973__c0028_7bf12977",
+  "usable": true,
+  "question": "Chez une parturiente présentant une pathologie obstétricale sévère surveillée en maternité, dans quelles circonstances faut-il l'orienter vers une réanimation adulte, et avec quel niveau d'accord ?",
+  "question_type": "open",
+  "reference_answer": "En cas de défaillance d'organe persistante nécessitant une suppléance, de défaillance multiviscérale ou de pronostic vital engagé, selon la convention maternité-réanimation (accord fort).",
+  "key_terms": [
+   "suppléance",
+   "défaillance multiviscérale"
+  ],
+  "gold_quote": "d'orienter la patiente vers une unité de réanimation en cas de persistance d'une défaillance d'organe nécessitant une suppléance, d'apparition d'une défaillance multiviscérale ou de la mise en jeu du pronostic vital",
+  "tags": [
+   "obstetric",
+   "icu"
+  ]
+ },
+ {
+  "anchor_id": "2016_RFE-ANREA-Organisation-de-l-anesthesie-reanimation-obstetricale_5a9973::2016_RFE-ANREA-Organisation-de-l-anesthesie-reanimation-obstetricale_5a9973__c0002_2f8884cd",
+  "usable": false,
+  "question": "",
+  "question_type": "",
+  "reference_answer": "",
+  "key_terms": [],
+  "gold_quote": "",
+  "tags": []
+ },
+ {
+  "anchor_id": "2016_RFE-ANREA-Organisation-de-l-anesthesie-reanimation-obstetricale_5a9973::2016_RFE-ANREA-Organisation-de-l-anesthesie-reanimation-obstetricale_5a9973__c0015_a5098e1d",
+  "usable": true,
+  "question": "Dans une maternité, où doit se situer le bloc dédié aux interventions obstétricales urgentes (césarienne en urgence) par rapport aux salles d'accouchement ?",
+  "question_type": "open",
+  "reference_answer": "Un accès permanent à au moins une salle dédiée, contigüe au secteur de naissance (au même niveau pour toute nouvelle structure) est recommandé (accord fort).",
+  "key_terms": [
+   "contigüe",
+   "secteur de naissance"
+  ],
+  "gold_quote": "un accès permanent à au moins une salle d'intervention dédiée à la chirurgie obstétricale d'urgence qui doit être contigüe (au même niveau en cas de création de nouvelle structure) au secteur de naissance",
+  "tags": [
+   "obstetric",
+   "emergency"
+  ]
+ },
+ {
+  "anchor_id": "2017_Pneumonies-associees-au-soins-de-reanimation-ANREA_c53a1e::2017_Pneumonies-associees-au-soins-de-reanimation-ANREA_c53a1e__c0040_9434e618",
+  "usable": true,
+  "question": "En réanimation, quels types de mesures faut-il retenir prioritairement dans une stratégie multimodale de prévention des pneumonies acquises sous ventilation ?",
+  "question_type": "open",
+  "reference_answer": "Il faut privilégier l'association de mesures ayant un effet sur la morbidité : durée de ventilation mécanique, durée de séjour en réanimation et consommation d'antibiotiques.",
+  "key_terms": [
+   "morbidité",
+   "ventilation mécanique"
+  ],
+  "gold_quote": "il faut privilégier l'association de mesures ayant un effet sur la morbidité des patients, notamment les durées de ventilation mécanique, d'hospitalisation en réanimation et sur la consommation d'antibiotique",
+  "tags": [
+   "icu"
+  ]
+ },
+ {
+  "anchor_id": "2017_Pneumonies-associees-au-soins-de-reanimation-ANREA_c53a1e::2017_Pneumonies-associees-au-soins-de-reanimation-ANREA_c53a1e__c0027_d7d42cad",
+  "usable": false,
+  "question": "",
+  "question_type": "",
+  "reference_answer": "",
+  "key_terms": [],
+  "gold_quote": "",
+  "tags": []
+ },
+ {
+  "anchor_id": "2017_Pneumonies-associees-au-soins-de-reanimation-ANREA_c53a1e::2017_Pneumonies-associees-au-soins-de-reanimation-ANREA_c53a1e__c0023_c7fc57f6",
+  "usable": true,
+  "question": "Un patient de réanimation sans cardiopathie ni pathologie pulmonaire sous-jacente présente un nouveau foyer sur une seule radiographie thoracique. Quels seuils de température et de leucocytes retenir comme critères de pneumonie ?",
+  "question_type": "clinical_case",
+  "reference_answer": "Température > 38,3 °C sans autre cause, ou leucocytes < 4000/mm3 ou ≥ 12 000/mm3.",
+  "key_terms": [
+   "38,3 °C",
+   "12 000"
+  ],
+  "gold_quote": "Température corporelle > 38,3 °C sans autre cause\n\nLeucocytes < 4000/mm<sup>3</sup> ou ≥ 12 000/mm<sup>3</sup>",
+  "tags": [
+   "icu",
+   "threshold"
+  ]
+ },
+ {
+  "anchor_id": "2025_RESECTION_-HEPATIQUE_-RECOMMANDATIONS_MEL_e8bdcf::2025_RESECTION_-HEPATIQUE_-RECOMMANDATIONS_MEL_e8bdcf__c0131_76e7059c",
+  "usable": false,
+  "question": "",
+  "question_type": "",
+  "reference_answer": "",
+  "key_terms": [],
+  "gold_quote": "",
+  "tags": []
+ },
+ {
+  "anchor_id": "2025_RESECTION_-HEPATIQUE_-RECOMMANDATIONS_MEL_e8bdcf::2025_RESECTION_-HEPATIQUE_-RECOMMANDATIONS_MEL_e8bdcf__c0049_efe33840",
+  "usable": true,
+  "question": "Chez l'adulte opéré d'une hépatectomie, quelle dose de dexaméthasone injecter en bolus peropératoire pour limiter les complications après l'intervention, et avec quelle force ?",
+  "question_type": "table",
+  "reference_answer": "Un bolus peropératoire de 8-10 mg de dexaméthasone (recommandation faible).",
+  "key_terms": [
+   "8-10 mg",
+   "dexaméthasone"
+  ],
+  "gold_quote": "il est recommandé d'administrer en peropératoire un bolus de 8-10 mg de dexaméthasone pour réduire la morbidité postopératoire. (Recommandation faible)",
+  "tags": [
+   "dosage",
+   "drug_choice"
+  ]
+ },
+ {
+  "anchor_id": "2025_RESECTION_-HEPATIQUE_-RECOMMANDATIONS_MEL_e8bdcf::2025_RESECTION_-HEPATIQUE_-RECOMMANDATIONS_MEL_e8bdcf__c0259_7ccac3d0",
+  "usable": false,
+  "question": "",
+  "question_type": "",
+  "reference_answer": "",
+  "key_terms": [],
+  "gold_quote": "",
+  "tags": []
+ },
+ {
+  "anchor_id": "2016_RFE-ANREA-Prise-en-charge-des-traumatises-craniens-graves-a-la-p_966f8c::2016_RFE-ANREA-Prise-en-charge-des-traumatises-craniens-graves-a-la-p_966f8c__c0103_94114bc7",
+  "usable": true,
+  "question": "Chez un enfant victime d'un traumatisme crânien grave, quelle cible de température viser, et une hypothermie induite est-elle indiquée pour contrôler l'hypertension intracrânienne ?",
+  "question_type": "open",
+  "reference_answer": "Il faut maintenir une normothermie et ne pas induire d'hypothermie thérapeutique (32-34 °C), ni pour le pronostic ni pour contrôler l'HTIC.",
+  "key_terms": [
+   "normothermie",
+   "32-34 °C"
+  ],
+  "gold_quote": "R12.5 – Chez l'enfant traumatisé crânien grave, il faut faire un CCT visant à maintenir une normothermie.\n\nAvis d'experts\n\nR12.6 – Chez l'enfant traumatisé crânien grave, il ne faut pas induire de CCT avec pour but d'obtenir une hypothermie thérapeutique (32-34 °C) pour améliorer le pronostic ou pour contrôler l'HTIC.",
+  "tags": [
+   "pediatric",
+   "icu",
+   "contraindication"
+  ]
+ },
+ {
+  "anchor_id": "2016_RFE-ANREA-Prise-en-charge-des-traumatises-craniens-graves-a-la-p_966f8c::2016_RFE-ANREA-Prise-en-charge-des-traumatises-craniens-graves-a-la-p_966f8c__c0067_dea3221d",
+  "usable": true,
+  "question": "Un traumatisé crânien grave est hospitalisé en réanimation avec un monitorage multimodal (PIC, autorégulation cérébrale). Comment fixer l'objectif de pression de perfusion cérébrale ?",
+  "question_type": "clinical_case",
+  "reference_answer": "L'objectif de PPC doit être individualisé selon les résultats du monitoring multimodal, compte tenu de la grande variabilité de la PPC optimale.",
+  "key_terms": [
+   "individualisation",
+   "monitoring multimodal"
+  ],
+  "gold_quote": "Cette littérature révèle une large variabilité inter- et intra-individuelle du niveau de PPC optimale et appelle à une individualisation de l'objectif de PPC en fonction des résultats du monitoring multimodal.",
+  "tags": [
+   "icu",
+   "threshold"
+  ]
+ },
+ {
+  "anchor_id": "2016_RFE-ANREA-Prise-en-charge-des-traumatises-craniens-graves-a-la-p_966f8c::2016_RFE-ANREA-Prise-en-charge-des-traumatises-craniens-graves-a-la-p_966f8c__c0073_e28919b9",
+  "usable": true,
+  "question": "Quel soluté de remplissage faut-il proscrire chez un traumatisé crânien grave en état de choc hémorragique ?",
+  "question_type": "open",
+  "reference_answer": "Il est recommandé de ne pas utiliser d'albumine.",
+  "key_terms": [
+   "albumine"
+  ],
+  "gold_quote": "En cas de traumatisé crânien présentant un choc hémorragique, il est recommandé de ne pas utiliser d'albumine [199].",
+  "tags": [
+   "emergency",
+   "icu",
+   "contraindication",
+   "drug_choice"
+  ]
+ },
+ {
+  "anchor_id": "2014_2_AFAR_Traumatisme-thoracique-_prise-en-charge-des-48-premieres-_628f20::2014_2_AFAR_Traumatisme-thoracique-_prise-en-charge-des-48-premieres-_628f20__c0013_9fcc22ba",
+  "usable": false,
+  "question": "",
+  "question_type": "",
+  "reference_answer": "",
+  "key_terms": [],
+  "gold_quote": "",
+  "tags": []
+ },
+ {
+  "anchor_id": "2014_2_AFAR_Traumatisme-thoracique-_prise-en-charge-des-48-premieres-_628f20::2014_2_AFAR_Traumatisme-thoracique-_prise-en-charge-des-48-premieres-_628f20__c0086_3f72979f",
+  "usable": false,
+  "question": "",
+  "question_type": "",
+  "reference_answer": "",
+  "key_terms": [],
+  "gold_quote": "",
+  "tags": []
+ },
+ {
+  "anchor_id": "2014_2_AFAR_Traumatisme-thoracique-_prise-en-charge-des-48-premieres-_628f20::2014_2_AFAR_Traumatisme-thoracique-_prise-en-charge-des-48-premieres-_628f20__c0028_3520be98",
+  "usable": true,
+  "question": "Chez un traumatisé thoracique hospitalisé qui devient hypoxémique, quelle modalité de ventilation non invasive utiliser, après quels préalables, et avec quel grade ?",
+  "question_type": "open",
+  "reference_answer": "Une VSAI-PEP après tomodensitométrie et drainage d'un éventuel pneumothorax, sans contre-indication à la VNI et sous surveillance continue (G1+).",
+  "key_terms": [
+   "VSAI-PEP",
+   "drainage d'un pneumothorax",
+   "G1+"
+  ],
+  "gold_quote": "ventilation spontanée avec aide inspiratoire et pression expiratoire positive (VSAI-PEP) après réalisation d'une tomodensitométrie et du drainage d'un pneumothorax lorsqu'il est indiqué, en l'absence de contre-indication à la VNI et dans un environnement disposant d'une surveillance continue (G1+)",
+  "tags": [
+   "emergency",
+   "icu"
+  ]
+ },
+ {
+  "anchor_id": "2026_RFE-20_4_2026-deifinitif-et-validei_1b550e::2026_RFE-20_4_2026-deifinitif-et-validei_1b550e__c0175_7404c0ee",
+  "usable": true,
+  "question": "Un patient ayant présenté une embolie pulmonaire il y a deux mois doit subir un geste invasif programmé après lequel l'anticoagulation curative ne pourra pas être reprise avant plusieurs jours. Quelle option préventive discuter ?",
+  "question_type": "open",
+  "reference_answer": "Discuter la pose pré-procédurale d'un filtre cave optionnel si l'anticoagulation curative ne peut être reprise dans les 72 h post-procédurales.",
+  "key_terms": [
+   "filtre cave optionnel",
+   "72h"
+  ],
+  "gold_quote": "Les experts suggèrent donc de discuter la mise en place pré-procédurale d'un filtre cave optionnel au cours du 2<sup>ème</sup> ou 3<sup>ème</sup> mois après une EP ou une TVP proximale si la reprise d'une anticoagulation à dose curative ne peut pas être envisagée dans les 72h post-procédurales",
+  "tags": [
+   "timing"
+  ]
+ },
+ {
+  "anchor_id": "2026_RFE-20_4_2026-deifinitif-et-validei_1b550e::2026_RFE-20_4_2026-deifinitif-et-validei_1b550e__c0513_ea67749b",
+  "usable": true,
+  "question": "Pour la gestion des anticoagulants avant un geste ORL programmé, dans quelle catégorie de risque de saignement se classe l'exérèse d'un angiofibrome du nasopharynx ?",
+  "question_type": "table",
+  "reference_answer": "Elle est classée à risque hémorragique élevé.",
+  "key_terms": [
+   "Risque hémorragique élevé"
+  ],
+  "gold_quote": "Risque hémorragique faible | Risque hémorragique élevé # |\n| --- | --- | --- |\n|  |  | -Chirurgies par voies externes du larynx et de la trachée de l'enfant (résections anastomoses et plasties d'agrandissement) / -Angiofibromes nasopharyngés *",
+  "tags": []
+ },
+ {
+  "anchor_id": "2026_RFE-20_4_2026-deifinitif-et-validei_1b550e::2026_RFE-20_4_2026-deifinitif-et-validei_1b550e__c0501_6e9c987c",
+  "usable": false,
+  "question": "",
+  "question_type": "",
+  "reference_answer": "",
+  "key_terms": [],
+  "gold_quote": "",
+  "tags": []
+ },
+ {
+  "anchor_id": "2012_2_HAS_Texte-court-ransfusion-de-plasma-therapeutique-Produits-in_d3f086::2012_2_HAS_Texte-court-ransfusion-de-plasma-therapeutique-Produits-in_d3f086__c0062_7dc68f6f",
+  "usable": true,
+  "question": "Un patient porteur d'un déficit en facteur de coagulation, pour lequel un concentré spécifique existe mais n'est pas disponible rapidement, présente une hémorragie grave. Quel produit sanguin administrer et à quelle posologie ?",
+  "question_type": "open",
+  "reference_answer": "Du plasma thérapeutique peut être administré, à la dose de 10 à 15 mL/kg (accord professionnel).",
+  "key_terms": [
+   "plasma thérapeutique",
+   "10 à 15 mL/kg"
+  ],
+  "gold_quote": "il peut être licite d'apporter du plasma thérapeutique dans le cadre d'une situation d'urgence hémorragique (accord professionnel). La dose de plasma thérapeutique à transfuser est alors de 10 à 15 mL/kg de poids corporel.",
+  "tags": [
+   "dosage",
+   "emergency"
+  ]
+ },
+ {
+  "anchor_id": "2012_2_HAS_Texte-court-ransfusion-de-plasma-therapeutique-Produits-in_d3f086::2012_2_HAS_Texte-court-ransfusion-de-plasma-therapeutique-Produits-in_d3f086__c0002_045868e8",
+  "usable": false,
+  "question": "",
+  "question_type": "",
+  "reference_answer": "",
+  "key_terms": [],
+  "gold_quote": "",
+  "tags": []
+ },
+ {
+  "anchor_id": "2012_2_HAS_Texte-court-ransfusion-de-plasma-therapeutique-Produits-in_d3f086::2012_2_HAS_Texte-court-ransfusion-de-plasma-therapeutique-Produits-in_d3f086__c0035_f2e03ddf",
+  "usable": true,
+  "question": "Un nouveau-né traité par photothérapie pour une hyperbilirubinémie doit recevoir du plasma traité par amotosalen (PFC-IA). Quelle précaution prendre concernant l'appareil de photothérapie ?",
+  "question_type": "clinical_case",
+  "reference_answer": "Utiliser des dispositifs de photothérapie n'émettant pas de rayonnement de longueur d'onde inférieure à 425 nm.",
+  "key_terms": [
+   "425 nm"
+  ],
+  "gold_quote": "doivent être pris en charge au moyen de dispositifs de photothérapie n'émettant pas de rayonnements d'une longueur d'onde inférieure à 425 nm",
+  "tags": [
+   "pediatric",
+   "contraindication"
+  ]
+ },
+ {
+  "anchor_id": "2004_2b_AFAR_texte-long_Hemorragies-sous-arachnoidienne_5ab378::2004_2b_AFAR_texte-long_Hemorragies-sous-arachnoidienne_5ab378__c0038_4fbdb5d2",
+  "usable": true,
+  "question": "Lorsqu'une ponction lombaire est envisagée pour rechercher une hémorragie sous-arachnoïdienne, quel délai après le début du saignement faut-il idéalement respecter avant de la réaliser ?",
+  "question_type": "open",
+  "reference_answer": "Il est préférable d'attendre 6 à 12 heures après l'hémorragie.",
+  "key_terms": [
+   "6 à 12 heures"
+  ],
+  "gold_quote": "La PL n'est pas une urgence car il est préférable d'attendre un délai de 6 à 12 heures après l'hémorragie pour la réaliser.",
+  "tags": [
+   "timing",
+   "emergency"
+  ]
+ },
+ {
+  "anchor_id": "2004_2b_AFAR_texte-long_Hemorragies-sous-arachnoidienne_5ab378::2004_2b_AFAR_texte-long_Hemorragies-sous-arachnoidienne_5ab378__c0032_bc100486",
+  "usable": true,
+  "question": "Sur l'échelle de gravité clinique de l'hémorragie sous-arachnoïdienne graduée de 0 à 5, quel grade attribuer à un patient somnolent et confus avec un déficit focal minime ?",
+  "question_type": "table",
+  "reference_answer": "Il s'agit d'un grade 3.",
+  "key_terms": [
+   "3"
+  ],
+  "gold_quote": "| 2 | Céphalée modérée à sévère, raideur de nuque |\n| 3 | Somnolence, confusion, déficit focal minimal |",
+  "tags": []
+ },
+ {
+  "anchor_id": "2004_2b_AFAR_texte-long_Hemorragies-sous-arachnoidienne_5ab378::2004_2b_AFAR_texte-long_Hemorragies-sous-arachnoidienne_5ab378__c0334_8046e544",
+  "usable": true,
+  "question": "Un patient en réanimation pour hémorragie sous-arachnoïdienne est suspect de vasospasme et bénéficie d'une IRM de perfusion. Quels paramètres de perfusion analyser en priorité pour détecter une hypoperfusion ?",
+  "question_type": "clinical_case",
+  "reference_answer": "Les cartographies de time to peak (TTP) et de temps de transit moyen (MTT) ; le rCBV est moins contributif.",
+  "key_terms": [
+   "TTP",
+   "MTT"
+  ],
+  "gold_quote": "Les cartographies de *time to peak* (TTP) et de temps de transit moyen (MTT) sont de bons indicateurs d'hypoperfusion alors que la cartographie du volume sanguin régional (rCBV) serait moins significative dans le vasospasme [58].",
+  "tags": [
+   "icu"
+  ]
+ },
+ {
+  "anchor_id": "2016_rfe-anesthesie-loco-regionale-perinerveuse_bd75e5::2016_rfe-anesthesie-loco-regionale-perinerveuse_bd75e5__c0025_926191c0",
+  "usable": false,
+  "question": "",
+  "question_type": "",
+  "reference_answer": "",
+  "key_terms": [],
+  "gold_quote": "",
+  "tags": []
+ },
+ {
+  "anchor_id": "2016_rfe-anesthesie-loco-regionale-perinerveuse_bd75e5::2016_rfe-anesthesie-loco-regionale-perinerveuse_bd75e5__c0043_20a77291",
+  "usable": true,
+  "question": "Un patient doit bénéficier d'un bloc nerveux périphérique échoguidé et souhaite être endormi au préalable. Peut-on réaliser ce bloc sous anesthésie générale ?",
+  "question_type": "clinical_case",
+  "reference_answer": "Oui : sous échoguidage, la réalisation d'une ALR sous anesthésie générale n'est pas associée à une augmentation des risques.",
+  "key_terms": [
+   "anesthésie générale"
+  ],
+  "gold_quote": "Les données disponibles sont actuellement observationnelles et concernent entre autre l'ALR pédiatrique, mais confirment que la réalisation d'une ALR sous anesthésie générale n'est pas associée à une augmentation des risques [72].",
+  "tags": []
+ },
+ {
+  "anchor_id": "2016_rfe-anesthesie-loco-regionale-perinerveuse_bd75e5::2016_rfe-anesthesie-loco-regionale-perinerveuse_bd75e5__c0046_e5c10975",
+  "usable": true,
+  "question": "Après un bloc périphérique d'un membre, un patient présente un bloc anormalement prolongé avec un déficit moteur complet dans le territoire bloqué. Quel avis spécialisé obtenir rapidement et quel examen complémentaire demander ?",
+  "question_type": "open",
+  "reference_answer": "Un avis neurochirurgical rapide (déficit complet) et un examen électrophysiologique par EMG.",
+  "key_terms": [
+   "neurochirurgien",
+   "EMG"
+  ],
+  "gold_quote": "Un avis par un neurologue doit alors être rapidement obtenu en cas de déficit incomplet, et neurochirurgien en cas de déficit complet. En cas de suspicion de lésion nerveuse secondaire au bloc, il est recommandé de réaliser un examen électrophysiologique par EMG",
+  "tags": []
+ },
+ {
+  "anchor_id": "2014_2_SPILF_Strategies-de-reduction-de-lutilisation-des-antibiotique_911598::2014_2_SPILF_Strategies-de-reduction-de-lutilisation-des-antibiotique_911598__c0032_c08c0bf8",
+  "usable": true,
+  "question": "En réanimation, sur quelle période faut-il vérifier les traitements antérieurs par fluoroquinolone avant d'en represcrire chez le même malade, et quelle est la force de cet accord ?",
+  "question_type": "open",
+  "reference_answer": "Il faut tenir compte des prescriptions de FQ des 6 mois précédents, quelle qu'en soit l'indication, pour éviter les prescriptions répétées (accord fort).",
+  "key_terms": [
+   "6 mois",
+   "Accord fort"
+  ],
+  "gold_quote": "2- Il ne faut pas prescrire de FQ de façon répétée chez un même patient (prendre en compte les prescriptions antérieures de FQ dans les 6 mois précédents quelle qu'en soit l'indication) (*Accord fort*).",
+  "tags": [
+   "icu",
+   "drug_choice",
+   "timing"
+  ]
+ },
+ {
+  "anchor_id": "2014_2_SPILF_Strategies-de-reduction-de-lutilisation-des-antibiotique_911598::2014_2_SPILF_Strategies-de-reduction-de-lutilisation-des-antibiotique_911598__c0003_ada03f4c",
+  "usable": false,
+  "question": "",
+  "question_type": "",
+  "reference_answer": "",
+  "key_terms": [],
+  "gold_quote": "",
+  "tags": []
+ },
+ {
+  "anchor_id": "2014_2_SPILF_Strategies-de-reduction-de-lutilisation-des-antibiotique_911598::2014_2_SPILF_Strategies-de-reduction-de-lutilisation-des-antibiotique_911598__c0055_dbb0b86f",
+  "usable": true,
+  "question": "Un patient grave de réanimation reçoit une bêta-lactamine à forte posologie et présente des convulsions faisant suspecter une toxicité. Quelle conduite tenir pour adapter le traitement ?",
+  "question_type": "clinical_case",
+  "reference_answer": "Il peut être utile de doser les concentrations résiduelles de la bêta-lactamine.",
+  "key_terms": [
+   "concentrations résiduelles"
+  ],
+  "gold_quote": "compte tenu des doses souvent élevées des bêta-lactamines administrées et de l'imprévisibilité des concentrations obtenues chez un patient sévère, il peut être utile de doser les concentrations résiduelles [161]",
+  "tags": [
+   "icu",
+   "dosage"
+  ]
+ },
+ {
+  "anchor_id": "2019_rfe-interets-de-lapprentissage-par-simulation-en-soins-critiques_3d1b9f::2019_rfe-interets-de-lapprentissage-par-simulation-en-soins-critiques_3d1b9f__c0084_d920e477",
+  "usable": true,
+  "question": "La simulation est-elle conseillée pour améliorer la communication entre soignants en soins critiques, auprès de quels publics et avec quel niveau d'accord ?",
+  "question_type": "open",
+  "reference_answer": "Oui, les experts suggèrent de l'utiliser en formation initiale et continue, médicale et paramédicale (accord fort).",
+  "key_terms": [
+   "formation initiale et continue",
+   "Accord fort"
+  ],
+  "gold_quote": "**R2.4. Les experts suggèrent d'utiliser la simulation pour améliorer les compétences en communication entre professionnels en soins critiques, en formation initiale et continue, médicale et paramédicale.**\n\n**Accord fort**",
+  "tags": [
+   "icu"
+  ]
+ },
+ {
+  "anchor_id": "2019_rfe-interets-de-lapprentissage-par-simulation-en-soins-critiques_3d1b9f::2019_rfe-interets-de-lapprentissage-par-simulation-en-soins-critiques_3d1b9f__c0018_1bc6aa9c",
+  "usable": false,
+  "question": "",
+  "question_type": "",
+  "reference_answer": "",
+  "key_terms": [],
+  "gold_quote": "",
+  "tags": []
+ },
+ {
+  "anchor_id": "2019_rfe-interets-de-lapprentissage-par-simulation-en-soins-critiques_3d1b9f::2019_rfe-interets-de-lapprentissage-par-simulation-en-soins-critiques_3d1b9f__c0025_01462934",
+  "usable": false,
+  "question": "",
+  "question_type": "",
+  "reference_answer": "",
+  "key_terms": [],
+  "gold_quote": "",
+  "tags": []
+ },
+ {
+  "anchor_id": "2023_RPP-Organisation-Anesthesie-Pediatrique_-Version-pour-mise-sur-s_1a40f2::2023_RPP-Organisation-Anesthesie-Pediatrique_-Version-pour-mise-sur-s_1a40f2__c0086_3f57f8fa",
+  "usable": true,
+  "question": "Chez l'enfant opéré, à quel moment faut-il commencer le réchauffement actif pour prévenir l'hypothermie, et jusqu'à quand le maintenir ?",
+  "question_type": "open",
+  "reference_answer": "Débuter le réchauffement actif avant l'induction et le poursuivre en continu en peropératoire et en postopératoire (avis d'experts, accord fort).",
+  "key_terms": [
+   "avant l'induction",
+   "réchauffement actif"
+  ],
+  "gold_quote": "de débuter le réchauffement actif avant l'induction avec un dispositif adapté et un contrôle de la température de la salle, de poursuivre le réchauffement en continu pendant l'intervention et en post-opératoire",
+  "tags": [
+   "pediatric",
+   "timing"
+  ]
+ },
+ {
+  "anchor_id": "2023_RPP-Organisation-Anesthesie-Pediatrique_-Version-pour-mise-sur-s_1a40f2::2023_RPP-Organisation-Anesthesie-Pediatrique_-Version-pour-mise-sur-s_1a40f2__c0194_4ba05b15",
+  "usable": true,
+  "question": "Avant la pose d'une voie veineuse chez un nourrisson de 3 semaines, peut-on utiliser une chlorhexidine alcoolique à 0,5 % (Hibitane) pour l'antisepsie cutanée ?",
+  "question_type": "table",
+  "reference_answer": "Non, elle est contre-indiquée avant 1 mois (et chez le prématuré) ; elle n'est autorisée qu'à partir de 1 mois.",
+  "key_terms": [
+   "Contre Indiqué"
+  ],
+  "gold_quote": "| Chlorhexidine 0,5% / alcoolique à 70% / Hibitane | Contre Indiqué | Contre Indiqué | Autorisé |",
+  "tags": [
+   "pediatric",
+   "contraindication"
+  ]
+ },
+ {
+  "anchor_id": "2023_RPP-Organisation-Anesthesie-Pediatrique_-Version-pour-mise-sur-s_1a40f2::2023_RPP-Organisation-Anesthesie-Pediatrique_-Version-pour-mise-sur-s_1a40f2__c0044_354214c7",
+  "usable": true,
+  "question": "Un nourrisson de 10 mois qui ne marche pas encore, sans antécédent hémorragique personnel ni familial, est programmé pour une intervention chirurgicale. Faut-il prescrire un bilan d'hémostase préopératoire ?",
+  "question_type": "clinical_case",
+  "reference_answer": "Oui : l'absence d'acquisition de la marche est la seule indication d'un bilan d'hémostase systématique chez l'enfant.",
+  "key_terms": [
+   "acquisition de la marche",
+   "bilan d'hémostase"
+  ],
+  "gold_quote": "La seule indication d'un bilan d'hémostase systématique avant un acte invasif chez l'enfant est l'absence d'acquisition de la marche.",
+  "tags": [
+   "pediatric"
+  ]
+ },
+ {
+  "anchor_id": "2021_RFE_20SFAR_20pancreatite_20aigue_finale_220921_b98663::2021_RFE_20SFAR_20pancreatite_20aigue_finale_220921_b98663__c0110_d4610fd6",
+  "usable": true,
+  "question": "En soins critiques, chez un patient atteint de pancréatite aiguë grave, quels examens associer à la clinique et à la CRP pour affirmer l'infection de la nécrose, et avec quel grade ?",
+  "question_type": "open",
+  "reference_answer": "Le dosage de la procalcitonine et la tomodensitométrie abdominale (GRADE 2+).",
+  "key_terms": [
+   "procalcitonine",
+   "tomodensitométrie abdominale"
+  ],
+  "gold_quote": "il est probablement recommandé de ne pas se limiter à l'examen clinique et à la mesure de la CRP, et de se servir de l'apport diagnostique du dosage de la procalcitonine et de la tomodensitométrie abdominale pour établir le diagnostic d'infection de nécrose pancréatique.**",
+  "tags": [
+   "icu"
+  ]
+ },
+ {
+  "anchor_id": "2021_RFE_20SFAR_20pancreatite_20aigue_finale_220921_b98663::2021_RFE_20SFAR_20pancreatite_20aigue_finale_220921_b98663__c0150_5c205542",
+  "usable": true,
+  "question": "Dans le score de défaillance d'organes utilisé au cours de la pancréatite aiguë, quel score respiratoire attribuer à un patient dont le rapport PaO2/FiO2 est de 250 ?",
+  "question_type": "table",
+  "reference_answer": "Un score de 2 (PaO2/FiO2 entre 201 et 300).",
+  "key_terms": [
+   "201-300"
+  ],
+  "gold_quote": "| Organe | Score / 0 | 1 | 2 | 3 | 4 |\n| --- | --- | --- | --- | --- | --- |\n| Poumon / ( PaO_2/FiO_2 )* | >400 | 301-400 | 201-300 | 101-200 | ≤100 |",
+  "tags": [
+   "icu",
+   "threshold"
+  ]
+ },
+ {
+  "anchor_id": "2021_RFE_20SFAR_20pancreatite_20aigue_finale_220921_b98663::2021_RFE_20SFAR_20pancreatite_20aigue_finale_220921_b98663__c0096_cf2911e4",
+  "usable": true,
+  "question": "Un patient en soins critiques pour une pancréatite aiguë sévère secondaire à une hypertriglycéridémie très sévère persistante présente une acidose lactique et une défaillance d'organe. Quelle place pour les échanges plasmatiques ?",
+  "question_type": "clinical_case",
+  "reference_answer": "Les échanges plasmatiques peuvent être proposés d'emblée dans cette situation (ou après échec du traitement médical).",
+  "key_terms": [
+   "échanges plasmatiques"
+  ],
+  "gold_quote": "il semble pertinent de proposer les échanges plasmatiques après échec du traitement médical ou d'emblée en cas de pancréatite aigüe grave liée à une hypertriglycéridémie persistante sévère ou très sévère associée à une acidose hyperlactatémique et/ou à une ou plusieurs défaillances d'organes [11].",
+  "tags": [
+   "icu"
+  ]
+ },
+ {
+  "anchor_id": "2021_Gestion_20perioperatoire_20des_20patients_20sous_20AAP_20en_20ur_5a9220::2021_Gestion_20perioperatoire_20des_20patients_20sous_20AAP_20en_20ur_5a9220__c0027_4e370d40",
+  "usable": false,
+  "question": "",
+  "question_type": "",
+  "reference_answer": "",
+  "key_terms": [],
+  "gold_quote": "",
+  "tags": []
+ },
+ {
+  "anchor_id": "2021_Gestion_20perioperatoire_20des_20patients_20sous_20AAP_20en_20ur_5a9220::2021_Gestion_20perioperatoire_20des_20patients_20sous_20AAP_20en_20ur_5a9220__c0020_c5fb7de4",
+  "usable": true,
+  "question": "Parmi les antiplaquettaires inhibiteurs du récepteur P2Y12, lequel a une action réversible ?",
+  "question_type": "table",
+  "reference_answer": "Le ticagrelor est un inhibiteur réversible du P2Y12.",
+  "key_terms": [
+   "Ticagrelor"
+  ],
+  "gold_quote": "Prasugrel : Inhibiteur irréversible du récepteur plaquettaire P2Y 12 de l'ADP | Ticagrelor : Inhibiteur réversible du récepteur plaquettaire P2Y 12 de l'ADP",
+  "tags": [
+   "drug_choice"
+  ]
+ },
+ {
+  "anchor_id": "2021_Gestion_20perioperatoire_20des_20patients_20sous_20AAP_20en_20ur_5a9220::2021_Gestion_20perioperatoire_20des_20patients_20sous_20AAP_20en_20ur_5a9220__c0068_5d06dfb3",
+  "usable": true,
+  "question": "Un patient traité par ticagrelor doit être opéré en urgence avec un risque hémorragique important. Peut-on compter sur la desmopressine pour antagoniser l'effet antiplaquettaire ?",
+  "question_type": "clinical_case",
+  "reference_answer": "Non, la desmopressine est décevante avec les AAP récents : sous ticagrelor, elle ne réduit pas le temps de saignement et ne corrige pas les fonctions plaquettaires.",
+  "key_terms": [
+   "desmopressine",
+   "ticagrelor"
+  ],
+  "gold_quote": "L'utilisation de la desmopressine avec les AAP plus récents est décevante : elle nepermet pas de réduire le saignement de lapins traités par prasugrel [78] et son administration à 21 volontaires sains ayant reçu du ticagrelor ne réduit pas le temps de saignement et ne corrige pas les fonctions plaquetaires [79].",
+  "tags": [
+   "emergency",
+   "drug_choice"
+  ]
+ },
+ {
+  "anchor_id": "2015_ANREA_132_RFE-IRA-_52a541::2015_ANREA_132_RFE-IRA-_52a541__c0086_141a7200",
+  "usable": true,
+  "question": "Pour prévenir ou traiter une insuffisance rénale aiguë en périopératoire ou en réanimation, peut-on utiliser le mannitol ou la dopamine, et avec quel grade ?",
+  "question_type": "open",
+  "reference_answer": "Non, il ne faut pas les utiliser (Grade 1-, accord fort).",
+  "key_terms": [
+   "mannitol",
+   "dopamine",
+   "Grade 1-"
+  ],
+  "gold_quote": "R6.3 – Il ne faut pas utiliser les traitements suivants dans l'objectif de prévenir ou traiter une IRA : mannitol, dopamine, fenoldopam, facteur atrial natriurétique, *N*-acétylcystéine, *insulin-like growth factor-1*, érythropoïétine, antagonistes des récepteurs de l'adénosine.\n\n(Grade 1-) Accord Fort",
+  "tags": [
+   "icu",
+   "contraindication",
+   "drug_choice"
+  ]
+ },
+ {
+  "anchor_id": "2015_ANREA_132_RFE-IRA-_52a541::2015_ANREA_132_RFE-IRA-_52a541__c0035_fcdc8be2",
+  "usable": true,
+  "question": "Dans la classification RIFLE de l'insuffisance rénale aiguë, quel critère de diurèse définit le stade « Injury » ?",
+  "question_type": "table",
+  "reference_answer": "Une diurèse < 0,5 mL/kg/h pendant plus de 16 heures.",
+  "key_terms": [
+   "0,5 mL/kg/h",
+   "16 h"
+  ],
+  "gold_quote": "| Injury (atteinte) | Diminuée de > 50 % | < 0,5 mL/kg/h pendant > 16 h |",
+  "tags": [
+   "icu",
+   "threshold"
+  ]
+ },
+ {
+  "anchor_id": "2015_ANREA_132_RFE-IRA-_52a541::2015_ANREA_132_RFE-IRA-_52a541__c0065_84e32443",
+  "usable": true,
+  "question": "Un adulte bénéficie d'une chirurgie abdominale majeure et l'on doit choisir le cristalloïde de remplissage peropératoire. Quel type de soluté est associé à moins de complications postopératoires et à un moindre besoin de dialyse ?",
+  "question_type": "clinical_case",
+  "reference_answer": "Les solutés balancés, le NaCl 0,9 % étant associé à plus de complications et d'épuration extra-rénale (4,8 % vs 1 %).",
+  "key_terms": [
+   "solutés balancés"
+  ],
+  "gold_quote": "les patients recevant du NaCl 0,9 % comparés à ceux recevant des solutés balancés avaient un taux de complications postopératoires et de recours à l'épuration extra-rénale (4,8 % vs 1 %,  $p < 0,05$ ) plus important.",
+  "tags": [
+   "drug_choice"
+  ]
+ },
+ {
+  "anchor_id": "2006_2a_HAS_TEXTE-COURT_Prise-en-charge-de-linfarctus-du-myocarde_110064::2006_2a_HAS_TEXTE-COURT_Prise-en-charge-de-linfarctus-du-myocarde_110064__c0019_890bec82",
+  "usable": true,
+  "question": "Face à un patient présentant une douleur thoracique évoquant un infarctus aigu hors service de cardiologie, vers quelle structure l'appel initial doit-il être dirigé ?",
+  "question_type": "open",
+  "reference_answer": "L'appel doit aboutir au SAMU-Centre 15 (« prescrire le 15 »).",
+  "key_terms": [
+   "SAMU-Centre 15"
+  ],
+  "gold_quote": "l'*appel*, qu'il provienne du patient lui-même ou d'un *tiers appelant*, doit aboutir au SAMU-Centre 15",
+  "tags": [
+   "emergency"
+  ]
+ },
+ {
+  "anchor_id": "2006_2a_HAS_TEXTE-COURT_Prise-en-charge-de-linfarctus-du-myocarde_110064::2006_2a_HAS_TEXTE-COURT_Prise-en-charge-de-linfarctus-du-myocarde_110064__c0015_bc422673",
+  "usable": false,
+  "question": "",
+  "question_type": "",
+  "reference_answer": "",
+  "key_terms": [],
+  "gold_quote": "",
+  "tags": []
+ },
+ {
+  "anchor_id": "2006_2a_HAS_TEXTE-COURT_Prise-en-charge-de-linfarctus-du-myocarde_110064::2006_2a_HAS_TEXTE-COURT_Prise-en-charge-de-linfarctus-du-myocarde_110064__c0000_4ad26c9b",
+  "usable": false,
+  "question": "",
+  "question_type": "",
+  "reference_answer": "",
+  "key_terms": [],
+  "gold_quote": "",
+  "tags": []
+ },
+ {
+  "anchor_id": "2026_gestion_voies_aeriennes_argumentaire_mel_vd_a9b593::2026_gestion_voies_aeriennes_argumentaire_mel_vd_a9b593__c0099_d848e6a6",
+  "usable": true,
+  "question": "Chez l'adulte présentant des critères prédictifs d'intubation difficile, quel dispositif d'oxygénation mettre en place pendant l'apnée, après préoxygénation au masque étanche, pour retarder la désaturation ?",
+  "question_type": "open",
+  "reference_answer": "Les experts suggèrent l'oxygénation nasale à haut débit (ONHD) durant la phase d'apnée.",
+  "key_terms": [
+   "ONHD"
+  ],
+  "gold_quote": "Les experts suggèrent que la mise en place d'un dispositif d'ONHD durant la phase apnée après une préoxygenation au masque facial étanche (avec ou sans pression positive) pourrait permettre de prolonger le délai avant désaturation",
+  "tags": []
+ },
+ {
+  "anchor_id": "2026_gestion_voies_aeriennes_argumentaire_mel_vd_a9b593::2026_gestion_voies_aeriennes_argumentaire_mel_vd_a9b593__c0025_9a322cab",
+  "usable": false,
+  "question": "",
+  "question_type": "",
+  "reference_answer": "",
+  "key_terms": [],
+  "gold_quote": "",
+  "tags": []
+ },
+ {
+  "anchor_id": "2026_gestion_voies_aeriennes_argumentaire_mel_vd_a9b593::2026_gestion_voies_aeriennes_argumentaire_mel_vd_a9b593__c0177_c17f490c",
+  "usable": true,
+  "question": "Après une intubation difficile compliquée d'une désaturation sévère au bloc, l'équipe d'anesthésie organise une revue de morbi-mortalité. Quelles caractéristiques doit-elle respecter pour être de qualité ?",
+  "question_type": "clinical_case",
+  "reference_answer": "Sélection rigoureuse des cas, collecte structurée, présentation synthétique pluridisciplinaire, participative et non culpabilisante, et suivi formalisé des actions correctrices.",
+  "key_terms": [
+   "non culpabilisant",
+   "actions correctrices"
+  ],
+  "gold_quote": "une sélection rigoureuse des cas, une collecte structurée des données, une présentation synthétique dans un cadre pluridisciplinaire, participatif et non culpabilisant, ainsi qu'un suivi formalisé des actions correctrices décidées",
+  "tags": []
+ },
+ {
+  "anchor_id": "2010_2b_HAS_Texte_Long-Delivrance-de-l-information-a-la-personne-sur-_7d3a7b::2010_2b_HAS_Texte_Long-Delivrance-de-l-information-a-la-personne-sur-_7d3a7b__c0425_d379226f",
+  "usable": false,
+  "question": "",
+  "question_type": "",
+  "reference_answer": "",
+  "key_terms": [],
+  "gold_quote": "",
+  "tags": []
+ },
+ {
+  "anchor_id": "2010_2b_HAS_Texte_Long-Delivrance-de-l-information-a-la-personne-sur-_7d3a7b::2010_2b_HAS_Texte_Long-Delivrance-de-l-information-a-la-personne-sur-_7d3a7b__c0530_4a922ab7",
+  "usable": false,
+  "question": "",
+  "question_type": "",
+  "reference_answer": "",
+  "key_terms": [],
+  "gold_quote": "",
+  "tags": []
+ },
+ {
+  "anchor_id": "2010_2b_HAS_Texte_Long-Delivrance-de-l-information-a-la-personne-sur-_7d3a7b::2010_2b_HAS_Texte_Long-Delivrance-de-l-information-a-la-personne-sur-_7d3a7b__c0117_3efafde0",
+  "usable": false,
+  "question": "",
+  "question_type": "",
+  "reference_answer": "",
+  "key_terms": [],
+  "gold_quote": "",
+  "tags": []
+ },
+ {
+  "anchor_id": "2013_2a_AFAR_Techniques-analgesiques-locoregionales-et-douleur-chroni_e21315::2013_2a_AFAR_Techniques-analgesiques-locoregionales-et-douleur-chroni_e21315__c0068_a5b0f9fc",
+  "usable": true,
+  "question": "Chez un patient douloureux chronique avec une composante neuropathique avant implantation d'une pompe intrathécale, quelle association médicamenteuse privilégier en première ligne ?",
+  "question_type": "open",
+  "reference_answer": "La bupivacaïne associée à la morphine.",
+  "key_terms": [
+   "bupivacaïne",
+   "morphine"
+  ],
+  "gold_quote": "Si une composante neuropathique est présente avant l'implantation, la bupivacaïne est recommandée en première intention en association avec la morphine.",
+  "tags": [
+   "drug_choice"
+  ]
+ },
+ {
+  "anchor_id": "2013_2a_AFAR_Techniques-analgesiques-locoregionales-et-douleur-chroni_e21315::2013_2a_AFAR_Techniques-analgesiques-locoregionales-et-douleur-chroni_e21315__c0025_1f9e2ec1",
+  "usable": true,
+  "question": "Chez un patient douloureux chronique, on envisage une injection péridurale de corticoïdes, éventuellement par voie transforaminale. Que retenir du niveau de preuve de cette technique ?",
+  "question_type": "clinical_case",
+  "reference_answer": "Les preuves de l'efficacité sont controversées, avec une incertitude sur le volume, la composition et la concentration, et l'intérêt de la voie transforaminale est également controversé.",
+  "key_terms": [
+   "controversées"
+  ],
+  "gold_quote": "Au total, les preuves de l'efficacité des corticoïdes par voie péridurale sont controversées et, dans le cas où ils seraient efficaces, l'incertitude persiste sur le volume, la composition ou la concentration les plus adaptés. Les preuves de l'intérêt d'une voie d'abord spécifique, comme la voie transforaminale, sont également controversées.",
+  "tags": []
+ },
+ {
+  "anchor_id": "2013_2a_AFAR_Techniques-analgesiques-locoregionales-et-douleur-chroni_e21315::2013_2a_AFAR_Techniques-analgesiques-locoregionales-et-douleur-chroni_e21315__c0008_ff1a803f",
+  "usable": false,
+  "question": "",
+  "question_type": "",
+  "reference_answer": "",
+  "key_terms": [],
+  "gold_quote": "",
+  "tags": []
+ },
+ {
+  "anchor_id": "2018_rfe-gestion-des-voies-aeriennes-de-lenfant_3f7a1f::2018_rfe-gestion-des-voies-aeriennes-de-lenfant_3f7a1f__c0062_809c19ae",
+  "usable": true,
+  "question": "Chez un enfant enrhumé devant être anesthésié, quelle prémédication inhalée réduit la toux et le bronchospasme peranesthésiques, et dans quel délai avant l'induction l'administrer ?",
+  "question_type": "open",
+  "reference_answer": "Un aérosol de salbutamol dans les 30 minutes précédant l'induction.",
+  "key_terms": [
+   "salbutamol",
+   "30 minutes"
+  ],
+  "gold_quote": "200 ont reçu un aérosol de salbutamol et 200 aucun aérosol dans les 30 minutes précédant l'induction. Le groupe salbutamol présentait une incidence diminuée d'environ 50 % de toux et bronchospasmes peranesthésiques",
+  "tags": [
+   "pediatric",
+   "drug_choice",
+   "timing"
+  ]
+ },
+ {
+  "anchor_id": "2018_rfe-gestion-des-voies-aeriennes-de-lenfant_3f7a1f::2018_rfe-gestion-des-voies-aeriennes-de-lenfant_3f7a1f__c0079_a128187b",
+  "usable": true,
+  "question": "Un enfant de 4 ans a été intubé avec difficulté pour une intervention chirurgicale qui se termine. Quelle conduite tenir pour son extubation ?",
+  "question_type": "clinical_case",
+  "reference_answer": "L'extubation doit être programmée, réalisée dans des conditions optimales de sécurité selon une stratégie prédéfinie par l'équipe, en anticipant une réintubation.",
+  "key_terms": [
+   "stratégie d'extubation",
+   "réintubation"
+  ],
+  "gold_quote": "doit être programmé et réalisé dans des conditions optimales de sécurité, en suivant une stratégie d'extubation prédéfinie par l'équipe médicochirurgicale en charge du patient et en anticipant l'éventualité d'une réintubation",
+  "tags": [
+   "pediatric"
+  ]
+ },
+ {
+  "anchor_id": "2018_rfe-gestion-des-voies-aeriennes-de-lenfant_3f7a1f::2018_rfe-gestion-des-voies-aeriennes-de-lenfant_3f7a1f__c0075_23bb59f8",
+  "usable": true,
+  "question": "Pendant l'intubation en séquence rapide d'un enfant, à partir de quelle SpO2 faut-il ventiler au masque, avec quelle FiO2 et quelle pression d'insufflation maximale idéale ?",
+  "question_type": "open",
+  "reference_answer": "Dès que la SpO2 passe sous 95 %, ventiler au masque avec une FiO2 ≥ 0,8 et des pressions faibles, idéalement < 15 cmH2O (avis d'experts).",
+  "key_terms": [
+   "95 %",
+   "15 cmH<sub>2</sub>O"
+  ],
+  "gold_quote": "les experts suggèrent de ventiler l'enfant au masque avec une FiO<sub>2</sub> ≥ 0,8 et de faibles niveaux de pression de ventilation (juste suffisants pour soulever le thorax et éviter une insufflation gastrique, idéalement < 15 cmH<sub>2</sub>O) dès que la SpO<sub>2</sub> est inférieure à 95 %",
+  "tags": [
+   "pediatric",
+   "threshold",
+   "emergency"
+  ]
+ }
+]

@@ -1,0 +1,162 @@
+[
+  {
+    "question": "Pour une tympanoplastie, faut-il arrêter le protoxyde d'azote avant la pose de la greffe tympanique, et combien de temps avant ?",
+    "topic": "ORL"
+  },
+  {
+    "question": "Lors d'une chirurgie laser des cordes vocales, quelle FiO2 maximale est conseillée pour limiter le risque d'incendie des voies aériennes ?",
+    "topic": "ORL"
+  },
+  {
+    "question": "En chirurgie endoscopique des sinus, une anesthésie intraveineuse totale propofol-rémifentanil réduit-elle le saignement peropératoire par rapport aux halogénés ?",
+    "topic": "ORL"
+  },
+  {
+    "question": "Chez un patient myope fort (longueur axiale > 26 mm) opéré de la cataracte, faut-il préférer l'anesthésie sous-ténonienne au bloc péribulbaire pour limiter le risque de perforation du globe ?",
+    "topic": "ophtalmologie"
+  },
+  {
+    "question": "Après une vitrectomie avec injection de gaz SF6 ou C3F8, combien de temps faut-il proscrire le protoxyde d'azote lors d'une anesthésie ultérieure ?",
+    "topic": "ophtalmologie"
+  },
+  {
+    "question": "Pour une chirurgie du strabisme chez l'enfant, faut-il administrer de l'atropine en prophylaxie du réflexe oculocardiaque, et à quelle dose ?",
+    "topic": "ophtalmologie"
+  },
+  {
+    "question": "Pour une craniotomie éveillée en technique asleep-awake-asleep, quels agents et quelle gestion des voies aériennes privilégier pendant les phases endormies ?",
+    "topic": "neurochirurgie"
+  },
+  {
+    "question": "Avant une chirurgie de la fosse postérieure en position assise, faut-il rechercher systématiquement un foramen ovale perméable par échographie transœsophagienne ?",
+    "topic": "neurochirurgie"
+  },
+  {
+    "question": "Pendant une arthrodèse pour scoliose avec monitorage des potentiels évoqués moteurs, quelle concentration d'halogéné et quelle curarisation sont compatibles avec le monitorage ?",
+    "topic": "neurochirurgie"
+  },
+  {
+    "question": "Chez un patient porteur d'une assistance ventriculaire gauche à flux continu opéré d'une cholécystectomie, quelle pression artérielle moyenne cibler et comment la mesurer ?",
+    "topic": "cardiologie"
+  },
+  {
+    "question": "Chez un patient avec hypertension artérielle pulmonaire sévère devant subir une chirurgie abdominale, quelle est la place du monoxyde d'azote inhalé en peropératoire ?",
+    "topic": "cardiologie"
+  },
+  {
+    "question": "Un patient avec un rétrécissement aortique serré asymptomatique doit avoir une prothèse de hanche programmée : faut-il réaliser un remplacement valvulaire ou un TAVI avant la chirurgie ?",
+    "topic": "cardiologie"
+  },
+  {
+    "question": "En cas d'hypotension peropératoire chez un patient porteur d'une cardiomyopathie hypertrophique obstructive, quel vasopresseur utiliser et quels agents éviter ?",
+    "topic": "cardiologie"
+  },
+  {
+    "question": "Chez un nourrisson avec sténose du pylore, quels seuils de chlorémie et de bicarbonates faut-il atteindre avant la pylorotomie ?",
+    "topic": "pédiatrie"
+  },
+  {
+    "question": "Faut-il différer une chirurgie non urgente chez l'enfant de moins de 3 ans en raison du risque de neurotoxicité des agents anesthésiques ?",
+    "topic": "pédiatrie"
+  },
+  {
+    "question": "Chez un enfant drépanocytaire homozygote programmé pour une cholécystectomie, faut-il une transfusion préopératoire et avec quel objectif d'hémoglobine ?",
+    "topic": "pédiatrie"
+  },
+  {
+    "question": "Quelle posologie de dexmédétomidine intranasale utiliser en prémédication chez l'enfant anxieux, et quel délai avant l'induction ?",
+    "topic": "pédiatrie"
+  },
+  {
+    "question": "Pour une appendicectomie cœlioscopique au deuxième trimestre de grossesse, quelle pression de pneumopéritoine et quelle surveillance fœtale recommander ?",
+    "topic": "obstétrique"
+  },
+  {
+    "question": "Après une anesthésie générale au propofol et sufentanil, une femme qui allaite doit-elle tirer et jeter son lait, et pendant combien de temps ?",
+    "topic": "obstétrique"
+  },
+  {
+    "question": "Chez un patient âgé traité par donépézil, quel est l'effet attendu sur la durée d'action de la succinylcholine et des curares non dépolarisants ?",
+    "topic": "gériatrie"
+  },
+  {
+    "question": "Pour un TAVI par voie fémorale chez un patient de 88 ans, la sédation consciente est-elle préférable à l'anesthésie générale ?",
+    "topic": "gériatrie"
+  },
+  {
+    "question": "En chirurgie cardiaque chez le sujet âgé, le monitorage de l'oxymétrie cérébrale par NIRS réduit-il la dysfonction cognitive postopératoire ?",
+    "topic": "gériatrie"
+  },
+  {
+    "question": "Après une décurarisation par sugammadex chez une patiente sous contraception orale, combien de jours de contraception complémentaire faut-il conseiller ?",
+    "topic": "pharmacologie"
+  },
+  {
+    "question": "Chez un consommateur régulier de cannabis, faut-il prévoir des doses de propofol plus élevées à l'induction ?",
+    "topic": "pharmacologie"
+  },
+  {
+    "question": "Chez un patient myasthénique, quelle dose de rocuronium utiliser pour l'intubation et le sugammadex est-il sûr pour la décurarisation ?",
+    "topic": "pharmacologie"
+  },
+  {
+    "question": "Devant une apnée prolongée après succinylcholine évoquant un déficit en butyrylcholinestérase, quelle conduite tenir et quel bilan prescrire ?",
+    "topic": "pharmacologie"
+  },
+  {
+    "question": "Dans un syndrome douloureux régional complexe de type 1 après fracture du poignet, les bisphosphonates sont-ils efficaces et à quelle posologie ?",
+    "topic": "douleur chronique"
+  },
+  {
+    "question": "Pour une douleur post-zostérienne, à quel intervalle peut-on renouveler l'application du patch de capsaïcine 8 % ?",
+    "topic": "douleur chronique"
+  },
+  {
+    "question": "Chez un patient lombalgique chronique sous opioïdes forts, au-delà de quelle dose en équivalent morphine orale faut-il réévaluer ou envisager une décroissance ?",
+    "topic": "douleur chronique"
+  },
+  {
+    "question": "Devant une hyponatrémie sévère symptomatique, quel bolus de NaCl hypertonique à 3 % administrer et quelle limite de correction de la natrémie respecter sur 24 heures ?",
+    "topic": "réanimation"
+  },
+  {
+    "question": "En cas d'intoxication au paracétamol, quel protocole de N-acétylcystéine utiliser et à partir de quelle paracétamolémie le débuter ?",
+    "topic": "réanimation"
+  },
+  {
+    "question": "Dans une intoxication grave aux bêtabloquants, à quelle posologie débuter l'insulinothérapie euglycémique à haute dose ?",
+    "topic": "réanimation"
+  },
+  {
+    "question": "Dans un syndrome de Guillain-Barré, quels critères de capacité vitale et de force musculaire doivent faire envisager l'intubation ?",
+    "topic": "réanimation"
+  },
+  {
+    "question": "Pour une embolie pulmonaire à haut risque avec choc, quelle dose d'altéplase administrer en thrombolyse et en combien de temps ?",
+    "topic": "réanimation"
+  },
+  {
+    "question": "Chez un patient de réanimation en sevrage alcoolique sévère, le phénobarbital est-il une alternative aux benzodiazépines pour prévenir le delirium tremens ?",
+    "topic": "réanimation"
+  },
+  {
+    "question": "Avant une endoscopie pour hémorragie digestive haute, faut-il perfuser de l'érythromycine, à quelle dose et combien de temps avant ?",
+    "topic": "réanimation"
+  },
+  {
+    "question": "Avant une surrénalectomie pour phéochromocytome, combien de temps dure la préparation par alpha-bloquant et quels objectifs tensionnels viser ?",
+    "topic": "endocrinologie"
+  },
+  {
+    "question": "Chez un patient porteur d'une tumeur carcinoïde, faut-il administrer de l'octréotide en préopératoire pour prévenir une crise carcinoïde peropératoire ?",
+    "topic": "endocrinologie"
+  },
+  {
+    "question": "Pour une sismothérapie (électroconvulsivothérapie), quel hypnotique choisir pour ne pas raccourcir la durée de la crise convulsive ?",
+    "topic": "psychiatrie"
+  },
+  {
+    "question": "Lors d'une ventilation unipulmonaire avec hypoxémie, quelle séquence de mesures appliquer, notamment la CPAP sur le poumon non ventilé ?",
+    "topic": "chirurgie thoracique"
+  }
+]

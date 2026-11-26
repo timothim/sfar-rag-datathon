@@ -1,0 +1,3342 @@
+[
+ {
+  "cand_id": "g6dc37254616e5f3b4eff",
+  "kind": "reco",
+  "status": "kept",
+  "question": "Au cours d'un transport médicalisé d'un nourrisson en choc hémorragique, quel volume de plasma lyophilisé administrer en première intention ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Volume 10-15 mL/kg de PLYO explicite ; l'indication hémorragique se déduit de l'association aux CGR."
+  }
+ },
+ {
+  "cand_id": "g30f84b940d35d8d7141e",
+  "kind": "table",
+  "status": "kept",
+  "question": "Chez un enfant d'un an pris en charge pour un choc hémorragique, quelle est la valeur normale et la limite inférieure de la pression artérielle systolique ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Valeur lue directement dans le tableau (PAS 80, limite inférieure 70 à 1 an)."
+  }
+ },
+ {
+  "cand_id": "g1b20c197420d54e48ad8",
+  "kind": "other",
+  "status": "dropped_verifier",
+  "question": "Hormis les facteurs de coagulation, quels inhibiteurs physiologiques, consommés précocement au cours de la coagulopathie du choc hémorragique, la transfusion de plasma permet-elle de compenser ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": false,
+   "self_contained": false,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "drop",
+   "reason": "L'extrait porte sur la COA en péripartum (sigle non défini) ; la question la réinterprète en coagulopathie du choc hémorragique générale sans contexte obstétrical."
+  }
+ },
+ {
+  "cand_id": "g7fb7ada6d56f5469c379",
+  "kind": "table",
+  "status": "dropped_verifier",
+  "question": "Hémorragie du post-partum avec urgence vitale transfusionnelle : si le sang isogroupe n'est pas disponible tout de suite, quels concentrés globulaires faire délivrer en attendant ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": false,
+   "unambiguous": false,
+   "self_contained": false,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "drop",
+   "reason": "Tableau mal structuré : impossible d'établir si la ligne CGR O s'applique à toutes les situations ou seulement aux documents IH complets ; la question omet le statut des documents IH."
+  }
+ },
+ {
+  "cand_id": "g5ae88f69a30f00b220c8",
+  "kind": "other",
+  "status": "kept",
+  "question": "Un adulte porteur d'une membrane supra-valvulaire mitrale congénitale devient symptomatique, avec une physiopathologie proche d'un rétrécissement mitral. Quel geste est habituellement proposé en première intention ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Plastie/résection des membranes en première intention avec risque de réintervention, explicite."
+  }
+ },
+ {
+  "cand_id": "g3b9708b3518cddf9bccf",
+  "kind": "reco",
+  "status": "kept",
+  "question": "Un adulte sous anticoagulant consulte aux urgences pour un traumatisme crânien léger et son scanner cérébral est normal : peut-il rentrer chez lui, et sur quels critères cliniques ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "Oui, le retour à domicile est possible après un scanner normal, en l'absence d'intoxication, de vomissements itératifs, de céphalées importantes persistantes, de déficit neurologique et d'autre motif d'hospitalisation, avec un Glasgow à 15 (avis d'experts, accord fort).",
+   "verdict": "keep",
+   "reason": "Soutenu par l'argumentaire ; réponse complétée par le critère « absence d'autre motif d'hospitalisation »."
+  }
+ },
+ {
+  "cand_id": "g1dbee4bcaef9fd22b3ed",
+  "kind": "table",
+  "status": "dropped_verifier",
+  "question": "Pour détecter une hémorragie intracrânienne sévère après un traumatisme crânien léger de l'adulte, quelle sensibilité est rapportée pour la règle de décision CCHR ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": false,
+   "self_contained": false,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "drop",
+   "reason": "Valeur propre à la sous-catégorie « critère d'inclusion WHO », non précisée dans la question ; d'autres sous-catégories donnent probablement d'autres sensibilités pour la CCHR."
+  }
+ },
+ {
+  "cand_id": "gfff2848a70957ac0b7b5",
+  "kind": "other",
+  "status": "kept",
+  "question": "Un adulte victime d'un traumatisme crânien léger présente un syndrome de Claude Bernard Horner et une fracture du rachis cervical. Quelle imagerie réaliser ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Scanner avec injection devant signes évocateurs de dissection carotidienne, explicite."
+  }
+ },
+ {
+  "cand_id": "g8f23afa63325b0d08bd8",
+  "kind": "other",
+  "status": "kept",
+  "question": "Un adulte victime d'un traumatisme abdominal grave a, à la FAST, un hémopéritoine abondant et son état ne permet pas de passer au scanner. Quelle conduite tenir ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Arbre décisionnel : hémopéritoine abondant / scanner incompatible -> traitement opératoire précoce -> scanner secondaire."
+  }
+ },
+ {
+  "cand_id": "gd6578d9fb27039b0a328",
+  "kind": "reco",
+  "status": "kept",
+  "question": "Chez un traumatisé avec fracture diaphysaire d'un os long, hémodynamiquement stable, quelle stratégie chirurgicale initiale privilégier pour réduire la survenue d'un SDRA ou d'une embolie graisseuse ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Ostéosynthèse définitive première intention (GRADE 2+, accord fort) ; réserve pour instables/atteinte respiratoire bien restituée."
+  }
+ },
+ {
+  "cand_id": "g35246357ea5b9bc4d78d",
+  "kind": "table",
+  "status": "kept",
+  "question": "Quel risque infectieux est associé à une fracture ouverte de type 3B, avec exposition osseuse et comminution importante ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Type 3B : 10 à 50 %, lu dans le tableau."
+  }
+ },
+ {
+  "cand_id": "gc5bdfb5d59ac86457e0e",
+  "kind": "reco",
+  "status": "kept",
+  "question": "En réanimation, quel support écrit, rempli conjointement par l'équipe soignante et l'entourage, peut être proposé au patient pour prévenir les troubles anxieux et dépressifs ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Journal de bord explicitement décrit."
+  }
+ },
+ {
+  "cand_id": "gc6a2ec04d67744217a1b",
+  "kind": "other",
+  "status": "kept",
+  "question": "Un patient de réanimation s'aggrave et doit être transporté pour une procédure à risque. Que faire vis-à-vis de ses proches ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Avertir les proches lors d'événements inhabituels et transcrire l'information au dossier, explicite."
+  }
+ },
+ {
+  "cand_id": "g6b5ad6760e5b590e0939",
+  "kind": "reco",
+  "status": "kept",
+  "question": "Quel dispositif mettre en place en réanimation pour permettre aux soignants de toutes catégories de s'exprimer sur les situations vécues comme difficiles ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "Des groupes de parole réunissant l'ensemble des catégories de soignants (RC).",
+   "verdict": "keep",
+   "reason": "Les réunions de service servent à discuter projets, directives et devenir des patients, pas à l'expression des difficultés ; réponse corrigée."
+  }
+ },
+ {
+  "cand_id": "gf7be7e61997474f8686c",
+  "kind": "reco",
+  "status": "kept",
+  "question": "Chez un adulte en état de mal épileptique convulsif généralisé admis en réanimation, quelle cible de pression artérielle moyenne viser ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "PAM 70-90 mmHg (accord fort), explicite."
+  }
+ },
+ {
+  "cand_id": "g6fd049936476dd855516",
+  "kind": "other",
+  "status": "kept",
+  "question": "Un enfant de 7 ans reste en état de mal épileptique réfractaire malgré une perfusion de benzodiazépines à fortes doses ; l'équipe décide d'utiliser le thiopental. Quelle posologie prescrire ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Posologie thiopental identique à l'adulte : bolus 2 mg/kg puis 3-5 mg/kg/h."
+  }
+ },
+ {
+  "cand_id": "gb73cbc028f4031781675",
+  "kind": "reco",
+  "status": "kept",
+  "question": "Peut-on utiliser le propofol pour traiter un état de mal convulsif réfractaire de l'enfant ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Recommandation de ne pas utiliser le propofol, motifs explicites."
+  }
+ },
+ {
+  "cand_id": "g8e54d9655989718c1639",
+  "kind": "reco",
+  "status": "kept",
+  "question": "Un patient comateux atteint d'une méningite bactérienne, sans hypertension intracrânienne, est admis en réanimation : faut-il le refroidir pour améliorer son pronostic neurologique ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "R4.3 : pas d'hypothermie (avis d'experts)."
+  }
+ },
+ {
+  "cand_id": "gd1b252c6b18be4bca7b6",
+  "kind": "other",
+  "status": "kept",
+  "question": "Un traumatisé crânien grave garde une PIC élevée malgré un contrôle ciblé de la température à 34 °C. Faut-il abaisser davantage la température, par exemple à 31 °C ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "Non : abaisser la température en dessous de 34 °C (par ex. 31 °C) n'apporte pas de bénéfice supplémentaire démontré sur la PIC, et l'hypothermie expose à des effets secondaires proportionnels à sa profondeur et à sa durée.",
+   "verdict": "keep",
+   "reason": "Soutenu par l'argumentaire (Shiozaki, effets secondaires dose-dépendants) ; réponse précisée."
+  }
+ },
+ {
+  "cand_id": "gd9a325c36650ee68a17f",
+  "kind": "reco",
+  "status": "kept",
+  "question": "Pour un enfant en état de mal épileptique, les données adultes sur le contrôle ciblé de la température visant la normothermie sont-elles transposables ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Transposition à l'enfant selon les experts pédiatres, explicite."
+  }
+ },
+ {
+  "cand_id": "ge6178ab7ed0b124f3edc",
+  "kind": "reco",
+  "status": "kept",
+  "question": "Avant une chirurgie non cardiothoracique chez un patient âgé sans pathologie cardiopulmonaire aiguë ni évolutive, faut-il demander une radiographie thoracique préopératoire systématique ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Pas de radiographie systématique quel que soit l'âge (GRADE 1-)."
+  }
+ },
+ {
+  "cand_id": "g2c188878f4fca6996f4b",
+  "kind": "table",
+  "status": "kept",
+  "question": "Dans la stratification du risque cardiaque (décès et infarctus) en chirurgie non cardiaque, dans quelle catégorie se situe une endartériectomie carotidienne ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Endartériectomie carotidienne classée risque intermédiaire 1-5 %."
+  }
+ },
+ {
+  "cand_id": "gae3cda1acd4e903f01fd",
+  "kind": "other",
+  "status": "kept",
+  "question": "Un patient asymptomatique doit être opéré d'une chirurgie non cardiothoracique et l'interne propose une radiographie thoracique pour prédire les complications respiratoires postopératoires. Cet examen est-il contributif ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "VPP 5 %, ne prédit pas les complications, aucun gain informatif : explicite."
+  }
+ },
+ {
+  "cand_id": "gdcfdca99a7ef212d08c3",
+  "kind": "reco",
+  "status": "kept",
+  "question": "Après une amygdalectomie chez un adulte handicapé incapable de communiquer, quelle échelle d'hétéro-évaluation de la douleur peut être utilisée ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Algoplus proposée pour l'adulte handicapé non communiquant."
+  }
+ },
+ {
+  "cand_id": "gd57c11004d2b52c2ba9e",
+  "kind": "table",
+  "status": "kept",
+  "question": "Pour l'analgésie après amygdalectomie de l'enfant, à partir de quel âge le tramadol dispose-t-il d'une AMM ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Tramadol AMM 3 ans, lu dans le tableau."
+  }
+ },
+ {
+  "cand_id": "gf1145ccdc6a3464a7637",
+  "kind": "other",
+  "status": "kept",
+  "question": "Un enfant rentré à domicile après amygdalectomie reçoit du paracétamol et de l'ibuprofène à horaires fixes, mais reste algique. Que peut-on proposer ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Tramadol en secours après consultation médicale dans l'option AINS."
+  }
+ },
+ {
+  "cand_id": "g4da4a9285070116f0c28",
+  "kind": "other",
+  "status": "dropped_verifier",
+  "question": "Un traumatisé grave avec atteinte neurologique est pris en charge par le SMUR. Pourquoi un monitorage cardiovasculaire et respiratoire est-il indispensable dès le préhospitalier ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": false,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "drop",
+   "reason": "Le cadre préhospitalier/SMUR et le traumatisé grave ne sont pas attestés ; l'extrait ne précise ni la population ni le lieu de prise en charge."
+  }
+ },
+ {
+  "cand_id": "g84e6adff0838e072a502",
+  "kind": "reco",
+  "status": "kept",
+  "question": "Chez un adulte sédaté en réanimation, au-delà de quel débit de midazolam et de quelle durée d'administration le risque de syndrome de sevrage doit-il être recherché ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Midazolam > 4 mg/h et durée > 7 jours, explicites."
+  }
+ },
+ {
+  "cand_id": "g3400e63d44734f237d87",
+  "kind": "other",
+  "status": "kept",
+  "question": "Un patient de réanimation présentant une insuffisance rénale et hépatique nécessite une analgésie morphinique continue. Quel morphinique a un métabolisme indépendant de ces fonctions ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Rémifentanil : métabolisme indépendant des fonctions rénale et hépatique."
+  }
+ },
+ {
+  "cand_id": "g267f9c6252b5817414d8",
+  "kind": "reco",
+  "status": "kept",
+  "question": "Chez un patient consommateur de stupéfiants à effet sympathomimétique devant être anesthésié, comment manier les vasopresseurs ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Vasopresseurs (éphédrine) avec précaution, explicite."
+  }
+ },
+ {
+  "cand_id": "gf21fe5a64ad4c8992752",
+  "kind": "table",
+  "status": "kept",
+  "question": "Un patient porte un patch de fentanyl à 25 µg/h : à quelle dose quotidienne de morphine orale cela correspond-il approximativement ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "25 µg/h de FTD ≈ 60 mg/j de morphine orale."
+  }
+ },
+ {
+  "cand_id": "geb9482ee3d54334a43fd",
+  "kind": "reco",
+  "status": "kept",
+  "question": "Pour un enfant de 5 ans sans comorbidité opéré d'une amygdalectomie en ambulatoire, quand programmer l'intervention et quelle durée de surveillance avant la sortie ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Tôt dans la matinée, surveillance de 6 h (accord fort)."
+  }
+ },
+ {
+  "cand_id": "g9dbb7b8cb49592f9fa97",
+  "kind": "other",
+  "status": "kept",
+  "question": "Un enfant de 2 ans est programmé pour une amygdalectomie ; l'interrogatoire familial est peu informatif. Faut-il réaliser un bilan d'hémostase ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Enfant < 3 ans : évaluation non fiable, étude de l'hémostase ; TCA et plaquettes cités comme tests les plus utiles."
+  }
+ },
+ {
+  "cand_id": "gbe3dad7d7f9b1ae34b88",
+  "kind": "table",
+  "status": "kept",
+  "question": "Quels effets indésirables principaux faut-il surveiller chez un patient traité par amphotéricine B désoxycholate intraveineuse ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Effets indésirables de l'AmB désoxycholate lus dans le tableau."
+  }
+ },
+ {
+  "cand_id": "gc1eeae015b45990b618e",
+  "kind": "other",
+  "status": "kept",
+  "question": "Chez un patient ventilé en réanimation, le lavage broncho-alvéolaire isole Candida sp. Quelle valeur diagnostique accorder à ce résultat ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Candida dans les voies aériennes inférieures, LBA compris : pas de valeur diagnostique (B3)."
+  }
+ },
+ {
+  "cand_id": "g28ea0199f37013bf91f9",
+  "kind": "reco",
+  "status": "kept",
+  "question": "Lorsqu'un avis cardiologique préopératoire a été demandé par le chirurgien, qui porte la responsabilité de la décision finale sur l'indication et les modalités de l'anesthésie ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Décision finale relevant du médecin anesthésiste-réanimateur, explicite."
+  }
+ },
+ {
+  "cand_id": "g6951bd8344b814c79f7e",
+  "kind": "table",
+  "status": "kept",
+  "question": "Chez un cirrhotique avec ascite et insuffisance rénale aiguë KDIGO stade 2, quelle épreuve doit rester sans réponse pour retenir un syndrome hépatorénal ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Critère : absence de réponse après 2 jours d'arrêt des diurétiques et d'albumine 1 g/kg."
+  }
+ },
+ {
+  "cand_id": "g2fde394b4b86177a10f4",
+  "kind": "reco",
+  "status": "dropped_verifier",
+  "question": "Patient hospitalisé pour COVID-19, sans thrombose clinique, avec un fibrinogène à 9 g/L : quel niveau d'anticoagulation proposer ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": false,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "drop",
+   "reason": "Le contexte COVID-19 de la question n'apparaît pas dans l'extrait ; population non attestée."
+  }
+ },
+ {
+  "cand_id": "gf28318a74a26ca7a3107",
+  "kind": "table",
+  "status": "dropped_verifier",
+  "question": "Chez un patient COVID-19 hospitalisé, IMC < 30 kg/m², sans oxygène, avec une clairance de la créatinine à 25 mL/min, quelle dose prophylactique d'énoxaparine prescrire ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": false,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "drop",
+   "reason": "Le contexte COVID-19 de la question n'apparaît pas dans l'extrait (tableau sans mention de la population)."
+  }
+ },
+ {
+  "cand_id": "g392fcc10d6909f623c73",
+  "kind": "other",
+  "status": "kept",
+  "question": "Un patient obèse est hospitalisé pour une forme sévère de COVID-19. Quelle classe d'anticoagulant privilégier en prévention thromboembolique et que penser des posologies habituelles ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "HBPM option de choix, posologies probablement insuffisantes dans formes sévères et obésité."
+  }
+ },
+ {
+  "cand_id": "g6d75a0524a3097e36863",
+  "kind": "reco",
+  "status": "kept",
+  "question": "Devant un traumatisme pelvien grave ouvert, quels sont les deux objectifs prioritaires de la prise en charge initiale ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "R2.17 : contrôle de l'hémorragie et de la contamination périnéale (GRADE 1+)."
+  }
+ },
+ {
+  "cand_id": "g424483aecf041277fed5",
+  "kind": "reco",
+  "status": "kept",
+  "question": "Après une lobectomie pulmonaire, quelle stratégie postopératoire globale adopter pour réduire les complications et la durée de séjour ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "RAC incluant mobilisation précoce (GRADE 1+) ; contexte chirurgie thoracique attesté par l'argumentaire."
+  }
+ },
+ {
+  "cand_id": "g0496c4dcd5ed3db43609",
+  "kind": "table",
+  "status": "dropped_verifier",
+  "question": "Chez un patient opéré d'une lobectomie pulmonaire et sans traitement chronique, quels médicaments discuter en péri- ou postopératoire immédiat pour prévenir la fibrillation atriale ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": false,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "drop",
+   "reason": "La lobectomie pulmonaire n'est pas mentionnée dans l'extrait ; type de chirurgie non attesté."
+  }
+ },
+ {
+  "cand_id": "ga86840965e184a4c0f3d",
+  "kind": "other",
+  "status": "kept",
+  "question": "Un patient anxieux est programmé pour une chirurgie thoracique. Quel complément d'information préopératoire permet de réduire son anxiété ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Support vidéo réduisant l'anxiété et améliorant la satisfaction en chirurgie thoracique."
+  }
+ },
+ {
+  "cand_id": "g26cc210b12a24bc1dcf5",
+  "kind": "other",
+  "status": "kept",
+  "question": "Un homme intubé pour SDRA doit avoir son volume courant réglé sur le poids idéal. Comment calculer ce poids théorique ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Formule du poids théorique chez l'homme, explicite."
+  }
+ },
+ {
+  "cand_id": "gb9a942c3d4de87e96a69",
+  "kind": "reco",
+  "status": "kept",
+  "question": "Chez un adulte ventilé pour un SDRA modéré à sévère, faut-il préférer un niveau de PEP haut ou bas ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "R4 : PEP élevée (GRADE 2+)."
+  }
+ },
+ {
+  "cand_id": "g05235a46ff022acca5a9",
+  "kind": "reco",
+  "status": "dropped_verifier",
+  "question": "Chez un adulte colonisé devant subir une intervention urologique, lorsqu'une antibiothérapie préopératoire est décidée, quand faut-il la commencer et quelle durée totale viser ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": false,
+   "unambiguous": false,
+   "self_contained": false,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "drop",
+   "reason": "R3 indique que la durée du traitement préopératoire d'une colonisation (avant NLPC) ne peut être définie ; la question sur un patient colonisé contredit la source, et le type d'intervention urologique n'est pas précisé."
+  }
+ },
+ {
+  "cand_id": "gf85f0e65447859fa9d7f",
+  "kind": "other",
+  "status": "kept",
+  "question": "Un patient a bénéficié d'une néphrolithotomie percutanée avec un ECBU préopératoire stérile, mais la culture du calcul extrait revient positive. Quelle conduite tenir pour l'antibiothérapie ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Culture de calcul positive associée aux infections malgré ECBU stérile ; incidence diminuée par antibiothérapie adaptée."
+  }
+ },
+ {
+  "cand_id": "g6f980be82353eefc0ba0",
+  "kind": "other",
+  "status": "kept",
+  "question": "Un patient de réanimation en choc septique présente des troubles de l'hémostase. Quels critères biologiques faut-il réunir pour retenir le diagnostic de CIVD biologique ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "D-dimères augmentés + 1 critère majeur ou 2 mineurs, explicite."
+  }
+ },
+ {
+  "cand_id": "gf73b1e6e1b81142b9959",
+  "kind": "other",
+  "status": "kept",
+  "question": "Vous menez une consultation d'anesthésie à distance par vidéo chez un patient programmé. Par quels moyens lui transmettre ordonnances et courriers à l'issue de l'échange ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Espace sécurisé (HDS) ou voie postale, explicite."
+  }
+ },
+ {
+  "cand_id": "g448aac5e0ca03eebb7fb",
+  "kind": "reco",
+  "status": "kept",
+  "question": "En insuffisance respiratoire aiguë de l'adulte, dans quelles situations la ventilation non invasive n'a pas fait la preuve d'un bénéfice et ne devrait probablement pas être tentée ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Liste des situations où la VNI ne doit probablement pas être entreprise, explicite."
+  }
+ },
+ {
+  "cand_id": "g33f457fe515c169c3a3b",
+  "kind": "table",
+  "status": "dropped_verifier",
+  "question": "Chez un patient sans antécédent cardiorespiratoire mis sous VNI pour une insuffisance respiratoire aiguë hypoxémique, quel rapport PaO2/FiO2 à la réévaluation précoce fait craindre un échec ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": false,
+   "unambiguous": true,
+   "self_contained": false,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "drop",
+   "reason": "Le tableau n'a pas de titre : rien dans l'extrait n'indique qu'il s'agit de facteurs prédictifs d'échec de la VNI."
+  }
+ },
+ {
+  "cand_id": "gace2db46f6d0fbc9a4b7",
+  "kind": "other",
+  "status": "kept",
+  "question": "Un patient extubé la veille en réanimation développe une nouvelle détresse respiratoire. Quelle conduite tenir vis-à-vis d'une VNI de rattrapage ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "La VNI de rattrapage n'est pas indiquée : elle ne diminue pas le recours à la réintubation et s'associe à une mortalité plus élevée, probablement par retard de réintubation ; il ne faut pas retarder la réintubation.",
+   "verdict": "keep",
+   "reason": "Soutenu par l'étude citée ; réponse reformulée pour répondre directement à la conduite à tenir."
+  }
+ },
+ {
+  "cand_id": "gfc720f85a7e4c8f6d739",
+  "kind": "reco",
+  "status": "kept",
+  "question": "Pour protéger les dents d'un patient à risque de bris dentaire lors de l'anesthésie, si l'on opte pour une gouttière, quel type faut-il conseiller ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Gouttière sur mesure plutôt que standard, traçabilité au dossier."
+  }
+ },
+ {
+  "cand_id": "g655c1a5b2a8ff63dc61f",
+  "kind": "reco",
+  "status": "kept",
+  "question": "Lors de l'intubation d'un enfant, une dent de lait est totalement expulsée de son alvéole. Faut-il la remettre en place ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Ne pas réimplanter une dent temporaire en cas de luxation complète."
+  }
+ },
+ {
+  "cand_id": "g32226ce0e89926e25109",
+  "kind": "table",
+  "status": "kept",
+  "question": "Chez un patient diabétique programmé pour une chirurgie, quelle attitude adopter si l'HbA1c atteint 10 % ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "HbA1c ≥ 9-10 % : différer, lu dans le tableau."
+  }
+ },
+ {
+  "cand_id": "gb68dcd61d14867cd9cf4",
+  "kind": "other",
+  "status": "dropped_verifier",
+  "question": "Un diabétique sous schéma basal-bolus, hospitalisé pour une chirurgie de courte durée, présente une hyperglycémie avant le déjeuner. Comment administrer la correction insulinique ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": false,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "drop",
+   "reason": "Le contexte « chirurgie de courte durée » n'est pas attesté par l'extrait (protocole sans précision du type de chirurgie/durée d'hospitalisation)."
+  }
+ },
+ {
+  "cand_id": "g9f4e50ab33c87f6858b4",
+  "kind": "reco",
+  "status": "kept",
+  "question": "En réanimation, lors d'une procédure collégiale de limitation thérapeutique chez un patient incapable d'exprimer sa volonté, quelles conditions doit remplir le médecin consultant ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Absence de lien hiérarchique (ni chef de service ni de pôle), de préférence non impliqué dans les soins."
+  }
+ },
+ {
+  "cand_id": "gb3d45a182edaa9519369",
+  "kind": "other",
+  "status": "kept",
+  "question": "En réanimation, une décision d'arrêt des traitements vient d'être prise pour un patient inconscient. Que faut-il consigner dans le dossier médical et quelle est la portée de cette traçabilité ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "Doivent être inscrits l'argumentaire médical, les examens réalisés pour fixer le pronostic, la synthèse des entretiens, les étapes de la procédure, la nature de la décision, le nom et l'avis motivé des consultants, la date, les motifs et le nom du décideur ; c'est une obligation réglementaire et une condition indispensable à l'exonération de responsabilité pénale.",
+   "verdict": "keep",
+   "reason": "Réponse incomplète sur la portée (exonération de responsabilité pénale) ; corrigée d'après la source."
+  }
+ },
+ {
+  "cand_id": "g3bd1e3f5c8f306008b76",
+  "kind": "reco",
+  "status": "kept",
+  "question": "Un traumatisé crânien présente un hématome extradural de source veineuse avec des signes de gravité au scanner. L'évacuation chirurgicale est-elle systématique ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "R6.3 : balance bénéfice-risque au cas par cas même avec signes de gravité (avis d'experts, accord fort)."
+  }
+ },
+ {
+  "cand_id": "gc42a3e7fca66caace18e",
+  "kind": "table",
+  "status": "dropped_verifier",
+  "question": "Dans le score pronostique pédiatrique de traumatisme crânien combinant score moteur de Glasgow, pupilles, ISS et INR, combien de points rapporte un INR ≤ 1,3 ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": false,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "drop",
+   "reason": "Le caractère pédiatrique et le nom du score ne sont pas attestés par l'extrait ; la question décrit un score non identifiable."
+  }
+ },
+ {
+  "cand_id": "g739ce530e020bbdcb9d1",
+  "kind": "reco",
+  "status": "kept",
+  "question": "Quelles mesures d'hygiène sont recommandées lors de la pose d'un cathéter péridural chez l'adulte ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Mesures d'hygiène (grade C) explicites."
+  }
+ },
+ {
+  "cand_id": "g8bdcea3a494daf997c21",
+  "kind": "table",
+  "status": "kept",
+  "question": "Quelle dose maximale de ropivacaïne ne pas dépasser pour une anesthésie péridurale chez l'adulte ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Dose maximale explicite dans le tableau (225-300 mg, 3-4 mg/kg) ; contexte péridural déduit des colonnes (segments) mais cohérent."
+  }
+ },
+ {
+  "cand_id": "ge08ee1fe741cdd847c90",
+  "kind": "other",
+  "status": "kept",
+  "question": "Une patiente opérée sous rachianesthésie présente une hypotension artérielle qui ne répond que partiellement aux bolus d'éphédrine. Quelle conduite tenir ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Réponse explicitement soutenue par la source, question autonome et reformulée."
+  }
+ },
+ {
+  "cand_id": "g83a9315591cd44551dbc",
+  "kind": "reco",
+  "status": "kept",
+  "question": "Quel intérêt peut-on attendre d'un monitorage EEG de la profondeur d'anesthésie chez un patient curarisé ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Réponse explicitement soutenue par la source, question autonome et reformulée."
+  }
+ },
+ {
+  "cand_id": "gbc67a0eb3b22c1690c0c",
+  "kind": "table",
+  "status": "kept",
+  "question": "Quelle valeur d'index bispectral attend-on chez un patient anesthésié au sévoflurane à 0,5 CAM ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Réponse explicitement soutenue par la source, question autonome et reformulée."
+  }
+ },
+ {
+  "cand_id": "gff794cd57325dca363d6",
+  "kind": "other",
+  "status": "kept",
+  "question": "Vous anesthésiez un patient chez qui la réponse aux agents anesthésiques est réputée imprévisible. Quel apport peut avoir un moniteur de profondeur d'anesthésie ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Réponse explicitement soutenue par la source, question autonome et reformulée."
+  }
+ },
+ {
+  "cand_id": "gcb6edd578e226e2bf83b",
+  "kind": "reco",
+  "status": "kept",
+  "question": "En hémodiafiltration continue en post-dilution, quelle fraction de filtration ne faut-il pas dépasser et sur quel paramètre agir ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Seuil de fraction de filtration < 25 % et action sur le débit sanguin explicites."
+  }
+ },
+ {
+  "cand_id": "g0979ab4dc4ec3f5dbd2f",
+  "kind": "reco",
+  "status": "kept",
+  "question": "Chez un nourrisson en postopératoire de chirurgie cardiaque nécessitant une déplétion hydrique, peut-on recourir à la dialyse péritonéale ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Réponse explicitement soutenue par la source, question autonome et reformulée."
+  }
+ },
+ {
+  "cand_id": "gf761346ec9be5d6ba346",
+  "kind": "reco",
+  "status": "kept",
+  "question": "En réanimation, quelle mesure concernant les soignants est proposée pour limiter les conflits avec les familles des patients ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Réponse explicitement soutenue par la source, question autonome et reformulée."
+  }
+ },
+ {
+  "cand_id": "g0aba15fbdfface749f92",
+  "kind": "table",
+  "status": "kept",
+  "question": "Après une décision de limitation ou d'arrêt des thérapeutiques en soins critiques, quelle démarche adopter envers les proches et avec quel niveau de recommandation ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Réponse explicitement soutenue par la source, question autonome et reformulée."
+  }
+ },
+ {
+  "cand_id": "g1b92ab24f2648cf2959d",
+  "kind": "other",
+  "status": "dropped_verifier",
+  "question": "Au terme d'une procédure collégiale aboutissant à une limitation des traitements en réanimation, quels points faut-il vérifier ensuite ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": false,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "drop",
+   "reason": "Extrait partiel d'une check-list (3 items visibles, d'autres probablement avant) ; le contexte 'limitation des traitements' est inféré ; réponse attendue non univoque/incomplète."
+  }
+ },
+ {
+  "cand_id": "gfd6492bcff9d310fa822",
+  "kind": "reco",
+  "status": "kept",
+  "question": "Chez un patient opéré considéré à risque sur le plan glycémique, faut-il contrôler la glycémie pendant l'intervention et au réveil ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Réponse explicitement soutenue par la source, question autonome et reformulée."
+  }
+ },
+ {
+  "cand_id": "g43a751763308810eda5b",
+  "kind": "reco",
+  "status": "kept",
+  "question": "En réanimation, quel type de protocole d'insulinothérapie doit être abandonné ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Réponse explicitement soutenue par la source, question autonome et reformulée."
+  }
+ },
+ {
+  "cand_id": "ga82b7f724c31133396b0",
+  "kind": "reco",
+  "status": "kept",
+  "question": "Après une colectomie programmée dans un programme de réhabilitation, faut-il maintenir une aspiration gastrique par sonde en postopératoire ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Réponse explicitement soutenue par la source, question autonome et reformulée."
+  }
+ },
+ {
+  "cand_id": "g3940cdb7b78acbdfb13d",
+  "kind": "table",
+  "status": "kept",
+  "question": "Pour l'analgésie après chirurgie colorectale laparoscopique en réhabilitation améliorée, quelle technique privilégier et laquelle éviter ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Recommandation principale/évitée explicite dans le tableau pour la laparoscopie."
+  }
+ },
+ {
+  "cand_id": "g2bc2478512784919dffe",
+  "kind": "reco",
+  "status": "kept",
+  "question": "Aux urgences, lors d'une anesthésie locale ou locorégionale, pour quels blocs l'adjonction d'adrénaline à l'anesthésique local est-elle contre-indiquée ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Réponse explicitement soutenue par la source, question autonome et reformulée."
+  }
+ },
+ {
+  "cand_id": "g6dd751baf8cf6d687ca1",
+  "kind": "table",
+  "status": "kept",
+  "question": "Au cours d'une ALR réalisée aux urgences, un patient présente une syncope vagale avec bradycardie. Quelle dose d'atropine IV administrer ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Réponse explicitement soutenue par la source, question autonome et reformulée."
+  }
+ },
+ {
+  "cand_id": "g2dc55591d697d9b3d443",
+  "kind": "other",
+  "status": "kept",
+  "question": "Un médecin urgentiste s'apprête à réaliser un bloc au poignet pour une plaie de la main. Quel matériel les experts conseillent-ils et quelle précaution s'y rattache ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Réponse explicitement soutenue par la source, question autonome et reformulée."
+  }
+ },
+ {
+  "cand_id": "g508df1f5f5c7dacd7171",
+  "kind": "reco",
+  "status": "kept",
+  "question": "Lors d'une épreuve de sevrage de la ventilation mécanique réalisée en aide inspiratoire, quel niveau d'aide faut-il régler ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Réponse explicitement soutenue par la source, question autonome et reformulée."
+  }
+ },
+ {
+  "cand_id": "gaaba8d034741e6533aee",
+  "kind": "other",
+  "status": "kept",
+  "question": "Un patient ventilé après une chirurgie abdominale majeure devient candidat au sevrage. Quelles particularités prendre en compte ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Réponse explicitement soutenue par la source, question autonome et reformulée."
+  }
+ },
+ {
+  "cand_id": "g99bc7da75b10d54611dc",
+  "kind": "reco",
+  "status": "kept",
+  "question": "Chez l'adulte dont la pose d'une voie veineuse périphérique s'annonce difficile, faut-il recourir au guidage échographique ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Réponse explicitement soutenue par la source, question autonome et reformulée."
+  }
+ },
+ {
+  "cand_id": "g11607c58fa78ab9b9896",
+  "kind": "reco",
+  "status": "kept",
+  "question": "Chez un enfant au capital veineux médiocre, quelle technique de pose de voie veineuse périphérique privilégier ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Réponse explicitement soutenue par la source, question autonome et reformulée."
+  }
+ },
+ {
+  "cand_id": "g76063f88d9909f319d85",
+  "kind": "reco",
+  "status": "kept",
+  "question": "En chirurgie ambulatoire, peut-on prescrire une prémédication avant l'intervention ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Prémédication anxiolytique et/ou analgésique possible, explicite."
+  }
+ },
+ {
+  "cand_id": "g293148d474c4b595ab24",
+  "kind": "reco",
+  "status": "kept",
+  "question": "Chez une personne âgée opérée en ambulatoire, quelle classe médicamenteuse faut-il éviter en prémédication et pour quelle raison ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Réponse explicitement soutenue par la source, question autonome et reformulée."
+  }
+ },
+ {
+  "cand_id": "g9899cf25409be93db8da",
+  "kind": "reco",
+  "status": "kept",
+  "question": "Pour une sédation procédurale réalisée aux urgences, quelle échelle de sédation faut-il utiliser ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Réponse explicitement soutenue par la source, question autonome et reformulée."
+  }
+ },
+ {
+  "cand_id": "gc5b9fc2e774524f5e93c",
+  "kind": "reco",
+  "status": "kept",
+  "question": "En pandémie grippale saturant les capacités de réanimation, quel rôle confier aux unités de soins intensifs spécialisés (cardiologie, pneumologie) ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Réponse explicitement soutenue par la source, question autonome et reformulée."
+  }
+ },
+ {
+  "cand_id": "g7228e27048c22c5903d4",
+  "kind": "other",
+  "status": "kept",
+  "question": "En pleine pandémie de grippe aviaire, un patient hémodialysé chronique doit poursuivre ses séances à l'hôpital. Comment organiser sa venue ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Réponse explicitement soutenue par la source, question autonome et reformulée."
+  }
+ },
+ {
+  "cand_id": "g3ab0d33cdf331c331651",
+  "kind": "reco",
+  "status": "kept",
+  "question": "En cas de pandémie de grippe aviaire, comment organiser idéalement l'offre de réanimation d'un hôpital ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Réponse explicitement soutenue par la source, question autonome et reformulée."
+  }
+ },
+ {
+  "cand_id": "g00df2ee9886502468d30",
+  "kind": "reco",
+  "status": "kept",
+  "question": "Après une chirurgie à risque cardiaque intermédiaire chez un patient avec un RCRI à 1, faut-il doser systématiquement BNP ou NT-proBNP en postopératoire ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Réponse explicitement soutenue par la source, question autonome et reformulée."
+  }
+ },
+ {
+  "cand_id": "g1476b1a0ee63fc7a7dd6",
+  "kind": "table",
+  "status": "kept",
+  "question": "Un patient hospitalisé en réanimation depuis 6 jours, non immunodéprimé, développe une diarrhée. Faut-il demander une coproculture standard ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Réponse explicitement soutenue par la source, question autonome et reformulée."
+  }
+ },
+ {
+  "cand_id": "g7618886eaf0233bb5a8e",
+  "kind": "other",
+  "status": "kept",
+  "question": "Un adulte fébrile en réanimation doit être prélevé pour hémocultures. Quel volume sanguin viser et combien de prélèvements au maximum par 24 h ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Réponse explicitement soutenue par la source, question autonome et reformulée."
+  }
+ },
+ {
+  "cand_id": "gf79873a2c51a5380fe66",
+  "kind": "reco",
+  "status": "kept",
+  "question": "Après une césarienne sous anesthésie périmédullaire compliquée de douleurs peropératoires, quel suivi psychologique proposer à la mère ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Réponse explicitement soutenue par la source, question autonome et reformulée."
+  }
+ },
+ {
+  "cand_id": "g55e468b6df0cb295c14b",
+  "kind": "table",
+  "status": "kept",
+  "question": "Chez une parturiente sous péridurale de travail, quel mode d'entretien de l'analgésie est associé à un risque d'échec de l'extension pour césarienne ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Réponse explicitement soutenue par la source, question autonome et reformulée."
+  }
+ },
+ {
+  "cand_id": "g0c4e1de8af1e9b05f324",
+  "kind": "other",
+  "status": "kept",
+  "question": "Une césarienne code rouge est décidée pour suspicion d'acidose fœtale chez une parturiente sous péridurale ; à l'incision, l'anesthésie est manifestement insuffisante. Quelle conduite tenir ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Réponse explicitement soutenue par la source, question autonome et reformulée."
+  }
+ },
+ {
+  "cand_id": "g3e63d050f70a4774839a",
+  "kind": "table",
+  "status": "dropped_verifier",
+  "question": "Chez un enfant de 2 ans éveillé, quelle valeur de pression artérielle systolique (formule 2 × âge + 65, 5e percentile) définit l'hypotension artérielle ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": false,
+   "unambiguous": false,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "drop",
+   "reason": "Tableau mal structuré ; la source ne précise pas qu'il s'agit de la PAS ; la question donne la formule, rendant la réponse calculable sans la source."
+  }
+ },
+ {
+  "cand_id": "gb96b3d27c279158ad3ef",
+  "kind": "reco",
+  "status": "kept",
+  "question": "Lors d'une IVG par méthode chirurgicale, quelle mesure de prévention infectieuse est préconisée chez une femme aux antécédents connus de salpingite ou d'infection génitale haute ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Réponse explicitement soutenue par la source, question autonome et reformulée."
+  }
+ },
+ {
+  "cand_id": "gc6eabc0b647f3aa1afca",
+  "kind": "reco",
+  "status": "kept",
+  "question": "Chez une parturiente présentant une pathologie obstétricale sévère surveillée en maternité, dans quelles circonstances faut-il l'orienter vers une réanimation adulte, et avec quel niveau d'accord ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Réponse explicitement soutenue par la source, question autonome et reformulée."
+  }
+ },
+ {
+  "cand_id": "g3e964e64a0ac6da585eb",
+  "kind": "reco",
+  "status": "kept",
+  "question": "Dans une maternité, où doit se situer le bloc dédié aux interventions obstétricales urgentes (césarienne en urgence) par rapport aux salles d'accouchement ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Réponse explicitement soutenue par la source, question autonome et reformulée."
+  }
+ },
+ {
+  "cand_id": "g822a50690730ee2ef6bc",
+  "kind": "reco",
+  "status": "kept",
+  "question": "En réanimation, quels types de mesures faut-il retenir prioritairement dans une stratégie multimodale de prévention des pneumonies acquises sous ventilation ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Réponse explicitement soutenue par la source, question autonome et reformulée."
+  }
+ },
+ {
+  "cand_id": "g2f51f3362361053361b7",
+  "kind": "other",
+  "status": "kept",
+  "question": "Un patient de réanimation sans cardiopathie ni pathologie pulmonaire sous-jacente présente un nouveau foyer sur une seule radiographie thoracique. Quels seuils de température et de leucocytes retenir comme critères de pneumonie ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Réponse explicitement soutenue par la source, question autonome et reformulée."
+  }
+ },
+ {
+  "cand_id": "gc03aaf37539dfd4b39a8",
+  "kind": "table",
+  "status": "kept",
+  "question": "Chez l'adulte opéré d'une hépatectomie, quelle dose de dexaméthasone injecter en bolus peropératoire pour limiter les complications après l'intervention, et avec quelle force ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Réponse explicitement soutenue par la source, question autonome et reformulée."
+  }
+ },
+ {
+  "cand_id": "g332758e4559789a46e4e",
+  "kind": "reco",
+  "status": "kept",
+  "question": "Chez un enfant victime d'un traumatisme crânien grave, quelle cible de température viser, et une hypothermie induite est-elle indiquée pour contrôler l'hypertension intracrânienne ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Réponse explicitement soutenue par la source, question autonome et reformulée."
+  }
+ },
+ {
+  "cand_id": "g1fcdf782860620a27a75",
+  "kind": "other",
+  "status": "kept",
+  "question": "Un traumatisé crânien grave est hospitalisé en réanimation avec un monitorage multimodal (PIC, autorégulation cérébrale). Comment fixer l'objectif de pression de perfusion cérébrale ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Réponse explicitement soutenue par la source, question autonome et reformulée."
+  }
+ },
+ {
+  "cand_id": "gd1217ba2764d3311994e",
+  "kind": "reco",
+  "status": "kept",
+  "question": "Quel soluté de remplissage faut-il proscrire chez un traumatisé crânien grave en état de choc hémorragique ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Réponse explicitement soutenue par la source, question autonome et reformulée."
+  }
+ },
+ {
+  "cand_id": "g7efa49eea406c3678a28",
+  "kind": "reco",
+  "status": "kept",
+  "question": "Chez un traumatisé thoracique hospitalisé qui devient hypoxémique, quelle modalité de ventilation non invasive utiliser, après quels préalables, et avec quel grade ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Réponse explicitement soutenue par la source, question autonome et reformulée."
+  }
+ },
+ {
+  "cand_id": "gb8871ff491d05e49db36",
+  "kind": "reco",
+  "status": "kept",
+  "question": "Un patient ayant présenté une embolie pulmonaire il y a deux mois doit subir un geste invasif programmé après lequel l'anticoagulation curative ne pourra pas être reprise avant plusieurs jours. Quelle option préventive discuter ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Réponse explicitement soutenue par la source, question autonome et reformulée."
+  }
+ },
+ {
+  "cand_id": "g571f916b70fb2a0586cb",
+  "kind": "table",
+  "status": "kept",
+  "question": "Pour la gestion des anticoagulants avant un geste ORL programmé, dans quelle catégorie de risque de saignement se classe l'exérèse d'un angiofibrome du nasopharynx ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Angiofibromes nasopharyngés listés en risque hémorragique élevé."
+  }
+ },
+ {
+  "cand_id": "gc6d6192f7b53462c02dd",
+  "kind": "reco",
+  "status": "kept",
+  "question": "Un patient porteur d'un déficit en facteur de coagulation, pour lequel un concentré spécifique existe mais n'est pas disponible rapidement, présente une hémorragie grave. Quel produit sanguin administrer et à quelle posologie ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Réponse explicitement soutenue par la source, question autonome et reformulée."
+  }
+ },
+ {
+  "cand_id": "g526e54165c42ca78bf63",
+  "kind": "other",
+  "status": "kept",
+  "question": "Un nouveau-né traité par photothérapie pour une hyperbilirubinémie doit recevoir du plasma traité par amotosalen (PFC-IA). Quelle précaution prendre concernant l'appareil de photothérapie ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Réponse explicitement soutenue par la source, question autonome et reformulée."
+  }
+ },
+ {
+  "cand_id": "g3d773f127b3c64525678",
+  "kind": "reco",
+  "status": "kept",
+  "question": "Lorsqu'une ponction lombaire est envisagée pour rechercher une hémorragie sous-arachnoïdienne, quel délai après le début du saignement faut-il idéalement respecter avant de la réaliser ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Réponse explicitement soutenue par la source, question autonome et reformulée."
+  }
+ },
+ {
+  "cand_id": "g6584b0855243521ea739",
+  "kind": "table",
+  "status": "kept",
+  "question": "Sur l'échelle de gravité clinique de l'hémorragie sous-arachnoïdienne graduée de 0 à 5, quel grade attribuer à un patient somnolent et confus avec un déficit focal minime ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Réponse explicitement soutenue par la source, question autonome et reformulée."
+  }
+ },
+ {
+  "cand_id": "g30a633099415cd42fdb3",
+  "kind": "other",
+  "status": "kept",
+  "question": "Un patient en réanimation pour hémorragie sous-arachnoïdienne est suspect de vasospasme et bénéficie d'une IRM de perfusion. Quels paramètres de perfusion analyser en priorité pour détecter une hypoperfusion ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Réponse explicitement soutenue par la source, question autonome et reformulée."
+  }
+ },
+ {
+  "cand_id": "g2b5dca4f8dcab2a9f869",
+  "kind": "other",
+  "status": "kept",
+  "question": "Un patient doit bénéficier d'un bloc nerveux périphérique échoguidé et souhaite être endormi au préalable. Peut-on réaliser ce bloc sous anesthésie générale ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "C'est possible : l'échoguidage suggère une meilleure sécurité et les données disponibles (observationnelles) ne montrent pas d'augmentation des risques d'une ALR réalisée sous anesthésie générale.",
+   "verdict": "keep",
+   "reason": "Réponse de référence trop catégorique ('Oui') vis-à-vis d'une source prudente (données observationnelles) ; corrigée."
+  }
+ },
+ {
+  "cand_id": "ga7998a95924ce47cf4b2",
+  "kind": "reco",
+  "status": "kept",
+  "question": "Après un bloc périphérique d'un membre, un patient présente un bloc anormalement prolongé avec un déficit moteur complet dans le territoire bloqué. Quel avis spécialisé obtenir rapidement et quel examen complémentaire demander ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Réponse explicitement soutenue par la source, question autonome et reformulée."
+  }
+ },
+ {
+  "cand_id": "gcb7201d68bfd3c66882d",
+  "kind": "reco",
+  "status": "kept",
+  "question": "En réanimation, sur quelle période faut-il vérifier les traitements antérieurs par fluoroquinolone avant d'en represcrire chez le même malade, et quelle est la force de cet accord ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Réponse explicitement soutenue par la source, question autonome et reformulée."
+  }
+ },
+ {
+  "cand_id": "g3778b0a6af09dfa4dd5c",
+  "kind": "other",
+  "status": "dropped_verifier",
+  "question": "Un patient grave de réanimation reçoit une bêta-lactamine à forte posologie et présente des convulsions faisant suspecter une toxicité. Quelle conduite tenir pour adapter le traitement ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": false,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "drop",
+   "reason": "La source évoque l'intérêt possible du dosage des résiduelles de façon générale, pas la conduite devant des convulsions ; d'autres conduites (réduction de dose, arrêt) seraient légitimes : réponse non univoque."
+  }
+ },
+ {
+  "cand_id": "gd56911820a0a15744c26",
+  "kind": "reco",
+  "status": "kept",
+  "question": "La simulation est-elle conseillée pour améliorer la communication entre soignants en soins critiques, auprès de quels publics et avec quel niveau d'accord ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Réponse explicitement soutenue par la source, question autonome et reformulée."
+  }
+ },
+ {
+  "cand_id": "gb4774403759a289947d9",
+  "kind": "reco",
+  "status": "kept",
+  "question": "Chez l'enfant opéré, à quel moment faut-il commencer le réchauffement actif pour prévenir l'hypothermie, et jusqu'à quand le maintenir ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Réponse explicitement soutenue par la source, question autonome et reformulée."
+  }
+ },
+ {
+  "cand_id": "g659a6f7980ea5f93af09",
+  "kind": "table",
+  "status": "kept",
+  "question": "Avant la pose d'une voie veineuse chez un nourrisson de 3 semaines, peut-on utiliser une chlorhexidine alcoolique à 0,5 % (Hibitane) pour l'antisepsie cutanée ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Réponse explicitement soutenue par la source, question autonome et reformulée."
+  }
+ },
+ {
+  "cand_id": "ga95d75ad6fe8fb541a44",
+  "kind": "other",
+  "status": "kept",
+  "question": "Un nourrisson de 10 mois qui ne marche pas encore, sans antécédent hémorragique personnel ni familial, est programmé pour une intervention chirurgicale. Faut-il prescrire un bilan d'hémostase préopératoire ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Réponse explicitement soutenue par la source, question autonome et reformulée."
+  }
+ },
+ {
+  "cand_id": "gcf5aefb7a5425d025d76",
+  "kind": "reco",
+  "status": "kept",
+  "question": "En soins critiques, chez un patient atteint de pancréatite aiguë grave, quels examens associer à la clinique et à la CRP pour affirmer l'infection de la nécrose, et avec quel grade ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Réponse explicitement soutenue par la source, question autonome et reformulée."
+  }
+ },
+ {
+  "cand_id": "g394ecc098e4d21e40da0",
+  "kind": "table",
+  "status": "kept",
+  "question": "Dans le score de défaillance d'organes utilisé au cours de la pancréatite aiguë, quel score respiratoire attribuer à un patient dont le rapport PaO2/FiO2 est de 250 ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "PaO2/FiO2 201-300 = score 2 explicite."
+  }
+ },
+ {
+  "cand_id": "gae027791784341a1d570",
+  "kind": "other",
+  "status": "kept",
+  "question": "Un patient en soins critiques pour une pancréatite aiguë sévère secondaire à une hypertriglycéridémie très sévère persistante présente une acidose lactique et une défaillance d'organe. Quelle place pour les échanges plasmatiques ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Réponse explicitement soutenue par la source, question autonome et reformulée."
+  }
+ },
+ {
+  "cand_id": "gcf361e9af2739ce43a9f",
+  "kind": "table",
+  "status": "kept",
+  "question": "Parmi les antiplaquettaires inhibiteurs du récepteur P2Y12, lequel a une action réversible ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Le tableau source indique explicitement que seul le ticagrelor est un inhibiteur réversible du P2Y12 (clopidogrel et prasugrel irréversibles)."
+  }
+ },
+ {
+  "cand_id": "ge78b13400ed5e89af859",
+  "kind": "other",
+  "status": "kept",
+  "question": "Un patient traité par ticagrelor doit être opéré en urgence avec un risque hémorragique important. Peut-on compter sur la desmopressine pour antagoniser l'effet antiplaquettaire ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "La source dit que la desmopressine est décevante avec les AAP récents et que chez des volontaires sous ticagrelor elle ne réduit pas le temps de saignement ni ne corrige les fonctions plaquettaires."
+  }
+ },
+ {
+  "cand_id": "gf4f5e8241ea472138bfc",
+  "kind": "reco",
+  "status": "kept",
+  "question": "Pour prévenir ou traiter une insuffisance rénale aiguë en périopératoire ou en réanimation, peut-on utiliser le mannitol ou la dopamine, et avec quel grade ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "R6.3 : il ne faut pas utiliser mannitol ni dopamine pour prévenir ou traiter une IRA, Grade 1-, accord fort ; réponse exacte et complète."
+  }
+ },
+ {
+  "cand_id": "g2a02d32160eb2887541e",
+  "kind": "table",
+  "status": "kept",
+  "question": "Dans la classification RIFLE de l'insuffisance rénale aiguë, quel critère de diurèse définit le stade « Injury » ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Le tableau RIFLE donne pour le stade Injury une diurèse < 0,5 mL/kg/h pendant > 16 h."
+  }
+ },
+ {
+  "cand_id": "gb38ab5475679dc66d035",
+  "kind": "other",
+  "status": "kept",
+  "question": "Un adulte bénéficie d'une chirurgie abdominale majeure et l'on doit choisir le cristalloïde de remplissage peropératoire. Quel type de soluté est associé à moins de complications postopératoires et à un moindre besoin de dialyse ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "L'étude de Shaw (30 994 patients, chirurgie abdominale) associe le NaCl 0,9 % à plus de complications et d'EER (4,8 % vs 1 %) que les solutés balancés ; réponse conforme (données observationnelles)."
+  }
+ },
+ {
+  "cand_id": "g2e3ff5d3e091e5fb5f04",
+  "kind": "reco",
+  "status": "dropped_verifier",
+  "question": "Face à un patient présentant une douleur thoracique évoquant un infarctus aigu hors service de cardiologie, vers quelle structure l'appel initial doit-il être dirigé ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": false,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "drop",
+   "reason": "« Hors service de cardiologie » inclut le patient hospitalisé dans un autre service, pour lequel la source prévoit une relation directe avec la SCDI ou avec le SAMU : la réponse unique « SAMU-Centre 15 » n'est valable que pour l'appel extrahospitalier ; question ambiguë."
+  }
+ },
+ {
+  "cand_id": "g1fa665d53b3782891db2",
+  "kind": "reco",
+  "status": "kept",
+  "question": "Chez l'adulte présentant des critères prédictifs d'intubation difficile, quel dispositif d'oxygénation mettre en place pendant l'apnée, après préoxygénation au masque étanche, pour retarder la désaturation ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 6
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "La source suggère l'ONHD durant la phase d'apnée après préoxygénation au masque étanche chez les patients avec critères d'intubation difficile."
+  }
+ },
+ {
+  "cand_id": "g42624ba80bc36c8e0925",
+  "kind": "other",
+  "status": "kept",
+  "question": "Après une intubation difficile compliquée d'une désaturation sévère au bloc, l'équipe d'anesthésie organise une revue de morbi-mortalité. Quelles caractéristiques doit-elle respecter pour être de qualité ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Les cinq caractéristiques d'une RMM de qualité (sélection des cas, collecte structurée, présentation synthétique pluridisciplinaire participative non culpabilisante, suivi des actions) sont explicitement listées."
+  }
+ },
+ {
+  "cand_id": "ga8f24201437a5600b429",
+  "kind": "reco",
+  "status": "kept",
+  "question": "Chez un patient douloureux chronique avec une composante neuropathique avant implantation d'une pompe intrathécale, quelle association médicamenteuse privilégier en première ligne ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "La bupivacaïne associée à la morphine est recommandée en première intention, mais les concentrations de bupivacaïne disponibles en France (5 mg/mL) ne permettent pas son emploi dans cette indication.",
+   "verdict": "keep",
+   "reason": "La source recommande bien la bupivacaïne + morphine en première intention si composante neuropathique, mais précise que les concentrations disponibles en France ne permettent pas cet emploi ; réponse complétée de cette réserve."
+  }
+ },
+ {
+  "cand_id": "g1b9a688e40e916106fc6",
+  "kind": "other",
+  "status": "kept",
+  "question": "Chez un patient douloureux chronique, on envisage une injection péridurale de corticoïdes, éventuellement par voie transforaminale. Que retenir du niveau de preuve de cette technique ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "La source conclut que les preuves d'efficacité des corticoïdes péridurales sont controversées, avec incertitude sur volume/composition/concentration, et que l'intérêt de la voie transforaminale est aussi controversé."
+  }
+ },
+ {
+  "cand_id": "g762b901f1d2994228489",
+  "kind": "reco",
+  "status": "dropped_verifier",
+  "question": "Chez un enfant enrhumé devant être anesthésié, quelle prémédication inhalée réduit la toux et le bronchospasme peranesthésiques, et dans quel délai avant l'induction l'administrer ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": false,
+   "unambiguous": false,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "drop",
+   "reason": "La source ne contient que l'argumentaire (étude de 400 enfants, étude contradictoire chez les > 6 ans) et non le texte de la recommandation ; le délai « dans les 30 minutes » est le protocole d'une étude, pas une préconisation attestée, et la population cible (âge) n'est pas précisée."
+  }
+ },
+ {
+  "cand_id": "g04ed16e84437b76e0f26",
+  "kind": "other",
+  "status": "dropped_verifier",
+  "question": "Un enfant de 4 ans a été intubé avec difficulté pour une intervention chirurgicale qui se termine. Quelle conduite tenir pour son extubation ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": false,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "drop",
+   "reason": "Question ouverte (« quelle conduite tenir ») admettant de nombreuses réponses correctes (techniques intermédiaires, guide échangeur, etc.) ; la référence est un énoncé de principes généraux difficilement évaluable de façon univoque."
+  }
+ },
+ {
+  "cand_id": "g6d7e10b60e750f150a7a",
+  "kind": "reco",
+  "status": "kept",
+  "question": "Pendant l'intubation en séquence rapide d'un enfant, à partir de quelle SpO2 faut-il ventiler au masque, avec quelle FiO2 et quelle pression d'insufflation maximale idéale ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "Réponse fidèle : ventilation au masque dès SpO2 < 95 %, FiO2 ≥ 0,8, faibles pressions idéalement < 15 cmH2O, avis d'experts."
+  }
+ },
+ {
+  "cand_id": "g24eb9400e506c646c3d5",
+  "kind": "comparison",
+  "status": "dropped_verifier",
+  "question": "Chez un patient porteur d'un stent coronaire sous antiplaquettaires devant être opéré, qu'est-ce qui a changé entre la recommandation de 2006 et celle de 2018 concernant le délai de la chirurgie après la pose du stent ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": false,
+   "unambiguous": false,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "drop",
+   "reason": "L'extrait 2006 ne porte pas sur le délai de la chirurgie après pose de stent mais sur l'antiagrégant sous lequel opérer (« quel que soit le délai… sous aspirine ») ; le changement décrit sur le report au-delà du 6e mois compare deux sujets différents et n'est pas attesté comme évolution réelle."
+  }
+ },
+ {
+  "cand_id": "g1b4ad3d31046fdbdd025",
+  "kind": "comparison",
+  "status": "kept",
+  "question": "Pour un bloc périphérique, qu'est-ce qui a changé entre la recommandation de 2001 et celle de 2016 concernant la réalisation du bloc chez un patient sous anesthésie générale ou sédation profonde ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "2001 : ALR chez un patient éveillé ou sous sédation légère (bloc sous AG prive des signes d'alerte). 2016 (R5.2) : première intention éveillé/légèrement sédaté, mais bloc sous AG/ALR/sédation profonde possible après discussion s'il existe un bénéfice, échographie apportant probablement une sécurité supplémentaire. Changement réel attesté."
+  }
+ },
+ {
+  "cand_id": "gfa340eeba050ce0dc5de",
+  "kind": "comparison",
+  "status": "kept",
+  "question": "Pour l'analgésie postopératoire chez un patient aux antécédents d'infarctus, d'AVC ou d'artériopathie, qu'est-ce qui a changé entre la recommandation de 2008 et celle de 2016 concernant les coxibs ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "2008 : coxibs possibles en tenant compte des facteurs de risque athérothrombotique et des CI Afssaps. 2016 : R3.2 ISCOX2 non recommandés si antécédents athérothrombotiques (G1-), R3.3 AINS-NS probablement non recommandés au-delà de 7 jours. Changement réel attesté."
+  }
+ },
+ {
+  "cand_id": "g13f53a210e8c1cadb208",
+  "kind": "comparison",
+  "status": "dropped_verifier",
+  "question": "Pour confirmer une susceptibilité à l'hyperthermie maligne chez un patient à risque, qu'est-ce qui a changé entre la recommandation de 2013 et celle de 2019 concernant le choix entre tests de contracture in vitro et analyse génétique ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": false,
+   "unambiguous": false,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "drop",
+   "reason": "Les énoncés de recommandation 2013 et 2019 (R2.1) sont identiques sur le fond (IVCT ou analyse génétique) ; la hiérarchie IVCT en première intention vient de l'argumentaire 2019 et l'absence de hiérarchie en 2013 n'est pas attestée par l'extrait (argumentaire 2013 non fourni). Le seul changement certain est la force (recommandé → suggèrent), ce que la référence n'isole pas."
+  }
+ },
+ {
+  "cand_id": "g518431a84972e17017d1",
+  "kind": "comparison",
+  "status": "kept",
+  "question": "Pour l'abord veineux périphérique en anesthésie pédiatrique, qu'est-ce qui a changé entre la recommandation de 2000 et celle de 2023 concernant la gamme de cathéters à disposer ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "2000 : toute la gamme du 24 G au 14 G. 2023 : toutes les tailles entre 26 G et 16 G. Changement réel attesté par les deux textes."
+  }
+ },
+ {
+  "cand_id": "gdc5dedcf87a783097a14",
+  "kind": "comparison",
+  "status": "dropped_verifier",
+  "question": "Aux urgences, pour réduire une luxation ou une fracture, qu'est-ce qui a changé entre la recommandation de 2010 et celle de 2026 concernant la place de l'anesthésie locorégionale par rapport à la sédation ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": false,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "drop",
+   "reason": "Le texte 2010 traite l'ALR comme composante de l'analgésie multimodale en traumatologie, sans la positionner par rapport à la sédation pour un geste de réduction ; la question « place de l'ALR par rapport à la sédation » n'a donc pas de réponse 2010 attestée et le changement est partiellement construit."
+  }
+ },
+ {
+  "cand_id": "g4083a9904a41ce659936",
+  "kind": "comparison",
+  "status": "dropped_verifier",
+  "question": "Chez un adulte infecté, qu'est-ce qui a changé entre la recommandation de 2006 et celle de 2025 concernant les critères cliniques pour repérer un sepsis ou un risque d'évolution vers le sepsis ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": false,
+   "self_contained": false,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "drop",
+   "reason": "Contextes non comparables : 2006 concerne la reconnaissance d'un état septique devant un tableau atypique (et l'extrait 2006 comporte aussi un score de triage pondéré, Tableau 13), 2025 concerne le patient ambulatoire et le risque de progression ; la question omet le cadre ambulatoire et le « changement » SIRS → score n'est pas univoque."
+  }
+ },
+ {
+  "cand_id": "g78a74d874a76bbb543f1",
+  "kind": "comparison",
+  "status": "kept",
+  "question": "Dans une thrombopénie induite par l'héparine traitée par danaparoïde, qu'est-ce qui a changé entre la recommandation de 2002 et celle de 2019 concernant le seuil plaquettaire pour débuter le relais par AVK ?",
+  "checks": {
+   "quote_in_passage": true,
+   "max_copied_words": 0
+  },
+  "verifier": {
+   "answer_in_source": true,
+   "unambiguous": true,
+   "self_contained": true,
+   "not_copied": true,
+   "clinically_sensible": true,
+   "corrected_answer": "",
+   "verdict": "keep",
+   "reason": "2002 : relais danaparoïde-AVK quand plaquettes > 100 G/L ; 2019 : quand plaquettes > 150 G/L (et AVK seulement une fois la numération corrigée > 150 G/L). Changement réel attesté."
+  }
+ },
+ {
+  "cand_id": "abst000",
+  "kind": "abstention",
+  "status": "kept",
+  "question": "Pour une tympanoplastie, faut-il arrêter le protoxyde d'azote avant la pose de la greffe tympanique, et combien de temps avant ?",
+  "checks": {},
+  "verifier": {
+   "covered": false,
+   "reason": "Aucun passage ne traite du protoxyde d'azote en chirurgie de l'oreille moyenne/tympanoplastie (passages sur N2O obstétrical, environnemental, antibioprophylaxie ORL)."
+  }
+ },
+ {
+  "cand_id": "abst001",
+  "kind": "abstention",
+  "status": "kept",
+  "question": "Lors d'une chirurgie laser des cordes vocales, quelle FiO2 maximale est conseillée pour limiter le risque d'incendie des voies aériennes ?",
+  "checks": {},
+  "verifier": {
+   "covered": false,
+   "reason": "Aucun passage sur la chirurgie laser laryngée, le risque d'incendie ou une FiO2 maximale."
+  }
+ },
+ {
+  "cand_id": "abst002",
+  "kind": "abstention",
+  "status": "kept",
+  "question": "En chirurgie endoscopique des sinus, une anesthésie intraveineuse totale propofol-rémifentanil réduit-elle le saignement peropératoire par rapport aux halogénés ?",
+  "checks": {},
+  "verifier": {
+   "covered": false,
+   "reason": "Aucun passage ne compare TIVA et halogénés sur le saignement en chirurgie endoscopique des sinus (passages sur NVPO, environnement, durée de séjour)."
+  }
+ },
+ {
+  "cand_id": "abst003",
+  "kind": "abstention",
+  "status": "dropped_covered_or_unverified",
+  "question": "Chez un patient myope fort (longueur axiale > 26 mm) opéré de la cataracte, faut-il préférer l'anesthésie sous-ténonienne au bloc péribulbaire pour limiter le risque de perforation du globe ?",
+  "checks": {},
+  "verifier": {
+   "covered": true,
+   "reason": "Doute : le passage [0] (antiplaquettaires 2018) discute le choix péribulbaire vs sous-ténonienne/topique en ophtalmologie (« la sous-ténonienne peut être préférée »), même si le motif est hémorragique et non la myopie forte."
+  }
+ },
+ {
+  "cand_id": "abst004",
+  "kind": "abstention",
+  "status": "kept",
+  "question": "Après une vitrectomie avec injection de gaz SF6 ou C3F8, combien de temps faut-il proscrire le protoxyde d'azote lors d'une anesthésie ultérieure ?",
+  "checks": {},
+  "verifier": {
+   "covered": false,
+   "reason": "Les passages évoquent la diffusion du N2O dans les cavités closes (chirurgie digestive) et son impact environnemental, mais rien sur les gaz intraoculaires après vitrectomie."
+  }
+ },
+ {
+  "cand_id": "abst005",
+  "kind": "abstention",
+  "status": "kept",
+  "question": "Pour une chirurgie du strabisme chez l'enfant, faut-il administrer de l'atropine en prophylaxie du réflexe oculocardiaque, et à quelle dose ?",
+  "checks": {},
+  "verifier": {
+   "covered": false,
+   "reason": "Atropine mentionnée seulement en association à la succinylcholine chez l'enfant < 3 ans ; strabisme cité uniquement comme facteur de risque de NVPO ; rien sur le réflexe oculocardiaque."
+  }
+ },
+ {
+  "cand_id": "abst006",
+  "kind": "abstention",
+  "status": "kept",
+  "question": "Pour une craniotomie éveillée en technique asleep-awake-asleep, quels agents et quelle gestion des voies aériennes privilégier pendant les phases endormies ?",
+  "checks": {},
+  "verifier": {
+   "covered": false,
+   "reason": "Aucun passage sur la craniotomie éveillée ni la technique asleep-awake-asleep."
+  }
+ },
+ {
+  "cand_id": "abst007",
+  "kind": "abstention",
+  "status": "kept",
+  "question": "Avant une chirurgie de la fosse postérieure en position assise, faut-il rechercher systématiquement un foramen ovale perméable par échographie transœsophagienne ?",
+  "checks": {},
+  "verifier": {
+   "covered": false,
+   "reason": "Aucun passage sur la position assise en neurochirurgie ni le dépistage du FOP par ETO avant chirurgie de fosse postérieure."
+  }
+ },
+ {
+  "cand_id": "abst008",
+  "kind": "abstention",
+  "status": "kept",
+  "question": "Pendant une arthrodèse pour scoliose avec monitorage des potentiels évoqués moteurs, quelle concentration d'halogéné et quelle curarisation sont compatibles avec le monitorage ?",
+  "checks": {},
+  "verifier": {
+   "covered": false,
+   "reason": "Aucun passage sur le monitorage des potentiels évoqués moteurs peropératoires et ses contraintes anesthésiques (passages sur BIS/EEG et curarisation générale)."
+  }
+ },
+ {
+  "cand_id": "abst009",
+  "kind": "abstention",
+  "status": "kept",
+  "question": "Chez un patient porteur d'une assistance ventriculaire gauche à flux continu opéré d'une cholécystectomie, quelle pression artérielle moyenne cibler et comment la mesurer ?",
+  "checks": {},
+  "verifier": {
+   "covered": false,
+   "reason": "Aucun passage sur l'assistance ventriculaire gauche ni la mesure de PA sous flux continu."
+  }
+ },
+ {
+  "cand_id": "abst010",
+  "kind": "abstention",
+  "status": "dropped_covered_or_unverified",
+  "question": "Chez un patient avec hypertension artérielle pulmonaire sévère devant subir une chirurgie abdominale, quelle est la place du monoxyde d'azote inhalé en peropératoire ?",
+  "checks": {},
+  "verifier": {
+   "covered": true,
+   "reason": "Le passage [4] (cardiopathies congénitales 2023) traite la prise en charge peropératoire de l'HTAP en chirurgie non cardiaque, dont le NO inhalé (~10 ppm)."
+  }
+ },
+ {
+  "cand_id": "abst011",
+  "kind": "abstention",
+  "status": "dropped_covered_or_unverified",
+  "question": "Un patient avec un rétrécissement aortique serré asymptomatique doit avoir une prothèse de hanche programmée : faut-il réaliser un remplacement valvulaire ou un TAVI avant la chirurgie ?",
+  "checks": {},
+  "verifier": {
+   "covered": true,
+   "reason": "Le passage [1] (coronarien 2010) traite du rétrécissement aortique serré avant chirurgie non cardiaque (mortalité si non corrigé, valvuloplastie percutanée préopératoire)."
+  }
+ },
+ {
+  "cand_id": "abst012",
+  "kind": "abstention",
+  "status": "dropped_covered_or_unverified",
+  "question": "En cas d'hypotension peropératoire chez un patient porteur d'une cardiomyopathie hypertrophique obstructive, quel vasopresseur utiliser et quels agents éviter ?",
+  "checks": {},
+  "verifier": {
+   "covered": true,
+   "reason": "Doute : les passages [0] et [3] (blocs périmédullaires 2006) traitent l'hypotension et l'obstacle à l'éjection dans la cardiomyopathie hypertrophique obstructive, sans détail sur le vasopresseur."
+  }
+ },
+ {
+  "cand_id": "abst013",
+  "kind": "abstention",
+  "status": "kept",
+  "question": "Chez un nourrisson avec sténose du pylore, quels seuils de chlorémie et de bicarbonates faut-il atteindre avant la pylorotomie ?",
+  "checks": {},
+  "verifier": {
+   "covered": false,
+   "reason": "Sténose du pylore citée seulement pour l'antibioprophylaxie et l'organisation ; aucun seuil de chlorémie/bicarbonates."
+  }
+ },
+ {
+  "cand_id": "abst014",
+  "kind": "abstention",
+  "status": "kept",
+  "question": "Faut-il différer une chirurgie non urgente chez l'enfant de moins de 3 ans en raison du risque de neurotoxicité des agents anesthésiques ?",
+  "checks": {},
+  "verifier": {
+   "covered": false,
+   "reason": "Aucun passage sur la neurotoxicité des agents anesthésiques chez le jeune enfant."
+  }
+ },
+ {
+  "cand_id": "abst015",
+  "kind": "abstention",
+  "status": "kept",
+  "question": "Chez un enfant drépanocytaire homozygote programmé pour une cholécystectomie, faut-il une transfusion préopératoire et avec quel objectif d'hémoglobine ?",
+  "checks": {},
+  "verifier": {
+   "covered": false,
+   "reason": "Aucun passage sur la drépanocytose ni la transfusion préopératoire chez l'enfant drépanocytaire."
+  }
+ },
+ {
+  "cand_id": "abst016",
+  "kind": "abstention",
+  "status": "kept",
+  "question": "Quelle posologie de dexmédétomidine intranasale utiliser en prémédication chez l'enfant anxieux, et quel délai avant l'induction ?",
+  "checks": {},
+  "verifier": {
+   "covered": false,
+   "reason": "Dexmédétomidine mentionnée seulement comme adjuvant locorégional (1 µg/kg) ; rien sur la prémédication intranasale."
+  }
+ },
+ {
+  "cand_id": "abst017",
+  "kind": "abstention",
+  "status": "kept",
+  "question": "Pour une appendicectomie cœlioscopique au deuxième trimestre de grossesse, quelle pression de pneumopéritoine et quelle surveillance fœtale recommander ?",
+  "checks": {},
+  "verifier": {
+   "covered": false,
+   "reason": "Aucun passage sur la cœlioscopie pendant la grossesse ni la pression de pneumopéritoine/surveillance fœtale."
+  }
+ },
+ {
+  "cand_id": "abst018",
+  "kind": "abstention",
+  "status": "kept",
+  "question": "Après une anesthésie générale au propofol et sufentanil, une femme qui allaite doit-elle tirer et jeter son lait, et pendant combien de temps ?",
+  "checks": {},
+  "verifier": {
+   "covered": false,
+   "reason": "Aucun passage sur l'allaitement après anesthésie générale."
+  }
+ },
+ {
+  "cand_id": "abst019",
+  "kind": "abstention",
+  "status": "kept",
+  "question": "Chez un patient âgé traité par donépézil, quel est l'effet attendu sur la durée d'action de la succinylcholine et des curares non dépolarisants ?",
+  "checks": {},
+  "verifier": {
+   "covered": false,
+   "reason": "Aucun passage sur le donépézil ou les anticholinestérasiques centraux et la durée d'action des curares (le passage [0] concerne la myasthénie)."
+  }
+ },
+ {
+  "cand_id": "abst020",
+  "kind": "abstention",
+  "status": "kept",
+  "question": "Pour un TAVI par voie fémorale chez un patient de 88 ans, la sédation consciente est-elle préférable à l'anesthésie générale ?",
+  "checks": {},
+  "verifier": {
+   "covered": false,
+   "reason": "TAVI cité uniquement pour l'antibioprophylaxie et la gestion des anticoagulants ; rien sur sédation vs AG."
+  }
+ },
+ {
+  "cand_id": "abst021",
+  "kind": "abstention",
+  "status": "dropped_covered_or_unverified",
+  "question": "En chirurgie cardiaque chez le sujet âgé, le monitorage de l'oxymétrie cérébrale par NIRS réduit-il la dysfonction cognitive postopératoire ?",
+  "checks": {},
+  "verifier": {
+   "covered": true,
+   "reason": "Doute : le passage [3] (sujet âgé/FESF 2017) traite du monitorage NIRS chez le sujet âgé et de son absence d'effet démontré sur les complications y compris neurologiques (hors chirurgie cardiaque)."
+  }
+ },
+ {
+  "cand_id": "abst022",
+  "kind": "abstention",
+  "status": "kept",
+  "question": "Après une décurarisation par sugammadex chez une patiente sous contraception orale, combien de jours de contraception complémentaire faut-il conseiller ?",
+  "checks": {},
+  "verifier": {
+   "covered": false,
+   "reason": "Aucun passage sur l'interaction sugammadex-contraception orale."
+  }
+ },
+ {
+  "cand_id": "abst023",
+  "kind": "abstention",
+  "status": "dropped_covered_or_unverified",
+  "question": "Chez un consommateur régulier de cannabis, faut-il prévoir des doses de propofol plus élevées à l'induction ?",
+  "checks": {},
+  "verifier": {
+   "covered": true,
+   "reason": "Doute : le passage [1] (traitements chroniques 2009) traite directement de l'anesthésie chez le consommateur de cannabis (interactions, médicaments à éviter), même sans mention du propofol."
+  }
+ },
+ {
+  "cand_id": "abst024",
+  "kind": "abstention",
+  "status": "dropped_covered_or_unverified",
+  "question": "Chez un patient myasthénique, quelle dose de rocuronium utiliser pour l'intubation et le sugammadex est-il sûr pour la décurarisation ?",
+  "checks": {},
+  "verifier": {
+   "covered": true,
+   "reason": "Les 10 passages de cette entrée ne mentionnent pas la myasthénie, mais d'autres passages du même fichier (Curarisation 2018 : argumentaire sur la myasthénie et les curares non dépolarisants, R8.11 sugammadex dans les maladies neuromusculaires dont la myasthénie) montrent que le corpus couvre le sujet ; par prudence covered=true."
+  }
+ },
+ {
+  "cand_id": "abst025",
+  "kind": "abstention",
+  "status": "dropped_covered_or_unverified",
+  "question": "Devant une apnée prolongée après succinylcholine évoquant un déficit en butyrylcholinestérase, quelle conduite tenir et quel bilan prescrire ?",
+  "checks": {},
+  "verifier": {
+   "covered": true,
+   "reason": "Doute : le passage [0] (sédation en urgence 2010) mentionne le déficit en pseudocholinestérases exposant à une curarisation prolongée après succinylcholine, sans conduite à tenir détaillée."
+  }
+ },
+ {
+  "cand_id": "abst026",
+  "kind": "abstention",
+  "status": "kept",
+  "question": "Dans un syndrome douloureux régional complexe de type 1 après fracture du poignet, les bisphosphonates sont-ils efficaces et à quelle posologie ?",
+  "checks": {},
+  "verifier": {
+   "covered": false,
+   "reason": "Les passages traitent du SDRC uniquement sous l'angle des techniques locorégionales ; aucune mention des bisphosphonates."
+  }
+ },
+ {
+  "cand_id": "abst027",
+  "kind": "abstention",
+  "status": "dropped_covered_or_unverified",
+  "question": "Pour une douleur post-zostérienne, à quel intervalle peut-on renouveler l'application du patch de capsaïcine 8 % ?",
+  "checks": {},
+  "verifier": {
+   "covered": true,
+   "reason": "Doute : les passages [2] et [5] (antalgiques ORL 2014) traitent de la capsaïcine 8 % (Qutenza) dans la douleur neuropathique focale, sans intervalle de renouvellement."
+  }
+ },
+ {
+  "cand_id": "abst028",
+  "kind": "abstention",
+  "status": "dropped_covered_or_unverified",
+  "question": "Chez un patient lombalgique chronique sous opioïdes forts, au-delà de quelle dose en équivalent morphine orale faut-il réévaluer ou envisager une décroissance ?",
+  "checks": {},
+  "verifier": {
+   "covered": true,
+   "reason": "Les passages [1]/[2] (antalgiques ORL 2014) indiquent qu'au-delà de 180 mg/j d'équivalent morphine la prise en charge relève d'un avis spécialisé (douleur chronique non cancéreuse)."
+  }
+ },
+ {
+  "cand_id": "abst029",
+  "kind": "abstention",
+  "status": "dropped_covered_or_unverified",
+  "question": "Devant une hyponatrémie sévère symptomatique, quel bolus de NaCl hypertonique à 3 % administrer et quelle limite de correction de la natrémie respecter sur 24 heures ?",
+  "checks": {},
+  "verifier": {
+   "covered": true,
+   "reason": "Les passages [0]/[1] (HSA 2004) traitent la correction d'une hyponatrémie symptomatique (correction initiale rapide, soluté hypertonique, ≤ 8-10 mmol/L/j) ; le passage [8] donne une limite de 10 mmol/L/24 h."
+  }
+ },
+ {
+  "cand_id": "abst030",
+  "kind": "abstention",
+  "status": "dropped_covered_or_unverified",
+  "question": "En cas d'intoxication au paracétamol, quel protocole de N-acétylcystéine utiliser et à partir de quelle paracétamolémie le débuter ?",
+  "checks": {},
+  "verifier": {
+   "covered": true,
+   "reason": "Le passage [0] (insuffisance hépatique 2018, R2.1) traite directement de la NAC dans l'intoxication au paracétamol (sans attendre la paracétamolémie, quelle que soit sa valeur)."
+  }
+ },
+ {
+  "cand_id": "abst031",
+  "kind": "abstention",
+  "status": "kept",
+  "question": "Dans une intoxication grave aux bêtabloquants, à quelle posologie débuter l'insulinothérapie euglycémique à haute dose ?",
+  "checks": {},
+  "verifier": {
+   "covered": false,
+   "reason": "Aucun passage sur l'intoxication aux bêtabloquants ni l'insulinothérapie euglycémique à haute dose."
+  }
+ },
+ {
+  "cand_id": "abst032",
+  "kind": "abstention",
+  "status": "dropped_covered_or_unverified",
+  "question": "Dans un syndrome de Guillain-Barré, quels critères de capacité vitale et de force musculaire doivent faire envisager l'intubation ?",
+  "checks": {},
+  "verifier": {
+   "covered": true,
+   "reason": "Doute : les passages [1]/[6] (trachéotomie 2017) traitent de la ventilation mécanique dans le syndrome de Guillain-Barré (critères prédictifs de ventilation prolongée), sans critères d'intubation."
+  }
+ },
+ {
+  "cand_id": "abst033",
+  "kind": "abstention",
+  "status": "kept",
+  "question": "Pour une embolie pulmonaire à haut risque avec choc, quelle dose d'altéplase administrer en thrombolyse et en combien de temps ?",
+  "checks": {},
+  "verifier": {
+   "covered": false,
+   "reason": "Altéplase mentionnée uniquement pour l'AVC ischémique ; rien sur la thrombolyse de l'embolie pulmonaire."
+  }
+ },
+ {
+  "cand_id": "abst034",
+  "kind": "abstention",
+  "status": "kept",
+  "question": "Chez un patient de réanimation en sevrage alcoolique sévère, le phénobarbital est-il une alternative aux benzodiazépines pour prévenir le delirium tremens ?",
+  "checks": {},
+  "verifier": {
+   "covered": false,
+   "reason": "Phénobarbital traité uniquement dans l'état de mal épileptique ; rien sur le sevrage alcoolique/delirium tremens."
+  }
+ },
+ {
+  "cand_id": "abst035",
+  "kind": "abstention",
+  "status": "kept",
+  "question": "Avant une endoscopie pour hémorragie digestive haute, faut-il perfuser de l'érythromycine, à quelle dose et combien de temps avant ?",
+  "checks": {},
+  "verifier": {
+   "covered": false,
+   "reason": "Érythromycine traitée uniquement comme prokinétique en nutrition entérale ; rien sur son usage avant endoscopie pour hémorragie digestive."
+  }
+ },
+ {
+  "cand_id": "abst036",
+  "kind": "abstention",
+  "status": "kept",
+  "question": "Avant une surrénalectomie pour phéochromocytome, combien de temps dure la préparation par alpha-bloquant et quels objectifs tensionnels viser ?",
+  "checks": {},
+  "verifier": {
+   "covered": false,
+   "reason": "Alpha-bloquants mentionnés uniquement en urologie (rétention) ; aucun passage sur le phéochromocytome."
+  }
+ },
+ {
+  "cand_id": "abst037",
+  "kind": "abstention",
+  "status": "kept",
+  "question": "Chez un patient porteur d'une tumeur carcinoïde, faut-il administrer de l'octréotide en préopératoire pour prévenir une crise carcinoïde peropératoire ?",
+  "checks": {},
+  "verifier": {
+   "covered": false,
+   "reason": "Octréotide mentionné uniquement pour l'hémorragie digestive du cirrhotique ; rien sur la tumeur carcinoïde."
+  }
+ },
+ {
+  "cand_id": "abst038",
+  "kind": "abstention",
+  "status": "kept",
+  "question": "Pour une sismothérapie (électroconvulsivothérapie), quel hypnotique choisir pour ne pas raccourcir la durée de la crise convulsive ?",
+  "checks": {},
+  "verifier": {
+   "covered": false,
+   "reason": "Aucun passage sur la sismothérapie/ECT."
+  }
+ },
+ {
+  "cand_id": "abst039",
+  "kind": "abstention",
+  "status": "kept",
+  "question": "Lors d'une ventilation unipulmonaire avec hypoxémie, quelle séquence de mesures appliquer, notamment la CPAP sur le poumon non ventilé ?",
+  "checks": {},
+  "verifier": {
+   "covered": false,
+   "reason": "Aucun passage sur la ventilation unipulmonaire ni la CPAP sur le poumon non ventilé."
+  }
+ }
+]

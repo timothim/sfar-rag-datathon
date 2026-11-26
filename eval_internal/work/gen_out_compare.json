@@ -1,0 +1,124 @@
+[
+  {
+    "anchor_id": "compare::agents_antiplaquettaires_programme",
+    "usable": true,
+    "question": "Chez un patient porteur d'un stent coronaire sous antiplaquettaires devant être opéré, qu'est-ce qui a changé entre la recommandation de 2006 et celle de 2018 concernant le délai de la chirurgie après la pose du stent ?",
+    "reference_answer": "En 2006, il était jugé préférable d'opérer le patient porteur d'un stent pharmacoactif sous aspirine quel que soit le délai depuis l'implantation (avis d'expert). En 2018, chez les patients sous bithérapie après un IDM ou un stent à haut risque thrombotique, il est proposé de reporter toute chirurgie non cardiaque au-delà du 6e mois suivant la pose du stent (accord fort), avec poursuite de l'aspirine en préopératoire.",
+    "key_terms": [
+      "6<sup>e</sup> mois",
+      "poursuivre l'aspirine"
+    ],
+    "quote_new": "il est proposé de reporter toute chirurgie non cardiaque au-delà du 6<sup>e</sup> mois qui suit la pose de stent (accord fort)",
+    "quote_old": "chez les patients porteurs d'EC pharmacoactives, quel que soit le délai de l'implantation de l'EC, il est préférable d'opérer le patient sous aspirine"
+  },
+  {
+    "anchor_id": "compare::anticoagulants_urgence",
+    "usable": false,
+    "question": "",
+    "reference_answer": "",
+    "key_terms": [],
+    "quote_new": "",
+    "quote_old": ""
+  },
+  {
+    "anchor_id": "compare::blocs_peripheriques_adulte",
+    "usable": true,
+    "question": "Pour un bloc périphérique, qu'est-ce qui a changé entre la recommandation de 2001 et celle de 2016 concernant la réalisation du bloc chez un patient sous anesthésie générale ou sédation profonde ?",
+    "reference_answer": "En 2001, il était recommandé de réaliser toute ALR chez un patient éveillé ou éventuellement sous sédation légère, le bloc sous AG privant de signes d'alerte. En 2016, l'ALR chez un patient éveillé ou légèrement sédaté reste la première intention, mais il devient possible, après discussion avec le patient, de réaliser le bloc sous anesthésie générale ou régionale ou sédation profonde s'il existe un bénéfice, l'échographie apportant probablement une sécurité supplémentaire.",
+    "key_terms": [
+      "sédation profonde",
+      "première intention"
+    ],
+    "quote_new": "Il est probablement recommandé en première intention de réaliser une ALR chez un patient éveillé ou légèrement sédaté, calme et coopérant. Toutefois, après discussion avec le patient, il est possible de réaliser un bloc associé à une anesthésie (générale ou régionale) ou une sédation profonde s'il existe un bénéfice.",
+    "quote_old": "Il est recommandé de réaliser toute ALR chez un patient éveillé, ou éventuellement sous sédation légère (E)."
+  },
+  {
+    "anchor_id": "compare::douleur_postoperatoire",
+    "usable": true,
+    "question": "Pour l'analgésie postopératoire chez un patient aux antécédents d'infarctus, d'AVC ou d'artériopathie, qu'est-ce qui a changé entre la recommandation de 2008 et celle de 2016 concernant les coxibs ?",
+    "reference_answer": "En 2008, la prescription de coxibs restait possible à condition de prendre en compte les facteurs de risque athérothrombotique en respectant les contre-indications de l'Afssaps. En 2016, il n'est pas recommandé d'utiliser un inhibiteur sélectif de la COX-2 chez les patients ayant des antécédents athéro-thrombotiques artériels (AOMI, AVC, IDM) (G1-), et les AINS non sélectifs ne sont probablement pas recommandés au-delà de 7 jours chez ces patients.",
+    "key_terms": [
+      "ISCOX2",
+      "antécédents athéro-thrombotiques artériels"
+    ],
+    "quote_new": "R3.2 – Il n'est pas recommandé d'utiliser un inhibiteur des cyclo-oxygénases de type 2 (ISCOX2) chez les patients ayant des antécédents athéro-thrombotiques artériels (AOMI, AVC, IDM).",
+    "quote_old": "En cas de prescription de coxibs, il est recommandé de prendre en compte les facteurs de risque athérotrombotique en respectant les contre-indications et précautions d'emploi définies par l'Afssaps."
+  },
+  {
+    "anchor_id": "compare::hyperthermie_maligne",
+    "usable": true,
+    "question": "Pour confirmer une susceptibilité à l'hyperthermie maligne chez un patient à risque, qu'est-ce qui a changé entre la recommandation de 2013 et celle de 2019 concernant le choix entre tests de contracture in vitro et analyse génétique ?",
+    "reference_answer": "En 2013, il était recommandé de préciser le diagnostic par IVCT sur biopsie musculaire ou par analyse génétique sur sang périphérique, sans hiérarchie. En 2019, cette conduite devient une suggestion d'experts et les IVCT sont indiqués en première intention ou après une analyse génétique négative, leur sensibilité (99 %) étant supérieure à celle de l'analyse génétique (50 %).",
+    "key_terms": [
+      "IVCT",
+      "première intention"
+    ],
+    "quote_new": "Les IVCT sont indiqués en première intention ou après un résultat négatif de l'analyse génétique. En effet, la sensibilité des IVCT est supérieure (99%) à celle de l'analyse de l'ADN extrait de sang périphérique (50%).",
+    "quote_old": "Chez les patients à risque, il est recommandé de préciser le diagnostic de sensibilité HM par « In Vitro Contracture Tests (IVCT) » sur biopsie musculaire ou analyse génétique de l'ADN extrait du sang périphérique."
+  },
+  {
+    "anchor_id": "compare::nutrition_clinique_adulte",
+    "usable": false,
+    "question": "",
+    "reference_answer": "",
+    "key_terms": [],
+    "quote_new": "",
+    "quote_old": ""
+  },
+  {
+    "anchor_id": "compare::organisation_anesthesie_pediatrique",
+    "usable": true,
+    "question": "Pour l'abord veineux périphérique en anesthésie pédiatrique, qu'est-ce qui a changé entre la recommandation de 2000 et celle de 2023 concernant la gamme de cathéters à disposer ?",
+    "reference_answer": "En 2000, il fallait disposer de toute la gamme de cathéters courts du 24 Gauge au 14 Gauge. En 2023, il est recommandé de disposer de toutes les tailles de cathéters entre le 26 gauge et le 16 gauge.",
+    "key_terms": [
+      "26 gauge",
+      "16 gauge"
+    ],
+    "quote_new": "Il est recommandé de disposer de toutes les tailles de cathéters entre le 26 gauge et le 16 gauge afin de pouvoir adapter son choix",
+    "quote_old": "Il est indispensable de disposer de toute la gamme de taille de cathéters, depuis les plus petits (24 Gauge) jusqu'au plus grand (14 Gauge)."
+  },
+  {
+    "anchor_id": "compare::pancreatite_aigue",
+    "usable": false,
+    "question": "",
+    "reference_answer": "",
+    "key_terms": [],
+    "quote_new": "",
+    "quote_old": ""
+  },
+  {
+    "anchor_id": "compare::sedation_urgences",
+    "usable": true,
+    "question": "Aux urgences, pour réduire une luxation ou une fracture, qu'est-ce qui a changé entre la recommandation de 2010 et celle de 2026 concernant la place de l'anesthésie locorégionale par rapport à la sédation ?",
+    "reference_answer": "En 2010, en traumatologie, les experts proposaient l'ALR (avec MEOPA, kétamine ou néfopam) en association à la morphine, et proposaient de diffuser plus largement ces techniques. En 2026, pour les gestes traumatologiques périphériques, les experts suggèrent une anesthésie locale ou locorégionale réalisée par un médecin formé comme alternative efficace et sécurisée à la sédation procédurale.",
+    "key_terms": [
+      "anesthésie locale ou loco-régionale",
+      "alternative efficace et sécurisée"
+    ],
+    "quote_new": "Chez les patients nécessitant une procédure urgente pour des gestes traumatologiques périphériques (réduction de luxation ou de fracture), les experts suggèrent de réaliser par un médecin formé, une anesthésie locale ou loco-régionale comme alternative efficace et sécurisée à la sédation procédurale.",
+    "quote_old": "En traumatologie, les experts proposent le MEOPA, la kétamine, le néfopam et/ou l'anesthésie locorégionale (ALR) en association à la morphine."
+  },
+  {
+    "anchor_id": "compare::sepsis_general",
+    "usable": true,
+    "question": "Chez un adulte infecté, qu'est-ce qui a changé entre la recommandation de 2006 et celle de 2025 concernant les critères cliniques pour repérer un sepsis ou un risque d'évolution vers le sepsis ?",
+    "reference_answer": "En 2006, devant un tableau atypique, il fallait rechercher les critères de SIRS, un foyer infectieux et des signes de dysfonction d'organe. En 2025, chez l'adulte en ambulatoire, un score clinique ≥ 3 à 6 variables (âge > 65 ans, température > 38 °C, PAS ≤ 110 mmHg, FC > 110/min, SpO2 ≤ 95 %, troubles des fonctions supérieures) est suggéré pour évaluer le risque de progression vers un sepsis.",
+    "key_terms": [
+      "score clinique",
+      "troubles des fonctions supérieures"
+    ],
+    "quote_new": "nous suggérons qu'un score clinique  $\\geq 3$  permet d'évaluer le risque de progression vers un sepsis. Ce score clinique est composé de 6 variables cliniques : âge  $> 65$  ans ; température  $> 38^{\\circ}\\text{C}$  ; pression artérielle systolique  $\\leq 110$  mmHg ; fréquence cardiaque  $> 110/\\text{min}$  ; saturation périphérique en  $\\text{O}_2 \\leq 95\\%$  ; troubles des fonctions supérieures",
+    "quote_old": "Il faut évoquer la possibilité d'un état septique grave devant cette symptomatologie clinique atypique sans cause apparente et rechercher les critères de SIRS (et son éventuelle étiologie non infectieuse), un foyer infectieux et d'autres signes de dysfonctions d'organes."
+  },
+  {
+    "anchor_id": "compare::thrombopenie_induite_heparine",
+    "usable": true,
+    "question": "Dans une thrombopénie induite par l'héparine traitée par danaparoïde, qu'est-ce qui a changé entre la recommandation de 2002 et celle de 2019 concernant le seuil plaquettaire pour débuter le relais par AVK ?",
+    "reference_answer": "En 2002, le relais danaparoïde–AVK était institué quand le risque thromboembolique était contrôlé et que les plaquettes étaient remontées au-delà de 100 G/L. En 2019, ce relais n'est initié que lorsque les plaquettes sont au-dessus de 150 G/L, l'AVK n'étant prescrit qu'une fois la numération plaquettaire corrigée (>150 G/L).",
+    "key_terms": [
+      "150 G/L"
+    ],
+    "quote_new": "Le relais danaparoïde sodique-AVK n'est initié que lorsque le risque thromboembolique est bien contrôlé (soit en règle après 5 à 7 jours de traitement) et quand les plaquettes sont au-dessus de 150 G/L.",
+    "quote_old": "Le relais danaparoïde sodique–AVK n'est institué que lorsque le risque thromboembolique est bien contrôlé par le danaparoïde sodique (soit 5 à 7 j de traitement) et quand les plaquettes sont remontées au-delà de 100 g l<sup>-1</sup>."
+  }
+]

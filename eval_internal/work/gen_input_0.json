@@ -1,0 +1,522 @@
+[
+ {
+  "anchor_id": "2024_RBP-deimarches-anticipeies_12_10_24_850fdd::2024_RBP-deimarches-anticipeies_12_10_24_850fdd__c0008_1e0c28a6",
+  "doc_title": "Recommandations de bonne pratique relatives aux démarches anticipées en vue de don d’organes et de tissus",
+  "year": 2024,
+  "section_path": "Introduction > Situation de la problématique",
+  "kind": "reco",
+  "text": "Dans la littérature mondiale, aucune étude prospective randomisée n'a été retrouvée mais essentiellement des études de cohortes ou observationnelles et des avis d'experts qui décrivent les grands principes à suivre dans le cadre de ces démarches d'abord du don. Parmi eux, l'intégration par les proches de la gravité [27–29] de l'irréversibilité du pronostic [30,31], l'importance du respect de la temporalité [27,32–36] des proches sont des fondamentaux à respecter. On retrouve également dans la littérature certains déterminants de l'opposition [37–41].\n\nDe plus, la réflexion institutionnelle [42–44], la formalisation de procédures [26,27,45–48] et la formation des professionnels [49,50] sont également décrits comme des préalables à la mise en place de ces pratiques dans les établissements de santé.\n\nL'impact en termes de santé publique a également été évalué [24]."
+ },
+ {
+  "anchor_id": "2024_RBP-deimarches-anticipeies_12_10_24_850fdd::2024_RBP-deimarches-anticipeies_12_10_24_850fdd__c0001_812e0fdf",
+  "doc_title": "Recommandations de bonne pratique relatives aux démarches anticipées en vue de don d’organes et de tissus",
+  "year": 2024,
+  "section_path": "Recommandations de bonne pratique relatives aux démarches anticipées en vue de don d'organes et de tissus > SOMMAIRE",
+  "kind": "table",
+  "text": "| Col 1 | Col 2 |\n| --- | --- |\n| Introduction..... | 3 |\n| Situation de la problématique ..... | 4 |\n| Méthodologie ..... | 5 |\n| RECOMMANDATIONS..... | 7 |\n| I - Prérequis à la mise en place d'une démarche anticipée ..... | 7 |\n| II - Définition de la démarche anticipée et de l'entretien anticipé..... | 7 |\n| III - Prérequis à une démarche anticipée..... | 8 |\n| IV - Les 4 étapes de la démarche anticipée..... | 8 |\n| V- Formation des professionnels de santé ..... | 11 |\n| Bibliographie..... | 12 |\n| Abréviations..... | 17 |\n| Glossaire ..... | 18 |\n| Composition des groupes ..... | 19 |"
+ },
+ {
+  "anchor_id": "2024_RBP-deimarches-anticipeies_12_10_24_850fdd::2024_RBP-deimarches-anticipeies_12_10_24_850fdd__c0003_8f344685",
+  "doc_title": "Recommandations de bonne pratique relatives aux démarches anticipées en vue de don d’organes et de tissus",
+  "year": 2024,
+  "section_path": "Introduction",
+  "kind": "other",
+  "text": "Pour les patients admis au sein d'un service d'accueil et d'urgences présentant un coma après un accident vasculaire cérébral, le plus souvent hémorragique et sans ressource thérapeutique envisageable après un avis spécialisé, certaines équipes soignantes pratiquent régulièrement un entretien anticipé<sup>2</sup> pour le don, auprès des proches avant toute admission en réanimation. Ce même type d'entretien anticipé<sup>2</sup> peut aussi être conduit dans les unités de soins intensifs neurovasculaires (USINV) pour des patients admis pour prise en charge d'un accident vasculaire cérébral (AVC) et présentant une aggravation secondaire brutale, mais sans solution thérapeutique retenue.\n\nCes entretiens anticipés<sup>2</sup> sont réalisés de façon très hétérogène (typologie et qualification des intervenants, lieu de l'abord, etc.) selon les établissements. Il apparaît important, de ce fait, de définir des recommandations de bonne pratique afin d'harmoniser la conduite de ces entretiens. C'est tout l'objet du travail mené par l'Agence de la biomédecine avec un groupe d'experts et de représentants des sciences humaines, des associations et des usagers."
+ },
+ {
+  "anchor_id": "2020_RPP_PLYO_2020_a9118d::2020_RPP_PLYO_2020_a9118d__c0048_3f895131",
+  "doc_title": "Indications de transfusion de plasmas lyophilisés (PLYO) chez un patient en choc hémorragique ou à risque de transfusion massive en milieu civil",
+  "year": 2020,
+  "section_path": "Synthèse des résultats",
+  "kind": "reco",
+  "text": "Accord FORT\n\n**R2.2 (Pédiatrie) – Dans cette indication, par analogie avec l'adulte, afin de diminuer la morbi-mortalité, les experts suggèrent, au cours des transports médicalisés d'un enfant ou d'un nourrisson, de réaliser une transfusion initiale de 10 à 15 mL/kg de PLYO, seuls ou avec des concentrés de globules rouges (si disponibles immédiatement).**\n\nAccord FORT"
+ },
+ {
+  "anchor_id": "2020_RPP_PLYO_2020_a9118d::2020_RPP_PLYO_2020_a9118d__c0076_ce6df3b0",
+  "doc_title": "Indications de transfusion de plasmas lyophilisés (PLYO) chez un patient en choc hémorragique ou à risque de transfusion massive en milieu civil",
+  "year": 2020,
+  "section_path": "Synthèse des résultats",
+  "kind": "table",
+  "text": "| Age | Fréquence respiratoire / (Limite supérieure) | Fréquence cardiaque / (Limite supérieure) | PAS / (Limite inférieure) | PAM / (Limite inférieure) |\n| --- | --- | --- | --- | --- |\n| 1 mois | 35 (55) | 120 (175) | 60 (50) | 45 (35) |\n| 1 an | 30 (40) | 110 (170) | 80 (70) | 55 (40) |\n| 2 ans | 25 (30) | 100 (160) | 90 + 2* âge | 55 + 1.5*âge |\n| 6 ans | 20 (25) | 90 (130) | 90 + 2* âge | 55 + 1.5 *âge |\n| 12 ans | 15 (20) | 80 (100) | 120 (90) | 80 (65) |"
+ },
+ {
+  "anchor_id": "2020_RPP_PLYO_2020_a9118d::2020_RPP_PLYO_2020_a9118d__c0063_48838dd3",
+  "doc_title": "Indications de transfusion de plasmas lyophilisés (PLYO) chez un patient en choc hémorragique ou à risque de transfusion massive en milieu civil",
+  "year": 2020,
+  "section_path": "Synthèse des résultats",
+  "kind": "other",
+  "text": "Ce que l'on peut attendre également du plasma est l'apport d'antithrombine et d'alpha-2 antiplasmine qui sont consommées de façon importante dès le début de la COA [52]. De plus il est probable que le plasma sous ses différentes formes ait les mêmes propriétés de protection endothéliale en péripartum [45]."
+ },
+ {
+  "anchor_id": "2004_2_SFAR_Traitement-des-urgences-transfusionnelles-obstetricales_8666e9::2004_2_SFAR_Traitement-des-urgences-transfusionnelles-obstetricales_8666e9__c0020_c9a9590b",
+  "doc_title": "Hémorragies du post-partum immédiat",
+  "year": 2004,
+  "section_path": "II-2-2 Identification > III) Propositions d'organisations > IV - L'évaluation et le suivi des actions:",
+  "kind": "reco",
+  "text": "- - **L'évaluation de l'efficacité des mesures mises en place doit être clairement définie dans un calendrier** : il est conseillé qu'elle soit hebdomadaire dans un premier temps, puis mensuelle, puis trimestrielle.\n- - **Elle devra être réalisée à la fois par l'établissement de santé et par le site transfusionnel.** (A des fins pratiques, une liste des items indispensables à prévoir dans une procédure d'urgence, allant de la prescription des produits sanguins à la réalisation de l'acte dans le cadre de l'urgence transfusionnelle, est communiquée à titre d'exemple en annexe).\n- - **Il est recommandé que toute trace écrite des éventuels événements figurent dans le dossier clinique, à des fins d'enquête ou d'évaluation ultérieure.**"
+ },
+ {
+  "anchor_id": "2004_2_SFAR_Traitement-des-urgences-transfusionnelles-obstetricales_8666e9::2004_2_SFAR_Traitement-des-urgences-transfusionnelles-obstetricales_8666e9__c0022_55abf193",
+  "doc_title": "Hémorragies du post-partum immédiat",
+  "year": 2004,
+  "section_path": "II-2-2 Identification > III) Propositions d'organisations",
+  "kind": "table",
+  "text": "| Distribuer immédiatement (ou faire distribuer selon l'organisation locale) les PSL | Col 2 | Col 3 |\n| --- | --- | --- |\n| Documents IH disponibles complets | Documents IH disponibles incomplets / (1 seule détermination de groupe, RAI > 3j) | Absence de documents IH |\n| Sang isogroupe, si disponible immédiatement 2 CGR O Rh nég, Kell nég ou 2 CGR O Rh pos (c-, E-) Kell nég poursuivre par CGR compatibles | prélèvement pour RAI ; prélèvement la 2 ème détermination de groupe + phénotype Rh Kell, si besoin ; ☞ poursuivre selon le résultat | prélèvement pour RAI + groupe sanguin avec phénotype Rh - Kell ; prélèvement dans une séquence différente pour la 2 ème détermination de groupe ; ☞ poursuivre selon ces derniers résultats |"
+ },
+ {
+  "anchor_id": "2004_2_SFAR_Traitement-des-urgences-transfusionnelles-obstetricales_8666e9::2004_2_SFAR_Traitement-des-urgences-transfusionnelles-obstetricales_8666e9__c0026_c15afd15",
+  "doc_title": "Hémorragies du post-partum immédiat",
+  "year": 2004,
+  "section_path": "II-2-2 Identification > III) Propositions d'organisations",
+  "kind": "other",
+  "text": "- ▪ Les différents acteurs intervenants: qui prescrit et qui pose l'indication de la transfusion\n- ▪ Les 3 niveaux d'urgence (UVI, UV et transfusion urgente)\n- ▪ Les documents nécessaires (les référencer et les faire apparaître en documents associés)\n- ▪ Les identifiants de l'unité de distribution: le site transfusionnel ou le dépôt (lieu, téléphone, fax, heures d'ouverture, noms des responsable). Inclure en annexe les procédures de distribution de PSL dont la procédure de distribution pour une urgence vitale. - ▪ Le(s) correspondant(s) ayant en charge le transport (local ou extérieur à l'établissement), procédures d'appels, conditions selon les horaires et jours fériés, convention... - ▪ Le laboratoire IH: téléphone, fax, horaires, conditions de prise en charge des urgences\n- ▪ Définition des prélèvements nécessaires, des documents, sans oublier les contrôles pré-transfusionnels obligatoires (hémovigilance)\n- ▪ Conditions d'acheminement des documents et des prélèvements\n- ▪ Information du patient\n- ▪ Modalités de réception des PSL\n- ▪ Modalités de l'acte transfusionnel lui-même: vérification des documents, contrôle ultime pré-transfusionnel..."
+ },
+ {
+  "anchor_id": "2023_RPP-Anesthesie-adulte-porteur-de-CC_pour-mise-sur-site_6601a6::2023_RPP-Anesthesie-adulte-porteur-de-CC_pour-mise-sur-site_6601a6__c0110_6fdec318",
+  "doc_title": "Anesthésie pour chirurgie non cardiaque des patients adultes porteurs de cardiopathie congénitale",
+  "year": 2023,
+  "section_path": "CHAMP 1 : Risque préopératoire.",
+  "kind": "reco",
+  "text": "**Question :** Chez les patients adultes porteurs de cardiopathie congénitale, l'évaluation préopératoire permet-elle de diminuer le risque de morbi-mortalité périopératoire en chirurgie non cardiaque ?\n\nExperts : Pascal AMEDRO, Catherine KOFFEL, Magalie LADOUCEUR, Nadir TAFER, Diane ZLOTNIK\n\n**R1.1 – Les experts suggèrent d'utiliser le score composite suivant (dont la construction est expliquée dans l'introduction §1.2) pour évaluer le risque périopératoire des patients adultes porteurs de cardiopathie congénitale en chirurgie non cardiaque.**"
+ },
+ {
+  "anchor_id": "2023_RPP-Anesthesie-adulte-porteur-de-CC_pour-mise-sur-site_6601a6::2023_RPP-Anesthesie-adulte-porteur-de-CC_pour-mise-sur-site_6601a6__c0170_06ea8df1",
+  "doc_title": "Anesthésie pour chirurgie non cardiaque des patients adultes porteurs de cardiopathie congénitale",
+  "year": 2023,
+  "section_path": "CHAMP 4 : Prise en charge en obstétrique > Annexe 1 : Réseau centres experts",
+  "kind": "table",
+  "text": "Col 2 : Splénectomie, Hernie hiatale, Cholécyctomie / Carotide symptomatique / Angioplastie périphérique / Anévrysme par voie endovasculaire / Neurochirurgie / Chirurgie orthopédique majeure / Chirurgie uro ou gynéco majeure / Transplantation rénale / Chirurgie thoracique non majeure / Chirurgie obstétricale"
+ },
+ {
+  "anchor_id": "2023_RPP-Anesthesie-adulte-porteur-de-CC_pour-mise-sur-site_6601a6::2023_RPP-Anesthesie-adulte-porteur-de-CC_pour-mise-sur-site_6601a6__c0047_cc993bbb",
+  "doc_title": "Anesthésie pour chirurgie non cardiaque des patients adultes porteurs de cardiopathie congénitale",
+  "year": 2023,
+  "section_path": "Anesthésie pour chirurgie non cardiaque des patients adultes porteurs de cardiopathie congénitale > 1.4.1 Les shunts > 1.4.3 Les CC du cœur gauche",
+  "kind": "other",
+  "text": "- • **Lésions d'admission VG**\n\nElles comprennent des lésions obstructives valvulaires mitrales congénitales incluant l'appareil sous-valvulaire et supra-valvulaire telles que la membrane supra-valvulaire, le cœur tri-atrial ou la sténose veineuse pulmonaire. La physiopathologie s'apparente à celle du rétrécissement mitral. Ces lésions peuvent être diagnostiquées à l'âge adulte mais sont le plus souvent opérées dans l'enfance devant l'apparition de symptômes. Une plastie/résection des membranes est le plus souvent indiquée en première intention avec un risque significatif de réintervention valvulaire mitrale du fait d'un taux élevé de régurgitation et/ou obstruction résiduelleLes lésions d'admission du VG incluent également la régurgitation valvulaire mitrale qui est toujours due à une anomalie valvulaire congénitale (valve parachute, fente ou prolapsus) ou à une régurgitation résiduelle après plastie. La physiopathologie est celle de l'insuffisance mitrale\n\n- • **L'obstruction de la voie d'éjection VG**"
+ },
+ {
+  "anchor_id": "2022_RPP-Trauma-cranien-leger_pour-mise-sur-site_autorship-complet_9c1d68::2022_RPP-Trauma-cranien-leger_pour-mise-sur-site_autorship-complet_9c1d68__c0063_a5501c29",
+  "doc_title": "Prise en charge des patients présentant un traumatisme crânien léger de l’adulte",
+  "year": 2022,
+  "section_path": "Champ 2 : Prise en charge aux services des urgences. > Question 2.1 Quels sont les éléments cliniques et anamnestiques à risque de lésion intracrânienne ? > Avis d'experts (Accord Fort)",
+  "kind": "reco",
+  "text": "- - **Le patient est à faible risque de saignement (*cf. R2.1*)**\n- - **Le dosage d'un biomarqueur sérique est négatif**\n- - **La TDM initiale ne retrouve pas de saignement**\n\n**Avis d'experts (Accord Fort)**\n\n**Argumentaire :** Après une imagerie cérébrale normale, les risques d'aggravation peuvent être jugés suffisamment faibles pour permettre le retour à domicile à partir du service des urgences [65, 66]. Les patients sous anticoagulants ou sous agents antiagrégants plaquettaires, sous réserve de répondre aux éléments cliniques ci-dessous, peuvent être également autorisés à sortir des urgences pour leur domicile [65]. La plupart des études s'accordent à dire que les saignements intracrâniens retardés chez ces patients sont extrêmement rares et ne justifient pas une hospitalisation [66–69].\n\nLes éléments cliniques permettant un retour à domicile sont : l'absence d'intoxication associée, l'absence de vomissements itératifs, l'absence de céphalées importantes persistantes, un Score de Glasgow à 15, l'absence de déficit neurologique et l'absence d'autres motifs pouvant justifier une hospitalisation."
+ },
+ {
+  "anchor_id": "2022_RPP-Trauma-cranien-leger_pour-mise-sur-site_autorship-complet_9c1d68::2022_RPP-Trauma-cranien-leger_pour-mise-sur-site_autorship-complet_9c1d68__c0098_fbbb616f",
+  "doc_title": "Prise en charge des patients présentant un traumatisme crânien léger de l’adulte",
+  "year": 2022,
+  "section_path": "CHAMP 3 : MODALITES DE SORTIE DU SERVICE DES URGENCES. > Annexe 1. Performance des différents scores clinique de prise en charge des TCL",
+  "kind": "table",
+  "text": "Sous-catégorie : Critère de jugement : Hémorragie intracrânienne sévère et Critère d'inclusion WHO\nCol 1 : Sensibilité | CCHR : 99 / [78-100] | NOC : 99 / [90-100] | NEXUS II : 84 / [75-90] | NICE : 86 / [80-90] | SNC : ⊗ | CHIP : ⊗ | NCWFNS : range :97-98 | RV individuel : ⊗"
+ },
+ {
+  "anchor_id": "2022_RPP-Trauma-cranien-leger_pour-mise-sur-site_autorship-complet_9c1d68::2022_RPP-Trauma-cranien-leger_pour-mise-sur-site_autorship-complet_9c1d68__c0031_c5550085",
+  "doc_title": "Prise en charge des patients présentant un traumatisme crânien léger de l’adulte",
+  "year": 2022,
+  "section_path": "Champ 2 : Prise en charge aux services des urgences. > Question 2.1 Quels sont les éléments cliniques et anamnestiques à risque de lésion intracrânienne ? > Avis d'experts (Accord Fort)",
+  "kind": "other",
+  "text": "Tous ces éléments nous incitent à établir une liste de critères synthétisant l'ensemble des connaissances acquises par ces études sans pour autant privilégier une règle de décision ou un score en particulier.\n\nLe scanner cérébral sans injection est la seule imagerie cérébrale évaluée dans toutes les études s'intéressant à ces facteurs de risque. Un scanner cérébral avec injection doit être pratiqué devant les signes cliniques évocateurs de dissection carotidienne (*conférence d'actualisation 2013 : lésions traumatiques des vaisseaux du cou*) : fracture du rachis cervical, déficit neurologique non expliqué par l'imagerie, syndrome de Claude Bernard Horner, fracture de Lefort II ou III, fracture de la base du crâne, traumatisme des tissus mous de la région cervicale."
+ },
+ {
+  "anchor_id": "2019_rfe-trauma-abdominal-fiche-synthese_4abf14::2019_rfe-trauma-abdominal-fiche-synthese_4abf14__c0002_56954172",
+  "doc_title": "Prise en charge du traumatisme abdominal grave de l’adulte : les 48 premières heures",
+  "year": 2019,
+  "section_path": "Algorithme de prise en charge hospitalière du traumatisme abdominal grave",
+  "kind": "other",
+  "text": "```\n\ngraph TD\n    A([EVALUATION INITIALE]) --> B[CLINIQUE  \n- Examen abdominal, études des points d'entrée et de sortie pour les traumatismes pénétrants  \n- Recherche de signes de choc ou de spoliations sanguines  \n- Evaluation extra-abdominale, recherche d'autres sources de saignement  \nFAST Echographie  \n- Recherche d'un épanchement péritonéal et quantification  \n- Recherche de pneumothorax, d'épanchement pleural ou péricardique]\n    B --> C{HÉMOPÉRITOINE ABONDANT  \nscanner incompatible avec l'état du patient}\n    B --> D[SCANNER INITIAL]\n    C --> E[Traitement opératoire précoce**]\n    D --> F[Traitement Non-Opératoire]\n    D --> G[Angio-embolisation hémostatique ou préventive]\n    F --> H[Surveillance]\n    G --> I[SCANNER SECONDAIRE GUIDÉ OU SYSTÉMATIQUE]\n    E --> I\n    H --> I\n    I --> J[Laparotomie secondaire]\n    I --> K[Angio-embolisation secondaire]\n    I --> L[Cœlioscopie, endoscopie ou intervention complémentaire]\n    J --> M[Evolution post-opératoire simple]\n    K --> N[Surveillance complexe et prolongée]\n    L --> N\n    N --> O[Evolution non-opératoire simple]\n\n```\n\n**EVALUATION INITIALE**\n\n**CLINIQUE**"
+ },
+ {
+  "anchor_id": "2020_RFE_TSM_2020_48fd8d::2020_RFE_TSM_2020_48fd8d__c0134_f03b12b1",
+  "doc_title": "Prise en charge des patients présentant un traumatisme sévère de membre(s)",
+  "year": 2020,
+  "section_path": "« Prise en charge des patients présentant un traumatisme sévère de membre(s) »",
+  "kind": "reco",
+  "text": "**R10.2 – Il est probablement recommandé de réaliser en première intention une ostéosynthèse définitive des fractures diaphysaires d’os long pour prévenir le risque de SDRA et d’embolie graisseuse. Chez les patients hémodynamiquement instables ou présentant une atteinte respiratoire sévère en préopératoire, la balance bénéfice-risque entre une ostéosynthèse définitive ou la pose d’un fixateur externe doit faire l’objet d’une discussion multidisciplinaire.**\n\n**Grade 2+ (Accord FORT)**"
+ },
+ {
+  "anchor_id": "2020_RFE_TSM_2020_48fd8d::2020_RFE_TSM_2020_48fd8d__c0028_8a271f95",
+  "doc_title": "Prise en charge des patients présentant un traumatisme sévère de membre(s)",
+  "year": 2020,
+  "section_path": "« Prise en charge des patients présentant un traumatisme sévère de membre(s) » > Préambule",
+  "kind": "table",
+  "text": "| Fracture | Description | Col 3 | Taux d'infection | Contamination |\n| --- | --- | --- | --- | --- |\n| Type 1 | Plaie < 1 cm / Contamination minimale |  | < 2 % | Minimale |\n| Type 2 | Plaie de 1 à 10 cm / Sans lésion extensive des tissus mous |  | 2 à 5 % | Intermédiaire |\n| Type 3 | Lésion tissulaire étendue > 10 cm |  |  | Majeure |\n| Type 3 | 3.A | Couverture cutanée possible / Comminution importante | 5 à 10 % | Majeure |\n| Type 3 | 3.B | Exposition osseuse / Comminution importante | 10 à 50 % | Majeure |\n| Type 3 | 3.C | Lésion artérielle associée | 25 à 50 % | Majeure |"
+ },
+ {
+  "anchor_id": "2020_RFE_TSM_2020_48fd8d::2020_RFE_TSM_2020_48fd8d__c0063_cb59ff7d",
+  "doc_title": "Prise en charge des patients présentant un traumatisme sévère de membre(s)",
+  "year": 2020,
+  "section_path": "« Prise en charge des patients présentant un traumatisme sévère de membre(s) »",
+  "kind": "other",
+  "text": "- [1] Feliciano DV, Moore FA, Moore EE, West MA, Davis JW, Cocanour CS, et al. Evaluation and management of peripheral vascular injury. Part 1. Western Trauma Association/critical decisions in trauma. *J Trauma* 2011;70:1551–6. - [2] Fox N, Rajani RR, Bokhari F, Chiu WC, Kerwin A, Seamon MJ, et al. Evaluation and management of penetrating lower extremity arterial trauma: An Eastern Association for the Surgery of Trauma practice management guideline. *J Trauma Acute Care Surg* 2012;73:S315–20. - [3] Boisrenoult P, Lustig S, Bonneville P, Leray E, Versier G, Neyret P, et al. Vascular lesions associated with bicipitate and knee dislocation ligamentous injury. *Orthop Traumatol Surg Res* 2009;95:621–6. - [4] Lynch K, Johansen K. Can Doppler pressure measurement replace “exclusion” arteriography in the diagnosis of occult extremity arterial trauma? *Ann Surg* 1991;214:737–41. - [5] deSouza IS, Benabbas R, McKee S, Zangbar B, Jain A, Paladino L, et al. Accuracy of physical examination, ankle-brachial index, and ultrasonography in the diagnosis of arterial injury in patients with penetrating extremity trauma: A systematic review and meta-analysis. *Acad Emerg Med* 2017;24:994–1017."
+ },
+ {
+  "anchor_id": "2009_2_AFAR_Mieux-vivre-la-reanimation_8ed1f4::2009_2_AFAR_Mieux-vivre-la-reanimation_8ed1f4__c0039_2e68a53d",
+  "doc_title": "Mieux vivre la réanimation",
+  "year": 2009,
+  "section_path": "5. QUESTION 4 : QUELLES STRATÉGIES DE COMMUNICATION ? > 5.1. Communication soignants-patient",
+  "kind": "reco",
+  "text": "- • Il est nécessaire que la communication avec le patient se fasse dans la découverte de sa personnalité (profession, passions, musique, lecture, sport...) (RC). - • Des outils de communication adaptés doivent être mis à disposition du patient : lecture labiale [71], questions « oui-non » en entonnoir, pictogrammes [71,72], alphabet [73], assistance à la parole en cas de trachéotomie [74,75]. - • Il est possible de mettre en place un journal de bord pour le patient et sa famille [76,77]. C'est un support écrit dans lequel le personnel soignant et la famille colligent les événements du séjour. Le journal est remis au patient en fin de séjour ou à sa famille en cas de décès. Cette démarche pourrait prévenir la survenue de troubles dépressifs et anxieux [78]. - • Communication soignants-famille. - • Des entretiens structurés doivent être organisés le plus précocement possible et régulièrement après l'admission du patient [28]. - • Au cours de ces entretiens structurés il faut informer les familles dans un lieu d'accueil dédié [79]. - • L'information doit y être donnée par le médecin en présence de l'infirmier(e) [1,2]."
+ },
+ {
+  "anchor_id": "2009_2_AFAR_Mieux-vivre-la-reanimation_8ed1f4::2009_2_AFAR_Mieux-vivre-la-reanimation_8ed1f4__c0041_e75e589f",
+  "doc_title": "Mieux vivre la réanimation",
+  "year": 2009,
+  "section_path": "5. QUESTION 4 : QUELLES STRATÉGIES DE COMMUNICATION ? > 5.1. Communication soignants-patient",
+  "kind": "other",
+  "text": "- • L'information donnée et son ressenti par la famille doivent être transcrits dans le dossier du patient. - • Il est important d'avertir les proches lors d'événements inhabituels (aggravation, déplacement, procédures à risque, intervention chirurgicale) ainsi que de la sortie."
+ },
+ {
+  "anchor_id": "2009_2_AFAR_Mieux-vivre-la-reanimation_8ed1f4::2009_2_AFAR_Mieux-vivre-la-reanimation_8ed1f4__c0045_1a0b51f7",
+  "doc_title": "Mieux vivre la réanimation",
+  "year": 2009,
+  "section_path": "5. QUESTION 4 : QUELLES STRATÉGIES DE COMMUNICATION ? > 5.2. Communication entre soignants",
+  "kind": "reco",
+  "text": "- • Il peut être utile de mettre en place des groupes de parole qui réunissent l'ensemble des catégories de soignants. Chacun peut s'y exprimer librement à propos d'événements jugés difficile à vivre au sein de l'équipe (RC). - • Il faut organiser des réunions de service pendant lesquelles sont discutés les projets de service, l'application des directives et le devenir des patients."
+ },
+ {
+  "anchor_id": "2008_3_REANIMATION_Prise-en-charge-en-situation-durgence-et-en-reanim_61409b::2008_3_REANIMATION_Prise-en-charge-en-situation-durgence-et-en-reanim_61409b__c0027_366b8ba4",
+  "doc_title": "Prise en charge en situation d’urgence et en réanimation des états de mal épileptiques de l’adulte et de l’enfant (nouveau-né exclu)",
+  "year": 2008,
+  "section_path": "Champ 5 : prise en charge non spécifique de l'EME convulsif généralisé",
+  "kind": "reco",
+  "text": "En dehors des situations d'hypertension intracrânienne, l'interruption de la sédation est conseillée à l'arrivée du patient en réanimation, afin de faciliter l'évaluation de l'état neurologique et de l'activité épileptique (*accord fort*). Chez le malade intubé et ventilé, le recours à une curarisation ponctuelle peut s'avérer nécessaire pour éliminer les artefacts musculaires sur l'EEG et pour réaliser une ponction lombaire ou une imagerie cérébrale (*accord fort*).\n\nLorsque la sédation et la ventilation restent nécessaires, l'objectif est d'obtenir une normoxie et une normocapnie (35 à 40 mmHg). La ventilation en hypocapnie est contre-indiquée, y compris en cas d'œdème cérébral (*accord fort*).\n\nIl est recommandé de maintenir une pression artérielle moyenne entre 70 et 90 mmHg (*accord fort*).\n\nLa surveillance continue du tracé électrocardiographique et la réalisation dès que possible d'un électrocardiogramme sont indispensables (*accord fort*).\n\nLa détection et le traitement d'une hyperthermie font partie intégrante de la prise en charge de l'EME. Les vertus neuroprotectrices de l'hypothermie n'ont pas été confirmées en pratique clinique (*accord fort*)."
+ },
+ {
+  "anchor_id": "2008_3_REANIMATION_Prise-en-charge-en-situation-durgence-et-en-reanim_61409b::2008_3_REANIMATION_Prise-en-charge-en-situation-durgence-et-en-reanim_61409b__c0051_32e927c0",
+  "doc_title": "Prise en charge en situation d’urgence et en réanimation des états de mal épileptiques de l’adulte et de l’enfant (nouveau-né exclu)",
+  "year": 2008,
+  "section_path": "Champ 8 : état de mal épileptique réfractaire > Chez l'enfant",
+  "kind": "other",
+  "text": "Le thiopental est très efficace, mais ses nombreux effets secondaires conduisent à proposer de le réserver aux formes les plus rebelles et de débuter par une perfusion continue de benzodiazépines à fortes doses (*accord fort*). La posologie de thiopental proposée est identique à celle de l'adulte (bolus de 2 mg/kg répétés jusqu'à arrêt des convulsions, suivis d'une perfusion continue de 3 à 5 mg/kg par heure) (*accord fort*).\n\nLe midazolam est la benzodiazépine la mieux étudiée, mais le diazépam semble aussi efficace. Les posologies de midazolam proposées comportent une dose de charge de 0,15 à 0,50 mg/kg suivie d'une perfusion continue de 0,12 mg/kg par heure qui peut être augmentée rapidement par paliers jusqu'à 1,4 mg/kg par heure (*accord fort*). La facilité d'emploi du midazolam (hydrosoluble, demi-vie courte) doit être pondérée par la plus grande fréquence de récidives des convulsions observée avec ce médicament (*accord fort*)."
+ },
+ {
+  "anchor_id": "2008_3_REANIMATION_Prise-en-charge-en-situation-durgence-et-en-reanim_61409b::2008_3_REANIMATION_Prise-en-charge-en-situation-durgence-et-en-reanim_61409b__c0052_18bfd1c8",
+  "doc_title": "Prise en charge en situation d’urgence et en réanimation des états de mal épileptiques de l’adulte et de l’enfant (nouveau-né exclu)",
+  "year": 2008,
+  "section_path": "Champ 8 : état de mal épileptique réfractaire > Chez l'enfant",
+  "kind": "reco",
+  "text": "Il est recommandé de ne pas utiliser le propofol dans le traitement des états de mal convulsifs réfractaires, en raison de l'absence de supériorité démontrée par rapport aux autres traitements et du risque d'accident mortel lié au syndrome de perfusion de propofol, plus fréquent chez l'enfant que chez l'adulte (*accord fort*)."
+ },
+ {
+  "anchor_id": "2016_rfe-controle-cible-de-la-temperature-en-reanimation_a712c2::2016_rfe-controle-cible-de-la-temperature-en-reanimation_a712c2__c0068_eae15f34",
+  "doc_title": "Contrôle cible de la température en réanimation (hors nouveau-nés)",
+  "year": 2016,
+  "section_path": "Résultats > CCT dans le cadre de l'accident vasculaire cérébral grave",
+  "kind": "reco",
+  "text": "**R4.3 – Chez les patients dans le coma avec une méningite bactérienne, en absence d'HTIC, il ne faut probablement pas pratiquer d'hypothermie, en comparaison avec une normothermie, dans le but d'améliorer la survie avec bon pronostic neurologique.**\n\n**(Avis d'experts)**\n\nArgumentaire : il n'existe qu'une seule étude s'intéressant aux patients en réanimation avec méningite bactérienne, celle de Mourvillier et al., [141]. Celle-ci concluait au potentiel effet délétère de l'hypothermie, mais il existait un biais de confusion avec le nombre de chocs septiques à l'inclusion, qui était plus fréquent dans le groupe hypothermie, et qui était aussi un facteur indépendant de mortalité. De plus, il existait des biais méthodologiques importants : l'HTIC n'était pas prise en compte pour l'inclusion dans l'étude et pour la durée de l'hypothermie, seulement 28 % des patients étaient sédatés, et seul le groupe hypothermie avait reçu 2400 mL de sérum salé (médiane). Quatre-vingt-sept pour cent des patients avaient reçu des corticoïdes dans les 2 groupes."
+ },
+ {
+  "anchor_id": "2016_rfe-controle-cible-de-la-temperature-en-reanimation_a712c2::2016_rfe-controle-cible-de-la-temperature-en-reanimation_a712c2__c0049_7ab5a396",
+  "doc_title": "Contrôle cible de la température en réanimation (hors nouveau-nés)",
+  "year": 2016,
+  "section_path": "Résultats > CCT après arrêt cardiaque",
+  "kind": "other",
+  "text": "Cependant, plusieurs études font état d'une absence de gain clinique supplémentaire à diminuer la température en cas d'échec à 34 °C. Ainsi Shiozaki et al., [88] chez 22 patients TC graves, ne montrait pas de bénéfice supplémentaire sur la PIC à diminuer la température à 31 °C en cas d'HTIC persistante à 34 °C. Concernant le monitoring multimodal, la PtiO<sub>2</sub> [89] et les marqueurs du métabolisme cérébral [62] ne montrent pas de bénéfice à une hypothermie inférieure à 35 °C, voire même un probable effet délétère sur ces paramètres [89]. Le CCT entre 32 et 35 °C pour traiter une HTIC peut entraîner des effets secondaires proportionnels à la durée et à la profondeur de l'hypothermie. Certaines études montrent une augmentation significative des pneumopathies alors qu'aucune méta-analyse n'a confirmé ce résultat [77,78]."
+ },
+ {
+  "anchor_id": "2016_rfe-controle-cible-de-la-temperature-en-reanimation_a712c2::2016_rfe-controle-cible-de-la-temperature-en-reanimation_a712c2__c0072_94bc0cd9",
+  "doc_title": "Contrôle cible de la température en réanimation (hors nouveau-nés)",
+  "year": 2016,
+  "section_path": "Résultats > CCT dans le cadre de l'accident vasculaire cérébral grave",
+  "kind": "reco",
+  "text": "(Avis d'experts)\n\nArgumentaire : il existe très peu de littérature concernant l'hypothermie et le CCT dans les autres agressions aiguës de l'enfant (EME, méningites, méningo-encéphalites). Quelques cas cliniques d'EME réfractaire ou superréfractaire mis sous hypothermie [153-155] et d'encéphalites [148,156] sont rapportés mais ne permettent pas d'émettre de recommandation sur l'hypothermie dans ces indications. Une étude rétrospective observationnelle concernant 43 patients très hétérogènes (encéphalites et encéphalopathies – virus, hyperthermie majeure, choc, EME) [157] compare des patients en normothermie (16 patients) vs des patients en hypothermie (27 patients) et leur score CPC à 12 mois. Le score était meilleur après hypothermie si celle-ci était débutée dans les 12 heures. Les données rapportées dans la population adulte concernant le CCT visant la normothermie au cours de l'EME peuvent, selon les experts pédiatres, s'appliquer à l'enfant.\n\n**CCT dans le cadre des états de choc (choc cardiogénique, choc septique)**\n\nB. Levy (Nancy), K. Asehnoune (Nantes), A. Botte (Lille), O. Brissaud (Bordeaux)."
+ },
+ {
+  "anchor_id": "2012_AFAR_Examens-preinterventionnels-systematiques_a99473::2012_AFAR_Examens-preinterventionnels-systematiques_a99473__c0024_72ff7ec5",
+  "doc_title": "Examens pré-interventionnels systématiques",
+  "year": 2012,
+  "section_path": "Examens préinterventionnels systématiques > Routine preinterventional tests > 3.2. Recommandation 2 : examens respiratoires > 3.2.2. Recommandations",
+  "kind": "reco",
+  "text": "Il est recommandé de ne pas prescrire de manière systématique une radiographie de thorax préinterventionnelle en chirurgie non cardiothoracique, quel que soit l'âge du patient, sauf en cas de pathologie cardiopulmonaire évolutive ou aiguë (GRADE I–).\n\nIl est recommandé de ne pas prescrire de manière systématique des gaz du sang artériels préinterventionnels en chirurgie non cardiothoracique, quel que soit l'âge du patient, sauf en cas de pathologie pulmonaire évolutive ou aiguë (GRADE I–).\n\nIl est recommandé de ne pas prescrire de manière systématique des EFR préinterventionnels en chirurgie non cardiothoracique, quel que soit l'âge du patient, sauf en cas de pathologie pulmonaire évolutive ou aiguë (GRADE I–)."
+ },
+ {
+  "anchor_id": "2012_AFAR_Examens-preinterventionnels-systematiques_a99473::2012_AFAR_Examens-preinterventionnels-systematiques_a99473__c0099_bcde3f7b",
+  "doc_title": "Examens pré-interventionnels systématiques",
+  "year": 2012,
+  "section_path": "Examens préinterventionnels systématiques > 3.9. Recommandation 9 : dépistage infectieux (examen cytobactériologique des urines) > 3.9.3. Argumentaire > ANNEXE A. STRATIFICATION DU RISQUE CARDIAQUE POUR LA CHIRURGIE NON CARDIAQUE",
+  "kind": "table",
+  "text": "| Stratification du risque / (Décès + infarctus myocarde) | Exemple d'intervention |\n| --- | --- |\n| Intermédiaire (1 % à 5 %) | Chirurgie intrapéritonéale ou intrathoracique / Endartériectomie carotidienne / Chirurgie de la tête et du cou / Chirurgie orthopédique majeure / Chirurgie de prostate |\n| Faible < 1 % | Procédures endoscopiques / Chirurgie superficielle / Chirurgie de la cataracte / Chirurgie mammaire / Chirurgie ambulatoire |"
+ },
+ {
+  "anchor_id": "2012_AFAR_Examens-preinterventionnels-systematiques_a99473::2012_AFAR_Examens-preinterventionnels-systematiques_a99473__c0026_baa8dc26",
+  "doc_title": "Examens pré-interventionnels systématiques",
+  "year": 2012,
+  "section_path": "Examens préinterventionnels systématiques > Routine preinterventional tests > 3.2. Recommandation 2 : examens respiratoires > 3.2.3. Argumentaire",
+  "kind": "other",
+  "text": "spécificité sont respectivement de 52 % (18–79) et 74 % [23–87]. La valeur prédictive positive (5 % [0–39]) de la radiographie de thorax est médiocre. Cet examen ne permet pas de prédire la survenue de complications ventilatoires postopératoires. Seule sa négativité est rassurante (valeur prédictive négative : 99 % [63–100]). Quoi qu'il en soit, positif ou négatif, les rapports de vraisemblance (positif et négatif sont respectivement de 1,14 [0,88–2,96] et 0,94 [0,28–1,03]) indiquent qu'elle n'apporte aucun gain informatif."
+ },
+ {
+  "anchor_id": "2014_Recommandation_antalgique_post_amygdalectomie_2014_TC2_9ae464::2014_Recommandation_antalgique_post_amygdalectomie_2014_TC2_9ae464__c0068_7d709c06",
+  "doc_title": "Recommandations Antalgiques en chirurgie ORL",
+  "year": 2014,
+  "section_path": "RECOMMANDATION POUR LA PRATIQUE CLINIQUE > 4 La période postopératoire en secteur de soins > 4.1.2 Adultes",
+  "kind": "reco",
+  "text": "L'évaluation de la douleur en postopératoire d'une amygdalectomie est peu spécifique. Elle est fondée sur l'auto-évaluation. L'échelle visuelle analogique (EVA) est l'outil de référence. L'échelle numérique (EN) est la préférée du personnel soignant, car elle ne nécessite pas de support. L'échelle verbale simple (EVS), avec son score de 0 à 4, semble la mieux adaptée au patient âgé communiquant.\n\nIl est conseillé d'utiliser toujours la même échelle pour mesurer l'évolution de la douleur postopératoire.\n\nChez l'adulte handicapé non communiquant, une hétéro-évaluation par l'échelle Algoplus, simple et rapide à utiliser (validée chez le patient âgé), pourrait être proposée.\n\n**Recommandation 6**\n\nIl est recommandé d'évaluer la douleur postopératoire chez l'adulte par des échelles adaptées, afin de moduler les prescriptions antalgiques (accord professionnel)."
+ },
+ {
+  "anchor_id": "2014_Recommandation_antalgique_post_amygdalectomie_2014_TC2_9ae464::2014_Recommandation_antalgique_post_amygdalectomie_2014_TC2_9ae464__c0128_8868e699",
+  "doc_title": "Recommandations Antalgiques en chirurgie ORL",
+  "year": 2014,
+  "section_path": "RECOMMANDATION POUR LA PRATIQUE CLINIQUE > 4.2.2 Evaluation du ratio bénéfice risque dans le contexte de l'amygdalectomie et Algorithmes décisionnels (en fonction de l'âge) > Rappel concernant le paracétamol",
+  "kind": "table",
+  "text": "| Col 1 | Saignements | Vomissements | Douleur | Dépression respiratoire | AMM |\n| --- | --- | --- | --- | --- | --- |\n| Corticoides |  |  |  |  | 3 mois |\n| AINS |  |  |  |  | 3 mois |\n| Tramadol |  |  |  |  | 3 ans |\n| Morphine per os |  |  |  |  | 6 mois |\n| Codéine |  |  |  |  | 1 an |"
+ },
+ {
+  "anchor_id": "2014_Recommandation_antalgique_post_amygdalectomie_2014_TC2_9ae464::2014_Recommandation_antalgique_post_amygdalectomie_2014_TC2_9ae464__c0140_a524b9d5",
+  "doc_title": "Recommandations Antalgiques en chirurgie ORL",
+  "year": 2014,
+  "section_path": "RECOMMANDATION POUR LA PRATIQUE CLINIQUE > 4.2.2 Evaluation du ratio bénéfice risque dans le contexte de l'amygdalectomie et Algorithmes décisionnels (en fonction de l'âge) > A la maison",
+  "kind": "other",
+  "text": "Dans tous les cas, le paracétamol est administré de façon systématique, à horaires programmés.\n\n*Option AINS* : la prise en charge antalgique repose sur l'administration d'ibuprofène selon un schéma programmé (systématique). Dans cette option on ne peut exclure formellement une majoration du risque hémorragique et la surveillance sera donc adaptée ainsi que l'éducation des parents. En cas d'insuffisance de l'analgésie, on peut proposer, après consultation médicale, l'administration de tramadol (*rescue*).\n\n*Option AINS modifiée* : cette option est identique à la précédente exception faite de l'absence d'injection peropératoire de dexaméthasone. Elle est proposée compte tenu de la possible majoration du risque hémorragique lié à l'utilisation à la fois de la dexaméthasone peropératoire et d'AINS en postopératoire. Pour prévenir les nausées et vomissements postopératoires, l'utilisation des sétrons peut se substituer à la dexaméthasone."
+ },
+ {
+  "anchor_id": "2006_2_SFAR_texte-court_Monitorage-du-patient-traumatise-grave-en-pre_392959::2006_2_SFAR_texte-court_Monitorage-du-patient-traumatise-grave-en-pre_392959__c0007_65f9b768",
+  "doc_title": "Monitorage du patient traumatisé grave en préhospitalier",
+  "year": 2006,
+  "section_path": "Cadre général",
+  "kind": "table",
+  "text": "| Col 1 | Col 2 |\n| --- | --- |\n| Niveau I | Etudes aléatoires avec un faible risque de faux positifs ( \\alpha ) et de faux négatifs ( \\beta ) / (puissance élevée : ( \\beta = 5 à 10 %)) |\n| Niveau II | Risque \\alpha élevé, ou faible puissance |\n| Niveau III | Etudes non aléatoires. Sujets \" contrôlés \" contemporains |\n| Niveau IV | Etudes non aléatoires. Sujets \" contrôlés \" non contemporains |\n| Niveau V | Etudes de cas. Avis d'experts |"
+ },
+ {
+  "anchor_id": "2006_2_SFAR_texte-court_Monitorage-du-patient-traumatise-grave-en-pre_392959::2006_2_SFAR_texte-court_Monitorage-du-patient-traumatise-grave-en-pre_392959__c0013_ed2d2e4c",
+  "doc_title": "Monitorage du patient traumatisé grave en préhospitalier",
+  "year": 2006,
+  "section_path": "Question 1 > Pourquoi monitorer les patients traumatisés graves en préhospitalier ?",
+  "kind": "other",
+  "text": "Enfin, afin de limiter le risque d'aggravation des lésions ischémiques neurologiques, la prévention précoce des agressions cérébrales secondaires d'origine systémique (ACSOS) est une priorité rendant indispensable le monitoring cardiovasculaire et respiratoire."
+ },
+ {
+  "anchor_id": "2007_2c_AFAR_Texte_long_Sedation-et-analgesie-en-reanimation_nouveau-_1eab5a::2007_2c_AFAR_Texte_long_Sedation-et-analgesie-en-reanimation_nouveau-_1eab5a__c0066_9ae0e23b",
+  "doc_title": "Sédation et analgésie en réanimation (nouveau-né exclu)",
+  "year": 2007,
+  "section_path": "2. Question 2 : quels sont les moyens thérapeutiques pour la sédation et l'analgésie ? > 3.5. Évaluation des perturbations neuropsychiques",
+  "kind": "reco",
+  "text": "Il faut rechercher les facteurs de risque de syndrome de sevrage :\n\n- – doses importantes de sédatifs : propofol, midazolam supérieure à 4 mg par heure, et autres benzodiazépines, fentanyl supérieure à 200 µg par heure, et autres morphiniques ;\n- – administration prolongée supérieure à sept jours ;\n- – consommation habituelle d'alcool et/ou de psychotropes ;\n\nLa survenue d'un état confusodélirant (délirium) est un facteur de mauvais pronostic. L'utilisation des agents sédatifs et analgésiques est un facteur de risque de survenue d'un état confusodélirant. Il faut dépister systématiquement la survenue d'un état confusodélirant à l'aide d'une échelle validée.\n\nIl faut probablement recueillir l'avis du patient et des proches au cours du séjour en réanimation : satisfaction de la prise en charge de la douleur, dépistage du syndrome de stress post-traumatique, *évaluation des conséquences à long terme sur le développement de l'enfant*. Il faut prendre en considération ces éléments dans les futures études sur la sédation-analgésie en réanimation."
+ },
+ {
+  "anchor_id": "2007_2c_AFAR_Texte_long_Sedation-et-analgesie-en-reanimation_nouveau-_1eab5a::2007_2c_AFAR_Texte_long_Sedation-et-analgesie-en-reanimation_nouveau-_1eab5a__c0081_527a8c5a",
+  "doc_title": "Sédation et analgésie en réanimation (nouveau-né exclu)",
+  "year": 2007,
+  "section_path": "2. Question 2 : quels sont les moyens thérapeutiques pour la sédation et l'analgésie ? > Procédure d'application de l'échelle RASS :",
+  "kind": "table",
+  "text": "| Conscience / Éveil (score 0–5) | Compréhension (somme des points) | Tolérance / Mouvements (score 0–3) | Ventilation (somme des points) | Relaxation du visage (score 0–3) |\n| --- | --- | --- | --- | --- |\n| Yeux fermés, pas de mimique | 0 « ouvrez (ou fermez) les yeux » | 1 Agitation majeure dangereuse pour le patient | 0 Pas de blocage de la phase inspiratoire du ventilateur par le patient | 1 Grimace permanente |\n| Yeux fermés, mimique lors de la stimulation douloureuse forte | 1 « ouvrez la bouche » | 1 Agitation non calmée par les commandes verbales | 1 Fréquence respiratoire < 30 | 1 Grimace provoquée sévère |\n| Ouverture des yeux après stimulation douloureuse forte | 2 « regardez par ici » | 1 Agitation calmée par les commandes verbales | 2 Pas de toux | 1 Grimace provoquée modérée |\n| Ouverture des yeux après stimulation douloureuse légère | 3 « faites oui avec la tête » | 1 Calme | 3 Pas de tirage | 1 Visage relaxé |\n| Ouverture des yeux après stimulation verbale | 4 « fermez les yeux et ouvrez la bouche » | 1 Calme | 3 Pas de tirage | 1 Visage relaxé |\n| Ouverture spontanée des yeux | 5 | 1 Calme | 3 Pas de tirage | 1 Visage relaxé |"
+ },
+ {
+  "anchor_id": "2007_2c_AFAR_Texte_long_Sedation-et-analgesie-en-reanimation_nouveau-_1eab5a::2007_2c_AFAR_Texte_long_Sedation-et-analgesie-en-reanimation_nouveau-_1eab5a__c0036_e7737a7a",
+  "doc_title": "Sédation et analgésie en réanimation (nouveau-né exclu)",
+  "year": 2007,
+  "section_path": "2. Question 2 : quels sont les moyens thérapeutiques pour la sédation et l'analgésie ? > 2.3. Analgésiques > 2.3.1. Morphiniques (Tableau 2)",
+  "kind": "other",
+  "text": "La morphine pose les problèmes spécifiques de l'élimination rénale de son métabolite actif (morphine 6-glucuronide), de sa faible liposolubilité et d'une histaminolibération.\n\nLe fentanyl, peu onéreux, expose à un risque d'accumulation.\n\nLe sufentanil a une demi-vie contextuelle plus adaptée que le fentanyl lors d'administration de moins de 24 heures.\n\nLe rémifentanil a un métabolisme indépendant des fonctions rénale et hépatique. Sa demi-vie contextuelle est constante (inférieure à dix minutes) chez l'adulte et l'enfant. Ses qualités pharmacocinétiques sont contrebalancées par ses modalités d'administration contraignantes (formation du personnel soignant, voie d'administration dédiée, valve anti-reflux, surveillance hémodynamique étroite, anticipation du relais antalgique à l'arrêt). Les phénomènes d'hyperalgésie observés à l'arrêt du rémifentanil apparaissent plus rapidement et sont plus intenses qu'avec les autres morphiniques.\n\nLes différentes modalités d'administration des morphiniques, PCA, patch ou voie sublinguale (Actiq<sup>®</sup>), doivent être évaluées en réanimation.\n\nTableau 2  \nLes morphiniques"
+ },
+ {
+  "anchor_id": "2009_2_AFAR_Gestion-perioperatoire-des-traitements-chroniques-et-disp_38a32f::2009_2_AFAR_Gestion-perioperatoire-des-traitements-chroniques-et-disp_38a32f__c0205_f6f89adc",
+  "doc_title": "Gestion périopératoire des traitements chroniques et dispositifs médicaux",
+  "year": 2009,
+  "section_path": "Perioperative management of chronic treatment and medical devices. Cardiovascular pathologies > 13.2. Existe-t-il une interférence avec les médicaments de l'anesthésie ?",
+  "kind": "reco",
+  "text": "Ces stupéfiants entraînent des effets sympathomimétiques, une dérégulation du système nerveux autonome et font courir un risque de réaction cardiovasculaire exagérée aux stimulations adrénergiques.Il est recommandé d'utiliser avec précaution les vasopresseurs tels que l'éphédrine."
+ },
+ {
+  "anchor_id": "2009_2_AFAR_Gestion-perioperatoire-des-traitements-chroniques-et-disp_38a32f::2009_2_AFAR_Gestion-perioperatoire-des-traitements-chroniques-et-disp_38a32f__c0115_7fc77b9e",
+  "doc_title": "Gestion périopératoire des traitements chroniques et dispositifs médicaux",
+  "year": 2009,
+  "section_path": "Perioperative management of chronic treatment and medical devices. Cardiovascular pathologies > 10.5. Proposer une technique d'anesthésie et d'analgésie adaptée > I.4. Tableau des correspondances",
+  "kind": "table",
+  "text": "| DCI | Ratio | Équivalence de la dose de morphine orale |\n| --- | --- | --- |\n| Hydromorphone | 7,5 | 4 mg d'hydromorphone = 30 mg de morphine |\n| Buprénorphine SL | 30 | 0,2 mg de B = 6 mg de morphine orale |\n| Nalbuphine SC | 2 | 5 mg de nalbuphine SC = 10 mg de morphine orale |\n| Fentanyl transdermique (FTD) | variable | 25 µg/h de FTD ≈ 60 mg/j de morphine |"
+ },
+ {
+  "anchor_id": "2009_2_AFAR_Gestion-perioperatoire-des-traitements-chroniques-et-disp_38a32f::2009_2_AFAR_Gestion-perioperatoire-des-traitements-chroniques-et-disp_38a32f__c0213_dded11a6",
+  "doc_title": "Gestion périopératoire des traitements chroniques et dispositifs médicaux",
+  "year": 2009,
+  "section_path": "Perioperative management of chronic treatment and medical devices: Anti-infectious, immunosuppressive > GROUPE DE TRAVAIL",
+  "kind": "other",
+  "text": "Responsable du groupe\n\nPr Olivier Mimos (CHU la Milétie, Poitiers) [o.mimos@chu-poitiers.fr](mailto:o.mimos@chu-poitiers.fr)\n\nExperts\n\nDr Régis Bronchard (CHU Bichat, Paris)\n\nDr Michel Carles (CHU de Nice, hôpital de l'Archet, Nice)\n\nDr Claire Dahyot-Fizelier (CHU la Milétie, Poitiers)\n\nDr Sigismond Lasocki (CHU Bichat, Paris)\n\n**Traitements :**\n\nAntituberculeux\n\nAntirétroviraux\n\nImmunosuppresseurs"
+ },
+ {
+  "anchor_id": "2005_2a_SFAR_TEXTE-COURT_Anesthesie-pour-amygdalectomie-chez-lenfant_cf569a::2005_2a_SFAR_TEXTE-COURT_Anesthesie-pour-amygdalectomie-chez-lenfant_cf569a__c0026_cfb87188",
+  "doc_title": "Anesthésie pour amygdalectomie chez l’enfant",
+  "year": 2005,
+  "section_path": "Question 4 > Question 5 > Quelles sont les conditions requises pour la pratique de l'amygdalectomie en ambulatoire ?",
+  "kind": "reco",
+  "text": "- - La réalisation de l'amygdalectomie en ambulatoire est possible si [Accord fort] :\n  - • l'enfant est âgé de plus de trois ans ; - • il n'existe pas de comorbidité majorant notamment le risque respiratoire ; - • il n'existe pas d'anomalie de l'hémostase ; - • il n'existe pas de syndrome d'apnée du sommeil grave ; - • les critères habituels de proximité et d'entourage familial sont satisfaits ; - • et sous réserve d'un consensus entre le chirurgien, l'anesthésiste et les parents. - - L'intervention doit être réalisée le plus tôt possible dans la matinée afin de permettre la sortie après une surveillance postopératoire de six heures. [Accord fort]\n- - La gestion anesthésique doit privilégier la prévention des NVPO, et l'anticipation peropératoire de l'analgésie postopératoire. [Accord fort]\n- - Le relais antalgique oral devrait être débuté avant la sortie du patient. [Accord fort]\n- - Il est recommandé de remettre aux parents un document avec les coordonnées de la personne à contacter en cas de difficultés, ainsi que l'ordonnance d'antalgiques de sortie."
+ },
+ {
+  "anchor_id": "2005_2a_SFAR_TEXTE-COURT_Anesthesie-pour-amygdalectomie-chez-lenfant_cf569a::2005_2a_SFAR_TEXTE-COURT_Anesthesie-pour-amygdalectomie-chez-lenfant_cf569a__c0009_641c5508",
+  "doc_title": "Anesthésie pour amygdalectomie chez l’enfant",
+  "year": 2005,
+  "section_path": "Réalisation du texte court/recommandations et de la cotation",
+  "kind": "table",
+  "text": "| Col 1 | Col 2 |\n| --- | --- |\n| Niveau I | Etudes aléatoires avec un faible risque de faux positifs ( \\alpha ) et de faux négatifs ( \\beta ) (puissance élevée : ( \\beta = 5 à 10 %)) |\n| Niveau II | Risque a élevé, ou faible puissance |\n| Niveau III | Etudes non aléatoires. Sujets « contrôlés » contemporains |\n| Niveau IV | Etudes non aléatoires. Sujets « contrôlés » non contemporains |\n| Niveau V | Etudes de cas. Avis d'experts |"
+ },
+ {
+  "anchor_id": "2005_2a_SFAR_TEXTE-COURT_Anesthesie-pour-amygdalectomie-chez-lenfant_cf569a::2005_2a_SFAR_TEXTE-COURT_Anesthesie-pour-amygdalectomie-chez-lenfant_cf569a__c0014_479fbc5f",
+  "doc_title": "Anesthésie pour amygdalectomie chez l’enfant",
+  "year": 2005,
+  "section_path": "Question 1 > Quelles doivent être l'évaluation préopératoire et la préparation à la chirurgie ? > 1.2. Quel bilan préopératoire peut-on proposer avant amygdalectomie chez l'enfant ?",
+  "kind": "other",
+  "text": "- – L'évaluation préopératoire du risque hémorragique, repose sur un interrogatoire précis à la recherche d'antécédents personnels et/ou familiaux suggérant une anomalie de l'hémostase, et sur un examen clinique recherchant une symptomatologie hémorragique. [Accord fort]\n- – En cas d'antécédents personnels ou familiaux d'hémorragie connus ou suspectés, ou lorsque l'évaluation préopératoire ne peut être considérée comme fiable, notamment chez l'enfant de moins de trois ans, une étude de l'hémostase doit être réalisée. [Accord fort]\n- – Les résultats de cette étude initiale, s'ils restent anormaux après contrôle doivent être discutés avec un spécialiste de l'hémostase afin de déterminer l'opportunité d'une étude plus approfondie. [Accord fort]\n- – Si des examens d'hémostase sont prescrits, le temps de céphaline avec activateur et la numération plaquettaire sont les tests les plus utiles. [Accord fort]\n- – Chez l'enfant de plus de trois ans, lorsque l'évaluation clinique préopératoire ne dépiste pas de risque hémorragique anormal, l'étude systématique de l'hémostase ne s'impose pas. [Accord fort]"
+ },
+ {
+  "anchor_id": "2004_2_SFAR_Prise-en-charge-des-candidoses-et-aspergilloses-invasives_d7c8a9::2004_2_SFAR_Prise-en-charge-des-candidoses-et-aspergilloses-invasives_d7c8a9__c0019_5979ac71",
+  "doc_title": "Prise en charge des candidoses et aspergilloses invasives de l’adulte",
+  "year": 2004,
+  "section_path": "Prise en charge des candidoses et aspergilloses invasives de l'adulte > Voies d'administration et effets indésirables",
+  "kind": "table",
+  "text": "| Col 1 | Voies d'administration | Principaux effets indésirables |\n| --- | --- | --- |\n| Fungizone® / amphotéricine B désoxycholate (AmB) | IV | Hypokaliémie, hypomagnésémie, insuffisance rénale / Fièvre, frissons lors de l'injection / Cytopénie |\n| Ambisome® AmB liposomale (ABLp) / Abelcet® AmB lipid complex (ABLC) | IV | Mêmes complications que la Fungizone® / mais fréquence moindre / Tolérance supérieure pour l'Ambisome® |\n| Ancotil® flucytosine | IV/PO | Troubles digestifs, hématologiques et hépatiques / dose-dépendants |\n| Sporanox®* itraconazole | IV/PO | Troubles digestifs, / cytolyse hépatique, / cholestase, réactions / allergiques et cutanées |\n| Triflucan® fluconazole | IV/PO | Troubles digestifs, / cytolyse hépatique, / cholestase, réactions / allergiques et cutanées |\n| Vfend®* voriconazole | IV/PO | Troubles digestifs, / cytolyse hépatique, / cholestase, réactions / allergiques et cutanées |\n| Cancidas® caspofungine | IV | Insuffisance cardiaque congestive / Troubles visuels réversibles / Peu fréquents et bénins |"
+ },
+ {
+  "anchor_id": "2004_2_SFAR_Prise-en-charge-des-candidoses-et-aspergilloses-invasives_d7c8a9::2004_2_SFAR_Prise-en-charge-des-candidoses-et-aspergilloses-invasives_d7c8a9__c0002_72b4b0c5",
+  "doc_title": "Prise en charge des candidoses et aspergilloses invasives de l’adulte",
+  "year": 2004,
+  "section_path": "Prise en charge des candidoses et aspergilloses invasives de l'adulte > Question 1 : > Quels moyens pour le diagnostic et le suivi des candidoses et des aspergilloses invasives ? (A1 et C1)",
+  "kind": "other",
+  "text": "La recherche de levures et de champignons filamenteux doit être systématique chez les patients à risque. Seuls les prélèvements tissulaires ou de sites normalement stériles sont spécifiques. L'examen direct est crucial car il oriente le diagnostic et restera parfois le seul argument biologique. Il est donc systématique, réalisé rapidement avec des techniques spécifiques. De plus, l'examen histologique des tissus permet d'apprécier le caractère invasif de l'infection. La présence de *Candida* sp. dans les sécrétions provenant des voies aériennes inférieures, y compris le lavage broncho-alvéolaire, n'a pas de valeur diagnostique (B3).\n\nLa présence d'*Aspergillus* sp. est à interpréter en fonction du risque de colonisation bronchique et du degré d'immunodépression. Elle est prédictive d'aspergillose pulmonaire invasive (API) chez le patient d'hématologie (B2).\n\nLes hémocultures sont positives dans seulement 50 % des C1 mais la positivité d'une seule suffit au diagnostic. Sauf exception, la présence d'*Aspergillus* sp. correspond à une contamination."
+ },
+ {
+  "anchor_id": "2001_196-reco-anesth-chir-autres-2001_8a8dc3::2001_196-reco-anesth-chir-autres-2001_8a8dc3__c0034_c7ccad17",
+  "doc_title": "Recommandations concernant les relations entre anesthésistes-réanimateurs et chirurgiens, autres spécialistes ou professionnels de santé",
+  "year": 2001,
+  "section_path": "Recommandations concernant les relations entre anesthésistes-réanimateurs et chirurgiens, autres spécialistes ou professionnels de santé > 4. 2. Consultation de cardiologie à la demande d'un autre médecin spécialiste à l'occasion d'une intervention requérant une anesthésie",
+  "kind": "reco",
+  "text": "Cette consultation peut être demandée par l'opérateur, l'anesthésiste-réanimateur ou même les deux.\n\nIl importe ici de retenir quatre principes de collaboration\n\n1 – La demande faite au consultant doit être précise et les réponses en rapport avec les questions posées.\n\nLe consultant informera, le cas échéant, le patient qu'en raison de son état de santé une nouvelle discussion avec l'anesthésiste-réanimateur et/ou avec le chirurgien s'impose avant toute décision définitive.\n\n2 – Anesthésistes-réanimateurs et opérateurs doivent se tenir mutuellement informés des demandes de consultation qu'ils ont faites et de leur résultat.\n\n3 – La décision finale de l'indication d'anesthésie et de ses modalités relève de la responsabilité du médecin anesthésiste-réanimateur.\n\n4 – Dans certaines situations des désaccords se manifestent entre les différents intervenants sur la conduite à tenir. Si chacun doit assumer ses responsabilités dans son domaine de compétence, il faut aussi réaffirmer qu'une concertation réelle et sérieuse doit précéder les décisions à prendre."
+ },
+ {
+  "anchor_id": "2001_196-reco-anesth-chir-autres-2001_8a8dc3::2001_196-reco-anesth-chir-autres-2001_8a8dc3__c0001_ce8c2e22",
+  "doc_title": "Recommandations concernant les relations entre anesthésistes-réanimateurs et chirurgiens, autres spécialistes ou professionnels de santé",
+  "year": 2001,
+  "section_path": "Recommandations concernant les relations entre anesthésistes-réanimateurs et chirurgiens, autres spécialistes ou professionnels de santé",
+  "kind": "table",
+  "text": "| Col 1 | Col 2 |\n| --- | --- |\n| PREFACE ..... | 2 |\n| PREAMBULE ..... | 3 |\n| 1. LES PRINCIPES DEONTOLOGIQUES ..... | 4 |\n| 1. 1. Généralités ..... | 4 |\n| 1. 2. L'obligation d'information ..... | 6 |\n| 2. PRINCIPES D'ORGANISATION ..... | 8 |\n| 2. 1. Les démarches qualité ..... | 8 |\n| 2. 2. Charte de fonctionnement des équipes anesthésiques et chirurgicales ..... | 8 |\n| 3. LES STRUCTURES ..... | 9 |\n| 3. 1. Etablissement public de santé ..... | 9 |\n| 3. 2. Etablissement de santé privé ..... | 10 |\n| 4. LA MISE EN ŒUVRE DES PRINCIPES DEONTOLOGIQUES ET D'ORGANISATION AUX / RELATIONS ENTRE ANESTHESISTES-REANIMATEURS ET CHIRURGIENS OU AUTRES / SPECIALISTES ..... | 11 |\n| 4. 1. Consultation pré-anesthésique ..... | 11 |\n| 4. 2. Consultation de cardiologie à la demande d'un autre médecin spécialiste à l'occasion / d'une intervention requérant une anesthésie ..... | 12 |\n| 4. 3. Le programme opératoire ..... | 12 |\n| 4. 4. La surveillance post-interventionnelle ..... | 13 |\n| 4. 5. Les soins intensifs et la réanimation chirurgicale ..... | 14 |\n| 4. 6. L'hospitalisation ..... | 14 |\n| 4. 7. Pratique de l'anesthésie et de la sédation par des spécialistes non anesthésistes- / réanimateurs ..... | 15 |\n| 4. 8. La chirurgie ambulatoire ..... | 15 |\n| 4. 9. Les transfusions sanguines ..... | 16 |\n| 5. SAGES-FEMMES, GYNECOLOGUES-OBSTETRICIENS ET ANESTHESISTES- / REANIMATEURS ..... | 17 |\n| 6. LES INFIRMIER(E)S ANESTHESISTES DIPLOME(E)S D'ÉTAT ..... | 18 |\n| REMERCIEMENTS ..... | 20 |"
+ },
+ {
+  "anchor_id": "2001_196-reco-anesth-chir-autres-2001_8a8dc3::2001_196-reco-anesth-chir-autres-2001_8a8dc3__c0003_ed8015d3",
+  "doc_title": "Recommandations concernant les relations entre anesthésistes-réanimateurs et chirurgiens, autres spécialistes ou professionnels de santé",
+  "year": 2001,
+  "section_path": "Recommandations concernant les relations entre anesthésistes-réanimateurs et chirurgiens, autres spécialistes ou professionnels de santé > PREFACE",
+  "kind": "other",
+  "text": "Enfin, le déclin annoncé de la démographie médicale dans certaines spécialités chirurgicales et surtout chez les anesthésistes-réanimateurs a également une incidence dans les relations entre médecins et rend impérieux l'amélioration des modes de fonctionnement mais aussi un relèvement du numerus clausus. Les situations sont très différentes d'un secteur à l'autre, d'un type d'établissement à l'autre, mais la pénurie fait déjà sentir ses effets ici et là.\n\nPour toutes ces raisons, une actualisation des recommandations a paru indispensable.\n\n*Professeur Bernard HOERNI  \nPrésident du Conseil national de l'Ordre des médecins*\n\n*17 octobre 2001*"
+ },
+ {
+  "anchor_id": "2018_RFE-IH-soins-critiques_f67e16::2018_RFE-IH-soins-critiques_f67e16__c0023_78481254",
+  "doc_title": "Insuffisance hépatique en soins critiques",
+  "year": 2018,
+  "section_path": "Méthode > Organisation générale",
+  "kind": "reco",
+  "text": "Ce niveau de preuve pouvait être réévalué en tenant compte de la qualité méthodologique de l'étude. Un niveau global de preuve était déterminé pour chaque critère de jugement en tenant compte des niveaux de preuve de chacune des références bibliographiques, de la cohérence des résultats entre les différentes études, du caractère direct ou non des preuves, de l'analyse de coût et de l'importance du bénéfice. Un niveau global de preuve « fort » permettait de formuler une recommandation « forte » (il est recommandé de faire, n'est pas recommandé de faire... GRADE 1+ ou 1-). Un niveau global de preuve modéré, faible ou très faible aboutissait à l'écriture d'une recommandation « optionnelle » (il est probablement recommandé de faire ou il n'est probablement pas recommandé de faire... GRADE 2+ ou 2-). Lorsque la littérature était inexistante, la question pouvait faire l'objet d'une recommandation sous la forme d'un avis d'expert (les experts suggèrent...). Les propositions de recommandations étaient présentées et discutées une à une."
+ },
+ {
+  "anchor_id": "2018_RFE-IH-soins-critiques_f67e16::2018_RFE-IH-soins-critiques_f67e16__c0101_7f9330c1",
+  "doc_title": "Insuffisance hépatique en soins critiques",
+  "year": 2018,
+  "section_path": "Champ 2. Insuffisance hépatique aiguë sur cirrhose",
+  "kind": "table",
+  "text": "| Col 1 |\n| --- |\n| ● Diagnostic de cirrhose avec présence d'ascite |\n| ● Diagnostic d'IRA stade 2 ou 3 selon les critères KDIGO modifiés (tableau 2), sans prendre en compte la valeur de la créatininémie |\n| ● Absence de réponse après 2 jours consécutifs d'arrêt des diurétiques et remplissage vasculaire par de l'albumine (1g/kg) |\n| ● Absence d'état de choc |\n| ● Absence d'administration récente de néphrotoxiques (anti-inflammatoires non stéroïdiens, aminosides, produits de contraste iodé) |\n| ● Absence de signe d'atteinte rénale parenchymateuse définie par (1) absence de protéinurie > 500 mg/jour, absence d'hématurie > 50 érythrocytes par champ, échographie rénale normale |"
+ },
+ {
+  "anchor_id": "2018_RFE-IH-soins-critiques_f67e16::2018_RFE-IH-soins-critiques_f67e16__c0164_3b728d17",
+  "doc_title": "Insuffisance hépatique en soins critiques",
+  "year": 2018,
+  "section_path": "Champ 2. Insuffisance hépatique aiguë sur cirrhose",
+  "kind": "other",
+  "text": "Initialement, les indications de suppléance étaient souvent posées à des stades très tardifs de la maladie, chez des patients qui ont une altération importante de l'état général et au stade de défaillance multi-organes. Plus récemment, l'intérêt des supports hépatiques a été conçu comme pouvant permettre d'attendre un greffon. Ainsi, une étude observationnelle [24] et une métaanalyse [25] ont montré que les supports hépatiques amélioraient la survie à court terme (à J14 voire J28) des patients cirrhotiques en décompensation aiguë. Cette amélioration de courte durée pourrait permettre à ces patients un accès à la greffe hépatique qui demeure le traitement radical de référence de la maladie hépatique avec des résultats satisfaisants [17,19,20]. Les données actuellesde la littérature orientent vers un intérêt potentiel des supports hépatiques chez les patients en ACLF pouvant leur permettre d'atteindre la greffe voir de les optimiser pendant la période d'attente. Des protocoles de recherche sont en cours dans certains centres de référence visant à mieux définir la place de ces traitements."
+ },
+ {
+  "anchor_id": "2020_Traitement_20antidoagulants_20patients_20COVID-19_9400a4::2020_Traitement_20antidoagulants_20patients_20COVID-19_9400a4__c0013_2676a57b",
+  "doc_title": "Traitement anticoagulants patients COVID-19",
+  "year": 2020,
+  "section_path": "3. En déduire 4 niveaux de risque thromboembolique (tableau):",
+  "kind": "reco",
+  "text": "10. **En cas de syndrome inflammatoire ou d'hypercoagulabilité marqués** (par exemple : fibrinogène > 8 g/L ou D-dimères > 3 µg/ml ou 3000 ng/ml) ou d'augmentation rapide de la concentration des D-Dimères, une héparinothérapie curative est proposée même en l'absence de thrombose clinique en tenant compte du risque hémorragique. 9. 11. **Sous HNF**, il est recommandé de surveiller au moins toutes les 48 heures la numération plaquettaire. Une diminution de celle-ci de plus de 40% entre le 4<sup>ème</sup> et le 14<sup>ème</sup> jour de traitement impose un bilan de CIVD et la recherche d'une thrombopénie induite par l'héparine. 10. 12. **En cas de défaillance multiviscérale, ou de coagulopathie de consommation** avec diminution brutale de la concentration en fibrinogène, de la numération plaquettaire et dutaux de facteur V, il est proposé de réévaluer la posologie de l'héparinothérapie, ces événements étant associés à une majoration du risque hémorragique."
+ },
+ {
+  "anchor_id": "2020_Traitement_20antidoagulants_20patients_20COVID-19_9400a4::2020_Traitement_20antidoagulants_20patients_20COVID-19_9400a4__c0019_cdc5c01e",
+  "doc_title": "Traitement anticoagulants patients COVID-19",
+  "year": 2020,
+  "section_path": "3. En déduire 4 niveaux de risque thromboembolique (tableau): > Prévention et traitement des complications thrombotiques en cas d'infection par le COVID-19 hospitalisé",
+  "kind": "table",
+  "text": "Col 1 : IMC <30 kg/m 2 | Pas d'oxygénéothérapie : HBPM dose prophylactique standard ou fondaparinux / (par ex : enoxaparine 4000 UI/24h SC; enoxaparine 2000 UI/24h SC si Clcr entre 15 et 30 ml/min; tinzaparine 3500 UI/24h SC si Clcr >20 ml/min; fondaparinux 2,5 mg/24h si Clcr >50 ml/min) | Monitoring de l'anticoagulant : Surveillance de l'activité anti-Xa: / - HBPM : éviter le surdosage (> 1,2 UI/ml pour l'enoxaparine) / - HNF : objectif 0,3-0,5 UI/ml"
+ },
+ {
+  "anchor_id": "2020_Traitement_20antidoagulants_20patients_20COVID-19_9400a4::2020_Traitement_20antidoagulants_20patients_20COVID-19_9400a4__c0001_076d6971",
+  "doc_title": "Traitement anticoagulants patients COVID-19",
+  "year": 2020,
+  "section_path": "PREAMBULE",
+  "kind": "other",
+  "text": "Chez les patients hospitalisés avec COVID-19, la prévention de la maladie thromboembolique par une HBPM est l'option de choix, mais il est vraisemblable que les posologies validées en médecine soient fréquemment insuffisantes, et notamment dans les formes sévères et en cas d'obésité.\n\nDe plus, plusieurs observations récentes en France et en Italie soutiennent qu'une embolie pulmonaire sévère est très fréquente chez les patients covid-19 hospitalisés, avec une incidence d'événements supérieure à 10% en réanimation (données non publiées, Strasbourg, Lille, Grenoble, Cremona-Italie).\n\nLa surveillance biologique, en particulier des paramètres de l'hémostase, est une aide pour le traitement des patients, puisque certaines anomalies (notamment l'augmentation de la concentration des D-Dimères) sont associées aux formes cliniques les plus sévères et à un risque thrombotique majoré. Le dépistage précoce de ces anomalies potentiellement prédictives peut donc contribuer à une prescription optimisée du traitement anticoagulant."
+ },
+ {
+  "anchor_id": "2017_rfe-prise-en-charge-des-traumatises-pelviens-graves-a-la-phase-p_a08dc6::2017_rfe-prise-en-charge-des-traumatises-pelviens-graves-a-la-phase-p_a08dc6__c0070_95a5c9d6",
+  "doc_title": "Prise en charges des traumatises pelviens graves à la phase précoce (24 premières heures)",
+  "year": 2017,
+  "section_path": "Résultats > Quelles sont les particularités de la prise en charge en cas de traumatisme pelvien grave ouvert ?",
+  "kind": "reco",
+  "text": "**R2.16** – Il est probablement recommandé d'assurer la prise en charge des traumatismes pelviens graves ouverts dans les centres de référence car les lésions pelviennes ouvertes sont rares, leur prise en charge est complexe et fait appel à des équipes multidisciplinaires.\n\n(GRADE 2+) ACCORD FORT\n\n**R2.17** – Il est recommandé de considérer comme objectifs initiaux de la prise en charge des traumatismes pelviens graves ouverts le contrôle de l'hémorragie et de la contamination périnéale.\n\n(GRADE 1+) ACCORD FORT"
+ },
+ {
+  "anchor_id": "2017_rfe-prise-en-charge-des-traumatises-pelviens-graves-a-la-phase-p_a08dc6::2017_rfe-prise-en-charge-des-traumatises-pelviens-graves-a-la-phase-p_a08dc6__c0077_bae3a498",
+  "doc_title": "Prise en charges des traumatises pelviens graves à la phase précoce (24 premières heures)",
+  "year": 2017,
+  "section_path": "Résultats > Argumentaire",
+  "kind": "table",
+  "text": "| Col 1 | Col 2 | Col 3 |\n| --- | --- | --- |\n| [1] Sauerland S, Bouillon B, Rixen D, Raum MR, Koy T, Neugebauer EA. The reliability of clinical examination in detecting pelvic fractures in blunt trauma patients: a meta-analysis. Arch Orthop Trauma Surg 2004;124:123-8. [2] Riou B, Thicoipé M, Atain-Kouadio P, et al. Comment évaluer la gravité ? In: Samu de France, editor. Actualités en réanimation pré-hospitalière : la traumatisé grave . Paris: SFEM Editions; 2002. p. 115-28. [3] Ooi CK, Goh HK, Tay SY, Phua DH. Patients with pelvic fracture: what factors are associated with mortality? Int J Emerg Med 2010;3:299-304. | [4] Giannoudis PV, Grotz MR, Tzioupis C, Dinopoulos H, Wells GE, Bouamra O, et al. Prevalence of pelvic fractures, associated injuries, and mortality: the United Kingdom perspective. J Trauma 2007;63:875-83. [5] Gabbe BJ, De Steiger R, Esser M, Bucknill A, Russ MK, Cameron P. Predictors of mortality following severe pelvic ring fracture: results of a population-based study. Injury 2001;42:985-91. [6] Gustavo Parreira J, Coimbra R, Rasslan S, Oliveira a, Fregoneze M, Mercadante M. The role of associated injuries on outcome of blunt trauma patients sustaining pelvic fractures. Injury 2000;31:677-82. | [7] Ustundag M, Aldemir M, Orak M, Guloglu C. Predictors of mortality in blunt multi-trauma patients: a retrospective review. J Emerg Med 2010;17:471-6. [8] Palmcrantz J, Hardcastle TC, Naidoo SR, Muckart DJ, Ahlm K, Eriksson A. Pelvic fractures at a new level 1 trauma centre: who dies from pelvic trauma? The Inkosi Albert Luthuli Central Hospital experience. Orthop Surg 2012;4:216-21. [9] Sathy AK, Starr AJ, Smith WR, Elliott A, Agudelo J, Reinert CM, et al. The effect of pelvic fracture on mortality after trauma: an analysis of 63,000 trauma patients. J Bone Joint Surg Am 2009;91:2803-10. |"
+ },
+ {
+  "anchor_id": "2017_rfe-prise-en-charge-des-traumatises-pelviens-graves-a-la-phase-p_a08dc6::2017_rfe-prise-en-charge-des-traumatises-pelviens-graves-a-la-phase-p_a08dc6__c0093_c46caefe",
+  "doc_title": "Prise en charges des traumatises pelviens graves à la phase précoce (24 premières heures)",
+  "year": 2017,
+  "section_path": "Résultats > Argumentaire",
+  "kind": "other",
+  "text": "[90] Ganz R, Krushell RJ, Jakob RP, Kuffer J. The antishock pelvic clamp. *Clin Orthop Relat Res* 1991;267:71-8.\n\n[91] Pohlemann T, Braune C, Gansslen A, Hüfner T, Partenheimer A. Pelvic emergency clamps: anatomic landmarks for safe primary application. *J Orthop Trauma* 2004;18:102-5.\n\n[92] Tonetti J. Management of recent unstable fractures of the pelvic ring. An update Conference supported by the Club Bassin Cotyle (Pelvis-Acetabulum Club). *Orthop Traumatol Surg Res* 2013;99:577-86.\n\n[93] Bircher M. Indications and techniques of external fixation of the injured pelvis. *Injury* 1996;27:3-19.\n\n[94] Slätis P, Karaharju EO. External fixation of the pelvic girdle with a trapezoid compression frame. *Injury* 1975;7:53-6.\n\n[95] Katsoulis E, Giannoudis PV. Impact of timing of pelvic fixation on functional outcome. *Injury* 2006;37:1133-42.[Figure : Teal square logo]"
+ },
+ {
+  "anchor_id": "2019_rfe-rac-lobectomie-pulmonaire_ee63af::2019_rfe-rac-lobectomie-pulmonaire_ee63af__c0162_f7b04069",
+  "doc_title": "Réhabilitation améliorée après lobectomie pulmonaire",
+  "year": 2019,
+  "section_path": "CHAMP 5. REHABILITATION POSTOPERATOIRE",
+  "kind": "reco",
+  "text": "**R5.4 – Il est recommandé d'utiliser un programme de réhabilitation amélioré après chirurgie, incluant la mobilisation précoce postopératoire, pour diminuer l'incidence de complications postopératoires et la durée d'hospitalisation.**\n\n**GRADE 1+, (accord FORT)**\n\n**Argumentaire :** Il existe 2 études prospectives randomisées de faible effectif démontrant un intérêt d'un programme de RAC en chirurgie thoracique. Muehling *et al.* [1], rapportent sur 58 patients une diminution des complications respiratoires postopératoires dans le groupe « RAC » en comparaison aux soins standards, sans impact sur la durée de séjour. Dong *et al.* rapportent sur 35 patients randomisés une diminution de la durée d'hospitalisation, sans diminution significative des complications postopératoires [2]."
+ },
+ {
+  "anchor_id": "2019_rfe-rac-lobectomie-pulmonaire_ee63af::2019_rfe-rac-lobectomie-pulmonaire_ee63af__c0191_a026dd12",
+  "doc_title": "Réhabilitation améliorée après lobectomie pulmonaire",
+  "year": 2019,
+  "section_path": "CHAMP 5. REHABILITATION POSTOPERATOIRE",
+  "kind": "table",
+  "text": "Sous-catégorie : CHAMP 2. PREHABILITATION PREOPERATOIRE\nRecommandation : 2.5.2 | Col 2 : Discuter l'introduction d'inhibiteurs calciques ou de bêtabloquants en peropératoire ou postopératoire immédiat pour diminuer les risques d'ACFA chez les patients sans traitement chronique | GRADE : 2+ | Accord : Faible"
+ },
+ {
+  "anchor_id": "2019_rfe-rac-lobectomie-pulmonaire_ee63af::2019_rfe-rac-lobectomie-pulmonaire_ee63af__c0032_e50da1ba",
+  "doc_title": "Réhabilitation améliorée après lobectomie pulmonaire",
+  "year": 2019,
+  "section_path": "CHAMP 1. SELECTION DU PARCOURS PATIENT ET INFORMATION",
+  "kind": "other",
+  "text": "Chez les patients de chirurgie thoracique, un supplément d'information apporté par un support vidéo permet une réduction significative des scores d'anxiété et une amélioration de la satisfaction globale [3]. De plus, dans cette étude de Crabtree *et al.*, les scores de douleur au repos en post-opératoire immédiat chez les patients avec information et préparation vidéo à la chirurgie étaient significativement moindres que dans le groupe contrôle [3]. Des résultats similaires ont été retrouvés chez des patients de chirurgie cardiaque, avec une diminution significative des scores d'anxiété le lendemain et une semaine après l'intervention [4]. Chez les plus jeunes patients opérés de chirurgie thoracique, un supplément d'information délivré dans le cadre d'une « préparation psychologique » par un psychologue a été associé à une diminution des scores d'anxiété postopératoire chez les patients peu anxieux en préopératoire [5]."
+ },
+ {
+  "anchor_id": "2018_2_Recos-SDRA_a93bac::2018_2_Recos-SDRA_a93bac__c0008_cca9b806",
+  "doc_title": "Recommandations pour la prise en charge du SDRA",
+  "year": 2018,
+  "section_path": "Résumé méthodologique",
+  "kind": "reco",
+  "text": "Toutes les recommandations, leur force et la confiance dans l'estimation de l'effet ont été validées de façon consensuelle, pour aboutir à la formulation de recommandations fortes [« il est recommandé » de faire (GRADE 1+) ou de ne pas faire (GRADE 1-)] ou faibles [« il est probablement recommandé » de faire (GRADE 2+) ou de ne pas faire (GRADE 2-)].\n\nDes recommandations de force équivalente ne doivent pas être interprétées comme des recommandations équivalente, dans la mesure où la force d'une recommandation est le résultat du processus d'analyse de la littérature et de gradation selon la méthode GRADE décrite au-dessus. Ainsi, il peut exister des raisons différentes pour lesquelles deux recommandations sont finalement de même force. Par exemple, une recommandation peut être faible du fait d'une confiance très basse dans l'estimation de l'effet d'une intervention, tandis qu'une autre sera faible car en dépit d'une confiance haute dans l'estimation de l'effet, il n'apparaît pas certain que la balance bénéfice/risque soit en faveur de l'intervention."
+ },
+ {
+  "anchor_id": "2018_2_Recos-SDRA_a93bac::2018_2_Recos-SDRA_a93bac__c0011_bc195f1d",
+  "doc_title": "Recommandations pour la prise en charge du SDRA",
+  "year": 2018,
+  "section_path": "Résumé méthodologique",
+  "kind": "other",
+  "text": "**Résumé des connaissances :** Les stratégies de ventilation mécanique limitant le volume courant (Vt) à 4 à 8 mL/kg de poids théorique (donné par les formules suivantes : chez l'homme, poids théorique (kg) =  $50 + 0,91 \\times [\\text{taille (cm)} - 152,4]$  ; chez la femme, poids théorique (kg) =  $45,5 + 0,91 \\times [\\text{taille (cm)} - 152,4]$ ) et les pressions inspiratoires (pression de plateau < 30 cmH<sub>2</sub>O, définie comme la pression mesurée dans les voies aériennes après une pause inspiratoire de 0,5 s), ont été comparées aux stratégies conventionnelles (Vt 10-15 mL/kg de poids théoriques) dans 9 études contrôlées randomisées, ayant inclus 1629 patients (1, 2). Le Vt moyen ( $\\pm$ SD) dans les groupes « faible volume courant » et « Vt conventionnel » étaient respectivement de  $6,2 \\pm 1,2$  et  $11,4 \\pm 1,1$  mL/kg de poids théorique. L'analyse principale a exclu les études dans lesquelles la stratégie de ventilation à faible Vt était associée à une stratégie de PEP élevée, mais ces études ont été incluses dans une analyse stratifiée de sensibilité (1, 3)."
+ },
+ {
+  "anchor_id": "2018_2_Recos-SDRA_a93bac::2018_2_Recos-SDRA_a93bac__c0034_493c4b63",
+  "doc_title": "Recommandations pour la prise en charge du SDRA",
+  "year": 2018,
+  "section_path": "Résumé méthodologique",
+  "kind": "reco",
+  "text": "**Question 4 : Les patients atteints de SDRA doivent-ils être ventilés avec une Pression Expiratoire Positive (PEP) élevée ?**\n\n**R4. Il est probablement recommandé que les patients adultes atteints de SDRA modéré à sévère soient ventilés avec une PEP élevée plutôt qu'avec une PEP basse. (GRADE 2+)**\n\n**Rationnel :** Les bénéfices potentiels de l'utilisation d'une PEP élevée chez les patients atteints de SDRA sont l'amélioration du recrutement alvéolaire, la réduction du stress et du strain, et la prévention de l'atélectrauma. Ils sont à mettre en balance avec les risques potentiels qui incluent la survenue de lésions en rapport avec une surdistension alvéolaire télé-expiratoire, l'augmentation du shunt intra-pulmonaire, l'augmentation de l'espace mort, et l'augmentation des résistances vasculaires pulmonaires à l'origine d'un cœur pulmonaire aigu."
+ }
+]

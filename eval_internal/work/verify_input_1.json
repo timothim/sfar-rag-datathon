@@ -1,0 +1,436 @@
+[
+ {
+  "cand_id": "g8bdcea3a494daf997c21",
+  "kind": "table",
+  "source_text": "Col 1 : Ropivacaïne | Doses maximales (mg) : 225–300 (3–4 mg/kg) | Délai d'installation (bloc de 4 segments) [minute] : 10–20\n• Schéma 1 : Concentration (%) = 0,5 | Durée du bloc moteur (minute) = 138 | Régression de 2 segments ± 2 DS (minute) = 168 ± 60\n• Schéma 2 : Concentration (%) = 0,75 | Durée du bloc moteur (minute) = 180 | Régression de 2 segments ± 2 DS (minute) = 180 ± 30\n• Schéma 3 : Concentration (%) = 1 | Durée du bloc moteur (minute) = 300 | Régression de 2 segments ± 2 DS (minute) = 180 ± 30",
+  "question": "Quelle dose maximale de ropivacaïne ne pas dépasser pour une anesthésie péridurale chez l'adulte ?",
+  "reference_answer": "225 à 300 mg, soit 3 à 4 mg/kg."
+ },
+ {
+  "cand_id": "ge08ee1fe741cdd847c90",
+  "kind": "other",
+  "source_text": "Le traitement de l'hypotension artérielle liée au bloc sympathique fait appel à l'administration de vasopresseurs (éphédrine, phényléphrine, adrénaline) et de solutés de remplissage. Les médicaments sympathomimétiques représentent le traitement le plus adapté pour corriger rapidement l'hypotension liée à la diminution du tonus sympathique. Ils peuvent être administrés en bolus ou en perfusion continue (*grade A*). Leur administration doit être précoce, sans attendre que l'hypotension soit profonde ou prolongée (*grade A*). Devant une « relative » inefficacité de l'éphédrine, l'administration d'agents sympathomimétiques d'action directe comme la phényléphrine ou l'adrénaline doit être précoce (*grade C*). Il n'y a pas de dose maximale de phényléphrine à ne pas dépasser, sous réserve de ne pas entraîner d'hypertension. Les causes d'hypotension étant multiples, ilconvient de ne pas méconnaître et de traiter les autres causes d'hypotension, par exemple les pertes sanguines, la sepsis, le jeûne préopératoire ou chez la femme enceinte la compression de la veine cave par l'utérus gravide en décubitus dorsal.",
+  "question": "Une patiente opérée sous rachianesthésie présente une hypotension artérielle qui ne répond que partiellement aux bolus d'éphédrine. Quelle conduite tenir ?",
+  "reference_answer": "Administrer précocement un sympathomimétique d'action directe comme la phényléphrine ou l'adrénaline (grade C)."
+ },
+ {
+  "cand_id": "g83a9315591cd44551dbc",
+  "kind": "reco",
+  "source_text": "Les valeurs des index estiment la variabilité des besoins anesthésiques entre les patients et au cours du temps chez le même patient. Cette information complète les paramètres statistiques de population les concentrations prédites de propofol ou les concentrations téléexpiratoires d'halogénés.\n\nLes moniteurs de profondeur d'anesthésie pourraient permettre de détecter un sous- ou un surdosage anesthésique (avis d'experts), notamment lorsque les signes cliniques d'anesthésie sont modifiés par des traitements comme les curares et possiblement par les comorbidités ou une instabilité hémodynamique per-opératoire.",
+  "question": "Quel intérêt peut-on attendre d'un monitorage EEG de la profondeur d'anesthésie chez un patient curarisé ?",
+  "reference_answer": "Il pourrait permettre de détecter un sous- ou un surdosage anesthésique lorsque les signes cliniques sont masqués par les curares (avis d'experts)."
+ },
+ {
+  "cand_id": "gbc67a0eb3b22c1690c0c",
+  "kind": "table",
+  "source_text": "| Concentration CAM | Desflurane (Index Bisppectral) | Isoflurane (Index Bisppectral) | Sevoflurane (Index Bisppectral) |\n| --- | --- | --- | --- |\n| 0 | 100 | 100 | 100 |\n| 0,5 | 50 | 40 | 45 |\n| 1,0 | 45 | 40 | 40 |\n| 1,5 | 40 | 40 | 35 |\n| 2,0 | 35 | 35 | 30 |\n| 2,5 | 30 | 20 | 25 |\n| 3,0 | - | 10 | - |",
+  "question": "Quelle valeur d'index bispectral attend-on chez un patient anesthésié au sévoflurane à 0,5 CAM ?",
+  "reference_answer": "Environ 45."
+ },
+ {
+  "cand_id": "gff794cd57325dca363d6",
+  "kind": "other",
+  "source_text": "- •Les moniteurs de profondeur de l'anesthésie pourraient être utiles pour affiner le raisonnement médical, en particulier pour les patients pour lesquels la relation dose - concentration - effets des médicaments anesthésiques est inhabituelle.\n- •Ceci peut permettre de détecter plus facilement le sous- et le surdosage anesthésique dans ces populations de patients.\n\n**Situations cliniques (liste non exhaustive) où les relations entre doses/concentrations et effets cliniques des médicaments anesthésiques peuvent être modifiées :**",
+  "question": "Vous anesthésiez un patient chez qui la réponse aux agents anesthésiques est réputée imprévisible. Quel apport peut avoir un moniteur de profondeur d'anesthésie ?",
+  "reference_answer": "Il peut aider à affiner le raisonnement et à détecter plus facilement un sous- ou un surdosage anesthésique."
+ },
+ {
+  "cand_id": "gcb6edd578e226e2bf83b",
+  "kind": "reco",
+  "source_text": "**3.4.2 Il ne faut pas réduire les apports nutritionnels chez les patients en épuration extrarénale. (Avis d'experts) Accord fort**\n\n**3.4.3 En hémodifiltration réalisée en post-dilution, il faut ajuster le débit sanguin de façon à garder une fraction de filtration inférieure à 25 %. (Avis d'experts) Accord fort**",
+  "question": "En hémodiafiltration continue en post-dilution, quelle fraction de filtration ne faut-il pas dépasser et sur quel paramètre agir ?",
+  "reference_answer": "Ajuster le débit sanguin pour maintenir une fraction de filtration inférieure à 25 % (avis d'experts, accord fort)."
+ },
+ {
+  "cand_id": "g0979ab4dc4ec3f5dbd2f",
+  "kind": "reco",
+  "source_text": "3.2.1 En pédiatrie et chez le nouveau-né, il est possible de faire de la dialyse péritonéale, en particulier en période postopératoire de chirurgie cardiaque à but de déplétion, en raison de sa facilité d'utilisation. Accord faible\n\n3.2.2 En pédiatrie et chez le nouveau-né, il est possible de faire de la dialyse péritonéale à but d'épuration lors d'une insuffisance rénale aiguë sans critère de dialyse en urgence absolue. Accord faible\n\n3.2.3 Chez l'adulte, il ne faut probablement pas recourir à la dialyse péritonéale en première intention. Accord fort",
+  "question": "Chez un nourrisson en postopératoire de chirurgie cardiaque nécessitant une déplétion hydrique, peut-on recourir à la dialyse péritonéale ?",
+  "reference_answer": "Oui, la dialyse péritonéale est possible dans cette indication du fait de sa facilité d'utilisation (accord faible)."
+ },
+ {
+  "cand_id": "gf761346ec9be5d6ba346",
+  "kind": "reco",
+  "source_text": "- - Préparer un protocole local de gestion des conflits entre famille/proches et équipe soignante\n- - Encourager des temps d'écoute pour favoriser une décision partagée**Question :** Pour l'équipe médico-soignante en service de soins critiques, une formation à la communication avec les proches permet-elle de prévenir les conflits entre proches et équipes médico-soignantes ?\n\n*Experts :* Elodie Brunel (SFAR, Toulouse), Agathe Kudela (SFAR, Paris), Christelle Rosenstrauch (Psychologue SFAR, Lille), Yoann Launey (SFAR, Rennes), Clément Gakuba (SFAR, Caen), Olivier Maillé (Montpellier).\n\n**R3.2 — En service de soins critiques, les experts suggèrent de former l'équipe médico-soignante à la communication pour permettre de prévenir les conflits entre proches et équipes médico-soignantes.**\n\n**AVIS D'EXPERTS (accord fort)**\n\n**Argumentaire :**\n\nDes difficultés de communication sont régulièrement source de conflits dans le domaine du soin. En réanimation, les situations de fin de vie notamment dans un contexte de limitation ou d'arrêt de traitement en sont la principale cause [1,2].",
+  "question": "En réanimation, quelle mesure concernant les soignants est proposée pour limiter les conflits avec les familles des patients ?",
+  "reference_answer": "Former l'équipe médico-soignante à la communication (avis d'experts, accord fort)."
+ },
+ {
+  "cand_id": "g0aba15fbdfface749f92",
+  "kind": "table",
+  "source_text": "| Col 1 | RECOMMANDATION | GRADE |\n| --- | --- | --- |\n| **CHAMP 3 : Relations avec les proches, communication, désaccords et conflits** |  |  |\n| R 3.1 | Pour les proches de patients hospitalisés en services de soins critiques, il est recommandé d'utiliser une stratégie d'accompagnement structurée après une décision d'arrêt et/ou limitation de traitements, incluant des interactions proactives avec l'équipe soignante et/ou des supports de communication, pour améliorer la qualité des soins. | GRADE 1 |\n| R 3.2 | En service de soins critiques, les experts suggèrent de former l'équipe médico-soignante à la communication pour permettre de prévenir les conflits entre proches et équipes médico-soignantes. | Avis d'experts |\n| R 3.3.1 | Pour les proches de patients hospitalisés et l'équipe médico-soignante en service de soins critiques, en cas de désaccords/conflits autour d'une décision de limitation et/ou arrêt des traitements, les experts suggèrent de faire intervenir une structure d'éthique clinique pour améliorer la qualité des soins. | Avis d'experts |\n| R 3.3.2 | Pour les proches de patients hospitalisés et l'équipe médico-soignante en service de soins critiques, en prévention d'un désaccord/conflit entre proches et équipes soignantes dans une situation à risque de conflit de valeurs autour d'une décision de limitation et/ou arrêt des traitements, il est probablement recommandé de faire intervenir une structure d'éthique clinique pour améliorer la qualité des soins. | GRADE 2 |\n|  | ABSENCE DE RECOMMANDATION — Les experts ne sont pas en mesure d'émettre une recommandation concernant l'intervention d'une équipe de médiation pour améliorer la qualité des soins. | Absence de recommandation |",
+  "question": "Après une décision de limitation ou d'arrêt des thérapeutiques en soins critiques, quelle démarche adopter envers les proches et avec quel niveau de recommandation ?",
+  "reference_answer": "Utiliser une stratégie d'accompagnement structurée (interactions proactives avec l'équipe et/ou supports de communication), GRADE 1."
+ },
+ {
+  "cand_id": "g1b92ab24f2648cf2959d",
+  "kind": "other",
+  "source_text": "- La personne de confiance et la famille et/ou les proches ont-ils été informés de la décision et accompagnés ?\n- L'équipe soignante médicale et paramédicale a-t-elle été informée de la décision ?\n- L'ensemble de la procédure collégiale a-t-elle été clairement tracée dans le dossier médical (notamment les motifs de la décision) ?",
+  "question": "Au terme d'une procédure collégiale aboutissant à une limitation des traitements en réanimation, quels points faut-il vérifier ensuite ?",
+  "reference_answer": "Information et accompagnement de la personne de confiance et des proches, information de l'équipe soignante et traçabilité complète de la procédure dans le dossier."
+ },
+ {
+  "cand_id": "gfd6492bcff9d310fa822",
+  "kind": "reco",
+  "source_text": "Il faut probablement mesurer la glycémie peropératoire au cours des interventions à risque (NGP faible) (*accord fort*).\n\nChez les patients à risque, il faut réaliser une mesure de glycémie durant le séjour en salle de surveillance post-interventionnelle (SSPI).",
+  "question": "Chez un patient opéré considéré à risque sur le plan glycémique, faut-il contrôler la glycémie pendant l'intervention et au réveil ?",
+  "reference_answer": "Il faut probablement la mesurer en peropératoire lors des interventions à risque, et réaliser une mesure en SSPI chez les patients à risque."
+ },
+ {
+  "cand_id": "g43a751763308810eda5b",
+  "kind": "reco",
+  "source_text": "Au sein d'une équipe, il faut choisir le même protocole formalisé de contrôle glycémique (NGP fort) (*accord fort*).\n\nTout protocole de contrôle glycémique strict doit inclure au minimum des recommandations relatives à l'utilisation d'une insuline d'action rapide en perfusion continue à la seringue électrique (NGP fort) (*accord fort*).\n\nTout protocole de contrôle glycémique strict doit inclure au minimum des procédures de correction et de surveillance des épisodes d'hypoglycémie (NGP fort) (*accord fort*).\n\nIl faut probablement privilégier l'utilisation d'une voie permettant d'assurer un débit constant pour administrer l'insuline intraveineuse en continu (NGP modéré) (*accord fort*).\n\nParmi les différents protocoles de contrôle glycémique strict existants, il est impossible d'en privilégier un par rapport aux autres (NGP fort) (*accord faible*).\n\nIl faut abandonner les protocoles de contrôle glycémique statiques qui déterminent le débit d'insuline uniquement à partir de la glycémie la plus récente (NGP modéré) (*accord fort*).",
+  "question": "En réanimation, quel type de protocole d'insulinothérapie doit être abandonné ?",
+  "reference_answer": "Les protocoles statiques qui fixent le débit d'insuline sur la seule dernière glycémie (NGP modéré, accord fort)."
+ },
+ {
+  "cand_id": "ga82b7f724c31133396b0",
+  "kind": "reco",
+  "source_text": "*Recommandation 19 – Il n'est pas recommandé de laisser une sonde nasogastrique après une chirurgie colorectale. (GRADE 1–) Accord Fort*Au total trois méta-analyses [45–47] récentes ont évalué l'absence de sonde nasogastrique après chirurgie colorectale. Une seule méta-analyse était spécifique à la chirurgie colorectale [47], les autres incluant diverses chirurgies abdominales. Le critère de jugement « durée d'hospitalisation » a été analysé dans deux méta-analyses faites par les mêmes auteurs [45,46]. Dans la première méta-analyse [45], la durée d'hospitalisation était raccourcie en l'absence de sonde dans la majorité des essais inclus, mais l'hétérogénéité des essais n'a pas permis d'évaluer la taille de l'effet thérapeutique. Dans la deuxième méta-analyse [46], la durée d'hospitalisation était raccourcie de 0,53 jour mais de manière non significative [IC : -0,39–1,46]. Cependant, au-delà de la durée de séjour, l'absence de sonde nasogastrique après chirurgie colorectale a d'autres effets bénéfiques significatifs dans les méta-analyses (réduction de 60–80 % des complications bronchopulmonaires et laryngopharyngées et de moitié de l'iléus).",
+  "question": "Après une colectomie programmée dans un programme de réhabilitation, faut-il maintenir une aspiration gastrique par sonde en postopératoire ?",
+  "reference_answer": "Non, il n'est pas recommandé de laisser une sonde nasogastrique (GRADE 1–, accord fort)."
+ },
+ {
+  "cand_id": "g3940cdb7b78acbdfb13d",
+  "kind": "table",
+  "source_text": "Paramètres : Analgésie postopératoire : laparoscopie | Recommandations principales : Oui : administration intraveineuse continue de lidocaïne / Non : analgésie péridurale thoracique | Recommandations secondaires : 1) Irrigation pariétale / Ou / 2) Le bloc dans le plan du muscle transverse de l'abdomen",
+  "question": "Pour l'analgésie après chirurgie colorectale laparoscopique en réhabilitation améliorée, quelle technique privilégier et laquelle éviter ?",
+  "reference_answer": "Privilégier la lidocaïne intraveineuse continue ; ne pas utiliser la péridurale thoracique."
+ },
+ {
+  "cand_id": "g2bc2478512784919dffe",
+  "kind": "reco",
+  "source_text": "Pour minimiser les risques de toxicité systémique, il faut impérativement limiter les doses injectées, utiliser des solutions adrénalinées en l'absence de contre-indications (les contre-indications étant les blocs de la face, interdigitaux et pénien) et préférer les agents les moins toxiques (Tableau 4).",
+  "question": "Aux urgences, lors d'une anesthésie locale ou locorégionale, pour quels blocs l'adjonction d'adrénaline à l'anesthésique local est-elle contre-indiquée ?",
+  "reference_answer": "Les blocs de la face, les blocs interdigitaux et le bloc pénien."
+ },
+ {
+  "cand_id": "g6dd751baf8cf6d687ca1",
+  "kind": "table",
+  "source_text": "| Complications | Prévention | Détection | Diagnostic et surveillance / Clinique | Paraclinique | Risque évolutif | Traitement |\n| --- | --- | --- | --- | --- | --- | --- |\n| Syncope vagale | Éviter : milieu confiné, surchauffé, Mettre le patient en décubitus dorsal | Sueurs / Sensation de malaise / Pâleur | Syndrome vagal / Bradycardie | ECG : bradycardie / PNI : hypotension | Arrêt cardiaque | 1) Arrêt de la stimulation douloureuse, mise en position couchée, stimulation du patient, surélévation des membres inférieurs / 2) Oxygène à 100 % / 3) Administration intraveineuse d'atropine (20 µg/kg) / 4) Recherche d'une cause déclenchante |\n| Réactions anaphylactiques | Interrogatoire : Recherche de réactions allergiques aux anesthésiques locaux (évictions des produits en cause) | Signes cutanés / Signes respiratoires (bronchospasme, gêne laryngée) | Signes cutanés : érythème, urticaire... / Signes respiratoires : bronchospasme, gêne laryngée | ECG : tachycardie / PNI : hypotension / SpO 2 : hypoxie | Arrêt cardiaque | 1) Arrêt de l'injection / 2) Administration d'antihistaminique / 3) Oxygène à 100 % / 4) Si hypotension artérielle grave, mise en place d'une voie veineuse, administration à dose titrée d'adrénaline / 5) Réanimation de l'arrêt cardiaque |",
+  "question": "Au cours d'une ALR réalisée aux urgences, un patient présente une syncope vagale avec bradycardie. Quelle dose d'atropine IV administrer ?",
+  "reference_answer": "Atropine intraveineuse à 20 µg/kg après les mesures posturales et l'oxygène."
+ },
+ {
+  "cand_id": "g2dc55591d697d9b3d443",
+  "kind": "other",
+  "source_text": "- • L'opérateur doit avoir été formé pour la technique choisie. - • C'est au médecin qui réalise l'acte d'évaluer le rapport bénéfice-risque de cette technique pour le patient. - • Le choix de la technique d'anesthésie est fonction de l'indication, des comorbidités du patient, des circonstances de survenue des lésions et de l'avis du patient. - • L'information et la recherche du consentement sont nécessaires chaque fois que possible. - • Lorsqu'un neurostimulateur est utilisé (ce que recommandent les experts pour les blocs distaux des membres (poignet, chevilles), il doit faire l'objet d'une maintenance et être vérifié avant chaque utilisation\n- • Le patient doit être installé confortablement. - • Les règles d'asepsie doivent être appliquées strictement. - • Certaines procédures de sécurité sont nécessaires pour limiter la survenue d'erreurs (conditionnements spécifiques, étiquetage des seringues, etc.). - • Le contact verbal doit être maintenu pendant la réalisation de l'AL ou l'ALR. - • L'utilisation d'aiguilles à biseau court est recommandée.",
+  "question": "Un médecin urgentiste s'apprête à réaliser un bloc au poignet pour une plaie de la main. Quel matériel les experts conseillent-ils et quelle précaution s'y rattache ?",
+  "reference_answer": "Utiliser un neurostimulateur, entretenu et vérifié avant chaque utilisation."
+ },
+ {
+  "cand_id": "g508df1f5f5c7dacd7171",
+  "kind": "reco",
+  "source_text": "Le patient doit être informé, rassuré et encouragé. Il est installé de façon confortable en position semi-assise. Une aspiration trachéo-bronchique doit être réalisée au préalable [3]. Cette épreuve doit reproduire au mieux les conditions dans lesquelles le patient se trouvera une fois extubé. L'épreuve de VS peut être menée sur une pièce en T ou en utilisant un faible niveau d'aide inspiratoire (AI) de l'ordre de 7 cm H<sub>2</sub>O, le patient restant alors connecté au respirateur [a, 1]. Dans ce cas, le niveau d'AI est destiné à supprimer la charge de travail respiratoire essentiellement liée au circuit du respirateur (valves, tuyaux) et à un degré moindre à la sonde d'intubation.\n\nSi l'épreuve est effectuée sur pièce en T, l'air administré est humidifié et enrichi en oxygène ; un dispositif évitant la ré-inspiration de l'air expiré doit être utilisé.\n\nSi l'épreuve est effectuée en AI, le ballonnet sera maintenu gonflé. Il n'est pas recommandé d'ajouter à ce niveau d'AI, une pression expiratoire positive [3]. L'utilisation d'un filtre échangeur de chaleur et d'humidité accroît l'espace mort instrumental et nécessite d'augmenter le niveau d'AI [b, 2].",
+  "question": "Lors d'une épreuve de sevrage de la ventilation mécanique réalisée en aide inspiratoire, quel niveau d'aide faut-il régler ?",
+  "reference_answer": "Un faible niveau d'aide inspiratoire, de l'ordre de 7 cmH2O."
+ },
+ {
+  "cand_id": "gaaba8d034741e6533aee",
+  "kind": "other",
+  "source_text": "Ils sont assimilés à la population générale hormis l'existence en chirurgie thoracique et abdominale, d'une dysfonction diaphragmatique postopératoire transitoire et de la douleur, qui doit être traitée [b, 2]. Ces patients ont le taux d'échec d'extubation le plus faible [b].",
+  "question": "Un patient ventilé après une chirurgie abdominale majeure devient candidat au sevrage. Quelles particularités prendre en compte ?",
+  "reference_answer": "Une dysfonction diaphragmatique postopératoire transitoire et la douleur, qui doit être traitée ; ces patients ont le plus faible taux d'échec d'extubation."
+ },
+ {
+  "cand_id": "g99bc7da75b10d54611dc",
+  "kind": "reco",
+  "source_text": "**Recommandation**\n\nIl est probablement recommandé d'utiliser une technique de ponction échoguidée par rapport à une technique utilisant le repérage anatomique lors de la mise en place a priori difficile d'un cathéter veineux périphérique chez l'adulte (GRADE 2+).\n\n**Recommandation 6 : veine jugulaire interne chez l'enfant****Libellé de la question**\n\nUne technique de ponction échoguidée par rapport à une technique utilisant le repérage anatomique doit-elle être utilisée lors de la mise en place d'un cathéter veineux central par voie jugulaire interne chez l'enfant ?\n\n**Argumentaire**\n\nLes résultats de la méta-analyse démontrent une réduction du nombre d'échecs de canulation de 69 % (RR : 0,31 ; IC 95 % : 0,18-0,52) sur 4 études randomisées contrôlées incluant 460 patients et une réduction du nombre de ponctions artérielles de 77 % (RR : 0,23 ; IC 95 % : 0,11-0,44) sur 4 études randomisées contrôlées incluant 460 patients. La qualité globale des preuves est modérée du fait de l'hétérogénéité des résultats, les balances risque/bénéfice et coût/bénéfice sont favorables.",
+  "question": "Chez l'adulte dont la pose d'une voie veineuse périphérique s'annonce difficile, faut-il recourir au guidage échographique ?",
+  "reference_answer": "Oui, la ponction échoguidée est probablement recommandée plutôt que le repérage anatomique (GRADE 2+)."
+ },
+ {
+  "cand_id": "g11607c58fa78ab9b9896",
+  "kind": "reco",
+  "source_text": "Il est probablement recommandé d'utiliser une technique de ponction échoguidée par rapport à une technique utilisant le repérage anatomique ou la palpation lors de la mise en place a priori difficile d'un cathéter veineux périphérique chez l'enfant (GRADE 2 +).",
+  "question": "Chez un enfant au capital veineux médiocre, quelle technique de pose de voie veineuse périphérique privilégier ?",
+  "reference_answer": "La ponction échoguidée, probablement recommandée plutôt que le repérage anatomique ou la palpation (GRADE 2+)."
+ },
+ {
+  "cand_id": "g76063f88d9909f319d85",
+  "kind": "reco",
+  "source_text": "1. 25. Il est souhaitable de formaliser les modalités de réalisation de la visite préanesthésique et d'en assurer la traçabilité.\n2. 26. Il est possible de prescrire une prémédication anxiolytique et/ou analgésique.\n3. 27. Il est recommandé d'établir des règles de jeune préopératoire adaptées à la programmation opératoire pour améliorer le confort du patient.",
+  "question": "En chirurgie ambulatoire, peut-on prescrire une prémédication avant l'intervention ?",
+  "reference_answer": "Oui, une prémédication anxiolytique et/ou analgésique peut être prescrite."
+ },
+ {
+  "cand_id": "g293148d474c4b595ab24",
+  "kind": "reco",
+  "source_text": "Le grand âge n'est pas une contre-indication en soi à l'ambulatoire. La prise en charge ambulatoire semble diminuer l'incidence des troubles du comportement post-opératoire par rapport à une hospitalisation conventionnelle. Actuellement, aucune donnée de la littérature ne permet de privilégier une technique d'anesthésie ou un agent anesthésique particulier.\n\n1. 63. Il est recommandé de faire bénéficier aux personnes âgées d'une prise en charge ambulatoire en fonction de l'analyse du bénéfice/risque pour le patient, la prévisibilité de sa prise en charge et de l'organisation mise en place, en particulier la permanence et la continuité des soins.\n2. 64. Il est recommandé d'éviter les benzodiazépines en préopératoire. Elles augmentent l'incidence des troubles du comportement postopératoire.",
+  "question": "Chez une personne âgée opérée en ambulatoire, quelle classe médicamenteuse faut-il éviter en prémédication et pour quelle raison ?",
+  "reference_answer": "Les benzodiazépines, car elles augmentent les troubles du comportement postopératoires."
+ },
+ {
+  "cand_id": "g9899cf25409be93db8da",
+  "kind": "reco",
+  "source_text": "**AVIS D'EXPERT (accord fort)**\n\n**ABSENCE DE RECOMMANDATION** - Du fait de l'absence de validation en structure de médecine d'urgence, et de preuves suggérant une supériorité de l'une sur l'autre, les experts ne peuvent recommander l'une ou l'autre des trois principales échelles de sédation : le score de Ramsay, l'OAA/S (*Observer's Assessment of Alertness / Sedation*) ou les définitions de l'*American Society of Anesthesiologists* : sédation légère, modérée, profonde, anesthésie générale ou sédation dissociative (propre à la kétamine).\n\n**ABSENCE DE RECOMMANDATION**\n\n**Argumentaire :**",
+  "question": "Pour une sédation procédurale réalisée aux urgences, quelle échelle de sédation faut-il utiliser ?",
+  "reference_answer": "Aucune recommandation ne permet de privilégier le score de Ramsay, l'OAA/S ou les définitions de l'ASA."
+ },
+ {
+  "cand_id": "gc5b9fc2e774524f5e93c",
+  "kind": "reco",
+  "source_text": "Où dispenser les soins de réanimation ? Quand les capacités traditionnelles d'accueil des patients graves sont dépassées, les soins de réanimation peuvent être dispensés dans des locaux habituellement non prévus à cet effet, mais qui auront été répertoriés au préalable afin d'optimiser au mieux les ressources de l'hôpital.\n\nL'objectif en période de pandémie est que l'hôpital ne prenne en charge que les patients les plus graves. Les soins aux patients les moins gravement malades seront dispensés en dehors de l'hôpital. Les patients non grippés dont le pronostic vital peut être engagé et qui ne présentent pas de symptômes de grippe doivent pouvoir être gérés et pris en charge sans risque d'être contaminés.\n\nLes soins intensifs spécialisés (pneumologiques, gastro-entérologiques et surtout cardiologiques) prendront en charge les patients relevant de leur discipline mais non grippés. Les soins intensifs et soins continus sont donc en première ligne pour soulager le travail des services de réanimation.\n\nPour chaque pathologie, deux hypothèses sont à étudier en fonction des contraintes locales puisqu'il faut considérer à la fois le \"poids\" de la densité virale et la gravité du patient :",
+  "question": "En pandémie grippale saturant les capacités de réanimation, quel rôle confier aux unités de soins intensifs spécialisés (cardiologie, pneumologie) ?",
+  "reference_answer": "Elles prennent en charge les patients de leur discipline non grippés, afin de soulager la réanimation."
+ },
+ {
+  "cand_id": "g7228e27048c22c5903d4",
+  "kind": "other",
+  "source_text": "La compétence IDE est celle qu'ont obtenu les IOA (infirmière organisatrice de l'accueil) complétée d'une formation spécifique sur la grippe aviaire. Les patients les moins graves sont réadressés vers la médecine de ville. Les patients les plus graves sont orientés vers un secteur BDV ou HDV selon qu'existe ou non des critères de grippe.\n\nCertains secteurs de soins programmés qui ne peuvent être interrompus (chimiothérapie, dialyse, transfusion) organiseront par téléphone les convocations de leurs patients pour éviter leur passage par les urgences et le risque de contamination potentielle associée, ces secteurs se doivent de rester le plus longtemps possible à BDV.",
+  "question": "En pleine pandémie de grippe aviaire, un patient hémodialysé chronique doit poursuivre ses séances à l'hôpital. Comment organiser sa venue ?",
+  "reference_answer": "Le service le convoque par téléphone pour éviter son passage par les urgences et le risque de contamination."
+ },
+ {
+  "cand_id": "g3ab0d33cdf331c331651",
+  "kind": "reco",
+  "source_text": "Il faut considérer le flux des malades de réanimation non atteints par la grippe aviaire. La gestion de ces malades est souvent oubliée dans les périodes de catastrophe (comme l'ont rappelé les événements survenus lors du cyclone Katrina et lors du tsunami récent). On pourrait imaginer que la prise en charge de ces malades soit réalisée dans d'autres secteurs de l'hôpital (comme les secteurs de réanimation chirurgicale ou les salles de réveil libérés par la déprogrammation des malades, ou les unités de soins intensifs reconfigurées en réanimations).Ainsi, idéalement, l'hôpital doit disposer au minimum de deux secteurs de réanimation :\n\n***une réanimation « grippe aviaire » localisée dans le secteur à HDV si possible dans un pavillon indépendant du reste de l'hôpital avec un personnel et du matériel spécifiques.***\n\n***une réanimation médico-chirurgicale classique dans le secteur à BDV.***",
+  "question": "En cas de pandémie de grippe aviaire, comment organiser idéalement l'offre de réanimation d'un hôpital ?",
+  "reference_answer": "Disposer d'au moins deux secteurs : une réanimation grippe aviaire en zone HDV (idéalement pavillon indépendant, personnel et matériel dédiés) et une réanimation classique en zone BDV."
+ },
+ {
+  "cand_id": "g00df2ee9886502468d30",
+  "kind": "reco",
+  "source_text": "**R5.1 - Il ne faut pas doser systématiquement les peptides natriurétiques en période postopératoire des types de chirurgies à faible risque cardiaque (<1%). Pour les types de chirurgie à risque intermédiaire ou élevé, il ne faut pas doser systématiquement les peptides natriurétiques en période postopératoire chez les patients à faible risque cardiaque (RCRI<2) ou à très haut risque cardiaque (RCRI>3).**\n\n**(Grade 1-) Accord fort**",
+  "question": "Après une chirurgie à risque cardiaque intermédiaire chez un patient avec un RCRI à 1, faut-il doser systématiquement BNP ou NT-proBNP en postopératoire ?",
+  "reference_answer": "Non, pas de dosage systématique chez les patients à faible risque (RCRI<2) (Grade 1-, accord fort)."
+ },
+ {
+  "cand_id": "g1476b1a0ee63fc7a7dd6",
+  "kind": "table",
+  "source_text": "| Col 1 |\n| --- |\n| - Syndrome cholériforme ou diarrhée hémorragique (Escherichia coli entéro-hémorragique et entéro-toxinogène, Vibrio cholerae, Aeromonas spp, Plesiomonas shigelloides) |\n| (Grade 1+) Accord fort |\n| R7.18 - Il ne faut pas réaliser de coproculture standard chez le patient hospitalisé depuis plus de 3 jours, excepté en cas d'immunodépression. |\n| (Grade 2+) Accord fort |\n| R7.19 - Il faut rechercher des micro-organismes particuliers en cas de diarrhée secondaire à un traitement antibiotique : Clostridium difficile, Klebsiella oxytoca, Pseudomonas aeruginosa, Candida albicans, Clostridium perfringens producteur d'entérotoxine. |\n| (Grade 1+) Accord fort |\n| R7.20 - Il faut rechercher le Clostridium difficile de façon spécifique et ne pas l'associer à la demande d'une coproculture standard (le contexte étant totalement différent). |\n| (Grade 1+) Accord fort |\n| R7.21 - Il ne faut pas réitérer la recherche de Clostridium difficile lorsqu'elle est positive. |\n| (Grade 1-) Accord fort |",
+  "question": "Un patient hospitalisé en réanimation depuis 6 jours, non immunodéprimé, développe une diarrhée. Faut-il demander une coproculture standard ?",
+  "reference_answer": "Non, pas de coproculture standard au-delà de 3 jours d'hospitalisation sauf immunodépression (Grade 2+)."
+ },
+ {
+  "cand_id": "g7618886eaf0233bb5a8e",
+  "kind": "other",
+  "source_text": "C'est le volume de sang prélevé et non le nombre de ponctions qui importe. Il existe une relation directe entre le volume de sang inoculé dans les flacons d'hémoculture et le rendement de la technique, donc la sensibilité de la détection de la positivité par un automate. La densité des bactéries présentes dans le sang est généralement très faible chez l'adulte au cours des épisodes bactériémiques (de l'ordre de 1 UFC/mL) (1). Un volume de 20 mL de sang prélevé augmente le pourcentage de positivité de 30%, comparativement à un volume de 10 mL qui est le minimum souhaitable chez l'adulte [78]. Un volume insuffisant peut entraîner des résultats faussement négatifs. Le volume optimal est de 40 à 60 mL. Un volume supérieur n'améliore la sensibilité que de manière négligeable. Il y a un consensus pour limiter le nombre d'hémocultures à trois par épisode clinique et par tranche de 24h au total. En effet, trois paires d'hémocultures permettent de détecter 98% des bactériémies contre 73% avec une paire et 90% avec deux paires [79,80]. L'intervalle entre deux prélèvements importe peu en ce qui concerne la sensibilité de détection qui est équivalente.",
+  "question": "Un adulte fébrile en réanimation doit être prélevé pour hémocultures. Quel volume sanguin viser et combien de prélèvements au maximum par 24 h ?",
+  "reference_answer": "Viser 40 à 60 mL de sang au total et se limiter à trois hémocultures par épisode et par 24 h."
+ },
+ {
+  "cand_id": "gf79873a2c51a5380fe66",
+  "kind": "reco",
+  "source_text": "P4. 2 – Les experts suggèrent de tracer l'insuffisance d'analgésie en cours de césarienne, de renforcer l'anesthésie locorégionale et/ou générale, d'accompagner la naissance puis de débriefer l'expérience douloureuse avec l'équipe, en particulier les soignants impliqués dans la prise en charge.P4. 3 Les experts suggèrent d'identifier la sidération et le soin psychique d'urgence (defusing) en postpartum, et à distance de diagnostiquer l'état de stress post-traumatique (ESPT) en explorant le bien-être maternel et la relation mère-enfant, ensuite de confier la patiente à des spécialistes de l'ESPT pour une prise en charge par des techniques adaptées de psychothérapie.",
+  "question": "Après une césarienne sous anesthésie périmédullaire compliquée de douleurs peropératoires, quel suivi psychologique proposer à la mère ?",
+  "reference_answer": "Repérer la sidération et assurer un soin psychique d'urgence (defusing) en post-partum, puis dépister à distance un ESPT et orienter vers des spécialistes (avis d'experts)."
+ },
+ {
+  "cand_id": "g55e468b6df0cb295c14b",
+  "kind": "table",
+  "source_text": "Type d'APM : Extension péridurale | Facteurs de risque d'échec : Nombre de bolus administré en péridurale au cours du travail ; Scores de douleur élevés ( EVA \\geq 4 ) dans les 2 h précédent la césarienne ; Degré d'urgence de la césarienne ; Parturiente de grande taille ; Dilatation cervicale lors de la césarienne ; Indice de masse corporel maternel ; APD plutôt qu'une PRC initiale pour le travail ; Entretien de l'analgésie par perfusion continue plutôt que par PCEA ou PIEB ; Durée du travail obstétrical et la dose totale de mélange analgésique reçue | Références : (23-28)",
+  "question": "Chez une parturiente sous péridurale de travail, quel mode d'entretien de l'analgésie est associé à un risque d'échec de l'extension pour césarienne ?",
+  "reference_answer": "L'entretien par perfusion continue plutôt que par PCEA ou PIEB."
+ },
+ {
+  "cand_id": "g0c4e1de8af1e9b05f324",
+  "kind": "other",
+  "source_text": "5. en cas de suspicion d'acidose fœtale, l'obstétricien décide du degré d'urgence de la césarienne et communique de manière intelligible avec les autres acteurs, par exemple à l'aide d'un système de communication simplifié et validé en équipe, type code couleur. 6. 6. une anesthésie générale soit réalisée en présence d'une insuffisance d'anesthésie constatée juste avant ou dès l'incision pour césarienne code rouge.1. 7. une pause opératoire soit faite en cas de douleur peropératoire afin d'évaluer et traiter la douleur de manière adaptée au contexte. 2. 8. une anesthésie générale soit réalisée en cas d'échec de la gestion médicamenteuse de la douleur, même avant clamping du cordon. 3. 9. l'insuffisance d'analgésie en cours de césarienne soit tracée, de renforcer l'anesthésie locorégionale et/ou générale, d'accompagner la naissance puis de débriefer l'expérience douloureuse avec l'équipe, en particulier les soignants impliqués dans la prise en charge. 4. 10. une évaluation des pratiques soit réalisée avec comme indicateurs le taux et les indications des césariennes en extrême urgence mais également le taux de conversion en anesthésie générale suite à un échec d'APM.",
+  "question": "Une césarienne code rouge est décidée pour suspicion d'acidose fœtale chez une parturiente sous péridurale ; à l'incision, l'anesthésie est manifestement insuffisante. Quelle conduite tenir ?",
+  "reference_answer": "Réaliser une anesthésie générale."
+ },
+ {
+  "cand_id": "g3e63d050f70a4774839a",
+  "kind": "table",
+  "source_text": "Age : 2 ans | Eveillé / 2 nd Task Force 1987 [1] / Moyenne \\pm DS : 95 \\pm 84 | Haque 2007 [4] / 50 ème percent / 2xâge* +65*ans : 89 | 5 ème percent = hypoTA / 2 x âge*+65*ans : 69 | De Graaf 2016 [10] / 50 ème percent = 0 SD : 83 | 15 ème percent = - 1SD : 72",
+  "question": "Chez un enfant de 2 ans éveillé, quelle valeur de pression artérielle systolique (formule 2 × âge + 65, 5e percentile) définit l'hypotension artérielle ?",
+  "reference_answer": "Une PAS de 69 mmHg (5e percentile, 2 × âge + 65) définit l'hypotension à 2 ans."
+ },
+ {
+  "cand_id": "gb96b3d27c279158ad3ef",
+  "kind": "reco",
+  "source_text": "Bien qu'il n'existe pas de démonstration d'un bénéfice à long terme, il est recommandé, en cas d'IVG chirurgicale, d'adopter une stratégie de prévention des complications infectieuses qui peut faire appel à :\n\n- - une antibiothérapie en cas d'antécédent connu d'infection génitale haute ;\n- - pour toute autre situation à risque de MST : large indication de prélèvement vaginal et/ou de recherche de *Chlamydiae trachomatis* par PCR sur les urines, suivi de traitement de la patiente et du (des) partenaire(s) en cas de positivité ;\n- - en l'absence de facteur de risque : les données de la littérature ont montré l'efficacité de l'utilisation des antibiotiques pour réduire la fièvre post-IVG mais il n'y a pas de données sur les effets bénéfiques à long terme des antibiotiques.",
+  "question": "Lors d'une IVG par méthode chirurgicale, quelle mesure de prévention infectieuse est préconisée chez une femme aux antécédents connus de salpingite ou d'infection génitale haute ?",
+  "reference_answer": "Une antibiothérapie est recommandée en cas d'antécédent connu d'infection génitale haute."
+ },
+ {
+  "cand_id": "gc6eabc0b647f3aa1afca",
+  "kind": "reco",
+  "source_text": "RP 3.13 – (accord fort) : il est recommandé d'anticiper et d'organiser la surveillance continue des patientes présentant ou susceptibles de présenter une ou plusieurs défaillances d'organe en rapport avec une pathologie obstétricale sévère ou avec une pathologie maternelle compliquée par la grossesse et d'orienter la patiente vers une unité de réanimation en cas de persistance d'une défaillance d'organe nécessitant une suppléance, d'apparition d'une défaillance multiviscérale ou de la mise en jeu du pronostic vital selon la convention établie entre chaque unité d'obstétrique et une unité de réanimation adulte, notamment si l'établissement où est située la maternité n'en dispose pas.\n\nRP 3.14 – (accord fort et disposition légale<sup>\\*)</sup>) : il est recommandé que cette convention précise le partage de dossier et de la\n\nfeuille de surveillance, la traçabilité des produits sanguins administrés, les critères et les conditions du transfert<sup>\\*</sup>.",
+  "question": "Chez une parturiente présentant une pathologie obstétricale sévère surveillée en maternité, dans quelles circonstances faut-il l'orienter vers une réanimation adulte, et avec quel niveau d'accord ?",
+  "reference_answer": "En cas de défaillance d'organe persistante nécessitant une suppléance, de défaillance multiviscérale ou de pronostic vital engagé, selon la convention maternité-réanimation (accord fort)."
+ },
+ {
+  "cand_id": "g3e964e64a0ac6da585eb",
+  "kind": "reco",
+  "source_text": "RP 1 – (accord fort et disposition légale\\*) : il est recommandé que chaque établissement de soins habilité à exercer l'obstétrique dispose des locaux et équipements matériels nécessaires à la réalisation des actes d'anesthésie-réanimation obstétricale répondant aux impératifs suivants dont certains sont réglementaires :\n\n- • un accès permanent à au moins une salle d'intervention dédiée à la chirurgie obstétricale d'urgence qui doit être contigüe (au même niveau en cas de création de nouvelle structure) au secteur de naissance ;\n- • un équipement conforme au décret n° 94\\_1050 du 5 décembre 1994 des salles d'accouchement pour l'analgésie et l'anesthésie\n\nréanimation obstétricales, fixe dans chaque salle d'accouchement et/ou sous forme d'un chariot mobile ;",
+  "question": "Dans une maternité, où doit se situer le bloc dédié aux interventions obstétricales urgentes (césarienne en urgence) par rapport aux salles d'accouchement ?",
+  "reference_answer": "Un accès permanent à au moins une salle dédiée, contigüe au secteur de naissance (au même niveau pour toute nouvelle structure) est recommandé (accord fort)."
+ },
+ {
+  "cand_id": "g822a50690730ee2ef6bc",
+  "kind": "reco",
+  "source_text": "Dans le cadre de la prévention multimodale des pneumonies associées aux soins, il faut privilégier l'association de mesures ayant un effet sur la morbidité des patients, notamment les durées de ventilation mécanique, d'hospitalisation en réanimation et sur la consommation d'antibiotique.\n\nPour les méthodes proposées ici, une diminution significative du risque de pneumonies associées aux soins et de la durée de ventilation mécanique et/ou de durée d'hospitalisation en réanimation a été reportée dans :\n\n- • une méta-analyse d'essais randomisés contrôlés comparant la ventilation non invasive sur la ventilation invasive [28], uneétude randomisée incluant des patients en postopératoire de chirurgie digestive [29] et deux méta-analyses centrées sur le sevrage de la ventilation mécanique des patients atteints d'une BPCO [30,31] ;",
+  "question": "En réanimation, quels types de mesures faut-il retenir prioritairement dans une stratégie multimodale de prévention des pneumonies acquises sous ventilation ?",
+  "reference_answer": "Il faut privilégier l'association de mesures ayant un effet sur la morbidité : durée de ventilation mécanique, durée de séjour en réanimation et consommation d'antibiotiques."
+ },
+ {
+  "cand_id": "g2f51f3362361053361b7",
+  "kind": "other",
+  "source_text": "L'objectif de ces recommandations formalisées d'experts est de produire un cadre facilitant la prise de décision pour les médecins exerçant en réanimation face à un patient suspect deTABLEAU I\n\n**Critères de définition d'une pneumonie**\n\n**Signes radiologiques**\n\nDeux clichés radiologiques successifs à partir desquels l'apparition d'un foyer de pneumonie est suspecté\n\nEn l'absence d'antécédents de cardiopathie ou de maladie pulmonaire sous-jacentes, un seul examen radiologique suffit\n\n**Et au moins un des signes suivants**\n\nTempérature corporelle > 38,3 °C sans autre cause\n\nLeucocytes < 4000/mm<sup>3</sup> ou ≥ 12 000/mm<sup>3</sup>\n\n**Et au moins deux des signes suivants**\n\nSécrétions purulentes\n\nToux ou dyspnée\n\nDésaturation ou besoin accru en oxygène ou nécessité d'assistance ventilatoire",
+  "question": "Un patient de réanimation sans cardiopathie ni pathologie pulmonaire sous-jacente présente un nouveau foyer sur une seule radiographie thoracique. Quels seuils de température et de leucocytes retenir comme critères de pneumonie ?",
+  "reference_answer": "Température > 38,3 °C sans autre cause, ou leucocytes < 4000/mm3 ou ≥ 12 000/mm3."
+ },
+ {
+  "cand_id": "gc03aaf37539dfd4b39a8",
+  "kind": "table",
+  "source_text": "| Prise en charge péri-opératoire du patient adulte devant bénéficier d'une résection hépatique / Champ 2. Stratégie d'optimisation peropératoire / 2.1. Choix de l'agent anesthésique | Col 2 | Col 3 |\n| --- | --- | --- |\n| R 2.1.1 | Chez les patients opérés d'une résection hépatique, il n'est pas recommandé de privilégier une modalité d'anesthésie générale (voie intraveineuse comparativement à inhalée) dans le but réduire la morbidité postopératoire (quelle que soit l'indication de la résection) ou d'améliorer la survie globale (dont la récurrence en contexte carcinologique).(recommandation faible). | 2 |\n| **Bolus de dexaméthasone** |  |  |\n| R 2.2.1 | Chez les patients opérés d'une résection hépatique, il est recommandé d'administrer en peropératoire un bolus de 8-10 mg de dexaméthasone pour réduire la morbidité postopératoire. (Recommandation faible) | 2 |",
+  "question": "Chez l'adulte opéré d'une hépatectomie, quelle dose de dexaméthasone injecter en bolus peropératoire pour limiter les complications après l'intervention, et avec quelle force ?",
+  "reference_answer": "Un bolus peropératoire de 8-10 mg de dexaméthasone (recommandation faible)."
+ },
+ {
+  "cand_id": "g332758e4559789a46e4e",
+  "kind": "reco",
+  "source_text": "Avis d'experts\n\nR12.5 – Chez l'enfant traumatisé crânien grave, il faut faire un CCT visant à maintenir une normothermie.\n\nAvis d'experts\n\nR12.6 – Chez l'enfant traumatisé crânien grave, il ne faut pas induire de CCT avec pour but d'obtenir une hypothermie thérapeutique (32-34 °C) pour améliorer le pronostic ou pour contrôler l'HTIC.\n\n(GRADE 1–) Accord FORT\n\nDéclaration de liens d'intérêts : les auteurs déclarent ne pas avoir de liens d'intérêts.[Figure : Blue square logo]",
+  "question": "Chez un enfant victime d'un traumatisme crânien grave, quelle cible de température viser, et une hypothermie induite est-elle indiquée pour contrôler l'hypertension intracrânienne ?",
+  "reference_answer": "Il faut maintenir une normothermie et ne pas induire d'hypothermie thérapeutique (32-34 °C), ni pour le pronostic ni pour contrôler l'HTIC."
+ },
+ {
+  "cand_id": "g1fcdf782860620a27a75",
+  "kind": "other",
+  "source_text": "Par ailleurs, une PPC spontanément élevée, supérieure à 90 mmHg a été associée à une aggravation du devenir neurologique. Il est possible qu'une PPC trop élevée aggrave l'œdème vasogénique post-traumatique, ce qui pourrait expliquer ces résultats [164].\n\nUne étude a comparé les résultats neurologiques dans deux centres situés dans 2 pays (Pays-Bas et Angleterre), l'un ayant pour objectif une PIC < 20 mmHg et une PPC > 60 mmHg comme objectif secondaire, l'autre ayant un objectif principal de PPC > 70 mmHg et une PIC < 25 mmHg comme objectif secondaire [180]. Les patients qui avaient une autorégulation cérébrale perturbée avaient un meilleur devenir avec le protocole basé sur la PIC (PPC basse). Les patients qui avaient uneautorégulation préservée avaient un meilleur devenir avec le protocole basé sur la PPC (PPC élevée) [180]. Dans une autre étude rétrospective, une PPC < 60 mm Hg était associée à un meilleur pronostic lorsque l'autorégulation était altérée [186]. Cette littérature révèle une large variabilité inter- et intra-individuelle du niveau de PPC optimale et appelle à une individualisation de l'objectif de PPC en fonction des résultats du monitoring multimodal.",
+  "question": "Un traumatisé crânien grave est hospitalisé en réanimation avec un monitorage multimodal (PIC, autorégulation cérébrale). Comment fixer l'objectif de pression de perfusion cérébrale ?",
+  "reference_answer": "L'objectif de PPC doit être individualisé selon les résultats du monitoring multimodal, compte tenu de la grande variabilité de la PPC optimale."
+ },
+ {
+  "cand_id": "gd1217ba2764d3311994e",
+  "kind": "reco",
+  "source_text": "L'étude SAFE [197], portant sur près de 7000 patients, a comparé l'administration de sérum salé à 0,9 % à celle d'albumine à 4 % chez des patients admis en réanimation pour des motifs variés et n'a pas retrouvé de différence en termes de mortalité ou de défaillance d'organes à 28 jours Toutefois, les traumatisés crâniens graves réanimés avec de l'albumine présentaient un taux de mortalité supérieur à ceux réanimés avec du sérum salé à 0,9 % (24,5 % vs 15,1 %, RR : 1,62, IC 95 % 1,12-2,34,  $p = 0,009$ ). Cette analyse en sous-groupe a conduit Myburgh et al. [198] à réaliser un suivi post-hoc sur 2 ans de 460 patients issus de l'étude SAFE (dont 318 traumatisés crâniens graves) ce qui a permis de montrer que l'administration d'albumine était associée à un surrisque de mortalité (respectivement 41,8 % vs 22,2 %, RR : 1,88, IC 95 % 1,31-2,7,  $p < 0,001$ ). Il est possible que ce résultat soit lié au caractère hypotonique de la présentation d'albumine utilisée. En cas de traumatisé crânien présentant un choc hémorragique, il est recommandé de ne pas utiliser d'albumine [199].",
+  "question": "Quel soluté de remplissage faut-il proscrire chez un traumatisé crânien grave en état de choc hémorragique ?",
+  "reference_answer": "Il est recommandé de ne pas utiliser d'albumine."
+ },
+ {
+  "cand_id": "g7efa49eea406c3678a28",
+  "kind": "reco",
+  "source_text": "En milieu intrahospitalier, face à une hypoxémie, les experts recommandent de délivrer une ventilation non invasive de type\n\nventilation spontanée avec aide inspiratoire et pression expiratoire positive (VSAI-PEP) après réalisation d'une tomodensitométrie et du drainage d'un pneumothorax lorsqu'il est indiqué, en l'absence de contre-indication à la VNI et dans un environnement disposant d'une surveillance continue (G1+).",
+  "question": "Chez un traumatisé thoracique hospitalisé qui devient hypoxémique, quelle modalité de ventilation non invasive utiliser, après quels préalables, et avec quel grade ?",
+  "reference_answer": "Une VSAI-PEP après tomodensitométrie et drainage d'un éventuel pneumothorax, sans contre-indication à la VNI et sous surveillance continue (G1+)."
+ },
+ {
+  "cand_id": "gb8871ff491d05e49db36",
+  "kind": "reco",
+  "source_text": "Le risque de récidive post-procédurale augmente aussi dans les situations où les anticoagulants ne peuvent pas être repris pendant plusieurs jours. Les experts suggèrent donc de discuter la mise en place pré-procédurale d'un filtre cave optionnel au cours du 2<sup>ème</sup> ou 3<sup>ème</sup> mois après une EP ou une TVP proximale si la reprise d'une anticoagulation à dose curative ne peut pas être envisagée dans les 72h post-procédurales (comme après certains actes de neurochirurgie, par exemple).L'essai PREPIC 1 avait montré que les filtres diminuèrent le risque d'EP mais s'associaient à une augmentation du nombre de récidives de TVP à distance, probablement par thrombose du filtre [41]. L'essai PREPIC 2 incluant 400 patients avec EP avait comparé une anticoagulation standard à une anticoagulation associée à un filtre, qui était retiré de manière systématique à trois mois [42]. La présence du filtre ne diminuait pas le nombre de récidives d'EP à trois et six mois, montrant que l'anticoagulation seule est suffisante, même dans une population à haut risque.",
+  "question": "Un patient ayant présenté une embolie pulmonaire il y a deux mois doit subir un geste invasif programmé après lequel l'anticoagulation curative ne pourra pas être reprise avant plusieurs jours. Quelle option préventive discuter ?",
+  "reference_answer": "Discuter la pose pré-procédurale d'un filtre cave optionnel si l'anticoagulation curative ne peut être reprise dans les 72 h post-procédurales."
+ },
+ {
+  "cand_id": "g571f916b70fb2a0586cb",
+  "kind": "table",
+  "source_text": "| Col 1 | Risque hémorragique faible | Risque hémorragique élevé # |\n| --- | --- | --- |\n|  |  | -Chirurgies par voies externes du larynx et de la trachée de l'enfant (résections anastomoses et plasties d'agrandissement) / -Angiofibromes nasopharyngés * / -Orbitomie par voie externe / -KTT / -Malformations lymphatiques / -Kystes et fistules branchiaux |",
+  "question": "Pour la gestion des anticoagulants avant un geste ORL programmé, dans quelle catégorie de risque de saignement se classe l'exérèse d'un angiofibrome du nasopharynx ?",
+  "reference_answer": "Elle est classée à risque hémorragique élevé."
+ },
+ {
+  "cand_id": "gc6d6192f7b53462c02dd",
+  "kind": "reco",
+  "source_text": "Le plasma thérapeutique est le seul produit capable d'apporter, entre autres, du facteur V, de la protéine S, et du plasminogène, car il n'existe pas de fraction purifiée stable de ces facteurs. Le plasma thérapeutique est donc logiquement indiqué s'il faut corriger spécifiquement un déficit en l'un de ces facteurs. Pour les autres facteurs, des fractions purifiées stables sont disponibles.\n\nIl convient de préciser que les déficits rares en facteurs de coagulation ne justifient *a priori* la transfusion de plasma thérapeutique que s'il existe un syndrome hémorragique ou dans la perspective d'un geste invasif.\n\nEn cas de déficit en un facteur de la coagulation pour lequel une préparation de facteur purifié existe mais sans possibilité d'obtention rapide du produit, il peut être licite d'apporter du plasma thérapeutique dans le cadre d'une situation d'urgence hémorragique (accord professionnel). La dose de plasma thérapeutique à transfuser est alors de 10 à 15 mL/kg de poids corporel.",
+  "question": "Un patient porteur d'un déficit en facteur de coagulation, pour lequel un concentré spécifique existe mais n'est pas disponible rapidement, présente une hémorragie grave. Quel produit sanguin administrer et à quelle posologie ?",
+  "reference_answer": "Du plasma thérapeutique peut être administré, à la dose de 10 à 15 mL/kg (accord professionnel)."
+ },
+ {
+  "cand_id": "g526e54165c42ca78bf63",
+  "kind": "other",
+  "source_text": "Les nouveau-nés nécessitant une transfusion de plasma durant un traitement de l'hyperbilirubinémie par photothérapie doivent être pris en charge au moyen de dispositifs de photothérapie n'émettant pas de rayonnements d'une longueur d'onde inférieure à 425 nm, afin d'éviter la potentialisation théorique d'une interaction entre la lumière UVA et l'amotosalen, pouvant conduire à un érythème.",
+  "question": "Un nouveau-né traité par photothérapie pour une hyperbilirubinémie doit recevoir du plasma traité par amotosalen (PFC-IA). Quelle précaution prendre concernant l'appareil de photothérapie ?",
+  "reference_answer": "Utiliser des dispositifs de photothérapie n'émettant pas de rayonnement de longueur d'onde inférieure à 425 nm."
+ },
+ {
+  "cand_id": "g3d773f127b3c64525678",
+  "kind": "reco",
+  "source_text": "La ponction lombaire (PL) n'a aucune indication lorsque l'HSA est visualisée sur le scanner cérébral. La PL n'est pas une urgence car il est préférable d'attendre un délai de 6 à 12 heures après l'hémorragie pour la réaliser. La raison en est qu'il faut un temps suffisant pour obtenir la lyse des globules rouges et la formation de bilirubine et d'oxyhémoglobine, permettant de montrer le caractère xanthochromique du liquide cérébrospinal (LCS) surnageant après centrifugation [47]. L'épreuve classique des trois tubes est inutile [48]. En effet, la xanthochromie du LCS peut aussi être retrouvée lorsque le taux de globules rouges est supérieur à 10 000/mm<sup>3</sup> lors d'une ponction traumatique, dans l'heure qui suit la ponction [49]. Il est donc important de traiter rapidement le LCS de ces patients par centrifugation pendant sept minutes à 10 000 tours/minute. La méthode de référence pour évaluer la présence de pigments dérivés de l'hémoglobine est la spec-\n\ntrophotométrie. Cependant, une étude réalisée en 2002 aux États-Unis a montré que 0,3 % seulement des laboratoires l'utilisaient [50].",
+  "question": "Lorsqu'une ponction lombaire est envisagée pour rechercher une hémorragie sous-arachnoïdienne, quel délai après le début du saignement faut-il idéalement respecter avant de la réaliser ?",
+  "reference_answer": "Il est préférable d'attendre 6 à 12 heures après l'hémorragie."
+ },
+ {
+  "cand_id": "g6584b0855243521ea739",
+  "kind": "table",
+  "source_text": "| Grade | Description clinique |\n| --- | --- |\n| 0 | Anévrisme non rompu |\n| 1 | Asymptomatique ou céphalée minimale |\n| 2 | Céphalée modérée à sévère, raideur de nuque |\n| 3 | Somnolence, confusion, déficit focal minimal |\n| 4 | Coma léger, déficit focal, troubles végétatifs |\n| 5 | Coma profond, moribond |",
+  "question": "Sur l'échelle de gravité clinique de l'hémorragie sous-arachnoïdienne graduée de 0 à 5, quel grade attribuer à un patient somnolent et confus avec un déficit focal minime ?",
+  "reference_answer": "Il s'agit d'un grade 3."
+ },
+ {
+  "cand_id": "g30a633099415cd42fdb3",
+  "kind": "other",
+  "source_text": "L'IRM conventionnelle (séquence Flair T2) est au moins aussi sensible pour l'identification du sang sous-arachnoïdien que le scanner. Elle n'apporte cependant pas plus d'information que le scanner à ce sujet [57].\n\n*L'IRM de diffusion (DWI) et de perfusion (PWI)* : les séquences de perfusion permettent une étude de la perfusion régionale relative ; la référence étant l'hémisphère contrôlatéral. Elles sont fondées sur l'étude du premier passage d'un bolus de gadolinium IV qui diminue le signal en T2\\*. Les cartographies de *time to peak* (TTP) et de temps de transit moyen (MTT) sont de bons indicateurs d'hypoperfusion alors que la cartographie du volume sanguin régional (rCBV) serait moins significative dans le vasospasme [58].",
+  "question": "Un patient en réanimation pour hémorragie sous-arachnoïdienne est suspect de vasospasme et bénéficie d'une IRM de perfusion. Quels paramètres de perfusion analyser en priorité pour détecter une hypoperfusion ?",
+  "reference_answer": "Les cartographies de time to peak (TTP) et de temps de transit moyen (MTT) ; le rCBV est moins contributif."
+ },
+ {
+  "cand_id": "g2b5dca4f8dcab2a9f869",
+  "kind": "other",
+  "source_text": "L'apport de l'échographie, par une visualisation de la proximité de l'extrémité de l'aiguille et du nerf ainsi que la réduction démontrée du risque de ponction vasculaire, suggère une meilleure sécurité pour la réalisation de l'ALR sous anesthésie générale [71]. Les données disponibles sont actuellement observationnelles et concernent entre autre l'ALR pédiatrique, mais confirment que la réalisation d'une ALR sous anesthésie générale n'est pas associée à une augmentation des risques [72]. Le référentiel SFAR sur l'échographie suggérait déjà une telle possibilité [73].",
+  "question": "Un patient doit bénéficier d'un bloc nerveux périphérique échoguidé et souhaite être endormi au préalable. Peut-on réaliser ce bloc sous anesthésie générale ?",
+  "reference_answer": "Oui : sous échoguidage, la réalisation d'une ALR sous anesthésie générale n'est pas associée à une augmentation des risques."
+ },
+ {
+  "cand_id": "ga7998a95924ce47cf4b2",
+  "kind": "reco",
+  "source_text": "« Question 14 : comment gérer les complications neurologiques des blocs périphériques des membres ? » En complément, les données actuelles permettent de formuler la conduite à tenir suivant concernant la suspicion de lésion neurologique en rapport avec une ALR-PN :\n\nUn examen neurologique précis doit être fait si la durée constatée du bloc dépasse la durée prévisible et/ou en cas de douleur neuropathique dans le territoire du bloc. Un avis par un neurologue doit alors être rapidement obtenu en cas de déficit incomplet, et neurochirurgien en cas de déficit complet. En cas de suspicion de lésion nerveuse secondaire au bloc, il est recommandé de réaliser un examen électrophysiologique par EMG :",
+  "question": "Après un bloc périphérique d'un membre, un patient présente un bloc anormalement prolongé avec un déficit moteur complet dans le territoire bloqué. Quel avis spécialisé obtenir rapidement et quel examen complémentaire demander ?",
+  "reference_answer": "Un avis neurochirurgical rapide (déficit complet) et un examen électrophysiologique par EMG."
+ },
+ {
+  "cand_id": "gcb7201d68bfd3c66882d",
+  "kind": "reco",
+  "source_text": "En outre, la toxicité et les effets secondaires de ces molécules ne sont pas nuls (tendinopathies, phototoxicité, hépatites, allongement du QT) ce qui a conduit à des mises en garde et des restrictions d'utilisation de la part de l'EMA (European Medicines Agency) et de l'ANSM (Agence Nationale de Sécurité du Médicament) [96-101].\n\nDans ces conditions, et en adéquation avec les recommandations de la SPILF (Société Française de Pathologie Infectieuse de Langue française), les recommandations suivantes ont été votées.\n\n**1- Il ne faut pas prescrire de fluoroquinolones (FQ) quand d'autres antibiotiques peuvent être utilisés (*Accord faible*).**\n\nNéanmoins, les FQ peuvent être utilisées dans les indications suivantes :\n\n- • légionelloses graves prouvées (en association avec un macrolide ou de la rifampicine) (*Accord faible*),\n- • infections osseuses et du pied diabétique APRES antibiogramme (*Accord faible*),\n- • prostatites APRES antibiogramme (*Accord fort*).\n\n**2- Il ne faut pas prescrire de FQ de façon répétée chez un même patient (prendre en compte les prescriptions antérieures de FQ dans les 6 mois précédents quelle qu'en soit l'indication) (*Accord fort*).**",
+  "question": "En réanimation, sur quelle période faut-il vérifier les traitements antérieurs par fluoroquinolone avant d'en represcrire chez le même malade, et quelle est la force de cet accord ?",
+  "reference_answer": "Il faut tenir compte des prescriptions de FQ des 6 mois précédents, quelle qu'en soit l'indication, pour éviter les prescriptions répétées (accord fort)."
+ },
+ {
+  "cand_id": "g3778b0a6af09dfa4dd5c",
+  "kind": "other",
+  "source_text": "Concernant la prévention de l'émergence de mutants résistants, une concentration résiduelle à plusieurs multiples de CMI est probablement l'objectif à atteindre [177-179]. En terme de toxicité (convulsions, cholestase, néphropathie interstitielle), compte tenu des doses souvent élevées des bêta-lactamines administrées et de l'imprévisibilité des concentrations obtenues chez un patient sévère, il peut être utile de doser les concentrations résiduelles [161]. Des études cliniques prospectives randomisées doivent être conduites pour démontrer un bénéfice - en termes d'efficacité clinique, de prévention de l'apparition de mutants résistants et de toxicité - du « monitoring » des concentrations sériques résiduelles des bêta-lactamines.**c) Certaines modalités d'administration permettent-elles de limiter la résistance (voies d'administration, posologie) ?**",
+  "question": "Un patient grave de réanimation reçoit une bêta-lactamine à forte posologie et présente des convulsions faisant suspecter une toxicité. Quelle conduite tenir pour adapter le traitement ?",
+  "reference_answer": "Il peut être utile de doser les concentrations résiduelles de la bêta-lactamine."
+ },
+ {
+  "cand_id": "gd56911820a0a15744c26",
+  "kind": "reco",
+  "source_text": "**R2.4. Les experts suggèrent d'utiliser la simulation pour améliorer les compétences en communication entre professionnels en soins critiques, en formation initiale et continue, médicale et paramédicale.**\n\n**Accord fort**\n\nL'utilisation de la simulation comme outils pour développer et améliorer la communication sécurisée en soins d'urgence vitale ou potentielle semble pertinente.\n\nLes études à notre disposition incluait le plus souvent un petit nombre de professionnels, mais montraient que la simulation est un outil efficace pour enseigner les compétences non techniques et notamment la communication au sein des équipes en situation de crise. Dans l'étude de Parsons *et al.* [89] sur 14 internes en situation de crise, on observait une amélioration significative des compétences non techniques avec une amélioration de la communication au sein de l'équipe, une meilleure résolution des problèmes et utilisation des ressources, et une meilleure performance en situation de crise.",
+  "question": "La simulation est-elle conseillée pour améliorer la communication entre soignants en soins critiques, auprès de quels publics et avec quel niveau d'accord ?",
+  "reference_answer": "Oui, les experts suggèrent de l'utiliser en formation initiale et continue, médicale et paramédicale (accord fort)."
+ },
+ {
+  "cand_id": "gb4774403759a289947d9",
+  "kind": "reco",
+  "source_text": "**Question : Quelles sont les particularités de la prévention de l'hypothermie chez l'enfant ?**\n\n*Expert : A-E. Colas (ADARPEF, Paris)*\n\n**R2.6.1 – Les experts suggèrent de réaliser un monitoring systématique de la température en péri-opératoire chez l'enfant pour détecter, prévenir et traiter au plus vite une hypothermie.**\n\n**Avis d'experts (Accord Fort)**\n\n**R2.6.2 – Les experts suggèrent de prévenir l'hypothermie des enfants pendant le transport vers le bloc opératoire, de débuter le réchauffement actif avant l'induction avec un dispositif adapté et un contrôle de la température de la salle, de poursuivre le réchauffement en continu pendant l'intervention et en post-opératoire (lit réchauffé ou couveuse maintenue à la température adéquate).**\n\n**Avis d'experts (Accord Fort)**",
+  "question": "Chez l'enfant opéré, à quel moment faut-il commencer le réchauffement actif pour prévenir l'hypothermie, et jusqu'à quand le maintenir ?",
+  "reference_answer": "Débuter le réchauffement actif avant l'induction et le poursuivre en continu en peropératoire et en postopératoire (avis d'experts, accord fort)."
+ },
+ {
+  "cand_id": "g659a6f7980ea5f93af09",
+  "kind": "table",
+  "source_text": "| Antiseptique | Prématuré | Nourrissons < 1 mois | A partir de 1 mois |\n| --- | --- | --- | --- |\n| Polyvidone iodée / Bétadine | Contre Indiqué | Contre Indiqué | Rinçage |\n| Alcool 70° | Contre Indiqué | Contre Indiqué | Précaution d'emploi |\n| Chlorhexidine 0,5% / alcoolique à 70% / Hibitane | Contre Indiqué | Contre Indiqué | Autorisé |\n| Chlorhexidine 0,25% / alcoolique à 4% / Biseptine | Autorisé | Autorisé | Autorisé |\n| Chlorée Amukine | Autorisé | Autorisé | Autorisé |",
+  "question": "Avant la pose d'une voie veineuse chez un nourrisson de 3 semaines, peut-on utiliser une chlorhexidine alcoolique à 0,5 % (Hibitane) pour l'antisepsie cutanée ?",
+  "reference_answer": "Non, elle est contre-indiquée avant 1 mois (et chez le prématuré) ; elle n'est autorisée qu'à partir de 1 mois."
+ },
+ {
+  "cand_id": "ga95d75ad6fe8fb541a44",
+  "kind": "other",
+  "source_text": "- - Les services de laboratoire et de radiologie doivent pouvoir répondre aux exigences de la population pédiatrique prise en charge dans l'établissement et l'expertise pédiatrique doit être disponible à tout moment, que ce soit au niveau du centre ou du réseau. - - La réalisation des examens d'hématologie, d'hémostase et de biochimie doit pouvoir se faire sur des micro-prélèvements, et le rendu des résultats doit tenir compte des particularités physiologiques aux différents âges de l'enfant. - - La prescription d'un bilan pré-opératoire doit respecter les recommandations de la SFAR 2012 [3]. La seule indication d'un bilan d'hémostase systématique avant un acte invasif chez l'enfant est l'absence d'acquisition de la marche. Dans toutes les autres situations, comme chez l'adulte, la prescription d'un bilan biologique pré-opératoire est exclusivement orientée par les antécédents personnels et familiaux, l'anamnèse et l'examen clinique, quelle que soit la nature de la chirurgie et la technique anesthésique [4-7].",
+  "question": "Un nourrisson de 10 mois qui ne marche pas encore, sans antécédent hémorragique personnel ni familial, est programmé pour une intervention chirurgicale. Faut-il prescrire un bilan d'hémostase préopératoire ?",
+  "reference_answer": "Oui : l'absence d'acquisition de la marche est la seule indication d'un bilan d'hémostase systématique chez l'enfant."
+ },
+ {
+  "cand_id": "gcf5aefb7a5425d025d76",
+  "kind": "reco",
+  "source_text": "**Question : Chez les patients admis en soins critiques pour pancréatite aigüe grave, quelle(s) méthode(s) est (sont) à utiliser pour faire le diagnostic d'infection de nécrose pancréatique ?**\n\n*Experts : Claire Roger (SFAR) et Céline Savoye-Collet (SFR)*\n\n**R3.2 – Chez les patients admis en soins critiques pour pancréatite aigüe grave, il est probablement recommandé de ne pas se limiter à l'examen clinique et à la mesure de la CRP, et de se servir de l'apport diagnostique du dosage de la procalcitonine et de la tomodensitométrie abdominale pour établir le diagnostic d'infection de nécrose pancréatique.**\n\n**GRADE 2+ (Accord FORT)**",
+  "question": "En soins critiques, chez un patient atteint de pancréatite aiguë grave, quels examens associer à la clinique et à la CRP pour affirmer l'infection de la nécrose, et avec quel grade ?",
+  "reference_answer": "Le dosage de la procalcitonine et la tomodensitométrie abdominale (GRADE 2+)."
+ },
+ {
+  "cand_id": "g394ecc098e4d21e40da0",
+  "kind": "table",
+  "source_text": "| Organe | Score / 0 | 1 | 2 | 3 | 4 |\n| --- | --- | --- | --- | --- | --- |\n| Poumon / ( PaO_2/FiO_2 )* | >400 | 301-400 | 201-300 | 101-200 | ≤100 |\n| Rein (créatinémie) | ≤134 | 134-169 | 170-310 | 311-439 | >439 |\n| Cardiovasculaire / (PAS en mmHg)** | >90 | <90, réponse / au remplissage / vasculaire | <90, pas de / réponse au / remplissage / vasculaire | <90, pH<7,3 | <90, pH<7,2 |",
+  "question": "Dans le score de défaillance d'organes utilisé au cours de la pancréatite aiguë, quel score respiratoire attribuer à un patient dont le rapport PaO2/FiO2 est de 250 ?",
+  "reference_answer": "Un score de 2 (PaO2/FiO2 entre 201 et 300)."
+ },
+ {
+  "cand_id": "gae027791784341a1d570",
+  "kind": "other",
+  "source_text": "En effet, selon certains travaux, ce seuil semble être associé à une meilleure évolution clinique [8]. L'anticoagulation du circuit extracorporel avec le citrate est potentiellement à privilégier, une étude observationnelle sur 103 patients rapportant une association entre anticoagulation au citrate et réduction de la mortalité en comparaison avec l'héparine (1% versus 11%) [9]. D'après les seules études observationnelles disponibles, les échanges plasmatiques réduisent la concentration en triglycérides mais il n'est pas démontré qu'ils réduisent la mortalité ni même les récidives [10]. Il reste néanmoins très difficile de comparer les cohortes de patients ayant eu des échanges plasmatiques versus ceux ayant eu un traitement médical standard, car les patients recevant des échanges plasmatiques sont en général plus graves. En somme, il semble pertinent de proposer les échanges plasmatiques après échec du traitement médical ou d'emblée en cas de pancréatite aigüe grave liée à une hypertriglycéridémie persistante sévère ou très sévère associée à une acidose hyperlactatémique et/ou à une ou plusieurs défaillances d'organes [11].",
+  "question": "Un patient en soins critiques pour une pancréatite aiguë sévère secondaire à une hypertriglycéridémie très sévère persistante présente une acidose lactique et une défaillance d'organe. Quelle place pour les échanges plasmatiques ?",
+  "reference_answer": "Les échanges plasmatiques peuvent être proposés d'emblée dans cette situation (ou après échec du traitement médical)."
+ }
+]

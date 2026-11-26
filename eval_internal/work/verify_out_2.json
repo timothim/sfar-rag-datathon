@@ -1,0 +1,433 @@
+[
+ {
+  "cand_id": "gcf361e9af2739ce43a9f",
+  "answer_in_source": true,
+  "unambiguous": true,
+  "self_contained": true,
+  "not_copied": true,
+  "clinically_sensible": true,
+  "corrected_answer": "",
+  "verdict": "keep",
+  "reason": "Le tableau source indique explicitement que seul le ticagrelor est un inhibiteur réversible du P2Y12 (clopidogrel et prasugrel irréversibles)."
+ },
+ {
+  "cand_id": "ge78b13400ed5e89af859",
+  "answer_in_source": true,
+  "unambiguous": true,
+  "self_contained": true,
+  "not_copied": true,
+  "clinically_sensible": true,
+  "corrected_answer": "",
+  "verdict": "keep",
+  "reason": "La source dit que la desmopressine est décevante avec les AAP récents et que chez des volontaires sous ticagrelor elle ne réduit pas le temps de saignement ni ne corrige les fonctions plaquettaires."
+ },
+ {
+  "cand_id": "gf4f5e8241ea472138bfc",
+  "answer_in_source": true,
+  "unambiguous": true,
+  "self_contained": true,
+  "not_copied": true,
+  "clinically_sensible": true,
+  "corrected_answer": "",
+  "verdict": "keep",
+  "reason": "R6.3 : il ne faut pas utiliser mannitol ni dopamine pour prévenir ou traiter une IRA, Grade 1-, accord fort ; réponse exacte et complète."
+ },
+ {
+  "cand_id": "g2a02d32160eb2887541e",
+  "answer_in_source": true,
+  "unambiguous": true,
+  "self_contained": true,
+  "not_copied": true,
+  "clinically_sensible": true,
+  "corrected_answer": "",
+  "verdict": "keep",
+  "reason": "Le tableau RIFLE donne pour le stade Injury une diurèse < 0,5 mL/kg/h pendant > 16 h."
+ },
+ {
+  "cand_id": "gb38ab5475679dc66d035",
+  "answer_in_source": true,
+  "unambiguous": true,
+  "self_contained": true,
+  "not_copied": true,
+  "clinically_sensible": true,
+  "corrected_answer": "",
+  "verdict": "keep",
+  "reason": "L'étude de Shaw (30 994 patients, chirurgie abdominale) associe le NaCl 0,9 % à plus de complications et d'EER (4,8 % vs 1 %) que les solutés balancés ; réponse conforme (données observationnelles)."
+ },
+ {
+  "cand_id": "g2e3ff5d3e091e5fb5f04",
+  "answer_in_source": true,
+  "unambiguous": false,
+  "self_contained": true,
+  "not_copied": true,
+  "clinically_sensible": true,
+  "corrected_answer": "",
+  "verdict": "drop",
+  "reason": "« Hors service de cardiologie » inclut le patient hospitalisé dans un autre service, pour lequel la source prévoit une relation directe avec la SCDI ou avec le SAMU : la réponse unique « SAMU-Centre 15 » n'est valable que pour l'appel extrahospitalier ; question ambiguë."
+ },
+ {
+  "cand_id": "g1fa665d53b3782891db2",
+  "answer_in_source": true,
+  "unambiguous": true,
+  "self_contained": true,
+  "not_copied": true,
+  "clinically_sensible": true,
+  "corrected_answer": "",
+  "verdict": "keep",
+  "reason": "La source suggère l'ONHD durant la phase d'apnée après préoxygénation au masque étanche chez les patients avec critères d'intubation difficile."
+ },
+ {
+  "cand_id": "g42624ba80bc36c8e0925",
+  "answer_in_source": true,
+  "unambiguous": true,
+  "self_contained": true,
+  "not_copied": true,
+  "clinically_sensible": true,
+  "corrected_answer": "",
+  "verdict": "keep",
+  "reason": "Les cinq caractéristiques d'une RMM de qualité (sélection des cas, collecte structurée, présentation synthétique pluridisciplinaire participative non culpabilisante, suivi des actions) sont explicitement listées."
+ },
+ {
+  "cand_id": "ga8f24201437a5600b429",
+  "answer_in_source": true,
+  "unambiguous": true,
+  "self_contained": true,
+  "not_copied": true,
+  "clinically_sensible": true,
+  "corrected_answer": "La bupivacaïne associée à la morphine est recommandée en première intention, mais les concentrations de bupivacaïne disponibles en France (5 mg/mL) ne permettent pas son emploi dans cette indication.",
+  "verdict": "keep",
+  "reason": "La source recommande bien la bupivacaïne + morphine en première intention si composante neuropathique, mais précise que les concentrations disponibles en France ne permettent pas cet emploi ; réponse complétée de cette réserve."
+ },
+ {
+  "cand_id": "g1b9a688e40e916106fc6",
+  "answer_in_source": true,
+  "unambiguous": true,
+  "self_contained": true,
+  "not_copied": true,
+  "clinically_sensible": true,
+  "corrected_answer": "",
+  "verdict": "keep",
+  "reason": "La source conclut que les preuves d'efficacité des corticoïdes péridurales sont controversées, avec incertitude sur volume/composition/concentration, et que l'intérêt de la voie transforaminale est aussi controversé."
+ },
+ {
+  "cand_id": "g762b901f1d2994228489",
+  "answer_in_source": false,
+  "unambiguous": false,
+  "self_contained": true,
+  "not_copied": true,
+  "clinically_sensible": true,
+  "corrected_answer": "",
+  "verdict": "drop",
+  "reason": "La source ne contient que l'argumentaire (étude de 400 enfants, étude contradictoire chez les > 6 ans) et non le texte de la recommandation ; le délai « dans les 30 minutes » est le protocole d'une étude, pas une préconisation attestée, et la population cible (âge) n'est pas précisée."
+ },
+ {
+  "cand_id": "g04ed16e84437b76e0f26",
+  "answer_in_source": true,
+  "unambiguous": false,
+  "self_contained": true,
+  "not_copied": true,
+  "clinically_sensible": true,
+  "corrected_answer": "",
+  "verdict": "drop",
+  "reason": "Question ouverte (« quelle conduite tenir ») admettant de nombreuses réponses correctes (techniques intermédiaires, guide échangeur, etc.) ; la référence est un énoncé de principes généraux difficilement évaluable de façon univoque."
+ },
+ {
+  "cand_id": "g6d7e10b60e750f150a7a",
+  "answer_in_source": true,
+  "unambiguous": true,
+  "self_contained": true,
+  "not_copied": true,
+  "clinically_sensible": true,
+  "corrected_answer": "",
+  "verdict": "keep",
+  "reason": "Réponse fidèle : ventilation au masque dès SpO2 < 95 %, FiO2 ≥ 0,8, faibles pressions idéalement < 15 cmH2O, avis d'experts."
+ },
+ {
+  "cand_id": "g24eb9400e506c646c3d5",
+  "answer_in_source": false,
+  "unambiguous": false,
+  "self_contained": true,
+  "not_copied": true,
+  "clinically_sensible": true,
+  "corrected_answer": "",
+  "verdict": "drop",
+  "reason": "L'extrait 2006 ne porte pas sur le délai de la chirurgie après pose de stent mais sur l'antiagrégant sous lequel opérer (« quel que soit le délai… sous aspirine ») ; le changement décrit sur le report au-delà du 6e mois compare deux sujets différents et n'est pas attesté comme évolution réelle."
+ },
+ {
+  "cand_id": "g1b4ad3d31046fdbdd025",
+  "answer_in_source": true,
+  "unambiguous": true,
+  "self_contained": true,
+  "not_copied": true,
+  "clinically_sensible": true,
+  "corrected_answer": "",
+  "verdict": "keep",
+  "reason": "2001 : ALR chez un patient éveillé ou sous sédation légère (bloc sous AG prive des signes d'alerte). 2016 (R5.2) : première intention éveillé/légèrement sédaté, mais bloc sous AG/ALR/sédation profonde possible après discussion s'il existe un bénéfice, échographie apportant probablement une sécurité supplémentaire. Changement réel attesté."
+ },
+ {
+  "cand_id": "gfa340eeba050ce0dc5de",
+  "answer_in_source": true,
+  "unambiguous": true,
+  "self_contained": true,
+  "not_copied": true,
+  "clinically_sensible": true,
+  "corrected_answer": "",
+  "verdict": "keep",
+  "reason": "2008 : coxibs possibles en tenant compte des facteurs de risque athérothrombotique et des CI Afssaps. 2016 : R3.2 ISCOX2 non recommandés si antécédents athérothrombotiques (G1-), R3.3 AINS-NS probablement non recommandés au-delà de 7 jours. Changement réel attesté."
+ },
+ {
+  "cand_id": "g13f53a210e8c1cadb208",
+  "answer_in_source": false,
+  "unambiguous": false,
+  "self_contained": true,
+  "not_copied": true,
+  "clinically_sensible": true,
+  "corrected_answer": "",
+  "verdict": "drop",
+  "reason": "Les énoncés de recommandation 2013 et 2019 (R2.1) sont identiques sur le fond (IVCT ou analyse génétique) ; la hiérarchie IVCT en première intention vient de l'argumentaire 2019 et l'absence de hiérarchie en 2013 n'est pas attestée par l'extrait (argumentaire 2013 non fourni). Le seul changement certain est la force (recommandé → suggèrent), ce que la référence n'isole pas."
+ },
+ {
+  "cand_id": "g518431a84972e17017d1",
+  "answer_in_source": true,
+  "unambiguous": true,
+  "self_contained": true,
+  "not_copied": true,
+  "clinically_sensible": true,
+  "corrected_answer": "",
+  "verdict": "keep",
+  "reason": "2000 : toute la gamme du 24 G au 14 G. 2023 : toutes les tailles entre 26 G et 16 G. Changement réel attesté par les deux textes."
+ },
+ {
+  "cand_id": "gdc5dedcf87a783097a14",
+  "answer_in_source": true,
+  "unambiguous": false,
+  "self_contained": true,
+  "not_copied": true,
+  "clinically_sensible": true,
+  "corrected_answer": "",
+  "verdict": "drop",
+  "reason": "Le texte 2010 traite l'ALR comme composante de l'analgésie multimodale en traumatologie, sans la positionner par rapport à la sédation pour un geste de réduction ; la question « place de l'ALR par rapport à la sédation » n'a donc pas de réponse 2010 attestée et le changement est partiellement construit."
+ },
+ {
+  "cand_id": "g4083a9904a41ce659936",
+  "answer_in_source": true,
+  "unambiguous": false,
+  "self_contained": false,
+  "not_copied": true,
+  "clinically_sensible": true,
+  "corrected_answer": "",
+  "verdict": "drop",
+  "reason": "Contextes non comparables : 2006 concerne la reconnaissance d'un état septique devant un tableau atypique (et l'extrait 2006 comporte aussi un score de triage pondéré, Tableau 13), 2025 concerne le patient ambulatoire et le risque de progression ; la question omet le cadre ambulatoire et le « changement » SIRS → score n'est pas univoque."
+ },
+ {
+  "cand_id": "g78a74d874a76bbb543f1",
+  "answer_in_source": true,
+  "unambiguous": true,
+  "self_contained": true,
+  "not_copied": true,
+  "clinically_sensible": true,
+  "corrected_answer": "",
+  "verdict": "keep",
+  "reason": "2002 : relais danaparoïde-AVK quand plaquettes > 100 G/L ; 2019 : quand plaquettes > 150 G/L (et AVK seulement une fois la numération corrigée > 150 G/L). Changement réel attesté."
+ },
+ {
+  "cand_id": "abst000",
+  "covered": false,
+  "reason": "Aucun passage ne traite du protoxyde d'azote en chirurgie de l'oreille moyenne/tympanoplastie (passages sur N2O obstétrical, environnemental, antibioprophylaxie ORL)."
+ },
+ {
+  "cand_id": "abst001",
+  "covered": false,
+  "reason": "Aucun passage sur la chirurgie laser laryngée, le risque d'incendie ou une FiO2 maximale."
+ },
+ {
+  "cand_id": "abst002",
+  "covered": false,
+  "reason": "Aucun passage ne compare TIVA et halogénés sur le saignement en chirurgie endoscopique des sinus (passages sur NVPO, environnement, durée de séjour)."
+ },
+ {
+  "cand_id": "abst003",
+  "covered": true,
+  "reason": "Doute : le passage [0] (antiplaquettaires 2018) discute le choix péribulbaire vs sous-ténonienne/topique en ophtalmologie (« la sous-ténonienne peut être préférée »), même si le motif est hémorragique et non la myopie forte."
+ },
+ {
+  "cand_id": "abst004",
+  "covered": false,
+  "reason": "Les passages évoquent la diffusion du N2O dans les cavités closes (chirurgie digestive) et son impact environnemental, mais rien sur les gaz intraoculaires après vitrectomie."
+ },
+ {
+  "cand_id": "abst005",
+  "covered": false,
+  "reason": "Atropine mentionnée seulement en association à la succinylcholine chez l'enfant < 3 ans ; strabisme cité uniquement comme facteur de risque de NVPO ; rien sur le réflexe oculocardiaque."
+ },
+ {
+  "cand_id": "abst006",
+  "covered": false,
+  "reason": "Aucun passage sur la craniotomie éveillée ni la technique asleep-awake-asleep."
+ },
+ {
+  "cand_id": "abst007",
+  "covered": false,
+  "reason": "Aucun passage sur la position assise en neurochirurgie ni le dépistage du FOP par ETO avant chirurgie de fosse postérieure."
+ },
+ {
+  "cand_id": "abst008",
+  "covered": false,
+  "reason": "Aucun passage sur le monitorage des potentiels évoqués moteurs peropératoires et ses contraintes anesthésiques (passages sur BIS/EEG et curarisation générale)."
+ },
+ {
+  "cand_id": "abst009",
+  "covered": false,
+  "reason": "Aucun passage sur l'assistance ventriculaire gauche ni la mesure de PA sous flux continu."
+ },
+ {
+  "cand_id": "abst010",
+  "covered": true,
+  "reason": "Le passage [4] (cardiopathies congénitales 2023) traite la prise en charge peropératoire de l'HTAP en chirurgie non cardiaque, dont le NO inhalé (~10 ppm)."
+ },
+ {
+  "cand_id": "abst011",
+  "covered": true,
+  "reason": "Le passage [1] (coronarien 2010) traite du rétrécissement aortique serré avant chirurgie non cardiaque (mortalité si non corrigé, valvuloplastie percutanée préopératoire)."
+ },
+ {
+  "cand_id": "abst012",
+  "covered": true,
+  "reason": "Doute : les passages [0] et [3] (blocs périmédullaires 2006) traitent l'hypotension et l'obstacle à l'éjection dans la cardiomyopathie hypertrophique obstructive, sans détail sur le vasopresseur."
+ },
+ {
+  "cand_id": "abst013",
+  "covered": false,
+  "reason": "Sténose du pylore citée seulement pour l'antibioprophylaxie et l'organisation ; aucun seuil de chlorémie/bicarbonates."
+ },
+ {
+  "cand_id": "abst014",
+  "covered": false,
+  "reason": "Aucun passage sur la neurotoxicité des agents anesthésiques chez le jeune enfant."
+ },
+ {
+  "cand_id": "abst015",
+  "covered": false,
+  "reason": "Aucun passage sur la drépanocytose ni la transfusion préopératoire chez l'enfant drépanocytaire."
+ },
+ {
+  "cand_id": "abst016",
+  "covered": false,
+  "reason": "Dexmédétomidine mentionnée seulement comme adjuvant locorégional (1 µg/kg) ; rien sur la prémédication intranasale."
+ },
+ {
+  "cand_id": "abst017",
+  "covered": false,
+  "reason": "Aucun passage sur la cœlioscopie pendant la grossesse ni la pression de pneumopéritoine/surveillance fœtale."
+ },
+ {
+  "cand_id": "abst018",
+  "covered": false,
+  "reason": "Aucun passage sur l'allaitement après anesthésie générale."
+ },
+ {
+  "cand_id": "abst019",
+  "covered": false,
+  "reason": "Aucun passage sur le donépézil ou les anticholinestérasiques centraux et la durée d'action des curares (le passage [0] concerne la myasthénie)."
+ },
+ {
+  "cand_id": "abst020",
+  "covered": false,
+  "reason": "TAVI cité uniquement pour l'antibioprophylaxie et la gestion des anticoagulants ; rien sur sédation vs AG."
+ },
+ {
+  "cand_id": "abst021",
+  "covered": true,
+  "reason": "Doute : le passage [3] (sujet âgé/FESF 2017) traite du monitorage NIRS chez le sujet âgé et de son absence d'effet démontré sur les complications y compris neurologiques (hors chirurgie cardiaque)."
+ },
+ {
+  "cand_id": "abst022",
+  "covered": false,
+  "reason": "Aucun passage sur l'interaction sugammadex-contraception orale."
+ },
+ {
+  "cand_id": "abst023",
+  "covered": true,
+  "reason": "Doute : le passage [1] (traitements chroniques 2009) traite directement de l'anesthésie chez le consommateur de cannabis (interactions, médicaments à éviter), même sans mention du propofol."
+ },
+ {
+  "cand_id": "abst024",
+  "covered": true,
+  "reason": "Les 10 passages de cette entrée ne mentionnent pas la myasthénie, mais d'autres passages du même fichier (Curarisation 2018 : argumentaire sur la myasthénie et les curares non dépolarisants, R8.11 sugammadex dans les maladies neuromusculaires dont la myasthénie) montrent que le corpus couvre le sujet ; par prudence covered=true."
+ },
+ {
+  "cand_id": "abst025",
+  "covered": true,
+  "reason": "Doute : le passage [0] (sédation en urgence 2010) mentionne le déficit en pseudocholinestérases exposant à une curarisation prolongée après succinylcholine, sans conduite à tenir détaillée."
+ },
+ {
+  "cand_id": "abst026",
+  "covered": false,
+  "reason": "Les passages traitent du SDRC uniquement sous l'angle des techniques locorégionales ; aucune mention des bisphosphonates."
+ },
+ {
+  "cand_id": "abst027",
+  "covered": true,
+  "reason": "Doute : les passages [2] et [5] (antalgiques ORL 2014) traitent de la capsaïcine 8 % (Qutenza) dans la douleur neuropathique focale, sans intervalle de renouvellement."
+ },
+ {
+  "cand_id": "abst028",
+  "covered": true,
+  "reason": "Les passages [1]/[2] (antalgiques ORL 2014) indiquent qu'au-delà de 180 mg/j d'équivalent morphine la prise en charge relève d'un avis spécialisé (douleur chronique non cancéreuse)."
+ },
+ {
+  "cand_id": "abst029",
+  "covered": true,
+  "reason": "Les passages [0]/[1] (HSA 2004) traitent la correction d'une hyponatrémie symptomatique (correction initiale rapide, soluté hypertonique, ≤ 8-10 mmol/L/j) ; le passage [8] donne une limite de 10 mmol/L/24 h."
+ },
+ {
+  "cand_id": "abst030",
+  "covered": true,
+  "reason": "Le passage [0] (insuffisance hépatique 2018, R2.1) traite directement de la NAC dans l'intoxication au paracétamol (sans attendre la paracétamolémie, quelle que soit sa valeur)."
+ },
+ {
+  "cand_id": "abst031",
+  "covered": false,
+  "reason": "Aucun passage sur l'intoxication aux bêtabloquants ni l'insulinothérapie euglycémique à haute dose."
+ },
+ {
+  "cand_id": "abst032",
+  "covered": true,
+  "reason": "Doute : les passages [1]/[6] (trachéotomie 2017) traitent de la ventilation mécanique dans le syndrome de Guillain-Barré (critères prédictifs de ventilation prolongée), sans critères d'intubation."
+ },
+ {
+  "cand_id": "abst033",
+  "covered": false,
+  "reason": "Altéplase mentionnée uniquement pour l'AVC ischémique ; rien sur la thrombolyse de l'embolie pulmonaire."
+ },
+ {
+  "cand_id": "abst034",
+  "covered": false,
+  "reason": "Phénobarbital traité uniquement dans l'état de mal épileptique ; rien sur le sevrage alcoolique/delirium tremens."
+ },
+ {
+  "cand_id": "abst035",
+  "covered": false,
+  "reason": "Érythromycine traitée uniquement comme prokinétique en nutrition entérale ; rien sur son usage avant endoscopie pour hémorragie digestive."
+ },
+ {
+  "cand_id": "abst036",
+  "covered": false,
+  "reason": "Alpha-bloquants mentionnés uniquement en urologie (rétention) ; aucun passage sur le phéochromocytome."
+ },
+ {
+  "cand_id": "abst037",
+  "covered": false,
+  "reason": "Octréotide mentionné uniquement pour l'hémorragie digestive du cirrhotique ; rien sur la tumeur carcinoïde."
+ },
+ {
+  "cand_id": "abst038",
+  "covered": false,
+  "reason": "Aucun passage sur la sismothérapie/ECT."
+ },
+ {
+  "cand_id": "abst039",
+  "covered": false,
+  "reason": "Aucun passage sur la ventilation unipulmonaire ni la CPAP sur le poumon non ventilé."
+ }
+]

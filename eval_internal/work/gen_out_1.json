@@ -1,0 +1,877 @@
+[
+ {
+  "anchor_id": "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972::2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0103_35ccca60",
+  "usable": true,
+  "question": "Chez un adulte colonisé devant subir une intervention urologique, lorsqu'une antibiothérapie préopératoire est décidée, quand faut-il la commencer et quelle durée totale viser ?",
+  "question_type": "open",
+  "reference_answer": "Elle débute 48 heures avant l'intervention et se poursuit au minimum jusqu'à J0 et au maximum 48 heures après, soit 3 à 5 jours au total (Grade C).",
+  "key_terms": [
+   "48 heures",
+   "3 à 5 jours"
+  ],
+  "gold_quote": "celle-ci sera débutée 48 heures avant le geste chirurgical et sera poursuivie au minimum à J0 et au maximum 48 heures après le geste, soit un total de 3 à 5 jours de traitement péri-opératoire (Grade C)",
+  "tags": [
+   "timing"
+  ]
+ },
+ {
+  "anchor_id": "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972::2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0021_cb801917",
+  "usable": false,
+  "question": "",
+  "question_type": "",
+  "reference_answer": "",
+  "key_terms": [],
+  "gold_quote": "",
+  "tags": []
+ },
+ {
+  "anchor_id": "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972::2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0086_03fe5fe9",
+  "usable": true,
+  "question": "Un patient a bénéficié d'une néphrolithotomie percutanée avec un ECBU préopératoire stérile, mais la culture du calcul extrait revient positive. Quelle conduite tenir pour l'antibiothérapie ?",
+  "question_type": "clinical_case",
+  "reference_answer": "Adapter l'antibiothérapie à la culture du calcul, car une culture de calcul positive augmente le risque infectieux même si l'ECBU était stérile.",
+  "key_terms": [
+   "culture du calcul"
+  ],
+  "gold_quote": "la culture de calcul positive est associée à une augmentation de l'incidence des infections même en cas d'ECBU préopératoire stérile. Cette incidence diminue quand l'antibiothérapie est adaptée à la culture du calcul",
+  "tags": [
+   "drug_choice"
+  ]
+ },
+ {
+  "anchor_id": "2002_86-civdccons_d0a5c8::2002_86-civdccons_d0a5c8__c0007_8be0ddcf",
+  "usable": true,
+  "question": "Un patient de réanimation en choc septique présente des troubles de l'hémostase. Quels critères biologiques faut-il réunir pour retenir le diagnostic de CIVD biologique ?",
+  "question_type": "clinical_case",
+  "reference_answer": "Une élévation des D-dimères associée à un critère majeur ou à deux critères mineurs de consommation.",
+  "key_terms": [
+   "D-dimères",
+   "un critère majeur",
+   "deux critères mineurs"
+  ],
+  "gold_quote": "Le diagnostic de CIVD biologique est retenu si les D-dimères sont augmentés et s'il existe un critère majeur ou deux critères mineurs de consommation",
+  "tags": [
+   "icu",
+   "threshold"
+  ]
+ },
+ {
+  "anchor_id": "2021_Proposition_20fiche_20TLC_20CAMR_20mars_202021_0ddb96::2021_Proposition_20fiche_20TLC_20CAMR_20mars_202021_0ddb96__c0004_c6d12c99",
+  "usable": true,
+  "question": "Vous menez une consultation d'anesthésie à distance par vidéo chez un patient programmé. Par quels moyens lui transmettre ordonnances et courriers à l'issue de l'échange ?",
+  "question_type": "clinical_case",
+  "reference_answer": "Les documents sont envoyés sur un espace sécurisé (HDS) ou par voie postale.",
+  "key_terms": [
+   "espace sécurisé (HDS)",
+   "voie postale"
+  ],
+  "gold_quote": "En fin de téléconsultation le patient reçoit les documents relevant de sa prise en charge (ordonnances, lettre d'adressage vers d'autres spécialistes, synthèse du parcours...). Ces éléments peuvent être envoyés sur un espace sécurisé (HDS) ou par voie postale.",
+  "tags": []
+ },
+ {
+  "anchor_id": "2006_2b_SFAR_texte-long_Ventilation-Non-Invasive-au-cours-del-insuffi_4c6fe6::2006_2b_SFAR_texte-long_Ventilation-Non-Invasive-au-cours-del-insuffi_4c6fe6__c0011_0c0a47a3",
+  "usable": true,
+  "question": "En insuffisance respiratoire aiguë de l'adulte, dans quelles situations la ventilation non invasive n'a pas fait la preuve d'un bénéfice et ne devrait probablement pas être tentée ?",
+  "question_type": "open",
+  "reference_answer": "Pneumopathie hypoxémiante, SDRA, IRA post-extubation et maladies neuromusculaires aiguës réversibles.",
+  "key_terms": [
+   "pneumopathie hypoxémiante",
+   "syndrome de détresse respiratoire aiguë",
+   "maladies neuromusculaires aiguës réversibles"
+  ],
+  "gold_quote": "la pneumopathie hypoxémiante, le syndrome de détresse respiratoire aiguë, le traitement de l'insuffisance respiratoire aiguë post extubation comme vu précédemment, enfin les maladies neuromusculaires aiguës réversibles",
+  "tags": [
+   "icu",
+   "contraindication"
+  ]
+ },
+ {
+  "anchor_id": "2006_2b_SFAR_texte-long_Ventilation-Non-Invasive-au-cours-del-insuffi_4c6fe6::2006_2b_SFAR_texte-long_Ventilation-Non-Invasive-au-cours-del-insuffi_4c6fe6__c0019_eb6fe677",
+  "usable": true,
+  "question": "Chez un patient sans antécédent cardiorespiratoire mis sous VNI pour une insuffisance respiratoire aiguë hypoxémique, quel rapport PaO2/FiO2 à la réévaluation précoce fait craindre un échec ?",
+  "question_type": "table",
+  "reference_answer": "Un rapport PaO2/FIO2 inférieur à 200 mmHg.",
+  "key_terms": [
+   "200 mmHg"
+  ],
+  "gold_quote": "| IRA hypoxémique sur cœur et poumons antérieurement sains | Age > 40 ans ; FR > 38 cycles/min ; Pneumopathie communautaire ; Sepsis ; IRA post-opératoire par complication chirurgicale | PaO 2 /FIO 2 < 200 mmHg |",
+  "tags": [
+   "icu",
+   "threshold"
+  ]
+ },
+ {
+  "anchor_id": "2006_2b_SFAR_texte-long_Ventilation-Non-Invasive-au-cours-del-insuffi_4c6fe6::2006_2b_SFAR_texte-long_Ventilation-Non-Invasive-au-cours-del-insuffi_4c6fe6__c0010_b287cc43",
+  "usable": true,
+  "question": "Un patient extubé la veille en réanimation développe une nouvelle détresse respiratoire. Quelle conduite tenir vis-à-vis d'une VNI de rattrapage ?",
+  "question_type": "clinical_case",
+  "reference_answer": "La VNI ne réduit pas le recours à la réintubation et s'associe à une surmortalité liée au retard de réintubation : il ne faut pas retarder la réintubation.",
+  "key_terms": [
+   "ré intubation"
+  ],
+  "gold_quote": "la VNI ne diminue pas la nécessité de ré intubation par rapport à un traitement standard <sup>[10]</sup>. Il existe même une mortalité plus élevée dans le groupe pris en charge par VNI, probablement par un délai de ré intubation plus long dans ce dernier groupe",
+  "tags": [
+   "icu",
+   "emergency"
+  ]
+ },
+ {
+  "anchor_id": "2012_2_AFAR_COURT_Bris-dentaires-perianesthesiques-copie_e84cfe::2012_2_AFAR_COURT_Bris-dentaires-perianesthesiques-copie_e84cfe__c0013_d0ed7dd0",
+  "usable": true,
+  "question": "Pour protéger les dents d'un patient à risque de bris dentaire lors de l'anesthésie, si l'on opte pour une gouttière, quel type faut-il conseiller ?",
+  "question_type": "open",
+  "reference_answer": "Une gouttière sur mesure plutôt qu'une gouttière standard, en traçant l'information dans le dossier.",
+  "key_terms": [
+   "sur mesure"
+  ],
+  "gold_quote": "il faut probablement recommander l'utilisation de gouttière sur mesure plutôt que de gouttière standard",
+  "tags": []
+ },
+ {
+  "anchor_id": "2012_2_AFAR_COURT_Bris-dentaires-perianesthesiques-copie_e84cfe::2012_2_AFAR_COURT_Bris-dentaires-perianesthesiques-copie_e84cfe__c0002_11240c22",
+  "usable": false,
+  "question": "",
+  "question_type": "",
+  "reference_answer": "",
+  "key_terms": [],
+  "gold_quote": "",
+  "tags": []
+ },
+ {
+  "anchor_id": "2012_2_AFAR_COURT_Bris-dentaires-perianesthesiques-copie_e84cfe::2012_2_AFAR_COURT_Bris-dentaires-perianesthesiques-copie_e84cfe__c0017_21715700",
+  "usable": true,
+  "question": "Lors de l'intubation d'un enfant, une dent de lait est totalement expulsée de son alvéole. Faut-il la remettre en place ?",
+  "question_type": "open",
+  "reference_answer": "Non, une dent temporaire complètement luxée ne doit pas être réimplantée chez l'enfant.",
+  "key_terms": [
+   "pas réimplanter",
+   "dent temporaire"
+  ],
+  "gold_quote": "Chez l'enfant, il ne faut pas réimplanter une dent temporaire en cas de luxation complète.",
+  "tags": [
+   "pediatric"
+  ]
+ },
+ {
+  "anchor_id": "2025_Fiches-simplifiees-19122025-_21fc82::2025_Fiches-simplifiees-19122025-_21fc82__c0007_4e0009cc",
+  "usable": true,
+  "question": "Chez un patient diabétique programmé pour une chirurgie, quelle attitude adopter si l'HbA1c atteint 10 % ?",
+  "question_type": "table",
+  "reference_answer": "Il faut différer l'intervention.",
+  "key_terms": [
+   "Différer"
+  ],
+  "gold_quote": "| Conduite à tenir | Différer | Avis Médecin Généraliste / Diabétologue | Intervention possible | Avis Médecin Généraliste / Diabétologue | Différer |",
+  "tags": [
+   "threshold"
+  ]
+ },
+ {
+  "anchor_id": "2025_Fiches-simplifiees-19122025-_21fc82::2025_Fiches-simplifiees-19122025-_21fc82__c0067_3ad5b711",
+  "usable": true,
+  "question": "Un diabétique sous schéma basal-bolus, hospitalisé pour une chirurgie de courte durée, présente une hyperglycémie avant le déjeuner. Comment administrer la correction insulinique ?",
+  "question_type": "clinical_case",
+  "reference_answer": "Par un analogue rapide de l'insuline en SC adapté à la glycémie, ajouté au bolus du repas (8h, 12h, 20h).",
+  "key_terms": [
+   "Analogue rapide",
+   "bolus du repas"
+  ],
+  "gold_quote": "Analogue rapide de l'insuline SC à adapter selon glycémie (**à additionner au bolus du repas à 8h, 12h, 20h**)",
+  "tags": [
+   "dosage",
+   "timing"
+  ]
+ },
+ {
+  "anchor_id": "2005_122-recosfdv0606_ce421b::2005_122-recosfdv0606_ce421b__c0023_7d97c787",
+  "usable": true,
+  "question": "En réanimation, lors d'une procédure collégiale de limitation thérapeutique chez un patient incapable d'exprimer sa volonté, quelles conditions doit remplir le médecin consultant ?",
+  "question_type": "open",
+  "reference_answer": "Il ne doit avoir aucun lien hiérarchique avec le praticien en charge (donc ni chef de service ni chef de pôle) et de préférence ne pas être impliqué dans les soins.",
+  "key_terms": [
+   "aucun lien de nature hiérarchique"
+  ],
+  "gold_quote": "Le praticien ne doit avoir aucun lien de nature hiérarchique avec le consultant. Ce dernier ne peut donc être son chef de service ou de pôle.",
+  "tags": [
+   "icu"
+  ]
+ },
+ {
+  "anchor_id": "2005_122-recosfdv0606_ce421b::2005_122-recosfdv0606_ce421b__c0027_09a06ab7",
+  "usable": true,
+  "question": "En réanimation, une décision d'arrêt des traitements vient d'être prise pour un patient inconscient. Que faut-il consigner dans le dossier médical et quelle est la portée de cette traçabilité ?",
+  "question_type": "clinical_case",
+  "reference_answer": "Les consultations réalisées et les motifs de la décision (avec argumentaire, étapes, avis des consultants, date et nom du décideur) doivent être inscrits : c'est une obligation réglementaire.",
+  "key_terms": [
+   "obligation réglementaire",
+   "motifs de la décision"
+  ],
+  "gold_quote": "L'inscription dans le dossier du patient des consultations auxquelles le médecin a procédé et des motifs de la décision est une obligation réglementaire",
+  "tags": [
+   "icu"
+  ]
+ },
+ {
+  "anchor_id": "2002_ReferentielcompetencesIDEReanimation_78b782::2002_ReferentielcompetencesIDEReanimation_78b782__c0019_a74550fe",
+  "usable": false,
+  "question": "",
+  "question_type": "",
+  "reference_answer": "",
+  "key_terms": [],
+  "gold_quote": "",
+  "tags": []
+ },
+ {
+  "anchor_id": "2002_ReferentielcompetencesIDEReanimation_78b782::2002_ReferentielcompetencesIDEReanimation_78b782__c0029_534c6f6b",
+  "usable": false,
+  "question": "",
+  "question_type": "",
+  "reference_answer": "",
+  "key_terms": [],
+  "gold_quote": "",
+  "tags": []
+ },
+ {
+  "anchor_id": "2025_RPP-Trauma-cranio-encephaliques-V1-finalisee_ea8aab::2025_RPP-Trauma-cranio-encephaliques-V1-finalisee_ea8aab__c0045_ea43e779",
+  "usable": true,
+  "question": "Un traumatisé crânien présente un hématome extradural de source veineuse avec des signes de gravité au scanner. L'évacuation chirurgicale est-elle systématique ?",
+  "question_type": "open",
+  "reference_answer": "Non, les experts suggèrent de discuter au cas par cas un traitement conservateur, même en présence de signes de gravité (avis d'experts, accord fort).",
+  "key_terms": [
+   "prise en charge conservatrice",
+   "au cas par cas"
+  ],
+  "gold_quote": "les experts suggèrent d'évaluer la balance bénéfice-risque d'une prise en charge conservatrice au cas par cas, y compris en présence de signe de gravité clinique ou radiologique",
+  "tags": [
+   "emergency"
+  ]
+ },
+ {
+  "anchor_id": "2025_RPP-Trauma-cranio-encephaliques-V1-finalisee_ea8aab::2025_RPP-Trauma-cranio-encephaliques-V1-finalisee_ea8aab__c0169_4faaafb0",
+  "usable": true,
+  "question": "Dans le score pronostique pédiatrique de traumatisme crânien combinant score moteur de Glasgow, pupilles, ISS et INR, combien de points rapporte un INR ≤ 1,3 ?",
+  "question_type": "table",
+  "reference_answer": "12 points.",
+  "key_terms": [
+   "12"
+  ],
+  "gold_quote": "| **Injury Severity Score (ISS)** |  |\n| ≥56 | 0 |\n| 41-55 | 1 |\n| 25-40 | 5 |\n| ≤24 | 10 |\n| **INR** |  |\n| ≥ 2,1 | 0 |\n| 1,4-2 | 6 |\n| ≤ 1,3 | 12 |",
+  "tags": [
+   "pediatric",
+   "threshold"
+  ]
+ },
+ {
+  "anchor_id": "2025_RPP-Trauma-cranio-encephaliques-V1-finalisee_ea8aab::2025_RPP-Trauma-cranio-encephaliques-V1-finalisee_ea8aab__c0021_c958f3ac",
+  "usable": false,
+  "question": "",
+  "question_type": "",
+  "reference_answer": "",
+  "key_terms": [],
+  "gold_quote": "",
+  "tags": []
+ },
+ {
+  "anchor_id": "2006_2_AFAR_Blocs-perimedullaires-chez-ladulte_c289cc::2006_2_AFAR_Blocs-perimedullaires-chez-ladulte_c289cc__c0257_e0e112d1",
+  "usable": true,
+  "question": "Quelles mesures d'hygiène sont recommandées lors de la pose d'un cathéter péridural chez l'adulte ?",
+  "question_type": "open",
+  "reference_answer": "Désinfection cutanée, gants pour l'opérateur, masque facial pour tout le personnel de la salle et habillage chirurgical en cas de cathéter (grade C).",
+  "key_terms": [
+   "masque facial",
+   "habillage chirurgical"
+  ],
+  "gold_quote": "ports de gants par l'opérateur et d'un masque facial pour tout le personnel de la salle d'intervention (Recommandations concernant l'hygiène en anesthésie. Sfar 1997), habillage chirurgical en cas de mise en place d'un cathéter (grade C)",
+  "tags": []
+ },
+ {
+  "anchor_id": "2006_2_AFAR_Blocs-perimedullaires-chez-ladulte_c289cc::2006_2_AFAR_Blocs-perimedullaires-chez-ladulte_c289cc__c0093_aeba1e8e",
+  "usable": true,
+  "question": "Quelle dose maximale de ropivacaïne ne pas dépasser pour une anesthésie péridurale chez l'adulte ?",
+  "question_type": "table",
+  "reference_answer": "225 à 300 mg, soit 3 à 4 mg/kg.",
+  "key_terms": [
+   "225–300",
+   "3–4 mg/kg"
+  ],
+  "gold_quote": "Col 1 : Ropivacaïne | Doses maximales (mg) : 225–300 (3–4 mg/kg) | Délai d'installation (bloc de 4 segments) [minute] : 10–20",
+  "tags": [
+   "dosage"
+  ]
+ },
+ {
+  "anchor_id": "2006_2_AFAR_Blocs-perimedullaires-chez-ladulte_c289cc::2006_2_AFAR_Blocs-perimedullaires-chez-ladulte_c289cc__c0236_693ab48c",
+  "usable": true,
+  "question": "Une patiente opérée sous rachianesthésie présente une hypotension artérielle qui ne répond que partiellement aux bolus d'éphédrine. Quelle conduite tenir ?",
+  "question_type": "clinical_case",
+  "reference_answer": "Administrer précocement un sympathomimétique d'action directe comme la phényléphrine ou l'adrénaline (grade C).",
+  "key_terms": [
+   "phényléphrine",
+   "adrénaline"
+  ],
+  "gold_quote": "inefficacité de l'éphédrine, l'administration d'agents sympathomimétiques d'action directe comme la phényléphrine ou l'adrénaline doit être précoce (*grade C*)",
+  "tags": [
+   "drug_choice"
+  ]
+ },
+ {
+  "anchor_id": "2010_2_SFAR_Monitorage-de-ladequation-profondeur-de-lanesthesie-a-par_33e093::2010_2_SFAR_Monitorage-de-ladequation-profondeur-de-lanesthesie-a-par_33e093__c0028_82187aaa",
+  "usable": true,
+  "question": "Quel intérêt peut-on attendre d'un monitorage EEG de la profondeur d'anesthésie chez un patient curarisé ?",
+  "question_type": "open",
+  "reference_answer": "Il pourrait permettre de détecter un sous- ou un surdosage anesthésique lorsque les signes cliniques sont masqués par les curares (avis d'experts).",
+  "key_terms": [
+   "sous- ou un surdosage"
+  ],
+  "gold_quote": "Les moniteurs de profondeur d'anesthésie pourraient permettre de détecter un sous- ou un surdosage anesthésique (avis d'experts), notamment lorsque les signes cliniques d'anesthésie sont modifiés par des traitements comme les curares",
+  "tags": []
+ },
+ {
+  "anchor_id": "2010_2_SFAR_Monitorage-de-ladequation-profondeur-de-lanesthesie-a-par_33e093::2010_2_SFAR_Monitorage-de-ladequation-profondeur-de-lanesthesie-a-par_33e093__c0014_3cf285bc",
+  "usable": true,
+  "question": "Quelle valeur d'index bispectral attend-on chez un patient anesthésié au sévoflurane à 0,5 CAM ?",
+  "question_type": "table",
+  "reference_answer": "Environ 45.",
+  "key_terms": [
+   "45"
+  ],
+  "gold_quote": "| Concentration CAM | Desflurane (Index Bisppectral) | Isoflurane (Index Bisppectral) | Sevoflurane (Index Bisppectral) |\n| --- | --- | --- | --- |\n| 0 | 100 | 100 | 100 |\n| 0,5 | 50 | 40 | 45 |",
+  "tags": [
+   "threshold"
+  ]
+ },
+ {
+  "anchor_id": "2010_2_SFAR_Monitorage-de-ladequation-profondeur-de-lanesthesie-a-par_33e093::2010_2_SFAR_Monitorage-de-ladequation-profondeur-de-lanesthesie-a-par_33e093__c0035_ff7e8c24",
+  "usable": true,
+  "question": "Vous anesthésiez un patient chez qui la réponse aux agents anesthésiques est réputée imprévisible. Quel apport peut avoir un moniteur de profondeur d'anesthésie ?",
+  "question_type": "clinical_case",
+  "reference_answer": "Il peut aider à affiner le raisonnement et à détecter plus facilement un sous- ou un surdosage anesthésique.",
+  "key_terms": [
+   "sous- et le surdosage"
+  ],
+  "gold_quote": "Les moniteurs de profondeur de l'anesthésie pourraient être utiles pour affiner le raisonnement médical, en particulier pour les patients pour lesquels la relation dose - concentration - effets des médicaments anesthésiques est inhabituelle.\n- •Ceci peut permettre de détecter plus facilement le sous- et le surdosage anesthésique dans ces populations de patients.",
+  "tags": []
+ },
+ {
+  "anchor_id": "2025_RFE-analgesie-obstetricale-texte-court_51af4c::2025_RFE-analgesie-obstetricale-texte-court_51af4c__c0027_3c3d1de2",
+  "usable": false,
+  "question": "",
+  "question_type": "",
+  "reference_answer": "",
+  "key_terms": [],
+  "gold_quote": "",
+  "tags": []
+ },
+ {
+  "anchor_id": "2025_RFE-analgesie-obstetricale-texte-court_51af4c::2025_RFE-analgesie-obstetricale-texte-court_51af4c__c0041_e102ba1b",
+  "usable": false,
+  "question": "",
+  "question_type": "",
+  "reference_answer": "",
+  "key_terms": [],
+  "gold_quote": "",
+  "tags": []
+ },
+ {
+  "anchor_id": "2025_RFE-analgesie-obstetricale-texte-court_51af4c::2025_RFE-analgesie-obstetricale-texte-court_51af4c__c0150_67ce8851",
+  "usable": false,
+  "question": "",
+  "question_type": "",
+  "reference_answer": "",
+  "key_terms": [],
+  "gold_quote": "",
+  "tags": []
+ },
+ {
+  "anchor_id": "2014_2_REANIMATION_epuration-extrarenale-en-reanimation-adulte-et-ped_3d36e4::2014_2_REANIMATION_epuration-extrarenale-en-reanimation-adulte-et-ped_3d36e4__c0072_47b7502a",
+  "usable": true,
+  "question": "En hémodiafiltration continue en post-dilution, quelle fraction de filtration ne faut-il pas dépasser et sur quel paramètre agir ?",
+  "question_type": "open",
+  "reference_answer": "Ajuster le débit sanguin pour maintenir une fraction de filtration inférieure à 25 % (avis d'experts, accord fort).",
+  "key_terms": [
+   "25 %",
+   "débit sanguin"
+  ],
+  "gold_quote": "3.4.3 En hémodifiltration réalisée en post-dilution, il faut ajuster le débit sanguin de façon à garder une fraction de filtration inférieure à 25 %. (Avis d'experts) Accord fort",
+  "tags": [
+   "icu",
+   "threshold"
+  ]
+ },
+ {
+  "anchor_id": "2014_2_REANIMATION_epuration-extrarenale-en-reanimation-adulte-et-ped_3d36e4::2014_2_REANIMATION_epuration-extrarenale-en-reanimation-adulte-et-ped_3d36e4__c0055_234ef157",
+  "usable": false,
+  "question": "",
+  "question_type": "",
+  "reference_answer": "",
+  "key_terms": [],
+  "gold_quote": "",
+  "tags": []
+ },
+ {
+  "anchor_id": "2014_2_REANIMATION_epuration-extrarenale-en-reanimation-adulte-et-ped_3d36e4::2014_2_REANIMATION_epuration-extrarenale-en-reanimation-adulte-et-ped_3d36e4__c0106_09a56e74",
+  "usable": true,
+  "question": "Chez un nourrisson en postopératoire de chirurgie cardiaque nécessitant une déplétion hydrique, peut-on recourir à la dialyse péritonéale ?",
+  "question_type": "open",
+  "reference_answer": "Oui, la dialyse péritonéale est possible dans cette indication du fait de sa facilité d'utilisation (accord faible).",
+  "key_terms": [
+   "dialyse péritonéale"
+  ],
+  "gold_quote": "3.2.1 En pédiatrie et chez le nouveau-né, il est possible de faire de la dialyse péritonéale, en particulier en période postopératoire de chirurgie cardiaque à but de déplétion, en raison de sa facilité d'utilisation. Accord faible",
+  "tags": [
+   "pediatric",
+   "icu"
+  ]
+ },
+ {
+  "anchor_id": "2026_RFE-LAT-final-mai-2026-_a26946::2026_RFE-LAT-final-mai-2026-_a26946__c0207_6cf30ae1",
+  "usable": true,
+  "question": "En réanimation, quelle mesure concernant les soignants est proposée pour limiter les conflits avec les familles des patients ?",
+  "question_type": "open",
+  "reference_answer": "Former l'équipe médico-soignante à la communication (avis d'experts, accord fort).",
+  "key_terms": [
+   "communication"
+  ],
+  "gold_quote": "En service de soins critiques, les experts suggèrent de former l'équipe médico-soignante à la communication pour permettre de prévenir les conflits entre proches et équipes médico-soignantes.",
+  "tags": [
+   "icu"
+  ]
+ },
+ {
+  "anchor_id": "2026_RFE-LAT-final-mai-2026-_a26946::2026_RFE-LAT-final-mai-2026-_a26946__c0238_7459e358",
+  "usable": true,
+  "question": "Après une décision de limitation ou d'arrêt des thérapeutiques en soins critiques, quelle démarche adopter envers les proches et avec quel niveau de recommandation ?",
+  "question_type": "table",
+  "reference_answer": "Utiliser une stratégie d'accompagnement structurée (interactions proactives avec l'équipe et/ou supports de communication), GRADE 1.",
+  "key_terms": [
+   "stratégie d'accompagnement structurée",
+   "GRADE 1"
+  ],
+  "gold_quote": "il est recommandé d'utiliser une stratégie d'accompagnement structurée après une décision d'arrêt et/ou limitation de traitements, incluant des interactions proactives avec l'équipe soignante et/ou des supports de communication, pour améliorer la qualité des soins. | GRADE 1 |",
+  "tags": [
+   "icu"
+  ]
+ },
+ {
+  "anchor_id": "2026_RFE-LAT-final-mai-2026-_a26946::2026_RFE-LAT-final-mai-2026-_a26946__c0152_530230ef",
+  "usable": true,
+  "question": "Au terme d'une procédure collégiale aboutissant à une limitation des traitements en réanimation, quels points faut-il vérifier ensuite ?",
+  "question_type": "clinical_case",
+  "reference_answer": "Information et accompagnement de la personne de confiance et des proches, information de l'équipe soignante et traçabilité complète de la procédure dans le dossier.",
+  "key_terms": [
+   "personne de confiance",
+   "tracée dans le dossier médical"
+  ],
+  "gold_quote": "La personne de confiance et la famille et/ou les proches ont-ils été informés de la décision et accompagnés ?\n- L'équipe soignante médicale et paramédicale a-t-elle été informée de la décision ?\n- L'ensemble de la procédure collégiale a-t-elle été clairement tracée dans le dossier médical (notamment les motifs de la décision) ?",
+  "tags": [
+   "icu"
+  ]
+ },
+ {
+  "anchor_id": "2009_2b_AFAR_Contrele-de-la-glycemie-en-reanimation-et-en-anesthesie__5f7048::2009_2b_AFAR_Contrele-de-la-glycemie-en-reanimation-et-en-anesthesie__5f7048__c0026_e86bbfb3",
+  "usable": true,
+  "question": "Chez un patient opéré considéré à risque sur le plan glycémique, faut-il contrôler la glycémie pendant l'intervention et au réveil ?",
+  "question_type": "open",
+  "reference_answer": "Il faut probablement la mesurer en peropératoire lors des interventions à risque, et réaliser une mesure en SSPI chez les patients à risque.",
+  "key_terms": [
+   "SSPI"
+  ],
+  "gold_quote": "Il faut probablement mesurer la glycémie peropératoire au cours des interventions à risque (NGP faible) (*accord fort*).\n\nChez les patients à risque, il faut réaliser une mesure de glycémie durant le séjour en salle de surveillance post-interventionnelle (SSPI).",
+  "tags": []
+ },
+ {
+  "anchor_id": "2009_2b_AFAR_Contrele-de-la-glycemie-en-reanimation-et-en-anesthesie__5f7048::2009_2b_AFAR_Contrele-de-la-glycemie-en-reanimation-et-en-anesthesie__5f7048__c0019_6c2e313f",
+  "usable": false,
+  "question": "",
+  "question_type": "",
+  "reference_answer": "",
+  "key_terms": [],
+  "gold_quote": "",
+  "tags": []
+ },
+ {
+  "anchor_id": "2009_2b_AFAR_Contrele-de-la-glycemie-en-reanimation-et-en-anesthesie__5f7048::2009_2b_AFAR_Contrele-de-la-glycemie-en-reanimation-et-en-anesthesie__5f7048__c0029_ca1ea5b2",
+  "usable": true,
+  "question": "En réanimation, quel type de protocole d'insulinothérapie doit être abandonné ?",
+  "question_type": "open",
+  "reference_answer": "Les protocoles statiques qui fixent le débit d'insuline sur la seule dernière glycémie (NGP modéré, accord fort).",
+  "key_terms": [
+   "statiques"
+  ],
+  "gold_quote": "Il faut abandonner les protocoles de contrôle glycémique statiques qui déterminent le débit d'insuline uniquement à partir de la glycémie la plus récente (NGP modéré) (*accord fort*).",
+  "tags": [
+   "icu"
+  ]
+ },
+ {
+  "anchor_id": "2014_2_AFAR_Rehabilitation-rapide-apres-une-chirurgie-colorectale-pro_84aad5::2014_2_AFAR_Rehabilitation-rapide-apres-une-chirurgie-colorectale-pro_84aad5__c0053_7f306c1e",
+  "usable": true,
+  "question": "Après une colectomie programmée dans un programme de réhabilitation, faut-il maintenir une aspiration gastrique par sonde en postopératoire ?",
+  "question_type": "open",
+  "reference_answer": "Non, il n'est pas recommandé de laisser une sonde nasogastrique (GRADE 1–, accord fort).",
+  "key_terms": [
+   "pas recommandé",
+   "sonde nasogastrique"
+  ],
+  "gold_quote": "Il n'est pas recommandé de laisser une sonde nasogastrique après une chirurgie colorectale. (GRADE 1–) Accord Fort",
+  "tags": []
+ },
+ {
+  "anchor_id": "2014_2_AFAR_Rehabilitation-rapide-apres-une-chirurgie-colorectale-pro_84aad5::2014_2_AFAR_Rehabilitation-rapide-apres-une-chirurgie-colorectale-pro_84aad5__c0091_b3667141",
+  "usable": true,
+  "question": "Pour l'analgésie après chirurgie colorectale laparoscopique en réhabilitation améliorée, quelle technique privilégier et laquelle éviter ?",
+  "question_type": "table",
+  "reference_answer": "Privilégier la lidocaïne intraveineuse continue ; ne pas utiliser la péridurale thoracique.",
+  "key_terms": [
+   "lidocaïne",
+   "analgésie péridurale thoracique"
+  ],
+  "gold_quote": "Paramètres : Analgésie postopératoire : laparoscopie | Recommandations principales : Oui : administration intraveineuse continue de lidocaïne / Non : analgésie péridurale thoracique | Recommandations secondaires : 1) Irrigation pariétale / Ou / 2) Le bloc dans le plan du muscle transverse de l'abdomen",
+  "tags": [
+   "drug_choice"
+  ]
+ },
+ {
+  "anchor_id": "2014_2_AFAR_Rehabilitation-rapide-apres-une-chirurgie-colorectale-pro_84aad5::2014_2_AFAR_Rehabilitation-rapide-apres-une-chirurgie-colorectale-pro_84aad5__c0027_f3d0476a",
+  "usable": false,
+  "question": "",
+  "question_type": "",
+  "reference_answer": "",
+  "key_terms": [],
+  "gold_quote": "",
+  "tags": []
+ },
+ {
+  "anchor_id": "2004_2_AFAR_Pratique-des-anesthesies-locales-et-locoregionales-par-de_2ac61d::2004_2_AFAR_Pratique-des-anesthesies-locales-et-locoregionales-par-de_2ac61d__c0027_c252b3a6",
+  "usable": true,
+  "question": "Aux urgences, lors d'une anesthésie locale ou locorégionale, pour quels blocs l'adjonction d'adrénaline à l'anesthésique local est-elle contre-indiquée ?",
+  "question_type": "open",
+  "reference_answer": "Les blocs de la face, les blocs interdigitaux et le bloc pénien.",
+  "key_terms": [
+   "face",
+   "interdigitaux",
+   "pénien"
+  ],
+  "gold_quote": "Pour minimiser les risques de toxicité systémique, il faut impérativement limiter les doses injectées, utiliser des solutions adrénalinées en l'absence de contre-indications (les contre-indications étant les blocs de la face, interdigitaux et pénien) et préférer les agents les moins toxiques (Tableau 4).",
+  "tags": [
+   "emergency",
+   "contraindication"
+  ]
+ },
+ {
+  "anchor_id": "2004_2_AFAR_Pratique-des-anesthesies-locales-et-locoregionales-par-de_2ac61d::2004_2_AFAR_Pratique-des-anesthesies-locales-et-locoregionales-par-de_2ac61d__c0054_df9172d1",
+  "usable": true,
+  "question": "Au cours d'une ALR réalisée aux urgences, un patient présente une syncope vagale avec bradycardie. Quelle dose d'atropine IV administrer ?",
+  "question_type": "table",
+  "reference_answer": "Atropine intraveineuse à 20 µg/kg après les mesures posturales et l'oxygène.",
+  "key_terms": [
+   "atropine",
+   "20 µg/kg"
+  ],
+  "gold_quote": "1) Arrêt de la stimulation douloureuse, mise en position couchée, stimulation du patient, surélévation des membres inférieurs / 2) Oxygène à 100 % / 3) Administration intraveineuse d'atropine (20 µg/kg)",
+  "tags": [
+   "dosage",
+   "emergency"
+  ]
+ },
+ {
+  "anchor_id": "2004_2_AFAR_Pratique-des-anesthesies-locales-et-locoregionales-par-de_2ac61d::2004_2_AFAR_Pratique-des-anesthesies-locales-et-locoregionales-par-de_2ac61d__c0064_9ec388b9",
+  "usable": true,
+  "question": "Un médecin urgentiste s'apprête à réaliser un bloc au poignet pour une plaie de la main. Quel matériel les experts conseillent-ils et quelle précaution s'y rattache ?",
+  "question_type": "clinical_case",
+  "reference_answer": "Utiliser un neurostimulateur, entretenu et vérifié avant chaque utilisation.",
+  "key_terms": [
+   "neurostimulateur"
+  ],
+  "gold_quote": "Lorsqu'un neurostimulateur est utilisé (ce que recommandent les experts pour les blocs distaux des membres (poignet, chevilles), il doit faire l'objet d'une maintenance et être vérifié avant chaque utilisation",
+  "tags": [
+   "emergency"
+  ]
+ },
+ {
+  "anchor_id": "2001_2_SFAR_Sevrage-de-la-ventilation-mecanique_edbac5::2001_2_SFAR_Sevrage-de-la-ventilation-mecanique_edbac5__c0021_88456ed0",
+  "usable": true,
+  "question": "Lors d'une épreuve de sevrage de la ventilation mécanique réalisée en aide inspiratoire, quel niveau d'aide faut-il régler ?",
+  "question_type": "open",
+  "reference_answer": "Un faible niveau d'aide inspiratoire, de l'ordre de 7 cmH2O.",
+  "key_terms": [
+   "7 cm"
+  ],
+  "gold_quote": "L'épreuve de VS peut être menée sur une pièce en T ou en utilisant un faible niveau d'aide inspiratoire (AI) de l'ordre de 7 cm H<sub>2</sub>O",
+  "tags": [
+   "icu",
+   "threshold"
+  ]
+ },
+ {
+  "anchor_id": "2001_2_SFAR_Sevrage-de-la-ventilation-mecanique_edbac5::2001_2_SFAR_Sevrage-de-la-ventilation-mecanique_edbac5__c0037_d77b3011",
+  "usable": true,
+  "question": "Un patient ventilé après une chirurgie abdominale majeure devient candidat au sevrage. Quelles particularités prendre en compte ?",
+  "question_type": "clinical_case",
+  "reference_answer": "Une dysfonction diaphragmatique postopératoire transitoire et la douleur, qui doit être traitée ; ces patients ont le plus faible taux d'échec d'extubation.",
+  "key_terms": [
+   "dysfonction diaphragmatique",
+   "douleur"
+  ],
+  "gold_quote": "Ils sont assimilés à la population générale hormis l'existence en chirurgie thoracique et abdominale, d'une dysfonction diaphragmatique postopératoire transitoire et de la douleur, qui doit être traitée [b, 2]. Ces patients ont le taux d'échec d'extubation le plus faible [b].",
+  "tags": [
+   "icu"
+  ]
+ },
+ {
+  "anchor_id": "2015_2_AFAR_utilisation-de-lechographie-lors-de-la-mise-en-place-des-_00a54f::2015_2_AFAR_utilisation-de-lechographie-lors-de-la-mise-en-place-des-_00a54f__c0025_61b9c1e3",
+  "usable": true,
+  "question": "Chez l'adulte dont la pose d'une voie veineuse périphérique s'annonce difficile, faut-il recourir au guidage échographique ?",
+  "question_type": "open",
+  "reference_answer": "Oui, la ponction échoguidée est probablement recommandée plutôt que le repérage anatomique (GRADE 2+).",
+  "key_terms": [
+   "échoguidée",
+   "GRADE 2+"
+  ],
+  "gold_quote": "Il est probablement recommandé d'utiliser une technique de ponction échoguidée par rapport à une technique utilisant le repérage anatomique lors de la mise en place a priori difficile d'un cathéter veineux périphérique chez l'adulte (GRADE 2+).",
+  "tags": []
+ },
+ {
+  "anchor_id": "2015_2_AFAR_utilisation-de-lechographie-lors-de-la-mise-en-place-des-_00a54f::2015_2_AFAR_utilisation-de-lechographie-lors-de-la-mise-en-place-des-_00a54f__c0013_db8f0489",
+  "usable": false,
+  "question": "",
+  "question_type": "",
+  "reference_answer": "",
+  "key_terms": [],
+  "gold_quote": "",
+  "tags": []
+ },
+ {
+  "anchor_id": "2015_2_AFAR_utilisation-de-lechographie-lors-de-la-mise-en-place-des-_00a54f::2015_2_AFAR_utilisation-de-lechographie-lors-de-la-mise-en-place-des-_00a54f__c0034_454bea77",
+  "usable": true,
+  "question": "Chez un enfant au capital veineux médiocre, quelle technique de pose de voie veineuse périphérique privilégier ?",
+  "question_type": "open",
+  "reference_answer": "La ponction échoguidée, probablement recommandée plutôt que le repérage anatomique ou la palpation (GRADE 2+).",
+  "key_terms": [
+   "échoguidée",
+   "GRADE 2 +"
+  ],
+  "gold_quote": "Il est probablement recommandé d'utiliser une technique de ponction échoguidée par rapport à une technique utilisant le repérage anatomique ou la palpation lors de la mise en place a priori difficile d'un cathéter veineux périphérique chez l'enfant (GRADE 2 +).",
+  "tags": [
+   "pediatric"
+  ]
+ },
+ {
+  "anchor_id": "2009_2_AFAR_Prise-en-charge-anesthesique-des-patients-en-hospitalisat_038f21::2009_2_AFAR_Prise-en-charge-anesthesique-des-patients-en-hospitalisat_038f21__c0015_2e94dc2f",
+  "usable": true,
+  "question": "En chirurgie ambulatoire, peut-on prescrire une prémédication avant l'intervention ?",
+  "question_type": "open",
+  "reference_answer": "Oui, une prémédication anxiolytique et/ou analgésique peut être prescrite.",
+  "key_terms": [
+   "prémédication anxiolytique"
+  ],
+  "gold_quote": "26. Il est possible de prescrire une prémédication anxiolytique et/ou analgésique.",
+  "tags": [
+   "drug_choice"
+  ]
+ },
+ {
+  "anchor_id": "2009_2_AFAR_Prise-en-charge-anesthesique-des-patients-en-hospitalisat_038f21::2009_2_AFAR_Prise-en-charge-anesthesique-des-patients-en-hospitalisat_038f21__c0029_64fa05ce",
+  "usable": false,
+  "question": "",
+  "question_type": "",
+  "reference_answer": "",
+  "key_terms": [],
+  "gold_quote": "",
+  "tags": []
+ },
+ {
+  "anchor_id": "2009_2_AFAR_Prise-en-charge-anesthesique-des-patients-en-hospitalisat_038f21::2009_2_AFAR_Prise-en-charge-anesthesique-des-patients-en-hospitalisat_038f21__c0032_0f15f4ec",
+  "usable": true,
+  "question": "Chez une personne âgée opérée en ambulatoire, quelle classe médicamenteuse faut-il éviter en prémédication et pour quelle raison ?",
+  "question_type": "open",
+  "reference_answer": "Les benzodiazépines, car elles augmentent les troubles du comportement postopératoires.",
+  "key_terms": [
+   "benzodiazépines"
+  ],
+  "gold_quote": "Il est recommandé d'éviter les benzodiazépines en préopératoire. Elles augmentent l'incidence des troubles du comportement postopératoire.",
+  "tags": [
+   "drug_choice",
+   "contraindication"
+  ]
+ },
+ {
+  "anchor_id": "2026_RFE_sedationproceduraleUrgences_24juin2026_1f0c12::2026_RFE_sedationproceduraleUrgences_24juin2026_1f0c12__c0147_4f881630",
+  "usable": true,
+  "question": "Pour une sédation procédurale réalisée aux urgences, quelle échelle de sédation faut-il utiliser ?",
+  "question_type": "open",
+  "reference_answer": "Aucune recommandation ne permet de privilégier le score de Ramsay, l'OAA/S ou les définitions de l'ASA.",
+  "key_terms": [
+   "Ramsay",
+   "OAA/S"
+  ],
+  "gold_quote": "les experts ne peuvent recommander l'une ou l'autre des trois principales échelles de sédation : le score de Ramsay, l'OAA/S",
+  "tags": [
+   "emergency"
+  ]
+ },
+ {
+  "anchor_id": "2026_RFE_sedationproceduraleUrgences_24juin2026_1f0c12::2026_RFE_sedationproceduraleUrgences_24juin2026_1f0c12__c0036_fdc766a9",
+  "usable": false,
+  "question": "",
+  "question_type": "",
+  "reference_answer": "",
+  "key_terms": [],
+  "gold_quote": "",
+  "tags": []
+ },
+ {
+  "anchor_id": "2026_RFE_sedationproceduraleUrgences_24juin2026_1f0c12::2026_RFE_sedationproceduraleUrgences_24juin2026_1f0c12__c0210_7e22334a",
+  "usable": false,
+  "question": "",
+  "question_type": "",
+  "reference_answer": "",
+  "key_terms": [],
+  "gold_quote": "",
+  "tags": []
+ },
+ {
+  "anchor_id": "2007_Organisation-et-Structuration-de-l-Hopital-en-cas-de-pandemie-de_23dabc::2007_Organisation-et-Structuration-de-l-Hopital-en-cas-de-pandemie-de_23dabc__c0008_7b9b7951",
+  "usable": true,
+  "question": "En pandémie grippale saturant les capacités de réanimation, quel rôle confier aux unités de soins intensifs spécialisés (cardiologie, pneumologie) ?",
+  "question_type": "open",
+  "reference_answer": "Elles prennent en charge les patients de leur discipline non grippés, afin de soulager la réanimation.",
+  "key_terms": [
+   "non grippés"
+  ],
+  "gold_quote": "Les soins intensifs spécialisés (pneumologiques, gastro-entérologiques et surtout cardiologiques) prendront en charge les patients relevant de leur discipline mais non grippés.",
+  "tags": [
+   "icu",
+   "emergency"
+  ]
+ },
+ {
+  "anchor_id": "2007_Organisation-et-Structuration-de-l-Hopital-en-cas-de-pandemie-de_23dabc::2007_Organisation-et-Structuration-de-l-Hopital-en-cas-de-pandemie-de_23dabc__c0020_282cffe3",
+  "usable": true,
+  "question": "En pleine pandémie de grippe aviaire, un patient hémodialysé chronique doit poursuivre ses séances à l'hôpital. Comment organiser sa venue ?",
+  "question_type": "clinical_case",
+  "reference_answer": "Le service le convoque par téléphone pour éviter son passage par les urgences et le risque de contamination.",
+  "key_terms": [
+   "par téléphone"
+  ],
+  "gold_quote": "Certains secteurs de soins programmés qui ne peuvent être interrompus (chimiothérapie, dialyse, transfusion) organiseront par téléphone les convocations de leurs patients pour éviter leur passage par les urgences",
+  "tags": [
+   "emergency"
+  ]
+ },
+ {
+  "anchor_id": "2007_Organisation-et-Structuration-de-l-Hopital-en-cas-de-pandemie-de_23dabc::2007_Organisation-et-Structuration-de-l-Hopital-en-cas-de-pandemie-de_23dabc__c0036_0239db3f",
+  "usable": true,
+  "question": "En cas de pandémie de grippe aviaire, comment organiser idéalement l'offre de réanimation d'un hôpital ?",
+  "question_type": "open",
+  "reference_answer": "Disposer d'au moins deux secteurs : une réanimation grippe aviaire en zone HDV (idéalement pavillon indépendant, personnel et matériel dédiés) et une réanimation classique en zone BDV.",
+  "key_terms": [
+   "deux secteurs",
+   "HDV",
+   "BDV"
+  ],
+  "gold_quote": "l'hôpital doit disposer au minimum de deux secteurs de réanimation :\n\n***une réanimation « grippe aviaire » localisée dans le secteur à HDV si possible dans un pavillon indépendant du reste de l'hôpital avec un personnel et du matériel spécifiques.***\n\n***une réanimation médico-chirurgicale classique dans le secteur à BDV.",
+  "tags": [
+   "icu"
+  ]
+ },
+ {
+  "anchor_id": "2017_2_RFE-EC-en-rea-version-15-12-16_cdc74d::2017_2_RFE-EC-en-rea-version-15-12-16_cdc74d__c0028_a57ea8c5",
+  "usable": true,
+  "question": "Après une chirurgie à risque cardiaque intermédiaire chez un patient avec un RCRI à 1, faut-il doser systématiquement BNP ou NT-proBNP en postopératoire ?",
+  "question_type": "open",
+  "reference_answer": "Non, pas de dosage systématique chez les patients à faible risque (RCRI<2) (Grade 1-, accord fort).",
+  "key_terms": [
+   "pas doser systématiquement",
+   "RCRI<2"
+  ],
+  "gold_quote": "Pour les types de chirurgie à risque intermédiaire ou élevé, il ne faut pas doser systématiquement les peptides natriurétiques en période postopératoire chez les patients à faible risque cardiaque (RCRI<2) ou à très haut risque cardiaque (RCRI>3).",
+  "tags": [
+   "threshold"
+  ]
+ },
+ {
+  "anchor_id": "2017_2_RFE-EC-en-rea-version-15-12-16_cdc74d::2017_2_RFE-EC-en-rea-version-15-12-16_cdc74d__c0051_8534922a",
+  "usable": true,
+  "question": "Un patient hospitalisé en réanimation depuis 6 jours, non immunodéprimé, développe une diarrhée. Faut-il demander une coproculture standard ?",
+  "question_type": "table",
+  "reference_answer": "Non, pas de coproculture standard au-delà de 3 jours d'hospitalisation sauf immunodépression (Grade 2+).",
+  "key_terms": [
+   "3 jours",
+   "immunodépression"
+  ],
+  "gold_quote": "R7.18 - Il ne faut pas réaliser de coproculture standard chez le patient hospitalisé depuis plus de 3 jours, excepté en cas d'immunodépression. |\n| (Grade 2+) Accord fort",
+  "tags": [
+   "icu"
+  ]
+ },
+ {
+  "anchor_id": "2017_2_RFE-EC-en-rea-version-15-12-16_cdc74d::2017_2_RFE-EC-en-rea-version-15-12-16_cdc74d__c0044_b011cad3",
+  "usable": true,
+  "question": "Un adulte fébrile en réanimation doit être prélevé pour hémocultures. Quel volume sanguin viser et combien de prélèvements au maximum par 24 h ?",
+  "question_type": "clinical_case",
+  "reference_answer": "Viser 40 à 60 mL de sang au total et se limiter à trois hémocultures par épisode et par 24 h.",
+  "key_terms": [
+   "40 à 60 mL",
+   "trois"
+  ],
+  "gold_quote": "Le volume optimal est de 40 à 60 mL. Un volume supérieur n'améliore la sensibilité que de manière négligeable. Il y a un consensus pour limiter le nombre d'hémocultures à trois par épisode clinique et par tranche de 24h au total.",
+  "tags": [
+   "icu"
+  ]
+ },
+ {
+  "anchor_id": "2021_preconisations-inssuffisance-d-analgesie-cesarienne-sous-anesthe_416887::2021_preconisations-inssuffisance-d-analgesie-cesarienne-sous-anesthe_416887__c0031_d5da7eeb",
+  "usable": true,
+  "question": "Après une césarienne sous anesthésie périmédullaire compliquée de douleurs peropératoires, quel suivi psychologique proposer à la mère ?",
+  "question_type": "open",
+  "reference_answer": "Repérer la sidération et assurer un soin psychique d'urgence (defusing) en post-partum, puis dépister à distance un ESPT et orienter vers des spécialistes (avis d'experts).",
+  "key_terms": [
+   "defusing",
+   "ESPT"
+  ],
+  "gold_quote": "Les experts suggèrent d'identifier la sidération et le soin psychique d'urgence (defusing) en postpartum, et à distance de diagnostiquer l'état de stress post-traumatique (ESPT)",
+  "tags": [
+   "obstetric"
+  ]
+ },
+ {
+  "anchor_id": "2021_preconisations-inssuffisance-d-analgesie-cesarienne-sous-anesthe_416887::2021_preconisations-inssuffisance-d-analgesie-cesarienne-sous-anesthe_416887__c0022_d134cda3",
+  "usable": true,
+  "question": "Chez une parturiente sous péridurale de travail, quel mode d'entretien de l'analgésie est associé à un risque d'échec de l'extension pour césarienne ?",
+  "question_type": "table",
+  "reference_answer": "L'entretien par perfusion continue plutôt que par PCEA ou PIEB.",
+  "key_terms": [
+   "perfusion continue"
+  ],
+  "gold_quote": "Entretien de l'analgésie par perfusion continue plutôt que par PCEA ou PIEB",
+  "tags": [
+   "obstetric"
+  ]
+ },
+ {
+  "anchor_id": "2021_preconisations-inssuffisance-d-analgesie-cesarienne-sous-anesthe_416887::2021_preconisations-inssuffisance-d-analgesie-cesarienne-sous-anesthe_416887__c0013_1f81de64",
+  "usable": true,
+  "question": "Une césarienne code rouge est décidée pour suspicion d'acidose fœtale chez une parturiente sous péridurale ; à l'incision, l'anesthésie est manifestement insuffisante. Quelle conduite tenir ?",
+  "question_type": "clinical_case",
+  "reference_answer": "Réaliser une anesthésie générale.",
+  "key_terms": [
+   "anesthésie générale"
+  ],
+  "gold_quote": "une anesthésie générale soit réalisée en présence d'une insuffisance d'anesthésie constatée juste avant ou dès l'incision pour césarienne code rouge",
+  "tags": [
+   "obstetric",
+   "emergency"
+  ]
+ },
+ {
+  "anchor_id": "2024_PEDIA_RPP-Optimisation-Hemodynamique-Perioperatoire_Pediatrie_c6d39a::2024_PEDIA_RPP-Optimisation-Hemodynamique-Perioperatoire_Pediatrie_c6d39a__c0038_b50306c9",
+  "usable": false,
+  "question": "",
+  "question_type": "",
+  "reference_answer": "",
+  "key_terms": [],
+  "gold_quote": "",
+  "tags": []
+ }
+]

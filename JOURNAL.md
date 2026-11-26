@@ -90,3 +90,13 @@ Rapports d'audit attendus dans `reports/agents/` (si un fichier manque, l'agent 
 - Audit données terminé : `reports/agents/audit_donnees.md` (+ `data_audit_scripts/run_all.sh`). 176 titres / 202 textes FR principaux ; OCR fidèle (99,3 % des posologies) ; PDF = pointeurs LFS non tirés ; GRADE complet 28 % des textes (87 % en 2023–2026) ; prototype d'extraction de recommandations : 2 355 unités / 89 docs, 27/30 correctes ; force GRADE à lire dans la cotation (gabarit HAS) ; 2 erreurs de supersession (Urgences obstétricales 2010 vs RPP 2022 ; RPP COVID abrogée) ; faux domaines sur 102 docs. Section « Données » de `reports/01_audit.md` complétée.
 - `src/rag_sfar/evaluation/judge.py` écrit (grille, schéma, backends local/Anthropic, kappa, sonde de biais de longueur). Pas encore calibré.
 - Phase 3 étape 1 lancée en parallèle (sous-agent unique autorisé à modifier le pipeline) : « C8 générique » (retrait des fuites, défauts de sécurité, bugs I3/I4, sourcing désactivable, tests). Rapport attendu : `reports/agents/generic_c8_changes.md`, commits atomiques sur `rag-sfar-v2`. **Référence « avant nettoyage » = commit `fa0426a`** : la mesurer via `git worktree add ../sfar-legacy fa0426a` (ne pas re-mesurer sur le code nettoyé).
+- Génération jeu interne partie 0 : 46/65 utilisables (`eval_internal/work/gen_out_0.json`).
+- Génération jeu interne partie 2 : 42/64 utilisables (`gen_out_2.json`).
+- Génération comparaisons : 8/11 utilisables ; 40 questions hors corpus (`gen_out_compare.json`, `gen_out_abstention.json`). En attente : partie 1.
+- Génération partie 1 : 49/65. Total : 137 questions ancrées + 8 comparaisons + 40 hors corpus.
+- `import-gen` → `work/gen_results.jsonl` ; `prepare-verify --parts 3` → 185 candidats (0 rejet programmatique) ; 3 vérificateurs lancés (sorties `work/verify_out_{0,1,2}.json`). Ensuite : `import-verify`, `write`, split avec `--holdout-doc-fraction`, lockbox.
+- Vérification partie 1 : 59 keep / 3 drop (1 réponse corrigée).
+- Vérification partie 0 : 51 keep / 11 drop (5 réponses corrigées).
+- Vérification partie 2 : 14 keep / 7 drop ; abstention 27 non couvertes / 13 couvertes (écartées).
+- Jeu interne `multirfe_synth` écrit : 151 questions (61 reco, 22 tableau, 37 cas clinique, 4 comparaison, 27 hors corpus) sur 185 candidats ; trace des rejets `eval_internal/work/audit_trail.json`. Split leave-documents-out : 94 dev / 57 test, 22 docs uniquement en test, 0 doc commun. Scellé dans `eval/LOCKBOX.md`.
+- `eval_internal/a_valider_medecins.csv` : 40 questions (12 open, 10 cas, 8 tableau, 4 comparaison, 6 hors corpus ; 1 par document max) avec colonnes de validation. Les validations s'appliqueront par surcouche `eval_internal/validations_medecins.csv` (à implémenter dans le harnais quand elles arrivent).

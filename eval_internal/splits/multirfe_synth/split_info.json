@@ -1,0 +1,32 @@
+{
+  "seed": "sfar-2026",
+  "test_fraction": 0.35,
+  "holdout_docs": [
+    "2002_86-civdccons_d0a5c8",
+    "2004_2_AFAR_Pratique-des-anesthesies-locales-et-locoregionales-par-de_2ac61d",
+    "2004_2b_AFAR_texte-long_Hemorragies-sous-arachnoidienne_5ab378",
+    "2006_2_AFAR_Blocs-perimedullaires-chez-ladulte_c289cc",
+    "2007_2c_AFAR_Texte_long_Sedation-et-analgesie-en-reanimation_nouveau-_1eab5a",
+    "2007_Organisation-et-Structuration-de-l-Hopital-en-cas-de-pandemie-de_23dabc",
+    "2008_3_REANIMATION_Prise-en-charge-en-situation-durgence-et-en-reanim_61409b",
+    "2009_2_AFAR_Gestion-perioperatoire-des-traitements-chroniques-et-disp_38a32f",
+    "2009_2_AFAR_Mieux-vivre-la-reanimation_8ed1f4",
+    "2013_2a_AFAR_Techniques-analgesiques-locoregionales-et-douleur-chroni_e21315",
+    "2014_Recommandation_antalgique_post_amygdalectomie_2014_TC2_9ae464",
+    "2015_2_AFAR_utilisation-de-lechographie-lors-de-la-mise-en-place-des-_00a54f",
+    "2015_ANREA_132_RFE-IRA-_52a541",
+    "2016_RFE-ANREA-Prise-en-charge-des-traumatises-craniens-graves-a-la-p_966f8c",
+    "2016_RFE-ANREA-Reactualisation-de-la-recommandation-sur-la-douleur-po_c27829",
+    "2017_2_RFE-EC-en-rea-version-15-12-16_cdc74d",
+    "2020_RFE_TSM_2020_48fd8d",
+    "2020_RPP_PLYO_2020_a9118d",
+    "2021_Proposition_20fiche_20TLC_20CAMR_20mars_202021_0ddb96",
+    "2023_RPP-Anesthesie-adulte-porteur-de-CC_pour-mise-sur-site_6601a6",
+    "2026_RFE_sedationproceduraleUrgences_24juin2026_1f0c12",
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972"
+  ],
+  "n_dev": 94,
+  "n_test": 57,
+  "n_groups": 70,
+  "n_multi_member_groups": 27
+}
