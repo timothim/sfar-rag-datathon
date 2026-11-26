@@ -262,9 +262,11 @@ def _run_unified_eval(args: argparse.Namespace) -> None:
             engine = SfarRagEngine(retriever=retriever, llm=llm)
 
             def answer_fn(item, cfg):
-                mode = args.gen_mode
-                if mode == "auto":
-                    mode = "benchmark_mcq" if item.question_type == "mcq" else "clinical_detailed"
+                # MCQ always use the letter-answer format; other questions use the requested mode.
+                if item.question_type == "mcq":
+                    mode = "benchmark_mcq"
+                else:
+                    mode = "clinical_detailed" if args.gen_mode == "auto" else args.gen_mode
                 resp = engine.answer(item.formatted_query(), mode=mode, config=cfg)
                 return {"answer": resp.answer, "retrieved": resp.retrieved_chunks, "usage": resp.token_usage}
 
