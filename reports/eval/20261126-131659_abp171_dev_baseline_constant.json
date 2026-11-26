@@ -1,0 +1,1205 @@
+{
+ "suite": "abp171",
+ "split": "dev",
+ "k": 0,
+ "n_items": 102,
+ "generator": "constant baseline {'open': \"pas d'antibioprophylaxie\", 'mcq': 'C'}",
+ "timestamp": "2026-11-26T13:16:59",
+ "runs": [
+  {
+   "config": "BASELINE_constant",
+   "config_params": {
+    "answers": {
+     "open": "pas d'antibioprophylaxie",
+     "mcq": "C"
+    }
+   },
+   "summary": {
+    "n": 102,
+    "correct": {
+     "mean": 0.47058823529411764,
+     "ci_low": 0.37254901960784315,
+     "ci_high": 0.5686274509803921,
+     "n": 102
+    },
+    "false_abstention": {
+     "mean": 0.0,
+     "ci_low": 0.0,
+     "ci_high": 0.0,
+     "n": 102
+    },
+    "by_question_type": {
+     "mcq": {
+      "correct": {
+       "mean": 0.5789473684210527,
+       "ci_low": 0.3157894736842105,
+       "ci_high": 0.7894736842105263,
+       "n": 19
+      },
+      "false_abstention": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 19
+      },
+      "n": 19
+     },
+     "open": {
+      "correct": {
+       "mean": 0.4457831325301205,
+       "ci_low": 0.3493975903614458,
+       "ci_high": 0.5542168674698795,
+       "n": 83
+      },
+      "false_abstention": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 83
+      },
+      "n": 83
+     }
+    },
+    "by_tag": {
+     "allergy": {
+      "correct": {
+       "mean": 0.2,
+       "ci_low": 0.0,
+       "ci_high": 0.6,
+       "n": 5
+      },
+      "false_abstention": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 5
+      },
+      "n": 5
+     },
+     "no_abp": {
+      "correct": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 37
+      },
+      "false_abstention": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 37
+      },
+      "n": 37
+     }
+    }
+   },
+   "rows": [
+    {
+     "id": "Q01",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "open",
+     "tags": [],
+     "answer": "pas d'antibioprophylaxie",
+     "false_abstention": 0.0,
+     "correct": 0.0
+    },
+    {
+     "id": "Q02",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "open",
+     "tags": [
+      "no_abp"
+     ],
+     "answer": "pas d'antibioprophylaxie",
+     "false_abstention": 0.0,
+     "correct": 1.0
+    },
+    {
+     "id": "Q03",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "open",
+     "tags": [
+      "allergy"
+     ],
+     "answer": "pas d'antibioprophylaxie",
+     "false_abstention": 0.0,
+     "correct": 0.0
+    },
+    {
+     "id": "Q05",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "open",
+     "tags": [],
+     "answer": "pas d'antibioprophylaxie",
+     "false_abstention": 0.0,
+     "correct": 0.0
+    },
+    {
+     "id": "Q07",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "open",
+     "tags": [],
+     "answer": "pas d'antibioprophylaxie",
+     "false_abstention": 0.0,
+     "correct": 0.0
+    },
+    {
+     "id": "Q09",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "open",
+     "tags": [],
+     "answer": "pas d'antibioprophylaxie",
+     "false_abstention": 0.0,
+     "correct": 0.0
+    },
+    {
+     "id": "Q18",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "open",
+     "tags": [],
+     "answer": "pas d'antibioprophylaxie",
+     "false_abstention": 0.0,
+     "correct": 0.0
+    },
+    {
+     "id": "Q19",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "open",
+     "tags": [
+      "no_abp"
+     ],
+     "answer": "pas d'antibioprophylaxie",
+     "false_abstention": 0.0,
+     "correct": 1.0
+    },
+    {
+     "id": "Q20",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "open",
+     "tags": [
+      "no_abp"
+     ],
+     "answer": "pas d'antibioprophylaxie",
+     "false_abstention": 0.0,
+     "correct": 1.0
+    },
+    {
+     "id": "Q25",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "open",
+     "tags": [],
+     "answer": "pas d'antibioprophylaxie",
+     "false_abstention": 0.0,
+     "correct": 0.0
+    },
+    {
+     "id": "Q26",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "open",
+     "tags": [
+      "no_abp"
+     ],
+     "answer": "pas d'antibioprophylaxie",
+     "false_abstention": 0.0,
+     "correct": 1.0
+    },
+    {
+     "id": "Q27",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "open",
+     "tags": [
+      "allergy"
+     ],
+     "answer": "pas d'antibioprophylaxie",
+     "false_abstention": 0.0,
+     "correct": 0.0
+    },
+    {
+     "id": "Q28",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "open",
+     "tags": [
+      "allergy"
+     ],
+     "answer": "pas d'antibioprophylaxie",
+     "false_abstention": 0.0,
+     "correct": 0.0
+    },
+    {
+     "id": "Q30",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "open",
+     "tags": [
+      "no_abp"
+     ],
+     "answer": "pas d'antibioprophylaxie",
+     "false_abstention": 0.0,
+     "correct": 1.0
+    },
+    {
+     "id": "Q31",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "open",
+     "tags": [
+      "no_abp"
+     ],
+     "answer": "pas d'antibioprophylaxie",
+     "false_abstention": 0.0,
+     "correct": 1.0
+    },
+    {
+     "id": "Q36",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "open",
+     "tags": [],
+     "answer": "pas d'antibioprophylaxie",
+     "false_abstention": 0.0,
+     "correct": 0.0
+    },
+    {
+     "id": "Q37",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "open",
+     "tags": [
+      "no_abp"
+     ],
+     "answer": "pas d'antibioprophylaxie",
+     "false_abstention": 0.0,
+     "correct": 1.0
+    },
+    {
+     "id": "Q40",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "open",
+     "tags": [],
+     "answer": "pas d'antibioprophylaxie",
+     "false_abstention": 0.0,
+     "correct": 0.0
+    },
+    {
+     "id": "Q41",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "open",
+     "tags": [],
+     "answer": "pas d'antibioprophylaxie",
+     "false_abstention": 0.0,
+     "correct": 0.0
+    },
+    {
+     "id": "Q42",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "open",
+     "tags": [],
+     "answer": "pas d'antibioprophylaxie",
+     "false_abstention": 0.0,
+     "correct": 0.0
+    },
+    {
+     "id": "Q43",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "open",
+     "tags": [
+      "allergy"
+     ],
+     "answer": "pas d'antibioprophylaxie",
+     "false_abstention": 0.0,
+     "correct": 0.0
+    },
+    {
+     "id": "Q44",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "open",
+     "tags": [],
+     "answer": "pas d'antibioprophylaxie",
+     "false_abstention": 0.0,
+     "correct": 0.0
+    },
+    {
+     "id": "Q45",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "open",
+     "tags": [],
+     "answer": "pas d'antibioprophylaxie",
+     "false_abstention": 0.0,
+     "correct": 0.0
+    },
+    {
+     "id": "Q46",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "open",
+     "tags": [],
+     "answer": "pas d'antibioprophylaxie",
+     "false_abstention": 0.0,
+     "correct": 0.0
+    },
+    {
+     "id": "Q48",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "open",
+     "tags": [
+      "no_abp"
+     ],
+     "answer": "pas d'antibioprophylaxie",
+     "false_abstention": 0.0,
+     "correct": 1.0
+    },
+    {
+     "id": "Q50",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "open",
+     "tags": [],
+     "answer": "pas d'antibioprophylaxie",
+     "false_abstention": 0.0,
+     "correct": 0.0
+    },
+    {
+     "id": "Q51",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "open",
+     "tags": [
+      "no_abp"
+     ],
+     "answer": "pas d'antibioprophylaxie",
+     "false_abstention": 0.0,
+     "correct": 1.0
+    },
+    {
+     "id": "Q52",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "open",
+     "tags": [
+      "no_abp"
+     ],
+     "answer": "pas d'antibioprophylaxie",
+     "false_abstention": 0.0,
+     "correct": 1.0
+    },
+    {
+     "id": "Q53",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "open",
+     "tags": [
+      "no_abp"
+     ],
+     "answer": "pas d'antibioprophylaxie",
+     "false_abstention": 0.0,
+     "correct": 1.0
+    },
+    {
+     "id": "Q59",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "open",
+     "tags": [
+      "no_abp"
+     ],
+     "answer": "pas d'antibioprophylaxie",
+     "false_abstention": 0.0,
+     "correct": 1.0
+    },
+    {
+     "id": "Q61",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "open",
+     "tags": [],
+     "answer": "pas d'antibioprophylaxie",
+     "false_abstention": 0.0,
+     "correct": 0.0
+    },
+    {
+     "id": "Q62",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "open",
+     "tags": [
+      "no_abp"
+     ],
+     "answer": "pas d'antibioprophylaxie",
+     "false_abstention": 0.0,
+     "correct": 1.0
+    },
+    {
+     "id": "Q67",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "open",
+     "tags": [
+      "no_abp"
+     ],
+     "answer": "pas d'antibioprophylaxie",
+     "false_abstention": 0.0,
+     "correct": 1.0
+    },
+    {
+     "id": "Q69",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "open",
+     "tags": [],
+     "answer": "pas d'antibioprophylaxie",
+     "false_abstention": 0.0,
+     "correct": 0.0
+    },
+    {
+     "id": "Q70",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "open",
+     "tags": [],
+     "answer": "pas d'antibioprophylaxie",
+     "false_abstention": 0.0,
+     "correct": 0.0
+    },
+    {
+     "id": "Q71",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "open",
+     "tags": [],
+     "answer": "pas d'antibioprophylaxie",
+     "false_abstention": 0.0,
+     "correct": 0.0
+    },
+    {
+     "id": "Q73",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "open",
+     "tags": [
+      "no_abp"
+     ],
+     "answer": "pas d'antibioprophylaxie",
+     "false_abstention": 0.0,
+     "correct": 1.0
+    },
+    {
+     "id": "Q74",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "open",
+     "tags": [
+      "no_abp"
+     ],
+     "answer": "pas d'antibioprophylaxie",
+     "false_abstention": 0.0,
+     "correct": 1.0
+    },
+    {
+     "id": "Q75",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "open",
+     "tags": [
+      "no_abp"
+     ],
+     "answer": "pas d'antibioprophylaxie",
+     "false_abstention": 0.0,
+     "correct": 1.0
+    },
+    {
+     "id": "Q78",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "open",
+     "tags": [
+      "no_abp"
+     ],
+     "answer": "pas d'antibioprophylaxie",
+     "false_abstention": 0.0,
+     "correct": 1.0
+    },
+    {
+     "id": "Q79",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "open",
+     "tags": [],
+     "answer": "pas d'antibioprophylaxie",
+     "false_abstention": 0.0,
+     "correct": 0.0
+    },
+    {
+     "id": "Q80",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "open",
+     "tags": [
+      "no_abp"
+     ],
+     "answer": "pas d'antibioprophylaxie",
+     "false_abstention": 0.0,
+     "correct": 1.0
+    },
+    {
+     "id": "Q81",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "open",
+     "tags": [],
+     "answer": "pas d'antibioprophylaxie",
+     "false_abstention": 0.0,
+     "correct": 0.0
+    },
+    {
+     "id": "Q83",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "open",
+     "tags": [
+      "no_abp"
+     ],
+     "answer": "pas d'antibioprophylaxie",
+     "false_abstention": 0.0,
+     "correct": 1.0
+    },
+    {
+     "id": "Q84",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "open",
+     "tags": [
+      "no_abp"
+     ],
+     "answer": "pas d'antibioprophylaxie",
+     "false_abstention": 0.0,
+     "correct": 1.0
+    },
+    {
+     "id": "Q85",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "open",
+     "tags": [],
+     "answer": "pas d'antibioprophylaxie",
+     "false_abstention": 0.0,
+     "correct": 0.0
+    },
+    {
+     "id": "Q87",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "open",
+     "tags": [],
+     "answer": "pas d'antibioprophylaxie",
+     "false_abstention": 0.0,
+     "correct": 0.0
+    },
+    {
+     "id": "Q88",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "open",
+     "tags": [],
+     "answer": "pas d'antibioprophylaxie",
+     "false_abstention": 0.0,
+     "correct": 0.0
+    },
+    {
+     "id": "Q89",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "open",
+     "tags": [],
+     "answer": "pas d'antibioprophylaxie",
+     "false_abstention": 0.0,
+     "correct": 0.0
+    },
+    {
+     "id": "Q91",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "open",
+     "tags": [],
+     "answer": "pas d'antibioprophylaxie",
+     "false_abstention": 0.0,
+     "correct": 0.0
+    },
+    {
+     "id": "Q95",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "open",
+     "tags": [],
+     "answer": "pas d'antibioprophylaxie",
+     "false_abstention": 0.0,
+     "correct": 0.0
+    },
+    {
+     "id": "Q96",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "open",
+     "tags": [],
+     "answer": "pas d'antibioprophylaxie",
+     "false_abstention": 0.0,
+     "correct": 0.0
+    },
+    {
+     "id": "Q97",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "open",
+     "tags": [],
+     "answer": "pas d'antibioprophylaxie",
+     "false_abstention": 0.0,
+     "correct": 0.0
+    },
+    {
+     "id": "Q98",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "open",
+     "tags": [],
+     "answer": "pas d'antibioprophylaxie",
+     "false_abstention": 0.0,
+     "correct": 0.0
+    },
+    {
+     "id": "Q99",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "open",
+     "tags": [],
+     "answer": "pas d'antibioprophylaxie",
+     "false_abstention": 0.0,
+     "correct": 0.0
+    },
+    {
+     "id": "Q100",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "open",
+     "tags": [],
+     "answer": "pas d'antibioprophylaxie",
+     "false_abstention": 0.0,
+     "correct": 0.0
+    },
+    {
+     "id": "Q101",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "open",
+     "tags": [
+      "no_abp"
+     ],
+     "answer": "pas d'antibioprophylaxie",
+     "false_abstention": 0.0,
+     "correct": 1.0
+    },
+    {
+     "id": "Q102",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "open",
+     "tags": [],
+     "answer": "pas d'antibioprophylaxie",
+     "false_abstention": 0.0,
+     "correct": 0.0
+    },
+    {
+     "id": "Q104",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "open",
+     "tags": [
+      "no_abp"
+     ],
+     "answer": "pas d'antibioprophylaxie",
+     "false_abstention": 0.0,
+     "correct": 1.0
+    },
+    {
+     "id": "Q105",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "open",
+     "tags": [
+      "no_abp"
+     ],
+     "answer": "pas d'antibioprophylaxie",
+     "false_abstention": 0.0,
+     "correct": 1.0
+    },
+    {
+     "id": "Q107",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "open",
+     "tags": [
+      "no_abp"
+     ],
+     "answer": "pas d'antibioprophylaxie",
+     "false_abstention": 0.0,
+     "correct": 1.0
+    },
+    {
+     "id": "Q108",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "open",
+     "tags": [],
+     "answer": "pas d'antibioprophylaxie",
+     "false_abstention": 0.0,
+     "correct": 0.0
+    },
+    {
+     "id": "Q109",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "open",
+     "tags": [
+      "no_abp"
+     ],
+     "answer": "pas d'antibioprophylaxie",
+     "false_abstention": 0.0,
+     "correct": 1.0
+    },
+    {
+     "id": "Q111",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "open",
+     "tags": [],
+     "answer": "pas d'antibioprophylaxie",
+     "false_abstention": 0.0,
+     "correct": 0.0
+    },
+    {
+     "id": "Q114",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "open",
+     "tags": [],
+     "answer": "pas d'antibioprophylaxie",
+     "false_abstention": 0.0,
+     "correct": 0.0
+    },
+    {
+     "id": "Q115",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "open",
+     "tags": [
+      "no_abp"
+     ],
+     "answer": "pas d'antibioprophylaxie",
+     "false_abstention": 0.0,
+     "correct": 1.0
+    },
+    {
+     "id": "Q117",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "open",
+     "tags": [
+      "no_abp"
+     ],
+     "answer": "pas d'antibioprophylaxie",
+     "false_abstention": 0.0,
+     "correct": 1.0
+    },
+    {
+     "id": "Q118",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "open",
+     "tags": [
+      "no_abp"
+     ],
+     "answer": "pas d'antibioprophylaxie",
+     "false_abstention": 0.0,
+     "correct": 1.0
+    },
+    {
+     "id": "Q119",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "open",
+     "tags": [
+      "no_abp"
+     ],
+     "answer": "pas d'antibioprophylaxie",
+     "false_abstention": 0.0,
+     "correct": 1.0
+    },
+    {
+     "id": "Q120",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "open",
+     "tags": [
+      "no_abp"
+     ],
+     "answer": "pas d'antibioprophylaxie",
+     "false_abstention": 0.0,
+     "correct": 1.0
+    },
+    {
+     "id": "Q121",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "open",
+     "tags": [
+      "no_abp"
+     ],
+     "answer": "pas d'antibioprophylaxie",
+     "false_abstention": 0.0,
+     "correct": 1.0
+    },
+    {
+     "id": "Q122",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "open",
+     "tags": [
+      "no_abp"
+     ],
+     "answer": "pas d'antibioprophylaxie",
+     "false_abstention": 0.0,
+     "correct": 1.0
+    },
+    {
+     "id": "Q127",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "open",
+     "tags": [
+      "no_abp"
+     ],
+     "answer": "pas d'antibioprophylaxie",
+     "false_abstention": 0.0,
+     "correct": 1.0
+    },
+    {
+     "id": "Q128",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "open",
+     "tags": [],
+     "answer": "pas d'antibioprophylaxie",
+     "false_abstention": 0.0,
+     "correct": 0.0
+    },
+    {
+     "id": "Q129",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "open",
+     "tags": [],
+     "answer": "pas d'antibioprophylaxie",
+     "false_abstention": 0.0,
+     "correct": 0.0
+    },
+    {
+     "id": "Q131",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "open",
+     "tags": [],
+     "answer": "pas d'antibioprophylaxie",
+     "false_abstention": 0.0,
+     "correct": 0.0
+    },
+    {
+     "id": "Q132",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "open",
+     "tags": [],
+     "answer": "pas d'antibioprophylaxie",
+     "false_abstention": 0.0,
+     "correct": 0.0
+    },
+    {
+     "id": "Q133",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "open",
+     "tags": [],
+     "answer": "pas d'antibioprophylaxie",
+     "false_abstention": 0.0,
+     "correct": 0.0
+    },
+    {
+     "id": "Q134",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "open",
+     "tags": [
+      "no_abp"
+     ],
+     "answer": "pas d'antibioprophylaxie",
+     "false_abstention": 0.0,
+     "correct": 1.0
+    },
+    {
+     "id": "Q135",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "open",
+     "tags": [
+      "no_abp"
+     ],
+     "answer": "pas d'antibioprophylaxie",
+     "false_abstention": 0.0,
+     "correct": 1.0
+    },
+    {
+     "id": "Q136",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "open",
+     "tags": [
+      "no_abp"
+     ],
+     "answer": "pas d'antibioprophylaxie",
+     "false_abstention": 0.0,
+     "correct": 1.0
+    },
+    {
+     "id": "Q137",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "open",
+     "tags": [],
+     "answer": "pas d'antibioprophylaxie",
+     "false_abstention": 0.0,
+     "correct": 0.0
+    },
+    {
+     "id": "Q138",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "open",
+     "tags": [],
+     "answer": "pas d'antibioprophylaxie",
+     "false_abstention": 0.0,
+     "correct": 0.0
+    },
+    {
+     "id": "Q139",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "mcq",
+     "tags": [],
+     "answer": "C",
+     "false_abstention": 0.0,
+     "correct": 0.0
+    },
+    {
+     "id": "Q141",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "mcq",
+     "tags": [
+      "allergy"
+     ],
+     "answer": "C",
+     "false_abstention": 0.0,
+     "correct": 1.0
+    },
+    {
+     "id": "Q144",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "mcq",
+     "tags": [],
+     "answer": "C",
+     "false_abstention": 0.0,
+     "correct": 1.0
+    },
+    {
+     "id": "Q147",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "mcq",
+     "tags": [],
+     "answer": "C",
+     "false_abstention": 0.0,
+     "correct": 0.0
+    },
+    {
+     "id": "Q149",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "mcq",
+     "tags": [],
+     "answer": "C",
+     "false_abstention": 0.0,
+     "correct": 0.0
+    },
+    {
+     "id": "Q153",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "mcq",
+     "tags": [],
+     "answer": "C",
+     "false_abstention": 0.0,
+     "correct": 0.0
+    },
+    {
+     "id": "Q154",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "mcq",
+     "tags": [],
+     "answer": "C",
+     "false_abstention": 0.0,
+     "correct": 1.0
+    },
+    {
+     "id": "Q156",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "mcq",
+     "tags": [],
+     "answer": "C",
+     "false_abstention": 0.0,
+     "correct": 1.0
+    },
+    {
+     "id": "Q157",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "mcq",
+     "tags": [],
+     "answer": "C",
+     "false_abstention": 0.0,
+     "correct": 0.0
+    },
+    {
+     "id": "Q158",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "mcq",
+     "tags": [],
+     "answer": "C",
+     "false_abstention": 0.0,
+     "correct": 0.0
+    },
+    {
+     "id": "Q159",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "mcq",
+     "tags": [],
+     "answer": "C",
+     "false_abstention": 0.0,
+     "correct": 0.0
+    },
+    {
+     "id": "Q160",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "mcq",
+     "tags": [],
+     "answer": "C",
+     "false_abstention": 0.0,
+     "correct": 1.0
+    },
+    {
+     "id": "Q161",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "mcq",
+     "tags": [],
+     "answer": "C",
+     "false_abstention": 0.0,
+     "correct": 1.0
+    },
+    {
+     "id": "Q163",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "mcq",
+     "tags": [],
+     "answer": "C",
+     "false_abstention": 0.0,
+     "correct": 1.0
+    },
+    {
+     "id": "Q164",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "mcq",
+     "tags": [],
+     "answer": "C",
+     "false_abstention": 0.0,
+     "correct": 1.0
+    },
+    {
+     "id": "Q165",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "mcq",
+     "tags": [],
+     "answer": "C",
+     "false_abstention": 0.0,
+     "correct": 1.0
+    },
+    {
+     "id": "Q166",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "mcq",
+     "tags": [],
+     "answer": "C",
+     "false_abstention": 0.0,
+     "correct": 0.0
+    },
+    {
+     "id": "Q168",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "mcq",
+     "tags": [],
+     "answer": "C",
+     "false_abstention": 0.0,
+     "correct": 1.0
+    },
+    {
+     "id": "Q171",
+     "suite": "abp171",
+     "provenance": "external_benchmark",
+     "question_type": "mcq",
+     "tags": [],
+     "answer": "C",
+     "false_abstention": 0.0,
+     "correct": 1.0
+    }
+   ]
+  }
+ ],
+ "comparisons": []
+}
