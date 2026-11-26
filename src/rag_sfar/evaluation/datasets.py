@@ -352,8 +352,15 @@ def write_lockbox(note: str = "") -> str:
     for p in _all_test_files():
         n = sum(1 for l in p.read_text(encoding="utf-8").splitlines() if l.strip())
         lines.append(f"| `{p.as_posix()}` | {n} | `{sha256_file(p)}` |")
+    history = ""
+    if LOCKBOX_PATH.exists():
+        prev = LOCKBOX_PATH.read_text(encoding="utf-8")
+        if "## Historique" in prev:
+            history = prev.split("## Historique", 1)[1].strip()
     if note:
-        lines += ["", "## Historique", "", note]
+        history = (history + "\n" + note).strip()
+    if history:
+        lines += ["", "## Historique", "", history]
     text = "\n".join(lines) + "\n"
     LOCKBOX_PATH.write_text(text, encoding="utf-8")
     return text

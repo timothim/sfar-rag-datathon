@@ -1,0 +1,8 @@
+{
+  "seed": "sfar-2026",
+  "test_fraction": 0.4,
+  "n_dev": 102,
+  "n_test": 69,
+  "n_groups": 163,
+  "n_multi_member_groups": 8
+}
