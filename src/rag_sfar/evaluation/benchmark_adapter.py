@@ -8,7 +8,8 @@ from typing import Any
 
 from rag_sfar.config import RetrievalConfig
 from rag_sfar.generation.prompts import build_user_prompt
-from rag_sfar.retrieval.pipeline import SfarRagRetriever, format_context_for_llm
+from rag_sfar.generation.client import build_generation_context
+from rag_sfar.retrieval.pipeline import SfarRagRetriever
 
 
 def normalize_answer(text: str) -> str:
@@ -94,6 +95,8 @@ class SfarRagApproach:
         full_q = _format_question_with_choices(question)
         q_type = str(getattr(question, "question_type", "open")).lower()
         mode = "benchmark_mcq" if "mcq" in q_type else "benchmark_open"
-        retrieved, _, _ = self._retriever.retrieve(full_q, config=self._config)
-        ctx = format_context_for_llm(retrieved, query=full_q, prune_prose=self._config.use_u_shape_ordering)
+        retrieved, analysis, _ = self._retriever.retrieve(full_q, config=self._config)
+        # Same context as SfarRagEngine.answer (selection, U-shape and pruning flags, note);
+        # previously `prune_prose` read `use_u_shape_ordering` and no selection was applied.
+        _, ctx = build_generation_context(retrieved, analysis, self._config, full_q, mode)
         return build_user_prompt(query=full_q, context_block=ctx, mode=mode)

@@ -117,7 +117,7 @@ DEMO_HTML = """<!DOCTYPE html>
   <main>
     <div class="search-card">
       <div class="query-row">
-        <input id="queryInput" type="text" placeholder="Posez une question clinique SFAR (ex : PTH voie antérieure allergie bêtalactamines, arrêt AOD avant neurochirurgie…)" />
+        <input id="queryInput" type="text" placeholder="Posez une question clinique SFAR (ex : arrêt des AOD avant une procédure programmée, prévention des NVPO…)" />
         <button onclick="runQuery(false)">Rechercher + Répondre</button>
         <button class="secondary" onclick="runQuery(true)">Retrieval seul</button>
       </div>
@@ -141,12 +141,12 @@ DEMO_HTML = """<!DOCTYPE html>
         </label>
       </div>
       <div class="examples">
-        <span class="ex-pill" onclick="setExample('Quelle antibioprophylaxie pour une PTH par voie antérieure chez un patient allergique aux bêtalactamines ?')">1. PTH voie ant. + allergie (→ Vanco/Teico 2026)</span>
-        <span class="ex-pill" onclick="setExample('Quelle est la recommandation d\\'antibioprophylaxie pour une plaie cranio-cérébrale chez un patient allergique aux pénicillines ?')">2. Plaie cranio + allergie (→ Bactrim 2026)</span>
-        <span class="ex-pill" onclick="setExample('Quel est le délai d\\'arrêt des AOD avant une neurochirurgie intracrânienne ou procédure neuraxiale programmée ?')">3. Arrêt AOD neurochirurgie 2026 (→ J-5)</span>
-        <span class="ex-pill" onclick="setExample('Patient sous anticoagulant avec hémorragie intracrânienne en urgence : faut-il attendre les tests biologiques pour réverser ?')">4. Hémorragie urgence 2024 (→ CCP sans attendre)</span>
-        <span class="ex-pill" onclick="setExample('Antibiothérapie probabiliste d\\'une infection intra-abdominale communautaire sans sepsis ni choc septique chez l\\'adulte (R1.2.1) ?')">5. IIA communautaire 2026 (→ C3G + Métro)</span>
-        <span class="ex-pill" onclick="setExample('Qu\\'est-ce qui a changé dans les recommandations d\\'antibioprophylaxie entre 2018 et 2026 ?')">6. Diff temporel 2018 vs 2026</span>
+        <span class="ex-pill" onclick="setExample('Quelle stratégie de prévention des nausées et vomissements postopératoires chez un adulte à risque élevé ?')">1. Prévention des NVPO</span>
+        <span class="ex-pill" onclick="setExample('Quelle prise en charge initiale d\\'une suspicion d\\'anaphylaxie peranesthésique ?')">2. Anaphylaxie peranesthésique</span>
+        <span class="ex-pill" onclick="setExample('Quel est le délai d\\'arrêt des AOD avant une neurochirurgie intracrânienne ou procédure neuraxiale programmée ?')">3. Arrêt AOD avant neurochirurgie</span>
+        <span class="ex-pill" onclick="setExample('Patient sous anticoagulant avec hémorragie intracrânienne en urgence : faut-il attendre les tests biologiques pour réverser ?')">4. Hémorragie sous anticoagulant en urgence</span>
+        <span class="ex-pill" onclick="setExample('Antibiothérapie probabiliste d\\'une infection intra-abdominale communautaire sans sepsis ni choc septique chez l\\'adulte (R1.2.1) ?')">5. Infection intra-abdominale communautaire</span>
+        <span class="ex-pill" onclick="setExample('Qu\\'est-ce qui a changé dans les recommandations d\\'antibioprophylaxie entre 2018 et 2026 ?')">6. Comparaison d'éditions 2018 / 2026</span>
       </div>
     </div>
 

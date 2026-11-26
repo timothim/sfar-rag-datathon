@@ -20,8 +20,6 @@ import unicodedata
 from collections import Counter
 from pathlib import Path
 
-import pytest
-
 ROOT = Path(__file__).resolve().parents[1]
 SRC = ROOT / "src" / "rag_sfar"
 EXCLUDED_DIRS = {SRC / "evaluation"}
@@ -108,8 +106,6 @@ def test_eval_sources_found():
     assert any(p.exists() for p in EVAL_SOURCES), "no evaluation dataset found to check against"
 
 
-# Known leaks found by the phase-1 audit; strict xfail forces removing this marker once fixed.
-@pytest.mark.xfail(strict=True, reason="Benchmark text still present in src/ (phase-1 audit); remove marker after cleanup")
 def test_no_benchmark_text_in_system_code():
     leaks = find_leaks()
     assert not leaks, "Evaluation text found in system code:\n" + "\n".join(leaks)
