@@ -1,0 +1,308 @@
+[
+ {
+  "case_id": "C0_naive_fixed_bm25::Q01",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une prothèse totale de hanche ?",
+  "reference": "Céfazoline",
+  "answer": "Hors périmètre / Information non retrouvée dans les extraits SFAR fournis.\n\nLes extraits fournis portent principalement sur la thromboprophylaxie postopératoire et la réhabilitation après chirurgie orthopédique, mais ne contiennent aucune recommandation spécifique concernant l'antibioprophylaxie pour une prothèse totale de hanche."
+ },
+ {
+  "case_id": "C0_naive_fixed_bm25::Q02",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une arthroscopie diagnostique du genou sans mise en place de matériel ?",
+  "reference": "Pas d'antibioprophylaxie",
+  "answer": "**Réponse synthétique** : Pas d'antibioprophylaxie.\n\n**Posologie, délais et modalités** : Non précisé dans les extraits.\n\n**Cas particuliers / Sécurité** : Non précisé dans les extraits.\n\n**Niveau de preuve** : ●●● (Avis d'experts) [S1], [S2], [S4], [S8] (en vigueur)."
+ },
+ {
+  "case_id": "C0_naive_fixed_bm25::Q03",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une prothèse totale de genou chez un patient allergique aux bêtalactamines ?",
+  "reference": "Clindamycine",
+  "answer": "**Réponse synthétique** : En cas d'allergie aux bêtalactamines pour une prothèse totale de genou, on recommande l'utilisation de clindamycine, vancomycine ou teicoplanine.\n\n**Posologie, délais et modalités** : \n- Clindamycine : 900 mg IVL.\n- Vancomycine : 20 mg/kg IVL.\n- Teicoplanine : 12 mg/kg IVL.\n\n**Cas particuliers / Sécurité** : \n- Allergie aux bêtalactamines : clindamycine, vancomycine ou teicoplanine sont les alternatives proposées.\n\n**Niveau de preuve** : Avis d'experts (●●●) [S1].\n\nNote : Les extraits ne précisent pas de posologie, de réinjections ou de durée pour ces alternatives."
+ },
+ {
+  "case_id": "C0_naive_fixed_bm25::Q05",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une fracture ouverte de jambe Gustilo 2 ?",
+  "reference": "Amoxicilline/Clavulanate",
+  "answer": "**Réponse synthétique** : Amoxicilline/Clavulanate est recommandée.\n\n**Posologie, délais et modalités** : \n- Dose initiale : 2g IVL\n- Réinjections : 1g si durée > 2h, puis toutes les 2h jusqu'à fin de chirurgie.\n\n**Cas particuliers / Sécurité** : Non précisé dans les extraits.\n\n**Niveau de preuve** : ●●● (Avis d'experts) - RFE SFAR 2026 (V3.0 (04/05/2026)) [EN VIGUEUR]."
+ },
+ {
+  "case_id": "C0_naive_fixed_bm25::Q07",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une arthrodèse lombaire instrumentée en un temps ?",
+  "reference": "Céfazoline",
+  "answer": "**Réponse synthétique** : Céfazoline 2g IVL au début de la chirurgie, puis 1g si la durée de la chirurgie dépasse 4h, réinjection toutes les 4h jusqu'à la fin de la chirurgie.\n\n**Posologie, délais et modalités** : \n- Dose initiale : 2g IVL\n- Réinjection : 1g si la durée de la chirurgie dépasse 4h, puis toutes les 4h jusqu'à la fin de la chirurgie.\n\n**Cas particuliers / Sécurité** : Non précisé dans les extraits.\n\n**Niveau de preuve** : GRADE 2 [S1], [S3]."
+ },
+ {
+  "case_id": "C0_naive_fixed_bm25::Q09",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour un écrasement complexe de la main nécessitant une chirurgie de plus de 2 heures ?",
+  "reference": "Amoxicilline/Clavulanate",
+  "answer": "**Réponse synthétique** : Amoxicilline/Clavulanate 2g IVL, puis 1g toutes les 2h jusqu'à fin de chirurgie.\n\n**Posologie, délais et modalités** :\n- Dose initiale : 2g IVL\n- Réinjections : 1g toutes les 2h jusqu'à fin de chirurgie\n- Durée : jusqu'à fin de chirurgie\n\n**Cas particuliers / Sécurité** : Non précisé dans les extraits.\n\n**Niveau de preuve** : ●●● (Avis d'experts) [S1]"
+ },
+ {
+  "case_id": "C0_naive_fixed_bm25::Q18",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une craniotomie ?",
+  "reference": "Céfazoline",
+  "answer": "**Réponse synthétique** : L'antibioprophylaxie est recommandée pour une craniotomie.\n\n**Posologie, délais et modalités** : \n- Dose initiale : 30 mg/kg céfazoline IVL.\n- Réinjection : 30 mg/kg si la durée de la chirurgie est supérieure à 4h, puis toutes les 4h jusqu'à la fin de la chirurgie.\n\n**Cas particuliers / Sécurité** : Non précisé dans les extraits.\n\n**Niveau de preuve** : ●●● (Avis d'experts) [S4], [S5], [S7] (EN VIGUEUR)."
+ },
+ {
+  "case_id": "C0_naive_fixed_bm25::Q19",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une biopsie cérébrale ?",
+  "reference": "Pas d'antibioprophylaxie",
+  "answer": "**Réponse synthétique** : La biopsie cérébrale ne nécessite pas d'antibioprophylaxie.\n\n**Posologie, délais et modalités** : Non précisé dans les extraits.\n\n**Cas particuliers / Sécurité** : Non précisé dans les extraits.\n\n**Niveau de preuve** : ●●● (Avis d'experts) [S2], [S3], [S5], [S6]"
+ },
+ {
+  "case_id": "C0_naive_fixed_bm25::Q20",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour la pose d'une dérivation ventriculaire externe (DVE) ?",
+  "reference": "Pas d'antibioprophylaxie",
+  "answer": "**Réponse synthétique** : Pas d'antibioprophylaxie pour la pose d'une dérivation ventriculaire externe (DVE).\n\n**Posologie, délais et modalités** : Non précisé dans les extraits.\n\n**Cas particuliers / Sécurité** : Non précisé dans les extraits.\n\n**Niveau de preuve** : Avis d'experts (S2)."
+ },
+ {
+  "case_id": "C0_naive_fixed_bm25::Q25",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour la pose d'une électrode de stimulation cérébrale profonde ?",
+  "reference": "Céfazoline",
+  "answer": "**Réponse synthétique** : L'antibioprophylaxie est recommandée pour la pose d'une électrode de stimulation cérébrale profonde.\n\n**Posologie, délais et modalités** : \n- Dose initiale : 30 mg/kg IVL.\n- Réinjections : 30 mg/kg si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie.\n\n**Cas particuliers / Sécurité** : Non précisé dans les extraits.\n\n**Niveau de preuve** : ●●● (Avis d'experts) [S1], [S3] [EN VIGUEUR]."
+ },
+ {
+  "case_id": "C0_naive_fixed_bm25::Q26",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour l'embolisation d'un anévrysme cérébral ?",
+  "reference": "Pas d'antibioprophylaxie",
+  "answer": "Hors périmètre / Information non retrouvée dans les extraits SFAR fournis.\n\nLes extraits fournis ne contiennent aucune recommandation spécifique concernant l'antibioprophylaxie pour l'embolisation d'un anévrysme cérébral. Les seules indications d'antibioprophylaxie mentionnées dans les extraits concernent les interventions chirurgicales ou interventionnelles dans le domaine urologique et digestif, mais pas l'embolisation cérébrale."
+ },
+ {
+  "case_id": "C0_naive_fixed_bm25::Q27",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une craniotomie chez un patient allergique aux bêtalactamines ?",
+  "reference": "Clindamycine",
+  "answer": "**Réponse synthétique** : En cas d'allergie aux bêtalactamines, l'utilisation de clindamycine est recommandée.\n\n**Posologie, délais et modalités** : \n- Dose initiale : 900 mg IV.\n- Réinjection : Pas de réinjection mentionnée.\n\n**Cas particuliers / Sécurité** : Non précisé dans les extraits.\n\n**Niveau de preuve** : GRADE 2 et Avis d'experts."
+ },
+ {
+  "case_id": "C0_naive_fixed_bm25::Q28",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une plaie cranio-cérébrale chez un patient allergique aux pénicillines ?",
+  "reference": "Triméthoprime/Sulfaméthoxazole",
+  "answer": "Hors périmètre / Information non retrouvée dans les extraits SFAR fournis.\n\nLes extraits fournis ne contiennent pas de recommandation spécifique pour les patients allergiques aux pénicillines dans le contexte d'une plaie cranio-cérébrale. Les extraits mentionnent l'utilisation d'amoxicilline/clavulanate pour les plaies cranio-cérébrales, mais ne précisent pas la gestion des allergies aux pénicillines."
+ },
+ {
+  "case_id": "C0_naive_fixed_bm25::Q30",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une thyroïdectomie totale ?",
+  "reference": "Pas d'antibioprophylaxie",
+  "answer": "**Réponse synthétique** : Céfazoline 30 mg/kg IVL, 30 mg/kg si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie.\n\n**Posologie, délais et modalités** :\n- Dose initiale : 30 mg/kg IVL.\n- Réinjection : 30 mg/kg si durée > 4h.\n- Fréquence : Puis toutes les 4h jusqu'à fin de chirurgie.\n\n**Cas particuliers / Sécurité** : Non précisé dans les extraits.\n\n**Niveau de preuve** : ●●● (Avis d'experts) [S3] [EN VIGUEUR]."
+ },
+ {
+  "case_id": "C0_naive_fixed_bm25::Q31",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une chirurgie sinusienne de polypose nasale ?",
+  "reference": "Pas d'antibioprophylaxie",
+  "answer": "**Réponse synthétique** : Pas d'antibioprophylaxie.\n\n**Posologie, délais et modalités** : Non précisé dans les extraits.\n\n**Cas particuliers / Sécurité** : Non précisé dans les extraits.\n\n**Niveau de preuve** : ●●● (Avis d'experts) [S1] [S3] [S5] [S7] [S8] [ÉDITION ANTÉRIEURE]\n\nLa chirurgie sinusienne de polypose nasale est classée dans les actes chirurgicaux pour lesquels l'antibioprophylaxie n'est pas recommandée."
+ },
+ {
+  "case_id": "C0_naive_fixed_bm25::Q36",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une chirurgie de la cataracte ?",
+  "reference": "Céfuroxime",
+  "answer": "**Réponse synthétique** : Injection intracaméculaire de céfuroxime 1 mg en fin d'intervention.\n\n**Posologie, délais et modalités** : 1 mg dans 0,1 ml en injection intracaméculaire en fin d'intervention. (S3)\n\n**Cas particuliers / Sécurité** : Dans les cas d'allergie au céfuroxime, la moxifloxacine est recommandée (S3).\n\n**Niveau de preuve** : GRADE 1 (S3)."
+ },
+ {
+  "case_id": "C0_naive_fixed_bm25::Q37",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une chirurgie du glaucome ?",
+  "reference": "Pas d'antibioprophylaxie",
+  "answer": "**Réponse synthétique** : Il n'y a pas de recommandation d'antibioprophylaxie pour une chirurgie du glaucome.\n\n**Posologie, délais et modalités** : Non précisé dans les extraits.\n\n**Cas particuliers / Sécurité** : Non précisé dans les extraits.\n\n**Niveau de preuve** : Avis d'experts (●●●) [S1] [EN VIGUEUR]."
+ },
+ {
+  "case_id": "C0_naive_fixed_bm25::Q40",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour l'extraction d'une dent incluse ?",
+  "reference": "Amoxicilline",
+  "answer": "**Réponse synthétique** : L'extraction d'une dent incluse nécessite une antibioprophylaxie.\n\n**Posologie, délais et modalités** : \n- Dose initiale : 500 mg de lévofloxacine par os.\n- Posologie et durée : 1 cp 12 h avant + 1 cp 2 à 4 h avant l'intervention.\n\n**Cas particuliers / Sécurité** : Non précisé dans les extraits.\n\n**Niveau de preuve** : Avis d'experts (RFE SFAR 2018, édition antérieure remplacée en 2026).\n\nNote : Les recommandations actuelles (RFE SFAR 2026) ne sont pas explicitement mentionnées dans les extraits fournis, mais elles continuent probablement à suivre les lignes directrices similaires."
+ },
+ {
+  "case_id": "C0_naive_fixed_bm25::Q41",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une fracture ouverte de mandibule ?",
+  "reference": "Amoxicilline/Clavulanate",
+  "answer": "**Réponse synthétique** : L'administration d'antibioprophylaxie est recommandée pour une fracture ouverte de mandibule.\n\n**Posologie, délais et modalités** : \n- Dose initiale : 2g d'amoxicilline/Clavulanate IVL.\n- Réinjections : 1g si la durée de la chirurgie est supérieure à 2h, puis toutes les 2h jusqu'à la fin de la chirurgie. Ensuite, 1g/6h pendant 24h max. (posologie postopératoire pour un patient de poids et de fonction rénale standard).\n\n**Cas particuliers / Sécurité** : Non précisé dans les extraits.\n\n**Niveau de preuve** : GRADE 2 (Avis d'experts) [S4]."
+ },
+ {
+  "case_id": "C0_naive_fixed_bm25::Q42",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une chirurgie orthognatique ?",
+  "reference": "Céfazoline",
+  "answer": "**Réponse synthétique** : L'antibioprophylaxie est recommandée pour une chirurgie orthognatique.\n\n**Posologie, délais et modalités** : \n- Dose initiale : 50 mg/kg IVL.\n- Réinjections : 50 mg/kg si durée de la chirurgie > 2h, puis toutes les 2h jusqu'à la fin de la chirurgie.\n- Délai postopératoire : Puis 30 mg/kg/6h (max 1g) pendant 48h max.\n\n**Cas particuliers / Sécurité** : Non précisé dans les extraits.\n\n**Niveau de preuve** : ●●● (GRADE 2) [S2]."
+ },
+ {
+  "case_id": "C0_naive_fixed_bm25::Q43",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une chirurgie carcinologique cervico-faciale avec lambeau chez un patient allergique aux bêtalactamines ?",
+  "reference": "Clindamycine + Gentamicine",
+  "answer": "**Réponse synthétique** : Dans ce cas, on recommande d'utiliser clindamycine avec gentamicine.\n\n**Posologie, délais et modalités** :\n- Clindamycine : 600 mg IVL\n- Gentamicine : 6-7 mg/kg IVL\n\n**Cas particuliers / Sécurité** : En cas d'allergie aux bêtalactamines, on ajoute gentamicine 6-7 mg/kg IVL à la clindamycine.\n\n**Niveau de preuve** : ●●● (Avis d'experts) [S1]\n\nNote : Les recommandations sont basées sur l'édition [EN VIGUEUR] des Recommandations Formalisées d'Experts (RFE) de la SFAR."
+ },
+ {
+  "case_id": "C0_naive_fixed_bm25::Q44",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour un remplacement valvulaire aortique sous circulation extracorporelle (CEC) ?",
+  "reference": "Céfazoline",
+  "answer": "**Réponse synthétique** : L'antibioprophylaxie est recommandée pour un remplacement valvulaire aortique sous circulation extracorporelle (CEC).\n\n**Posologie, délais et modalités** : \n- Posologie unitaire de bêtalactamine : 2g maximum (Non précisé dans les extraits).\n- Délais : Commencer l'antibioprophylaxie 30 à 60 minutes avant l'incision chirurgicale et continuer pendant 24 à 48 heures postopératoire (Non précisé dans les extraits).\n\n**Cas particuliers / Sécurité** : \n- Allergie aux bêtalactamines : L'utilisation d'une alternative appropriée doit être considérée (Non précisé dans les extraits).\n- Fonction rénale : Les doses peuvent nécessiter une ajustement (Non précisé dans les extraits).\n- Obésité : Les doses peuvent nécessiter une ajustement (Non précisé dans les extraits).\n- Pédiatrie : La posologie est adaptée en fonction du poids de l'enfant (hors néonatologie) (Non précisé dans les extraits).\n\n**Niveau de preuve** : GRADE 1 (RFE SFAR 2026, V3.0 (04/05/2026)).\n\n**Remarque** : Les extraits fournis ne contiennent pas de détails précis sur les délais et les posologies exactes, mais indiquent clairement la nécessité de l'antibioprophylaxie pour ce type de chirurgie."
+ },
+ {
+  "case_id": "C0_naive_fixed_bm25::Q45",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour la pose d'une bioprothèse de valve aortique par voie transcutanée (TAVI) ?",
+  "reference": "Amoxicilline/Clavulanate",
+  "answer": "**Réponse synthétique** : Vancomycine 20 mg/kg IVL ou teicoplanine 12 mg/kg IVL.\n\n**Posologie, délais et modalités** : Dose initiale suivante :\n- Vancomycine : 20 mg/kg IVL\n- Teicoplanine : 12 mg/kg IVL\n\n**Cas particuliers / Sécurité** : Non précisé dans les extraits.\n\n**Niveau de preuve** : ●●● (Avis d'experts) [S1] [EN VIGUEUR]."
+ },
+ {
+  "case_id": "C0_naive_fixed_bm25::Q46",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour l'implantation d'un stimulateur cardiaque (pacemaker) ?",
+  "reference": "Céfazoline",
+  "answer": "**Réponse synthétique** : Vancomycine 20 mg/kg IVL ou teicoplanine 12 mg/kg IVL en cas d'allergie aux bêtalactamines.\n\n**Posologie, délais et modalités** : \n- Dose initiale : 20 mg/kg pour vancomycine ou 12 mg/kg pour teicoplanine.\n- Administration IVL.\n- Non précisé dans les extraits.\n\n**Cas particuliers / Sécurité** : \n- En cas d'allergie aux bêtalactamines, utiliser vancomycine ou teicoplanine.\n- Non précisé dans les extraits.\n\n**Niveau de preuve** : Avis d'experts (S1, édition en vigueur)."
+ },
+ {
+  "case_id": "C0_naive_fixed_bm25::Q48",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour la mise en place d'une ECMO percutanée (sans abord chirurgical) ?",
+  "reference": "Pas d'antibioprophylaxie",
+  "answer": "**Réponse synthétique** : Pas d'antibioprophylaxie.\n\n**Posologie, délais et modalités** : Non précisé dans les extraits.\n\n**Cas particuliers / Sécurité** : Non précisé dans les extraits.\n\n**Niveau de preuve** : ●○○ (Avis d'experts) [S1], ●●● (Avis d'experts) [S6], ●●● (Avis d'experts) [S7]."
+ },
+ {
+  "case_id": "C0_naive_fixed_bm25::Q50",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une amputation de membre (hors contexte septique) ?",
+  "reference": "Amoxicilline/Clavulanate",
+  "answer": "**Réponse synthétique** : Céfazoline 2g IVL, puis 1g toutes les 4h jusqu'à la fin de la chirurgie. En cas d'allergie aux bêtalactamines, clindamycine 900 mg IVL, puis 600 mg toutes les 6h pendant 48h.\n\n**Posologie, délais et modalités** :\n- Céfazoline : 2g IVL, puis 1g toutes les 4h jusqu'à la fin de la chirurgie.\n- Clindamycine : 900 mg IVL, puis 600 mg toutes les 6h pendant 48h.\n\n**Cas particuliers / Sécurité** :\n- Allergie aux bêtalactamines : clindamycine 900 mg IVL, puis 600 mg toutes les 6h pendant 48h.\n- Non précisé dans les extraits.\n\n**Niveau de preuve** : GRADE 2 (RÈGLEMENTATION SFAR 2026, édition en vigueur)."
+ },
+ {
+  "case_id": "C0_naive_fixed_bm25::Q51",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une chirurgie des varices sans abord chirurgical du scarpa ?",
+  "reference": "Pas d'antibioprophylaxie",
+  "answer": "**Réponse synthétique** : Céfazoline 2g IVL, puis 1g toutes les 4h jusqu'à fin de chirurgie.\n\n**Posologie, délais et modalités** : \n- Dose initiale : 2g IVL\n- Réinjections : 1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie\n- Cas particuliers : Allergie aux bêtalactamines (voir recommandations ci-dessous)\n\n**Cas particuliers / Sécurité** : \n- Si allergie aux bêtalactamines, si antibioprophylaxie indiquée : \n  - Si céfazoline : vancomycine 20 mg/kg IVL ou teicoplanine 12 mg/kg IVL\n  - Si amoxicilline/clavulanate : clindamycine 900 mg IVL + gentamicine 6 à 7 mg/kg IVL\n\n**Niveau de preuve** : GRADE 2 (S1)"
+ },
+ {
+  "case_id": "C0_naive_fixed_bm25::Q52",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour la pose d'un drain thoracique ?",
+  "reference": "Pas d'antibioprophylaxie",
+  "answer": "Hors périmètre / Information non retrouvée dans les extraits SFAR fournis.\n\nLes extraits fournis ne contiennent aucune recommandation spécifique concernant l'antibioprophylaxie pour la pose d'un drain thoracique. Les extraits portent principalement sur l'analgésie lors de la pose d'un drain pleural et l'utilisation de l'échographie pour guider la pose du drain, mais ne mentionnent pas d'antibiotiques ou de prophylaxie antimicrobienne pour cette procédure."
+ },
+ {
+  "case_id": "C0_naive_fixed_bm25::Q53",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une médiastinoscopie avec biopsies ?",
+  "reference": "Pas d'antibioprophylaxie",
+  "answer": "**Réponse synthétique** : Pas d'antibioprophylaxie.\n\n**Posologie, délais et modalités** : Non précisé dans les extraits.\n\n**Cas particuliers / Sécurité** : Non précisé dans les extraits.\n\n**Niveau de preuve** : ●●● (Avis d'experts) [S1], [S3], [S4], [S6].\n\nLa médiastinoscopie avec biopsies est mentionnée dans les extraits fournis sans recommandation d'antibioprophylaxie. Les avis d'experts sont unanimes sur ce point."
+ },
+ {
+  "case_id": "C0_naive_fixed_bm25::Q59",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une lipoaspiration sous anesthésie générale ?",
+  "reference": "Pas d'antibioprophylaxie",
+  "answer": "**Réponse synthétique** : Aucune antibioprophylaxie n'est recommandée pour une lipoaspiration sous anesthésie générale.\n\n**Posologie, délais et modalités** : Non précisé dans les extraits.\n\n**Cas particuliers / Sécurité** : Non précisé dans les extraits.\n\n**Niveau de preuve** : Avis d'experts (●●●) [S1] [EN VIGUEUR]"
+ },
+ {
+  "case_id": "C0_naive_fixed_bm25::Q61",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une reconstruction par lambeau libre microchirurgical ?",
+  "reference": "Céfazoline",
+  "answer": "**Réponse synthétique** : L'antibioprophylaxie adaptée à la flore du site opératoire et au risque du patient est recommandée.\n\n**Posologie, délais et modalités** : \n- Amoxicilline/Clavulanate : 2g IVL, puis 1g si la durée de la chirurgie est supérieure à 2h, et réinjections toutes les 2h jusqu'à la fin de la chirurgie.\n\n**Cas particuliers / Sécurité** : Non précisé dans les extraits.\n\n**Niveau de preuve** : ●●● (Avis d'experts) [S2, S6, S7, S8].\n\nLa recommandation est d'utiliser une antibioprophylaxie adaptée au risque de contamination du site opératoire et au profil de risque du patient. Pour une reconstruction par lambeau libre microchirurgical, l'Amoxicilline/Clavulanate est recommandée à dose de 2g IVL, puis 1g si la durée de la chirurgie est supérieure à 2h, et réinjections toutes les 2h jusqu'à la fin de la chirurgie."
+ },
+ {
+  "case_id": "C0_naive_fixed_bm25::Q62",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une greffe cutanée (hors patient brûlé) ?",
+  "reference": "Pas d'antibioprophylaxie",
+  "answer": "**Réponse synthétique** : Céfazoline à 30 mg/kg IVL, administrée si la durée de la chirurgie est supérieure à 4h, puis toutes les 4h jusqu'à la fin de la chirurgie.\n\n**Posologie, délais et modalités** :\n- Dose initiale : 30 mg/kg IVL\n- Réinjections : 30 mg/kg si la durée de la chirurgie est supérieure à 4h, puis toutes les 4h jusqu'à la fin de la chirurgie.\n\n**Cas particuliers / Sécurité** : Non précisé dans les extraits.\n\n**Niveau de preuve** : Avis d'experts (●●●) [S1], [S3] [EN VIGUEUR]."
+ },
+ {
+  "case_id": "C0_naive_fixed_bm25::Q67",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une chirurgie du mamelon ou de la plaque aréolo-mamelonnaire ?",
+  "reference": "Pas d'antibioprophylaxie",
+  "answer": "**Réponse synthétique** : Aucune antibioprophylaxie recommandée.\n\n**Posologie, délais et modalités** : Non précisé dans les extraits.\n\n**Cas particuliers / Sécurité** : Non précisé dans les extraits.\n\n**Niveau de preuve** : Avis d'experts (S1)."
+ },
+ {
+  "case_id": "C0_naive_fixed_bm25::Q69",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une annexectomie par voie coelioscopique ?",
+  "reference": "Céfazoline",
+  "answer": "**Réponse synthétique** : L'annexectomie par voie coelioscopique nécessite une antibioprophylaxie.\n\n**Posologie, délais et modalités** : \n- Dose initiale : Céfoxitine 2g IVL.\n- Réinjections : 1g si durée > 2h, puis toutes les 2h jusqu'à fin de chirurgie.\n\n**Cas particuliers / Sécurité** : Non précisé dans les extraits.\n\n**Niveau de preuve** : Avis d'experts (RFE SFAR 2026, édition en vigueur).\n\nLes recommandations sont prises directement de l'annexe 3 de la RFE SFAR 2026, qui recommande l'utilisation de céfoxitine 2g IVL pour l'annexectomie par voie coelioscopique, avec une réinjection de 1g si la durée de l'intervention dépasse 2 heures, et une administration continue toutes les 2 heures jusqu'à la fin de la chirurgie."
+ },
+ {
+  "case_id": "C0_naive_fixed_bm25::Q70",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une résection de lésions endométriosiques avec atteinte rectale par coelioscopie ?",
+  "reference": "Céfazoline + Métronidazole",
+  "answer": "**Réponse synthétique** : Céfazoline + Métronidazole.\n\n**Posologie, délais et modalités** :\n- Céfazoline : 2g IVL\n- Métronidazole : 1g IVL\n- Céfazoline : 1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie.\n\n**Cas particuliers / Sécurité** : Non précisé dans les extraits.\n\n**Niveau de preuve** : Avis d'experts (●●●) (S1)."
+ },
+ {
+  "case_id": "C0_naive_fixed_bm25::Q71",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une hystérectomie totale sans annexectomie par laparotomie ?",
+  "reference": "Céfoxitine",
+  "answer": "**Réponse synthétique** : Céfoxitine 2g IVL, puis 1g toutes les 2h jusqu'à fin de chirurgie.\n\n**Posologie, délais et modalités** : \n- Dose initiale : 2g IVL.\n- Réinjections : 1g toutes les 2h jusqu'à fin de chirurgie.\n\n**Cas particuliers / Sécurité** : Non précisé dans les extraits.\n\n**Niveau de preuve** : Avis d'experts (S1, S3, S5)."
+ },
+ {
+  "case_id": "C0_naive_fixed_bm25::Q73",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une conisation du col utérin ?",
+  "reference": "Pas d'antibioprophylaxie",
+  "answer": "**Réponse synthétique** : Pas d'antibioprophylaxie.\n\n**Posologie, délais et modalités** : Non précisé dans les extraits.\n\n**Cas particuliers / Sécurité** : Non précisé dans les extraits.\n\n**Niveau de preuve** : Avis d'experts (S1)."
+ },
+ {
+  "case_id": "C0_naive_fixed_bm25::Q74",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une hystéroscopie diagnostique ?",
+  "reference": "Pas d'antibioprophylaxie",
+  "answer": "**Réponse synthétique** : Pas d'antibioprophylaxie.\n\n**Posologie, délais et modalités** : Non précisé dans les extraits.\n\n**Cas particuliers / Sécurité** : Considérer une antibioprophylaxie par céfazoline limitée à la période opératoire en cas d'endométrieuse, d'antécédent de chirurgies pelviennes ou d'infection génitales haute (cités dans [S2]).\n\n**Niveau de preuve** : ●●● (Avis d'experts) pour la non-préscription d'antibioprophylaxie, et ●●● (Avis d'experts) pour la prescription possible en cas de facteurs de risque."
+ },
+ {
+  "case_id": "C0_naive_fixed_bm25::Q75",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une biopsie de l'endomètre par hystéroscopie ?",
+  "reference": "Pas d'antibioprophylaxie",
+  "answer": "**Réponse synthétique** : Pas d'antibioprophylaxie.\n\n**Posologie, délais et modalités** : Non précisé dans les extraits.\n\n**Cas particuliers / Sécurité** : Non précisé dans les extraits.\n\n**Niveau de preuve** : [●●● (Avis d'experts)] (GRADE 1) [S1], [S3], [S6], [S7], [S8]."
+ },
+ {
+  "case_id": "C0_naive_fixed_bm25::Q78",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une nymphoplastie de réduction ?",
+  "reference": "Pas d'antibioprophylaxie",
+  "answer": "**Réponse synthétique** : Aucune antibioprophylaxie recommandée.\n\n**Posologie, délais et modalités** : Non précisé dans les extraits.\n\n**Cas particuliers / Sécurité** : Non précisé dans les extraits.\n\n**Niveau de preuve** : ●●● (GRADE 2) [S1]"
+ },
+ {
+  "case_id": "C0_naive_fixed_bm25::Q79",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une césarienne programmée ?",
+  "reference": "Céfazoline",
+  "answer": "**Réponse synthétique** : L'antibioprophylaxie est recommandée 30 minutes avant l'incision pour une césarienne programmée.\n\n**Posologie, délais et modalités** :\n- **Dose initiale** : 2 g de céfazoline IV lente.\n- **Réinjection et durée** : Dose unique (si durée > 4h, réinjecter 1 g).\n\n**Cas particuliers / Sécurité** : Non précisé dans les extraits.\n\n**Niveau de preuve** : Avis d'experts (RFE SFAR 2026, édition en vigueur)."
+ },
+ {
+  "case_id": "C0_naive_fixed_bm25::Q80",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour un cerclage du col de l'utérus au cours de la grossesse par voie transvaginale ?",
+  "reference": "Pas d'antibioprophylaxie",
+  "answer": "**Réponse synthétique** : Aucune antibioprophylaxie n'est recommandée.\n\n**Posologie, délais et modalités** : Non précisé dans les extraits.\n\n**Cas particuliers / Sécurité** : Non précisé dans les extraits.\n\n**Niveau de preuve** : Avis d'experts (Édition 2026)."
+ },
+ {
+  "case_id": "C0_naive_fixed_bm25::Q81",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une révision de la cavité utérine après l'accouchement ?",
+  "reference": "Céfazoline",
+  "answer": "**Réponse synthétique** : Céfazoline est recommandée pour l'antibioprophylaxie lors d'une révision de la cavité utérine après l'accouchement.\n\n**Posologie, délais et modalités** : \n- Dose unique de 2g par voie intraveineuse (IVL).\n- Alternative : Céfuoxime (2g IVL ou 1,5g IVL selon l'alternative).\n\n**Cas particuliers / Sécurité** : Non précisé dans les extraits.\n\n**Niveau de preuve** : ●●● (Avis d'experts) pour les deux extraits [S4] et [S5]."
+ },
+ {
+  "case_id": "C0_naive_fixed_bm25::Q83",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une interruption volontaire de grossesse par aspiration au premier trimestre ?",
+  "reference": "Pas d'antibioprophylaxie",
+  "answer": "Hors périmètre / Information non retrouvée dans les extraits SFAR fournis.\n\nLes extraits fournis ne contiennent aucune recommandation spécifique concernant l'antibioprophylaxie pour une interruption volontaire de grossesse par aspiration au premier trimestre. Les extraits mentionnent seulement que l'antibioprophylaxie n'est pas recommandée pour cette procédure et que l'antibiothérapie curative postopératoire adaptée aux résultats du prélèvement vaginal est recommandée."
+ },
+ {
+  "case_id": "C0_naive_fixed_bm25::Q84",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour un prélèvement d'ovocytes par voie transvaginale avec échoguidage (PMA) ?",
+  "reference": "Pas d'antibioprophylaxie",
+  "answer": "**Réponse synthétique** : Considérer une antibiotoprophylaxie par céfazoline limitée à la période opératoire pour la ponction ovocytaire en cas d'endométrieuse, d'antécédent de chirurgies pelviennes ou d'infection génitale haute.\n\n**Posologie, délais et modalités** : Non précisé dans les extraits.\n\n**Cas particuliers / Sécurité** : Considérer une antibiotoprophylaxie par céfazoline limitée à la période opératoire pour la ponction ovocytaire en cas d'endométrieuse, d'antécédent de chirurgies pelviennes ou d'infection génitale haute.\n\n**Niveau de preuve** : Avis d'experts (S1)."
+ },
+ {
+  "case_id": "C0_naive_fixed_bm25::Q85",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une oesophagectomie ?",
+  "reference": "Céfazoline",
+  "answer": "Hors périmètre / Information non retrouvée dans les extraits SFAR fournis.\n\nLes extraits fournis ne contiennent pas de recommandation spécifique pour l'oesophagectomie. Les extraits portent principalement sur l'antibioprophylaxie en chirurgie vasculaire et en chirurgie générale, mais ne couvrent pas l'oesophagectomie en particulier."
+ },
+ {
+  "case_id": "C0_naive_fixed_bm25::Q87",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour la mise en place d'un anneau gastrique (chirurgie bariatrique) ?",
+  "reference": "Céfazoline",
+  "answer": "**Réponse synthétique** : Céfazoline est recommandée pour l'antibioprophylaxie en cas de mise en place d'un anneau gastrique.\n\n**Posologie, délais et modalités** :\n- Dose initiale : 2g IVL.\n- Réinjection : 1g si la durée de la chirurgie est supérieure à 4h, puis réinjection toutes les 4h jusqu'à la fin de la chirurgie.\n- Si la durée de la chirurgie est supérieure à 2h, réinjection : 1,5g IVL.\n\n**Cas particuliers / Sécurité** :\n- Allergie aux bêtalactamines : Vancomycine est recommandée à la dose de 30 mg/kg à la vitesse de 1000 mg/heure (dose calculée sur le poids réel), dose unique.\n\n**Niveau de preuve** : Avis d'experts (●●●) [S1] [EN VIGUEUR]."
+ },
+ {
+  "case_id": "C0_naive_fixed_bm25::Q88",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une résection de l'intestin grêle par laparotomie ?",
+  "reference": "Céfoxitine",
+  "answer": "**Réponse synthétique** : Céfoxitine est recommandée pour l'antibioprophylaxie.\n\n**Posologie, délais et modalités** :\n- Dose initiale : 2g IVL\n- Réinjection : 1g si durée > 2h, puis toutes les 2h jusqu'à fin de chirurgie\n\n**Cas particuliers / Sécurité** : Non précisé dans les extraits\n\n**Niveau de preuve** : ●●● (Avis d'experts) [S1] [S2] [S6] [S8]"
+ },
+ {
+  "case_id": "C0_naive_fixed_bm25::Q89",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une appendicectomie programmée ?",
+  "reference": "Céfoxitine",
+  "answer": "**Réponse synthétique** : L'antibioprophylaxie pour une appendicectomie programmée est recommandée avec la céfoxitine.\n\n**Posologie, délais et modalités** :\n- Céfoxitine : 2 g IVL\n- Dose unique si la durée de la chirurgie est inférieure ou égale à 2h. Si la durée est supérieure à 2h, une dose de 1g doit être administrée au début de la chirurgie, puis toutes les 2h jusqu'à la fin de la chirurgie.\n\n**Cas particuliers / Sécurité** : Non précisé dans les extraits.\n\n**Niveau de preuve** : ●●● (Avis d'experts) [S1]"
+ },
+ {
+  "case_id": "C0_naive_fixed_bm25::Q91",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une chirurgie des hémorroïdes ?",
+  "reference": "Métronidazole",
+  "answer": "### Réponse synthétique\nLa chirurgie des hémorroïdes nécessite une antibioprophylaxie avec Métronidazole.\n\n### Posologie, délais et modalités\n- **Métronidazole** : 1g IVL\n- **Dose unique**\n\n### Cas particuliers / Sécurité\n- **IMC ≤ 50 kg/m²** : Non précisé dans les extraits.\n\n### Niveau de preuve\n- **●●● (Avis d'experts)** [S1], [S3] (EN VIGUEUR)"
+ },
+ {
+  "case_id": "C0_naive_fixed_bm25::Q95",
+  "question": "Quelle est la recommandation d'antibioprophylaxie pour une splénectomie programmée par laparotomie ?",
+  "reference": "Céfazoline",
+  "answer": "**Réponse synthétique** : Céfazoline est recommandée pour une splénectomie programmée par laparotomie.\n\n**Posologie, délais et modalités** : \n- Dose initiale : 2g IVL.\n- Réinjection : 1g si la durée de la chirurgie est supérieure à 4h, puis toutes les 4h jusqu'à la fin de la chirurgie.\n- Alternative : Céfuoxime (2g IVL, 1,5g IVL).\n\n**Cas particuliers / Sécurité** : Non précisé dans les extraits.\n\n**Niveau de preuve** : ●●● (Avis d'experts) [S1], [S2], [S4]."
+ }
+]

@@ -52,3 +52,6 @@ AGENTS.md
 COURS_*.pdf
 MASTERCLASS_*.md
 reports/masterclass_course.html
+
+# Judge verdicts are small JSON evidence files: keep them
+!eval_internal/judge/runs/
