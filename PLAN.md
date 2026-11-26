@@ -23,6 +23,8 @@ Phase 2 (fondation d'évaluation) en cours ; phase 3 étape 1 (C8 générique) l
 | Hypothèse | Jeu | Résultat | Décision |
 |---|---|---|---|
 | Baseline constante | abp171 dev | 47,1 % [37–57] | plancher de référence |
+| C8 générique (retrait fuites + correctifs sécurité) vs ancien C8, retrieval | abp171 dev | doc hit 100 % = ; MRR n.s. | gardé (aucune perte) |
+| idem | multirfe_synth dev | doc MRR +0,033 [+0,006 ; +0,071], passage hit +1,3 pt n.s., latence −18 % | gardé : nouvelle référence |
 
 ## Décisions
 - 2026-11-26 : pas d'API (clé invalide) → jeu interne généré/vérifié par sous-agents Claude Code ; juge : backend local d'abord.
