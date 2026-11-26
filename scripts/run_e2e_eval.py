@@ -302,13 +302,26 @@ def main() -> None:
         default=0,
         help="Optional deterministic stratified sample size (keeps all allergy questions + proportional open/MCQ).",
     )
+    parser.add_argument(
+        "--ids-file",
+        type=Path,
+        default=None,
+        help="Optional JSON list of question IDs to evaluate (exact re-run of a previous sample).",
+    )
     parser.add_argument("--max-tokens", type=int, default=48)
     parser.add_argument("--output", type=Path, default=Path("reports/e2e_eval.json"))
     parser.add_argument("--md-output", type=Path, default=Path("reports/e2e_comparison_report.md"))
     args = parser.parse_args()
 
     questions = load_antibioprophylaxie_benchmark(args.benchmark_path)
-    if args.stratified > 0 and args.stratified < len(questions):
+    if args.ids_file is not None:
+        wanted = json.loads(args.ids_file.read_text(encoding="utf-8"))
+        by_id = {q.id: q for q in questions}
+        missing = [i for i in wanted if i not in by_id]
+        if missing:
+            raise SystemExit(f"Unknown question IDs in {args.ids_file}: {missing}")
+        questions = [by_id[i] for i in wanted]
+    elif args.stratified > 0 and args.stratified < len(questions):
         allergy_qs = [q for q in questions if q.is_allergy_question]
         mcq_qs = [q for q in questions if q.question_type == "mcq" and not q.is_allergy_question]
         open_qs = [q for q in questions if q.question_type == "open" and not q.is_allergy_question]
