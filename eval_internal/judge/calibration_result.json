@@ -1,0 +1,144 @@
+{
+ "n": 180,
+ "agreement": 0.9444444444444444,
+ "kappa": 0.8849104859335037,
+ "confusion": {
+  "tp": 102,
+  "tn": 68,
+  "fp": 2,
+  "fn": 8
+ },
+ "by_source": {
+  "e2e_C0 R": {
+   "n": 27,
+   "agreement": 1.0,
+   "kappa": 1.0
+  },
+  "e2e_Zero": {
+   "n": 32,
+   "agreement": 0.96875,
+   "kappa": 0.92
+  },
+  "gen_C8": {
+   "n": 38,
+   "agreement": 0.8421052631578947,
+   "kappa": 0.6274509803921569
+  },
+  "gen_C0": {
+   "n": 45,
+   "agreement": 0.9777777777777777,
+   "kappa": 0.9554896142433233
+  },
+  "e2e_c8": {
+   "n": 38,
+   "agreement": 0.9473684210526315,
+   "kappa": 0.7696969696969694
+  }
+ },
+ "length_probe": {
+  "pairs": 20,
+  "verdict_changed": 0
+ },
+ "disagreements": [
+  {
+   "case_id": "J004",
+   "src": "gen_C8",
+   "qid": "Q129",
+   "truth": 1,
+   "judge": "partial",
+   "reference": "Céfazoline",
+   "answer": "**Réponse synthétique** : Céfazoline ou Céfuroxime, administrée en dose initiale suivie de réinjections selon le schéma.\n\n**Posologie, délais et modalités** :\n- **Dose initiale** : 2g de Céfazoline ou 1,5g de Céfuroxime IVL.\n- **Réinjections** : 1g de Céfazoline ou 0,75g de Céfuroxime toutes les 4h ",
+   "justification": "Céfazoline citée avec la céfuroxime en alternative sans trancher, la molécule de référence étant présente."
+  },
+  {
+   "case_id": "J034",
+   "src": "gen_C8",
+   "qid": "Q85",
+   "truth": 1,
+   "judge": "partial",
+   "reference": "Céfazoline",
+   "answer": "**Réponse synthétique** : L'antibioprophylaxie pour une oesophagectomie est recommandée avec la céfazoline ou la céfuoxime.\n\n**Posologie, délais et modalités** :\n- **Dose initiale** : 2g IVL (céfazoline) ou 1,5g IVL (céfuoxime).\n- **Réinjections et durée** : \n  - 1g IVL si la durée de l'intervention",
+   "justification": "Céfazoline citée mais céfuroxime proposée en alternative sans trancher."
+  },
+  {
+   "case_id": "J040",
+   "src": "gen_C0",
+   "qid": "Q98",
+   "truth": 0,
+   "judge": "correct",
+   "reference": "Pipéracilline/Tazobactam",
+   "answer": "**Réponse synthétique** : Pipéracilline-tazobactam est recommandé.\n\n**Posologie, délais et modalités** : \n- Dose initiale : 4g IVL\n- Réinjection : 4g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie.\n\n**Cas particuliers / Sécurité** : Non précisé dans les extraits.\n\n**Niveau de preuve** : ",
+   "justification": "Pipéracilline/tazobactam, conforme à la référence."
+  },
+  {
+   "case_id": "J073",
+   "src": "e2e_Zero",
+   "qid": "Q03",
+   "truth": 1,
+   "judge": "incorrect",
+   "reference": "Clindamycine",
+   "answer": "Clindamycine + Gentamicine",
+   "justification": "La gentamicine est ajoutée à la clindamycine alors que la référence ne retient que la clindamycine."
+  },
+  {
+   "case_id": "J080",
+   "src": "gen_C8",
+   "qid": "Q132",
+   "truth": 1,
+   "judge": "partial",
+   "reference": "Céfazoline",
+   "answer": "**Réponse synthétique** : Céfazoline ou Amoxicilline/Clavulanate.\n\n**Posologie, délais et modalités** :\n- **Céfazoline** : Dose initiale de 2g IVL, puis 1g toutes les 4h jusqu'à la fin de la chirurgie.\n- **Amoxicilline/Clavulanate** : Dose initiale de 2g IVL, puis 1g toutes les 2h jusqu'à la fin de ",
+   "justification": "La céfazoline est citée mais l'amoxicilline/clavulanate est proposée en option sans trancher, ce qui n'est pas retenu par la référence."
+  },
+  {
+   "case_id": "J145",
+   "src": "gen_C8",
+   "qid": "Q45",
+   "truth": 1,
+   "judge": "partial",
+   "reference": "Amoxicilline/Clavulanate",
+   "answer": "**Réponse synthétique** : L'antibioprophylaxie est recommandée pour la pose d'une bioprothèse de valve aortique par voie transcutanée (TAVI).\n\n**Posologie, délais et modalités** :\n- Dose initiale : 2g IVL\n- Réinjections et durée : 1g si durée > 2h, puis toutes les 2h jusqu'à fin de chirurgie (pour A",
+   "justification": "Affirme la recommandation pour le TAVI et mentionne amoxicilline/clavulanate sans trancher clairement, donc incomplet mais sans contresens explicite."
+  },
+  {
+   "case_id": "J158",
+   "src": "gen_C8",
+   "qid": "Q42",
+   "truth": 1,
+   "judge": "partial",
+   "reference": "Céfazoline",
+   "answer": "**Réponse synthétique** : Céfazoline ou Amoxicilline/Clavulanate est recommandée pour l'antibioprophylaxie en chirurgie orthognatique.\n\n**Posologie, délais et modalités** :\n- Céfazoline : Dose initiale de 2g IVL, puis 1g si durée > 4h, puis toutes les 4h jusqu'à la fin de la chirurgie, puis 1g/6h po",
+   "justification": "Céfazoline citée parmi deux options, sans trancher avec l'amoxicilline/clavulanate."
+  },
+  {
+   "case_id": "J171",
+   "src": "gen_C8",
+   "qid": "Q41",
+   "truth": 1,
+   "judge": "partial",
+   "reference": "Amoxicilline/Clavulanate",
+   "answer": "**Réponse synthétique** : L'antibioprophylaxie recommandée pour une fracture ouverte de mandibule est l'amoxicilline/clavulanate ou la céfazoline.\n\n**Posologie, délais et modalités** :\n- **Amoxicilline/Clavulanate** : Dose initiale de 2g IVL, puis 1g toutes les 2h jusqu'à la fin de la chirurgie, pui",
+   "justification": "Amoxicilline/clavulanate cité parmi deux options (avec la céfazoline), sans trancher."
+  },
+  {
+   "case_id": "J180",
+   "src": "e2e_c8",
+   "qid": "Q65",
+   "truth": 1,
+   "judge": "partial",
+   "reference": "Céfazoline",
+   "answer": "Céfazoline / Céfuroxime (SFAR 2026 [S1]).",
+   "justification": "Céfazoline citée avec le céfuroxime en alternative, sans trancher."
+  },
+  {
+   "case_id": "J192",
+   "src": "e2e_c8",
+   "qid": "Q98",
+   "truth": 0,
+   "judge": "correct",
+   "reference": "Pipéracilline/Tazobactam",
+   "answer": "Pipéracilline + Tazobactam, SFAR 2026 [S2].",
+   "justification": "Pipéracilline + tazobactam, identique à la référence."
+  }
+ ]
+}
