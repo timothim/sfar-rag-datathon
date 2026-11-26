@@ -1,0 +1,458 @@
+{
+ "n_units": 3933,
+ "n_units_primary": 3579,
+ "n_cross_doc_duplicates": 354,
+ "n_docs_scanned": 241,
+ "n_docs_with_units": 130,
+ "n_docs_with_5plus_units": 117,
+ "strength": {
+  "unknown": 1235,
+  "expert_opinion": 1207,
+  "grade_2_plus": 585,
+  "grade_1_plus": 574,
+  "grade_1_minus": 167,
+  "grade_2_minus": 142,
+  "no_recommendation": 23
+ },
+ "strength_primary": {
+  "unknown": 1206,
+  "expert_opinion": 1062,
+  "grade_2_plus": 536,
+  "grade_1_plus": 486,
+  "grade_1_minus": 148,
+  "grade_2_minus": 125,
+  "no_recommendation": 16
+ },
+ "strength_source": {
+  "rating": 2431,
+  "none": 1192,
+  "wording": 310
+ },
+ "mode": {
+  "labelled": 2401,
+  "inline_rating": 1478,
+  "table_row": 54
+ },
+ "with_label": 2684,
+ "with_agreement": 2462,
+ "with_field": 1608,
+ "with_section": 1493,
+ "latest_edition": 3575,
+ "by_period": {
+  "2000-2004": {
+   "docs": 30,
+   "docs_with_units": 5,
+   "units": 60,
+   "units_primary": 60,
+   "graded": 0,
+   "expert_opinion": 17,
+   "unknown": 43
+  },
+  "2005-2009": {
+   "docs": 38,
+   "docs_with_units": 14,
+   "units": 658,
+   "units_primary": 657,
+   "graded": 127,
+   "expert_opinion": 4,
+   "unknown": 527
+  },
+  "2010-2014": {
+   "docs": 32,
+   "docs_with_units": 19,
+   "units": 755,
+   "units_primary": 755,
+   "graded": 234,
+   "expert_opinion": 151,
+   "unknown": 367
+  },
+  "2015-2019": {
+   "docs": 56,
+   "docs_with_units": 40,
+   "units": 854,
+   "units_primary": 854,
+   "graded": 449,
+   "expert_opinion": 216,
+   "unknown": 188
+  },
+  "2020-2022": {
+   "docs": 31,
+   "docs_with_units": 16,
+   "units": 392,
+   "units_primary": 325,
+   "graded": 116,
+   "expert_opinion": 255,
+   "unknown": 21
+  },
+  "2023-2026": {
+   "docs": 53,
+   "docs_with_units": 36,
+   "units": 1214,
+   "units_primary": 928,
+   "graded": 542,
+   "expert_opinion": 564,
+   "unknown": 89
+  },
+  "inconnue": {
+   "docs": 1,
+   "docs_with_units": 0,
+   "units": 0,
+   "units_primary": 0,
+   "graded": 0,
+   "expert_opinion": 0,
+   "unknown": 0
+  }
+ },
+ "declared": {
+  "n_docs": 49,
+  "median_rel_gap": 0.026,
+  "within_10pct": 40,
+  "within_20pct": 45,
+  "exact": 18,
+  "detail": [
+   {
+    "doc_id": "2024_2024_RFE-optimisation-hemodynamique-perioperatoire_adulte-dont-o_520b05",
+    "doc_role": "recommandation",
+    "declared": 24,
+    "extracted": 13,
+    "rel_gap": 0.458
+   },
+   {
+    "doc_id": "2018_RPP_beta-lactamines-en-soins-critiques_041018_logoSFPT_9e9437",
+    "doc_role": "recommandation",
+    "declared": 21,
+    "extracted": 26,
+    "rel_gap": 0.238
+   },
+   {
+    "doc_id": "2021_RFE_20SFAR-SF2H_20Tenue_20vestimentaire_20au_20bloc_finale_22092_6d5cef",
+    "doc_role": "recommandation",
+    "declared": 13,
+    "extracted": 16,
+    "rel_gap": 0.231
+   },
+   {
+    "doc_id": "2026_RFE_sedationproceduraleUrgences_24juin2026_1f0c12",
+    "doc_role": "recommandation",
+    "declared": 33,
+    "extracted": 26,
+    "rel_gap": 0.212
+   },
+   {
+    "doc_id": "2026_TEXTE-RFE-ALR-PEDIA-VERSION-FINALE-010926_63f95f",
+    "doc_role": "recommandation",
+    "declared": 34,
+    "extracted": 29,
+    "rel_gap": 0.147
+   },
+   {
+    "doc_id": "2025_RFE-analgesie-obstetricale-texte-long_172a5f",
+    "doc_role": "argumentaire",
+    "declared": 39,
+    "extracted": 34,
+    "rel_gap": 0.128
+   },
+   {
+    "doc_id": "2020_RPP_PLYO_2020_a9118d",
+    "doc_role": "recommandation",
+    "declared": 8,
+    "extracted": 7,
+    "rel_gap": 0.125
+   },
+   {
+    "doc_id": "2026_RFE-LAT-final-mai-2026-_a26946",
+    "doc_role": "recommandation",
+    "declared": 9,
+    "extracted": 10,
+    "rel_gap": 0.111
+   },
+   {
+    "doc_id": "2019_rfe-trauma-vertebro-medulaire_b7be1a",
+    "doc_role": "recommandation",
+    "declared": 19,
+    "extracted": 21,
+    "rel_gap": 0.105
+   },
+   {
+    "doc_id": "2018_2_RFE-CURARE-3_4eac96",
+    "doc_role": "recommandation",
+    "declared": 30,
+    "extracted": 33,
+    "rel_gap": 0.1
+   },
+   {
+    "doc_id": "2019_rfe-gestion-anemie-reanimation_03645b",
+    "doc_role": "recommandation",
+    "declared": 10,
+    "extracted": 11,
+    "rel_gap": 0.1
+   },
+   {
+    "doc_id": "2022_RPP-FHS_pour-mise-sur-site_014032",
+    "doc_role": "recommandation",
+    "declared": 21,
+    "extracted": 19,
+    "rel_gap": 0.095
+   },
+   {
+    "doc_id": "2026_RFE-antibioprophylaxie-2023_V3_0_pour-mise-sur-site-juin-2026_sa_9ff419",
+    "doc_role": "recommandation",
+    "declared": 11,
+    "extracted": 10,
+    "rel_gap": 0.091
+   },
+   {
+    "doc_id": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1",
+    "doc_role": "recommandation",
+    "declared": 11,
+    "extracted": 10,
+    "rel_gap": 0.091
+   },
+   {
+    "doc_id": "2026_RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-ARGUMENTAIRE_CD_2026_f46e3f",
+    "doc_role": "argumentaire",
+    "declared": 36,
+    "extracted": 39,
+    "rel_gap": 0.083
+   },
+   {
+    "doc_id": "2020_RFE_20pr_C3_A9-_C3_A9clampsie_finale_8989f8",
+    "doc_role": "recommandation",
+    "declared": 25,
+    "extracted": 27,
+    "rel_gap": 0.08
+   },
+   {
+    "doc_id": "2022_RPP-Trauma-cranien-leger_pour-mise-sur-site_autorship-complet_9c1d68",
+    "doc_role": "recommandation",
+    "declared": 13,
+    "extracted": 14,
+    "rel_gap": 0.077
+   },
+   {
+    "doc_id": "2017_Pneumonies-associees-au-soins-de-reanimation-ANREA_c53a1e",
+    "doc_role": "recommandation",
+    "declared": 15,
+    "extracted": 14,
+    "rel_gap": 0.067
+   },
+   {
+    "doc_id": "2018_RFE-IH-soins-critiques_f67e16",
+    "doc_role": "recommandation",
+    "declared": 18,
+    "extracted": 19,
+    "rel_gap": 0.056
+   },
+   {
+    "doc_id": "2026_RFE-Infections-intra-abdominales-version-lecture-doc-finale-14-0_7f27c6",
+    "doc_role": "recommandation",
+    "declared": 42,
+    "extracted": 44,
+    "rel_gap": 0.048
+   },
+   {
+    "doc_id": "2019_rac-orthepedie-lourde_bc800f",
+    "doc_role": "recommandation",
+    "declared": 23,
+    "extracted": 24,
+    "rel_gap": 0.043
+   },
+   {
+    "doc_id": "2026_gestion_voies_aeriennes_argumentaire_mel_vd_a9b593",
+    "doc_role": "argumentaire",
+    "declared": 27,
+    "extracted": 28,
+    "rel_gap": 0.037
+   },
+   {
+    "doc_id": "2026_gestion_voies_aeriennes_recommandations_mel_vd_19eb83",
+    "doc_role": "recommandation",
+    "declared": 27,
+    "extracted": 28,
+    "rel_gap": 0.037
+   },
+   {
+    "doc_id": "2009_2b_AFAR_Contrele-de-la-glycemie-en-reanimation-et-en-anesthesie__5f7048",
+    "doc_role": "recommandation",
+    "declared": 74,
+    "extracted": 72,
+    "rel_gap": 0.027
+   },
+   {
+    "doc_id": "2009_2_SFAR_Prise-en-charge-pre-et-interhospitaliere-des-formes-grave_70a9a3",
+    "doc_role": "recommandation",
+    "declared": 76,
+    "extracted": 78,
+    "rel_gap": 0.026
+   },
+   {
+    "doc_id": "2025_RBP_-SFAR_AFEF_ACHBPT_RESECTION_-HEPATIQUE_-ARGUMENTAIRE_VF-1-AB_2e42b6",
+    "doc_role": "argumentaire",
+    "declared": 39,
+    "extracted": 40,
+    "rel_gap": 0.026
+   },
+   {
+    "doc_id": "2025_RESECTION_-HEPATIQUE_-RECOMMANDATIONS_MEL_e8bdcf",
+    "doc_role": "recommandation",
+    "declared": 39,
+    "extracted": 40,
+    "rel_gap": 0.026
+   },
+   {
+    "doc_id": "2022_RPP-SFAR-COVID_Version-Avril-2022_abrogee-010723_682252",
+    "doc_role": "abrogee",
+    "declared": 68,
+    "extracted": 67,
+    "rel_gap": 0.015
+   },
+   {
+    "doc_id": "2022_RPP_20SFAR_20COVID_Version_20Avril_202022_finale_20sans_20marque_c5bf31",
+    "doc_role": "recommandation",
+    "declared": 68,
+    "extracted": 67,
+    "rel_gap": 0.015
+   },
+   {
+    "doc_id": "2014_2_AFAR_Nutrition-artificielle-en-reanimation_19562a",
+    "doc_role": "recommandation",
+    "declared": 69,
+    "extracted": 68,
+    "rel_gap": 0.014
+   },
+   {
+    "doc_id": "2024_RFE-gestion-de-lanticoagulation-dans-un-contexte-durgence_23_02__d0368c",
+    "doc_role": "recommandation",
+    "declared": 103,
+    "extracted": 102,
+    "rel_gap": 0.01
+   },
+   {
+    "doc_id": "2017_Tracheotomie-en-reanimation-ANREA_404540",
+    "doc_role": "recommandation",
+    "declared": 18,
+    "extracted": 18,
+    "rel_gap": 0.0
+   },
+   {
+    "doc_id": "2019_rfe-rac-lobectomie-pulmonaire_ee63af",
+    "doc_role": "recommandation",
+    "declared": 32,
+    "extracted": 32,
+    "rel_gap": 0.0
+   },
+   {
+    "doc_id": "2019_rfe-trauma-abdominale_656ac9",
+    "doc_role": "recommandation",
+    "declared": 15,
+    "extracted": 15,
+    "rel_gap": 0.0
+   },
+   {
+    "doc_id": "2019_rpp-prise-en-charge-du-brule-grave_20_e49758",
+    "doc_role": "recommandation",
+    "declared": 24,
+    "extracted": 24,
+    "rel_gap": 0.0
+   },
+   {
+    "doc_id": "2020_RFE_TSM_2020_48fd8d",
+    "doc_role": "recommandation",
+    "declared": 19,
+    "extracted": 19,
+    "rel_gap": 0.0
+   },
+   {
+    "doc_id": "2021_RFE-SFAR-SFMU-Solute_CC_81s-de-remplissage_finale_220921_c91c4c",
+    "doc_role": "recommandation",
+    "declared": 9,
+    "extracted": 9,
+    "rel_gap": 0.0
+   },
+   {
+    "doc_id": "2021_RFE_20SFAR-SFCTCV_20RAC_20chirurgie_20cardiaque_finale_220921_cd842e",
+    "doc_role": "recommandation",
+    "declared": 33,
+    "extracted": 33,
+    "rel_gap": 0.0
+   },
+   {
+    "doc_id": "2021_RFE_20SFAR_20pancreatite_20aigue_finale_220921_b98663",
+    "doc_role": "recommandation",
+    "declared": 24,
+    "extracted": 24,
+    "rel_gap": 0.0
+   },
+   {
+    "doc_id": "2022_RFE-Programme-doptimisation-perioperatoire_pour-mise-sur-site_26_6ede19",
+    "doc_role": "recommandation",
+    "declared": 30,
+    "extracted": 30,
+    "rel_gap": 0.0
+   },
+   {
+    "doc_id": "2022_RPP-reduction-impact-environnemental_pour-mise-sur-site_b22db8",
+    "doc_role": "recommandation",
+    "declared": 17,
+    "extracted": 17,
+    "rel_gap": 0.0
+   },
+   {
+    "doc_id": "2022_rpp-urgences-obstetricales-en-medecine-durgence_32dd15",
+    "doc_role": "recommandation",
+    "declared": 15,
+    "extracted": 15,
+    "rel_gap": 0.0
+   },
+   {
+    "doc_id": "2024_PEDIA_RPP-Optimisation-Hemodynamique-Perioperatoire_Pediatrie_c6d39a",
+    "doc_role": "recommandation",
+    "declared": 9,
+    "extracted": 9,
+    "rel_gap": 0.0
+   },
+   {
+    "doc_id": "2024_RPP-Prevention-des-erreurs-medicamenteuses_39d8ef",
+    "doc_role": "recommandation",
+    "declared": 29,
+    "extracted": 29,
+    "rel_gap": 0.0
+   },
+   {
+    "doc_id": "2025_2025_RFE-Intubation-adulte-hors-bloc-hors-rea-_f68924",
+    "doc_role": "recommandation",
+    "declared": 32,
+    "extracted": 32,
+    "rel_gap": 0.0
+   },
+   {
+    "doc_id": "2025_2025_SFAR-SFA_RFE-Diagnostic-et-prise-en-charge-des-reactions-dh_66bc8a",
+    "doc_role": "recommandation",
+    "declared": 70,
+    "extracted": 70,
+    "rel_gap": 0.0
+   },
+   {
+    "doc_id": "2025_RPP-Trauma-cranio-encephaliques-V1-finalisee_ea8aab",
+    "doc_role": "recommandation",
+    "declared": 45,
+    "extracted": 45,
+    "rel_gap": 0.0
+   },
+   {
+    "doc_id": "2026_Version-courte_3ae465",
+    "doc_role": "texte_court",
+    "declared": 40,
+    "extracted": 40,
+    "rel_gap": 0.0
+   },
+   {
+    "doc_id": "2026_Version-longue_8281a1",
+    "doc_role": "argumentaire",
+    "declared": 40,
+    "extracted": 40,
+    "rel_gap": 0.0
+   }
+  ]
+ }
+}
