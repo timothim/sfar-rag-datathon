@@ -231,6 +231,8 @@ def _run_unified_eval(args: argparse.Namespace) -> None:
         console.print(f"[bold green]Saved {jp} and {mp}[/bold green]")
         return
     configs = harness.select_configs(args.configs)
+    if args.ablate:
+        configs = [configs[0]] + harness.ablation_variants(configs[0], args.ablate)
     strategies = sorted({c.chunking_strategy for c in configs})
     device = "cpu" if (not args.retrieval_only and args.backend == "mlx") else None
     retrievers = harness.load_retrievers(
@@ -300,6 +302,7 @@ def eval_cmd() -> None:
     parser.add_argument("--tag", default="")
     parser.add_argument("--allow-test", action="store_true", help="Required to evaluate the locked test split.")
     parser.add_argument("--baseline", choices=["constant"], default=None, help="Score a corpus-free baseline instead of configs.")
+    parser.add_argument("--ablate", default="", help="Comma list of RetrievalConfig flags/fields: one variant of the first config per item (flag=false or field=value).")
     args = parser.parse_args()
 
     if args.suite:

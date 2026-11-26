@@ -219,6 +219,24 @@ def select_configs(spec: str) -> list[RetrievalConfig]:
     return out
 
 
+def ablation_variants(base: RetrievalConfig, spec: str) -> list[RetrievalConfig]:
+    """One variant per item: `flag` -> flag=False, `field=value` -> field set (int/float/bool/str)."""
+    out = []
+    for item in [x.strip() for x in spec.split(",") if x.strip()]:
+        field, _, raw = item.partition("=")
+        if not hasattr(base, field):
+            raise SystemExit(f"Unknown RetrievalConfig field {field!r}")
+        cur = getattr(base, field)
+        if not raw:
+            value: Any = False
+            label = f"no_{field}"
+        else:
+            value = type(cur)(raw) if not isinstance(cur, bool) else raw.lower() in ("1", "true", "yes")
+            label = f"{field}={raw}"
+        out.append(dataclasses.replace(base, name=f"{base.name}-{label}", **{field: value}))
+    return out
+
+
 # ---------------------------------------------------------------- run
 
 
