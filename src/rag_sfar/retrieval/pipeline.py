@@ -10,16 +10,19 @@ Implements:
 4. Hybrid RRF + DBSF (*Distribution-Based Score Fusion*, Bruch et al. & Qdrant 2025/2026)
    + Soft Metadata / Population / Setting / Role Priors
 5. Neural Cross-Encoder Reranking + Population Consistency + Diversity Deduplication
-6. Corrective RAG (CRAG) / Self-MedRAG Multi-Hop Facet Rescue Pass (guarantees coverage of
-   systemic modifiers like `E-BLSE`, `obèse/IMC`, `allergie`, `insuffisance rénale`, `R1.2.1`)
-7. Small-to-Big Context Builder (Specialty Allergy Box + Neighbor Footnotes)
+6. Corrective RAG (CRAG) / Self-MedRAG Multi-Hop Facet Rescue Pass (coverage of systemic
+   modifiers: resistant-bacteria carriage, obesity, renal impairment, explicit recommendation ID)
+7. Small-to-Big Context Builder (Section Callouts + Neighbor Footnotes)
    + Provence-style Verbose Prose Pruning + Lost-in-the-Middle U-Shape Ordering
+
+Output contract: `retrieve()` returns at most `final_top_k` chunks, sorted by decreasing
+`final_score` (edition-comparison queries keep their latest/older interleaving instead).
+Population priors only apply when the query states the population (adult or paediatric).
 """
 
 from __future__ import annotations
 
 import collections
-import math
 import re
 import time
 
@@ -337,9 +340,10 @@ class SfarRagRetriever:
                 r.rerank_score = round(ce, 5)
                 norm_prior = r.final_score / max_fused
                 blended = 0.68 * ce + 0.32 * norm_prior
+                # Population consistency: only when the query states the population.
                 if analysis.population == "pediatrie" and r.chunk.population_hint == "adulte":
                     blended *= 0.72
-                elif analysis.population != "pediatrie" and r.chunk.population_hint == "pediatrie":
+                elif analysis.population == "adulte" and r.chunk.population_hint == "pediatrie":
                     blended *= 0.72
                 blended *= self._compute_clinical_scope_multiplier(r.chunk, analysis)
                 r.final_score = round(blended, 6)
@@ -400,7 +404,7 @@ class SfarRagRetriever:
                 # Respect anatomical exclusion and population consistency before injecting
                 if self._compute_clinical_scope_multiplier(cand.chunk, analysis) < 0.7:
                     continue
-                if analysis.population != "pediatrie" and cand.chunk.population_hint == "pediatrie":
+                if analysis.population == "adulte" and cand.chunk.population_hint == "pediatrie":
                     continue
                 selected.append(
                     RetrievedChunk(
@@ -429,6 +433,14 @@ class SfarRagRetriever:
         if cfg.expand_section_callouts or cfg.expand_neighbors:
             selected = self._expand_context(selected, analysis, cfg)
         timings["context_expand_ms"] = round((time.perf_counter() - t_e) * 1000, 2)
+
+        # 9. Output contract: at most `final_top_k` chunks, sorted by decreasing score. Added
+        # chunks (CRAG rescues, callouts, neighbours) compete with the selection on their score
+        # instead of being appended beyond the budget. Edition-comparison queries keep their
+        # latest/older interleaving so both editions stay represented.
+        if analysis.temporal_mode != "all_versions":
+            selected = sorted(selected, key=lambda r: r.final_score, reverse=True)
+        selected = selected[: max(0, cfg.final_top_k)]
         timings["total_retrieval_ms"] = round((time.perf_counter() - t0) * 1000, 2)
 
         return selected, analysis, timings
@@ -464,7 +476,7 @@ class SfarRagRetriever:
                 # Respect population consistency during rescue
                 if analysis.population == "pediatrie" and chunk.population_hint == "adulte":
                     continue
-                if analysis.population != "pediatrie" and chunk.population_hint == "pediatrie":
+                if analysis.population == "adulte" and chunk.population_hint == "pediatrie":
                     continue
                 if total_chars + len(chunk.indexed_text) > cfg.max_context_chars:
                     break
@@ -505,9 +517,7 @@ class SfarRagRetriever:
                 boost += cfg.population_boost * 0.5
             elif chunk.population_hint == "pediatrie":
                 boost -= cfg.population_mismatch_penalty
-        else:
-            if chunk.population_hint == "pediatrie":
-                boost -= cfg.population_mismatch_penalty * 0.65
+        # Population not stated (or mixed): no population prior.
 
         if analysis.setting == "urgence":
             if chunk.setting_scope == "urgence":
@@ -536,76 +546,25 @@ class SfarRagRetriever:
         if "diff" in analysis.modifiers:
             txt_lo = chunk.text.lower()
             sec_lo = chunk.section_path.lower()
-            if "historique des versions" in sec_lo or "v3.0" in txt_lo:
+            if "historique des versions" in sec_lo:
                 boost += 0.55
             elif chunk.chunk_type in ("prose", "recommendation_box") and any(
-                kw in txt_lo for kw in ("mise à jour", "actualisation", "modifi", "nouveau", "pédiatri", "changement")
+                kw in txt_lo for kw in ("mise à jour", "actualisation", "modifi", "nouveau", "changement")
             ):
                 boost += 0.35
             elif chunk.chunk_type == "table_row_card":
                 boost -= 0.15
 
-        # Anatomical site alignment / explicit `(hors <site>)` exclusion check
-        q_fold = fold_accents(analysis.original_query.lower())
-        sec_fold = fold_accents(chunk.section_path.lower())
-        excl_hits = re.findall(r"\bhors\s+([a-z]{3,16})\b", sec_fold)
-        if excl_hits:
-            for excluded_site in excl_hits:
-                if (
-                    re.search(rf"\b{re.escape(excluded_site)}\b", q_fold)
-                    and f"hors {excluded_site}" not in q_fold
-                ):
-                    boost -= 0.65
-        if re.search(r"\bmain\b", q_fold) and "hors main" not in sec_fold and re.search(r"\bmain\b", sec_fold):
-            boost += 0.35
+        # Explicit `(hors X)` scope exclusion in a section heading that the query contradicts
+        boost -= 0.65 * _count_contradicted_exclusions(chunk.section_path, analysis.original_query)
 
         return boost
 
     def _compute_clinical_scope_multiplier(self, chunk: Chunk, analysis: QueryAnalysis) -> float:
-        """Post-rerank clinical scope guard:
-        1. Penalizes chunks whose section explicitly excludes an anatomical site present in the
-           query (e.g. `(hors main)` when the user asks about `plaie de la main`).
-        2. Softly demotes narrow conditional exception rows (`En cas de chirurgie prothétique
-           de hanche par voie antérieure...`, `En cas d'ablation avec ouverture articulaire ou
-           geste prévu difficile...`) when none of the exception's qualifying triggers appear
-           in the query — while BOOSTING them when the trigger IS in the query!
-        """
-        q_fold = fold_accents(analysis.original_query.lower())
-        sec_fold = fold_accents(chunk.section_path.lower())
-        txt_fold = fold_accents(chunk.text.lower())
-        mult = 1.0
-
-        # 1. Explicit anatomical exclusion `(hors <site>)`
-        for excluded_site in re.findall(r"\bhors\s+([a-z]{3,16})\b", sec_fold):
-            if (
-                re.search(rf"\b{re.escape(excluded_site)}\b", q_fold)
-                and f"hors {excluded_site}" not in q_fold
-            ):
-                mult *= 0.45
-
-        # 2. Narrow conditional exception rows (`En cas de ...` inside table_row_card)
-        if chunk.chunk_type == "table_row_card" and "en cas d" in txt_fold[:220]:
-            cond_triggers = (
-                ("voie anterieure", ("voie anterieure", "anterieure")),
-                ("epaule", ("epaule",)),
-                (
-                    "ouverture articulaire",
-                    ("ouverture articulaire", "difficile", "temps operatoire long", "duree longue"),
-                ),
-                (
-                    "ouverture de la dure-mere",
-                    ("dure-mere", "ouverture", "difficile", "temps operatoire long"),
-                ),
-            )
-            for marker, q_keywords in cond_triggers:
-                if marker in txt_fold[:260]:
-                    if any(kw in q_fold for kw in q_keywords):
-                        mult *= 1.12
-                    else:
-                        mult *= 0.68
-                    break
-
-        return mult
+        """Post-rerank clinical scope guard: demote chunks whose section heading explicitly
+        excludes, with a parenthesised `(hors X)`, a situation X that the query is about."""
+        n = _count_contradicted_exclusions(chunk.section_path, analysis.original_query)
+        return 0.45**n
 
     def _select_diverse(
         self,
@@ -736,6 +695,47 @@ class SfarRagRetriever:
                     pulled_neighbors += 1
 
         return out
+
+
+_SECTION_EXCLUSION_RE = re.compile(r"\(\s*hors\s+([^()]{3,80}?)\s*\)")
+_EXCLUSION_STOPWORDS = frozenset(
+    {"de", "du", "des", "la", "le", "les", "l", "d", "et", "ou", "en", "a", "au", "aux", "un", "une"}
+)
+
+
+def _excluded_scopes(section_path: str) -> list[list[str]]:
+    """Content words of each parenthesised `(hors X)` exclusion in a section path.
+
+    Only parenthesised exclusions are read: that is how RFE headings restrict the scope of a
+    section (e.g. a table restricted to some sites). Unparenthesised `hors` belongs to titles
+    that define the scope of the whole document and must not penalise that document."""
+    out: list[list[str]] = []
+    for phrase in _SECTION_EXCLUSION_RE.findall(fold_accents(section_path.lower())):
+        words = [w for w in re.findall(r"[a-z0-9]+", phrase) if w not in _EXCLUSION_STOPWORDS and len(w) >= 3]
+        if words:
+            out.append(words)
+    return out
+
+
+def _count_contradicted_exclusions(section_path: str, query: str) -> int:
+    """Number of `(hors X)` exclusions of a section whose X is the subject of the query.
+
+    X is the subject when all its content words appear in the query and the query does not
+    itself exclude X ("hors X", "hors du/de la X", "en dehors du X")."""
+    scopes = _excluded_scopes(section_path)
+    if not scopes:
+        return 0
+    q_fold = fold_accents(query.lower())
+    q_words = set(re.findall(r"[a-z0-9]+", q_fold))
+    n = 0
+    for words in scopes:
+        if not all(w in q_words for w in words):
+            continue
+        head = re.escape(words[0])
+        if re.search(rf"\b(?:de)?hors\s+(?:(?:du|des|de\s+la|de\s+l['’ ]?|de|d['’ ]|les?|la)\s*)?{head}\b", q_fold):
+            continue
+        n += 1
+    return n
 
 
 def format_context_for_llm(
