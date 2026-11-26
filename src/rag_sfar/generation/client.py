@@ -11,6 +11,7 @@ from rag_sfar.config import RetrievalConfig, Settings
 from rag_sfar.generation.prompts import (
     SYSTEM_BENCHMARK_MCQ,
     SYSTEM_BENCHMARK_OPEN,
+    SYSTEM_CLINICAL_CONCISE,
     SYSTEM_CLINICAL_DETAILED,
     SYSTEM_TEMPORAL_DIFF,
     build_user_prompt,
@@ -339,7 +340,7 @@ class SfarRagEngine:
 
         # Auto-select temporal diff prompt if user explicitly asked for edition comparison
         effective_mode = mode
-        if mode == "clinical_detailed" and analysis.temporal_mode == "all_versions":
+        if mode in ("clinical_detailed", "clinical_concise") and analysis.temporal_mode == "all_versions":
             effective_mode = "temporal_diff"
 
         if retrieval_only or self.llm is None:
@@ -363,6 +364,7 @@ class SfarRagEngine:
 
         system_prompt = {
             "clinical_detailed": SYSTEM_CLINICAL_DETAILED,
+            "clinical_concise": SYSTEM_CLINICAL_CONCISE,
             "temporal_diff": SYSTEM_TEMPORAL_DIFF,
             "benchmark_open": SYSTEM_BENCHMARK_OPEN,
             "benchmark_mcq": SYSTEM_BENCHMARK_MCQ,
@@ -467,7 +469,7 @@ class SfarRagEngine:
         gen_chunks, context_block = build_generation_context(retrieved, analysis, cfg, query, mode)
         citations = build_citations(gen_chunks)
         effective_mode = mode
-        if mode == "clinical_detailed" and analysis.temporal_mode == "all_versions":
+        if mode in ("clinical_detailed", "clinical_concise") and analysis.temporal_mode == "all_versions":
             effective_mode = "temporal_diff"
 
         yield {
@@ -489,6 +491,7 @@ class SfarRagEngine:
 
         system_prompt = {
             "clinical_detailed": SYSTEM_CLINICAL_DETAILED,
+            "clinical_concise": SYSTEM_CLINICAL_CONCISE,
             "temporal_diff": SYSTEM_TEMPORAL_DIFF,
             "benchmark_open": SYSTEM_BENCHMARK_OPEN,
             "benchmark_mcq": SYSTEM_BENCHMARK_MCQ,

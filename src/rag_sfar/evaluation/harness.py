@@ -122,7 +122,7 @@ def retrieval_metrics(item: EvalItem, retrieved: list[RetrievedChunk], k: int = 
 # ---------------------------------------------------------------- generation scoring
 
 _ABSTAIN_PATTERNS = [
-    r"ne (?:couvre|traite|precise|mentionne|permet) pas",
+    r"ne (?:couvr|trait|precis|mentionn|permett?)\w* pas",
     r"pas (?:d'information|de recommandation|d'element|de donnee)s?",
     r"aucune? (?:information|recommandation|donnee|element)",
     r"je ne (?:peux|sais) pas",

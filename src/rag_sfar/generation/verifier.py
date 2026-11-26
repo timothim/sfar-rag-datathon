@@ -86,6 +86,7 @@ ABSTENTION_PATTERNS = (
     "ne permettent pas de repondre",
     "information manquante",
     "non couverte par les recommandations",
+    "ne traitent pas cette question",
 )
 
 
