@@ -242,18 +242,17 @@ def build_standard_ablation_configs() -> list[RetrievalConfig]:
             use_context_pruning=True,
             final_top_k=8,
         ),
-        # C10 (B1, 2026-11-27): C9 + context built for a ~30B generator, each element kept after a
-        # one-at-a-time ablation on the three dev sets (reports/agents/B1_retrieval.md):
-        # 16 ranked results with +-1 neighbour and the parent table of table rows (windows),
-        # notes of retrieved tables (scope notes, footnotes), no per-document cap below the
-        # final budget (a single guideline usually holds all the evidence), one adult and one
-        # paediatric table passage when the query does not exclude that population
-        # (counterpart search through the act label of the other population's row), and for
-        # MCQs two passages per option (stem + option sub-query).
-        # Tested and not kept: negation handling (no gain on top of this configuration),
-        # larger candidate pools, bge-reranker-v2-m3, edition filter off, other budgets (see the report).
+        # C10 (B1, 2026-11-27, revised after review R2): C9 + a context built for a ~30B
+        # generator, each element kept after a one-at-a-time ablation on the three dev sets
+        # (reports/agents/B1_retrieval.md): 16 ranked results with +-1 neighbour and the parent
+        # table of table rows (windows); no per-document cap below the final budget (a question
+        # is usually about one guideline); notes of retrieved tables, only those called by the
+        # row (*, **, #) plus the table's scope note, stopping at the end of the table; context
+        # hygiene (text dedup, budget). Removed after R2: MCQ option quota (one question) and
+        # the population quota (its additions were mostly other acts with their doses; the
+        # guarded version fires on 4 documents and added nothing relevant on dev).
         RetrievalConfig(
-            name="C10_context_population",
+            name="C10_context_notes",
             chunking_strategy="table_aware_sota",
             use_bm25=True,
             use_subword=False,
@@ -277,9 +276,8 @@ def build_standard_ablation_configs() -> list[RetrievalConfig]:
             context_window=1,
             expand_table_parent=True,
             attach_table_notes=True,
-            population_quota=1,
-            population_counterpart=True,
-            mcq_option_quota=2,
+            table_notes_mode="called_scope",
+            context_hygiene=True,
         ),
     ]
 

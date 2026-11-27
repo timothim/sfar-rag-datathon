@@ -98,10 +98,12 @@ def _note_marks(text: str) -> set[str]:
 
 
 def _act_tokens(row_text: str) -> set[str]:
-    """Content words of the act label of a row card: the value of its first cell (the
-    "Sous-catégorie" line, when present, is not the act)."""
+    """Content words of the act label of a row card: the value of the first cell of its cell
+    line (context lines such as "Sous-catégorie", "Section" or "Périmètre" are not the act)."""
     lines = [l for l in row_text.splitlines() if l.strip()]
-    line = next((l for l in lines if " | " in l or " : " in l and not l.lower().startswith("sous-cat")), lines[0] if lines else "")
+    # The cell line ("Acte : … | Molécule : …"); context lines that some indexes prepend
+    # ("Section : …", "Périmètre : …", "Sous-catégorie : …") are not the act.
+    line = next((l for l in lines if " | " in l), lines[-1] if lines else "")
     cell = line.split(" | ")[0]
     value = cell.split(" : ", 1)[1] if " : " in cell else cell
     return {t for t in tokenize_medical_french(value) if len(t) >= 4 and not t.isdigit()}
@@ -114,6 +116,10 @@ def _labels_match(a: set[str], b: set[str]) -> bool:
         return False
     shared = len(a & b)
     return shared >= 2 and shared >= 0.5 * min(len(a), len(b))
+
+
+def _first_line(text: str) -> str:
+    return text.strip().split("\n", 1)[0].strip()
 
 
 def _dedup_by_text(items: list[RetrievedChunk]) -> list[RetrievedChunk]:
@@ -941,10 +947,25 @@ class SfarRagRetriever:
                 cur = chunk
                 while nxt is not None and nxt.chunk_type == "table_row_card" and nxt.doc_id == chunk.doc_id:
                     cur, nxt = nxt, (self.store.get_chunk(nxt.next_chunk_id) if nxt.next_chunk_id else None)
+            header = self._table_header(chunk)
             nxt = self.store.get_chunk(cur.next_chunk_id) if cur and cur.next_chunk_id else None
-            while nxt is not None and nxt.doc_id == chunk.doc_id and nxt.chunk_type == "table_row_card" and (
-                not tid or (getattr(nxt, "table_id", "") or "") in ("", tid)
-            ):
+            continuations = 0
+            while nxt is not None and nxt.doc_id == chunk.doc_id:
+                if nxt.chunk_type == "table_row_card" and (
+                    not tid or (getattr(nxt, "table_id", "") or "") in ("", tid)
+                ):
+                    pass
+                elif (
+                    nxt.chunk_type == "table_markdown"
+                    and header
+                    and _first_line(nxt.text) == header
+                    and continuations < 6
+                ):
+                    # Same header row: the table continues after a page break (same table).
+                    continuations += 1
+                    tid = getattr(nxt, "table_id", "") or ""
+                else:
+                    break
                 nxt = self.store.get_chunk(nxt.next_chunk_id) if nxt.next_chunk_id else None
             taken = 0
             while nxt is not None and taken < 2 and nxt.doc_id == chunk.doc_id and _NOTE_START_RE.match(nxt.text):
@@ -953,6 +974,19 @@ class SfarRagRetriever:
                 taken += 1
                 nxt = self.store.get_chunk(nxt.next_chunk_id) if nxt.next_chunk_id else None
         return list(out.values())
+
+    def _table_header(self, chunk: Chunk) -> str:
+        """Header row of the table a table chunk belongs to ("" when not found)."""
+        cur: Chunk | None = chunk
+        for _ in range(200):
+            if cur is None or cur.doc_id != chunk.doc_id:
+                return ""
+            if cur.chunk_type == "table_markdown":
+                return _first_line(cur.text)
+            if cur.chunk_type != "table_row_card":
+                return ""
+            cur = self.store.get_chunk(cur.prev_chunk_id) if cur.prev_chunk_id else None
+        return ""
 
     @staticmethod
     def _document_order(items: list[RetrievedChunk]) -> list[RetrievedChunk]:

@@ -306,3 +306,12 @@ def test_called_notes_need_the_call_and_skip_allergy_and_references():
     cfg = dataclasses.replace(_BASE, attach_table_notes=True, table_notes_mode="called")
     ids = {x.chunk.chunk_id for x in r.retrieve("zygomaplastie", config=cfg)[0]}
     assert "n2" in ids and not ({"n1", "allerg", "addr"} & ids)
+
+
+def test_act_label_ignores_context_lines():
+    from rag_sfar.retrieval.pipeline import _act_tokens
+
+    row = ("Section : PARTIE 2 : TABLEAUX PEDIATRIQUES > Chirurgie cervicale\n"
+           "Périmètre : Les posologies de ce tableau valent pour la population cible\n"
+           "Acte : zygomaplastie étendue | Molécule : moléculine 30 mg/kg")
+    assert _act_tokens(row) == {"zygomaplastie", "etendue"}
