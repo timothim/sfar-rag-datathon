@@ -169,6 +169,12 @@ Ce sont des outils de développement, synthétiques et non validés médicalemen
 
 - `eval_internal/a_valider_medecins.csv` : 40 questions (séparateur « ; »), colonnes « question_valide », « reponse_correcte », « reponse_corrigee », « commentaire », « relecteur ».
 - `eval_internal/genprobe_a_valider_medecins.csv` : 48 questions de la sonde de généralisation (séparateur « , »), colonnes « avis_medecin » et « commentaire ».
+- `eval_internal/genprobe2_a_valider_medecins.csv` : 60 questions de la seconde sonde (`genprobe2`, tenue à l'écart) : deux sources, contrepartie de population, note ou en-tête de tableau, contrôles.
+
+## F. Points relevés le 27/11 pendant l'exploration (non vérifiés cliniquement)
+
+- **Correspondance des actes adulte ↔ enfant (antibioprophylaxie V3.1).** Les tableaux pédiatriques ne reprennent pas les lignes des tableaux adultes : ils regroupent et nomment les actes autrement. Seules 39 lignes sur 371 ont un équivalent de même libellé dans l'autre population (`reports/agents/X1_liens_structurels.md`). Une table de correspondance des actes, ou la version du document avec codes CCAM, permettrait de présenter côte à côte la ligne adulte et la ligne pédiatrique d'un même acte. À demander aux auteurs.
+- **Lidocaïne adrénalinée, dose maximale.** L'agent qui a écrit `genprobe2` signale un document où un tableau donne 500 mg et le texte 300 mg (`reports/agents/E2_genprobe2.md`, correction de l'item tab-10, retiré du jeu). Le document n'est pas nommé dans le rapport : à retrouver et à vérifier dans la source.
 
 ---
 
