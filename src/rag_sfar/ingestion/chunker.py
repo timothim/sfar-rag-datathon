@@ -154,14 +154,17 @@ class ChunkOptions:
 
     clean_ocr: bool = True
     hard_max_chars: int = 2400
-    header_domains: str = "none"
-    header_status: bool = True
+    # Measured on dev (B2): removing the domains and stating "[en vigueur]" did not help
+    # (multirfe passage hit with windows -3.9 pts [-9.2 ; 0]), so the legacy header is kept.
+    header_domains: str = "all"
+    header_status: bool = False
     population_hint: str = "legacy"
+    # Recommendation units were neutral on dev (B2): off by default, available for tests.
     reco_units: bool = False
     table_cards_min_cols: int = 2
 
 
-LEGACY_HEADER = ChunkOptions(header_domains="all", header_status=False)
+LEGACY_HEADER = ChunkOptions()
 
 
 def _build_context_header(
