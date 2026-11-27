@@ -1,0 +1,22 @@
+COVERAGE_HOLDOUT
+0.079  Quel traitement de première intention pour un psoriasis en plaques modéré chez l'adulte ?
+0.074  Quelle conduite à tenir devant une conjonctivite allergique saisonnière ?
+0.054  Quel schéma de chimiothérapie adjuvante pour un cancer du côlon de stade III ?
+0.274  À quel âge faire le rappel du vaccin contre la coqueluche chez l'enfant ?
+0.074  Quelle cible de LDL-cholestérol chez un patient en prévention primaire à risque modéré ?
+0.086  Quel traitement de fond pour une polyarthrite rhumatoïde récente ?
+0.068  Comment traiter une otite moyenne aiguë non compliquée chez l'enfant de 3 ans ?
+0.470  Quel antidépresseur choisir en première intention pour un épisode dépressif caractérisé ?
+0.060  Quelle surveillance biologique sous lithium au long cours ?
+0.015  Quel dépistage du cancer du col de l'utérus chez une femme de 35 ans ?
+0.209  Comment prendre en charge une crise de goutte chez un patient hypertendu ?
+0.183  Quel traitement pour une infection urinaire basse simple chez la femme jeune ?
+0.003  Quelle prise en charge d'une maladie de Lyme au stade d'érythème migrant ?
+0.016  Quel suivi ophtalmologique pour un patient diabétique de type 2 sans rétinopathie ?
+0.024  Quel traitement de l'hypothyroïdie fruste chez la femme de 50 ans ?
+0.016  Quelle prise en charge orthodontique pour un enfant de 9 ans avec un articulé croisé ?
+0.302  Quel traitement contre la migraine en crise chez l'adulte ?
+0.133  Comment traiter une teigne du cuir chevelu chez l'enfant ?
+0.034  Quel bilan devant une anémie ferriprive chez l'homme de 60 ans ?
+0.142  Quelle vaccination antigrippale recommander chez la femme enceinte ?
+reports/agents/B1_annexes/ood_medical_queries.txt: 16/20 flagged not covered at threshold 0.2; median score 0.074

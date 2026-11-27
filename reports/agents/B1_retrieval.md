@@ -4,6 +4,110 @@ Date : 2026-11-27. Agent B1 (Opus). Périmètre : `src/rag_sfar/retrieval/*`, `s
 
 Commits : `482a678` (fonctions de retrieval, toutes désactivées par défaut : C9 inchangé), `2a5525b` (config C10). `pytest -q` : 113 verts ; `tests/test_no_benchmark_leakage.py` muet.
 
+## Corrections après revue R2 — configuration figée `C10_context_notes`
+
+Revue : `reports/agents/R2_revue_retrieval.md`. Toutes les mesures de cette section : split **dev**, retrieval seul, contexte entier, `tas_v3_errata` sauf mention, une variable à la fois contre le C10 précédent (`D16P1C` = C10 sans quota QCM), différences appariées (bootstrap 2 000). Lignes par question : `reports/agents/B1_annexes/res/*.json.gz` (toutes les configurations citées dans ce rapport, relisibles par `cmp.py`, `table.py`, `additions.py` du même dossier). Les sections 0 à 13 plus bas décrivent la première version de C10 ; elles restent pour l'historique, mais **cette section les remplace là où elles diffèrent**.
+
+### Définition figée (`src/rag_sfar/evaluation/ablation.py`, `C10_context_notes`)
+
+C9 + `final_top_k=16`, `max_chunks_per_doc=16`, `context_window=1`, `expand_table_parent=True` (fenêtres sur les 8 premiers résultats), `attach_table_notes=True` avec `table_notes_mode="called_scope"`, `context_hygiene=True`. **Retirés** : `mcq_option_quota` (0) et tout quota de population (0). Le code des deux règles retirées reste, désactivé par défaut.
+
+### Avant / après
+
+`tas_v3_errata` :
+
+| Config | abpe171 suffisance | abpe171 rappel des preuves | abp171 passage dans le contexte | multirfe passage dans le contexte | Contexte moyen (car.) | Chunks | Part du contexte venant du document gold (abpe / multirfe) | Latence médiane* |
+|---|---|---|---|---|---:|---:|---|---:|
+| C9 | 83,3 [76–91] | 89,7 [84–94] | 94,1 [89–98] | 85,5 [78–93] | 5 663 | 7,9 | 80,5 / 51,9 % | 187 ms |
+| C9 + fenêtres | 88,5 [82–95] | 92,8 [88–97] | 99,0 [97–100] | 100,0 [100–100] | 17 021 | 24,6 | 68,9 / 43,0 % | 186 ms |
+| C10 avant revue (quota QCM + population) | 99,0 [97–100] | 99,5 [98–100] | 100,0 | 98,7 [96–100] | 20 139 | 32,3 | 89,6 / 47,1 % | 314 ms |
+| **C10 figé** | **94,8 [91–99]** | **98,0 [96–100]** | **100,0 [100–100]** | **98,7 [96–100]** | **17 989** | **27,8** | **88,9 / 47,3 %** | **≈ 188 ms** |
+
+C10 figé − (C9 + fenêtres) : abpe171 suffisance **+6,2 [+2,1 ; +11,5]** (Q05, Q41, Q74, Q131, Q149, Q157 gagnées, 0 perdue), rappel des preuves +5,2 [+1,6 ; +9,5] ; abp171 +1,0 [0 ; +2,9] (Q74) ; multirfe −1,3 [−3,9 ; 0] (MR-ga95d, passage gold discutable, §10). Part du contexte venant du document gold : +20 pts sur abpe171, +4 pts sur multirfe. Contextes contenant deux fois le même texte : 13 / 14 / 5 (C10 avant revue, abpe / abp / multirfe) → **0 / 0 / 0**.
+C10 figé − C10 avant revue : abpe171 −4,2 [−8,3 ; −1,0] : **Q07, Q28, Q44** (règle de population) et **Q171** (quota QCM) sont perdues.
+
+`tas_v6` (index le plus récent, `manifest.json` présent ; erratum officiel, étiquettes de population structurelles corrigées) :
+
+| Config | abpe171 suffisance | rappel des preuves | abp171 | multirfe | Contexte (car.) | Chunks | Part doc gold (abpe / multirfe) |
+|---|---|---|---|---|---:|---:|---|
+| C9 | 88,5 [82–95] | 92,3 [88–97] | 97,1 [93–100] | 82,9 [75–91] | 6 283 | 7,9 | — |
+| C9 + fenêtres | 92,7 [88–98] | 95,4 [92–99] | 100,0 | 96,1 [91–100] | 18 804 | 24,5 | 73,6 / 43,5 % |
+| **C10 figé** | **95,8 [92–99]** | **98,2 [96–100]** | **100,0** | **96,1 [91–100]** | 20 383 | 27,8 | 89,4 / 47,1 % |
+
+C10 figé − (C9 + fenêtres) sur `tas_v6` : abpe171 +3,1 [0 ; +7,3] (Q05, Q41, Q131), rappel +2,8 [0 ; +6,2], abp171 0, multirfe 0. Latence médiane 189 ms (machine partagée, pendant que les autres agents attendaient le verrou GPU).
+
+\* Latence : médiane mesurée pendant les séries d'évaluation sous verrou GPU ; C10 figé n'a plus de recherche ciblée, son coût est celui de C9 + fenêtres.
+
+### 1. Quota QCM — retiré
+
+Gain = une question (Q171) ; sous-requêtes sur tout le corpus ; R2 : 14 ajouts sur 19 hors sujet. Retiré de C10 (`mcq_option_quota=0`), code conservé.
+
+### 2. Règle de population — retirée
+
+Version gardée-fous mesurée seule (`population_guard=True`) contre C10 sans règle de population (même base : notes `called_scope`, hygiène) :
+- se déclenche seulement si le **document du premier résultat** a ≥ 3 fiches ligne de chaque population (adulte / pédiatrique, `populations` de l'index quand il existe, sinon `population_hint`) ;
+- cherche avec **la question seule**, restreinte aux fiches ligne de la population manquante dans ce document ;
+- garde un résultat seulement si son **libellé d'acte** (première cellule de la ligne) recouvre celui d'une ligne classée de l'autre population (≥ 2 mots de contenu, ≥ la moitié du plus court) ;
+- aucune fenêtre (tableau parent, voisins, notes) autour du passage garanti ; placé juste après sa ligne d'ancrage, dans le budget.
+
+| Index / jeu | Suffisance ou passage (sans → avec) | Δ apparié | Questions où elle se déclenche | Ajouts | Ajouts couvrant une preuve requise | Ajouts d'un autre acte | Caractères ajoutés |
+|---|---|---|---|---|---|---|---|
+| `tas_v3_errata` abpe171 | 94,8 → 94,8 | 0 [0 ; 0] | 7 / 102 | 7 | 0 | 5 | 1 675 |
+| `tas_v3_errata` abp171 | 100 → 100 | 0 | 7 / 102 | 7 | 0 | 5 | 1 675 |
+| `tas_v3_errata` multirfe | 98,7 → 98,7 | 0 | 0 / 94 | 0 | — | — | 0 |
+| `tas_v6` abpe171 | 95,8 → 96,9 | +1,0 [0 ; +3,1] (Q44) | 28 / 102 | 28 | 2 | 24 | 22 292 |
+| `tas_v6` multirfe | 96,1 → 96,1 | 0 | 0 / 94 | 0 | — | — | 0 |
+
+« Autre acte » : la ligne ajoutée ne couvre aucune preuve et son libellé d'acte ne recouvre le libellé d'aucune preuve requise (classement automatique, borne approximative). Exemples lus (`tas_v3_errata`) : « Autre plaie des parties molles … PAS D'ANTIBIOPROPHYLAXIE », « Fracture de la base du crâne » ajoutée à une question de chirurgie plastique, « Chirurgie carotidienne sans matériel ».
+**Défaut trouvé pendant cette mesure** : sur `tas_v6`, les fiches ligne commencent par des lignes de contexte (« Section : … », « Périmètre : … ») ; le libellé d'acte était lu sur la ligne « Section », donc la garde de libellé laissait passer des lignes d'autres actes de la même section (d'où 28 déclenchements). Corrigé (`_act_tokens` lit la ligne des cellules ; test `test_act_label_ignores_context_lines`) ; la mesure `tas_v6` de la règle n'a pas été refaite, la règle étant retirée.
+**Portée de la garde** : elle peut être vraie sur **4 documents** en vigueur de `tas_v3_errata` (ABP : 220 / 165 fiches adulte / pédiatrique ; douleur postopératoire 5 / 91 ; NVPO 4 / 4 ; antalgie en chirurgie ORL 6 / 27) et sur **6** de `tas_v6` (les mêmes + urgences vitales intra-hospitalières, transfusion de globules rouges). C'est une règle qui ne concerne en pratique que l'antibioprophylaxie (`reports/agents/B1_annexes/guard_docs.py`).
+**Décision** : ajouts majoritairement hors sujet, des lignes d'autres actes avec leurs posologies entrent dans le contexte, aucun gain sur `tas_v3_errata` → **retirée de C10**. Ce que l'on perd par rapport au C10 précédent : Q07 (arthrodèse lombaire : ligne et note de périmètre pédiatriques), Q28 (plaie cranio-cérébrale de l'enfant allergique : ligne pédiatrique), Q44 (remplacement valvulaire sous CEC : ligne pédiatrique « chirurgie cardiaque avec CEC »). Ces trois ensembles de preuves exigent la version pédiatrique d'un acte pour une question adulte ou sans âge : à traiter côté génération (signaler qu'un tableau pédiatrique existe) ou par l'ingestion (identifiant de ligne d'acte commun aux deux tableaux), pas par une recherche aveugle.
+
+### 3. Notes de tableau — généralisées
+
+`table_notes_mode` : `called` = seulement les notes dont l'appel (*, **, ***, #, †) figure dans la ligne retrouvée (l'emphase Markdown `**Céfazoline**` n'est pas un appel), candidates = notes liées à l'ingestion + paragraphes de notes qui suivent **le tableau courant** ; un `table_markdown` suivant n'est traversé que s'il a **la même ligne d'en-tête** (même tableau coupé par un saut de page) ; références, adresses d'auteur et encadrés allergie exclus. `called_scope` = `called` + la note de périmètre du tableau (note liée, sans appel, qui parle de « ce tableau »).
+
+| Variante (contre C10 précédent sans QCM) | abpe171 | abp171 | multirfe | Notes ajoutées abpe171 (dont encadrés allergie) | Caractères de notes / question (abpe / multirfe) | Contexte moyen abpe |
+|---|---|---|---|---|---|---|
+| notes « liées » (avant) | 97,9 | 100 | 98,7 | 477 (40) | 2 015 / 222 | 19 017 |
+| `called`, arrêt au premier tableau suivant | −3,1 [−6,2 ; 0] (Q05, Q07, Q157) | 0 | 0 | 86 (0) | 364 / 21 | 17 516 |
+| `called_scope`, arrêt au premier tableau suivant | −1,0 (Q157) | 0 | 0 | 148 (0) | 695 / 34 | 17 847 |
+| **`called_scope`, tableau continué si même en-tête** | **0 [0 ; 0]** | **0** | **0** | — | — | **17 895** |
+
+Q157 : la note « jusqu'à un IMC ≤ 50 » suit la *suite* du tableau de chirurgie digestive (même en-tête, après un saut de page) ; l'arrêt strict au tableau suivant la perdait. Décision : **`called_scope` avec continuation à en-tête identique**, même suffisance, 1,1 k caractères de moins par question, plus aucun encadré allergie ni note sans appel.
+
+### 4. Hygiène du contexte
+
+`context_hygiene=True` : déduplication par texte normalisé de tout le contexte final ; les passages garantis (s'il y en a) sont ajoutés **après** les fenêtres des résultats classés, dans `context_char_budget`, sans fenêtre propre, **juste après leur ligne d'ancrage** (une coupe ultérieure par rang côté génération retire donc d'abord les chunks de moindre valeur, pas eux). Mesure contre C10 précédent sans QCM : abpe171 −1,0 (Q07, qui ne tenait qu'à la fenêtre ouverte autour d'un passage garanti), abp171 0, multirfe 0 ; doublons 13 / 14 / 5 → 0 / 0 / 0 ; −1,1 k caractères. Dans C10 figé il n'y a plus de passage garanti : l'hygiène se réduit à la déduplication. Défaut corrigé au passage : une variable de boucle masquait la liste des passages garantis dans `_window_expand`.
+
+### 5. Seuil de couverture — « calibré dans l'échantillon, indicatif »
+
+Commentaires de code (`config.py`, `_coverage_signal`) et rapport : le seuil 0,2 a été choisi et rapporté sur les mêmes 328 requêtes (dont les 102 questions ABP comptées deux fois, et 30 requêtes hors domaine triviales) ; **ce n'est pas une validation**. Négatifs plus difficiles écrits ensuite, **sans réajuster le seuil** (`reports/agents/B1_annexes/ood_medical_queries.txt`, 20 questions médicales hors anesthésie-réanimation : psoriasis, chimiothérapie du côlon, vaccination, lithium, Lyme…) : **16 / 20 signalées « non couvert »** au seuil 0,2 (médiane 0,074) ; les 4 manquées : antidépresseur (0,47), migraine (0,30), rappel coqueluche (0,27), goutte (0,21) (`B1_annexes/coverage_holdout_output.txt`). Des questions d'anesthésie non couvertes par le corpus n'ont pas été écrites : je ne peux pas garantir qu'elles ne le sont pas ; les 18 abstentions de multirfe dev restent le seul jeu de ce type (9 / 18 détectées, in-sample). Le signal reste exposé sans filtrer.
+
+### 6. Test
+
+`test_guaranteed_passages_never_displace_ranked_results_or_their_windows` : fenêtres (±1 voisin, tableau parent), notes, reranker déterministe, budget serré (400 caractères) et large, avec et sans règle de population : le contexte construit sans la règle est conservé entier et dans l'ordre dans celui construit avec, aucune ligne d'un autre acte n'est ajoutée, le budget est respecté, et le passage garanti est placé juste après sa ligne d'ancrage. Plus : déduplication, notes appelées / allergie / adresse exclues, libellé d'acte avec lignes de contexte. `pytest -q` : 149 verts.
+
+### 7. Reproductibilité
+
+Lignes par question de toutes les configurations citées (C9, C9 + fenêtres, WN, WN_D16, D16P1C, C10 précédent, variantes R2, `tas_v4_*`, `tas_v6_*`) : `reports/agents/B1_annexes/res/*.json.gz` (identifiants de questions et de chunks, métriques, raisons d'expansion ; aucun texte de question). Pilote : `b1eval.py`, travail final : `final_job.sh`.
+
+### Échecs restants de C10 figé
+
+| Index | Question | Cause | Relève de |
+|---|---|---|---|
+| `tas_v3_errata` | Q07, Q28, Q44 | preuve = ligne (ou note de périmètre) **pédiatrique** pour une question adulte ou sans âge ; aucune requête générique ne la ramène sans ajouter des lignes d'autres actes | ingestion (lien entre lignes adulte / pédiatrique d'un même acte) ou génération ; annotation discutable pour Q44 (question sans population) |
+| `tas_v3_errata` | Q171 (QCM, 6 preuves dans 4 tableaux) | lignes « septo-rhinoplastie » adulte et pédiatrique absentes | retrieval (QCM multi-tableaux) |
+| `tas_v3_errata` | MR-ga95d | passage gold faiblement lié ; la recommandation qui répond est dans le contexte | annotation |
+| `tas_v6` | Q07, Q44, Q158, Q171 | Q07 / Q44 : version pédiatrique (comme ci-dessus) ; Q158 : 2ᵉ preuve p. 113 (ligne néonatale / pédiatrique) ; Q171 : QCM | idem |
+| `tas_v6` | MR-g8f23, MR-g3940, MR-gcb72 | g8f23 : passage gold en syntaxe Mermaid, ne peut plus correspondre (annotation) ; gcb72 : vu par le seul canal dense (rang 21), hors du reclassement (retrieval) ; g3940 : perdu aussi par C9 + fenêtres sur `tas_v6` (non analysé, changement de découpage de B2) | annotation / retrieval |
+
+### Reste à mesurer
+
+- Sur `tas_v6` : les trois questions pédiatriques ci-dessus avec la règle de population corrigée (libellé d'acte) si l'on veut la reconsidérer — je ne le recommande pas sans un lien structurel adulte / pédiatrique fourni par l'ingestion ; MR-g3940.
+- Le seuil de couverture sur des questions d'anesthésie non couvertes écrites et vérifiées par quelqu'un qui connaît le corpus.
+- L'effet en génération de la suppression des lignes pédiatriques d'autres actes (B3) et du jeu `genprobe` (orchestrateur).
+
 ## 0. Avant / après
 
 ### 0.1 Index `tas_v3_errata` (toutes les ablations ont été faites sur cet index)
@@ -103,7 +207,7 @@ Seules 8 questions dev ont une négation attachée au patient (Q42, Q149, Q158, 
 
 ## 5. Piste 4 — Notes de tableau
 
-`_table_notes` : pour chaque chunk de tableau parmi les 8 premiers résultats, (a) les `callout_footnote` liés à l'ingestion (`linked_callout_ids`, médiane 246 car., max 890 ; 59 documents en ont), (b) jusqu'à 2 paragraphes qui suivent le tableau et commencent par un appel de note (`*`, `\*`, `#`, `†`, pas le gras Markdown). Les encadrés allergie n'en font pas partie.
+`_table_notes` : pour chaque chunk de tableau parmi les 8 premiers résultats, (a) les `callout_footnote` liés à l'ingestion (`linked_callout_ids`, médiane 246 car., max 890 ; 59 documents en ont), (b) jusqu'à 2 paragraphes qui suivent le tableau et commencent par un appel de note (`*`, `\*`, `#`, `†`, pas le gras Markdown). **Erratum (revue R2) : faux pour le chemin (b), qui ne filtrait pas le type de chunk : 41 encadrés allergie (« # Si allergie… ») ont été attachés sur abpe171. Corrigé dans le mode `called` (§ Corrections après revue R2).**
 
 | Base | abpe171 suff. | abp171 | multirfe | Contexte |
 |---|---|---|---|---|

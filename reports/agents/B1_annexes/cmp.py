@@ -1,12 +1,21 @@
 """Compare variants vs a base: means, CI, paired diff, changed questions."""
-import json, sys, statistics
+import gzip, json, sys, statistics
 from pathlib import Path
 from rag_sfar.evaluation.harness import paired_bootstrap_diff, bootstrap_ci
-RES = Path(__file__).parent / "res"
+RES = Path(sys.argv.pop(1)) if len(sys.argv) > 2 and Path(sys.argv[1]).is_dir() else Path(__file__).parent / "res"
+def _rows(path):
+    """Rows of a result file (.json, or the committed .json.gz copy)."""
+    path = Path(path)
+    if path.exists():
+        return json.loads(path.read_text())["rows"]
+    gz = Path(str(path) + ".gz")
+    return json.loads(gzip.open(gz).read())["rows"] if gz.exists() else None
+
 METRIC = {"abpe171": ["sufficiency", "evidence_recall", "passage_hit"], "abp171": ["passage_hit"], "multirfe_synth": ["passage_hit"]}
 def load(n, s):
     p = RES / f"{n}__{s}.json"
-    return {r["id"]: r for r in json.loads(p.read_text())["rows"]} if p.exists() else None
+    rows = _rows(p)
+    return {r["id"]: r for r in rows} if rows else None
 base = sys.argv[1]
 for other in sys.argv[2:]:
     print(f"== {other} vs {base}")
