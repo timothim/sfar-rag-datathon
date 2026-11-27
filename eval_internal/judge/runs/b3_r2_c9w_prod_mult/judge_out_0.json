@@ -1,0 +1,242 @@
+[
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|wide+max_tokens=700|clinical_production::MR-gfff2848a70957ac0b7b5",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Scanner cérébral avec injection devant Horner et fracture cervicale, conforme à la référence."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|wide+max_tokens=700|clinical_production::MR-g8f23afa63325b0d08bd8",
+  "correctness": "partial",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Laparotomie précoce conforme, mais le scanner secondaire de la référence est omis."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|wide+max_tokens=700|clinical_production::MR-gd1b252c6b18be4bca7b6",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Refus d'abaisser à 31 °C faute de bénéfice, conforme à la référence."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|wide+max_tokens=700|clinical_production::MR-g2c188878f4fca6996f4b",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Classement en risque intermédiaire (1 à 5 %), conforme à la référence."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|wide+max_tokens=700|clinical_production::MR-g6951bd8344b814c79f7e",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Absence de réponse après 2 jours d'arrêt des diurétiques et albumine 1 g/kg, conforme."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|wide+max_tokens=700|clinical_production::MR-ga86840965e184a4c0f3d",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Support vidéo réduisant l'anxiété, conforme à la référence."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|wide+max_tokens=700|clinical_production::MR-gace2db46f6d0fbc9a4b7",
+  "correctness": "incorrect",
+  "abstained": false,
+  "serious_error": "wrong_conduct",
+  "faithful": null,
+  "justification": "Recommande la VNI curative en postopératoire alors que la référence indique que la VNI de rattrapage n'est pas indiquée et qu'il ne faut pas retarder la réintubation : conduite inversée."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|wide+max_tokens=700|clinical_production::MR-gfc720f85a7e4c8f6d739",
+  "correctness": "partial",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Gouttière sur mesure plutôt que standard, conforme, mais la traçabilité dans le dossier n'est pas mentionnée."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|wide+max_tokens=700|clinical_production::MR-g9f4e50ab33c87f6858b4",
+  "correctness": "incorrect",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Ne cite pas la condition de la référence (absence de lien hiérarchique) et répond par d'autres critères (compétence, examen in situ) : répond à côté."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|wide+max_tokens=700|clinical_production::MR-g83a9315591cd44551dbc",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Détection de sous- ou surdosage quand les curares masquent les signes cliniques, conforme."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|wide+max_tokens=700|clinical_production::MR-gff794cd57325dca363d6",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Détection du sous- et surdosage et aide au raisonnement, conforme."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|wide+max_tokens=700|clinical_production::MR-gf761346ec9be5d6ba346",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Formation de l'équipe à la communication citée pour limiter les conflits, conforme."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|wide+max_tokens=700|clinical_production::MR-gfd6492bcff9d310fa822",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Glycémie peropératoire en intervention à risque et mesure en SSPI, conforme."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|wide+max_tokens=700|clinical_production::MR-g55e468b6df0cb295c14b",
+  "correctness": "incorrect",
+  "abstained": false,
+  "serious_error": "wrong_conduct",
+  "faithful": null,
+  "justification": "Présente aussi la perfusion continue comme associée à un risque d'échec, alors que la référence la retient comme mode à privilégier : sens de la règle inversé, malgré le bolus intermittent correctement cité."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|wide+max_tokens=700|clinical_production::MR-gc6d6192f7b53462c02dd",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Plasma thérapeutique à 10 à 15 mL/kg, conforme à la référence."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|wide+max_tokens=700|clinical_production::MR-g2b5dca4f8dcab2a9f869",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Bloc possible sous anesthésie générale grâce à l'échoguidage, conforme à la référence."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|wide+max_tokens=700|clinical_production::MR-ga7998a95924ce47cf4b2",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Avis neurochirurgical rapide en cas de déficit complet et examen par EMG, conforme."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|wide+max_tokens=700|clinical_production::MR-gcb7201d68bfd3c66882d",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Pas de prescription répétée de FQ en tenant compte des 6 mois précédents, accord fort, conforme."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|wide+max_tokens=700|clinical_production::MR-g394ecc098e4d21e40da0",
+  "correctness": "incorrect",
+  "abstained": false,
+  "serious_error": "wrong_dose",
+  "faithful": null,
+  "justification": "Score établi sur la FiO2 au lieu du rapport PaO2/FiO2 : le score 2 attendu pour un rapport de 250 n'est pas donné, seuils faux."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|wide+max_tokens=700|clinical_production::MR-g1fa665d53b3782891db2",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Ventilation au masque avec oxygénation nasale à haut débit pendant l'apnée, conforme."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|wide+max_tokens=700|clinical_production::MR-g6d7e10b60e750f150a7a",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Ventilation au masque dès SpO2 < 95 %, FiO2 ≥ 0,8 et pressions < 15 cmH2O, conforme."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|wide+max_tokens=700|clinical_production::MR-g1b4ad3d31046fdbdd025",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Évolution de 2001 (non recommandé sous AG) à 2016 (possible après discussion, échoguidage), conforme."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|wide+max_tokens=700|clinical_production::MR-g518431a84972e17017d1",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Gammes de cathéters 24G-14G (2000) et 26G-16G (2023), conformes."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|wide+max_tokens=700|clinical_production::MR-g78a74d874a76bbb543f1",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Seuils de 100 G/L (2002) et 150 G/L (2019) pour le relais par AVK, conformes."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|wide+max_tokens=700|clinical_production::MR-abst000",
+  "correctness": "correct",
+  "abstained": true,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Abstention correcte : question non couverte par le corpus."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|wide+max_tokens=700|clinical_production::MR-abst015",
+  "correctness": "incorrect",
+  "abstained": false,
+  "serious_error": "missing_abstention",
+  "faithful": null,
+  "justification": "Répond (transfusion préopératoire, objectif d'hémoglobine) alors que la question n'est pas couverte par le corpus : absence d'abstention."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|wide+max_tokens=700|clinical_production::MR-abst016",
+  "correctness": "correct",
+  "abstained": true,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Abstention correcte : question non couverte par le corpus."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|wide+max_tokens=700|clinical_production::MR-abst026",
+  "correctness": "correct",
+  "abstained": true,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Abstention correcte : question non couverte par le corpus."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|wide+max_tokens=700|clinical_production::MR-abst031",
+  "correctness": "correct",
+  "abstained": true,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Abstention correcte : question non couverte par le corpus."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|wide+max_tokens=700|clinical_production::MR-abst037",
+  "correctness": "correct",
+  "abstained": true,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Abstention correcte : question non couverte par le corpus."
+ }
+]
