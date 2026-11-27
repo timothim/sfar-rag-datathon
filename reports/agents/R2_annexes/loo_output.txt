@@ -1,0 +1,18 @@
+== abpe171 (sufficiency, n=96) C10 = 99.0, chars 19351, chunks 33.8
+  rule removed: C10_noPop          C10 - variant = +3.1 [+0.0;+7.3] rule wins ['Q07', 'Q28', 'Q44'] rule loses [] | chars added by rule +1235 | chunks +2.4 | gold-doc share +0.9 [+0.5;+1.2] | latency median +260 ms
+  rule removed: C10_noCounterpart  C10 - variant = +2.1 [+0.0;+5.2] rule wins ['Q07', 'Q28'] rule loses [] | chars added by rule +386 | chunks +0.8 | gold-doc share +0.2 [-0.0;+0.5] | latency median +10 ms
+  rule removed: C10_noNotes        C10 - variant = +3.1 [+0.0;+6.2] rule wins ['Q05', 'Q07', 'Q157'] rule loses [] | chars added by rule +1880 | chunks +4.4 | gold-doc share +0.6 [+0.4;+0.8] | latency median +2 ms
+  rule removed: C10_cap7           C10 - variant = +4.2 [+1.0;+8.3] rule wins ['Q28', 'Q41', 'Q74', 'Q149'] rule loses [] | chars added by rule +240 | chunks +2.4 | gold-doc share +16.8 [+14.7;+19.1] | latency median +0 ms
+  rule removed: C10_noMCQ          C10 - variant = +1.0 [+0.0;+3.1] rule wins ['Q171'] rule loses [] | chars added by rule +334 | chunks +0.6 | gold-doc share -0.4 [-1.2;+0.0] | latency median -0 ms
+== abp171 (passage_hit, n=102) C10 = 100.0, chars 19598, chunks 34.0
+  rule removed: C10_noPop          C10 - variant = +0.0 [+0.0;+0.0] rule wins [] rule loses [] | chars added by rule +1333 | chunks +2.5 | gold-doc share +0.8 [+0.5;+1.2] | latency median +261 ms
+  rule removed: C10_noCounterpart  C10 - variant = +0.0 [+0.0;+0.0] rule wins [] rule loses [] | chars added by rule +479 | chunks +0.9 | gold-doc share +0.2 [-0.1;+0.5] | latency median +4 ms
+  rule removed: C10_noNotes        C10 - variant = +0.0 [+0.0;+0.0] rule wins [] rule loses [] | chars added by rule +1955 | chunks +4.5 | gold-doc share +0.7 [+0.5;+0.9] | latency median +0 ms
+  rule removed: C10_cap7           C10 - variant = +1.0 [+0.0;+2.9] rule wins ['Q74'] rule loses [] | chars added by rule +277 | chunks +2.4 | gold-doc share +16.7 [+14.5;+19.0] | latency median -0 ms
+  rule removed: C10_noMCQ          C10 - variant = +0.0 [+0.0;+0.0] rule wins [] rule loses [] | chars added by rule +409 | chunks +0.7 | gold-doc share -0.4 [-1.2;+0.0] | latency median -0 ms
+== multirfe_synth (passage_hit, n=76) C10 = 98.7, chars 21580, chunks 28.6
+  rule removed: C10_noPop          C10 - variant = +0.0 [+0.0;+0.0] rule wins [] rule loses [] | chars added by rule +862 | chunks +1.5 | gold-doc share -0.3 [-1.0;+0.3] | latency median +27 ms
+  rule removed: C10_noCounterpart  C10 - variant = +0.0 [+0.0;+0.0] rule wins [] rule loses [] | chars added by rule -12 | chunks -0.0 | gold-doc share +0.0 [+0.0;+0.1] | latency median +2 ms
+  rule removed: C10_noNotes        C10 - variant = +0.0 [+0.0;+0.0] rule wins [] rule loses [] | chars added by rule +195 | chunks +0.4 | gold-doc share -0.0 [-0.2;+0.2] | latency median +0 ms
+  rule removed: C10_cap7           C10 - variant = -1.3 [-3.9;+0.0] rule wins [] rule loses ['MR-ga95d75ad6fe8fb541a44'] | chars added by rule +389 | chunks +0.7 | gold-doc share +4.2 [+2.3;+6.1] | latency median +1 ms
+  rule removed: C10_noMCQ          C10 - variant = +0.0 [+0.0;+0.0] rule wins [] rule loses [] | chars added by rule +0 | chunks +0.0 | gold-doc share +0.0 [+0.0;+0.0] | latency median +0 ms
