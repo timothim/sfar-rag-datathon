@@ -61,3 +61,4 @@ reports/masterclass_course.html
 # Regenerate with: python -m rag_sfar.evaluation.datasets convert-enriched
 eval/datasets/abpe171.jsonl
 eval/splits/abpe171/
+.gpu_lock/
