@@ -7,6 +7,10 @@ The judge scores one answer against the reference answer (and, when given, the c
                      missing_abstention | other   (principle 7, counted apart)
   faithful         : every clinical claim is supported by the provided sources (None if no sources)
   justification    : one short sentence
+  and, when the case carries structured expectations (benchmark-enrichi):
+  claims_satisfied   : ids of the mandatory claims the answer states (without contradiction)
+  forbidden_violated : ids of the forbidden claims the answer asserts
+  behavior           : answer | clarification | abstention (what the answer does)
 
 Backends: any object with `complete(system_prompt, user_prompt) -> (text, usage)` (local MLX or
 OpenAI-compatible clients from generation/client.py), or `AnthropicJudgeBackend` (logs cost).
@@ -31,7 +35,13 @@ Grille :
 - faithful : si des sources sont fournies, true si chaque affirmation clinique de la réponse est soutenue par elles ; sinon null.
 - justification : une phrase courte.
 
-Ne te laisse pas influencer par la longueur ni par le ton assuré de la réponse. Réponds uniquement par un objet JSON avec ces 5 clés."""
+Si le cas fournit des faits obligatoires (identifiant : texte), des affirmations interdites ou un comportement attendu, ajoute trois clés :
+- claims_satisfied : liste des identifiants des faits obligatoires que la réponse énonce explicitement, sans contradiction (une formulation équivalente compte ; un fait absent, contredit ou indéterminé ne compte pas) ;
+- forbidden_violated : liste des identifiants des affirmations interdites que la réponse affirme (les mentionner pour les écarter ne compte pas) ;
+- behavior : "answer" si la réponse donne une conduite, "clarification" si elle demande une précision indispensable avant de conclure (une réponse conditionnelle qui couvre explicitement les cas compte comme "clarification" seulement si elle ne tranche pas), "abstention" si elle refuse ou dit que les documents ne couvrent pas la question.
+Ces clés n'influencent pas correctness, qui reste fondée sur la référence.
+
+Ne te laisse pas influencer par la longueur ni par le ton assuré de la réponse. Réponds uniquement par un objet JSON avec ces 5 clés (8 si des faits obligatoires, affirmations interdites ou un comportement attendu sont fournis)."""
 
 JUDGE_SCHEMA = {
     "type": "object",
@@ -41,6 +51,9 @@ JUDGE_SCHEMA = {
         "serious_error": {"type": "string", "enum": ["none", "wrong_drug", "wrong_dose", "obsolete_as_current", "unsupported_claim", "missing_abstention", "other"]},
         "faithful": {"type": ["boolean", "null"]},
         "justification": {"type": "string"},
+        "claims_satisfied": {"type": "array", "items": {"type": "string"}},
+        "forbidden_violated": {"type": "array", "items": {"type": "string"}},
+        "behavior": {"type": "string", "enum": ["answer", "clarification", "abstention"]},
     },
     "required": ["correctness", "abstained", "serious_error", "faithful", "justification"],
     "additionalProperties": False,
@@ -50,9 +63,36 @@ _DEFAULT = {"correctness": "incorrect", "abstained": False, "serious_error": "ot
             "justification": "unparseable judge output", "parse_error": True}
 
 
-def build_user_prompt(question: str, reference: str, answer: str, sources: str = "", should_abstain: bool = False) -> str:
+BEHAVIOR_LABELS = {
+    "answer": "répondre (donner la conduite)",
+    "clarification": "demander une précision indispensable avant de conclure",
+    "abstention": "s'abstenir (question non couverte)",
+}
+STRUCTURED_KEYS = ("claims_satisfied", "forbidden_violated", "behavior")
+
+
+def format_expectations(mandatory_claims: list[dict] | None = None, forbidden_claims: list[dict] | None = None,
+                        expected_behavior: str = "", required_missing_information: list[str] | None = None) -> str:
+    """Structured expectations of a case (benchmark-enrichi), as text for the judge."""
+    parts = []
+    if mandatory_claims:
+        parts.append("Faits obligatoires (identifiant : texte) :\n" + "\n".join(f"- {c['claim_id']} : {c['text']}" for c in mandatory_claims))
+    if forbidden_claims:
+        parts.append("Affirmations interdites (identifiant : texte) :\n" + "\n".join(f"- {c['claim_id']} : {c['text']}" for c in forbidden_claims))
+    if expected_behavior:
+        parts.append(f"Comportement attendu : {expected_behavior} ({BEHAVIOR_LABELS.get(expected_behavior, '')})")
+    if required_missing_information:
+        parts.append("Informations manquantes à demander :\n" + "\n".join(f"- {m}" for m in required_missing_information))
+    return "\n\n".join(parts)
+
+
+def build_user_prompt(question: str, reference: str, answer: str, sources: str = "", should_abstain: bool = False,
+                      expectations: str = "") -> str:
     ref = reference or ("(La question n'est pas couverte par les recommandations : la bonne réponse est de s'abstenir.)" if should_abstain else "(aucune)")
-    parts = [f"Question :\n{question}", f"Réponse de référence :\n{ref}", f"Réponse du système :\n{answer}"]
+    parts = [f"Question :\n{question}", f"Réponse de référence :\n{ref}"]
+    if expectations:
+        parts.append(expectations)
+    parts.append(f"Réponse du système :\n{answer}")
     if sources:
         parts.append(f"Sources fournies au système :\n<<<\n{sources[:12000]}\n>>>")
     return "\n\n".join(parts)
@@ -73,6 +113,11 @@ def parse_judgement(text: str) -> dict[str, Any]:
             out[k] = obj[k]
     if out["correctness"] not in ("correct", "partial", "incorrect"):
         out["correctness"] = "incorrect"
+    for k in ("claims_satisfied", "forbidden_violated"):
+        if k in out and not isinstance(out[k], list):
+            out[k] = [out[k]] if out[k] else []
+    if "behavior" in out and out["behavior"] not in ("answer", "clarification", "abstention"):
+        out["behavior"] = None
     return out
 
 
@@ -105,8 +150,9 @@ class Judge:
         self.backend = backend
         self.label = label or getattr(backend, "model", "judge")
 
-    def judge(self, question: str, reference: str, answer: str, sources: str = "", should_abstain: bool = False) -> dict[str, Any]:
-        text, _usage = self.backend.complete(JUDGE_SYSTEM, build_user_prompt(question, reference, answer, sources, should_abstain))
+    def judge(self, question: str, reference: str, answer: str, sources: str = "", should_abstain: bool = False,
+              expectations: str = "") -> dict[str, Any]:
+        text, _usage = self.backend.complete(JUDGE_SYSTEM, build_user_prompt(question, reference, answer, sources, should_abstain, expectations))
         return parse_judgement(text)
 
 

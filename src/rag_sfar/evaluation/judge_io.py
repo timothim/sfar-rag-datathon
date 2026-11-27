@@ -44,12 +44,22 @@ def export(report_path: Path, out_dir: Path, parts: int) -> None:
             if "answer" not in row:
                 continue
             it = items[row["id"]]
-            cases.append({
+            case = {
                 "case_id": f"{run['config']}::{row['id']}",
                 "question": it.formatted_query(),
                 "reference": _reference(it),
                 "answer": row["answer"],
-            })
+            }
+            # Structured expectations (benchmark-enrichi), only when the item has them.
+            if it.mandatory_claims:
+                case["mandatory_claims"] = [{"id": c["claim_id"], "text": c["text"]} for c in it.mandatory_claims]
+            if it.forbidden_claims:
+                case["forbidden_claims"] = [{"id": c["claim_id"], "text": c["text"]} for c in it.forbidden_claims]
+            if it.expected_behavior:
+                case["expected_behavior"] = it.expected_behavior
+            if it.required_missing_information:
+                case["required_missing_information"] = it.required_missing_information
+            cases.append(case)
     out_dir.mkdir(parents=True, exist_ok=True)
     size = -(-len(cases) // parts)
     for i in range(parts):
@@ -66,9 +76,35 @@ def _read_verdicts(judge_dir: Path) -> dict[str, dict[str, Any]]:
     return out
 
 
+STRUCTURED_METRICS = ("judge_claims_rate", "judge_no_omission", "judge_forbidden_violation", "judge_behavior_ok")
+
+
+def structured_row_metrics(item, verdict: dict[str, Any]) -> dict[str, float]:
+    """Claim / behavior metrics of one judged answer; empty when the item or the verdict has no
+    structured fields (older reports and suites stay unchanged)."""
+    out: dict[str, float] = {}
+    if item is None:
+        return out
+    if item.mandatory_claims and "claims_satisfied" in verdict:
+        ids = {c["claim_id"] for c in item.mandatory_claims}
+        sat = ids & set(verdict.get("claims_satisfied") or [])
+        out["judge_claims_rate"] = len(sat) / len(ids)
+        out["judge_no_omission"] = 1.0 if sat == ids else 0.0
+    if item.forbidden_claims and "forbidden_violated" in verdict:
+        ids = {c["claim_id"] for c in item.forbidden_claims}
+        out["judge_forbidden_violation"] = 1.0 if ids & set(verdict.get("forbidden_violated") or []) else 0.0
+    if item.expected_behavior and verdict.get("behavior"):
+        out["judge_behavior_ok"] = 1.0 if verdict["behavior"] == item.expected_behavior else 0.0
+    return out
+
+
 def merge(report_path: Path, judge_dir: Path, judge_label: str) -> None:
     report = json.loads(report_path.read_text(encoding="utf-8"))
     verdicts = _read_verdicts(judge_dir)
+    try:
+        items = {it.id: it for it in load_suite(report["suite"], report["split"])}
+    except Exception:  # noqa: BLE001 - a missing suite only disables the structured metrics
+        items = {}
     missing = 0
     for run in report["runs"]:
         for row in run["rows"]:
@@ -81,8 +117,9 @@ def merge(report_path: Path, judge_dir: Path, judge_label: str) -> None:
             row["judge_correct"] = 1.0 if v["correctness"] == "correct" else 0.0
             row["judge_correct_or_partial"] = 1.0 if v["correctness"] in ("correct", "partial") else 0.0
             row["judge_serious_error"] = 1.0 if v.get("serious_error") in SERIOUS else 0.0
+            row.update(structured_row_metrics(items.get(row["id"]), v))
         summ = run["summary"]
-        for k in ("judge_correct", "judge_correct_or_partial", "judge_serious_error"):
+        for k in ("judge_correct", "judge_correct_or_partial", "judge_serious_error", *STRUCTURED_METRICS):
             agg = _aggregate(run["rows"], k)
             if agg:
                 summ[k] = agg
@@ -98,6 +135,14 @@ def merge(report_path: Path, judge_dir: Path, judge_label: str) -> None:
         f = lambda a: f"{a['mean'] * 100:.1f} [{a['ci_low'] * 100:.0f}–{a['ci_high'] * 100:.0f}]" if a else "—"
         lines.append(f"| `{run['config']}` | {f(s.get('judge_correct'))} | {f(s.get('judge_correct_or_partial'))} | "
                      f"{f(s.get('judge_serious_error'))} | {s.get('judge_serious_error_types', {})} |")
+    if any(k in run["summary"] for run in report["runs"] for k in STRUCTURED_METRICS):
+        lines += ["", "### Faits obligatoires, affirmations interdites, comportement (juge)", "",
+                  "| Config | Faits obligatoires satisfaits | Sans omission | Violation interdite | Comportement attendu |",
+                  "|---|---:|---:|---:|---:|"]
+        for run in report["runs"]:
+            s = run["summary"]
+            f = lambda a: f"{a['mean'] * 100:.1f} [{a['ci_low'] * 100:.0f}–{a['ci_high'] * 100:.0f}] (n={a['n']})" if a else "—"
+            lines.append(f"| `{run['config']}` | " + " | ".join(f(s.get(k)) for k in STRUCTURED_METRICS) + " |")
     report_path.with_suffix(".md").write_text(md + "\n".join(lines) + "\n", encoding="utf-8")
     print(f"merged {len(verdicts)} verdicts into {report_path} ({missing} answers without verdict)")
 
