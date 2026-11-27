@@ -1,0 +1,28 @@
+{
+ "switch": false,
+ "parse_calls": 2179,
+ "inherited_total": 482,
+ "inherited_contiguous": 299,
+ "inherited_non_contiguous": 183,
+ "non_contiguous_abp": 96,
+ "non_contiguous_other": 87,
+ "docs": 20,
+ "gap_prev_kind": {
+  "abp": {
+   "heading": 96
+  },
+  "other": {
+   "heading": 41,
+   "paragraph": 6,
+   "short_text": 40
+  }
+ },
+ "src_is_immediately_previous": {
+  "abp": 12,
+  "other": 30
+ },
+ "ncols_equal_src": {
+  "abp": 92,
+  "other": 83
+ }
+}

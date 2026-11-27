@@ -14,6 +14,7 @@ AOD), and emits BOTH clean Markdown tables and self-contained Row-Group Clinical
 
 from __future__ import annotations
 
+import os
 import re
 from dataclasses import dataclass, field
 
@@ -217,6 +218,50 @@ class ParsedTable:
                 cards.append("\n".join(prefix + [body]).strip())
 
         return cards
+
+
+# --- Header carry-over between non-contiguous tables (K3) ------------------------------------
+# Off by default: the historical behaviour (a headerless table takes the last explicit headers of
+# the same major section, however far up) stays reproducible and is what `index/tas_v6` used.
+# On (`RAG_SFAR_TABLE_ADJACENT_HEADERS=1`), a headerless table that does not follow the previous
+# table directly inherits its headers only when (1) the caller passes `continuation_gap`, the text
+# between the immediately preceding table (which must itself carry these headers) and this one;
+# (2) that text holds only headings and at most MAX_CONTINUATION_GAP_CHARS of other text (page
+# running title or footer, footnote, short note), and no table/figure caption; (3) the inherited
+# headers look like column names (at least two non-empty cells, none a bare number or range).
+# Without `continuation_gap` (callers that do not compute it), only contiguous tables inherit.
+ADJACENT_HEADERS = os.environ.get("RAG_SFAR_TABLE_ADJACENT_HEADERS", "").strip().lower() in ("1", "true", "yes", "on")
+MAX_CONTINUATION_GAP_CHARS = 300
+_CAPTION_LINE_RE = re.compile(r"^[\W_]*(?:tableau|table|figure|fig\.|annexe)\s*(?:n\s*°\s*)?[0-9IVXLC]+\b", re.I)
+_VALUE_CELL_RE = re.compile(r"^[\s\d.,;:%<>≤≥±+\-–/\[\]()]*$")
+
+
+def headers_look_like_column_names(headers: list[str] | None) -> bool:
+    """At least two non-empty header cells, none of them a bare value ("9", "[6-9]"): a single
+    title cell or a data row promoted to header is not a set of column names to carry over."""
+    cells = [h.strip() for h in headers or [] if h.strip() and not re.fullmatch(r"Col \d+", h.strip())]
+    return len(cells) >= 2 and not any(_VALUE_CELL_RE.match(c) for c in cells)
+
+
+def gap_allows_continuation(gap_text: str | None) -> bool:
+    """True when the text between two tables may separate a table from its continuation:
+    headings and at most MAX_CONTINUATION_GAP_CHARS of other text, no table or figure caption."""
+    if gap_text is None:
+        return False
+    lines = [ln.strip() for ln in gap_text.splitlines() if ln.strip()]
+    if any(_CAPTION_LINE_RE.match(ln) for ln in lines):
+        return False
+    body = " ".join(ln for ln in lines if not ln.startswith("#"))
+    return len(body) <= MAX_CONTINUATION_GAP_CHARS
+
+
+def may_inherit_headers(previous_headers: list[str] | None, previous_is_contiguous: bool, continuation_gap: str | None) -> bool:
+    """Whether a headerless table may take `previous_headers` (see ADJACENT_HEADERS)."""
+    if not previous_headers:
+        return False
+    if not ADJACENT_HEADERS or previous_is_contiguous:
+        return True
+    return headers_look_like_column_names(previous_headers) and gap_allows_continuation(continuation_gap)
 
 
 _BR = "\u2028"  # line break inside a cell, resolved by _resolve_breaks
@@ -442,6 +487,7 @@ def parse_html_table(
     previous_headers: list[str] | None = None,
     previous_is_contiguous: bool = True,
     carry_first_cell: str | None = None,
+    continuation_gap: str | None = None,
 ) -> ParsedTable:
     """Parse an HTML <table> with full rowspan/colspan expansion and continuation support.
 
@@ -449,7 +495,8 @@ def parse_html_table(
     text in between); a banner-only first header row inherits `previous_headers` only then.
     `carry_first_cell` is the first-column value of the last row of the previous fragment of a
     page-split table (same width, contiguous): leading rows of this fragment whose first cell is
-    empty (the rowspan cut by the page break) take it back."""
+    empty (the rowspan cut by the page break) take it back.
+    `continuation_gap` is used only when ADJACENT_HEADERS is on (see `may_inherit_headers`)."""
     soup = BeautifulSoup(table_html, "html.parser")
     table = soup.find("table")
     if table is None:
@@ -606,7 +653,7 @@ def parse_html_table(
         has_explicit_headers = True
         headers = [c.strip() for c in grid[0]]
         data_start = 1
-    elif previous_headers:
+    elif previous_headers and may_inherit_headers(previous_headers, previous_is_contiguous, continuation_gap):
         # Cross-page continuation table! Inherit headers when column count matches
         # (or differs by 1 due to an extra/dropped Nomenclature column in SFAR tables!)
         if len(previous_headers) == max_cols:
