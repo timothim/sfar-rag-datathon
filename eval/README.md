@@ -1,5 +1,7 @@
 # Évaluation RAG-SFAR — format commun et coffre-fort de test
 
+Guide pratique pour lancer les benchmarks (avec votre modèle, chaque option, API pour un évaluateur externe, jugement) : [`BENCHMARKS.md`](BENCHMARKS.md).
+
 Ce dossier contient les jeux d'évaluation **normalisés** et leur découpage dev/test. Les jeux internes synthétiques vivent à part dans `eval_internal/` (voir son README) ; le benchmark officiel antibioprophylaxie reste dans son submodule et n'est ici que converti.
 
 ## Règles

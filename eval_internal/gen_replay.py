@@ -6,6 +6,14 @@ generation variants on the cache without loading the embedder and the reranker a
     .venv/bin/python eval_internal/gen_replay.py capture --suite abpe171 --profile production --name c10notes_v6
     # the sealed test split needs --split test --allow-test (lockbox verified first)
 
+    # 1b. retrieval variants (default: none = the frozen, evaluated retrieval). The steps that
+    #     call a language model (normalize, decompose) use the endpoint given here, through the
+    #     client the API uses (interfaces/robustness.py composes the variant exactly as served).
+    .venv/bin/python eval_internal/gen_replay.py capture --suite multirfe_synth --profile production \
+        --robustness normalize --decompose --backend openai --base-url URL --model M --name c10_norm_dec
+    #     --robustness: none | lexical | normalize | both ; --decompose: multi-query "decompose".
+    #     Each cache row records what the steps did (pre_retrieval), meta.json the variant and model.
+
     # 2. a generation run on the cache: --profile production = exactly the served generation
     #    (generation/profile.py); or an explicit --preset/--gen/--gen-mode for ablations.
     .venv/bin/python eval_internal/gen_replay.py run --cache c10notes_v6 --suite abpe171,multirfe_synth \
@@ -147,32 +155,69 @@ def cache_file(name: str, suite: str, split: str) -> Path:
 
 
 def capture(suite: str, configs: str, ablate: str, index_map: str, ids_file: str | None, name: str, device: str,
-            split: str = "dev") -> None:
+            split: str = "dev", robustness: str = "none", decompose: bool = False, llm: Any = None,
+            llm_label: str = "") -> None:
+    """Cache the retrieval output of every question. `robustness` / `decompose` select the
+    retrieval variant (interfaces/robustness.py::compose, the composition the API serves);
+    with the defaults the frozen retriever and configuration are used unchanged."""
+    from rag_sfar.interfaces import robustness as rob
+
     s = Settings()
-    cfg = _retrieval_config(configs, ablate)
+    base_cfg = _retrieval_config(configs, ablate)
     imap = dict(kv.split("=", 1) for kv in index_map.split(",") if kv.strip())
-    retriever = harness.load_retrievers(
-        ROOT / "index", [cfg.chunking_strategy], s.reranker_provider, s.reranker_model, device=device, index_map=imap
-    )[cfg.chunking_strategy]
+    base = harness.load_retrievers(
+        ROOT / "index", [base_cfg.chunking_strategy], s.reranker_provider, s.reranker_model, device=device, index_map=imap
+    )[base_cfg.chunking_strategy]
+    if (rob.needs_llm(robustness) or decompose) and llm is None:
+        raise SystemExit("--robustness normalize|both and --decompose call a language model: give --backend openai|mlx")
+    variants = rob.RobustnessVariants(base, base_cfg)
+    cfg = variants.retrieval_config(robustness)
     items = _items(suite, _load_ids(ids_file), split)
     out = REPLAY / name
     out.mkdir(parents=True, exist_ok=True)
     t0 = time.time()
+    n_norm = n_norm_err = n_dec = n_dec_err = 0
     with cache_file(name, suite, split).open("w", encoding="utf-8") as f:
         for it in items:
-            retrieved, analysis, timings = retriever.retrieve(it.formatted_query(), config=cfg)
-            f.write(json.dumps({"id": it.id, **cache_row(it.formatted_query(), retrieved, analysis, timings)},
-                               ensure_ascii=False, default=str) + "\n")
+            comp = rob.compose(variants, robustness, decompose, llm)
+            retrieved, analysis, timings = comp.retriever.retrieve(it.formatted_query(), config=cfg)
+            row = {"id": it.id, **cache_row(it.formatted_query(), retrieved, analysis, timings)}
+            if not comp.frozen:  # rows of the frozen retrieval stay exactly as before
+                md = comp.metadata()
+                row["pre_retrieval"] = md
+                nz, dc = md["normalization"] or {}, md["decomposition"] or {}
+                n_norm += bool(nz.get("used"))
+                n_norm_err += bool(nz.get("error"))
+                n_dec += bool(dc.get("fired"))
+                n_dec_err += bool(dc.get("error"))
+            f.write(json.dumps(row, ensure_ascii=False, default=str) + "\n")
     meta_p = out / "meta.json"
     meta = json.loads(meta_p.read_text(encoding="utf-8")) if meta_p.exists() else {}
+    index_dirs = {k: str((ROOT / "index" / v).relative_to(ROOT)) for k, v in imap.items()}
     meta.update({
         "config": cfg.name, "config_params": dataclasses.asdict(cfg), "ablate": ablate, "index_map": imap,
+        "index_dirs": index_dirs, "base_config": _strip_ablation(base_cfg.name, ablate),
         "reranker_model": s.reranker_model, "git": _git_rev(),
+        "robustness": robustness, "decompose": bool(decompose), "pre_retrieval_llm": llm_label,
     })
+    counts = {"normalize_changed": n_norm, "normalize_errors": n_norm_err,
+              "decompose_fired": n_dec, "decompose_errors": n_dec_err}
     meta.setdefault("suites", {})[suite if split == "dev" else f"{suite}:{split}"] = {
-        "n": len(items), "split": split, "ids_file": ids_file or "", "captured": dt.datetime.now().isoformat(timespec="seconds")}
+        "n": len(items), "split": split, "ids_file": ids_file or "", "captured": dt.datetime.now().isoformat(timespec="seconds"),
+        "robustness": robustness, "decompose": bool(decompose), "pre_retrieval_counts": counts}
     meta_p.write_text(json.dumps(meta, ensure_ascii=False, indent=1, default=str), encoding="utf-8")
     print(f"{len(items)} questions ({split}) cached in {time.time() - t0:.0f}s -> {cache_file(name, suite, split)}")
+    print(f"variant: robustness={robustness} decompose={bool(decompose)} config={cfg.name} index={imap} "
+          f"pre-retrieval model={llm_label or '-'}")
+    if robustness != "none" or decompose:
+        n = max(len(items), 1)
+        print(f"normalisation changed the question: {n_norm}/{len(items)} ({100 * n_norm / n:.0f} %), errors {n_norm_err}; "
+              f"decomposition fired: {n_dec}/{len(items)} ({100 * n_dec / n:.0f} %), errors {n_dec_err}")
+
+
+def _strip_ablation(name: str, ablate: str) -> str:
+    """Base configuration name of an ablation variant ("C10_context_notes-use_crag_multihop=true")."""
+    return name.split("-", 1)[0] if ablate else name
 
 
 def load_cache(name: str, suite: str, split: str = "dev") -> tuple[dict[str, Any], dict[str, dict[str, Any]]]:
@@ -261,6 +306,25 @@ def cache_row(query: str, retrieved, analysis, timings) -> dict[str, Any]:
     }, ensure_ascii=False, default=str))
 
 
+def _build_pre_retrieval_llm(args):
+    """Client for the language-model steps before retrieval (normalisation, decomposition): the
+    client the HTTP API builds (interfaces/generator_runtime.py, thinking off unless
+    --no-thinking-flag), or a local MLX model. None without --backend."""
+    if not args.backend:
+        return None
+    if args.backend == "mlx":
+        from rag_sfar.generation.client import LocalMlxLLM
+
+        return LocalMlxLLM(model_path=args.mlx_model_path or args.model, model_label=args.model,
+                           temperature=0.0, max_tokens=args.max_tokens, enable_thinking=False)
+    from rag_sfar.interfaces.generator_runtime import GeneratorSettings
+
+    s = Settings()
+    return GeneratorSettings(base_url=args.base_url or s.llm_base_url, model=args.model or s.llm_model,
+                             api_key=args.api_key or s.llm_api_key,
+                             send_thinking_flag=not args.no_thinking_flag).build(s.llm_timeout_seconds)
+
+
 def _build_llm(args):
     from rag_sfar.generation.client import LocalMlxLLM, OpenAICompatibleLLM
 
@@ -328,7 +392,7 @@ def run(args) -> Path | None:
     for suite in suites:
         meta, cache = load_cache(args.cache, suite, args.split)
         cfg = config_from_meta(meta)
-        if profile is not None and cfg.name != profile.retrieval_config_name:
+        if profile is not None and meta.get("base_config", cfg.name) != profile.retrieval_config_name:
             raise SystemExit(f"cache {args.cache} was captured with {cfg.name}, profile expects {profile.retrieval_config_name}")
         # Dev-only proxy keys (another suite's dev answer keys): never outside dev.
         proxy = proxy_items(suite, args.split)
@@ -369,6 +433,13 @@ def run(args) -> Path | None:
             row["self_corrected"] = bool(resp.extra.get("self_corrected"))
             row["latency_ms"] = lat
             row["retrieved"] = [(rc.chunk.doc_id, rc.chunk.chunk_id) for rc in resp.retrieved_chunks]
+            if "pre_retrieval" in c:  # retrieval variant: what the model steps did
+                pr = c["pre_retrieval"]
+                row["pre_retrieval"] = pr
+                if pr.get("normalization") is not None:
+                    row["normalize_changed"] = 1.0 if pr["normalization"].get("used") else 0.0
+                if pr.get("decomposition") is not None:
+                    row["decompose_fired"] = 1.0 if pr["decomposition"].get("fired") else 0.0
             if args.backend == "record" and len(llm.calls) > n_calls:
                 system, user = llm.calls[n_calls]
                 row["prompt_chars"] = len(system) + len(user)
@@ -396,7 +467,8 @@ def run(args) -> Path | None:
 
 def _extra_summary(rows: list[dict[str, Any]]) -> dict[str, Any]:
     out: dict[str, Any] = {}
-    for key in ("proxy_correct", "verifier_flag", "check_flag", "context_chars", "prompt_tokens", "completion_tokens", "n_passages", "coverage_refused"):
+    for key in ("proxy_correct", "verifier_flag", "check_flag", "context_chars", "prompt_tokens", "completion_tokens", "n_passages", "coverage_refused",
+                "normalize_changed", "decompose_fired"):
         vals = [float(r[key]) for r in rows if r.get(key) is not None]
         if vals:
             lo, hi = harness.bootstrap_ci(vals)
@@ -416,13 +488,15 @@ def _save(args, gen_cfg, rows, suites, label: str) -> Path | None:
         rep = {
             "suite": suite, "split": args.split, "k": 0, "n_items": len(srows),
             "generator": f"{args.backend}:{label}", "timestamp": dt.datetime.now().isoformat(timespec="seconds"),
-            "replay": {"cache": args.cache, "cache_meta": {k: meta[k] for k in ("config", "ablate", "index_map", "git") if k in meta},
+            "replay": {"cache": args.cache, "cache_meta": {k: meta[k] for k in (
+                           "config", "ablate", "index_map", "index_dirs", "git", "robustness", "decompose", "pre_retrieval_llm",
+                           "base_config") if k in meta},
                        "gen_config": gen_cfg.to_dict(), "gen_mode": args.gen_mode, "mcq_mode": args.mcq_mode,
                        "ids_file": args.ids_file, "profile": args.profile or "", "git": _git_rev()},
             "runs": [{"config": name, "config_params": gen_cfg.to_dict(), "summary": summary, "rows": srows}],
             "comparisons": [],
         }
-        out_dir = ROOT / "reports/eval/b3"
+        out_dir = Path(args.out_dir) if getattr(args, "out_dir", "") else ROOT / "reports/eval/b3"
         jp, _ = harness.save_report(rep, out_dir=out_dir, tag=f"b3_{args.tag}")
         reports.append(jp)
         s = summary
@@ -640,6 +714,27 @@ def recheck(report_path: Path) -> None:
     print(f"rechecked {report_path.name}")
 
 
+def export_predictions(report_path: Path, out: Path) -> None:
+    """Answers of a run report as prediction lines for the experts' evaluator
+    (data/benchmark_enrichi_alparagsfar/benchmark_evaluator: {question_id, status, answer});
+    question_id = the benchmark's own id kept in the item's meta when there is one."""
+    rep = json.loads(report_path.read_text(encoding="utf-8"))
+    items = {it.id: it for it in load_suite(rep["suite"], rep.get("split", "dev"))}
+    n = 0
+    out.parent.mkdir(parents=True, exist_ok=True)
+    with out.open("w", encoding="utf-8") as f:
+        for row in rep["runs"][0]["rows"]:
+            if "answer" not in row:
+                continue
+            it = items.get(row["id"])
+            qid = (it.meta or {}).get("question_id", row["id"]) if it else row["id"]
+            ok = bool(str(row["answer"]).strip())
+            f.write(json.dumps({"question_id": qid, "status": "success" if ok else "error",
+                                "answer": row["answer"] if ok else None}, ensure_ascii=False) + "\n")
+            n += 1
+    print(f"{n} predictions -> {out}")
+
+
 def compare(a_path: str, b_path: str, metrics: list[str]) -> None:
     """Paired bootstrap B - A over shared ids, for each metric present in both reports."""
     def rows(p):
@@ -677,6 +772,19 @@ if __name__ == "__main__":
     p.add_argument("--ids-file", default=None)
     p.add_argument("--name", required=True)
     p.add_argument("--device", default="cpu")
+    p.add_argument("--robustness", default="none", choices=["none", "lexical", "normalize", "both"],
+                   help="retrieval variant (interfaces/robustness.py); none = frozen (default)")
+    p.add_argument("--decompose", action="store_true", help="question decomposition before retrieval (multi_query 'decompose')")
+    p.add_argument("--backend", choices=["openai", "mlx"], default="",
+                   help="model of the normalisation / decomposition calls (required by normalize, both, --decompose)")
+    p.add_argument("--base-url", default="")
+    p.add_argument("--model", default="")
+    p.add_argument("--api-key", default="")
+    p.add_argument("--mlx-model-path", default="")
+    p.add_argument("--max-tokens", type=int, default=1024)
+    p.add_argument("--no-thinking-flag", action="store_true",
+                   help="do not send chat_template_kwargs.enable_thinking=false (servers that reject it)")
+    p.add_argument("--replay-dir", default="", help="cache root (default eval_internal/work/replay)")
     p = sub.add_parser("run")
     p.add_argument("--cache", required=True)
     p.add_argument("--suite", required=True, help="one suite or a comma list")
@@ -701,17 +809,24 @@ if __name__ == "__main__":
     p.add_argument("--drop-rule", default="", help="ablation: drop numbered rule N of the --gen-mode system prompt")
     p.add_argument("--export-frontier", default="", help="blind export folder for stand-in generators (new folder)")
     p.add_argument("--per-part", type=int, default=MAX_PER_PART)
+    p.add_argument("--replay-dir", default="", help="cache root (default eval_internal/work/replay)")
+    p.add_argument("--out-dir", default="", help="report folder (default reports/eval/b3)")
     p = sub.add_parser("import-frontier")
     p.add_argument("--dir", required=True)
     p.add_argument("--model-label", required=True)
     p.add_argument("--tag", default="frontier")
     p = sub.add_parser("recheck")
     p.add_argument("reports", nargs="+")
+    p = sub.add_parser("export-predictions")
+    p.add_argument("report")
+    p.add_argument("--out", required=True)
     p = sub.add_parser("compare")
     p.add_argument("a")
     p.add_argument("b")
     p.add_argument("--metrics", default="correct,proxy_correct,judge_correct,judge_serious_error,judge_behavior_ok,abstention_correct,false_abstention,sourced,verifier_flag,prompt_tokens,latency_ms")
     a = ap.parse_args()
+    if getattr(a, "replay_dir", ""):
+        REPLAY = Path(a.replay_dir).resolve()
     if a.cmd == "subsets":
         make_subsets(a.suites.split(","), a.n)
     elif a.cmd == "capture":
@@ -725,7 +840,12 @@ if __name__ == "__main__":
             a.configs, a.index_map = prof.retrieval_config_name, prof.replay_index_map()
         if not a.configs or not a.index_map:
             raise SystemExit("give --profile, or both --configs and --index-map (no silent default)")
-        capture(a.suite, a.configs, a.ablate, a.index_map, a.ids_file, a.name, a.device, a.split)
+        if a.backend and not a.model and not a.mlx_model_path:
+            raise SystemExit("--backend needs --model (or --mlx-model-path)")
+        llm = _build_pre_retrieval_llm(a)
+        capture(a.suite, a.configs, a.ablate, a.index_map, a.ids_file, a.name, a.device, a.split,
+                robustness=a.robustness, decompose=a.decompose, llm=llm,
+                llm_label=f"{a.backend}:{a.model or a.mlx_model_path}" if a.backend else "")
     elif a.cmd == "run":
         run(a)
     elif a.cmd == "recheck":
@@ -733,5 +853,7 @@ if __name__ == "__main__":
             recheck(Path(r))
     elif a.cmd == "import-frontier":
         import_frontier(Path(a.dir), a.model_label, a.tag)
+    elif a.cmd == "export-predictions":
+        export_predictions(Path(a.report), Path(a.out))
     else:
         compare(a.a, a.b, a.metrics.split(","))

@@ -282,7 +282,7 @@ def _run_unified_eval(args: argparse.Namespace) -> None:
         raise SystemExit("The test split is locked: evaluate it only on final configs, with --allow-test.")
     if args.baseline == "constant":
         report = harness.run_constant_baseline(args.suite, args.split)
-        jp, mp = harness.save_report(report, tag=args.tag or "baseline_constant")
+        jp, mp = harness.save_report(report, out_dir=args.report_dir, tag=args.tag or "baseline_constant")
         console.print(harness.to_markdown(report))
         console.print(f"[bold green]Saved {jp} and {mp}[/bold green]")
         return
@@ -339,7 +339,7 @@ def _run_unified_eval(args: argparse.Namespace) -> None:
     if not args.retrieval_only and (args.gen_preset or args.gen):
         report["gen_config"] = resolve_generation_config(args.gen_preset or "legacy", args.gen).to_dict()
     report["reranker_model"] = reranker_model
-    jp, mp = harness.save_report(report, tag=args.tag)
+    jp, mp = harness.save_report(report, out_dir=args.report_dir, tag=args.tag)
     console.print(harness.to_markdown(report))
     console.print(f"[bold green]Saved {jp} and {mp}[/bold green]")
 
@@ -349,7 +349,8 @@ def eval_cmd() -> None:
     s = Settings()
     parser.add_argument("--index-root", type=Path, default=Path("index"))
     parser.add_argument("--benchmark-path", type=Path, default=s.benchmark_path)
-    parser.add_argument("--output-dir", type=Path, default=Path("reports"))
+    parser.add_argument("--output-dir", type=Path, default=Path("reports"), help="legacy benchmark path only (no --suite)")
+    parser.add_argument("--report-dir", type=Path, default=Path("reports/eval"), help="folder of the --suite reports (.json and .md)")
     parser.add_argument("--reranker-provider", default=s.reranker_provider)
     parser.add_argument("--reranker-model", default=s.reranker_model)
     # --- Unified harness (eval/README.md). Without --suite the legacy ablation below runs. ---

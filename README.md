@@ -131,6 +131,7 @@ Cinq outils en lecture seule (`sfar_search`, `search_sfar_recommendations`, `com
 
 ## Reproduire l'évaluation
 
+- **Guide pratique : `eval/BENCHMARKS.md`** (recherche seule, benchmark complet avec votre modèle compatible OpenAI, chaque option de robustesse, avec et sans l'ancien module CRAG ou la décomposition, branchement d'un évaluateur externe sur l'API, jugement).
 - Protocole pré-enregistré : `eval/FINAL_EVAL_PROTOCOL.md` ; coffre-fort des jeux de test : `eval/LOCKBOX.md` ; format des jeux et adaptateur pour les benchmarks des experts : `eval/README.md`.
 - Retrieval et génération (outil de rejeu) : `reports/agents/B3_generation.md` §1 et §6 bis. Exemple :
   ```bash

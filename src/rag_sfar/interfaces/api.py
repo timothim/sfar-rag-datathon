@@ -53,6 +53,9 @@ class QueryRequest(SearchRequest):
     retrieval_only: bool = False
     # Demo robustness variant (interfaces/robustness.py); None = server default ("none" = frozen).
     robustness: str | None = None
+    # Question decomposition before retrieval (multi_query "decompose"); None = server default
+    # (RAG_SFAR_DECOMPOSE, off when unset).
+    decompose: bool | None = None
 
 
 class GeneratorTestRequest(BaseModel):
@@ -80,6 +83,10 @@ class OpenAIChatRequest(BaseModel):
     messages: list[ChatMessage]
     temperature: float | None = 0.0
     max_tokens: int | None = None
+    # Extra fields (OpenAI SDK: `extra_body={...}`); None = server defaults
+    # (RAG_SFAR_DEMO_ROBUSTNESS, RAG_SFAR_DECOMPOSE), i.e. the frozen profile when unset.
+    robustness: str | None = None
+    decompose: bool | None = None
 
 
 
@@ -169,6 +176,21 @@ def create_app(
     gconf = engine.gen_config
     variants = rob.RobustnessVariants(retriever, rcfg)
     robustness_default = rob.default_choice()
+    decompose_default = rob.decompose_default()
+
+    def compose(robustness: str | None, decompose: bool | None) -> tuple[Any, rob.Composed]:
+        """Engine and retriever for one request. Frozen profile (same engine object, same
+        configuration) when the choice is "none" and decomposition is off."""
+        choice = robustness or robustness_default
+        if choice not in rob.CHOICES:
+            raise HTTPException(status_code=422, detail=f"robustness must be one of {rob.CHOICES}")
+        dec = decompose_default if decompose is None else bool(decompose)
+        comp = rob.compose(variants, choice, dec, engine.llm)
+        if comp.frozen:
+            return engine, comp
+        eng = copy.copy(engine)
+        eng.retriever = comp.retriever
+        return eng, comp
 
     @app.get("/", response_class=HTMLResponse)
     def home() -> str:
@@ -234,6 +256,7 @@ def create_app(
         if hasattr(llm, "base_url"):
             info["base_url"] = llm.base_url
         info["robustness"] = {"default": robustness_default, "choices": list(rob.CHOICES), "labels": rob.LABELS}
+        info["decompose"] = {"default": decompose_default, "env": rob.ENV_DECOMPOSE}
         return info
 
     @app.get("/api/generator")
@@ -277,25 +300,13 @@ def create_app(
         `generator_error` event (sanitized message) precedes `done`; the passages of the
         `retrieval` event remain the answer (passages-only fallback)."""
 
-        choice = req.robustness or robustness_default
-        if choice not in rob.CHOICES:
-            raise HTTPException(status_code=422, detail=f"robustness must be one of {rob.CHOICES}")
+        eng, comp = compose(req.robustness, req.decompose)
+        cfg = comp.config
 
         def event_gen():
             sent_retrieval = False
             sent_token = False
             try:
-                used = choice
-                unavailable = None
-                if rob.needs_llm(choice) and engine.llm is None:
-                    used = "lexical" if choice == "both" else "none"
-                    unavailable = "Normalisation indisponible : aucun générateur configuré."
-                if used == "none":
-                    eng, cfg = engine, rcfg  # frozen profile, untouched
-                else:
-                    eng = copy.copy(engine)
-                    eng.retriever = variants.retriever(used, engine.llm)
-                    cfg = variants.retrieval_config(used)
                 for ev in eng.stream_answer(
                     query=req.query,
                     mode=profile.open_mode,
@@ -305,10 +316,8 @@ def create_app(
                     if ev["type"] == "retrieval":
                         sent_retrieval = True
                         yield f"data: {json.dumps(ev, ensure_ascii=False)}\n\n"
-                        var = {"type": "variant", "requested": choice, "used": used,
-                               "label": rob.LABELS[used], "retrieval_config": cfg.name,
-                               "unavailable": unavailable, "rewrite": rob.rewrite_trace(eng.retriever),
-                               "expansions": rob.expansions(eng.retriever)}
+                        meta = comp.metadata()
+                        var = {"type": "variant", **meta, "rewrite": meta["normalization"]}
                         yield f"data: {json.dumps(var, ensure_ascii=False)}\n\n"
                         continue
                     elif ev["type"] == "token":
@@ -331,22 +340,24 @@ def create_app(
 
     @app.post("/api/query")
     def api_query(req: QueryRequest) -> dict[str, Any]:
+        eng, comp = compose(req.robustness, req.decompose)
+        cfg = comp.config if not comp.frozen else rcfg
         try:
-            resp = engine.answer(
+            resp = eng.answer(
                 query=req.query,
                 mode=req.mode,
-                config=rcfg,
+                config=cfg,
                 override_latest_only=req.latest_only,
                 override_domains=req.domains,
                 retrieval_only=req.retrieval_only,
             )
-            return resp.model_dump()
         except Exception as exc:
-            # Graceful fallback to retrieval-only if local LLM server is offline
-            resp = engine.answer(
+            # Graceful fallback to retrieval-only if the LLM server is offline
+            eng, comp = compose("lexical" if comp.used in ("lexical", "both") else "none", False)
+            resp = eng.answer(
                 query=req.query,
                 mode=req.mode,
-                config=rcfg,
+                config=comp.config,
                 override_latest_only=req.latest_only,
                 override_domains=req.domains,
                 retrieval_only=True,
@@ -355,7 +366,9 @@ def create_app(
                 f"[Serveur LLM indisponible ({safe_error(exc)}) — mode retrieval actif]\n\n"
                 + resp.answer
             )
-            return resp.model_dump()
+        out = resp.model_dump()
+        out["extra"]["variant"] = comp.metadata()
+        return out
 
     # --- OpenAI-Compatible API for seamless Datathon Evaluation Platform integration ---
     @app.get("/v1/models")
@@ -380,7 +393,11 @@ def create_app(
             mode = "benchmark_open"
         elif "benchmark-mcq" in req.model:
             mode = "benchmark_mcq"
-        resp = engine.answer(query=query, mode=mode)
+        eng, comp = compose(req.robustness, req.decompose)
+        if comp.frozen:
+            resp = engine.answer(query=query, mode=mode)
+        else:
+            resp = eng.answer(query=query, mode=mode, config=comp.config)
         return {
             "id": f"chatcmpl-{uuid.uuid4().hex[:12]}",
             "object": "chat.completion",
@@ -400,6 +417,7 @@ def create_app(
             },
             "sfar_citations": [c.model_dump() for c in resp.citations],
             "sfar_verification": resp.verification.model_dump(),
+            "sfar_variant": comp.metadata(),
         }
 
     return app
