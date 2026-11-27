@@ -27,6 +27,30 @@ from rag_sfar.evaluation.judge import cohen_kappa
 SERIOUS = ("wrong_drug", "wrong_dose", "wrong_conduct", "obsolete_as_current", "unsupported_claim", "missing_abstention")
 
 
+def acceptable_behaviors(item) -> list[str]:
+    """Behaviours the benchmark accepts for an item (judge labels).
+
+    The expert benchmark (benchmark_enrichi_phase1, field `proposed.acceptable_behaviors`) accepts,
+    for its clarification questions, either a request for the missing information or a
+    conditional answer that covers the cases without choosing one; for the other questions only
+    the expected behaviour. The list is read from `meta["acceptable_behaviors"]` when the dataset
+    carries it, and otherwise derived from that rule."""
+    if not getattr(item, "expected_behavior", ""):
+        return []
+    explicit = (item.meta or {}).get("acceptable_behaviors")
+    if explicit:
+        mapping = {"ask_clarification": "clarification", "conditional_answer": "conditional",
+                   "answer_with_evidence": "answer", "abstain": "abstention"}
+        return [mapping.get(b, b) for b in explicit]
+    if item.expected_behavior == "clarification":
+        return ["clarification", "conditional"]
+    if item.expected_behavior == "answer":
+        # an answer given case by case (e.g. adult and child) is still an answer; whether it
+        # contains the expected facts is measured by correctness and the mandatory claims
+        return ["answer", "conditional"]
+    return [item.expected_behavior]
+
+
 def _reference(item) -> str:
     if item.question_type == "mcq" and "mcq" in item.answer_key:
         letter = item.answer_key["mcq"]
@@ -58,6 +82,11 @@ def export(report_path: Path, out_dir: Path, parts: int) -> None:
                 case["forbidden_claims"] = [{"id": c["claim_id"], "text": c["text"]} for c in it.forbidden_claims]
             if it.expected_behavior:
                 case["expected_behavior"] = it.expected_behavior
+                case["acceptable_behaviors"] = acceptable_behaviors(it)
+                # Detailed expert answer of a clarification question: shows what a conforming
+                # conditional answer contains (the short reference only lists what to ask).
+                if it.expected_behavior == "clarification" and (it.meta or {}).get("narrative"):
+                    case["reference_narrative"] = it.meta["narrative"]
             if it.required_missing_information:
                 case["required_missing_information"] = it.required_missing_information
             cases.append(case)
@@ -95,7 +124,7 @@ def structured_row_metrics(item, verdict: dict[str, Any]) -> dict[str, float]:
         ids = {c["claim_id"] for c in item.forbidden_claims}
         out["judge_forbidden_violation"] = 1.0 if ids & set(verdict.get("forbidden_violated") or []) else 0.0
     if item.expected_behavior and verdict.get("behavior"):
-        out["judge_behavior_ok"] = 1.0 if verdict["behavior"] == item.expected_behavior else 0.0
+        out["judge_behavior_ok"] = 1.0 if verdict["behavior"] in acceptable_behaviors(item) else 0.0
     return out
 
 

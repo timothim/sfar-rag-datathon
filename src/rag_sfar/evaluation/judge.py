@@ -10,7 +10,7 @@ The judge scores one answer against the reference answer (and, when given, the c
   and, when the case carries structured expectations (benchmark-enrichi):
   claims_satisfied   : ids of the mandatory claims the answer states (without contradiction)
   forbidden_violated : ids of the forbidden claims the answer asserts
-  behavior           : answer | clarification | abstention (what the answer does)
+  behavior           : answer | conditional | clarification | abstention (what the answer does)
 
 Backends: any object with `complete(system_prompt, user_prompt) -> (text, usage)` (local MLX or
 OpenAI-compatible clients from generation/client.py), or `AnthropicJudgeBackend` (logs cost).
@@ -38,7 +38,8 @@ Grille :
 Si le cas fournit des faits obligatoires (identifiant : texte), des affirmations interdites ou un comportement attendu, ajoute trois clés :
 - claims_satisfied : liste des identifiants des faits obligatoires que la réponse énonce explicitement, sans contradiction (une formulation équivalente compte ; un fait absent, contredit ou indéterminé ne compte pas) ;
 - forbidden_violated : liste des identifiants des affirmations interdites que la réponse affirme (les mentionner pour les écarter ne compte pas) ;
-- behavior : "answer" si la réponse donne une conduite, "clarification" si elle demande une précision indispensable avant de conclure (une réponse conditionnelle qui couvre explicitement les cas compte comme "clarification" seulement si elle ne tranche pas), "abstention" si elle refuse ou dit que les documents ne couvrent pas la question.
+- behavior : "answer" si la réponse retient une conduite unique ; "conditional" si elle donne la conduite pour chacun des cas possibles (par population, site, niveau de risque, terrain…) sans en retenir un seul, qu'elle dise ou non quelle information manque ; "clarification" si elle demande une précision indispensable sans donner de conduite ; "abstention" si elle refuse ou dit que les documents ne couvrent pas la question. Une réponse qui donne un cas principal et mentionne l'autre en passant, ou qui ne couvre qu'une partie des cas décisifs, est "answer".
+- Une réponse "conditional" ou "clarification" ne viole pas une interdiction du type « imposer une conduite ou une lettre unique ». Si le cas fournit `reference_narrative` (corrigé détaillé des experts d'une question à clarification), juge correctness d'après lui : "correct" si la réponse demande la précision ou couvre sans contresens les cas qu'il décrit ; "partial" si elle tranche pour un seul cas exact ou omet un cas décrit ; "incorrect" si elle contredit le corrigé.
 Ces clés n'influencent pas correctness, qui reste fondée sur la référence.
 
 Ne te laisse pas influencer par la longueur ni par le ton assuré de la réponse. Réponds uniquement par un objet JSON avec ces 5 clés (8 si des faits obligatoires, affirmations interdites ou un comportement attendu sont fournis)."""
@@ -53,7 +54,7 @@ JUDGE_SCHEMA = {
         "justification": {"type": "string"},
         "claims_satisfied": {"type": "array", "items": {"type": "string"}},
         "forbidden_violated": {"type": "array", "items": {"type": "string"}},
-        "behavior": {"type": "string", "enum": ["answer", "clarification", "abstention"]},
+        "behavior": {"type": "string", "enum": ["answer", "conditional", "clarification", "abstention"]},
     },
     "required": ["correctness", "abstained", "serious_error", "faithful", "justification"],
     "additionalProperties": False,
@@ -116,7 +117,7 @@ def parse_judgement(text: str) -> dict[str, Any]:
     for k in ("claims_satisfied", "forbidden_violated"):
         if k in out and not isinstance(out[k], list):
             out[k] = [out[k]] if out[k] else []
-    if "behavior" in out and out["behavior"] not in ("answer", "clarification", "abstention"):
+    if "behavior" in out and out["behavior"] not in ("answer", "conditional", "clarification", "abstention"):
         out["behavior"] = None
     return out
 
