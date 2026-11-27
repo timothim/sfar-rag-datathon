@@ -10,7 +10,12 @@ from typing import Any
 
 from rag_sfar.config import RetrievalConfig, Settings
 from rag_sfar.generation.answer_check import check_answer
-from rag_sfar.generation.context import assemble_context, select_within_budget
+from rag_sfar.generation.context import (
+    DEPENDENCY_NOTE,
+    assemble_context,
+    population_dependency,
+    select_within_budget,
+)
 from rag_sfar.generation.prompts import (
     ABSTENTION_SENTENCE,
     SYSTEM_CLINICAL_DETAILED,
@@ -494,6 +499,9 @@ class SfarRagEngine:
         gate = g.coverage_gate if g else "off"
         if gate == "note" and covered is False:
             context_block = COVERAGE_NOTE + context_block
+        if g is not None and g.dependency_note and effective_mode in OPEN_MODES and population_dependency(query, retrieved):
+            context_block = DEPENDENCY_NOTE + context_block
+            timings["dependency_note"] = 1.0
         return gen_chunks, context_block, effective_mode, covered, gate
 
     def generate(

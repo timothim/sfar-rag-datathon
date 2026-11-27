@@ -57,6 +57,10 @@ class GenerationConfig:
     coverage_gate: CoverageGate = "off"
 
     # ------------------------------------------------------------------ prompt / call
+    # Population-dependency note (generation/context.py): when the question names no population
+    # and the context holds both adult and paediatric tables, tell the model to answer per
+    # population instead of choosing one.
+    dependency_note: bool = False
     # State the question before the excerpts as well as after them.
     question_first: bool = False
     # Prompt mode used when the caller does not force one (None = caller decides).

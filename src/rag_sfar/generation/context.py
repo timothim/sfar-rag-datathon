@@ -345,3 +345,45 @@ def assemble_context(
         blocks.append(f"{header(f'S{n}', p.items)}\n{text}")
         out.append(_as_retrieved(p, text))
     return out, "\n\n---\n\n".join(blocks)
+
+
+# ---------------------------------------------------------------- population dependency signal
+
+_QUERY_POPULATION = re.compile(
+    r"\b(adultes?|enfants?|nourrissons?|n[ée]onat\w*|nouveau-n[ée]s?|p[ée]diatri\w*|"
+    r"\d+\s*(?:ans|mois|semaines|jours)\b|\d+\s*kg\b|femmes? enceintes?|grossesse)",
+    re.I,
+)
+
+
+def _chunk_populations(c) -> set[str]:
+    raw = list(c.populations or []) or section_populations(c.section_path)
+    out = set()
+    for p in raw:
+        p = p.lower()
+        if p.startswith("adult"):
+            out.add("adulte")
+        elif p.startswith(("pedia", "pédia", "enfant", "neonat", "néonat", "nouveau")):
+            out.add("enfant")
+    return out
+
+
+def population_dependency(query: str, retrieved: list[RetrievedChunk], top_k: int = 16) -> bool:
+    """Deterministic signal: the question names no population or age, and the best-ranked table
+    passages include both adult and paediatric tables (structural `populations` labels, or the
+    section title). Generic to any guideline with population-specific tables."""
+    if _QUERY_POPULATION.search(query):
+        return False
+    pops: set[str] = set()
+    for rc in retrieved[:top_k]:
+        if rc.chunk.chunk_type in ("table_row_card", "table_markdown"):
+            pops |= _chunk_populations(rc.chunk)
+    return {"adulte", "enfant"} <= pops
+
+
+DEPENDENCY_NOTE = (
+    "NOTE : les extraits contiennent des recommandations distinctes pour l'adulte et pour l'enfant, "
+    "et la question ne précise ni l'âge ni la population. Si la conduite diffère entre ces "
+    "populations, donne-la pour chacune en une phrase sourcée, sans choisir, et indique que l'âge "
+    "(et le poids chez l'enfant) est nécessaire pour trancher.\n\n"
+)

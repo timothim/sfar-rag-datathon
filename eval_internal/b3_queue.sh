@@ -12,7 +12,7 @@ while read -r tag cache preset gen mode mcq ids extra; do
   { [ -z "$ids" ] || [ "$ids" = "-" ]; } && ids=$DEF_IDS
   echo "=== $tag $(date +%H:%M:%S)"
   scripts/with_gpu_lock.sh "b3-$tag" .venv/bin/python eval_internal/gen_replay.py run --cache "$cache" \
-    --suite abpe171,multirfe_synth --ids-file "$ids" --preset "$preset" --gen "$gen" --gen-mode "$mode" \
+    --suite "${SUITES:-abpe171,multirfe_synth}" --ids-file "$ids" --preset "$preset" --gen "$gen" --gen-mode "$mode" \
     --mcq-mode "$mcq" --backend mlx --mlx-model-path "$MODEL" --model qwen3.5-9b-4bit-nothink --tag "$tag" $extra 2>&1 \
     | grep -E "^(abpe171|multirfe_synth):|Traceback|Error|error" 
 done < "$RUNS"

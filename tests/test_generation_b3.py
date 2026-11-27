@@ -258,3 +258,13 @@ def test_engine_routes_lettered_options_to_mcq_mode():
     r = SfarRagEngine(retriever=None, llm=llm).generate(q, [_rc("a", "Texte.", 1)], _analysis(q), {},
                                                       mode="clinical_concise", config=RetrievalConfig())
     assert r.mode == "clinical_mcq" and r.answer.startswith("B") and "QCM" not in r.answer
+
+
+def test_population_dependency_signal():
+    from rag_sfar.generation.context import population_dependency
+
+    a = _rc("a", "Acte : X | Molécule : P", 1, ctype="table_row_card", populations=["adulte"])
+    k = _rc("k", "Acte : X | Molécule : P 30 mg/kg", 2, ctype="table_row_card", populations=["pediatrie"])
+    assert population_dependency("Quelle antibioprophylaxie pour l'acte X ?", [a, k])
+    assert not population_dependency("Quelle antibioprophylaxie pour l'acte X chez un enfant de 4 ans ?", [a, k])
+    assert not population_dependency("Quelle antibioprophylaxie pour l'acte X ?", [a])

@@ -319,6 +319,7 @@ def run(args) -> Path | None:
             row["n_passages"] = resp.extra.get("n_passages")
             row["coverage_supported"] = resp.extra.get("coverage_supported")
             row["coverage_refused"] = bool(resp.extra.get("coverage_refused"))
+            row["dependency_note"] = bool((resp.latency_ms or {}).get("dependency_note"))
             row["self_corrected"] = bool(resp.extra.get("self_corrected"))
             row["latency_ms"] = lat
             row["retrieved"] = [(rc.chunk.doc_id, rc.chunk.chunk_id) for rc in resp.retrieved_chunks]
