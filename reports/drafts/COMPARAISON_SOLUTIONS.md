@@ -1,15 +1,16 @@
 # RAG-SFAR — Comparaison des solutions (brouillon du 2026-11-27)
 
-> Ce document compare uniquement ce qui a été **mesuré dans ce projet**. Les solutions demandées par la mission mais non mesurées sont listées en section 5 avec la raison. Sources : `JOURNAL.md`, `reports/agents/B1_retrieval.md`, `B2_ingestion.md`, `B3_generation.md`, `A3_generateur_local.md`, `R2_revue_retrieval.md`, `X1_liens_structurels.md`, `reports/eval/judge_v4/blind_final/summary.md`, `eval_internal/robustness/results/summary.md`.
+> Ce document compare uniquement ce qui a été **mesuré dans ce projet**. Les solutions demandées par la mission mais non mesurées sont listées en section 5 avec la raison. Sources : `JOURNAL.md`, `reports/agents/B1_retrieval.md`, `B2_ingestion.md`, `B3_generation.md`, `A3_generateur_local.md`, `R2_revue_retrieval.md`, `X1_liens_structurels.md`, `reports/eval/judge_v4/blind_final/summary.md`, `reports/eval/judge_v4/blind_v31grid2/combined_validated_grid.md`, `eval_internal/robustness/results/summary.md`, `reports/agents/Q1_robustesse.md`, `Q2_reformulation.md`, `X2_decomposition.md`, `G1_genprobe2_run.md`, `V1_benchmark_valide.md`.
 
 ## 0. Lecture rapide
 
 - **Configuration retenue** : `C10_context_notes` (BM25 + dense + fusion RRF + reranker, puis fenêtres de contexte et notes de tableau) sur l'index `tas_v6`, contexte structuré large, prompt `clinical_concise`.
 - **Ce qui apporte vraiment** (mesuré hors antibioprophylaxie, y compris sur des RFE jamais vues) : la recherche hybride (dense + reranker) par rapport à BM25 seul, et les **fenêtres de contexte** (chunk voisin et tableau parent). Le reste de C10 n'apporte rien de démontré sur les jeux de test.
 - **Le générateur compte plus que le retrieval** : à contexte égal, passer d'un modèle local de 7–9 milliards de paramètres à Claude Sonnet fait gagner 7 à 21 points de réponses correctes selon le jeu.
+- **Robustesse** : avec les formulations des cliniciens (variante des experts), la suffisance du retrieval gelé est de 81,2 % au dev comme au test ; l'option lexicale n'y montre pas de gain démontré (la normalisation par LLM y est en cours de mesure) ; aucune option (lexicale, normalisation, décomposition) n'a d'effet démontré sur la sonde tenue à l'écart `genprobe2`.
 - **Non mesuré** : modèles frontier sans RAG, corpus ou documents entiers en contexte, RAG agentique via MCP, fine-tuning, modèle ouvert ~30B.
 
-Rappel des jeux (détail dans `FINAL_REPORT.md` §2.1) : `abpe171` et `abp171` = questions validées par des médecins (antibioprophylaxie) ; `multirfe_synth`, `genprobe`, `genprobe2`, `x2_dev` = questions synthétiques générées par un LLM, non validées. Les chiffres `abpe171` sont jugés contre le brouillon du benchmark du 26/11 (commit `eabcefc`), pas contre sa version validée `sfar-abp-v31.1-valide` (en cours d'intégration).
+Rappel des jeux (détail dans `FINAL_REPORT.md` §2.1) : `abpe171` et `abp171` = questions validées par des médecins (antibioprophylaxie) ; `multirfe_synth`, `genprobe`, `genprobe2`, `x2_dev` = questions synthétiques générées par un LLM, non validées. Les chiffres de génération `abpe171` sont donnés sous deux grilles : celles du brouillon du benchmark du 26/11 (commit `eabcefc`, pré-enregistré) et celles de la version validée `sfar-abp-v31.1-valide` (37 grilles révisées par un médecin ; rejugement post hoc des mêmes réponses). Le retrieval n'est pas concerné : énoncés et preuves sont identiques dans les deux versions. `abpvern` = variante en langage courant des mêmes questions, publiée par les experts (88 énoncés réécrits).
 
 Termes : **suffisance** = toutes les preuves exigées par les experts sont dans le contexte montré au générateur ; **passage** = le passage de référence est dans le contexte ; **fenêtres** = ajout du chunk voisin de chaque côté et du tableau parent autour des meilleurs résultats.
 
@@ -38,6 +39,8 @@ Termes : **suffisance** = toutes les preuves exigées par les experts sont dans 
 
 Écarts : fenêtres − C9 : multirfe test +12,5 [+4,2 ; +20,8], genprobe +14,6 [+6,2 ; +25,0] ; C10 − fenêtres : genprobe +2,1 [0 ; +6,2], abpe171 test 0 ; C9 − BM25 : abpe171 test +4,7 [−1,6 ; +12,5], multirfe test +14,6 [0 ; +29,2].
 
+Sonde `genprobe2` (60 questions synthétiques, exécution unique, configuration gelée seulement comme référence) : suffisance 68,3 (deux sources **40,0** ; contrepartie de population 80,0 ; note de tableau 75,0 ; contrôles 100) ; passage 90,0.
+
 **Lecture.** Sur l'antibioprophylaxie (vocabulaire d'actes très spécifique), BM25 fait presque aussi bien que l'hybride. Le dense et le reranker paient sur les autres RFE. La construction du contexte (fenêtres, tableau parent) apporte autant ou plus que le modèle de recherche, et c'est le seul gain qui se retrouve sur tous les jeux tenus à l'écart. Les gains propres à C10 (notes, plafond par document) ont été obtenus en corrigeant des échecs du dev de l'antibioprophylaxie et ne se retrouvent pas sur son test.
 
 ### 1.3 Robustesse aux saisies (abpe171 dev, suffisance ; perturbations synthétiques)
@@ -51,11 +54,20 @@ Termes : **suffisance** = toutes les preuves exigées par les experts sont dans 
 | BM25 seul | 94,8 | 88,5 | 69,8 | 86,5 |
 | dense seul | 76,0 | 77,1 | 78,1 | 68,8 |
 
-Tableaux bruts de l'agent Q1, IC dans `eval_internal/robustness/results/summary.md` et `FINAL_REPORT.md` §8.1. Aucune variante n'est adoptée.
+Agent Q1, IC dans `eval_internal/robustness/results/summary.md` et `FINAL_REPORT.md` §8.1. Sur `genprobe2` (une faute par question), n-grammes + lexique : +1,7 [−6,7 ; +8,3], pas d'effet démontré.
 
-À COMPLÉTER : décision de Q1 (`reports/agents/Q1_robustesse.md`) et, si un candidat est retenu, son résultat sur `genprobe2`.
+**Formulations réelles des cliniciens** (variante en langage courant des experts, retrieval seul ; test = passe post hoc unique) :
 
-À COMPLÉTER : effet de la formulation en langage courant − standard sur le benchmark validé des experts (variante complète des 171 questions et 29 reformulations approuvées de `sfar-abp-v31.2-200`), pour C10 figée, n-grammes et lexique (`reports/agents/V1_benchmark_valide.md`).
+| Configuration | Standard dev | Langage courant dev | Standard test | Langage courant test | Variante − figée sur le langage courant (dev ; test) |
+|---|---|---|---|---|---|
+| Figée | 95,8 | **81,2** | 82,8 | **81,2** | — |
+| + n-grammes | 96,9 | 83,3 | 87,5 | 81,2 | +2,1 [−3,1 ; +8,3] ; 0,0 |
+| + lexique | 95,8 | 82,3 | 82,8 | 81,2 | +1,0 ; 0,0 |
+| + les deux | 95,8 | 84,4 | 87,5 | 82,8 | +3,1 [−3,1 ; +9,4] ; +1,6 [−3,1 ; +6,2] |
+
+Effet de formulation, configuration figée, sur les 88 énoncés réécrits : −25,5 [−38,2 ; −12,7] au dev, −3,6 [−17,9 ; +14,3] au test. Les gains vus sous fautes et sigles synthétiques ne se retrouvent pas sur ces formulations. Latence : 196 à 206 ms contre 198 ms pour la figée.
+
+À COMPLÉTER : normalisation par le modèle en mode ajout (NORM-add) contre configuration figée sur `abpvern`, dev et test, suffisance avec IC appariés, et nombre de normalisations infidèles relevées à la lecture.
 
 ### 1.4 Modèles de recherche plus gros
 
@@ -71,10 +83,12 @@ Tableaux bruts de l'agent Q1, IC dans `eval_internal/robustness/results/summary.
 |---|---|---|
 | Liens structurels adulte ↔ enfant (X1) | mesuré, rejeté | 42/42 liens corrects mais tous dans l'antibioprophylaxie ; effet sur dev 0 |
 | Seconde passe corrective sans LLM (X2 option 2) | mesuré, rejeté | gain 0 ; abpe171 dev −1,0 [−3,1 ; 0] ; latence 192 → 330–690 ms |
-| Décomposition par LLM (X2 option 1) | en cours | À COMPLÉTER : effet sur suffisance (abpe171 dev, multirfe dev, x2_dev), latence et coût en appels LLM, décision |
-| Seconde passe corrective avec LLM (X2 option 3) | en cours | À COMPLÉTER : effet sur suffisance, latence, décision |
-| Reformulation par LLM (Q2 : normalisation, reformulation, HyDE) | en cours | À COMPLÉTER : effet propre et perturbé, fidélité clinique des reformulations, latence, décision |
-| Candidats sur `genprobe2` | non exécuté | À COMPLÉTER : résultats de l'exécution unique, par famille, candidat − figée avec IC |
+| Décomposition par LLM (X2 option 1) | interrupteur, désactivé | dev : 0 sur abpe171 et multirfe ; x2_dev +12,5 [0 ; +31,2] ; un appel LLM (~400 tokens) par question ; recherche 192 → 583 ms quand elle se déclenche. `genprobe2`, deux sources : 0 [0 ; 0] (4 déclenchements, aucune preuve ajoutée) |
+| Seconde passe corrective avec LLM (X2 option 3) | rejetée | gain nul partout ; ~1 900 tokens par question |
+| Normalisation par LLM, mode ajout (Q2) | interrupteur, désactivé | dev, deux jeux : propre +0,6 [0 ; +1,7], 1 faute +3,5 [+1,2 ; +6,4], 3 fautes +8,1 [+4,1 ; +12,2] ; 0 altération clinique lue sur questions propres. `genprobe2`, 1 faute : +1,7 [0 ; +5,0] |
+| Reformulation libre (Q2) | rejetée | 9/97 réécritures de questions propres altèrent le contenu ; 4 inversions de sens sous fautes |
+| Passage hypothétique, HyDE (Q2) | rejeté | −8,7 [−14,0 ; −4,1] en remplacement ; grade inventé 190/196, dose ou durée 47/196 |
+| Candidats sur `genprobe2` (LEX, NORM, DEC, TOUT) | exécution unique faite | aucun intervalle n'exclut 0 sur la cible déclarée d'avance : pas d'effet démontré ; la configuration gelée reste la référence |
 
 ## 2. Index (ingestion)
 
@@ -111,15 +125,16 @@ Les grilles v1, v2, v3 et v4 du juge ne sont pas comparables entre elles (ruptur
 
 ### 3.2 Configuration finale avec le substitut Sonnet (grille v4, à l'aveugle, deux juges)
 
-| Jeu | Correct | Erreurs graves (≥ 1 juge) |
-|---|---|---|
-| abpe171 test (médecins, 69) | 53,6 % [41,2–65,7] | 5,8 % [1,6–14,2] |
-| multirfe_synth test (synthétique, 57) | 91,2 % [80,7–97,1] | 0 % [0–6,3] |
-| genprobe (synthétique, 48) | 75,0 % [60,4–86,4] | 6,2 % [1,3–17,2] |
+| Jeu | Correct, grilles du brouillon (pré-enregistré) | Correct, grilles validées (post hoc) | Erreurs graves (≥ 1 juge), brouillon | Erreurs graves, validées |
+|---|---|---|---|---|
+| abpe171 test (médecins, 69) | 53,6 % [41–66] (37) | 62,3 % [50–74] (43) | 5,8 % [2–14] (4) | 2,9 % [0–10] (2) |
+| abpe171 dev confirmation (72) | 73,6 % [62–83] (53) | 77,8 % [66–87] (56) | 2,8 % (2) | 0 % [0–5] |
+| multirfe_synth test (synthétique, 57) | 91,2 % [80,7–97,1] | sans objet | 0 % [0–6,3] | sans objet |
+| genprobe (synthétique, 48) | 75,0 % [60,4–86,4] | sans objet | 6,2 % [1,3–17,2] | sans objet |
 
 Formulation imposée : avec un générateur de substitution (Claude Sonnet) recevant exactement les prompts de notre configuration, ces taux de réponses sont jugés conformes à la référence par un juge LLM (Claude Haiku, grille v4, non validée médicalement). Le modèle déployé (~30B) n'a pas été mesuré.
 
-À COMPLÉTER : rejugement post hoc des mêmes réponses sous les grilles validées `sfar-abp-v31.1-valide` (analyse secondaire).
+Pour mémoire, la campagne des experts sur la version d'origine de notre pipeline (Qwen3.5-9B, juge = le même Qwen, 200 questions) rapporte : LLM seule 28 %, LLM + RAG « C8 » 66,5 %, LLM + passages « oracle » 76,5 %. Grille, juge et générateur différents : non comparables directement à nos chiffres.
 
 ### 3.3 Ancien système (pour mémoire)
 
@@ -138,7 +153,11 @@ Ancien pipeline, Qwen2.5-7B, abp171 dev, juge Haiku grille v1 : C0 naïf 64,7 % 
 | Petit modèle local (7B / 9B) comme générateur | — | oui | 3–7 % (dev, 30 q.) | 8–51 s par réponse (Mac) | gratuit en local | oui | aucune | souverain, mais 7 à 21 points derrière Sonnet |
 | Substitut Sonnet comme générateur | — | oui | §3.2 | non mesurée | non mesuré en $ (abonnement) | **non** (modèle propriétaire) | aucune | estimation de ce que permet un générateur fort |
 
-Recommandation provisoire (à confirmer par la mesure du modèle cible) : servir C10_context_notes (ou C9 + fenêtres, équivalent mesuré) sur `tas_v6` avec un modèle ouvert de classe ~30B et le prompt concis ; ne pas présenter de chiffre de ce système tant que le modèle cible n'a pas été évalué ; garder le serveur MCP comme moteur de recherche cité en lecture seule pour un usage par des assistants tiers.
+| Option lexicale (n-grammes + lexique) | dev sous fautes +4,2 [0 ; +9,4] ; langage courant des experts : n.s. ; `genprobe2` : n.s. | non | non mesurées | +7 ms | nul | oui | lexique à maintenir à la main | interrupteur désactivé ; lexique à relire par des médecins |
+| Normalisation par LLM, mode ajout | dev 3 fautes +8,1 [+4,1 ; +12,2] ; `genprobe2` : n.s. | non | non mesurées | + un appel LLM (estimé 0,3–2 s, non mesuré) + ~200 ms | ~460 tokens d'entrée par question | oui (même modèle que le générateur) | aucune | interrupteur désactivé ; fidélité à remesurer avec le modèle servi |
+| Décomposition par LLM | x2_dev +12,5 [0 ; +31,2] ; `genprobe2` deux sources : 0 | non | non mesurées | + un appel LLM à chaque question | ~400 tokens par question | oui | aucune | interrupteur désactivé, non branché à l'API |
+
+**Décision.** La configuration évaluée et gelée (`C10_context_notes` sur `tas_v6`, contexte structuré, prompt concis) est la solution. C9 + fenêtres est équivalent à la mesure et plus simple. Les trois options ci-dessus existent comme interrupteurs, désactivés par défaut, parce qu'aucune n'a montré d'effet sur la sonde tenue à l'écart. À confirmer avec le modèle ouvert ~30B, jamais mesuré : ne pas présenter de chiffre du système servi avant cette mesure. Le serveur MCP reste un moteur de recherche cité, en lecture seule, non prêt pour un service public.
 
 ## 5. Ce qui n'a pas été mesuré, et pourquoi
 
