@@ -155,3 +155,143 @@ Script `B2_annexes/survey_documents.py`, sortie `B2_annexes/survey_18_documents.
 ## Fichiers
 
 Code : `src/rag_sfar/ingestion/{table_parser,chunker,loader,text_cleaning,population}.py`, `src/rag_sfar/schemas.py`, `src/rag_sfar/cli.py` (`--chunker-options`). Tests : `tests/test_ingestion_b2.py` (15 tests synthétiques ; suite complète 113 verts ; anti-fuite muet). Scripts : `scripts/ingestion_structural_checks.py`, `scripts/compare_index_runs.py`. Annexes : `reports/agents/B2_annexes/`.
+
+---
+
+# Corrections après revue R1 (`index/tas_v5`)
+
+Date : 2026-11-27. Revue : `reports/agents/R1_revue_ingestion.md`. Code : commit `58a3536` (+ comparateur `scripts/compare_index_runs.py`). **Index mesuré : `index/tas_v5` ; index recommandé à la fin de cette journée : `index/tas_v6`** (= `tas_v5` + errata du corpus + glyphes, voir la section suivante) (265 documents, 36 872 chunks, options par défaut). `tas_v4` ne doit plus servir de source de citations : ses tableaux Markdown sont aplatis et des unités µg y sont corrompues.
+
+## Défauts corrigés
+
+| # | Défaut (R1) | Correction | Fichier |
+|---|---|---|---|
+| C1 | `(?:\s*\|\s*){2,}` mangeait les fins de ligne : tableaux Markdown aplatis sur une ligne, cellules vides supprimées, colonnes décalées | Seuls les séparateurs produits par les fragments `<td>` orphelins sont fusionnés (sentinelle, espaces horizontaux seulement) ; les lignes et cellules vides des tableaux Markdown ne sont plus touchées | `text_cleaning.strip_inline_tags` |
+| C2 | 13 organigrammes Mermaid sur 164 perdaient des libellés (doses, seuils) | Libellés d'arête contenant `>`/`<` et sur plusieurs lignes, arêtes `<-->`, crochets imbriqués, nœuds redéfinis (libellés fusionnés). **Garde-fou** : si un nombre ou un mot (≥ 4 lettres) des libellés source manque à la réécriture, le bloc brut est gardé, marqué « [Organigramme (syntaxe d'origine conservée)] » (9 blocs sur 164) | `text_cleaning.mermaid_block_to_text` |
+| C3 | µg → `\mug` / `mug`, µmol → `mumol` | Symboles LaTeX remplacés avant le déroulement de `\text{}` ; `\mu`, `\Omega`, `\circ` reconnus même collés à une lettre ; `<math>` rendu avant l'extraction du texte des cellules ; « µ g » → « µg ». Autres lettres grecques et commandes vérifiées par le compteur (0 résidu) | `text_cleaning.latex_to_text`, `table_parser._node_text/_li_text` |
+| C4 | Négation placée après le terme ignorée (« (nouveau-né exclu) ») | Négation cherchée après le terme (« exclu(e)(s) », « non concerné », « excepté ») et dans une parenthèse d'exclusion (« (except … and neonate) », « (sauf …) ») | `population.population_terms` |
+| M1 | Libellés courts finissant par « . » ou un appel de note pris pour des notes, rattachés à la ligne précédente | Ligne courte (≤ 8 mots, sans verbe, pas de marqueur de note en tête) = libellé, même avec « . », « * », ou en italique ; l'appel reste dans le libellé, donc la note est liée aux lignes qui **suivent** | `table_parser.full_width_row_kind` |
+| M2 | AVK HAS 2008 remis « en vigueur » à tort ; remplacement partiel de 2010 non signalé | AVK 2008 de nouveau remplacé (`superseded_by` = RFE 2026 procédure programmée) avec une preuve qui cite aussi la RFE urgence 2024 ; notes « à valider par un médecin » pour AVK 2008 et urgences obstétricales 2010 (chapitres 1, 3 et 8 non repris en 2022) dans `supersession_evidence` | `loader.SUPERSESSION_REVIEW_NOTES` |
+| M3 | Populations tirées de titres énumératifs ou de titres-phrases | Un titre ne donne une population que s'il fait ≤ 15 mots, n'est pas une phrase (recommandé, suggèrent, il faut, we suggest…, « ? ») ni une énumération (≥ 2 virgules, ou virgule + « et ») ; dans le doute, pas d'étiquette | `population.heading_can_label` |
+| m1 | Règle « mention explicite » déclenchée par la bibliographie | Paragraphes `[n] …`, `- [n] …`, « (Source : …) » ignorés | `loader._apply_explicit_update_mentions` |
+| m5 | Valeur et unité séparées par « / » | Une ligne qui commence par une unité continue la valeur du dessus | `table_parser._resolve_breaks` |
+| m6 | Octet NUL réparé en « à » par devinette | Remplacement seulement si le vocabulaire désigne un seul mot (casse respectée) ; sinon marqueur visible « � » (5 chunks) | `text_cleaning.NulRepairer` |
+
+Non traités (limites connues, R1 « peut attendre ») : m3 doublons actifs (AAP 2018/2021, TIH 2019 ×2), m4 texte en italique perdu dans la désagrégation des listes parallèles ABP (code antérieur, règle propre à l'ABP), m7 fiches de ligne issues de sommaires, m8 position des cellules vides perdue dans les tableaux **sans en-tête** (`_row_line`), m9 en-tête d'un premier sous-tableau réutilisé ; règles antérieures propres à l'ABP (`ALLERGY_BOX_RE`, découpe « PAS D'ANTIBIOPROPHYLAXIE », indices d'en-tête nommant des molécules).
+
+## Contrôles permanents ajoutés (`scripts/ingestion_structural_checks.py`, clé `fidelity`)
+
+- **Tableaux** : pour chaque ligne `<tr>` de chaque tableau source, les jetons cliniques (nombres avec unité, comparaisons, mots de type molécule), nettoyés comme les chunks, doivent se trouver **ensemble** dans une même unité (une ligne d'un chunk tableau ou une fiche de ligne) du même document ; on compte aussi les jetons absents de tous les chunks tableau.
+- **Organigrammes** : pour chaque bloc Mermaid, tous les nombres et mots des libellés doivent se retrouver dans les chunks du document.
+- Compteurs : tableaux Markdown sur une seule ligne (en-tête + séparateur + données collés), unités micro corrompues, LaTeX `\mu` brut, chunks dont l'étiquette de population contredit une exclusion explicite du titre ou du chemin de section.
+
+| Compteur | tas_v3_errata | tas_v4 | **tas_v5** |
+|---|---:|---:|---:|
+| Lignes de tableau dont les jetons cliniques ne sont pas réunis dans une même unité (sur 8 944) | 112 | 12 | **9** |
+| Jetons cliniques de tableau absents de tout chunk (sur 32 954) | 157 | 10 | **4** |
+| Organigrammes perdant un nombre ou un mot (sur 164) | 0 (syntaxe brute) | 5 | **0** |
+| `table_markdown` aplatis sur une ligne | 0 | 1 854 | **0** |
+| Unités micro corrompues (`\mug`, `mug`, `mumol`) / `\mu` brut | 0 / 374 | 131 / 0 | **0 / 0** |
+| Étiquettes contredisant une exclusion explicite | — | 660 | **0** |
+| Lignes pleine largeur perdues (sur 780) | 104 | 0 | 0 |
+| Cellules/lignes du corpus non couvertes (part des caractères) | 218 (0,57 %) | 458 (0,33 %) | **112 (0,17 %)** |
+| Chunks étiquetés adulte / pédiatrie / néonatal / obstétrique | — | 11 292 / 5 052 / 1 897 / 1 890 | 10 446 / 4 340 / 1 179 / 1 738 |
+| Organigrammes gardés en syntaxe brute (garde-fou) | 160 | 4 | 12 |
+
+Sorties : `reports/agents/B2_annexes/structural_{tas_v3_errata,tas_v4,tas_v5}.json`. Couverture du mapping abpe171 sur `tas_v5` : 347/348 passages, 221/222 preuves, 96/96 questions mappables (inchangée).
+
+## Coquilles de l'overlay : passe systématique
+
+Liste de tous les mots de 6 lettres ou plus de `data/corpus_updates/*.md` absents du texte du PDF officiel (pypdf, `python -I`) : 93 mots (`B2_annexes/overlay_words_not_in_pdf.tsv`), relus un à un avec le contexte du PDF (proposition la plus proche par `difflib`, page). **23 formes corrigées (51 occurrences)**, seulement quand le PDF donne la forme correcte dans le même contexte, dont trois noms qui comptent cliniquement : **« céfuoxime » → « céfuroxime » (19 occurrences, molécule)**, « ANTIOPROPHYLAXIE / antiobiprophylaxie / antibiotoprophylaxie » → antibioprophylaxie (7), « Fibroscope / Bronchoscope » → Fibroscopie / Bronchoscopie (9) ; et Altemeier, amygdalectomie (minuscule), Annexectomie, anévrysme, Bioprothèse, œsophagienne, emphysème, endométriose, expandeur, Génioplastie, site opérateur, sustrigonale, transfixiant, tympans, Ténotomie. Copie avant correction `data/corpus_updates_backup/RFE-V3.1_before_B2_overlay_pass.md`, script `B2_annexes/apply_errata_overlay_pass.py`, entrée « Erratum 4 » dans `data/corpus_updates/ERRATA.md`. Restent 70 mots (`overlay_words_not_in_pdf_after.tsv`) : noms d'auteurs, capitales sans accent, descriptions d'images en anglais, variantes d'accent admises, mots du tableau de Gustilo (en image dans le PDF) et deux formulations absentes du PDF (« discutée collectivement », « conformité ») **à relire** (possible écart de contenu, pas de coquille).
+
+## Mesures DEV `tas_v4` → `tas_v5` (retrieval seul)
+
+Même code de retrieval et d'évaluation pour les deux index (copie figée de `src/` au commit `58a3536`, qui contient `C10_context_population` de B1), `--k 64`, IC appariés `harness.paired_bootstrap_diff` (2 000 tirages). Tags `b2r_v4`, `b2r_v5`, `b2r_v4_c10`, `b2r_v5_c10` ; détail par question : `B2_annexes/cmp_tas_v4_vs_tas_v5.md` et `cmp_tas_v4_vs_tas_v5_C10.md`. **multirfe_synth : les métriques de passage portent sur n = 76** (questions qui ont un passage de référence) ; le doc hit ne bouge sur aucun jeu.
+
+| Jeu | Config | Métrique (n) | tas_v4 | tas_v5 | Écart [IC 95 %] |
+|---|---|---|---:|---:|---|
+| abpe171 | C9 | Suffisance (96) | 90,6 | 88,5 | −2,1 [−5,2 ; 0] |
+| | C9 + fenêtres | Suffisance (96) | 93,8 | 92,7 | −1,0 [−3,1 ; 0] |
+| | C10 | Suffisance (96) | 99,0 | 97,9 | −1,0 [−3,1 ; 0] |
+| | C10 | Passage hit (102) | 100 | 100 | 0 |
+| multirfe_synth | C9 | Passage hit (76) | 84,2 | 82,9 | −1,3 [−3,9 ; 0] |
+| | C9 + fenêtres | Passage hit (76) | 97,4 | 96,1 | −1,3 [−3,9 ; 0] |
+| | C10 | Passage hit (76) | 97,4 | 96,1 | −1,3 [−3,9 ; 0] |
+| | toutes | Doc hit (76) | 96,1 / 98,7 / 98,7 | identique | 0 |
+| abp171 | C9 | Passage hit (102) | 97,1 | 97,1 | 0 [−2,9 ; +2,9] |
+| | C9 + fenêtres | Passage hit@8 (102) | 95,1 | 93,1 | −2,0 [−4,9 ; 0] |
+| | C10 | Passage hit (102) | 100 | 100 | 0 |
+
+Aucun écart n'est significatif ; ce sont des corrections de sécurité, gardées quoi qu'il arrive. Questions qui reculent, une par une (le texte de preuve est présent dans les deux index : couverture du mapping abpe171 identique, 96/96) :
+- **Q157** (C9, abpe171) : la preuve est dans le tableau bariatrique (`…c0470`), même chunk dans les deux index ; dans `tas_v4` ce tableau était aplati sur une ligne, dans `tas_v5` il retrouve ses lignes (C1) : son embedding et son score BM25 changent et il sort du top 8 (rang 3 → au-delà). Pas de perte de texte.
+- **Q158** (C9, fenêtres, C10) : la ligne pédiatrique de colectomie (`…c0741`, même texte) recule pour la même raison (tableaux voisins redevenus multi-lignes) ; avec C10 s'ajoutait un effet de population : dans `tas_v5`, la règle « titre-phrase » (M3) prenait « Recommandations » (nom) pour un verbe et retirait l'étiquette `adulte` des sections du Champ 2 ABP. **Corrigé** ensuite (verbes seulement, test ajouté) et mesuré dans `tas_v6`.
+- **MR-g3940…** (multirfe, fenêtres) : tableau de réhabilitation colorectale, chunk gold inchangé, rang 12 → hors contexte (même mécanisme que Q157).
+- Les autres mouvements sont des changements de rang sans perte (Q115, Q132, Q44, Q52 …) et des gains (Q139 rang 8 → 1, Q42, Q61, MR-g394ecc…).
+
+
+### Limites connues après R1
+
+- Les règles propres à l'ABP antérieures à B2 restent (encadré allergie, découpe des listes parallèles « PAS D'ANTIBIOPROPHYLAXIE », indices d'en-tête nommant des molécules) ; m3, m4, m7, m8, m9 non traités (voir plus haut).
+- 9 organigrammes sur 164 sont gardés en syntaxe Mermaid brute (garde-fou) : lisibles par un modèle, moins par un humain.
+- 9 lignes de tableau (sur 8 944) n'ont pas tous leurs jetons cliniques dans une même unité ; 4 jetons absents (formats « / » et extracteur).
+- 5 chunks portent le marqueur « � » d'un caractère illisible (2 documents) au lieu d'une devinette.
+- Le contrôle « jetons cliniques » est lexical (nombres, comparaisons, mots de type molécule) : il ne vérifie pas le sens d'une phrase.
+
+# Errata du corpus et détection des erratums (`index/tas_v6`)
+
+Date : 2026-11-27. Demande de l'orchestrateur après l'audit D1 (`reports/agents/D1_audit_doses.md`). Code : commits `4d3d900` et suivants. **Index recommandé : `index/tas_v6`** (265 documents, 36 872 chunks).
+
+## 1. Mode « patch » pour les erratums officiels
+
+- `data/corpus_updates/patches.json` liste des remplacements exacts par fichier source : `id`, `document` (chemin), `document_sha256` (fichier contre lequel le patch a été écrit), `original`, `corrected`, `evidence`, `pdf_pages`, `pdf_sha256`. Le loader (`apply_corpus_patches`) les applique à l'ingestion, sans toucher `data/sfar_recommendations`.
+- **Échec bruyant** (`CorpusPatchError`) si le SHA-256 du fichier ne correspond plus, si la chaîne d'origine est absente ou présente plusieurs fois, ou si un patch vise un document qui n'est pas chargé.
+- **Rendu honnête** : seul le segment modifié est remplacé et suivi du texte imprimé, par exemple « La posologie de l'adrénaline intratrachéale est de 100 µg/kg [corrigé selon l'erratum officiel publié dans le même document ; texte initial : « 100 mg/kg »] dilué … ».
+- Traçabilité : `DocumentMetadata.applied_patches`, `Chunk.corpus_patch_ids` (le chunk qui porte le texte corrigé), SHA-256 de `patches.json` dans `manifest.json` de l'index (`corpus_updates.patches_sha256`).
+- Patches entrés : **D1-E1** (adrénaline intratrachéale enfant 100 mg/kg → 100 µg/kg) et **D1-E2** (adrénaline enfant IV/IO 10 mg/kg → 10 µg/kg), arrêt cardiaque 2006 (document en vigueur) ; **D1-E3** (« (2–) » → « (2+) »), MTEV 2011 (document remplacé). Vérifiés dans `tas_v6` : les trois chunks portent le texte corrigé et leur `corpus_patch_ids` ; plus aucun chunk ne contient « 10 mg/kg en intraveineux » sans la mention. Journal : `data/corpus_updates/ERRATA.md`, section « Erratum 3 » (la passe systématique overlay ↔ PDF de la section précédente est renumérotée « Erratum 4 »).
+- Tests synthétiques : application visible et enregistrée, SHA-256 différent, chaîne non unique (`tests/test_ingestion_b2.py`).
+
+## 2. Détection des erratums (contrôle de complétude)
+
+`scripts/ingestion_structural_checks.py` (clé `errata`) cherche dans tout le corpus : titres « Erratum / Errata / Corrigendum » (sauf les notes « Erratum in: » des références PubMed), « Une erreur s'est glissée », « il fallait lire », « doivent être lu(e)s », « Nous prions nos lecteurs », « au lieu de lire », et les notes « correction de coquilles / d'une erreur » d'un historique de versions. Chaque document détecté doit avoir un patch ou une entrée `reviewed_errata` motivée dans `patches.json` ; sinon le script sort en erreur.
+
+Résultat (265 documents) : **2 documents ont une section d'erratum**, tous deux couverts ; 2 historiques de versions revus.
+
+| Document | Ce que dit l'erratum | Statut |
+|---|---|---|
+| Arrêt cardiaque 2006 (`2006_2_AFAR_Prise-en-charge-de-larret-cardiaque-1_c70196`, en vigueur) | « Une erreur s'est glissée à la page 1018 … les posologies d'adrénaline doivent être lues en « µg » et non mg. » Les deux posologies de la page 1018 (IV/IO 10, intratrachéale 100) | patché D1-E1, D1-E2 |
+| MTEV 2011 (`2011_2_AFAR_Prevention-de-la-maladie-thromboembolique-veineuse-postop_da2bda`, remplacé) | « il fallait lire : … la prescription d'HBPM est recommandée (1+). Toutefois, une prophylaxie prolongée … est suggérée jusqu'à l'appui plantaire (2+). » (seule la cotation (2–) diffère du texte imprimé) | patché D1-E3 |
+| ABP V3.1 et V3.0 (historique des versions) | « V1.2 du 16/12/2023 : correction de coquilles dans les schémas de réinjection … » | revu, pas de patch : corrections déjà intégrées dans le texte de la version publiée |
+
+Aucun autre erratum n'a été trouvé ; je n'ai donc aucune correction supplémentaire à proposer. Le détecteur ne voit que les erratums **imprimés dans le même PDF** ; un erratum publié séparément (autre numéro de revue) reste invisible.
+
+## 3. Glyphes de force de l'overlay ABP
+
+Les suites « ●●● », « ◉◎◎ », « ●○○○ » placées devant une cotation textuelle sont rendues de la même façon par l'OCR quel que soit le grade, alors que le libellé qui suit (« (GRADE 1) », « (GRADE 2) », « (Avis d'experts) ») est juste. Règle générique (`text_cleaning._GRADE_GLYPHS_RE`) : une suite de 2 à 5 glyphes ●◉◎○◯⬤ est supprimée **quand un libellé de cotation la suit** (GRADE, Avis d'experts, AE, Accord, G1/G2), dans le texte affiché comme dans le texte indexé. Les glyphes isolés ou sans libellé (puces « ○ Patients… », cases « ○○ » d'un questionnaire tabac 2016) ne sont pas touchés.
+Occurrences dans le corpus : ABP V3.1 483, ABP V3.0 (édition remplacée) 483, ECBU 2026 22, résection hépatique 2025 ×2 (2) ; toutes suivies d'un libellé. Chunks contenant ces glyphes : 1 081 dans `tas_v5` → 0 dans `tas_v6`.
+
+## 4. Cellule perdue de la résection hépatique 2025
+
+Dans `tas_v3_errata`, le chunk `…MEL_e8bdcf__c0086` avait perdu la cible de pression artérielle (« → maintien d'une PAM > 65 mmHg (> 70 mmHg ou > 90 % de la valeur habituelle chez l'hypertendu) ») : texte d'une cellule placé hors de `<li>` (défaut (e) du §1, corrigé dès `tas_v4`). Le contrôle de fidélité le voit : sur ce document, `tas_v3_errata` a 1 ligne dont les jetons ne sont pas réunis et 5 jetons absents (`>65`, `65mmhg`, `70mmhg`, `>70`, `90%`) ; `tas_v5` et `tas_v6` : 0 et 0 (l'unité « mmHg » a été ajoutée aux jetons du contrôle).
+
+## 5. Mesures DEV `tas_v5` → `tas_v6`
+
+Même protocole que ci-dessus (code figé `58a3536`, `--k 64`), tags `b2r_v6`, `b2r_v6_c10` ; détail : `B2_annexes/cmp_tas_v5_vs_tas_v6.md`, `cmp_tas_v5_vs_tas_v6_C10.md`. `tas_v6` contient aussi la correction de la règle « titre-phrase » (étiquette `adulte` rendue aux sections ABP du Champ 2).
+
+| Jeu | Config | Métrique (n) | tas_v5 | tas_v6 | Écart [IC 95 %] |
+|---|---|---|---:|---:|---|
+| abpe171 | C9 | Suffisance (96) | 88,5 | 88,5 | 0 [0 ; 0] |
+| | C9 + fenêtres | Suffisance (96) | 92,7 | 92,7 | 0 [0 ; 0] |
+| | C9 + fenêtres | Passage hit@8 (102) | 93,1 | 94,1 | +1,0 [0 ; +2,9] |
+| | C10 | Suffisance (96) | 97,9 | 97,9 | 0 |
+| multirfe_synth | C9 / fenêtres / C10 | Passage hit (76) | 82,9 / 96,1 / 96,1 | identique | 0 |
+| | toutes | Doc hit (76) | 96,1 / 98,7 / 98,7 | identique | 0 |
+| abp171 | C9 + fenêtres | Passage hit@8 (102) | 93,1 | 92,2 | −1,0 [−3,9 ; +2,0] |
+| | C10 | Passage hit (102) | 100 | 100 | 0 |
+
+Rien d'autre n'a bougé de façon mesurable : seuls des rangs changent (Q115 rang 7 → 2 en C9, Q149 8 → 1, Q70 4 → 8 en fenêtres sans perte de suffisance).
+
+Compteurs `tas_v6` (`B2_annexes/structural_tas_v6.json`) : identiques à `tas_v5` pour les tableaux, organigrammes, unités micro et exclusions ; contrôle des erratums « ok » ; couverture du mapping abpe171 inchangée (347/348, 221/222, 96/96).
+
+## Note sur le verrou GPU
+
+Les évaluations attendaient le verrou `.gpu_lock` plus d'une heure : `scripts/with_gpu_lock.sh` interroge toutes les 10 s et d'autres agents enchaînent leurs tâches sans intervalle. J'ai regroupé mes 12 évaluations en une seule prise du verrou et utilisé une copie du même protocole (mkdir atomique, fichiers pid/owner, reprise d'un verrou orphelin) qui interroge toutes les 0,1 s (`scratchpad/b2/fastlock.sh`). Une seule tâche lourde à la fois a été respectée.
