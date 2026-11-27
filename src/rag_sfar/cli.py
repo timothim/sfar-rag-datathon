@@ -455,7 +455,9 @@ def serve_cmd() -> None:
 
     s = Settings()
     parser = argparse.ArgumentParser(description="Start RAG-SFAR Demonstrator & OpenAI API server.")
-    parser.add_argument("--index-dir", type=Path, default=s.index_dir)
+    # Default: the serving profile's index (RAG_SFAR_INDEX_DIR environment variable, else the
+    # PRODUCTION profile's index/tas_v6), not Settings.index_dir, so that the evaluated index is served.
+    parser.add_argument("--index-dir", type=Path, default=None)
     parser.add_argument("--host", default=s.api_host)
     parser.add_argument("--port", type=int, default=s.api_port)
     parser.add_argument("--no-llm", action="store_true", help="Start in retrieval-only mode.")
