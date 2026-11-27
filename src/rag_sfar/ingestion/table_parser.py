@@ -237,7 +237,8 @@ def _li_text(li: Tag) -> str:
             own.append(str(child))
     head = _BULLET_PREFIX_RE.sub("", _resolve_breaks("".join(own)))
     if nested:
-        return f"{head} : {' ; '.join(nested)}" if head else " ; ".join(nested)
+        sep = " " if head.rstrip().endswith(":") else " : "
+        return f"{head}{sep}{' ; '.join(nested)}" if head else " ; ".join(nested)
     return head
 
 

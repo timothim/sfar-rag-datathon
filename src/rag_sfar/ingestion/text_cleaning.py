@@ -319,17 +319,29 @@ def mermaid_to_text(block: str) -> str:
         chains.append(chain)
     lines: list[str] = []
     used: set[str] = set()
+    shown: set[str] = set()
+
+    def _lab(nid: str) -> str:
+        # Full label at first mention, then a short reminder (first 6 words) to keep the
+        # flowchart about as long as its source.
+        lab = labels.get(nid, nid)
+        if nid in shown:
+            words = lab.split()
+            return " ".join(words[:6]) + (" …" if len(words) > 6 else "")
+        shown.add(nid)
+        return lab
+
     for chain in chains:
         if len(chain) == 1 and chain[0][1].startswith("["):
             lines.append(chain[0][1])
             continue
         if len(chain) < 2:
             continue
-        txt = labels.get(chain[0][1], chain[0][1])
+        txt = _lab(chain[0][1])
         used.add(chain[0][1])
         for cond, nid in chain[1:]:
             used.add(nid)
-            lab = labels.get(nid, nid)
+            lab = _lab(nid)
             txt += f" → ({cond}) {lab}" if cond else f" → {lab}"
         lines.append(txt)
     for nid, lab in labels.items():  # isolated nodes keep their text
