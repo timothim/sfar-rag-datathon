@@ -468,3 +468,21 @@ Méthode déclarée d'avance : le dev sert aux non-régressions et au coût, pas
 - **Métriques** : suffisance des preuves (principale), rappel des preuves, passage dans le contexte ; différences appariées contre la référence dans la même condition (bootstrap) ; par famille (deux sources, contrepartie de population, note de tableau, contrôles) ; questions gagnées et perdues ; taille du contexte ; latence de recherche. Analyse de sensibilité sans les 10 questions `meta.weak`.
 - **Règles de lecture** : (1) une option reste **sélectionnable** si elle ne perd aucune question de contrôle et au plus une question au total en condition propre ; (2) une option n'est **recommandée par défaut** que si l'intervalle de sa différence exclut 0 sur sa cible (DEC : famille deux sources ; LEX et NORM : condition avec fautes, toutes familles) ; sinon : « pas d'effet démontré sur le jeu tenu à l'écart » ; (3) une seule exécution, aucun changement de candidat, de prompt ou de règle après lecture ; toute panne technique est consignée, un lot de réponses de substitut invalide est refait une fois.
 - **Limites dites d'avance** : retrieval seul (les réponses générées ne sont pas jugées, faute de temps) ; 60 questions synthétiques non validées médicalement ; NORM ne peut pas baisser en condition propre par construction ; substituts Haiku et Sonnet à la place du modèle servi.
+
+## Rejugement sous les grilles validées : résultats (analyse secondaire post hoc, 10:38)
+- Run `blind_v31grid2` : 37 réponses Sonnet inchangées de l'évaluation finale (questions dont la grille a été révisée par un médecin), juge Haiku grille v4, consignes inchangées, 2 passes, **0 verdict manquant**. Incident : le premier juge du lot 1, passe a, s'est vu refuser sa commande finale (écriture + nettoyage) et s'est arrêté ; fichier non écrit à sa place ; lot rejugé une fois par un nouvel agent, de zéro, sans suppression (règle du protocole : un lot rejugé une seule fois). Fusion : `reports/eval/judge_v4/blind_v31grid2/` ; tableau recombiné : `combined_validated_grid.md` (les 134 autres questions gardent leurs verdicts `blind_final`).
+
+| abpe171, réponses Sonnet | Grilles du brouillon (pré-enregistré) | Grilles validées (post hoc) |
+|---|---|---|
+| **test (69)** correct (2 juges) | 53,6 % [41–66] (37) | **62,3 % [50–74] (43)** |
+| test correct ou partiel | 97,1 % (67) | 98,6 % [92–100] (68) |
+| test erreur grave (≥ 1 juge) | 5,8 % [2–14] (4 : Q15, Q17, Q126, Q167) | **2,9 % [0–10] (2 : Q15, Q126)** |
+| test comportement accepté | 92,8 % (64) | 97,1 % (67) |
+| dev confirmation (72) correct | 73,6 % [62–83] (53) | 77,8 % [66–87] (56) |
+| dev confirmation erreur grave | 2,8 % (2 : Q85, Q88) | 0 % [0–5] (0) |
+| dev itération (30) correct | 73,3 % (22) | 86,7 % [69–96] (26) |
+
+- Sur les 17 questions de test rejugées : correct 8 → 14 ; erreurs graves 2 → 0 (Q17 et Q167 : anciennes questions « à clarification » pour lesquelles une réponse est désormais attendue). Restent Q15 et Q126 (grilles non révisées ; `unjustified_assumption`). Abstention à tort inchangée (1).
+- **Écart dev confirmation → test sous les grilles validées : 77,8 % contre 62,3 %** (l'écart demeure, environ 15 points).
+- À présenter ainsi : résultat pré-enregistré sur les grilles du brouillon ; à côté, résultat sur les grilles validées par un médecin, post hoc, sans changement du système ni des réponses. La recherche (suffisance 82,8 % sur le test) n'est pas concernée.
+- **G1 lancé** : exécution unique sur `genprobe2` selon le plan ci-dessus (prépare les prompts, puis me rend la main pour les réponses Haiku et Sonnet).
