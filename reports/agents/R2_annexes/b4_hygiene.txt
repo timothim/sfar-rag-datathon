@@ -1,0 +1,3 @@
+tas_v3_errata C10 abpe171: dup-text 19, guaranteed 76, >30k chars 0, >40 chunks 11 | abp171: dup-text 19, guaranteed 83, >30k chars 0, >40 chunks 12 | multirfe_synth: dup-text 5, guaranteed 41, >30k chars 0, >40 chunks 1
+tas_v3_errata F0 abpe171: dup-text 0, guaranteed 0, >30k chars 0, >40 chunks 0 | abp171: dup-text 0, guaranteed 0, >30k chars 0, >40 chunks 0 | multirfe_synth: dup-text 0, guaranteed 0, >30k chars 0, >40 chunks 0
+tas_v6 tas_v6_F0 abpe171: dup-text 0, guaranteed 0, >30k chars 0, >40 chunks 0 | abp171: dup-text 0, guaranteed 0, >30k chars 0, >40 chunks 0 | multirfe_synth: dup-text 0, guaranteed 0, >30k chars 0, >40 chunks 0

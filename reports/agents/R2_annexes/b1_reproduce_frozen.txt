@@ -1,0 +1,16 @@
+=== index tas_v3_errata
+abpe171         sufficiency      n=96 C9W 88.5 F0 94.8 [91-99] d=+6.2 [+2.1;+11.5] won=['Q05', 'Q41', 'Q74', 'Q131', 'Q149', 'Q157'] lost=[]
+abpe171         evidence_recall  n=96 C9W 92.8 F0 98.0 [96-100] d=+5.2 [+1.6;+9.5] won=['Q05', 'Q41', 'Q74', 'Q131', 'Q149', 'Q157', 'Q171'] lost=[]
+   F0 abpe171: chars 16760 max 23165 chunks 28.3 max 35 dup-ids 0 reasons Counter({None: 1610, 'context_window': 1148, 'table_note': 127})
+abp171          passage_hit      n=102 C9W 99.0 F0 100.0 [100-100] d=+1.0 [+0.0;+2.9] won=['Q74'] lost=[]
+   F0 abp171: chars 16823 max 23165 chunks 28.3 max 35 dup-ids 0 reasons Counter({None: 1615, 'context_window': 1135, 'table_note': 134})
+multirfe_synth  passage_hit      n=76 C9W 100.0 F0 98.7 [96-100] d=-1.3 [-3.9;+0.0] won=[] lost=['MR-ga95d75ad6fe8fb541a44']
+   F0 multirfe_synth: chars 20588 max 28373 chunks 26.8 max 33 dup-ids 0 reasons Counter({None: 1488, 'context_window': 1027, 'table_note': 7})
+=== index tas_v6_
+abpe171         sufficiency      n=96 C9W 92.7 F0 95.8 [92-99] d=+3.1 [+0.0;+7.3] won=['Q05', 'Q41', 'Q131'] lost=[]
+abpe171         evidence_recall  n=96 C9W 95.4 F0 98.2 [96-100] d=+2.8 [+0.0;+6.2] won=['Q05', 'Q41', 'Q131'] lost=[]
+   F0 abpe171: chars 20342 max 29736 chunks 28.3 max 38 dup-ids 0 reasons Counter({None: 1598, 'context_window': 1181, 'table_note': 108})
+abp171          passage_hit      n=102 C9W 100.0 F0 100.0 [100-100] d=+0.0 [+0.0;+0.0] won=[] lost=[]
+   F0 abp171: chars 20270 max 29993 chunks 28.2 max 35 dup-ids 0 reasons Counter({None: 1606, 'context_window': 1173, 'table_note': 97})
+multirfe_synth  passage_hit      n=76 C9W 96.1 F0 96.1 [91-100] d=+0.0 [+0.0;+0.0] won=[] lost=[]
+   F0 multirfe_synth: chars 20549 max 28756 chunks 26.7 max 34 dup-ids 0 reasons Counter({None: 1487, 'context_window': 1019, 'table_note': 6})

@@ -197,3 +197,74 @@ Chaque point est un changement à mesurer seul sur dev (principe 5) ; je n'ai ri
 - Rapport : `reports/agents/R2_revue_retrieval.md`.
 - Pilote et scripts : `reports/agents/R2_annexes/r2eval.py`, `common.py`, `a1_reproduce.py` (chiffres B1), `a2_rules.py` (déclenchement, pertinence, nécessité post hoc), `a3_show.py` (lecture des ajouts), `a4_ce.py` (scores cross-encoder des ajouts), `a5_edition.py` (éditions, doublons), `a6_general.py` (métriques strictes), `a7_popsafety.py` (paires adulte / pédiatrique), `a8_genbudget.py` (sélection côté génération), `a9_loo.py` (ablation par règle et identités).
 - Résultats de mes relances : `reports/agents/R2_annexes/res/*.json`, journal `r2eval.log`.
+
+## Contre-vérification des corrections (`C10_context_notes`)
+
+Date : 2026-11-27. Périmètre limité à ce qui a changé depuis la revue : commits `b490f74`, `473b7a8`, `5f21356` ; section « Corrections après revue R2 » de `reports/agents/B1_retrieval.md` ; lignes `reports/agents/B1_annexes/res/*.json.gz`. Dev uniquement, aucun `test.jsonl` ni `genprobe` ouvert. Scripts : `reports/agents/R2_annexes/b1_reproduce_frozen.py` à `b5_identity.py`, `r2check.py` (relance HEAD de C9 et `C10_context_notes` sur `tas_v3_errata` et `tas_v6`, sous verrou GPU ; sorties dans `R2_annexes/res2/`).
+
+| # | Affirmation | Verdict |
+|---|---|---|
+| 1 | Quota QCM et quota de population à 0 dans `C10_context_notes`, code conservé désactivé ; C9 inchangé | **confirmé** (code et relance HEAD) |
+| 2 | Notes `called_scope` ; note de périmètre et continuation de page sont des règles de structure | **confirmé pour le comportement ; portée = ABP seulement** (détail ci-dessous) |
+| 3 | Hygiène du contexte | **confirmé** pour C10 figé ; les garanties de placement sont sans objet (aucun passage garanti dans C10 figé) |
+| 4 | Le test de propriété renforcé exerce vraiment fenêtres, reranker et budget serré | **non confirmé** : dans les cas qui vérifient la propriété, la règle ne se déclenche jamais |
+| 5 | Chiffres | **confirmé** (recalcul exact) et reproduit sur HEAD : contextes de `C10_context_notes` identiques aux lignes F0 de B1, 298/298 sur chaque index |
+| 6 | Nouvelles règles, constantes ou listes de mots | quelques constantes nouvelles, toutes de forme ; aucune liée à une question |
+
+### 1. Configuration figée
+
+Vérifié dans `src/rag_sfar/evaluation/ablation.py` : `C10_context_notes` ne fixe ni `population_quota`, ni `population_guard`, ni `mcq_option_quota` ; leurs défauts dans `RetrievalConfig` sont 0 / `False` / 0 (`config.py`). Les lignes F0 (= C10 figé) ne contiennent aucun passage `population:*` ni `mcq_option:*` (0 sur 298 contextes, `b4_hygiene.txt`). Les nouveaux chemins de code (`_called_notes`, `_place_guaranteed`, `_dedup_by_text`, `_guarded_population`) ne sont atteints que si `attach_table_notes`, `context_hygiene` ou `population_guard` sont activés, ce que C9 ne fait pas. Relance sur HEAD (`r2check.py`, `b5_identity.txt`) : C9 donne des contextes identiques à ceux de ma relance d'avant les corrections et aux lignes C9 de B1, 298/298 sur `tas_v3_errata` et 298/298 sur `tas_v6`.
+
+### 2. Notes de tableau : portée des deux règles réintroduites
+
+Comportement (lecture du code `pipeline.py`, `_called_notes`, `_table_header`) : une note n'est attachée que si une de ses marques d'appel (début de ligne `*`, `**`, `#`, `†`) figure dans le texte du chunk retrouvé, emphase Markdown exclue ; candidates = notes liées à l'ingestion + au plus 2 paragraphes de notes qui suivent le tableau ; le parcours s'arrête au premier chunk qui n'est ni une fiche ligne ni un `table_markdown` à la même ligne d'en-tête (au plus 6 continuations) ; `callout_allergy`, bibliographie et chunks contenant une adresse, un DOI, « et al » ou une citation de revue sont exclus. Conforme à la description de B1.
+
+Portée mesurée sur tout le corpus (chunks de tableau des éditions en vigueur ; le vrai `_called_notes` exécuté avec et sans chaque règle ; `b2_notes_structure.py`, `b3_continuation_reach.py`) :
+
+| | `tas_v3_errata` | `tas_v6` |
+|---|---|---|
+| Chunks de tableau / documents | 7 172 / 153 | 10 648 / 151 |
+| Note de périmètre : chunks de tableau où elle ajoute une note | 99, **1 document (ABP)** | 105, **1 document (ABP)** |
+| Notes de périmètre liées (« ce tableau », sans appel) dans tout le corpus | 23, toutes ABP | 23, toutes ABP |
+| Continuation de page : chunks de tableau où elle ajoute une note | 11, **1 document (ABP)**, 5 notes distinctes | 15, **1 document (ABP)**, 6 notes |
+| Structure « tableau suivi d'un tableau à la même ligne d'en-tête » | 374 tableaux / 43 documents à en-tête réel, **+ 509 / 73 à en-tête générique « Col 1 \| Col 2 … »** | 635 tableaux / 69 documents, tous à en-tête réel |
+| `callout_footnote` liés à un tableau | 319 dans 106 documents | 311 dans 106 documents |
+
+Lecture :
+- **Continuation de page** : c'est une règle de structure réelle (tableaux coupés par un saut de page dans 43 à 69 documents). Mais aujourd'hui elle ne change le contexte que dans l'ABP, donc l'échantillon hors ABP demandé est **vide** : il n'y a rien à lire. Sur `tas_v3_errata`, la comparaison d'en-têtes génériques « Col 1 | Col 2 | Col 3 » (509 tableaux) peut fusionner deux tableaux différents qui ont seulement le même nombre de colonnes ; sans effet mesurable aujourd'hui (aucune note hors ABP n'est attachée ainsi), sans objet sur `tas_v6` (en-têtes réels). Verdict : **règle de structure, générique** ; à garder, en excluant les en-têtes génériques.
+- **Note de périmètre** : formulation générique (« ce tableau »), mais seuls 23 chunks du corpus la satisfont, tous dans l'ABP. Elle a été réintroduite après la perte de Q05 et Q07. Verdict : **limite** — pas une liste de termes de question, mais une règle dont tout l'effet observable est sur un document ; son risque est faible (elle rattache au tableau sa propre déclaration de population ou de périmètre, ce qui va dans le sens de la sécurité). À garder en le disant : elle ne démontre rien hors ABP.
+- Les notes « appelées » hors ABP restent rares (multirfe : 7 notes sur 94 contextes sur `tas_v3_errata`, 6 sur `tas_v6`).
+
+### 3. Hygiène du contexte
+
+Vérifié sur les lignes sauvegardées (`b4_hygiene.txt`, normalisation identique à `_dedup_by_text`) : contextes contenant deux fois le même texte, C10 avant revue 19 / 19 / 5 (abpe / abp / multirfe ; 13 / 14 / 5 avec la normalisation de B1) → **0 / 0 / 0** pour C10 figé, sur `tas_v3_errata` comme sur `tas_v6`. Aucun contexte au-delà de 30 000 caractères (max 23 165 / 28 373 sur `tas_v3_errata`, 29 993 sur `tas_v6`), aucun au-delà de 40 chunks (max 35 / 38) : la sélection `wide` côté génération ne coupe plus rien en dev. Les propriétés « passages garantis placés après leur ancre, dans le budget, sans fenêtre » sont implémentées (`_place_guaranteed`), mais **sans objet pour C10 figé**, qui n'a plus de passage garanti. Point mineur : `_place_guaranteed` reçoit le budget restant après fenêtres, et si l'ancre n'est pas trouvée le passage est inséré après le premier résultat.
+
+### 4. Test de propriété
+
+`test_guaranteed_passages_never_displace_ranked_results_or_their_windows` (`tests/test_b1_retrieval.py`) active bien fenêtres, notes, un reranker déterministe, l'hygiène et deux budgets (30 000 et 400). Mais j'ai rejoué ses quatre cas « avec / sans règle » : **la règle de population ne se déclenche dans aucun** (contextes identiques avec et sans), parce que la ligne pédiatrique homologue est déjà classée ou que la population adulte est énoncée. La vérification « le contexte sans règle est une sous-suite du contexte avec règle » y est donc vraie trivialement. Les cas où la règle se déclenche (`cfg3`, `cfg2`) vérifient le placement et l'absence d'un autre acte, mais avec un budget large ou sans fenêtres. Aucun cas n'a d'étiquette de population fausse sous fenêtres. Le test ne prouve pas ce qu'il annonce. Comme la règle est désactivée dans C10 figé, ce n'est pas bloquant pour le gel ; à corriger avant toute réactivation (un cas où la ligne homologue n'est pas classée, budget 400, fenêtres, et une étiquette fausse).
+
+### 5. Chiffres
+
+Recalcul (`b1_reproduce_frozen.py`, `harness.paired_bootstrap_diff` / `bootstrap_ci`, sortie `b1_reproduce_frozen.txt`) à partir de `C9W` (C9 + fenêtres) et `F0` (C10 figé) :
+
+| Index / jeu | C9 + fenêtres | C10 figé | Différence appariée | Gagnées / perdues |
+|---|---|---|---|---|
+| `tas_v3_errata` abpe171 suffisance (n = 96) | 88,5 | 94,8 [91–99] | +6,2 [+2,1 ; +11,5] | Q05, Q41, Q74, Q131, Q149, Q157 / aucune |
+| `tas_v3_errata` abpe171 rappel des preuves | 92,8 | 98,0 | +5,2 [+1,6 ; +9,5] | |
+| `tas_v3_errata` abp171 | 99,0 | 100,0 | +1,0 [0 ; +2,9] | Q74 |
+| `tas_v3_errata` multirfe (n = 76) | 100,0 | 98,7 | −1,3 [−3,9 ; 0] | MR-ga95d perdue |
+| `tas_v6` abpe171 suffisance | 92,7 | 95,8 [92–99] | +3,1 [0 ; +7,3] | Q05, Q41, Q131 / aucune |
+| `tas_v6` abp171 | 100,0 | 100,0 | 0 | |
+| `tas_v6` multirfe | 96,1 | 96,1 | 0 | |
+
+Tous identiques aux chiffres de B1. Les lignes F0 ne sont pas seulement cohérentes : relancé sur HEAD, `C10_context_notes` produit exactement les mêmes contextes (298/298 sur `tas_v3_errata`, 298/298 sur `tas_v6`), donc les chiffres valent pour le code figé. Remarque : sur `tas_v6`, l'IC de la différence abpe171 touche 0 ; et le gain restant de C10 figé sur C9 + fenêtres vient du plafond par document levé (Q41, Q74, Q131, Q149) et des notes (Q05, Q157), deux règles que la revue jugeait génériques.
+
+### 6. Ce qui est nouveau dans le diff
+
+Constantes et motifs nouveaux (`pipeline.py`) : `_CALL_RE`, `_EMPHASIS_RE`, `_NOTE_LINE_RE` (marques typographiques) ; `_SCOPE_NOTE_RE` (« de / dans / du / pour ce(s) tableau(x) ») ; `_BIBLIO_OR_ADDRESS_RE` (« auteur correspondant », « correspondance : », e-mail, `@`, DOI, « et al », motif de citation `année ; volume : page`) ; au plus 6 continuations de tableau ; `_population_doc_ok` (≥ 3 fiches de chaque population) ; `_act_tokens` (mots ≥ 4 lettres de la première cellule) ; `_labels_match` (≥ 2 mots communs couvrant la moitié du libellé le plus court) ; `top_n=8` dans la recherche gardée. Toutes décrivent la forme des documents (notes, références, en-têtes de tableau) ; aucun terme d'acte, de molécule ou de question. Seuls « Gustilo-Anderson** » et « **Céfazoline** » apparaissent, comme exemples dans une docstring (`_call_marks`) : sans effet sur le comportement, mais à remplacer par des exemples neutres pour rester propre au regard du principe 3. Les quatre constantes de la règle de population gardée ne servent pas dans C10 figé. Le changement de `harness.py` (reconnaissance des citations `[S1, S2]`) ne touche pas les métriques de retrieval.
+
+### Verdict
+
+**Oui : `C10_context_notes` peut être figé tel quel** pour la passe unique sur le jeu de sondes tenu à l'écart. Les deux règles que la revue jugeait surapprises sont retirées de la configuration, C9 est inchangé, C10 figé est reproductible sur HEAD et ses chiffres se recalculent exactement. Ce que le gel ne garantit pas, et qu'il faut écrire à côté du résultat : (1) le gain sur C9 + fenêtres n'est démontré que sur l'ABP (+6,2 sur `tas_v3_errata`, +3,1 avec IC touchant 0 sur `tas_v6`, 0 ou −1 hors ABP) ; (2) la note de périmètre et la continuation de page n'ont d'effet observable que dans l'ABP.
+
+Non bloquant, à faire après le gel (hors configuration) : rendre le test de propriété non trivial (§4) ; ignorer les en-têtes génériques « Col N » dans la continuation de page ; remplacer les exemples ABP de la docstring de `_call_marks`.

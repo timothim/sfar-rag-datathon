@@ -1,0 +1,3 @@
+tas_v3_errata tables directly followed by a table with the same header row: {'placeholder': '509 tables / 73 docs', 'real': '374 tables / 43 docs'}
+linked scope notes: 23 in docs: ['2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-su']
+callout_footnote chunks: 383 in 111 docs; linked to a table: 319 in 106 docs

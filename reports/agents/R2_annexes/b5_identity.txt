@@ -1,0 +1,15 @@
+tas_v3_errata  abpe171         HEAD vs B1 C9                        identical 102/102
+tas_v3_errata  abpe171         HEAD vs R2 C9 (pre-correction HEAD)  identical 102/102
+tas_v3_errata  abpe171         HEAD vs B1 F0                        identical 102/102
+tas_v3_errata  abp171          HEAD vs B1 C9                        identical 102/102
+tas_v3_errata  abp171          HEAD vs R2 C9 (pre-correction HEAD)  identical 102/102
+tas_v3_errata  abp171          HEAD vs B1 F0                        identical 102/102
+tas_v3_errata  multirfe_synth  HEAD vs B1 C9                        identical 94/94
+tas_v3_errata  multirfe_synth  HEAD vs R2 C9 (pre-correction HEAD)  identical 94/94
+tas_v3_errata  multirfe_synth  HEAD vs B1 F0                        identical 94/94
+tas_v6         abpe171         HEAD vs B1 C9                        identical 102/102
+tas_v6         abpe171         HEAD vs B1 F0                        identical 102/102
+tas_v6         abp171          HEAD vs B1 C9                        identical 102/102
+tas_v6         abp171          HEAD vs B1 F0                        identical 102/102
+tas_v6         multirfe_synth  HEAD vs B1 C9                        identical 94/94
+tas_v6         multirfe_synth  HEAD vs B1 F0                        identical 94/94

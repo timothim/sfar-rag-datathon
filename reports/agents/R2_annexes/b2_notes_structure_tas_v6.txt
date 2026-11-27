@@ -1,0 +1,7 @@
+tas_v6 current-edition table chunks: 10648 in 151 documents
+scope note attaches something: 105 table chunks in 1 documents (ABP: 1 doc)
+   non-ABP documents: []
+page-break continuation attaches extra notes: 15 table chunks in 1 documents (ABP: 1 doc)
+   non-ABP documents: []
+   header kind of the anchors' tables: {'real header': 15}
+   distinct notes added by continuation: 6
