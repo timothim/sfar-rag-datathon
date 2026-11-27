@@ -27,7 +27,13 @@ ChunkType = Literal[
     "callout_allergy",
     "callout_footnote",
     "references",
+    # One graded recommendation (statement + strength), extracted by reco_extractor; added
+    # next to the chunks that already contain it (see ingestion/chunker.py).
+    "recommendation_unit",
 ]
+
+# Structural population labels of a chunk (ingestion/population.py).
+PopulationLabel = Literal["adulte", "pediatrie", "neonatal", "obstetrique"]
 
 PopulationScope = Literal["adulte", "pediatrie", "mixte", "non_specifie"]
 SettingScope = Literal["programme", "urgence", "reanimation", "mixte", "non_specifie"]
@@ -68,6 +74,8 @@ class DocumentMetadata(BaseModel):
     is_latest_edition: bool = True
     superseded_by: str | None = None
     superseded_by_year: int | None = None
+    # Why this edition is considered superseded (rule and evidence), for review.
+    supersession_evidence: str = ""
 
     # Clinical scope metadata
     population_scope: PopulationScope = "non_specifie"
@@ -122,6 +130,22 @@ class Chunk(BaseModel):
     setting_scope: str = "non_specifie"
     landing_url: str = ""
     filename: str = ""
+
+    # Structural population labels (adulte / pediatrie / neonatal / obstetrique), and where they
+    # come from: "table" (scope note, banner, title of the table), "section" (heading path),
+    # "document" (title) or "" (unknown). Empty list = population not stated by the structure.
+    populations: list[str] = Field(default_factory=list)
+    population_source: str = ""
+    # Identifier shared by all chunks of one table (Markdown chunks and row cards), "" otherwise.
+    table_id: str = ""
+    # recommendation_unit chunks: chunk that contains the statement in the document flow,
+    # strength (normalized, e.g. grade_1_plus / expert_opinion / unknown), raw rating, agreement
+    # and label (R1.2...). Empty for other chunk types.
+    source_chunk_id: str | None = None
+    reco_strength: str = ""
+    reco_strength_raw: str = ""
+    reco_agreement: str = ""
+    reco_label: str = ""
 
 
 class QueryAnalysis(BaseModel):
