@@ -1,0 +1,52 @@
+{
+  "description": "Corrections proposées par l'agent D1 (audit des doses, 2026-11-27). NON APPLIQUÉES. Ne contient que des corrections confirmées par le PDF source. Format compatible avec un remplacement exact unique (même principe que data/corpus_updates/apply_errata.py) : chaque 'original' apparaît exactement une fois dans 'document' (vérifié le 2026-11-27 sur le fichier dont le SHA-256 est donné).",
+  "generated_by": "reports/agents/D1_annexes/detect_doses.py + vérification PDF manuelle (rendu pdftoppm 250-300 dpi, couche texte pypdf)",
+  "errata": [
+    {
+      "id": "D1-E1",
+      "document": "data/sfar_recommendations/output/chandra/2006/2_AFAR_Prise-en-charge-de-larret-cardiaque-1/2_AFAR_Prise-en-charge-de-larret-cardiaque-1.md",
+      "document_sha256": "e88671dced6441ddb276702d94bb888d7e6642239fa30ec15ab7f930bece70c5",
+      "line": 629,
+      "original": "La posologie de l'adrénaline intratrachéale est de 100 mg/kg dilué",
+      "corrected": "La posologie de l'adrénaline intratrachéale est de 100 µg/kg dilué",
+      "kind": "erreur de l'article d'origine corrigée par un erratum officiel publié",
+      "evidence": "PDF p. 11 (article AFAR 2007;26:1008-19, p. 1018) : imprimé « 100 mg/kg » (vérifié visuellement, rendu 300 dpi) ; la conversion Chandra est fidèle. PDF p. 13 : erratum officiel (AFAR 2008;27:273) « les posologies d'adrénaline doivent être lues en « µg » et non mg », qui redonne « 100 µg/kg » (visuel ; la couche texte de cette page rend µ en « m »). Le Markdown contient déjà l'erratum (l. 742-756) mais dans un autre chunk que le passage fautif.",
+      "pdf": "data/sfar_recommendations/output/pdfs/2006/2_AFAR_Prise-en-charge-de-larret-cardiaque-1.pdf",
+      "pdf_sha256": "c70196ccfb46b8fdeb2543a11c749aa10d992c99f6b7b7c6f892e81fd53386fc",
+      "pdf_pages": [11, 13],
+      "verification_status": "confirmé (PDF visuel + erratum officiel dans le même PDF)",
+      "clinical_risk": "adrénaline, enfant, arrêt cardiaque, voie intratrachéale : facteur 1000"
+    },
+    {
+      "id": "D1-E2",
+      "document": "data/sfar_recommendations/output/chandra/2006/2_AFAR_Prise-en-charge-de-larret-cardiaque-1/2_AFAR_Prise-en-charge-de-larret-cardiaque-1.md",
+      "document_sha256": "e88671dced6441ddb276702d94bb888d7e6642239fa30ec15ab7f930bece70c5",
+      "line": 637,
+      "original": "L'adrénaline doit être administrée chez l'enfant à la dose de 10 mg/kg en intraveineux",
+      "corrected": "L'adrénaline doit être administrée chez l'enfant à la dose de 10 µg/kg en intraveineux",
+      "kind": "erreur de l'article d'origine corrigée par un erratum officiel publié",
+      "evidence": "PDF p. 11 : imprimé « 10 mg/kg » (visuel, 300 dpi), alors que la figure 5 de la même page donne « Adrénaline IV 0,01 mg/kg ». PDF p. 13 : erratum officiel AFAR 2008;27:273 redonnant « 10 µg/kg en i.v. et IO ».",
+      "pdf": "data/sfar_recommendations/output/pdfs/2006/2_AFAR_Prise-en-charge-de-larret-cardiaque-1.pdf",
+      "pdf_sha256": "c70196ccfb46b8fdeb2543a11c749aa10d992c99f6b7b7c6f892e81fd53386fc",
+      "pdf_pages": [11, 13],
+      "verification_status": "confirmé (PDF visuel + erratum officiel dans le même PDF)",
+      "clinical_risk": "adrénaline, enfant, arrêt cardiaque, IV/IO : facteur 1000"
+    },
+    {
+      "id": "D1-E3",
+      "document": "data/sfar_recommendations/output/chandra/2011/2_AFAR_Prevention-de-la-maladie-thromboembolique-veineuse-postoperatoire-copie/2_AFAR_Prevention-de-la-maladie-thromboembolique-veineuse-postoperatoire-copie.md",
+      "document_sha256": "6707eb7895174676d7faf33f7edfa493874d7053284f8f0e3831aec12c96125f",
+      "line": 212,
+      "original": "est suggérée jusqu'à l'appui plantaire (2–).",
+      "corrected": "est suggérée jusqu'à l'appui plantaire (2+).",
+      "kind": "erreur de l'article d'origine corrigée par un erratum officiel publié (cotation, pas une dose)",
+      "evidence": "PDF p. 4 (AFAR 2011;30:947-51, p. 950) : imprimé « (2−) » (visuel) ; PDF p. 6 : erratum officiel « il fallait lire : … jusqu'à l'appui plantaire (2+) ». Trouvé par la recherche des erratums intégrés aux PDF, pas par un détecteur de dose.",
+      "pdf": "data/sfar_recommendations/output/pdfs/2011/2_AFAR_Prevention-de-la-maladie-thromboembolique-veineuse-postoperatoire-copie.pdf",
+      "pdf_sha256": "da2bdaccfd53c3fd11a781a99e780e183dd2b0cfc526d40bb99d2eeab862b582",
+      "pdf_pages": [4, 6],
+      "verification_status": "confirmé (PDF visuel + erratum officiel dans le même PDF)",
+      "clinical_risk": "faible : sens de la recommandation inversé (suggestion de ne pas faire → suggestion de faire) pour la prophylaxie prolongée ; document remplacé (is_latest_edition = 0 dans tas_v5)"
+    }
+  ],
+  "not_included": "Aucune erreur de conversion OCR (Chandra ≠ PDF) n'a été trouvée parmi les candidats vérifiés. Les doutes portant sur le texte d'origine (pas sur la conversion) ne sont pas des errata : ils sont listés dans reports/A_VALIDER_MEDECINS.md, section A."
+}

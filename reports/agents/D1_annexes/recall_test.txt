@@ -1,0 +1,5 @@
+scénario | doses testables | détectées après corruption | déjà signalées avant
+µg→mg (x1000) | 238 | 203 (85 %) | 1
+virgule perdue 0,5→5 (x10) | 202 | 0 (0 %) | 1
+mg→µg (/1000) | 775 | 685 (88 %) | 13
+mg→g (x1000) | 775 | 738 (95 %) | 13

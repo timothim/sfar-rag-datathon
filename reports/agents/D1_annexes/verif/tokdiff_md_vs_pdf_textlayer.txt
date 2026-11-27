@@ -1,0 +1,65 @@
+## ac2006  2006/2_AFAR_Prise-en-charge-de-larret-cardiaque-1  pdf_sha256=c70196ccfb46b8fd
+md tokens 23 distinct 16; absent from PDF text: 3
+  ('0.01', 'mg') 2 
+  ('10', 'µg') 1 pdf has mg instead
+  ('100', 'µg') 1 pdf has mg instead
+## txa_fr  unknown/2a_SFAR-Francais  pdf_sha256=9076ffd7264f8bdf
+md tokens 26 distinct 12; absent from PDF text: 0
+## orl2014  unknown/Recommandation_antalgique_post_amygdalectomie_2014_TC2  pdf_sha256=9ae464f4f007e686
+md tokens 49 distinct 29; absent from PDF text: 1
+  ('20', 'µg') 1 pdf has mg instead
+## bless2003  2003/2_AFAR_Prise-en-charge-d-un-blesse-adulte-presentant-un-traumatisme-vertebro-medullaire  pdf_sha256=6eb395a5b592d7da
+md tokens 19 distinct 12; absent from PDF text: 0
+## ped2007  2007/2b_AFAR_aspet-pediatriques  pdf_sha256=d85e1f75b6a38a2b
+md tokens 27 distinct 21; absent from PDF text: 14
+  ('0.2', 'µg') 1 pdf has mg instead
+  ('0.5', 'µg') 1 pdf has mg instead
+  ('100', 'µg') 4 pdf has mg instead
+  ('150', 'µg') 1 pdf has mg instead
+  ('180', 'µg') 1 pdf has mg instead
+  ('2', 'µg') 1 pdf has mg instead
+  ('200', 'µg') 1 pdf has mg instead
+  ('300', 'µg') 1 pdf has mg instead
+  ('330', 'µg') 1 pdf has mg instead
+  ('400', 'µg') 1 pdf has mg instead
+  ('5', 'µg') 1 pdf has mg instead
+  ('50', 'µg') 2 pdf has mg instead
+  ('500', 'µg') 2 pdf has mg instead
+  ('90', 'µg') 1 pdf has mg instead
+## brule2019  2019/rpp-prise-en-charge-du-brule-grave%20  pdf_sha256=e49758d4abcc7a10
+md tokens 11 distinct 7; absent from PDF text: 0
+## brulefiche2019  2019/rpp-urgence-brule-fiches-synthese  pdf_sha256=7eb1e176de918aab
+md tokens 37 distinct 16; absent from PDF text: 0
+## nvpo2007  2007/2_AFAR_Prise-en-charge-des-nausees-et-vomissements-postoperatoires  pdf_sha256=a6f4bb53e22fa953
+md tokens 22 distinct 14; absent from PDF text: 0
+## purol2013  2013/2_PUROL_Recommandations-chirurgie-ambulatoire-en-urologie  pdf_sha256=e45cdedf18d6da1c
+md tokens 29 distinct 20; absent from PDF text: 0
+## vaenf2018  2018/rfe-gestion-des-voies-aeriennes-de-lenfant  pdf_sha256=3f7a1f33045744da
+md tokens 5 distinct 4; absent from PDF text: 1
+  ('16', 'mg') 1 
+## tsm2020  2020/RFE_TSM_2020  pdf_sha256=48fd8d5ea5c51ef0
+md tokens 11 distinct 6; absent from PDF text: 0
+## tsmfiche2020  2020/RFE_TSM_Fiches_pratiques  pdf_sha256=00555395c3dab6af
+md tokens 8 distinct 4; absent from PDF text: 0
+## mtev2011  2011/2_AFAR_Prevention-de-la-maladie-thromboembolique-veineuse-postoperatoire-copie  pdf_sha256=da2bdaccfd53c3fd
+md tokens 20 distinct 10; absent from PDF text: 0
+## txa_en  unknown/2b_SFAR-Anglais  pdf_sha256=7075ff2b034f497b
+md tokens 24 distinct 12; absent from PDF text: 0
+## dpo2016  2016/3-Tableaux-Reactualisation-de-la-recommandation-sur-la-douleur-postoperatoire  pdf_sha256=7b4c8a513bf7dbbb
+md tokens 63 distinct 37; absent from PDF text: 16
+  ('0.05', 'µg') 1 
+  ('0.59', 'µg') 1 
+  ('10', 'ml') 1 
+  ('100', 'ml') 1 
+  ('15', 'ml') 2 
+  ('16', 'mg') 1 
+  ('19', 'mg') 1 
+  ('2', 'ml') 1 
+  ('20', 'ml') 3 
+  ('3', 'ml') 1 
+  ('312.5', 'mg') 1 
+  ('4', 'ml') 1 
+  ('5', 'ml') 3 
+  ('5.2', 'µg') 1 
+  ('6', 'ml') 1 
+  ('9', 'mg') 1 

@@ -1,0 +1,252 @@
+{
+ "n_docs": 268,
+ "n_doses_attributed": 1175,
+ "docs_with_micro": 87,
+ "per_detector": {
+  "D11_variante_micro": {
+   "candidates": 21,
+   "docs": 12
+  },
+  "D1_plausibilite": {
+   "candidates": 17,
+   "docs": 14
+  },
+  "D2_outlier_corpus": {
+   "candidates": 15,
+   "docs": 9
+  },
+  "D3_meme_nombre_x1000": {
+   "candidates": 4,
+   "docs": 1
+  },
+  "D4_micro_absent_doc": {
+   "candidates": 5,
+   "docs": 5
+  },
+  "D7_tiret_perdu": {
+   "candidates": 1,
+   "docs": 1
+  },
+  "D9_signe_symbole": {
+   "candidates": 2,
+   "docs": 1
+  }
+ },
+ "per_detector_doc": [
+  {
+   "detector": "D11_variante_micro",
+   "doc": "data/sfar_recommendations/output/chandra/2009/2_AFAR_Gestion-perioperatoire-des-traitements-chroniques-et-dispositifs-medicaux/2_AFAR_Gestion-perioperatoire-des-traitements-chroniques-et-dispositifs-medicaux.md",
+   "n": 2
+  },
+  {
+   "detector": "D11_variante_micro",
+   "doc": "data/sfar_recommendations/output/chandra/2011/2_AFAR_Prevention-du-risque-allergique-peranesthesique/2_AFAR_Prevention-du-risque-allergique-peranesthesique.md",
+   "n": 1
+  },
+  {
+   "detector": "D11_variante_micro",
+   "doc": "data/sfar_recommendations/output/chandra/2013/2b_Annexe_SFAR_TableauxRFEDCALR2/2b_Annexe_SFAR_TableauxRFEDCALR2.md",
+   "n": 2
+  },
+  {
+   "detector": "D11_variante_micro",
+   "doc": "data/sfar_recommendations/output/chandra/2014/2_AFAR_Nutrition-artificielle-en-reanimation/2_AFAR_Nutrition-artificielle-en-reanimation.md",
+   "n": 1
+  },
+  {
+   "detector": "D11_variante_micro",
+   "doc": "data/sfar_recommendations/output/chandra/2018/2_RFE-CURARE-3/2_RFE-CURARE-3.md",
+   "n": 1
+  },
+  {
+   "detector": "D11_variante_micro",
+   "doc": "data/sfar_recommendations/output/chandra/2019/diagnostic-et-prise-ne-charge-dune-TIH/diagnostic-et-prise-ne-charge-dune-TIH.md",
+   "n": 1
+  },
+  {
+   "detector": "D11_variante_micro",
+   "doc": "data/sfar_recommendations/output/chandra/2019/propositions-tih-gihp-gfht-sfar%20/propositions-tih-gihp-gfht-sfar%20.md",
+   "n": 1
+  },
+  {
+   "detector": "D11_variante_micro",
+   "doc": "data/sfar_recommendations/output/chandra/2021/RFE%20SFAR%20pancreatite%20aigue_finale_220921/RFE%20SFAR%20pancreatite%20aigue_finale_220921.md",
+   "n": 1
+  },
+  {
+   "detector": "D11_variante_micro",
+   "doc": "data/sfar_recommendations/output/chandra/2024/PEDIA_RPP-Optimisation-Hemodynamique-Perioperatoire_Pediatrie/PEDIA_RPP-Optimisation-Hemodynamique-Perioperatoire_Pediatrie.md",
+   "n": 2
+  },
+  {
+   "detector": "D11_variante_micro",
+   "doc": "data/sfar_recommendations/output/chandra/2026/Aides-cognitives-Organisation-de-la-prise-en-charge-des-urgences-vitales-intra-hospitalieres-ENFANT/Aides-cognitives-Organisation-de-la-prise-en-charge-des-urgences-vitales-intra-hospitalieres-ENFANT.md",
+   "n": 4
+  },
+  {
+   "detector": "D11_variante_micro",
+   "doc": "data/sfar_recommendations/output/chandra/2026/RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-ARGUMENTAIRE_CD_20260903_FIN/RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-ARGUMENTAIRE_CD_20260903_FIN.md",
+   "n": 4
+  },
+  {
+   "detector": "D11_variante_micro",
+   "doc": "data/sfar_recommendations/output/chandra/2026/RFE-20.4.2026-deifinitif-et-validei/RFE-20.4.2026-deifinitif-et-validei.md",
+   "n": 1
+  },
+  {
+   "detector": "D1_plausibilite",
+   "doc": "data/sfar_recommendations/output/chandra/2003/2_AFAR_Prise-en-charge-d-un-blesse-adulte-presentant-un-traumatisme-vertebro-medullaire/2_AFAR_Prise-en-charge-d-un-blesse-adulte-presentant-un-traumatisme-vertebro-medullaire.md",
+   "n": 2
+  },
+  {
+   "detector": "D1_plausibilite",
+   "doc": "data/sfar_recommendations/output/chandra/2006/2_AFAR_Blocs-perimedullaires-chez-ladulte/2_AFAR_Blocs-perimedullaires-chez-ladulte.md",
+   "n": 1
+  },
+  {
+   "detector": "D1_plausibilite",
+   "doc": "data/sfar_recommendations/output/chandra/2006/2_AFAR_Prise-en-charge-de-larret-cardiaque-1/2_AFAR_Prise-en-charge-de-larret-cardiaque-1.md",
+   "n": 2
+  },
+  {
+   "detector": "D1_plausibilite",
+   "doc": "data/sfar_recommendations/output/chandra/2007/2b_AFAR_aspet-pediatriques/2b_AFAR_aspet-pediatriques.md",
+   "n": 2
+  },
+  {
+   "detector": "D1_plausibilite",
+   "doc": "data/sfar_recommendations/output/chandra/2011/2_AFAR_Prevention-du-risque-allergique-peranesthesique/2_AFAR_Prevention-du-risque-allergique-peranesthesique.md",
+   "n": 1
+  },
+  {
+   "detector": "D1_plausibilite",
+   "doc": "data/sfar_recommendations/output/chandra/2013/2b_Annexe_SFAR_TableauxRFEDCALR2/2b_Annexe_SFAR_TableauxRFEDCALR2.md",
+   "n": 1
+  },
+  {
+   "detector": "D1_plausibilite",
+   "doc": "data/sfar_recommendations/output/chandra/2016/RFE-Intubation-and-extubation-of-the-ICU-patient/RFE-Intubation-and-extubation-of-the-ICU-patient.md",
+   "n": 1
+  },
+  {
+   "detector": "D1_plausibilite",
+   "doc": "data/sfar_recommendations/output/chandra/2020/RFE%20pr%C3%A9-%C3%A9clampsie_finale/RFE%20pr%C3%A9-%C3%A9clampsie_finale.md",
+   "n": 1
+  },
+  {
+   "detector": "D1_plausibilite",
+   "doc": "data/sfar_recommendations/output/chandra/2022/RFE-Programme-doptimisation-perioperatoire_pour-mise-sur-site_260922/RFE-Programme-doptimisation-perioperatoire_pour-mise-sur-site_260922.md",
+   "n": 1
+  },
+  {
+   "detector": "D1_plausibilite",
+   "doc": "data/sfar_recommendations/output/chandra/2022/RPP-FHS_pour-mise-sur-site/RPP-FHS_pour-mise-sur-site.md",
+   "n": 1
+  },
+  {
+   "detector": "D1_plausibilite",
+   "doc": "data/sfar_recommendations/output/chandra/2024/2024_RFE-optimisation-hemodynamique-perioperatoire_adulte-dont-obstretriqueV2-1/2024_RFE-optimisation-hemodynamique-perioperatoire_adulte-dont-obstretriqueV2-1.md",
+   "n": 1
+  },
+  {
+   "detector": "D1_plausibilite",
+   "doc": "data/sfar_recommendations/output/chandra/2025/argu_sepsis/argu_sepsis.md",
+   "n": 1
+  },
+  {
+   "detector": "D1_plausibilite",
+   "doc": "data/sfar_recommendations/output/chandra/2026/Aides-cognitives-Organisation-de-la-prise-en-charge-des-urgences-vitales-intra-hospitalieres-ENFANT/Aides-cognitives-Organisation-de-la-prise-en-charge-des-urgences-vitales-intra-hospitalieres-ENFANT.md",
+   "n": 1
+  },
+  {
+   "detector": "D1_plausibilite",
+   "doc": "data/sfar_recommendations/output/chandra/2026/RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-ARGUMENTAIRE_CD_20260903_FIN/RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-ARGUMENTAIRE_CD_20260903_FIN.md",
+   "n": 1
+  },
+  {
+   "detector": "D2_outlier_corpus",
+   "doc": "data/sfar_recommendations/output/chandra/2006/2_AFAR_Blocs-perimedullaires-chez-ladulte/2_AFAR_Blocs-perimedullaires-chez-ladulte.md",
+   "n": 1
+  },
+  {
+   "detector": "D2_outlier_corpus",
+   "doc": "data/sfar_recommendations/output/chandra/2006/2_AFAR_Prise-en-charge-de-larret-cardiaque-1/2_AFAR_Prise-en-charge-de-larret-cardiaque-1.md",
+   "n": 2
+  },
+  {
+   "detector": "D2_outlier_corpus",
+   "doc": "data/sfar_recommendations/output/chandra/2007/2b_AFAR_aspet-pediatriques/2b_AFAR_aspet-pediatriques.md",
+   "n": 2
+  },
+  {
+   "detector": "D2_outlier_corpus",
+   "doc": "data/sfar_recommendations/output/chandra/2011/2_AFAR_Prevention-du-risque-allergique-peranesthesique/2_AFAR_Prevention-du-risque-allergique-peranesthesique.md",
+   "n": 1
+  },
+  {
+   "detector": "D2_outlier_corpus",
+   "doc": "data/sfar_recommendations/output/chandra/2020/RFE%20pr%C3%A9-%C3%A9clampsie_finale/RFE%20pr%C3%A9-%C3%A9clampsie_finale.md",
+   "n": 1
+  },
+  {
+   "detector": "D2_outlier_corpus",
+   "doc": "data/sfar_recommendations/output/chandra/2022/RPP-FHS_pour-mise-sur-site/RPP-FHS_pour-mise-sur-site.md",
+   "n": 1
+  },
+  {
+   "detector": "D2_outlier_corpus",
+   "doc": "data/sfar_recommendations/output/chandra/2024/2024_RFE-optimisation-hemodynamique-perioperatoire_adulte-dont-obstretriqueV2-1/2024_RFE-optimisation-hemodynamique-perioperatoire_adulte-dont-obstretriqueV2-1.md",
+   "n": 2
+  },
+  {
+   "detector": "D2_outlier_corpus",
+   "doc": "data/sfar_recommendations/output/chandra/2025/2025_SFAR-SFA_RFE-Diagnostic-et-prise-en-charge-des-reactions-dhypersensibilite-immediate-perioperatoires/2025_SFAR-SFA_RFE-Diagnostic-et-prise-en-charge-des-reactions-dhypersensibilite-immediate-perioperatoires.md",
+   "n": 4
+  },
+  {
+   "detector": "D2_outlier_corpus",
+   "doc": "data/sfar_recommendations/output/chandra/unknown/2_Recos-Org-Blocs-moteurs-SOFMER-SFAR/2_Recos-Org-Blocs-moteurs-SOFMER-SFAR.md",
+   "n": 1
+  },
+  {
+   "detector": "D3_meme_nombre_x1000",
+   "doc": "data/sfar_recommendations/output/chandra/2006/2_AFAR_Prise-en-charge-de-larret-cardiaque-1/2_AFAR_Prise-en-charge-de-larret-cardiaque-1.md",
+   "n": 4
+  },
+  {
+   "detector": "D4_micro_absent_doc",
+   "doc": "data/sfar_recommendations/output/chandra/2003/2_AFAR_Prise-en-charge-d-un-blesse-adulte-presentant-un-traumatisme-vertebro-medullaire/2_AFAR_Prise-en-charge-d-un-blesse-adulte-presentant-un-traumatisme-vertebro-medullaire.md",
+   "n": 1
+  },
+  {
+   "detector": "D4_micro_absent_doc",
+   "doc": "data/sfar_recommendations/output/chandra/2013/2_PUROL_Recommandations-chirurgie-ambulatoire-en-urologie/2_PUROL_Recommandations-chirurgie-ambulatoire-en-urologie.md",
+   "n": 1
+  },
+  {
+   "detector": "D4_micro_absent_doc",
+   "doc": "data/sfar_recommendations/output/chandra/2018/rfe-gestion-des-voies-aeriennes-de-lenfant/rfe-gestion-des-voies-aeriennes-de-lenfant.md",
+   "n": 1
+  },
+  {
+   "detector": "D4_micro_absent_doc",
+   "doc": "data/sfar_recommendations/output/chandra/2020/RFE_TSM_2020/RFE_TSM_2020.md",
+   "n": 1
+  },
+  {
+   "detector": "D4_micro_absent_doc",
+   "doc": "data/sfar_recommendations/output/chandra/2020/RFE_TSM_Fiches_pratiques/RFE_TSM_Fiches_pratiques.md",
+   "n": 1
+  },
+  {
+   "detector": "D7_tiret_perdu",
+   "doc": "data/sfar_recommendations/output/chandra/2016/3-Tableaux-Reactualisation-de-la-recommandation-sur-la-douleur-postoperatoire/3-Tableaux-Reactualisation-de-la-recommandation-sur-la-douleur-postoperatoire.md",
+   "n": 1
+  },
+  {
+   "detector": "D9_signe_symbole",
+   "doc": "data/sfar_recommendations/output/chandra/2025/RBP_-SFAR_AFEF_ACHBPT_RESECTION_-HEPATIQUE_-ARGUMENTAIRE_VF-1-AB-modif-ok/RBP_-SFAR_AFEF_ACHBPT_RESECTION_-HEPATIQUE_-ARGUMENTAIRE_VF-1-AB-modif-ok.md",
+   "n": 2
+  }
+ ]
+}
