@@ -322,11 +322,10 @@ def _run_unified_eval(args: argparse.Namespace) -> None:
             engine = SfarRagEngine(retriever=retriever, llm=llm, gen_config=gen_config)
 
             def answer_fn(item, cfg):
-                # MCQ always use the letter-answer format; other questions use the requested mode.
-                if item.question_type == "mcq":
-                    mode = "benchmark_mcq"
-                else:
-                    mode = "clinical_detailed" if args.gen_mode == "auto" else args.gen_mode
+                # Every question goes through the requested open mode; the engine itself routes a
+                # question with lettered options to its MCQ mode (generation.client.route_mode), as
+                # in production.
+                mode = "clinical_detailed" if args.gen_mode == "auto" else args.gen_mode
                 resp = engine.answer(item.formatted_query(), mode=mode, config=cfg)
                 return {"answer": resp.answer, "retrieved": resp.retrieved_chunks, "usage": resp.token_usage}
 
@@ -366,7 +365,7 @@ def eval_cmd() -> None:
     parser.add_argument("--base-url", default=s.llm_base_url)
     parser.add_argument("--api-key", default=s.llm_api_key)
     parser.add_argument("--max-tokens", type=int, default=512)
-    parser.add_argument("--gen-mode", default="auto", help="Prompt mode; 'auto' = benchmark_mcq for MCQ else clinical_detailed.")
+    parser.add_argument("--gen-mode", default="auto", help="Prompt mode for open questions ('auto' = clinical_detailed); questions with lettered options are routed by the engine to clinical_mcq.")
     parser.add_argument("--gen-preset", default="", help="Generation settings preset (legacy, small, wide; see generation/settings.py). Empty = historical behaviour.")
     parser.add_argument("--gen", default="", help="GenerationConfig overrides 'field=value+field=value', e.g. enable_thinking=false+max_context_chars=20000.")
     parser.add_argument("--tag", default="")

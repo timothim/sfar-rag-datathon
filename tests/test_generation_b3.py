@@ -236,3 +236,25 @@ def test_answer_check_erratum_superseded_value():
     assert not check_answer("10 µg/kg en IV [S1] (valeur corrigée par erratum).", p).flagged
     bad = check_answer("10 mg/kg en IV [S1].", p)
     assert bad.flagged and bad.unsupported_doses == ["10 mg/kg"]
+
+
+def test_engine_routes_lettered_options_to_mcq_mode():
+    from rag_sfar.generation.client import has_lettered_options, route_mode
+
+    q = "Quelle conduite est exacte ?\nA. Première option\nB. Deuxième option\nC. Troisième"
+    assert has_lettered_options(q) and route_mode(q, "clinical_concise") == "clinical_mcq"
+    assert not has_lettered_options("Faut-il une dose de 2 g ?\nA noter : patient obèse")
+    assert route_mode("Question ouverte ?", "clinical_concise") == "clinical_concise"
+    assert route_mode(q, "benchmark_open") == "benchmark_open"  # explicit modes untouched
+
+    class _MCQLLM:
+        model = "m"
+
+        def complete(self, system_prompt, user_prompt, temperature=None, max_tokens=None, **o):
+            self.system = system_prompt
+            return "A : faux\nB : exact [S1]\nRÉPONSE : B (SFAR 2024 [S1])", {}
+
+    llm = _MCQLLM()
+    r = SfarRagEngine(retriever=None, llm=llm).generate(q, [_rc("a", "Texte.", 1)], _analysis(q), {},
+                                                      mode="clinical_concise", config=RetrievalConfig())
+    assert r.mode == "clinical_mcq" and r.answer.startswith("B") and "QCM" not in r.answer

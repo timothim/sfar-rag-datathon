@@ -67,6 +67,8 @@ Ligne 1 — ANALYSE :
 Ligne 2 — RÉPONSE : Écris UNIQUEMENT la réponse finale, formulée comme dans les extraits (nom exact de la molécule ou de l'association, conduite à tenir, ou absence d'indication si les extraits l'écrivent explicitement), ou « Hors périmètre » si les extraits ne permettent pas de répondre, suivie de (SFAR <année> [Sx]).
 """
 
+# Product MCQ mode ("clinical_mcq"): used by the engine for any question that lists lettered
+# options (A., B., ...). The historical name "benchmark_mcq" is kept as an alias.
 SYSTEM_BENCHMARK_MCQ = """Tu es un expert en anesthésie-réanimation s'appuyant STRICTEMENT sur les extraits SFAR fournis.
 
 MÉTHODE OBLIGATOIRE (concis, 10 mots max par choix) :
@@ -85,8 +87,12 @@ SYSTEM_PROMPTS: dict[str, str] = {
     "temporal_diff": SYSTEM_TEMPORAL_DIFF,
     "benchmark_open": SYSTEM_BENCHMARK_OPEN,
     "benchmark_mcq": SYSTEM_BENCHMARK_MCQ,
+    "clinical_mcq": SYSTEM_BENCHMARK_MCQ,
     "clinical_production": SYSTEM_CLINICAL_PRODUCTION,
 }
+
+
+SYSTEM_CLINICAL_MCQ = SYSTEM_BENCHMARK_MCQ
 
 
 def build_user_prompt(query: str, context_block: str, mode: str = "clinical_detailed", question_first: bool = False) -> str:
@@ -102,7 +108,7 @@ def build_user_prompt(query: str, context_block: str, mode: str = "clinical_deta
             f"---\nQUESTION :\n{query}\n\n"
             f"Réponds sur exactement 2 lignes (Ligne 1 — ANALYSE : ... puis Ligne 2 — RÉPONSE : ...)."
         )
-    if mode == "benchmark_mcq":
+    if mode in ("benchmark_mcq", "clinical_mcq"):
         return (
             f"EXTRAITS DES RECOMMANDATIONS SFAR :\n\n{context_block}\n\n"
             f"---\nQUESTION QCM :\n{query}\n\n"

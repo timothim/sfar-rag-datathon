@@ -295,7 +295,7 @@ def generation_budget(mode: str) -> tuple[int, int]:
 
     Hyper-parameters tuned on the development set (declared as such, see audit). Used only by
     `GenerationConfig(selection="legacy")`, the historical small-model budget."""
-    max_chunks = 7 if mode == "benchmark_mcq" else (5 if mode == "benchmark_open" else 6)
+    max_chunks = 7 if mode in ("benchmark_mcq", "clinical_mcq") else (5 if mode == "benchmark_open" else 6)
     max_chars = 6500 if mode != "benchmark_open" else 5200
     return max_chunks, max_chars
 
@@ -356,7 +356,29 @@ def attach_provenance(answer: str, gen_chunks: list[RetrievedChunk]) -> tuple[st
     return answer, False
 
 
-BENCHMARK_MODES = ("benchmark_open", "benchmark_mcq")
+# Modes whose output ends with a "RÉPONSE :" line that is extracted as the answer.
+BENCHMARK_MODES = ("benchmark_open", "benchmark_mcq", "clinical_mcq")
+OPEN_MODES = ("clinical_detailed", "clinical_concise", "clinical_production")
+
+_OPTION_LINE = re.compile(r"(?m)^\s*\(?([A-H])[\.\)]\s+\S")
+
+
+def has_lettered_options(query: str) -> bool:
+    """True when the question lists at least two lettered options starting at A (A. / A) / (A))."""
+    letters = _OPTION_LINE.findall(query)
+    return len(letters) >= 2 and letters[0] == "A" and letters[1] == "B"
+
+
+def route_mode(query: str, mode: str, analysis: QueryAnalysis | None = None) -> str:
+    """Mode actually used for a question asked in an open mode: lettered options -> the product
+    MCQ mode; explicit edition comparison -> temporal_diff; otherwise unchanged."""
+    if mode not in OPEN_MODES:
+        return mode
+    if has_lettered_options(query):
+        return "clinical_mcq"
+    if analysis is not None and analysis.temporal_mode == "all_versions":
+        return "temporal_diff"
+    return mode
 
 COVERAGE_NOTE = (
     "NOTE : la recherche documentaire n'a trouvé aucun passage proche de la question. Vérifie "
@@ -369,7 +391,7 @@ def system_prompt_for(mode: str) -> str:
 
 
 def default_max_tokens(mode: str) -> int | None:
-    return 200 if mode == "benchmark_open" else (320 if mode == "benchmark_mcq" else None)
+    return 200 if mode == "benchmark_open" else (320 if mode in ("benchmark_mcq", "clinical_mcq") else None)
 
 
 def llm_call_options(gen_config: GenerationConfig | None) -> dict[str, Any]:
@@ -466,10 +488,8 @@ class SfarRagEngine:
         )
 
     def _prepare(self, query, retrieved, analysis, timings, mode, cfg, g):
-        gen_chunks, context_block = build_generation_context(retrieved, analysis, cfg, query, mode, g)
-        effective_mode = mode
-        if mode in ("clinical_detailed", "clinical_concise", "clinical_production") and analysis.temporal_mode == "all_versions":
-            effective_mode = "temporal_diff"
+        effective_mode = route_mode(query, mode, analysis)
+        gen_chunks, context_block = build_generation_context(retrieved, analysis, cfg, query, effective_mode, g)
         covered = coverage_supported(timings)
         gate = g.coverage_gate if g else "off"
         if gate == "note" and covered is False:

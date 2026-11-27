@@ -252,6 +252,15 @@ def run(args) -> Path | None:
     from rag_sfar.generation.settings import resolve_generation_config
 
     gen_cfg = resolve_generation_config(args.preset, args.gen)
+    if args.system_file:
+        # Prompt variant: system prompt read from a file, registered as a new open mode
+        # (format/grounding rules only; files in eval_internal/work/b3_prompts/).
+        from rag_sfar.generation import client as C, prompts as P
+
+        new_mode = Path(args.system_file).stem
+        P.SYSTEM_PROMPTS[new_mode] = Path(args.system_file).read_text(encoding="utf-8")
+        C.OPEN_MODES = tuple(C.OPEN_MODES) + (new_mode,)
+        args.gen_mode = new_mode
     if args.drop_rule:
         # Prompt ablation: remove numbered rule N of the system prompt of --gen-mode (new mode name).
         from rag_sfar.generation import prompts as P
@@ -281,7 +290,8 @@ def run(args) -> Path | None:
             c = cache[it.id]
             retrieved = [RetrievedChunk.model_validate(x) for x in c["retrieved"]]
             analysis = QueryAnalysis.model_validate(c["analysis"])
-            mode = args.mcq_mode if it.question_type == "mcq" else args.gen_mode
+            # "route": the engine routes lettered-option questions itself (production behaviour).
+            mode = args.gen_mode if (it.question_type != "mcq" or args.mcq_mode == "route") else args.mcq_mode
             n_calls = len(getattr(llm, "calls", []))
             t0 = time.perf_counter()
             resp = engine.generate(it.formatted_query(), retrieved, analysis, c["timings"], mode=mode,
@@ -503,7 +513,7 @@ if __name__ == "__main__":
     p.add_argument("--preset", default="wide")
     p.add_argument("--gen", default="", help="GenerationConfig overrides, 'field=value+field=value'")
     p.add_argument("--gen-mode", default="clinical_concise")
-    p.add_argument("--mcq-mode", default="benchmark_mcq")
+    p.add_argument("--mcq-mode", default="route", help="'route' = let the engine route MCQs (production); or force a mode")
     p.add_argument("--backend", choices=["mlx", "openai", "record"], default="mlx")
     p.add_argument("--mlx-model-path", default="")
     p.add_argument("--model", default="qwen3.5-9b-4bit-nothink")
@@ -513,6 +523,7 @@ if __name__ == "__main__":
     p.add_argument("--tokenizer", default="")
     p.add_argument("--limit", type=int, default=0)
     p.add_argument("--tag", required=True)
+    p.add_argument("--system-file", default="", help="prompt variant: system prompt file, registered as mode <file stem>")
     p.add_argument("--drop-rule", default="", help="ablation: drop numbered rule N of the --gen-mode system prompt")
     p.add_argument("--export-frontier", default="")
     p.add_argument("--parts", type=int, default=4)
