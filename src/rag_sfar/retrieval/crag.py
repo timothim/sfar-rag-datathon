@@ -16,6 +16,7 @@ import re
 from dataclasses import dataclass
 
 from rag_sfar.retrieval.medical_lexicon import fold_accents, tokenize_medical_french
+from rag_sfar.retrieval.router import has_affirmed_match
 from rag_sfar.schemas import QueryAnalysis, RetrievedChunk
 
 
@@ -52,7 +53,7 @@ FACET_RULES: list[tuple[str, re.Pattern[str], str, re.Pattern[str]]] = [
     ),
     (
         "pediatric",
-        re.compile(r"\b(?:p[ée]diatr\w*|enfant\w*|nourrisson\w*|n[ée]onatal\w*)\b", re.I),
+        re.compile(r"\b(?:p[ée]diatr\w*|enfant\w*|nourrisson\w*|n[ée]onatal\w*|nouveau[- ]n[ée]e?s?|adolescente?s?)\b", re.I),
         "pédiatrie enfant posologie mg/kg",
         re.compile(r"\b(?:mg/kg|p[ée]diatri\w*|enfant)\b", re.I),
     ),
@@ -78,9 +79,11 @@ def detect_clinical_facets(analysis: QueryAnalysis) -> list[ClinicalFacet]:
             )
         )
 
-    # 2. Systemic clinical modifiers
+    # 2. Systemic clinical modifiers (a negation cue directly before the trigger, e.g. "non obèse",
+    # "sans allergie", disables it; see router.is_negated_at)
     for name, trigger_re, base_subq, ev_re in FACET_RULES:
-        if trigger_re.search(q_orig):
+        matched = has_affirmed_match(trigger_re, q_orig) if name != "pediatric" else bool(trigger_re.search(q_orig))
+        if matched:
             # The question itself carries the topic; the modifier terms carry the facet.
             subq = f"{q_orig} {base_subq}".strip()
             facets.append(ClinicalFacet(name=name, subquery=subq, evidence_regex=ev_re))

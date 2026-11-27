@@ -62,6 +62,8 @@ MEDICAL_ACRONYMS: dict[str, str] = {
     "ID": "intubation difficile",
     "CEC": "circulation extracorporelle",
     "TAVI": "remplacement valvulaire aortique percutané TAVI",
+    "FOP": "foramen ovale perméable",
+    "CPRE": "cholangiopancréatographie rétrograde endoscopique",
     "RTUP": "résection transurétrale de prostate",
     "RTUV": "résection transurétrale de vessie",
     "HBP": "hypertrophie bénigne de prostate",

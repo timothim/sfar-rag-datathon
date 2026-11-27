@@ -621,6 +621,96 @@ def test_mcq_option_composite_and_scope_guard():
     assert "avec greffe" in cards[1] and "Céfazoline" in cards[1] and "PAS D'ANTIBIOPROPHYLAXIE" not in cards[1]
 
 
+# Inputs below are synthetic (written for these tests, not taken from any evaluation set).
+NEGATION_SCOPE_CASES = [
+    # (query, allergy affirmed?)
+    ("Patient obèse non diabétique allergique aux bêtalactamines : quelle prophylaxie ?", True),
+    ("Patient sans antécédent particulier allergique à la pénicilline, chirurgie du genou", True),
+    ("Patiente non fumeuse allergique à la céfazoline : quelle alternative ?", True),
+    ("Homme de 50 ans, sans diabète, allergique au latex : précautions au bloc ?", True),
+    ("Allergie à la chlorhexidine : quel antiseptique cutané ?", True),
+    ("Enfant hypersensible ? Hypersensibilité immédiate aux curares documentée", True),
+    ("Patient sans allergie connue opéré d'une hernie inguinale", False),
+    ("Patient non allergique, cholécystectomie programmée", False),
+    ("Pas d'allergie aux bêtalactamines : quelle molécule en orthopédie ?", False),
+    ("Patiente sans antécédent d'allergie, césarienne programmée", False),
+    ("Aucune allergie documentée chez ce patient de 60 ans", False),
+    ("Absence d'allergie médicamenteuse, prothèse de hanche", False),
+    ("Patient sans diabète ni allergie, chirurgie colique", False),
+    ("Femme non-allergique, hystérectomie", False),
+]
+
+
+def test_negation_scope_is_the_term_that_follows_the_cue():
+    from rag_sfar.retrieval.router import analyze_query, detect_affirmed_allergy
+
+    for query, affirmed in NEGATION_SCOPE_CASES:
+        assert ("allergy" in analyze_query(query).modifiers) is affirmed, query
+    # The explicit allergy statement used by the generator follows the same scope rule.
+    assert detect_affirmed_allergy("Patient non diabétique allergique aux bêtalactamines : conduite ?")
+    assert detect_affirmed_allergy("Patient sans allergie aux bêtalactamines : conduite ?") is None
+    # Other negatable modifiers, and expansions of negated acronyms.
+    assert "obesity" not in analyze_query("Patient non obèse, chirurgie du rachis").modifiers
+    assert "obesity" in analyze_query("Patient non fumeur obèse, chirurgie du rachis").modifiers
+    assert "renal" not in analyze_query("Patient sans insuffisance rénale, coronarographie").modifiers
+    assert "renal" not in analyze_query("Patient sans IRC, coronarographie").modifiers
+    assert "renal" in analyze_query("Patient diabétique avec IRC, coronarographie").modifiers
+
+
+def test_negated_background_is_kept_in_the_query():
+    """The act must survive a negated background clause (no clause stripping before retrieval)."""
+    import inspect
+
+    from rag_sfar.retrieval import pipeline
+
+    assert "strip_negated_background" not in inspect.getsource(pipeline)
+
+
+def test_population_routing_handles_gender_and_number_for_all_terms():
+    from rag_sfar.retrieval.router import analyze_query
+
+    pediatric = [
+        "un enfant de 4 ans", "des enfants", "un nourrisson", "des nourrissons", "un nouveau-né",
+        "une nouveau-née", "des nouveau-nés", "un adolescent", "une adolescente", "des adolescentes",
+        "une fillette", "un garçonnet", "un bébé", "une patiente de 9 ans", "un patient de 9 ans",
+        "une fille de 12 ans", "un garçon de 12 ans", "une adolescente de 16 ans",
+        "un adolescent de 16 ans", "âgée de 3 mois", "âgé de 3 mois", "âgés de 10 jours",
+    ]
+    for p in pediatric:
+        assert analyze_query(f"Quelle antibioprophylaxie chez {p} pour une appendicectomie ?").population == "pediatrie", p
+    adult = ["un adulte", "des adultes", "un sujet âgé", "une personne âgée", "une patiente âgée de 70 ans",
+             "un patient âgé de 70 ans"]
+    for p in adult:
+        assert analyze_query(f"Quelle antibioprophylaxie chez {p} pour une appendicectomie ?").population == "adulte", p
+    # A bare duration is not an age.
+    assert analyze_query("Arrêter l'anticoagulant 3 jours avant la chirurgie ?").population == "non_specifie"
+
+
+def test_neonatal_subpopulation_needs_an_age_context_and_a_pediatric_query():
+    from rag_sfar.retrieval.pipeline import _query_subpopulation
+
+    assert _query_subpopulation("Nouveau-né à opérer d'une atrésie", "pediatrie") == "neonatal"
+    assert _query_subpopulation("Nourrisson âgé de 10 jours, hernie", "pediatrie") == "neonatal"
+    assert _query_subpopulation("Nourrisson âgé de 2 semaines, hernie", "pediatrie") == "neonatal"
+    assert _query_subpopulation("Nourrisson âgé de 40 jours, hernie", "pediatrie") is None
+    assert _query_subpopulation("Enfant de 6 ans, amygdalectomie", "pediatrie") == "child"
+    assert _query_subpopulation("Adolescente, appendicectomie", "pediatrie") == "child"
+    # Bare durations are not ages; non-paediatric queries are never sub-typed.
+    assert _query_subpopulation("Enfant : arrêter le traitement 3 jours avant ?", "pediatrie") is None
+    assert _query_subpopulation("Antibiothérapie de 5 jours après appendicectomie", "non_specifie") is None
+    assert _query_subpopulation("Patient diabétique depuis 5 ans", "adulte") is None
+
+
+def test_footnote_call_regex_ignores_markdown_emphasis():
+    from rag_sfar.retrieval.pipeline import _FOOTNOTE_REF_RE
+
+    for text in ("**R1.1** Il est recommandé", "**Céfazoline** 2 g", "voir *i.e.* ci-dessous", "#R2"):
+        assert not _FOOTNOTE_REF_RE.search(text), text
+    for text in ("Colectomie **", "Céfazoline 2 g *", "Acte # | 2 g", "Dose †"):
+        assert _FOOTNOTE_REF_RE.search(text), text
+
+
+
 
 
 

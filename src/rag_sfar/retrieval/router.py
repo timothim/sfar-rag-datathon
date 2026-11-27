@@ -19,21 +19,27 @@ TEMPORAL_DIFF_PATTERNS = [
     r"\bentre\s+20\d{2}\s+et\s+20\d{2}\b",
     r"\bmise\s+[àa]\s+jour\s+20\d{2}\b",
     r"\bversion\s+20\d{2}\b",
-    r"\bv[123]\.0\b",
+    r"\bv[123]\.\d+\b",
 ]
 
 # Population is set only when the query states it. A bare duration ("6 mois", "3 ans") is not
 # an age: it needs an age context ("âgé de 6 mois", "enfant de 3 ans", "nourrisson de 2 mois").
-_AGE_CONTEXT = r"(?:[âa]g[ée]e?s?\s+de|enfant\s+de|nourrisson\s+de|gar[çc]on\s+de|fille\s+de|fillette\s+de|patiente?\s+de)"
+# French gender and number are handled systematically: every population noun or adjective that
+# has a feminine form accepts it (âgé/âgée, adolescent/adolescente, nouveau-né/nouveau-née,
+# patient/patiente), and every one accepts the plural.
+_AGE_CONTEXT = (
+    r"(?:[âa]g[ée]e?s?\s+de|enfants?\s+de|nourrissons?\s+de|gar[çc]ons?\s+de|filles?\s+de|"
+    r"fillettes?\s+de|adolescente?s?\s+de|patiente?s?\s+de)"
+)
 PEDIATRIC_QUERY_RE = re.compile(
     r"\b(enfants?|p[ée]diatr\w*|nourrissons?|nouveau[- ]n[ée]e?s?|n[ée]onat\w*|b[ée]b[ée]s?|"
-    r"adolescents?|fillettes?|gar[çc]onnets?|"
+    r"adolescente?s?|fillettes?|gar[çc]onnets?|"
     rf"{_AGE_CONTEXT}\s+\d+\s*(?:jours?|semaines?|mois)|"
     rf"{_AGE_CONTEXT}\s+(?:[1-9]|1[0-7])\s*ans?)\b",
     re.I,
 )
 ADULT_QUERY_RE = re.compile(
-    r"\b(adultes?|sujets?\s+[âa]g[ée]s?|personnes?\s+[âa]g[ée]es?|"
+    r"\b(adultes?|sujets?\s+[âa]g[ée]e?s?|personnes?\s+[âa]g[ée]e?s?|"
     rf"{_AGE_CONTEXT}\s+(?:1[89]|[2-9]\d|1[0-1]\d)\s*ans?)\b",
     re.I,
 )
@@ -60,6 +66,48 @@ MODIFIER_PATTERNS: dict[str, re.Pattern[str]] = {
     "grade": re.compile(r"\b(grade\w*|niveau\s+de\s+preuve|accord\s+d|avis\s+d.?experts?)\b", re.I),
     "references": re.compile(r"\b(r[ée]f[ée]rences?\s+bibliographiques?|bibliographie|[ée]tudes?\s+cit[ée]es?|auteurs?)\b", re.I),
 }
+
+
+# Negation scope (NegEx-style pre-negation, Harkema et al. 2009, with a tight scope).
+# A negation cue applies to the term that IMMEDIATELY follows it, not to the rest of the
+# sentence: "sans allergie", "non allergique", "pas d'allergie", "ni obésité", "aucun
+# antécédent d'allergie" are negated; "non diabétique allergique à X" or "sans antécédent
+# particulier, allergique à X" are NOT (the cue negates "diabétique" / "antécédent particulier").
+# Between the cue and the term only closed-class words are allowed: elided or plain articles
+# and prepositions, and the generic evidential nouns "antécédent(s) de", "notion de",
+# "signe(s) de", "histoire de". Any other word (adjective, noun, verb) ends the scope.
+_NEG_CUE = r"(?:sans|pas|aucune?|ni|non|jamais|absence|indemne|exempte?s?)"
+_NEG_BRIDGE_WORD = (
+    r"(?:d['’]|l['’]|(?:de|du|des|la|le|les|un|une|ant[ée]c[ée]dents?|notions?|signes?|histoire)\b)"
+)
+_NEG_SCOPE_RE = re.compile(
+    rf"\b{_NEG_CUE}(?:[\s\-]+|(?=d['’]))(?:{_NEG_BRIDGE_WORD}[\s\-]*)*$",
+    re.I,
+)
+
+
+def is_negated_at(text: str, start: int) -> bool:
+    """True when the term starting at `start` in `text` is directly governed by a negation cue."""
+    return bool(_NEG_SCOPE_RE.search(text[max(0, start - 80) : start]))
+
+
+def has_affirmed_match(pattern: re.Pattern[str], text: str) -> bool:
+    """Return True iff `pattern` matches at least one non-negated occurrence in `text`."""
+    return any(not is_negated_at(text, m.start()) for m in pattern.finditer(text))
+
+
+_NEGATABLE_MODIFIERS = frozenset({"allergy", "obesity", "renal"})
+
+
+def _affirmed_text(query: str, acronyms: dict[str, str]) -> str:
+    """The query followed by the expansions of its non-negated acronyms ("sans IRC" does not
+    contribute "insuffisance rénale chronique"). The separator ends any negation scope."""
+    kept = []
+    for acr, expansion in acronyms.items():
+        positions = [m.start() for m in re.finditer(rf"(?<!\w){re.escape(acr)}(?!\w)", query)]
+        if any(not is_negated_at(query, pos) for pos in positions):
+            kept.append(expansion)
+    return query if not kept else f"{query} ; {' ; '.join(dict.fromkeys(kept))}"
 
 
 def analyze_query(query: str, use_lexicon: bool = True) -> QueryAnalysis:
@@ -106,8 +154,15 @@ def analyze_query(query: str, use_lexicon: bool = True) -> QueryAnalysis:
     elif has_rea and not has_prog and not has_urg:
         setting = "reanimation"
 
-    # 4. Clinical modifiers
-    modifiers = [name for name, pat in MODIFIER_PATTERNS.items() if pat.search(exp_low)]
+    # 4. Clinical modifiers (NegEx-guarded for patient-state conditions like allergy/obesity/renal)
+    modifiers: list[str] = []
+    affirmed_text = _affirmed_text(query, acronyms)
+    for name, pat in MODIFIER_PATTERNS.items():
+        if name in _NEGATABLE_MODIFIERS:
+            if has_affirmed_match(pat, affirmed_text):
+                modifiers.append(name)
+        elif pat.search(exp_low):
+            modifiers.append(name)
     if is_diff and "diff" not in modifiers:
         modifiers.append("diff")
 
@@ -138,10 +193,6 @@ _AFFIRMED_ALLERGY_RE = re.compile(
     r"(?=\s+(?:et|ou|pour|avec|chez|devant|lors|avant|apr[èe]s|qui|quel\w*)\b|\s*[,;.?!:\n]|\s*$)",
     re.I,
 )
-_ALLERGY_NEGATION_RE = re.compile(
-    r"\b(?:pas|sans|aucune?|ni|non|jamais)\s+(?:d['’]\s*|de\s+|d['’]ant[ée]c[ée]dents?\s+d['’]\s*)?$",
-    re.I,
-)
 
 
 def detect_affirmed_allergy(query: str) -> str | None:
@@ -149,8 +200,7 @@ def detect_affirmed_allergy(query: str) -> str | None:
 
     Generic: no allergen class is assumed; the returned span is quoted back as written."""
     for m in _AFFIRMED_ALLERGY_RE.finditer(query):
-        before = query[max(0, m.start() - 40) : m.start()]
-        if _ALLERGY_NEGATION_RE.search(before):
+        if is_negated_at(query, m.start()):
             continue
         return m.group(0).strip()
     return None
