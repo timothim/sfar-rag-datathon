@@ -57,10 +57,10 @@ def compare(tag_a: str, tag_b: str, suites: list[str], per_item: bool) -> str:
             rows_a = {r["id"]: r for r in runs_a[cfg]["rows"]}
             rows_b = {r["id"]: r for r in runs_b[cfg]["rows"]}
             ids = [i for i in rows_a if i in rows_b]
-            short = "C9+fenêtres" if "context_window" in cfg else "C9"
+            short = "C10" if cfg.startswith("C10") else ("C9+fenêtres" if "context_window" in cfg else "C9")
             out.append(f"\n### {short} (n={len(ids)})\n")
-            out.append("| Métrique | A | B | B − A [IC 95 %] |")
-            out.append("|---|---:|---:|---|")
+            out.append("| Métrique | n | A | B | B − A [IC 95 %] |")
+            out.append("|---|---:|---:|---:|---|")
             for m in METRICS:
                 va = [item_values(rows_a[i], m) for i in ids]
                 vb = [item_values(rows_b[i], m) for i in ids]
@@ -72,7 +72,7 @@ def compare(tag_a: str, tag_b: str, suites: list[str], per_item: bool) -> str:
                 mb = 100 * sum(y for _, y in pairs) / len(pairs)
                 scale = 100
                 out.append(
-                    f"| {m} | {ma:.1f} | {mb:.1f} | {scale*d['diff']:+.1f} [{scale*d['ci_low']:+.1f} ; {scale*d['ci_high']:+.1f}] |"
+                    f"| {m} | {len(pairs)} | {ma:.1f} | {mb:.1f} | {scale*d['diff']:+.1f} [{scale*d['ci_low']:+.1f} ; {scale*d['ci_high']:+.1f}] |"
                 )
             if per_item:
                 changed = []

@@ -48,13 +48,13 @@
  "cards_with_generic_headers": 1897,
  "table_md_with_generic_headers": 1326,
  "uncovered": {
-  "units": 216,
+  "units": 218,
   "units_total": 62145,
-  "chars": 72749,
-  "chars_total": 12931233,
-  "share_chars_pct": 0.56,
+  "chars": 73375,
+  "chars_total": 12931226,
+  "share_chars_pct": 0.57,
   "by_kind": {
-   "cell": 213,
+   "cell": 215,
    "line": 3
   },
   "examples": [
@@ -531,6 +531,210 @@
   "non_specifie": 18640,
   "pediatrie": 4622,
   "mixte": 1235
+ },
+ "fidelity": {
+  "tables": {
+   "rows_with_tokens": 8944,
+   "rows_not_in_one_unit": 112,
+   "tokens": 32954,
+   "tokens_missing": 157,
+   "examples": [
+    [
+     "2026_Version-longue_8281a1",
+     [
+      "0.16mmol/l",
+      "10",
+      "10%",
+      "18.5kg",
+      "2",
+      "20%",
+      "200",
+      "24"
+     ],
+     [
+      "0.16mmol/l",
+      "20%",
+      ">0.16",
+      ">10"
+     ]
+    ],
+    [
+     "2026_TEXTE-RFE-ALR-PEDIA-VERSION-FINALE-",
+     [
+      "1",
+      "5000"
+     ],
+     [
+      "5000"
+     ]
+    ],
+    [
+     "2026_TEXTE-RFE-ALR-PEDIA-VERSION-FINALE-",
+     [
+      "2010",
+      "2025"
+     ],
+     [
+      "2025"
+     ]
+    ],
+    [
+     "2026_TEXTE-RFE-ALR-PEDIA-VERSION-FINALE-",
+     [
+      "1,2",
+      "1,7",
+      "10",
+      "13",
+      "15",
+      "2",
+      "2,7",
+      "2010"
+     ],
+     [
+      "2,7",
+      "2016",
+      "2022",
+      "353",
+      "palatines"
+     ]
+    ],
+    [
+     "2026_RFE-Infections-intra-abdominales-ve",
+     [
+      "100",
+      ">100"
+     ],
+     [
+      ">100"
+     ]
+    ],
+    [
+     "2026_RFE-Infections-intra-abdominales-ve",
+     [
+      "2012",
+      "2024"
+     ],
+     []
+    ],
+    [
+     "2026_RFE-Infections-intra-abdominales-ve",
+     [
+      "3",
+      "5",
+      "céphalosporine",
+      "pénicillines"
+     ],
+     []
+    ],
+    [
+     "2026_RFE-Infections-intra-abdominales-ve",
+     [
+      "3",
+      "eravacycline",
+      "lactamines",
+      "lévofloxacine",
+      "moxifloxacine",
+      "tigécycline"
+     ],
+     []
+    ],
+    [
+     "2026_RFE-Infections-intra-abdominales-ve",
+     [
+      "1",
+      "2.3",
+      "8",
+      "liquide",
+      "rapide"
+     ],
+     []
+    ],
+    [
+     "2026_RFE-Infections-intra-abdominales-ve",
+     [
+      "1.2",
+      "13",
+      "2",
+      "3",
+      "48",
+      "liquide"
+     ],
+     []
+    ],
+    [
+     "2026_RFE-Infections-intra-abdominales-ve",
+     [
+      "1",
+      "2",
+      "2.1",
+      "5",
+      "liquides",
+      "procalcitonine"
+     ],
+     []
+    ],
+    [
+     "2026_RFE-Infections-intra-abdominales-ve",
+     [
+      "1",
+      "2.3",
+      "8",
+      "liquide",
+      "rapide"
+     ],
+     []
+    ],
+    [
+     "2026_RFE-Infections-intra-abdominales-ve",
+     [
+      "2",
+      "3.2",
+      "72h",
+      "liquide",
+      "≤72"
+     ],
+     []
+    ],
+    [
+     "2026_RFE-Infections-intra-abdominales-ve",
+     [
+      "24",
+      "2g",
+      "30min",
+      "36",
+      "3g",
+      "4",
+      "4g",
+      "6g"
+     ],
+     []
+    ],
+    [
+     "2026_RFE-Infections-intra-abdominales-ve",
+     [
+      "1",
+      "100mg",
+      "150mg",
+      "200mg",
+      "2mg/kg/j",
+      "30min",
+      "40kg",
+      "<40"
+     ],
+     []
+    ]
+   ]
+  },
+  "flowcharts": {
+   "blocks": 164,
+   "blocks_losing_tokens": 0,
+   "examples": []
+  },
+  "single_line_table_chunks": 0,
+  "table_markdown_chunks": 2589,
+  "micro_unit_corruptions": 0,
+  "raw_latex_mu": 374,
+  "population_exclusion_contradictions": 0
  },
  "populations": {
   "(vide)": 33406

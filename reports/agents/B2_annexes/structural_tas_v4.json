@@ -48,14 +48,14 @@
  "cards_with_generic_headers": 0,
  "table_md_with_generic_headers": 0,
  "uncovered": {
-  "units": 457,
+  "units": 458,
   "units_total": 62145,
-  "chars": 41728,
-  "chars_total": 12931231,
-  "share_chars_pct": 0.32,
+  "chars": 42497,
+  "chars_total": 12931226,
+  "share_chars_pct": 0.33,
   "by_kind": {
    "line": 443,
-   "cell": 14
+   "cell": 15
   },
   "examples": [
    [
@@ -491,26 +491,250 @@
   "pediatrie": 4886,
   "mixte": 1450
  },
+ "fidelity": {
+  "tables": {
+   "rows_with_tokens": 8944,
+   "rows_not_in_one_unit": 12,
+   "tokens": 32954,
+   "tokens_missing": 10,
+   "examples": [
+    [
+     "2018_RFE-IH-soins-critiques_f67e16",
+     [
+      "1.1",
+      "1.25",
+      "1.26",
+      "1.5",
+      "1.51",
+      "10",
+      "2.5",
+      "20"
+     ],
+     []
+    ],
+    [
+     "2018_RFE-IH-soins-critiques_f67e16",
+     [
+      "0,1µg/kg",
+      "15µg/kg",
+      "5",
+      "5µg/kg",
+      "70",
+      "<70",
+      ">0,1",
+      ">15"
+     ],
+     [
+      "15µg/kg",
+      "5µg/kg"
+     ]
+    ],
+    [
+     "2016_3-Tableaux-Reactualisation-de-la-re",
+     [
+      "1",
+      "11",
+      "12",
+      "20",
+      "2002j",
+      "3",
+      "5"
+     ],
+     [
+      "2002j"
+     ]
+    ],
+    [
+     "2016_3-Tableaux-Reactualisation-de-la-re",
+     [
+      "1",
+      "12",
+      "2002j",
+      "69"
+     ],
+     [
+      "2002j"
+     ]
+    ],
+    [
+     "2016_3-Tableaux-Reactualisation-de-la-re",
+     [
+      "1",
+      "11",
+      "12",
+      "20",
+      "2002j",
+      "3",
+      "5"
+     ],
+     [
+      "2002j"
+     ]
+    ],
+    [
+     "2016_3-Tableaux-Reactualisation-de-la-re",
+     [
+      "0,05",
+      "112",
+      "1175",
+      "12,3",
+      "2010",
+      "3,8",
+      "40",
+      "5,2µg/kg"
+     ],
+     [
+      "5,2µg/kg"
+     ]
+    ],
+    [
+     "2016_3-Tableaux-Reactualisation-de-la-re",
+     [
+      "0,04",
+      "0,05",
+      "0,05µg/kg",
+      "0,06",
+      "0,08",
+      "110",
+      "151",
+      "2013"
+     ],
+     [
+      "0,05µg/kg"
+     ]
+    ],
+    [
+     "2016_3-Tableaux-Reactualisation-de-la-re",
+     [
+      "0,001",
+      "0,002",
+      "0,04",
+      "0,29",
+      "0,34",
+      "0,3µg/kg",
+      "0,43",
+      "0,5"
+     ],
+     [
+      "0,3µg/kg",
+      "0,59µg/kg"
+     ]
+    ],
+    [
+     "2013_2b_Annexe_SFAR_TableauxRFEDCALR2_14",
+     [
+      "0",
+      "0.09mg/kg/h",
+      "1",
+      "10",
+      "10j",
+      "1132",
+      "1135",
+      "16"
+     ],
+     []
+    ],
+    [
+     "2013_2b_Annexe_SFAR_TableauxRFEDCALR2_14",
+     [
+      "0.125%",
+      "10",
+      "21j",
+      "3"
+     ],
+     []
+    ],
+    [
+     "2001_art54_dossierarannpre_a530d4",
+     [
+      "0",
+      "1",
+      "12",
+      "156",
+      "21,37g",
+      "24h",
+      "52kg",
+      "7"
+     ],
+     [
+      "21,37g"
+     ]
+    ],
+    [
+     "2026_RFE-antibioprophylaxie-2023_V3_1_po",
+     [
+      "0,75g",
+      "1,5g",
+      "1g",
+      "2g",
+      "2h",
+      "4h",
+      ">2",
+      ">4"
+     ],
+     []
+    ]
+   ]
+  },
+  "flowcharts": {
+   "blocks": 164,
+   "blocks_losing_tokens": 5,
+   "examples": [
+    [
+     "2024_Algorithmes_RFE-gestion-de-lanticoa",
+     [
+      "persistant",
+      "retarder",
+      "securite"
+     ]
+    ],
+    [
+     "2007_2b_AFAR_aspet-pediatriques_d85e1f",
+     [
+      "analgiques",
+      "curarise",
+      "instauration",
+      "majoration",
+      "reduction"
+     ]
+    ],
+    [
+     "2007_2a_AFAR_Texte_court_Sedation-et-ana",
+     [
+      "patientagite"
+     ]
+    ],
+    [
+     "2006_2b_HAS_TEXTE-LONG_Prise-en-charge-d",
+     [
+      "aberrante",
+      "conduc",
+      "polymorphe",
+      "tion"
+     ]
+    ],
+    [
+     "2006_2a_HAS_TEXTE-COURT_Prise-en-charge-",
+     [
+      "aberrante",
+      "conduction",
+      "large",
+      "polymorphe"
+     ]
+    ]
+   ]
+  },
+  "single_line_table_chunks": 1854,
+  "table_markdown_chunks": 2638,
+  "micro_unit_corruptions": 131,
+  "raw_latex_mu": 0,
+  "population_exclusion_contradictions": 660
+ },
  "populations": {
   "adulte": 11292,
   "obstetrique": 1890,
   "(vide)": 20783,
   "pediatrie": 5052,
   "neonatal": 1897
- },
- "table_parse_stats": {
-  "tables": 2190,
-  "tables_ge2cols": 2017,
-  "explicit_headers": 1070,
-  "inherited_headers": 482,
-  "row_cards": 9919,
-  "carried_first_cell": 105,
-  "full_width_notes": 106,
-  "titled": 266,
-  "with_scope_note": 92,
-  "footnotes_linked": 321,
-  "tables_under_reference_heading": 1,
-  "ge2cols_without_cards": 51,
-  "ge2cols_headerless_without_cards": 22
  }
 }
