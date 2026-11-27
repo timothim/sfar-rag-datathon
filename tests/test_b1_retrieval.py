@@ -211,3 +211,98 @@ def test_population_quota_only_adds_and_survives_wrong_labels():
         plain = [x.chunk.chunk_id for x in r.retrieve(q, config=base)[0]]
         quota = [x.chunk.chunk_id for x in r.retrieve(q, config=dataclasses.replace(base, population_quota=1, population_counterpart=True))[0]]
         assert quota[: len(plain)] == plain, (q, plain, quota)
+
+
+class _OverlapReranker:
+    """Deterministic stand-in for the cross-encoder: share of query words found in the passage."""
+
+    model_name = "overlap"
+
+    def score_pairs(self, query, passages):
+        q = set(query.lower().split())
+        return [len(q & set(p.lower().split())) / (len(q) or 1) for p in passages]
+
+
+def _is_subsequence(small: list[str], big: list[str]) -> bool:
+    it = iter(big)
+    return all(x in it for x in small)
+
+
+def test_guaranteed_passages_never_displace_ranked_results_or_their_windows():
+    """With windows, notes, reranker, a tight budget and context hygiene: the context built
+    without any population rule is kept whole and in order inside the context built with it
+    (guaranteed passages are only inserted), whatever the population labels say."""
+    specs = [
+        ("t_ad", "table_markdown", "| Acte | Molécule |\n| cure de zygomaplastie étendue | moléculine 2 g* |", {"population_hint": "adulte"}),
+        ("r_ad", "table_row_card", "Acte : cure de zygomaplastie étendue | Molécule : moléculine 2 g*", {"population_hint": "adulte"}),
+        ("r_ad2", "table_row_card", "Acte : otoplastie simple | Molécule : moléculine 2 g", {"population_hint": "adulte"}),
+        ("r_ad3", "table_row_card", "Acte : rhinoplastie simple | Molécule : moléculine 2 g", {"population_hint": "adulte"}),
+        ("fn_ad", "prose", "\\* Prolonger si contamination.", {}),
+        ("p1", "prose", "Texte général sans rapport avec la question posée ici.", {}),
+        ("t_pe", "table_markdown", "| Acte | Molécule |\n| cure de zygomaplastie étendue | moléculine 30 mg/kg |", {"population_hint": "pediatrie"}),
+        ("r_pe", "table_row_card", "Acte : cure de zygomaplastie étendue | Molécule : moléculine 30 mg/kg", {"population_hint": "pediatrie"}),
+        ("r_pe2", "table_row_card", "Acte : otoplastie simple | Molécule : moléculine 30 mg/kg", {"population_hint": "pediatrie"}),
+        ("r_pe3", "table_row_card", "Acte : rhinoplastie simple | Molécule : moléculine 30 mg/kg", {"population_hint": "pediatrie"}),
+        ("r_wrong", "table_row_card", "Acte : amputation de jambe | Molécule : autre 10 mg/kg", {"population_hint": "pediatrie"}),
+    ]
+    r = SfarRagRetriever(_store(_chain(specs)), reranker=_OverlapReranker())
+    base = dataclasses.replace(
+        _BASE, use_reranker=True, final_top_k=2, context_window=1, expand_table_parent=True,
+        attach_table_notes=True, table_notes_mode="called", context_hygiene=True,
+        max_chunks_per_doc=16,
+    )
+    for budget in (30000, 400):
+        cfg0 = dataclasses.replace(base, context_char_budget=budget)
+        cfg1 = dataclasses.replace(cfg0, population_quota=1, population_guard=True)
+        for q in ("cure de zygomaplastie étendue : quelle molécule ?", "Adulte, cure de zygomaplastie étendue ?"):
+            without = [x.chunk.chunk_id for x in r.retrieve(q, config=cfg0)[0]]
+            with_rule = [x.chunk.chunk_id for x in r.retrieve(q, config=cfg1)[0]]
+            assert _is_subsequence(without, with_rule), (budget, q, without, with_rule)
+            assert "r_wrong" not in with_rule  # another act is never added
+            total = sum(len(x.chunk.text) for x in r.retrieve(q, config=cfg1)[0][2:])
+            assert total <= budget or budget >= 30000
+    # Unstated population, generous budget: the paediatric counterpart of the ranked adult row
+    # is added, right after its anchor's block, and only it.
+    cfg3 = dataclasses.replace(base, final_top_k=3, population_quota=1, population_guard=True)
+    res = r.retrieve("cure de zygomaplastie étendue moléculine 2 g", config=cfg3)[0]
+    ids = [x.chunk.chunk_id for x in res]
+    added = [x.chunk.chunk_id for x in res if (x.expansion_reason or "").startswith("population")]
+    assert "r_pe" in ids and set(added) <= {"r_pe"}, ids
+    assert "r_wrong" not in ids
+    # Ranked list too short to contain it: the counterpart is added, right after its anchor.
+    cfg2 = dataclasses.replace(base, final_top_k=2, context_window=0, expand_table_parent=False,
+                               population_quota=1, population_guard=True)
+    res2 = r.retrieve("cure de zygomaplastie étendue moléculine 2 g", config=cfg2)[0]
+    ids2 = [x.chunk.chunk_id for x in res2]
+    assert [x.chunk.chunk_id for x in res2 if (x.expansion_reason or "").startswith("population")] == ["r_pe"], ids2
+    assert ids2.index("r_pe") == ids2.index("r_ad") + 1
+    # The adult population stated: nothing paediatric is added.
+    res_ad = r.retrieve("Adulte, cure de zygomaplastie étendue moléculine 2 g", config=cfg3)[0]
+    assert not any((x.expansion_reason or "").startswith("population") for x in res_ad)
+
+
+def test_context_hygiene_dedups_identical_text():
+    specs = [
+        ("row", "table_row_card", "Acte : zygomaplastie* | Molécule : moléculine", {"linked_callout_ids": ["n1", "n2"]}),
+        ("n1", "callout_footnote", "* Prolonger si contamination.", {}),
+        ("n2", "callout_footnote", "* Prolonger si contamination.", {}),
+    ]
+    r = SfarRagRetriever(_store(_chain(specs)))
+    cfg = dataclasses.replace(_BASE, attach_table_notes=True, table_notes_mode="called", context_hygiene=True)
+    ids = [x.chunk.chunk_id for x in r.retrieve("zygomaplastie", config=cfg)[0]]
+    assert ids.count("n1") + ids.count("n2") == 1
+
+
+def test_called_notes_need_the_call_and_skip_allergy_and_references():
+    specs = [
+        ("row", "table_row_card", "Acte : zygomaplastie** | Molécule : moléculine",
+         {"linked_callout_ids": ["n1", "n2", "allerg", "addr"]}),
+        ("n1", "callout_footnote", "* Note simple non appelée par la ligne.", {}),
+        ("n2", "callout_footnote", "** Note appelée par la ligne.", {}),
+        ("allerg", "callout_allergy", "# Si allergie, autre molécule.", {}),
+        ("addr", "callout_footnote", "** Auteur correspondant : nom@exemple.fr", {}),
+    ]
+    r = SfarRagRetriever(_store(_chain(specs)))
+    cfg = dataclasses.replace(_BASE, attach_table_notes=True, table_notes_mode="called")
+    ids = {x.chunk.chunk_id for x in r.retrieve("zygomaplastie", config=cfg)[0]}
+    assert "n2" in ids and not ({"n1", "allerg", "addr"} & ids)

@@ -118,6 +118,11 @@ class RetrievalConfig:
     # retrieved table chunk at ingestion (`linked_callout_ids` of type callout_footnote) and the
     # block of footnotes printed right after the table (paragraphs starting with a call mark).
     attach_table_notes: bool = False
+    # Which notes (B1 after review R2): "linked" = every linked footnote + trailing note block
+    # (first version); "called" = only notes whose call mark (*, **, #, †) appears in the
+    # retrieved row, stopping at the end of the current table, references / author addresses /
+    # allergy boxes excluded; "called_scope" = "called" + the table's scope note ("… de ce tableau").
+    table_notes_mode: Literal["linked", "called", "called_scope"] = "linked"
     table_notes_max_chars: int = 1200
     # Window neighbours only for table chunks (prose neighbours are usually off-topic).
     context_window_tables_only: bool = False
@@ -129,6 +134,10 @@ class RetrievalConfig:
     # `population_quota` passages of each population (adult / paediatric, from chunk metadata)
     # among the documents of the top results. 0 = off.
     population_quota: int = 0
+    # Guarded population rule (B1 after R2): fires only when the top document has table rows of
+    # both populations; the passage comes from the question alone, inside that document, and
+    # must carry the same act label as a ranked row of the other population.
+    population_guard: bool = False
     population_tables_only: bool = True  # quota counted and filled with table chunks only
     population_counterpart: bool = False  # add the act label of the other population's row
     # Multi-query retrieval for MCQs (B1): one retrieval per option (stem + option), each
@@ -144,7 +153,12 @@ class RetrievalConfig:
 
     # Coverage signal (B1): the corpus is deemed to cover the query when the best
     # cross-encoder score reaches this threshold (exposed, never used to filter results).
-    coverage_threshold: float = 0.2
+    coverage_threshold: float = 0.2  # calibrated in-sample on dev, indicative only
+    # Context hygiene (B1 after R2): text-level dedup of the final context; guaranteed passages
+    # added after the ranked results' windows, inside `context_char_budget`, right after their
+    # anchor (so a generation-side cut by rank removes lower-value chunks first), no window
+    # around them.
+    context_hygiene: bool = False
 
     # Soft boost weights (applied additively/multiplicatively to RRF score)
     domain_boost: float = 0.18

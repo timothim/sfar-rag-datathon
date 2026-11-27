@@ -38,7 +38,7 @@ from rag_sfar.retrieval.crag import (
     strip_mcq_distractor_options,
 )
 from rag_sfar.retrieval.embedder import BaseEmbedder
-from rag_sfar.retrieval.medical_lexicon import fold_accents
+from rag_sfar.retrieval.medical_lexicon import fold_accents, tokenize_medical_french
 from rag_sfar.retrieval.query_tools import (
     negated_token_weights,
     patient_negated_spans,
@@ -69,6 +69,64 @@ _FOOTNOTE_REF_RE = re.compile(r"(?<![\*\w.])\*{1,3}(?![\*\w])|(?<![\w#])#(?![\w#
 # A footnote paragraph printed under a table starts with its call mark ("* …", "\*\* …",
 # "# …", "† …"; Markdown escapes allowed), not with bold text ("**Céfazoline**").
 _NOTE_START_RE = re.compile(r"^\s*(?:(?:\\?\*){1,4}(?![\*\w])|\\?#(?![#\w])|[†‡])")
+
+
+_CALL_RE = re.compile(r"\*{1,4}(?![\*\w])|(?<![\w#])#(?![\w#])|[†‡]")
+# Markdown emphasis (bold / italic spans) is formatting, not a footnote call.
+_EMPHASIS_RE = re.compile(r"(\*{1,3})(?=[^\s*])(.+?)(?<=[^\s*])\1")
+_NOTE_LINE_RE = re.compile(r"^\s*(\*{1,4}|#|†|‡)(?![\*\w#])", re.M)
+_SCOPE_NOTE_RE = re.compile(r"\b(?:de|dans|du|pour)\s+ce(?:s)?\s+tableaux?\b", re.I)
+# A "note" that is a bibliographic reference or an author address, not a table note.
+_BIBLIO_OR_ADDRESS_RE = re.compile(
+    r"auteur\s+correspondant|correspondance\s*:|e-?mail|@\w|\bdoi\b|\bet\s+al\b|"
+    r"\b(?:19|20)\d{2}\s*;\s*\d+\s*(?:\(\d+\))?\s*:\s*\d+",
+    re.I,
+)
+
+
+def _call_marks(text: str) -> set[str]:
+    """Footnote call marks used in a text ("Gustilo-Anderson**", "IVL*", "#"). Escaped stars
+    ("\\*") are literal marks; unescaped emphasis spans ("**Céfazoline**") are ignored."""
+    t = text.replace("\\*", "\x00")
+    t = _EMPHASIS_RE.sub(r"\2", t).replace("\x00", "*")
+    return set(_CALL_RE.findall(t))
+
+
+def _note_marks(text: str) -> set[str]:
+    """Marks that start a note line ("* …", "** …", "# …")."""
+    return set(_NOTE_LINE_RE.findall(text.replace("\\", "")))
+
+
+def _act_tokens(row_text: str) -> set[str]:
+    """Content words of the act label of a row card: the value of its first cell (the
+    "Sous-catégorie" line, when present, is not the act)."""
+    lines = [l for l in row_text.splitlines() if l.strip()]
+    line = next((l for l in lines if " | " in l or " : " in l and not l.lower().startswith("sous-cat")), lines[0] if lines else "")
+    cell = line.split(" | ")[0]
+    value = cell.split(" : ", 1)[1] if " : " in cell else cell
+    return {t for t in tokenize_medical_french(value) if len(t) >= 4 and not t.isdigit()}
+
+
+def _labels_match(a: set[str], b: set[str]) -> bool:
+    """Two act labels match when they share >= 2 content words covering at least half of the
+    shorter label."""
+    if not a or not b:
+        return False
+    shared = len(a & b)
+    return shared >= 2 and shared >= 0.5 * min(len(a), len(b))
+
+
+def _dedup_by_text(items: list[RetrievedChunk]) -> list[RetrievedChunk]:
+    """Drop a chunk whose normalised text already appears earlier in the context."""
+    seen: set[str] = set()
+    out = []
+    for r in items:
+        key = re.sub(r"\W+", " ", r.chunk.text.lower()).strip()
+        if key in seen:
+            continue
+        seen.add(key)
+        out.append(r)
+    return out
 
 
 def _chunk_population(chunk: Chunk) -> str:
@@ -541,25 +599,31 @@ class SfarRagRetriever:
 
         # 9b. Multi-query guarantees (B1): each MCQ option and each population compatible with
         # the query keep a few passages of their own (added after the ranked results).
+        guaranteed: list[RetrievedChunk] = []
         if analysis.temporal_mode != "all_versions" and (mcq_options or cfg.population_quota > 0):
             t_m = time.perf_counter()
-            selected = selected + self._guaranteed_extras(
+            guaranteed = self._guaranteed_extras(
                 selected, analysis, cfg, mask, semantic_query, mcq_stem, mcq_options
             )
             timings["multi_query_ms"] = round((time.perf_counter() - t_m) * 1000, 2)
+        if not cfg.context_hygiene:
+            selected, guaranteed = selected + guaranteed, []
 
         if (
             cfg.context_window > 0
             or cfg.expand_table_parent
             or cfg.attach_table_notes
             or cfg.context_order != "rank"
+            or cfg.context_hygiene
         ):
-            selected = self._window_expand(selected, cfg)
+            selected = self._window_expand(selected, cfg, guaranteed)
         timings["total_retrieval_ms"] = round((time.perf_counter() - t0) * 1000, 2)
 
         return selected, analysis, timings
 
-    def _window_expand(self, selected: list[RetrievedChunk], cfg: RetrievalConfig) -> list[RetrievedChunk]:
+    def _window_expand(
+        self, selected: list[RetrievedChunk], cfg: RetrievalConfig, guaranteed: list[RetrievedChunk] | None = None
+    ) -> list[RetrievedChunk]:
         """Small-to-big context windows after ranking (generic, structure-based).
 
         For each of the first `context_window_top` results: the parent table when the result is
@@ -572,15 +636,19 @@ class SfarRagRetriever:
         out: list[RetrievedChunk] = []
         for rank, item in enumerate(selected):
             out.append(item)
-            guaranteed = (item.expansion_reason or "").startswith(("mcq_option", "population"))
-            if (rank >= cfg.context_window_top and not guaranteed) or budget <= 0:
+            is_guaranteed = (item.expansion_reason or "").startswith(("mcq_option", "population"))
+            if (rank >= cfg.context_window_top and not is_guaranteed) or budget <= 0:
                 continue
             extra: list = []
             notes: list = []
             c = item.chunk
             is_table = c.chunk_type in ("table_row_card", "table_markdown")
             if cfg.attach_table_notes and is_table:
-                notes = self._table_notes(c, cfg.table_notes_max_chars)
+                notes = (
+                    self._table_notes(c, cfg.table_notes_max_chars)
+                    if cfg.table_notes_mode == "linked"
+                    else self._called_notes(c, cfg.table_notes_max_chars, cfg.table_notes_mode == "called_scope")
+                )
             if cfg.expand_table_parent and c.chunk_type == "table_row_card":
                 cur = c
                 for _ in range(60):
@@ -616,8 +684,33 @@ class SfarRagRetriever:
                 reason = "table_note" if ch.chunk_id in note_ids else "context_window"
                 out.append(RetrievedChunk(chunk=ch, final_score=round(item.final_score * 0.9, 6),
                                           is_expanded_context=True, expansion_reason=reason))
+        if cfg.context_hygiene:
+            out = self._place_guaranteed(out, guaranteed or [], budget, getattr(self, "_guarantee_anchors", {}))
+            out = _dedup_by_text(out)
         if cfg.context_order == "document":
             out = self._document_order(out)
+        return out
+
+    @staticmethod
+    def _place_guaranteed(
+        out: list[RetrievedChunk], guaranteed: list[RetrievedChunk], budget: int,
+        anchors: dict[str, str],
+    ) -> list[RetrievedChunk]:
+        """Insert each guaranteed passage (no window of its own) right after the block of its
+        anchor (the ranked passage it complements, else the first result), within the remaining
+        character budget. Placed there, a later cut by rank removes lower-value chunks first."""
+        ids = {r.chunk.chunk_id for r in out}
+        for g in guaranteed:
+            if g.chunk.chunk_id in ids or len(g.chunk.text) > budget:
+                continue
+            anchor = anchors.get(g.chunk.chunk_id)
+            pos = next((i for i, r in enumerate(out) if r.chunk.chunk_id == anchor), 0)
+            pos += 1
+            while pos < len(out) and out[pos].is_expanded_context:
+                pos += 1  # after the anchor's own window
+            out.insert(pos, g)
+            ids.add(g.chunk.chunk_id)
+            budget -= len(g.chunk.text)
         return out
 
     @staticmethod
@@ -629,7 +722,9 @@ class SfarRagRetriever:
     ) -> dict[str, float]:
         """Does the corpus cover the query? `coverage_score` = best cross-encoder probability
         over the reranked pool (-1 without reranker); `coverage_supported` = 1.0 when it reaches
-        `cfg.coverage_threshold` (calibrated on dev, see reports/agents/B1_retrieval.md);
+        `cfg.coverage_threshold` (calibrated IN-SAMPLE on dev — the threshold was chosen and
+        reported on the same queries — so indicative only, not validated; see
+        reports/agents/B1_retrieval.md);
         `channel_agreement` = share of the BM25 top 10 also in the dense top 10."""
         ce = [r.rerank_score for r in rerank_pool if r.rerank_score is not None]
         top_b = {i for i, _ in bm25_hits[:10]}
@@ -697,6 +792,7 @@ class SfarRagRetriever:
         the top results). Returned in addition to the ranked results, without duplicates."""
         seen = {r.chunk.chunk_id for r in selected}
         extras: list[RetrievedChunk] = []
+        self._guarantee_anchors = {}
 
         def add(hits: list[RetrievedChunk], reason: str, n: int) -> None:
             for h in hits:
@@ -715,7 +811,15 @@ class SfarRagRetriever:
                 sub = f"{mcq_stem} {text}".strip() if cfg.mcq_option_with_stem else text
                 add(self._focused_search(sub, mask, cfg, cfg.mcq_option_quota), f"mcq_option:{letter}", cfg.mcq_option_quota)
 
-        if cfg.population_quota > 0 and selected:
+        if cfg.population_quota > 0 and selected and cfg.population_guard:
+            for hit, anchor_id, pop in self._guarded_population(selected, analysis, cfg, mask, semantic_query):
+                if hit.chunk.chunk_id in seen:
+                    continue
+                seen.add(hit.chunk.chunk_id)
+                hit.expansion_reason = f"population:{pop}"
+                self._guarantee_anchors[hit.chunk.chunk_id] = anchor_id
+                extras.append(hit)
+        elif cfg.population_quota > 0 and selected:
             pops = {"pediatrie": ["pediatrie"], "adulte": ["adulte"]}.get(analysis.population, ["adulte", "pediatrie"])
             pop_arr, doc_arr, table_arr = self._chunk_arrays()
             top_docs = list(dict.fromkeys(r.chunk.doc_id for r in selected[:3]))
@@ -744,6 +848,111 @@ class SfarRagRetriever:
                         query = f"{semantic_query} {anchor.text[:300]}"
                 add(self._focused_search(query, restrict, cfg, need), f"population:{pop}", need)
         return extras
+
+    def _population_doc_ok(self, doc_id: str, min_rows: int = 3) -> bool:
+        """Guard of the population rule: the document has table rows of both populations."""
+        cache = getattr(self, "_pop_doc_cache", None)
+        if cache is None:
+            cache = self._pop_doc_cache = {}
+        if doc_id not in cache:
+            pop_arr, doc_arr, _ = self._chunk_arrays()
+            rows = np.array([c.chunk_type == "table_row_card" for c in self.store.chunks])
+            in_doc = (doc_arr == doc_id) & rows
+            cache[doc_id] = bool(
+                int(np.sum(in_doc & (pop_arr == "adulte"))) >= min_rows
+                and int(np.sum(in_doc & (pop_arr == "pediatrie"))) >= min_rows
+            )
+        return cache[doc_id]
+
+    def _guarded_population(
+        self,
+        selected: list[RetrievedChunk],
+        analysis: QueryAnalysis,
+        cfg: RetrievalConfig,
+        mask: np.ndarray,
+        semantic_query: str,
+    ) -> list[tuple[RetrievedChunk, str, str]]:
+        """Guarded population rule. Fires only when the document of the first result has table
+        rows of both populations. For each population the query does not exclude and that has
+        no ranked row yet, the anchor is the best ranked row of the other population in that
+        document; the question alone is searched inside the document's rows of the missing
+        population, and a hit is kept only when its act label (first cell) matches the
+        anchor's. Returns (passage, anchor chunk id, population)."""
+        top_doc = selected[0].chunk.doc_id
+        if not self._population_doc_ok(top_doc):
+            return []
+        pops = {"pediatrie": ["pediatrie"], "adulte": ["adulte"]}.get(analysis.population, ["adulte", "pediatrie"])
+        pop_arr, doc_arr, _ = self._chunk_arrays()
+        rows_arr = np.array([c.chunk_type == "table_row_card" for c in self.store.chunks]) if getattr(self, "_rows_arr", None) is None else self._rows_arr
+        self._rows_arr = rows_arr
+        ranked_rows = [r.chunk for r in selected if r.chunk.chunk_type == "table_row_card" and r.chunk.doc_id == top_doc]
+        out: list[tuple[RetrievedChunk, str, str]] = []
+        for pop in pops:
+            other = "adulte" if pop == "pediatrie" else "pediatrie"
+            anchors = [c for c in ranked_rows if _chunk_population(c) == other]
+            if not anchors:
+                continue
+            anchor = anchors[0]
+            label = _act_tokens(anchor.text)
+            if len(label) < 2:
+                continue
+            if any(_chunk_population(c) == pop and _labels_match(label, _act_tokens(c.text)) for c in ranked_rows):
+                continue  # the counterpart is already ranked
+            restrict = mask & (doc_arr == top_doc) & (pop_arr == pop) & rows_arr
+            for hit in self._focused_search(semantic_query, restrict, cfg, top_n=8):
+                if _labels_match(label, _act_tokens(hit.chunk.text)):
+                    out.append((hit, anchor.chunk_id, pop))
+                    break
+        return out
+
+    def _called_notes(self, chunk: Chunk, max_chars: int, with_scope: bool) -> list[Chunk]:
+        """Notes called by a retrieved table chunk: a note is attached only when one of its call
+        marks (*, **, ***, #, †, ‡ at the start of a note line) appears in the chunk's text.
+        Candidates are the notes linked at ingestion and the note paragraphs printed right after
+        the CURRENT table (the walk stops at the next table). References, author addresses and
+        allergy boxes are never attached. With `with_scope`, the table's scope note (a linked
+        note that speaks of "ce tableau" / "ces tableaux") is attached too."""
+        calls = _call_marks(chunk.text)
+        out: dict[str, Chunk] = {}
+
+        def eligible(c: Chunk | None) -> bool:
+            return (
+                c is not None
+                and c.doc_id == chunk.doc_id
+                and c.chunk_type not in ("callout_allergy", "references")
+                and not c.is_reference_section
+                and len(c.text) <= max_chars
+                and not _BIBLIO_OR_ADDRESS_RE.search(c.text)
+            )
+
+        for cid in chunk.linked_callout_ids:
+            c = self.store.get_chunk(cid)
+            if not eligible(c):
+                continue
+            if calls & _note_marks(c.text) or (with_scope and _SCOPE_NOTE_RE.search(c.text[:200]) and not _note_marks(c.text)):
+                out[c.chunk_id] = c
+        if calls:
+            # Walk to the end of the current table only: its own row cards (same table_id when
+            # the index has one), never into the next table.
+            tid = getattr(chunk, "table_id", "") or ""
+            cur: Chunk | None = chunk
+            if chunk.chunk_type == "table_markdown":
+                nxt = self.store.get_chunk(chunk.next_chunk_id) if chunk.next_chunk_id else None
+                cur = chunk
+                while nxt is not None and nxt.chunk_type == "table_row_card" and nxt.doc_id == chunk.doc_id:
+                    cur, nxt = nxt, (self.store.get_chunk(nxt.next_chunk_id) if nxt.next_chunk_id else None)
+            nxt = self.store.get_chunk(cur.next_chunk_id) if cur and cur.next_chunk_id else None
+            while nxt is not None and nxt.doc_id == chunk.doc_id and nxt.chunk_type == "table_row_card" and (
+                not tid or (getattr(nxt, "table_id", "") or "") in ("", tid)
+            ):
+                nxt = self.store.get_chunk(nxt.next_chunk_id) if nxt.next_chunk_id else None
+            taken = 0
+            while nxt is not None and taken < 2 and nxt.doc_id == chunk.doc_id and _NOTE_START_RE.match(nxt.text):
+                if eligible(nxt) and calls & _note_marks(nxt.text):
+                    out[nxt.chunk_id] = nxt
+                taken += 1
+                nxt = self.store.get_chunk(nxt.next_chunk_id) if nxt.next_chunk_id else None
+        return list(out.values())
 
     @staticmethod
     def _document_order(items: list[RetrievedChunk]) -> list[RetrievedChunk]:
