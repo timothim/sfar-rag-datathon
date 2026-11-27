@@ -147,7 +147,9 @@ def check_answer(answer: str, passages: list[RetrievedChunk], is_abstention: boo
         s_ctx = " ".join(texts[i - 1] for i in s_cites)
         for d in doses(sent):
             res.n_doses += 1
-            if d not in ctx_doses and d.split(" ")[0] not in query_numbers:
+            if d.split(" ")[0] in query_numbers:
+                continue  # value given in the question (patient data)
+            if d not in ctx_doses:
                 res.unsupported_doses.append(d)
             elif s_cites and d not in s_ctx_doses:
                 res.doses_not_in_cited.append(d)
