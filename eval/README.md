@@ -60,7 +60,31 @@ HF_HUB_OFFLINE=1 .venv/bin/python -m rag_sfar.evaluation.datasets coverage --sui
 - `gold_doc_ids` : édition en vigueur de la RFE antibioprophylaxie dans l'index (`topic_lineage='antibioprophylaxie'`, `is_latest_edition=1`).
 - `answer_key` : lettre seulement pour les QCM `single_supported` ; les questions ouvertes sont notées par le juge sur les faits obligatoires.
 - Métriques supplémentaires (sur tout le contexte retourné) : `evidence_hit`, `evidence_recall` (preuves requises dont un fragment est couvert), `sufficiency` (un ensemble de preuves entièrement couvert ; ET dans l'ensemble, OU entre ensembles), avec courbes @k. Tags : `cat:*`, `difficulty:*`, `population:*`, `pediatric`, `challenge:*`, `behavior:*`.
-- Juge : `judge_io export` transmet faits obligatoires / interdits / comportement attendu ; `merge` agrège taux de faits satisfaits, réponses sans omission, violations d'interdits et comportement respecté.
+- Juge : les cas transmettent faits obligatoires / interdits / comportement attendu / informations manquantes requises / corrigé détaillé (questions à clarification) ; la fusion agrège taux de faits satisfaits, réponses sans omission, violations d'interdits et comportement (voir « Juge LLM » ci-dessous).
+
+## Juge LLM (grille v4, à l'aveugle, en double)
+
+Grille : `eval_internal/judge/JUDGE_INSTRUCTIONS.md` (historique v1 → v4 à la fin) ; consigne des agents juges : `eval_internal/judge/JUDGE_TASK.md`. Le juge ne voit ni le système, ni la configuration, ni le modèle, ni le jeu, ni le split.
+
+```bash
+# 1. export à l'aveugle : réponses de plusieurs rapports (dev et test, toutes variantes) mélangées,
+#    identifiants opaques, lots d'environ 25 cas ; la clé va dans eval_internal/judge/blind_keys/<run>/
+HF_HUB_OFFLINE=1 .venv/bin/python -m rag_sfar.evaluation.judge_io export-blind --run blind_<nom> \
+    --reports reports/eval/b3/<A>.json reports/eval/b3/<B>.json ...
+# 2. deux passes indépendantes (a, b) : un agent juge par lot et par passe, consigne JUDGE_TASK.md
+#    avec <RUN> = blind_<nom>, <P> = numéro de lot, <J> = a ou b -> <RUN>/pass_<J>/judge_out_<P>.json
+# 3. fusion (échoue s'il manque un verdict ; --allow-missing le compte incorrect et le liste)
+HF_HUB_OFFLINE=1 .venv/bin/python -m rag_sfar.evaluation.judge_io merge-blind --run blind_<nom> --passes a,b
+```
+
+- Les dossiers `eval_internal/judge/runs/blind_*/` et `blind_keys/` restent locaux (texte du benchmark) ; l'export refuse un dossier suivi par git.
+- Sorties : `reports/eval/judge_v4/<run>/<rapport>.json|.md` (copie de chaque rapport avec les verdicts ; les rapports d'origine ne sont pas modifiés, sauf `--in-place`) et `summary.json|.md` (tous les rapports, accord entre juges).
+- Combinaison déclarée d'avance (chiffres principaux) : **correct** et **comportement accepté** seulement si tous les juges l'accordent ; **erreur grave** si un juge en signale une (toutes catégories sauf `none`, `other` compris). Écart rapporté : `_any` (un juge suffit) pour les issues favorables, `_all` (tous les juges) pour les erreurs.
+- Comportement : `judge_behavior_ok` strict (liste du benchmark : clarification ou réponse conditionnelle pour les questions à clarification, réponse sinon) ; secondaires : `judge_behavior_ok_lenient` (lecture v3 : réponse au cas par cas acceptée partout) et `judge_behavior_ok_case_by_case` (stratégie alternative jugée recevable par le juge, spécification de l'évaluateur §6.3).
+- Abstention à tort (`judge_false_abstention`, questions couvertes) et abstention manquante (`judge_missing_abstention`, questions hors corpus) : taux à part ; l'abstention à tort n'est pas une erreur grave.
+- Fidélité (`judge_faithful`) : les extraits que la réponse cite ([S1]…) sont retrouvés dans les prompts capturés par `gen_replay` et transmis au juge (4 000 caractères par extrait, 9 000 par cas) ; seulement pour `faithful` et `unsupported_claim`.
+- Intervalles : Clopper-Pearson (exact) pour tous les taux 0/1 de la fusion ; bootstrap pour le taux de faits satisfaits.
+- Calibration sous v4 (clé déterministe, `abp171` dev seulement, sonde de longueur) : `judge_io export-calibration --run blind_<nom>` puis `judge_io calibrate-blind --run blind_<nom> --passes a,b`.
 
 ## Lancer l'évaluation
 

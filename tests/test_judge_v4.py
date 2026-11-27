@@ -159,7 +159,8 @@ def test_cited_sources_parsing_and_bounds():
     assert cited_labels("A [S1]. B [S3, 2016]. C [S1, S2]. D [12].") == [1, 2, 3]
     out = bound_sources(blocks, [1, 2, 3], max_each=500, max_total=900)
     assert [s["label"] for s in out] == ["S1", "S2", "S3"]
-    assert out[1]["text"].endswith("[tronqué]") and sum(len(s["text"]) for s in out) <= 900 + 50
+    assert out[1]["lines"][-1].endswith("[tronqué]") and sum(len(x) for s in out for x in s["lines"]) <= 900 + 50
+    assert all(len(x) <= judge_io.LINE_CHARS for s in bound_sources(blocks, [2]) for x in s["lines"])
 
 
 # ---------------------------------------------------------------- blind export and merge (end to end)
@@ -264,4 +265,22 @@ def test_cited_sources_recovered_from_prompt_folder(blind_env):
     man = judge_io.export_blind(reports[:1], "blind_s", frontier_root=tmp / "frontier", check_ignored=False, **dirs)
     assert man["sources_status"] == {"ok": 3}
     cases = [c for f in (dirs["runs_dir"] / "blind_s").glob("judge_input_*.json") for c in json.loads(f.read_text(encoding="utf-8"))]
-    assert all(c["cited_sources"][0]["label"] == "S1" and "Texte un." in c["cited_sources"][0]["text"] for c in cases)
+    assert all(c["cited_sources"][0]["label"] == "S1" and "Texte un." in c["cited_sources"][0]["lines"] for c in cases)
+    shown = judge_io.show("blind_s", 0, runs_dir=dirs["runs_dir"])
+    assert "Texte un." in shown and "case_id x" in shown
+
+
+def test_cited_sources_from_blind_generation_keys(blind_env):
+    reports, dirs, tmp = blind_env
+    meta = {"cache": "c", "suites": ["synthetic"], "split": "dev"}
+    keys = tmp / "frontier_keys"
+    keys.mkdir()
+    (keys / "exp.json").write_text(json.dumps({"meta": meta, "cases": [
+        {"id": i, "suite": "synthetic", "user": PROMPT, "case_id": f"c{n}"} for n, i in enumerate(("A1", "A2", "A3"))]}), encoding="utf-8")
+    rep = json.loads(reports[1].read_text(encoding="utf-8"))
+    rep["replay"] = meta
+    reports[1].write_text(json.dumps(rep), encoding="utf-8")
+    man = judge_io.export_blind(reports[1:], "blind_k", frontier_root=tmp / "frontier_none", check_ignored=False, **dirs)
+    assert man["sources_status"] == {"ok": 3}  # keys root defaults to <frontier_root>/../frontier_keys
+    idx = judge_io.PromptIndex(tmp / "frontier_none", keys_root=keys)
+    assert idx.prompts(meta)[("synthetic", "A2")] == PROMPT

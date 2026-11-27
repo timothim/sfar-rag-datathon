@@ -146,58 +146,86 @@ def cited_labels(answer: str) -> list[int]:
     return sorted({int(x) for b in _BRACKET_RE.findall(answer or "") for x in _LABEL_RE.findall(b)})
 
 
+LINE_CHARS = 1500  # file viewers of the judge agents cut lines at ~2000 characters
+
+
+def _lines(text: str, width: int = LINE_CHARS) -> list[str]:
+    out = []
+    for ln in text.split("\n"):
+        while len(ln) > width:
+            cut = ln.rfind(" ", 0, width)
+            cut = cut if cut > width // 2 else width
+            out.append(ln[:cut])
+            ln = ln[cut:].lstrip()
+        out.append(ln)
+    return out
+
+
 def bound_sources(blocks: dict[int, str], labels: list[int], max_each: int = MAX_SOURCE_CHARS,
-                  max_total: int = MAX_SOURCES_TOTAL) -> list[dict[str, str]]:
-    """Cited excerpts, each cut at `max_each` characters and all together at `max_total`."""
-    out, used = [], 0
+                  max_total: int = MAX_SOURCES_TOTAL) -> list[dict[str, Any]]:
+    """Cited excerpts, each cut at `max_each` characters and all together at `max_total`, as a
+    list of lines of at most LINE_CHARS characters (`lines`)."""
+    out: list[dict[str, Any]] = []
+    used = 0
     for n in labels:
         text = blocks[n]
         room = min(max_each, max_total - used)
         if room <= 200:
-            out.append({"label": f"S{n}", "text": "[non transmis : limite de taille atteinte]"})
+            out.append({"label": f"S{n}", "lines": ["[non transmis : limite de taille atteinte]"]})
             continue
         if len(text) > room:
             text = text[:room] + TRUNCATED
         used += len(text)
-        out.append({"label": f"S{n}", "text": text})
+        out.append({"label": f"S{n}", "lines": _lines(text)})
     return out
 
 
 class PromptIndex:
-    """Generation prompts captured by eval_internal/gen_replay.py (frontier export folders).
+    """Generation prompts captured by eval_internal/gen_replay.py, i.e. the exact context the
+    stand-in generator saw. Two layouts are read:
 
-    A report built by `gen_replay import-frontier` stores the folder's meta.json as
-    `report["replay"]`; the folder whose meta.json is identical holds `gen_input_*.json`
-    ({case_id, suite, system, user}), i.e. the exact context the generator saw."""
+    - legacy export folders `<frontier_root>/<name>/` with `meta.json` (= `report["replay"]`)
+      and `gen_input_*.json` ({case_id = question id, suite, system, user});
+    - blind exports (since 2026-11-27): key files `<keys_root>/<name>.json` with `meta`
+      (= `report["replay"]`) and `cases` ({id, suite, user, case_id = opaque id}).
+    The prompt set is used only if exactly one folder or key file matches the report's meta."""
 
-    def __init__(self, root: Path = FRONTIER_ROOT) -> None:
+    def __init__(self, root: Path = FRONTIER_ROOT, keys_root: Path | None = None) -> None:
         self.root = root
+        self.keys_root = keys_root if keys_root is not None else root.parent / "frontier_keys"
         self._cache: dict[str, dict[tuple[str, str], str] | None] = {}
 
-    def _folder_for(self, replay: dict[str, Any]) -> Path | None:
-        if not replay or not self.root.exists():
+    def _load(self, replay: dict[str, Any]) -> dict[tuple[str, str], str] | None:
+        if not replay:
             return None
-        hits = []
-        for m in sorted(self.root.glob("*/meta.json")):
-            try:
-                if json.loads(m.read_text(encoding="utf-8")) == replay:
-                    hits.append(m.parent)
-            except (OSError, json.JSONDecodeError):
-                continue
-        return hits[0] if len(hits) == 1 else None
-
-    def prompts(self, replay: dict[str, Any]) -> dict[tuple[str, str], str] | None:
-        key = json.dumps(replay, sort_keys=True, ensure_ascii=False)
-        if key not in self._cache:
-            d = self._folder_for(replay)
-            if d is None:
-                self._cache[key] = None
-            else:
+        found: list[dict[tuple[str, str], str]] = []
+        if self.root.exists():
+            for m in sorted(self.root.glob("*/meta.json")):
+                try:
+                    if json.loads(m.read_text(encoding="utf-8")) != replay:
+                        continue
+                except (OSError, json.JSONDecodeError):
+                    continue
                 out = {}
-                for f in sorted(d.glob("gen_input_*.json")):
+                for f in sorted(m.parent.glob("gen_input_*.json")):
                     for c in json.loads(f.read_text(encoding="utf-8")):
                         out[(c.get("suite", ""), c["case_id"])] = c["user"]
-                self._cache[key] = out
+                found.append(out)
+        if self.keys_root.exists():
+            for k in sorted(self.keys_root.glob("*.json")):
+                try:
+                    data = json.loads(k.read_text(encoding="utf-8"))
+                except (OSError, json.JSONDecodeError):
+                    continue
+                if not isinstance(data, dict) or data.get("meta") != replay:
+                    continue
+                found.append({(c["suite"], c["id"]): c["user"] for c in data.get("cases", [])})
+        return found[0] if len(found) == 1 else None
+
+    def prompts(self, replay: dict[str, Any]) -> dict[tuple[str, str], str] | None:
+        key = json.dumps(replay, sort_keys=True, ensure_ascii=False, default=str)
+        if key not in self._cache:
+            self._cache[key] = self._load(replay)
         return self._cache[key]
 
 
@@ -612,6 +640,7 @@ def merge_blind(run: str, passes: list[str], allow_missing: bool = False, label:
     for cid, m in mapping.items():
         by_report.setdefault(m["report"], []).append(cid)
     overrides: Counter[str] = Counter()
+    final: dict[str, dict[str, dict[str, Any]]] = {p: {} for p in passes}  # verdicts after the v4 consistency rules
     summary_reports = []
     all_keys = [*HEADLINE, *[k for k in (*GOOD_KEYS, *BAD_KEYS, *MEAN_KEYS) if k not in HEADLINE]]
     all_keys += [k + "_any" for k in GOOD_KEYS] + [k + "_all" for k in BAD_KEYS] + [k + "_max" for k in MEAN_KEYS]
@@ -632,6 +661,7 @@ def merge_blind(run: str, passes: list[str], allow_missing: bool = False, label:
                 per_pass, verdicts = [], {}
                 for p in passes:
                     v = apply_v4_consistency(it, raw[p][cid])
+                    final[p][cid] = v
                     overrides.update(o.split(":")[1].strip() for o in v.get("v4_overrides", []))
                     verdicts[p] = v
                     m = row_metrics(it, v)
@@ -664,7 +694,7 @@ def merge_blind(run: str, passes: list[str], allow_missing: bool = False, label:
         for run_ in rep["runs"]:
             summary_reports.append({"report": rpath, "suite": rep["suite"], "split": rep["split"], "config": run_["config"],
                                     "merged": str(target), "summary": {k: v for k, v in run_["summary"].items() if k.startswith("judge_")}})
-    overall = {f"{a}-{b}": agreement(raw[a], raw[b]) for a, b in combinations(passes, 2)}
+    overall = {f"{a}-{b}": agreement(final[a], final[b]) for a, b in combinations(passes, 2)}
     result = {"run": run, "rubric": RUBRIC_VERSION, "passes": passes, "label": label, "n_cases": len(mapping),
               "missing_or_invalid": len(problems), "problems": problems, "consistency_overrides": dict(overrides),
               "agreement": overall, "instructions_changed_since_export": sorted(changed), "reports": summary_reports}
@@ -829,6 +859,48 @@ def calibrate_blind(run: str, passes: list[str], allow_missing: bool = False, ru
     return res
 
 
+def show(run: str, part: int, start: int = 0, count: int = 25, runs_dir: Path = RUNS_DIR, width: int = 150,
+         max_chars: int = 20000) -> str:
+    """Readable rendering of the cases of a batch from `start` (long lines wrapped), for judge
+    agents whose file viewer cuts long lines. Stops before `max_chars` (always at least one case)
+    and says where to continue."""
+    import textwrap
+
+    cases = json.loads((runs_dir / run / f"judge_input_{part}.json").read_text(encoding="utf-8"))
+    blocks: list[str] = []
+    for i, c in enumerate(cases[start:start + count], start):
+        out: list[str] = [f"\n===== case {i} | case_id {c['case_id']} ====="]
+        _show_case(c, out, width, textwrap)
+        text = "\n".join(out)
+        if blocks and sum(len(b) for b in blocks) + len(text) > max_chars:
+            break
+        blocks.append(text)
+    end = start + len(blocks)
+    head = f"# batch {part}: cases {start}..{end - 1} of {len(cases)} (0-based)"
+    tail = f"\n# next: --start {end}" if end < len(cases) else "\n# end of batch"
+    return head + "\n".join(blocks) + tail
+
+
+def _show_case(c: dict[str, Any], out: list[str], width: int, textwrap) -> None:
+    def put(label: str, text: str) -> None:
+        out.append(f"{label}:")
+        for ln in str(text).split("\n"):
+            out.extend(textwrap.wrap(ln, width, initial_indent="  ", subsequent_indent="  ") or [""])
+
+    for k in ("question", "reference", "reference_narrative", "answer"):
+        if k in c:
+            put(k, c[k])
+    for k in ("mandatory_claims", "forbidden_claims", "required_missing_information"):
+        if k in c:
+            put(k, "\n".join(f"{x['id']} : {x['text']}" for x in c[k]))
+    for k in ("expected_behavior", "acceptable_behaviors"):
+        if k in c:
+            put(k, c[k] if isinstance(c[k], str) else ", ".join(c[k]))
+    if "cited_sources" in c:
+        put("cited_sources", "\n".join("\n".join(s.get("lines") or [f"[{s['label']}] " + s.get("text", "")]) for s in c["cited_sources"])
+            or "(aucun extrait cité)")
+
+
 # ---------------------------------------------------------------- legacy single-report commands
 
 
@@ -969,6 +1041,12 @@ def _cli() -> None:
     cb.add_argument("--run", required=True)
     cb.add_argument("--passes", default="a,b")
     cb.add_argument("--allow-missing", action="store_true")
+    sh = sub.add_parser("show", help="print cases of a batch with wrapped lines (for judge agents)")
+    sh.add_argument("--run", required=True)
+    sh.add_argument("--part", type=int, required=True)
+    sh.add_argument("--start", type=int, default=0)
+    sh.add_argument("--count", type=int, default=25)
+    sh.add_argument("--max-chars", type=int, default=20000)
     e = sub.add_parser("export", help="legacy, not blind")
     e.add_argument("--report", type=Path, required=True)
     e.add_argument("--out-dir", type=Path, required=True)
@@ -989,6 +1067,8 @@ def _cli() -> None:
         export_calibration_blind(a.run, batch_size=a.batch_size, seed=a.seed)
     elif a.cmd == "calibrate-blind":
         calibrate_blind(a.run, a.passes.split(","), a.allow_missing)
+    elif a.cmd == "show":
+        print(show(a.run, a.part, a.start, a.count, max_chars=a.max_chars))
     elif a.cmd == "export":
         export(a.report, a.out_dir, a.parts)
     elif a.cmd == "merge":
