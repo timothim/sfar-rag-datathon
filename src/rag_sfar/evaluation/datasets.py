@@ -141,11 +141,18 @@ def split_path(suite: str, split: str) -> Path:
     return base / suite / f"{split}.jsonl"
 
 
-def available_suites() -> list[str]:
+# Suites held out from tuning: run by name only, on frozen configurations (each run logged in
+# JOURNAL.md). They are never part of `--suite full`.
+HELD_OUT_SUITES = ("genprobe",)
+
+
+def available_suites(include_held_out: bool = False) -> list[str]:
     names = set()
     for base in (SPLITS_DIR, INTERNAL_DIR / "splits"):
         if base.exists():
             names |= {p.name for p in base.iterdir() if p.is_dir()}
+    if not include_held_out:
+        names -= set(HELD_OUT_SUITES)
     return sorted(names)
 
 
