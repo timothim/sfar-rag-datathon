@@ -592,3 +592,17 @@ Vérifié par l'orchestrateur après tous les commits : diff vide contre `retrie
 - À la demande de l'utilisateur (« merge tout sur le main »), `main` a été avancée de 943e0cd à la tête de `rag-sfar-v2` par avance rapide (`git push origin rag-sfar-v2:main`, sans réécriture d'historique). Le README affiché par défaut sur le dépôt public est désormais le nouveau (schéma du pipeline évalué, chiffres vérifiés, aucune mention de cours). Rendu du schéma non vérifié sur github.com (vérifié en local seulement).
 - Les deux branches sont tenues au même commit ; continuer à travailler sur `rag-sfar-v2` et n'avancer `main` que sur demande.
 - Reste ouvert : décision sur les adaptations du découpage proposées par K1 (nouvel index `tas_v7` = rouvrir le retrieval gelé).
+
+## Adaptation du découpage aux recommandations gradées : conditions d'adoption écrites AVANT toute mesure (11:58)
+Décision de l'utilisateur : lancer le plan en parallèle, vérifier que rien ne se dégrade, décider ensuite. Une seule pipeline ; seule l'étape de découpage change ; nouveaux index à côté de `index/tas_v6`, qui reste l'index évalué et servi par défaut.
+
+- **K2** (fichier `ingestion/chunker.py`) : correctifs côté texte proposés par K1, derrière des interrupteurs éteints par défaut (le comportement actuel reste reproductible) : un titre réduit à une ligne de grade est traité comme du texte ; formats de numérotation et de grade supplémentaires ; énoncé gardé avec son grade ; bibliographies sans titre signalées. Index `index/tas_v7`.
+- **K3** (fichier `ingestion/table_parser.py`) : en-têtes de tableau hérités seulement d'un tableau adjacent, derrière un interrupteur éteint par défaut. Mesuré seul : index `index/tas_v6_tablefix` (seul ce correctif).
+- **Conditions d'adoption, fixées d'avance** (retrieval seul, configuration `C10_context_notes`, dev uniquement, contre `tas_v6`) :
+  1. compteurs de fidélité de `scripts/ingestion_structural_checks.py` à 0, comme sur `tas_v6` ;
+  2. K2 : passages du document d'antibioprophylaxie en vigueur identiques à ceux de `tas_v6` (texte et type), à l'exception de ceux que le correctif vise explicitement, listés et lus ; K3 : chaque fiche de tableau modifiée dans l'antibioprophylaxie est lue ou échantillonnée (au moins 40) et classée corrigée / inchangée de sens / dégradée, avec **0 dégradée** exigé ;
+  3. aucune régression : la borne basse de l'intervalle apparié (nouvel index − `tas_v6`) ne descend pas sous **−2 points** sur la suffisance d'`abpe171` dev (formulation standard et formulation des cliniciens `abpvern` dev) ni sur le passage dans le contexte de `multirfe_synth` dev, et pas plus d'une question perdue par jeu ;
+  4. compteurs de structure de K1 en hausse (énoncés avec leur grade dans le même passage ; passages sous un titre de grade ; fiches à en-têtes hérités d'un tableau non adjacent) ;
+  5. tests verts, test anti-fuite silencieux, fichiers gelés du retrieval inchangés.
+- Si une condition échoue : l'index n'est pas adopté, le résultat est rapporté tel quel. Les jeux de test et les jeux tenus à l'écart, déjà consommés, ne sont pas réutilisés. **Aucun gain de score sur questions jamais vues ne pourra être prouvé** ; le bénéfice attendu est l'exactitude de ce qui est affiché (grade à côté de sa recommandation), mesuré par les compteurs de structure et une lecture d'échantillon.
+- La bascule du profil servi vers un nouvel index reste une décision de l'utilisateur ; pour essayer un index dans la démo sans rien changer au code : `RAG_SFAR_INDEX_DIR=index/tas_v7`.
