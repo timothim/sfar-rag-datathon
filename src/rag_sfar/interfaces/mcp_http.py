@@ -18,12 +18,14 @@ What it does
   `initialize`-handshake revisions (2024-11-05 .. 2025-11-25) on the same endpoint.
   `stateless_http=True`: no server-side session, any replica can answer.
 
-Run locally (binds 127.0.0.1 only):
-    HF_HUB_OFFLINE=1 .venv/bin/python -m rag_sfar.interfaces.mcp_http \
-        --index-dir index/table_aware_sota --port 8765
-Then point an MCP client to http://127.0.0.1:8765/mcp.
+Run locally (binds 127.0.0.1 only; index = production profile, index/tas_v6):
+    HF_HUB_OFFLINE=1 rag-sfar-mcp-http --port 8765
+Then point an MCP client to http://127.0.0.1:8765/mcp. Environment variables (CLI flags win):
+RAG_SFAR_MCP_HOST, RAG_SFAR_MCP_PORT, RAG_SFAR_INDEX_DIR, RAG_SFAR_MCP_ALLOWED_HOSTS
+(comma-separated Host header values, e.g. "127.0.0.1:*,localhost:*": keeps the SDK's DNS
+rebinding protection on when binding 0.0.0.0 inside a container). See reports/MCP_DEPLOIEMENT.md.
 
-Optional dependency: `mcp>=2.3` (official SDK, MIT). Not declared in pyproject.toml.
+Optional dependency: extra `mcp` of pyproject.toml (`pip install -e '.[mcp,neural]'`).
 """
 
 from __future__ import annotations
@@ -329,14 +331,30 @@ def create_mcp_server(retriever: SfarRagRetriever) -> Any:
     return server
 
 
-def create_http_app(retriever: SfarRagRetriever, host: str = "127.0.0.1") -> Any:
-    """Starlette ASGI app serving MCP at /mcp (stateless, JSON responses) and /healthz."""
+def create_http_app(
+    retriever: SfarRagRetriever, host: str = "127.0.0.1", allowed_hosts: list[str] | None = None
+) -> Any:
+    """Starlette ASGI app serving MCP at /mcp (stateless, JSON responses) and /healthz.
+
+    On a loopback `host` the SDK enables DNS rebinding protection by itself. When binding another
+    address (container), pass `allowed_hosts` to keep that protection on.
+    """
+    security = None
+    if allowed_hosts:
+        from mcp.server.transport_security import TransportSecuritySettings
+
+        security = TransportSecuritySettings(
+            enable_dns_rebinding_protection=True,
+            allowed_hosts=allowed_hosts,
+            allowed_origins=[f"http://{h}" for h in allowed_hosts],
+        )
     server = create_mcp_server(retriever)
     return server.streamable_http_app(
         streamable_http_path="/mcp",
         stateless_http=True,
         json_response=True,
         host=host,
+        transport_security=security,
     )
 
 
@@ -368,14 +386,26 @@ def main() -> None:  # pragma: no cover - manual entry point
     import uvicorn
 
     parser = argparse.ArgumentParser(description="RAG-SFAR MCP server, Streamable HTTP (prototype, localhost).")
-    parser.add_argument("--index-dir", type=Path, default=None, help="default: production profile index (generation/profile.py)")
-    parser.add_argument("--host", default="127.0.0.1", help="Keep 127.0.0.1 unless behind a reverse proxy.")
-    parser.add_argument("--port", type=int, default=8765)
+    import os
+
+    parser.add_argument(
+        "--index-dir", type=Path, default=None,
+        help="default: $RAG_SFAR_INDEX_DIR, else the production profile index (generation/profile.py)",
+    )
+    parser.add_argument(
+        "--host", default=os.environ.get("RAG_SFAR_MCP_HOST", "127.0.0.1"),
+        help="$RAG_SFAR_MCP_HOST; keep 127.0.0.1 unless behind a reverse proxy.",
+    )
+    parser.add_argument("--port", type=int, default=int(os.environ.get("RAG_SFAR_MCP_PORT", "8765")))
     args = parser.parse_args()
+    allowed = [h.strip() for h in os.environ.get("RAG_SFAR_MCP_ALLOWED_HOSTS", "").split(",") if h.strip()]
     from rag_sfar.generation.profile import PRODUCTION
 
     retriever = load_retriever(PRODUCTION.resolve_index_dir(args.index_dir))
-    uvicorn.run(create_http_app(retriever, host=args.host), host=args.host, port=args.port)
+    uvicorn.run(
+        create_http_app(retriever, host=args.host, allowed_hosts=allowed or None),
+        host=args.host, port=args.port,
+    )
 
 
 if __name__ == "__main__":  # pragma: no cover

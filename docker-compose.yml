@@ -1,0 +1,28 @@
+# Local test only: ports are published on 127.0.0.1. Nothing here is pushed or exposed.
+# Index: ./index/tas_v6 mounted read-only. LLM endpoint/model/key: export RAG_SFAR_LLM_BASE_URL,
+# RAG_SFAR_LLM_MODEL and RAG_SFAR_LLM_API_KEY in the shell before `docker compose --profile api up`
+# (the values below are placeholders); never write the key in this file.
+services:
+  mcp:
+    build: .
+    image: rag-sfar:local
+    environment:
+      RAG_SFAR_SERVICE: mcp
+    volumes:
+      - ./index/tas_v6:/data/index:ro
+    ports:
+      - "127.0.0.1:8020:8020"
+    mem_limit: 3g
+  api:
+    image: rag-sfar:local
+    profiles: ["api"]
+    environment:
+      RAG_SFAR_SERVICE: api
+      RAG_SFAR_LLM_BASE_URL: ${RAG_SFAR_LLM_BASE_URL:-http://host.docker.internal:8080/v1}
+      RAG_SFAR_LLM_MODEL: ${RAG_SFAR_LLM_MODEL:-qwen-27b}
+      RAG_SFAR_LLM_API_KEY: ${RAG_SFAR_LLM_API_KEY:-CHANGE_ME_AT_RUNTIME}
+    volumes:
+      - ./index/tas_v6:/data/index:ro
+    ports:
+      - "127.0.0.1:8000:8000"
+    mem_limit: 4g

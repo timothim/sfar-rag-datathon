@@ -34,6 +34,10 @@ pgvector = [
     "psycopg[binary]>=3.2",
     "pgvector>=0.3",
 ]
+mcp = [
+    # Official MCP Python SDK, tested with 2.3.0 (Streamable HTTP server + client).
+    "mcp>=2.3,<3",
+]
 dev = [
     "pytest>=8.0",
     "pytest-asyncio>=0.24",
@@ -45,6 +49,7 @@ rag-sfar-index = "rag_sfar.cli:index_cmd"
 rag-sfar-eval = "rag_sfar.cli:eval_cmd"
 rag-sfar-serve = "rag_sfar.cli:serve_cmd"
 rag-sfar-mcp = "rag_sfar.interfaces.mcp_server:main"
+rag-sfar-mcp-http = "rag_sfar.interfaces.mcp_http:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

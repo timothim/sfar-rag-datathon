@@ -1,0 +1,7 @@
+# Keep the build context small and free of secrets: code + pyproject only.
+*
+!pyproject.toml
+!README.md
+!src/
+!docker/
+**/__pycache__
