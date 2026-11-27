@@ -357,7 +357,7 @@ def full_width_row_kind(text: str, raw_tr: Tag) -> str:
     italic_only = bool(raw_tr.find(["i", "em"])) and not raw_tr.find(["b", "strong"])
     if italic_only or len(t) > 140 or _NOTE_START_RE.match(t):
         return "note"
-    if re.search(r"[.;*†‡]\s*$", t) or t.count(",") >= 2:
+    if re.search(r"[.;*†‡]\s*$", t):
         return "note"
     if _NOTE_VERB_RE.search(t) and len(t.split()) > 6:
         return "note"
