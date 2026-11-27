@@ -220,3 +220,9 @@ def test_section_population_in_rich_header():
     _, block = assemble_context([rc], GenerationConfig(context_format="structured", source_header="rich",
                                                        selection="budget", max_context_chunks=9, max_context_chars=10**6))
     assert "Population (titre de section) : enfant" in block
+
+
+def test_cited_ids_groups_and_ranges():
+    from rag_sfar.generation.answer_check import cited_ids
+
+    assert cited_ids("a [S1] b [S1, S4] c [S2-S4] d [S5–6]") == [1, 1, 4, 2, 3, 4, 5, 6]

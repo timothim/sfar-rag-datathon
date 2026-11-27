@@ -267,7 +267,7 @@ def score_answer(item: EvalItem, answer: str) -> dict[str, Any]:
         out["correct"] = 1.0 if any(fold(t) in a for t in key["any_of"]) else 0.0
     elif "label" in key:
         out["correct"] = 1.0 if fold(key["label"]) in a else 0.0
-    out["sourced"] = 1.0 if re.search(r"\[S\d+\]", answer) else 0.0
+    out["sourced"] = 1.0 if re.search(r"\[S\d+(?:\s*[,;–-]\s*S?\d+)*\]", answer) else 0.0
     return out
 
 

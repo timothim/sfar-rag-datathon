@@ -570,7 +570,7 @@ class SfarRagEngine:
         check = None
         check_regenerated = False
         if g is not None and g.answer_check != "off" and effective_mode not in BENCHMARK_MODES:
-            check = check_answer(raw_answer, gen_chunks, is_abstention=verification.is_abstention)
+            check = check_answer(raw_answer, gen_chunks, is_abstention=verification.is_abstention, query=query)
             if check.flagged and g.answer_check == "regenerate":
                 fix_prompt = (
                     f"{user_prompt}\n\nTA RÉPONSE PRÉCÉDENTE :\n{raw_answer}\n\n"
@@ -588,7 +588,7 @@ class SfarRagEngine:
                     token_usage[k] = token_usage.get(k, 0) + fix_usage.get(k, 0)
                 fixed = _final_answer(fixed_gen, effective_mode)
                 fixed_verif = verify_generation(fixed, gen_chunks, mode=effective_mode)
-                fixed_check = check_answer(fixed, gen_chunks, is_abstention=fixed_verif.is_abstention)
+                fixed_check = check_answer(fixed, gen_chunks, is_abstention=fixed_verif.is_abstention, query=query)
                 if not fixed_check.flagged:
                     raw_answer, verification, check, check_regenerated = fixed, fixed_verif, fixed_check, True
             if check.flagged:

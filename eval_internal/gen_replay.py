@@ -189,6 +189,8 @@ def proxy_correct(suite: str, item_id: str, answer: str, proxy_items: dict[str, 
         return None
     key = it.answer_key
     a = fold(answer)
+    if "mcq" not in key and harness.is_abstention(answer):
+        return 0.0
     if "mcq" in key:
         return 1.0 if harness.extract_mcq_letter(answer) == key["mcq"] else 0.0
     if "label" in key:
@@ -250,6 +252,18 @@ def run(args) -> Path | None:
     from rag_sfar.generation.settings import resolve_generation_config
 
     gen_cfg = resolve_generation_config(args.preset, args.gen)
+    if args.drop_rule:
+        # Prompt ablation: remove numbered rule N of the system prompt of --gen-mode (new mode name).
+        from rag_sfar.generation import prompts as P
+
+        base = P.SYSTEM_PROMPTS[args.gen_mode]
+        kept = [ln for ln in base.splitlines() if not re.match(rf"^\s*{args.drop_rule}\.\s", ln)]
+        assert len(kept) == len(base.splitlines()) - 1, "rule not found"
+        new_mode = f"{args.gen_mode}-no{args.drop_rule}"
+        P.SYSTEM_PROMPTS[new_mode] = "\n".join(kept) + "\n"
+        args.gen_mode = new_mode
+        if args.mcq_mode == new_mode.split("-no")[0]:
+            args.mcq_mode = new_mode
     llm = _build_llm(args)
     engine = SfarRagEngine(retriever=None, llm=llm)
     tok = _Tok(args.tokenizer or (args.mlx_model_path if args.backend == "mlx" else DEFAULT_TOKENIZER))
@@ -284,7 +298,7 @@ def run(args) -> Path | None:
             if v is not None:
                 row["verifier_flag"] = 1.0 if (v.invalid_citations or v.ungrounded_molecules) else 0.0
                 row["verification"] = v.model_dump()
-            chk = check_answer(resp.answer, resp.retrieved_chunks, is_abstention=harness.is_abstention(resp.answer))
+            chk = check_answer(resp.answer, resp.retrieved_chunks, is_abstention=harness.is_abstention(resp.answer), query=it.formatted_query())
             row["check_flag"] = 1.0 if chk.flagged else 0.0
             row["answer_check"] = dataclasses.asdict(chk)
             row["check_regenerated"] = bool(resp.extra.get("answer_check_regenerated"))
@@ -408,6 +422,46 @@ def import_frontier(d: Path, model_label: str, tag: str) -> None:
         print(f"{suite}: {len(srows)} answers -> {jp}")
 
 
+def recheck(report_path: Path) -> None:
+    """Recompute deterministic scores and the answer check of a replay report with the current
+    code (the shown context is rebuilt from the cache and the stored generation config)."""
+    from rag_sfar.generation.answer_check import check_answer
+    from rag_sfar.generation.client import build_generation_context
+    from rag_sfar.generation.settings import GenerationConfig
+
+    rep = json.loads(report_path.read_text(encoding="utf-8"))
+    suite = rep["suite"]
+    meta, cache = load_cache(rep["replay"]["cache"], suite)
+    cfg = config_from_meta(meta)
+    g = GenerationConfig(**rep["replay"]["gen_config"])
+    items = {it.id: it for it in load_suite(suite, "dev")}
+    proxy = {it.id: it for it in load_suite(PROXY_KEY_SUITE[suite], "dev")} if suite in PROXY_KEY_SUITE else {}
+    for row in rep["runs"][0]["rows"]:
+        if "answer" not in row:
+            continue
+        c = cache[row["id"]]
+        retrieved = [RetrievedChunk.model_validate(x) for x in c["retrieved"]]
+        analysis = QueryAnalysis.model_validate(c["analysis"])
+        mode = row.get("mode", "")
+        gen_chunks, _ = build_generation_context(retrieved, analysis, cfg, c["query"], mode, g)
+        row.update(harness.score_answer(items[row["id"]], row["answer"]))
+        if proxy:
+            pc = proxy_correct(suite, row["id"], row["answer"], proxy)
+            if pc is not None:
+                row["proxy_correct"] = pc
+        chk = check_answer(row["answer"], gen_chunks, is_abstention=harness.is_abstention(row["answer"]), query=c["query"])
+        row["check_flag"] = 1.0 if chk.flagged else 0.0
+        row["answer_check"] = dataclasses.asdict(chk)
+    rows = rep["runs"][0]["rows"]
+    keep = {k: v for k, v in rep["runs"][0]["summary"].items() if k.startswith("judge")}
+    summary = harness.summarize(rows)
+    summary.update(_extra_summary(rows))
+    summary.update(keep)
+    rep["runs"][0]["summary"] = summary
+    report_path.write_text(json.dumps(rep, ensure_ascii=False, indent=1, default=str), encoding="utf-8")
+    print(f"rechecked {report_path.name}")
+
+
 def compare(a_path: str, b_path: str, metrics: list[str]) -> None:
     """Paired bootstrap B - A over shared ids, for each metric present in both reports."""
     def rows(p):
@@ -459,12 +513,15 @@ if __name__ == "__main__":
     p.add_argument("--tokenizer", default="")
     p.add_argument("--limit", type=int, default=0)
     p.add_argument("--tag", required=True)
+    p.add_argument("--drop-rule", default="", help="ablation: drop numbered rule N of the --gen-mode system prompt")
     p.add_argument("--export-frontier", default="")
     p.add_argument("--parts", type=int, default=4)
     p = sub.add_parser("import-frontier")
     p.add_argument("--dir", required=True)
     p.add_argument("--model-label", required=True)
     p.add_argument("--tag", default="frontier")
+    p = sub.add_parser("recheck")
+    p.add_argument("reports", nargs="+")
     p = sub.add_parser("compare")
     p.add_argument("a")
     p.add_argument("b")
@@ -476,6 +533,9 @@ if __name__ == "__main__":
         capture(a.suite, a.configs, a.ablate, a.index_map, a.ids_file, a.name, a.device)
     elif a.cmd == "run":
         run(a)
+    elif a.cmd == "recheck":
+        for r in a.reports:
+            recheck(Path(r))
     elif a.cmd == "import-frontier":
         import_frontier(Path(a.dir), a.model_label, a.tag)
     else:
