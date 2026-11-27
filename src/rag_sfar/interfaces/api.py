@@ -18,8 +18,8 @@ from fastapi import FastAPI, HTTPException
 from fastapi.responses import HTMLResponse, StreamingResponse
 from pydantic import BaseModel, Field
 
-from rag_sfar.config import RetrievalConfig, Settings
-from rag_sfar.generation.client import SfarRagEngine
+from rag_sfar.config import Settings
+from rag_sfar.generation.profile import PRODUCTION, ServingProfile, build_engine
 from rag_sfar.retrieval.embedder import build_embedder
 from rag_sfar.retrieval.pipeline import SfarRagRetriever
 from rag_sfar.retrieval.reranker import build_reranker
@@ -38,7 +38,8 @@ class SearchRequest(BaseModel):
 
 
 class QueryRequest(SearchRequest):
-    mode: str = "clinical_detailed"
+    # Production open-question mode (generation/profile.py); MCQs are routed by the engine.
+    mode: str = "clinical_concise"
     retrieval_only: bool = False
 
 
@@ -314,42 +315,55 @@ def create_app(
     settings: Settings | None = None,
     enable_llm: bool = True,
     mlx_model_path: str | None = None,
+    profile: ServingProfile = PRODUCTION,
+    retriever: SfarRagRetriever | None = None,
 ) -> FastAPI:
-    """Create configured FastAPI application."""
+    """Create the FastAPI application serving `profile` (default: the evaluated production profile).
+
+    Retrieval configuration, index, generation settings and provenance policy all come from the
+    profile; the per-request retrieval switches of `SearchRequest` (top_k, use_reranker, ...) are
+    accepted for backward compatibility but ignored, so that every answer is produced by the
+    evaluated pipeline. `retriever` lets tests inject an in-memory retriever."""
     cfg_settings = settings or Settings()
-    idx_path = index_dir or cfg_settings.index_dir
+    idx_path = profile.resolve_index_dir(index_dir)
 
-    store = LocalVectorStore.load(idx_path)
-    manifest = store.manifest
-    emb_provider = manifest.get("embedding_provider", cfg_settings.embedding_provider)
-    emb_model = manifest.get("embedding_model", cfg_settings.embedding_model)
-    # CRITICAL Apple Silicon optimization: when running a local MLX LLM on Metal GPU,
-    # pin PyTorch embedder + reranker to CPU so PyTorch MPS never contends with MLX for GPU RAM!
-    torch_device = "cpu" if mlx_model_path else None
+    if retriever is None:
+        store = LocalVectorStore.load(idx_path)
+        manifest = store.manifest
+        emb_provider = manifest.get("embedding_provider", cfg_settings.embedding_provider)
+        emb_model = manifest.get("embedding_model", cfg_settings.embedding_model)
+        # Apple Silicon: with a local MLX LLM on Metal, keep the PyTorch embedder and reranker on
+        # CPU so that they never contend with MLX for GPU memory.
+        torch_device = "cpu" if mlx_model_path else None
 
-    embedder = None
-    if store.embeddings is not None:
-        embedder = build_embedder(
-            provider=emb_provider,
-            model_name=emb_model,
-            base_url=cfg_settings.embedding_base_url,
-            api_key=cfg_settings.embedding_api_key,
-            index_dir=idx_path,
-            device=torch_device,
-        )
-
-    reranker = None
-    if cfg_settings.reranker_provider != "none":
-        try:
-            reranker = build_reranker(
-                provider=cfg_settings.reranker_provider,
-                model_name=cfg_settings.reranker_model,
+        embedder = None
+        if store.embeddings is not None:
+            embedder = build_embedder(
+                provider=emb_provider,
+                model_name=emb_model,
+                base_url=cfg_settings.embedding_base_url,
+                api_key=cfg_settings.embedding_api_key,
+                index_dir=idx_path,
                 device=torch_device,
             )
-        except Exception:
-            reranker = None
 
-    retriever = SfarRagRetriever(store=store, embedder=embedder, reranker=reranker)
+        reranker = None
+        if cfg_settings.reranker_provider != "none":
+            try:
+                reranker = build_reranker(
+                    provider=cfg_settings.reranker_provider,
+                    model_name=cfg_settings.reranker_model,
+                    device=torch_device,
+                )
+            except Exception:
+                reranker = None
+
+        retriever = SfarRagRetriever(store=store, embedder=embedder, reranker=reranker)
+    store = retriever.store
+    embedder = retriever.embedder
+    reranker = retriever.reranker
+
+    llm = None
     if mlx_model_path:
         from rag_sfar.generation.client import LocalMlxLLM
 
@@ -357,20 +371,25 @@ def create_app(
             model_path=mlx_model_path,
             model_label=Path(mlx_model_path).name,
             temperature=cfg_settings.llm_temperature,
-            max_tokens=min(cfg_settings.llm_max_tokens, 420),
+            max_tokens=cfg_settings.llm_max_tokens,
         )
-        engine = SfarRagEngine(
-            retriever=retriever, llm=llm, attach_provenance=cfg_settings.api_attach_provenance
+    elif enable_llm:
+        from rag_sfar.generation.client import OpenAICompatibleLLM
+
+        llm = OpenAICompatibleLLM(
+            base_url=cfg_settings.llm_base_url,
+            api_key=cfg_settings.llm_api_key,
+            model=cfg_settings.llm_model,
+            temperature=cfg_settings.llm_temperature,
+            max_tokens=cfg_settings.llm_max_tokens,
+            timeout=cfg_settings.llm_timeout_seconds,
         )
-    else:
-        engine = SfarRagEngine.from_settings(
-            settings=cfg_settings,
-            retriever=retriever,
-            enable_llm=enable_llm,
-            attach_provenance=cfg_settings.api_attach_provenance,
-        )
+    engine = build_engine(retriever, llm, profile)
+    rcfg = profile.retrieval_config()
 
     app = FastAPI(title="RAG-SFAR Clinical Engine", version="1.0.0")
+    app.state.engine = engine
+    app.state.profile = profile
 
     @app.get("/", response_class=HTMLResponse)
     def home() -> str:
@@ -386,6 +405,9 @@ def create_app(
             "embedding_model": embedder.model_name if embedder else "bm25_only",
             "reranker_model": reranker.model_name if reranker else "none",
             "llm_model": engine.llm.model if engine.llm else None,
+            "profile": profile.name,
+            "retrieval_config": rcfg.name,
+            "generation_config": engine.gen_config.name if engine.gen_config else "legacy",
         }
 
     @app.get("/api/catalog")
@@ -399,15 +421,6 @@ def create_app(
 
     @app.post("/api/search")
     def api_search(req: SearchRequest) -> dict[str, Any]:
-        rcfg = RetrievalConfig(
-            use_bm25=True,
-            use_dense=req.use_hybrid and (embedder is not None),
-            use_medical_lexicon=req.use_lexicon,
-            use_reranker=req.use_reranker and (reranker is not None),
-            expand_section_callouts=req.expand_callouts,
-            expand_neighbors=req.expand_callouts,
-            final_top_k=req.top_k,
-        )
         retrieved, analysis, timings = retriever.retrieve(
             query=req.query,
             config=rcfg,
@@ -422,15 +435,6 @@ def create_app(
 
     @app.post("/api/query/stream")
     def api_query_stream(req: QueryRequest) -> StreamingResponse:
-        rcfg = RetrievalConfig(
-            use_bm25=True,
-            use_dense=req.use_hybrid and (embedder is not None),
-            use_medical_lexicon=req.use_lexicon,
-            use_reranker=req.use_reranker and (reranker is not None),
-            expand_section_callouts=req.expand_callouts,
-            expand_neighbors=req.expand_callouts,
-            final_top_k=req.top_k,
-        )
 
         def event_gen():
             try:
@@ -455,15 +459,6 @@ def create_app(
 
     @app.post("/api/query")
     def api_query(req: QueryRequest) -> dict[str, Any]:
-        rcfg = RetrievalConfig(
-            use_bm25=True,
-            use_dense=req.use_hybrid and (embedder is not None),
-            use_medical_lexicon=req.use_lexicon,
-            use_reranker=req.use_reranker and (reranker is not None),
-            expand_section_callouts=req.expand_callouts,
-            expand_neighbors=req.expand_callouts,
-            final_top_k=req.top_k,
-        )
         try:
             resp = engine.answer(
                 query=req.query,
@@ -508,7 +503,7 @@ def create_app(
         if not user_msgs:
             raise HTTPException(status_code=400, detail="No user message provided.")
         query = user_msgs[-1]
-        mode = "clinical_detailed"
+        mode = profile.open_mode
         if "benchmark-open" in req.model:
             mode = "benchmark_open"
         elif "benchmark-mcq" in req.model:

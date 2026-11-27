@@ -268,3 +268,142 @@ def test_population_dependency_signal():
     assert population_dependency("Quelle antibioprophylaxie pour l'acte X ?", [a, k])
     assert not population_dependency("Quelle antibioprophylaxie pour l'acte X chez un enfant de 4 ans ?", [a, k])
     assert not population_dependency("Quelle antibioprophylaxie pour l'acte X ?", [a])
+
+
+# ---------------------------------------------------------------- production profile: served == evaluated
+
+import importlib.util
+import json as _json
+from pathlib import Path as _Path
+
+_ROOT = _Path(__file__).resolve().parents[1]
+
+
+def _gen_replay():
+    spec = importlib.util.spec_from_file_location("gen_replay", _ROOT / "eval_internal" / "gen_replay.py")
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    return mod
+
+
+class _Recorder:
+    model = "recorder"
+
+    def __init__(self):
+        self.calls = []
+
+    def complete(self, system_prompt, user_prompt, temperature=None, max_tokens=None, **opts):
+        self.calls.append((system_prompt, user_prompt, max_tokens, dict(opts)))
+        return "Réponse : B\nLa conduite est décrite [S1].", {}
+
+
+def _synthetic_retriever():
+    from rag_sfar.retrieval.bm25 import BM25Index
+    from rag_sfar.retrieval.pipeline import SfarRagRetriever
+    from rag_sfar.retrieval.vector_store import LocalVectorStore
+    from rag_sfar.schemas import DocumentMetadata
+
+    texts = [
+        ("t", "table_markdown", "| Acte | Molécule | Dose |\n| --- | --- | --- |\n| Geste alpha | Produit X | 2 g |"),
+        ("r", "table_row_card", "Acte : Geste alpha | Molécule : Produit X | Dose : 2 g"),
+        ("p", "prose", "Le geste alpha expose à un risque infectieux faible ; la prophylaxie est brève."),
+        ("q", "prose", "Le geste beta ne nécessite pas de prophylaxie."),
+    ]
+    chunks = []
+    for i, (cid, ctype, text) in enumerate(texts):
+        chunks.append(Chunk(chunk_id=f"d1__{cid}", doc_id="d1", chunk_index=i, chunk_type=ctype, text=text,
+                            indexed_text=text, section_path="Partie 1 > Gestes", doc_title="Recommandation test",
+                            effective_year=2026, populations=["adulte"]))
+    meta = DocumentMetadata(doc_id="d1", title="Recommandation test", filename="d1.pdf", md_path="d1.md",
+                            effective_year=2026)
+    store = LocalVectorStore(chunks=chunks, documents=[meta], embeddings=None,
+                             bm25=BM25Index().build([c.indexed_text for c in chunks]),
+                             manifest={"embedding_provider": "none", "embedding_model": "none"})
+    return SfarRagRetriever(store=store)
+
+
+def test_api_prompt_identical_to_replay_prompt():
+    """The prompt the HTTP API sends to the LLM is byte-identical to the one the replay tool
+    builds from a cached retrieval, for open questions and routed MCQs, on both endpoints."""
+    from fastapi.testclient import TestClient
+
+    from rag_sfar.config import Settings
+    from rag_sfar.generation.profile import PRODUCTION, build_engine
+    from rag_sfar.interfaces.api import create_app
+
+    gr = _gen_replay()
+    retriever = _synthetic_retriever()
+    app = create_app(settings=Settings(reranker_provider="none"), enable_llm=False, retriever=retriever)
+    served = _Recorder()
+    app.state.engine.llm = served
+    client = TestClient(app)
+    questions = [
+        "Quelle prophylaxie pour le geste alpha ?",
+        "Pour le geste alpha, quelle proposition est exacte ?\nA. Produit X 2 g\nB. Aucune prophylaxie\nC. Produit Y",
+    ]
+    for q in questions:
+        assert client.post("/api/query", json={"query": q}).status_code == 200
+        assert client.post("/v1/chat/completions", json={"messages": [{"role": "user", "content": q}]}).status_code == 200
+
+    replayed = _Recorder()
+    engine = build_engine(None, replayed, PRODUCTION)
+    cfg = PRODUCTION.retrieval_config()
+    for q in questions:
+        retrieved, analysis, timings = retriever.retrieve(q, config=cfg)
+        row = gr.cache_row(q, retrieved, analysis, timings)
+        meta_cfg = gr.config_from_meta({"config_params": _json.loads(_json.dumps(__import__("dataclasses").asdict(cfg)))})
+        gr.replay_generate(engine, row, meta_cfg, PRODUCTION.generation_config(), PRODUCTION.open_mode)
+
+    # each question was served twice (two endpoints), replayed once
+    assert len(served.calls) == 4 and len(replayed.calls) == 2
+    for i in range(2):
+        for served_call in (served.calls[2 * i], served.calls[2 * i + 1]):
+            assert served_call[:2] == replayed.calls[i][:2]  # system + user prompt, byte-identical
+            assert served_call[2:] == replayed.calls[i][2:]  # same token cap and call options
+    assert "QUESTION QCM" in served.calls[2][1]  # MCQ routed by the engine, not by the caller
+    # served profile = evaluated profile
+    eng = app.state.engine
+    assert eng.default_config.name == "C10_context_notes" and eng.attach_provenance is False
+    g = eng.gen_config
+    assert (g.answer_check, g.molecule_repair, g.dependency_note, g.coverage_gate, g.context_format) == (
+        "flag", False, False, "off", "structured")
+
+
+def test_replay_split_guard_and_dev_only_proxy():
+    import pytest
+
+    gr = _gen_replay()
+    with pytest.raises(SystemExit):
+        gr.check_split("test", allow_test=False)
+    gr.check_split("dev", allow_test=False)
+    assert gr.proxy_items("abpe171", "test") == {}
+
+
+def test_replay_reproduces_existing_dev_prompts(tmp_path, monkeypatch):
+    """The replay tool with --profile production rebuilds, byte for byte, the dev prompts exported
+    for the confirmation run (local caches; skipped where they are absent)."""
+    import argparse
+
+    import pytest
+
+    old_dir = _ROOT / "eval_internal/work/replay/frontier/v6_c10n_confirm"
+    if not (old_dir.exists() and (_ROOT / "eval_internal/work/replay/c10notes_v6/abpe171.jsonl").exists()):
+        pytest.skip("local replay caches not available")
+    gr = _gen_replay()
+    monkeypatch.setattr(gr, "KEYS", tmp_path / "keys")
+    old = {c["case_id"]: c for f in old_dir.glob("gen_input_*.json") for c in _json.loads(f.read_text(encoding="utf-8"))}
+    ids = [i for i in sorted(old) if i.startswith("Q")][:6] + [i for i in sorted(old) if i.startswith("MR-")][:3]
+    ids_file = tmp_path / "ids.json"
+    ids_file.write_text(_json.dumps(ids))
+    args = argparse.Namespace(
+        cache="c10notes_v6", suite="abpe171,multirfe_synth", split="dev", allow_test=False, profile="production",
+        ids_file=str(ids_file), preset="", gen="", gen_mode="", mcq_mode="", backend="record", mlx_model_path="",
+        model="", base_url="", api_key="", max_tokens=1024, tokenizer="none", limit=0, tag="pytest_repro",
+        system_file="", drop_rule="", export_frontier=str(tmp_path / "export"), per_part=8)
+    monkeypatch.setattr(gr, "_save", lambda *a, **k: None)
+    gr.run(args)
+    keys = _json.loads((tmp_path / "keys" / "export.json").read_text(encoding="utf-8"))
+    assert len(keys["cases"]) == len(ids)
+    for c in keys["cases"]:
+        assert (c["system"], c["user"]) == (old[c["id"]]["system"], old[c["id"]]["user"])
+        assert c["id"] not in _json.dumps(_json.loads((tmp_path / "export" / c["part"] / "gen_input.json").read_text()))

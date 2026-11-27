@@ -93,7 +93,13 @@ class SfarMcpServer:
 
     def call_tool(self, name: str, args: dict[str, Any]) -> str:
         if name == "search_sfar_recommendations":
-            cfg = RetrievalConfig(final_top_k=int(args.get("top_k", 6)))
+            # Production profile: the returned block is the context the evaluated generator reads
+            # (same retrieval configuration, selection, merging and [Sx] numbering). `top_k` is
+            # accepted for compatibility and ignored.
+            from rag_sfar.generation.client import build_generation_context
+            from rag_sfar.generation.profile import PRODUCTION
+
+            cfg = PRODUCTION.retrieval_config()
             domains = [args["domain"]] if args.get("domain") else None
             retrieved, analysis, _ = self.retriever.retrieve(
                 query=args["query"],
@@ -105,7 +111,10 @@ class SfarMcpServer:
                 f"Analyse requête : mode={analysis.temporal_mode}, pop={analysis.population}, "
                 f"contexte={analysis.setting}, acronymes={analysis.acronyms_expanded}\n\n"
             )
-            return header + format_context_for_llm(retrieved)
+            _chunks, block = build_generation_context(
+                retrieved, analysis, cfg, args["query"], PRODUCTION.open_mode, PRODUCTION.generation_config()
+            )
+            return header + block
 
         if name == "compare_sfar_editions":
             cfg = RetrievalConfig(
@@ -219,8 +228,10 @@ class SfarMcpServer:
 
 
 def main() -> None:
+    from rag_sfar.generation.profile import PRODUCTION
+
     settings = Settings()
-    idx_dir = Path(settings.index_dir)
+    idx_dir = PRODUCTION.resolve_index_dir()
     store = LocalVectorStore.load(idx_dir)
     embedder = None
     if store.embeddings is not None:

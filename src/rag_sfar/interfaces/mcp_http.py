@@ -120,13 +120,23 @@ def build_structured_search(
     max_chars_per_passage: int,
 ) -> SfarSearchResult:
     """Run the existing retrieval pipeline and map the result to the citation schema."""
-    cfg = RetrievalConfig(final_top_k=top_k)
+    # Production profile (generation/profile.py): same retrieval configuration and the same
+    # passages, in the same [Sx] order, as the context the evaluated generator reads. `top_k`
+    # only truncates that list.
+    from rag_sfar.generation.client import build_generation_context
+    from rag_sfar.generation.profile import PRODUCTION
+
+    cfg = PRODUCTION.retrieval_config()
     # None lets the router decide (comparisons across editions); False forces current editions.
-    retrieved, _analysis, _timings = retriever.retrieve(
+    retrieved, analysis, _timings = retriever.retrieve(
         query=query,
         config=cfg,
         override_latest_only=None if include_superseded else True,
     )
+    retrieved, _block = build_generation_context(
+        retrieved, analysis, cfg, query, PRODUCTION.open_mode, PRODUCTION.generation_config()
+    )
+    retrieved = retrieved[:top_k]
     docs = {d.doc_id: d for d in retriever.store.documents}
     passages: list[SfarPassage] = []
     for i, item in enumerate(retrieved, start=1):
@@ -358,11 +368,13 @@ def main() -> None:  # pragma: no cover - manual entry point
     import uvicorn
 
     parser = argparse.ArgumentParser(description="RAG-SFAR MCP server, Streamable HTTP (prototype, localhost).")
-    parser.add_argument("--index-dir", type=Path, default=Path("index/table_aware_sota"))
+    parser.add_argument("--index-dir", type=Path, default=None, help="default: production profile index (generation/profile.py)")
     parser.add_argument("--host", default="127.0.0.1", help="Keep 127.0.0.1 unless behind a reverse proxy.")
     parser.add_argument("--port", type=int, default=8765)
     args = parser.parse_args()
-    retriever = load_retriever(args.index_dir)
+    from rag_sfar.generation.profile import PRODUCTION
+
+    retriever = load_retriever(PRODUCTION.resolve_index_dir(args.index_dir))
     uvicorn.run(create_http_app(retriever, host=args.host), host=args.host, port=args.port)
 
 

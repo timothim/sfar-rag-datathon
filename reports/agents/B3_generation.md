@@ -24,7 +24,9 @@ Code (branche `rag-sfar-v2`) : `src/rag_sfar/generation/{settings,context,client
 | Prompt, questions ouvertes | `clinical_concise` (inchangé par B3) |
 | Prompt, QCM | `clinical_mcq` (= ancien `benchmark_mcq`). Le moteur y route toute question qui liste des options lettrées A., B., … (`client.route_mode`), en production comme en évaluation. |
 | Réflexion (Qwen ≥ 3.5) | `enable_thinking=False` : MLX via le template ; vLLM/OpenAI via `extra_body.chat_template_kwargs` |
-| Contrôle des réponses | `answer_check="flag"` : avertissement ajouté à `verification.warnings`, pas de régénération |
+| Contrôle des réponses | `answer_check="flag"` (dans le preset `wide`) : avertissement ajouté à `verification.warnings`, pas de régénération ; aussi en streaming |
+| Boucle de réparation des molécules | désactivée (`molecule_repair=False`, jamais mesurée) |
+| Profil | `generation/profile.py::PRODUCTION`, utilisé par l'API, les deux serveurs MCP et le rejeu (`--profile production`) |
 | Notes | `coverage_gate="off"`, `dependency_note=False` |
 
 Commande de génération sur un cache de retrieval (outil de rejeu) :
@@ -200,7 +202,90 @@ Règle de décision fixée d'avance : activer la note seulement si :
 
 La note se pose sur 33 des 102 prompts abpe171. Aucune de ces 33 questions ne nomme une population ; les 15 questions qui en nomment une ne la reçoivent pas. Sur multirfe dev, la note ne se pose que sur une question (MR-g7efa49eea406c3678a28, traumatisé thoracique), exportée à part pour vérifier qu'elle n'est pas dégradée. Sur les 12 réponses non correctes listées ci-dessus, la note porterait sur 7 (Q27, Q40, Q102, Q118, Q119, Q132, Q88) ; Q46, Q114, Q81, Q85 et Q131 ne la reçoivent pas.
 
-*Résultat : à compléter.*
+**Résultat (abpe171 dev)** : les 33 prompts concernés ont été régénérés avec Sonnet et jugés en rubrique v3 ; les 69 autres gardent leur verdict.
+
+| Mesure (33 questions concernées) | Sans note | Avec note |
+|---|---|---|
+| Correct | 75,8 % | 69,7 % |
+| Correct ou partiel | 100 % | 100 % |
+| Graves | 0 | 0 |
+| Faits obligatoires | 85,0 % | 95,0 % |
+| Interdits violés (n = 8) | 25 % | 12,5 % |
+| Comportement accepté | 90,9 % | 97,0 % |
+
+Différences appariées sur tout dev (n = 102) :
+- exactitude : −2,0 pts [−7,8 ; +3,9] ;
+- faits obligatoires : +3,1 [−1,0 ; +7,3].
+
+La règle pré-enregistrée exige un gain d'exactitude ou de faits obligatoires avec un intervalle qui exclut 0 : elle n'est pas remplie, donc **la note reste désactivée**.
+
+Au cas par cas :
+- là où elle se pose, la note corrige la branche pédiatrique omise (Q102, Q118, Q119, Q138 gagnent) ;
+- cinq réponses régénérées perdent un point ailleurs, le plus souvent une molécule alternative qui n'est plus citée (Q05, Q45, Q95, Q100, Q128). C'est de l'ordre du bruit générateur et juge déjà mesuré.
+
+La seule question multirfe qui reçoit la note reste correcte.
+
+Lecture : prometteuse sur les faits obligatoires, non démontrée. À re-mesurer sur le modèle cible avec davantage de questions.
+
+## 6 bis. Système servi = système évalué (suite de la revue R3)
+
+### Profil de service unique
+
+`generation/profile.py` définit `PRODUCTION`, seule définition de ce que le système déployé exécute :
+- retrieval `C10_context_notes` (définition inchangée, figée) ;
+- index `index/tas_v6` ;
+- preset `wide` ;
+- `clinical_concise` + routage QCM ;
+- pas de provenance ajoutée par le code ;
+- notes de dépendance et de couverture désactivées.
+
+Ce profil est utilisé par :
+- l'API HTTP (`create_app`, qui charge `PRODUCTION` par défaut) ;
+- le serveur MCP HTTP et le serveur MCP stdio, qui renvoient exactement les passages et le bloc de contexte que lit le générateur évalué ;
+- l'outil de rejeu (`--profile production`).
+
+### Changements apportés au preset `wide`
+
+L'incohérence relevée par la revue est corrigée : le preset passe à `answer_check="flag"`, `molecule_repair=False` (la boucle de réparation par un second appel au LLM n'a jamais été mesurée) et `max_tokens=1024`. Les prompts ne changent pas. Le chemin en streaming calcule maintenant aussi le contrôle (avertissement, pas de régénération).
+
+### Ce qui a changé dans l'API
+
+| Avant | Maintenant |
+|---|---|
+| Index `index/sota_default` | `index/tas_v6`, sauf argument explicite ou variable `RAG_SFAR_INDEX_DIR`. Le réglage `Settings.index_dir` n'est **pas** modifié : il sert aussi de dossier de sortie par défaut de `rag-sfar-index`. |
+| `RetrievalConfig` ad hoc construit à chaque requête | Configuration du profil. Les champs de requête `top_k`, `use_reranker`, `use_hybrid`, `use_lexicon` et `expand_callouts` sont acceptés mais ignorés. |
+| Mode `clinical_detailed` | Mode `clinical_concise` |
+| Provenance ajoutée en QCM | Supprimée. `Settings.api_attach_provenance` n'est plus lu par l'API. |
+| Second appel de réparation des molécules | Supprimé |
+| Plafond MLX de 420 tokens | Plafond du profil (1 024) |
+
+### Preuves
+
+- `tests/test_generation_b3.py::test_api_prompt_identical_to_replay_prompt` : pour une question ouverte et un QCM synthétiques, avec un LLM enregistreur, le prompt système et le prompt utilisateur envoyés par `/api/query` et par `/v1/chat/completions` sont identiques octet pour octet à ceux du rejeu (cache de retrieval sérialisé puis `replay_generate`). Les plafonds et options d'appel sont identiques aussi.
+- `tests/test_generation_b3.py::test_replay_reproduces_existing_dev_prompts` : le rejeu `--profile production` reconstruit octet pour octet les prompts de l'export de confirmation. Testé aussi sur les 136 prompts.
+
+### Ce qui reste différent entre servi et évalué
+
+- **Le modèle** : substitut Sonnet contre LLM servi. Température et réflexion ne sont pas maîtrisées chez les agents. Plafond de 1 024 tokens côté servi, aucun côté agents. Les agents répondent à jusqu'à 8 cas par session.
+- **Paramètres de requête** : l'API honore encore `latest_only` et `domains` (par défaut `None`, donc identique à l'évalué).
+- **Modes non évalués** : les modèles `/v1` `rag-sfar-benchmark-open` et `-mcq` restent disponibles.
+- **Repli** : si le LLM est indisponible, l'API se replie sur le mode retrieval seul.
+- **MCP** : l'outil `compare_sfar_editions` garde sa propre configuration (toutes éditions). Le `top_k` du MCP HTTP tronque la liste des passages.
+
+### Outil de rejeu
+
+- **Split** : `--split dev|test`, avec la même garde que `rag-sfar-eval` (`--allow-test` et vérification du coffre-fort avant toute lecture).
+- **Arguments explicites** : retrieval et index sont obligatoires (`--profile` ou `--configs` + `--index-map`), le preset aussi (`--profile` ou `--preset`). Plus aucun défaut silencieux.
+- **Clés proxy** : celles qui ne valent que sur dev sont désactivées hors dev.
+- **Exports aveugles** : identifiants opaques aléatoires, cas mélangés, un sous-dossier `part_NN/` d'au plus 8 cas par agent. La correspondance est rangée hors de l'export (`work/replay/frontier_keys/`).
+- **Import** : il refuse toute réponse manquante, mal rangée ou en double, et les réponses longues identiques sur deux cas. Il revérifie que chaque prompt contient sa question et calcule `check_flag` sur chaque réponse importée.
+- **Consignes aux agents** : `eval_internal/GENERATOR_INSTRUCTIONS.md`.
+
+### Limites signalées par la revue, non corrigées
+
+- Le routage QCM reconnaît le format du harnais (`A. ` / `A) ` en début de ligne). Une question ordinaire qui énumère des éléments lettrés serait routée en QCM. Un QCM présenté autrement ne serait pas reconnu.
+- Le mode QCM impose une lettre unique : un QCM sans réponse unique ne peut pas être réussi.
+- La liste de molécules du vérificateur (`verifier.TRACKED_MOLECULES`, reprise par le contrôle) couvre surtout les antibiotiques et les anticoagulants. Les suffixes DCI élargissent un peu, sans couvrir toute la pharmacopée.
 
 ## 7. Analyse des échecs (9B et Sonnet)
 

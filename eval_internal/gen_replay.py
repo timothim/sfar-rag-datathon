@@ -1,30 +1,25 @@
 """Generation replay: cache the retrieval output once per question, then run any number of
 generation variants on the cache without loading the embedder and the reranker again.
 
-Generalises frontier_generator.py (any config, --ablate string, index map, prompt mode, id list,
-local MLX / OpenAI-compatible backend, or prompt capture for the Claude stand-in).
+    # 1. cache retrieval (one model load; run under scripts/with_gpu_lock.sh). Retrieval
+    #    configuration and index are explicit: --profile production, or --configs + --index-map.
+    .venv/bin/python eval_internal/gen_replay.py capture --suite abpe171 --profile production --name c10notes_v6
+    # the sealed test split needs --split test --allow-test (lockbox verified first)
 
-    # 0. fixed, seeded, stratified iteration subsets of the dev splits (ids in eval_internal/work/b3_subsets/)
-    .venv/bin/python eval_internal/gen_replay.py subsets --suites abpe171,multirfe_synth --n 30
+    # 2. a generation run on the cache: --profile production = exactly the served generation
+    #    (generation/profile.py); or an explicit --preset/--gen/--gen-mode for ablations.
+    .venv/bin/python eval_internal/gen_replay.py run --cache c10notes_v6 --suite abpe171,multirfe_synth \
+        --profile production --backend openai --base-url URL --model M --tag final
 
-    # 1. cache retrieval (one model load; run under scripts/with_gpu_lock.sh)
-    .venv/bin/python eval_internal/gen_replay.py capture --suite abpe171 --configs C9 \
-        --ablate "final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000" \
-        --index-map table_aware_sota=tas_v3_errata --ids-file eval_internal/work/b3_subsets/abpe171_iter.json --name c9wide
-
-    # 2. run a generation variant on the cache (scores: deterministic keys, abstention, sourcing,
-    #    verifier; report readable by judge_io export)
-    .venv/bin/python eval_internal/gen_replay.py run --cache c9wide --suite abpe171 --preset wide \
-        --gen "context_order=document" --gen-mode clinical_concise --backend mlx \
-        --mlx-model-path /Users/tim/.cache/rag_sfar_models/Qwen3.5-9B-MLX-4bit-nothink --model qwen3.5-9b --tag v1
-
-    # 2b. same, but only record the prompts (context size in chars and tokens, no LLM); with
-    #     --export-frontier the prompts are written for the Claude stand-in
-    .venv/bin/python eval_internal/gen_replay.py run ... --backend record [--export-frontier DIR --parts 4]
-    # 3. build the report from the stand-in's answers (DIR/gen_out_*.json)
+    # 2b. prompts only (sizes in chars and tokens), and a blind export for stand-in generators:
+    #     opaque ids, part_NN/ folders of <= 8 cases, mapping kept in work/replay/frontier_keys/.
+    .venv/bin/python eval_internal/gen_replay.py run ... --backend record --export-frontier DIR
+    # 3. map the stand-in's answers back (alignment checks, answer check), one report per suite
     .venv/bin/python eval_internal/gen_replay.py import-frontier --dir DIR --model-label claude-sonnet-5-5
 
+Dev-only helpers: `subsets` (seeded iteration subsets), proxy answer keys (disabled outside dev).
 Caches live in eval_internal/work/replay/<name>/ (git-ignored data, derived from the corpus).
+Instructions for stand-in agents: eval_internal/GENERATOR_INSTRUCTIONS.md.
 """
 
 from __future__ import annotations
@@ -83,8 +78,21 @@ def _load_ids(path: str | None) -> list[str] | None:
     return ids
 
 
-def _items(suite: str, ids: list[str] | None) -> list[EvalItem]:
-    items = load_suite(suite, "dev")
+def check_split(split: str, allow_test: bool) -> None:
+    """Same safeguard as rag-sfar-eval: the sealed test split needs --allow-test and a valid
+    lockbox (hashes of the sealed files checked before anything is read)."""
+    if split not in ("dev", "test"):
+        raise SystemExit(f"unknown split {split!r}")
+    if split == "test":
+        if not allow_test:
+            raise SystemExit("The test split is locked: evaluate it only on final configs, with --allow-test.")
+        from rag_sfar.evaluation.datasets import verify_lockbox
+
+        verify_lockbox(raise_on_error=True)
+
+
+def _items(suite: str, ids: list[str] | None, split: str = "dev") -> list[EvalItem]:
+    items = load_suite(suite, split)
     if ids is not None:
         keep = set(ids)
         items = [it for it in items if it.id in keep]
@@ -134,41 +142,44 @@ def _retrieval_config(configs: str, ablate: str) -> RetrievalConfig:
     return cfg
 
 
-def capture(suite: str, configs: str, ablate: str, index_map: str, ids_file: str | None, name: str, device: str) -> None:
+def cache_file(name: str, suite: str, split: str) -> Path:
+    return REPLAY / name / (f"{suite}.jsonl" if split == "dev" else f"{suite}_{split}.jsonl")
+
+
+def capture(suite: str, configs: str, ablate: str, index_map: str, ids_file: str | None, name: str, device: str,
+            split: str = "dev") -> None:
     s = Settings()
     cfg = _retrieval_config(configs, ablate)
     imap = dict(kv.split("=", 1) for kv in index_map.split(",") if kv.strip())
     retriever = harness.load_retrievers(
         ROOT / "index", [cfg.chunking_strategy], s.reranker_provider, s.reranker_model, device=device, index_map=imap
     )[cfg.chunking_strategy]
-    items = _items(suite, _load_ids(ids_file))
+    items = _items(suite, _load_ids(ids_file), split)
     out = REPLAY / name
     out.mkdir(parents=True, exist_ok=True)
     t0 = time.time()
-    with (out / f"{suite}.jsonl").open("w", encoding="utf-8") as f:
+    with cache_file(name, suite, split).open("w", encoding="utf-8") as f:
         for it in items:
             retrieved, analysis, timings = retriever.retrieve(it.formatted_query(), config=cfg)
-            f.write(json.dumps({
-                "id": it.id, "query": it.formatted_query(),
-                "retrieved": [rc.model_dump() for rc in retrieved],
-                "analysis": analysis.model_dump(), "timings": timings,
-            }, ensure_ascii=False, default=str) + "\n")
+            f.write(json.dumps({"id": it.id, **cache_row(it.formatted_query(), retrieved, analysis, timings)},
+                               ensure_ascii=False, default=str) + "\n")
     meta_p = out / "meta.json"
     meta = json.loads(meta_p.read_text(encoding="utf-8")) if meta_p.exists() else {}
     meta.update({
         "config": cfg.name, "config_params": dataclasses.asdict(cfg), "ablate": ablate, "index_map": imap,
         "reranker_model": s.reranker_model, "git": _git_rev(),
     })
-    meta.setdefault("suites", {})[suite] = {"n": len(items), "ids_file": ids_file or "", "captured": dt.datetime.now().isoformat(timespec="seconds")}
+    meta.setdefault("suites", {})[suite if split == "dev" else f"{suite}:{split}"] = {
+        "n": len(items), "split": split, "ids_file": ids_file or "", "captured": dt.datetime.now().isoformat(timespec="seconds")}
     meta_p.write_text(json.dumps(meta, ensure_ascii=False, indent=1, default=str), encoding="utf-8")
-    print(f"{len(items)} questions cached in {time.time() - t0:.0f}s -> {out}/{suite}.jsonl")
+    print(f"{len(items)} questions ({split}) cached in {time.time() - t0:.0f}s -> {cache_file(name, suite, split)}")
 
 
-def load_cache(name: str, suite: str) -> tuple[dict[str, Any], dict[str, dict[str, Any]]]:
+def load_cache(name: str, suite: str, split: str = "dev") -> tuple[dict[str, Any], dict[str, dict[str, Any]]]:
     d = REPLAY / name
     meta = json.loads((d / "meta.json").read_text(encoding="utf-8"))
     rows = {}
-    for line in (d / f"{suite}.jsonl").read_text(encoding="utf-8").splitlines():
+    for line in cache_file(name, suite, split).read_text(encoding="utf-8").splitlines():
         if line.strip():
             r = json.loads(line)
             rows[r["id"]] = r
@@ -233,6 +244,23 @@ class RecordingLLM:
 # ---------------------------------------------------------------- run
 
 
+def replay_generate(engine, cache_row: dict[str, Any], cfg: RetrievalConfig, gen_cfg, mode: str):
+    """Generation stage on one cached retrieval output (the same call as the served engine after
+    its own retrieval: tests/test_generation_b3.py checks the prompts are byte-identical)."""
+    retrieved = [RetrievedChunk.model_validate(x) for x in cache_row["retrieved"]]
+    analysis = QueryAnalysis.model_validate(cache_row["analysis"])
+    return engine.generate(cache_row["query"], retrieved, analysis, cache_row["timings"], mode=mode,
+                           config=cfg, gen_config=gen_cfg)
+
+
+def cache_row(query: str, retrieved, analysis, timings) -> dict[str, Any]:
+    """The JSON row `capture` writes for one question (round trip included)."""
+    return json.loads(json.dumps({
+        "query": query, "retrieved": [rc.model_dump() for rc in retrieved],
+        "analysis": analysis.model_dump(), "timings": timings,
+    }, ensure_ascii=False, default=str))
+
+
 def _build_llm(args):
     from rag_sfar.generation.client import LocalMlxLLM, OpenAICompatibleLLM
 
@@ -251,7 +279,20 @@ def run(args) -> Path | None:
     from rag_sfar.generation.client import SfarRagEngine
     from rag_sfar.generation.settings import resolve_generation_config
 
-    gen_cfg = resolve_generation_config(args.preset, args.gen)
+    check_split(args.split, args.allow_test)
+    profile = None
+    if args.profile:
+        from rag_sfar.generation.profile import get_profile
+
+        profile = get_profile(args.profile)
+        if args.preset or args.gen or args.system_file or args.drop_rule:
+            raise SystemExit("--profile fixes the generation settings: do not combine it with --preset/--gen/--system-file/--drop-rule")
+        gen_cfg = profile.generation_config()
+        args.gen_mode, args.mcq_mode = profile.open_mode, "route"
+    else:
+        if not args.preset:
+            raise SystemExit("give --profile or an explicit --preset (no silent default)")
+        gen_cfg = resolve_generation_config(args.preset, args.gen)
     if args.system_file:
         # Prompt variant: system prompt read from a file, registered as a new open mode
         # (format/grounding rules only; files in eval_internal/work/b3_prompts/).
@@ -274,28 +315,33 @@ def run(args) -> Path | None:
         if args.mcq_mode == new_mode.split("-no")[0]:
             args.mcq_mode = new_mode
     llm = _build_llm(args)
-    engine = SfarRagEngine(retriever=None, llm=llm)
+    if profile is not None:
+        from rag_sfar.generation.profile import build_engine
+
+        engine = build_engine(None, llm, profile)  # exactly the served engine, without retrieval
+    else:
+        engine = SfarRagEngine(retriever=None, llm=llm)
     tok = _Tok(args.tokenizer or (args.mlx_model_path if args.backend == "mlx" else DEFAULT_TOKENIZER))
     all_rows = []
     gen_inputs = []
     suites = args.suite.split(",")
     for suite in suites:
-        meta, cache = load_cache(args.cache, suite)
+        meta, cache = load_cache(args.cache, suite, args.split)
         cfg = config_from_meta(meta)
-        proxy = {it.id: it for it in load_suite(PROXY_KEY_SUITE[suite], "dev")} if suite in PROXY_KEY_SUITE else {}
-        items = [it for it in _items(suite, _load_ids(args.ids_file)) if it.id in cache]
+        if profile is not None and cfg.name != profile.retrieval_config_name:
+            raise SystemExit(f"cache {args.cache} was captured with {cfg.name}, profile expects {profile.retrieval_config_name}")
+        # Dev-only proxy keys (another suite's dev answer keys): never outside dev.
+        proxy = proxy_items(suite, args.split)
+        items = [it for it in _items(suite, _load_ids(args.ids_file), args.split) if it.id in cache]
         if args.limit:
             items = items[: args.limit]
         for i, it in enumerate(items):
             c = cache[it.id]
-            retrieved = [RetrievedChunk.model_validate(x) for x in c["retrieved"]]
-            analysis = QueryAnalysis.model_validate(c["analysis"])
             # "route": the engine routes lettered-option questions itself (production behaviour).
             mode = args.gen_mode if (it.question_type != "mcq" or args.mcq_mode == "route") else args.mcq_mode
             n_calls = len(getattr(llm, "calls", []))
             t0 = time.perf_counter()
-            resp = engine.generate(it.formatted_query(), retrieved, analysis, c["timings"], mode=mode,
-                                   config=cfg, gen_config=gen_cfg)
+            resp = replay_generate(engine, c, cfg, gen_cfg, mode)
             lat = (time.perf_counter() - t0) * 1000
             row: dict[str, Any] = {"id": it.id, "suite": suite, "provenance": it.provenance,
                                    "question_type": it.question_type, "tags": it.tags}
@@ -329,7 +375,8 @@ def run(args) -> Path | None:
                 pt = tok.count(system + "\n" + user)
                 if pt is not None:
                     row["prompt_tokens"] = pt
-                gen_inputs.append({"case_id": it.id, "suite": suite, "system": system, "user": user})
+                gen_inputs.append({"id": it.id, "suite": suite, "query": it.formatted_query(), "mode": resp.mode,
+                                   "system": system, "user": user})
                 row.pop("answer")  # placeholder answer, not scored
                 for k in ("correct", "abstention_correct", "false_abstention", "sourced", "proxy_correct", "verifier_flag", "check_flag", "answer_check"):
                     row.pop(k, None)
@@ -340,16 +387,10 @@ def run(args) -> Path | None:
             if (i + 1) % 5 == 0:
                 print(f"[{suite}] {i + 1}/{len(items)}", flush=True)
     if args.export_frontier:
-        d = Path(args.export_frontier)
-        d.mkdir(parents=True, exist_ok=True)
-        size = -(-len(gen_inputs) // args.parts)
-        for i in range(args.parts):
-            (d / f"gen_input_{i}.json").write_text(json.dumps(gen_inputs[i * size:(i + 1) * size], ensure_ascii=False, indent=1), encoding="utf-8")
-        (d / "replay_rows.json").write_text(json.dumps(all_rows, ensure_ascii=False, default=str), encoding="utf-8")
-        (d / "meta.json").write_text(json.dumps({"cache": args.cache, "suites": suites, "gen_config": gen_cfg.to_dict(),
-                                                 "gen_mode": args.gen_mode, "mcq_mode": args.mcq_mode,
-                                                 "ids_file": args.ids_file}, ensure_ascii=False, indent=1), encoding="utf-8")
-        print(f"{len(gen_inputs)} prompts -> {d}")
+        export_blind(Path(args.export_frontier), gen_inputs, all_rows, {
+            "cache": args.cache, "split": args.split, "suites": suites, "gen_config": gen_cfg.to_dict(),
+            "gen_mode": args.gen_mode, "mcq_mode": args.mcq_mode, "ids_file": args.ids_file,
+            "profile": args.profile or "", "git": _git_rev()}, per_part=args.per_part)
     return _save(args, gen_cfg, all_rows, suites, label=getattr(llm, "model", args.backend))
 
 
@@ -368,16 +409,16 @@ def _save(args, gen_cfg, rows, suites, label: str) -> Path | None:
     reports = []
     for suite in suites:
         srows = [r for r in rows if r["suite"] == suite]
-        meta, _ = load_cache(args.cache, suite)
+        meta, _ = load_cache(args.cache, suite, args.split)
         summary = harness.summarize(srows)
         summary.update(_extra_summary(srows))
         name = f"{meta['config']}|{gen_cfg.name}|{args.gen_mode}"
         rep = {
-            "suite": suite, "split": "dev", "k": 0, "n_items": len(srows),
+            "suite": suite, "split": args.split, "k": 0, "n_items": len(srows),
             "generator": f"{args.backend}:{label}", "timestamp": dt.datetime.now().isoformat(timespec="seconds"),
             "replay": {"cache": args.cache, "cache_meta": {k: meta[k] for k in ("config", "ablate", "index_map", "git") if k in meta},
                        "gen_config": gen_cfg.to_dict(), "gen_mode": args.gen_mode, "mcq_mode": args.mcq_mode,
-                       "ids_file": args.ids_file, "git": _git_rev()},
+                       "ids_file": args.ids_file, "profile": args.profile or "", "git": _git_rev()},
             "runs": [{"config": name, "config_params": gen_cfg.to_dict(), "summary": summary, "rows": srows}],
             "comparisons": [],
         }
@@ -397,40 +438,165 @@ def _save(args, gen_cfg, rows, suites, label: str) -> Path | None:
 DEFAULT_TOKENIZER = "/Users/tim/.cache/rag_sfar_models/Qwen3.5-9B-MLX-4bit-nothink"
 
 
-def import_frontier(d: Path, model_label: str, tag: str) -> None:
-    meta = json.loads((d / "meta.json").read_text(encoding="utf-8"))
-    rows = json.loads((d / "replay_rows.json").read_text(encoding="utf-8"))
-    answers = {}
-    for f in sorted(d.glob("gen_out_*.json")):
-        for a in json.loads(f.read_text(encoding="utf-8")):
-            answers[a["case_id"]] = a["answer"]
-    from rag_sfar.generation.client import _final_answer
+KEYS = WORK / "replay" / "frontier_keys"  # id mappings, outside every export folder
+MAX_PER_PART = 8
 
-    by_suite = defaultdict(list)
-    for r in rows:
-        if r["id"] not in answers:
+
+def proxy_items(suite: str, split: str) -> dict[str, EvalItem]:
+    """Dev-only proxy answer keys (abp171 keys for abpe171). Disabled outside dev: they would
+    read another suite's split."""
+    if split != "dev" or suite not in PROXY_KEY_SUITE:
+        return {}
+    return {it.id: it for it in load_suite(PROXY_KEY_SUITE[suite], "dev")}
+
+
+def export_blind(d: Path, gen_inputs: list[dict[str, Any]], rows: list[dict[str, Any]], meta: dict[str, Any],
+                 per_part: int = MAX_PER_PART) -> None:
+    """Blind, isolated export for stand-in generator agents.
+
+    - opaque random case ids (the real id, suite and benchmark never appear in a part folder);
+    - cases shuffled, then split in `part_NN/` sub-folders of at most `per_part` cases, each
+      holding only its own `gen_input.json` (an agent is given one folder);
+    - the mapping opaque id -> real id, the prompts and the replay rows are written to
+      eval_internal/work/replay/frontier_keys/<name>.json, outside the export folder."""
+    import secrets
+
+    if per_part > MAX_PER_PART:
+        raise SystemExit(f"at most {MAX_PER_PART} cases per part")
+    if d.exists() and any(d.iterdir()):
+        raise SystemExit(f"{d} is not empty: export into a new folder")
+    for g in gen_inputs:  # every prompt must contain its own question
+        if g["query"] not in g["user"]:
+            raise SystemExit(f"prompt of {g['id']} does not contain its question")
+    rng = random.Random(secrets.randbits(64))
+    cases = list(gen_inputs)
+    rng.shuffle(cases)
+    used: set[str] = set()
+    mapping = []
+    for g in cases:
+        cid = f"c{secrets.token_hex(5)}"
+        while cid in used:
+            cid = f"c{secrets.token_hex(5)}"
+        used.add(cid)
+        mapping.append({**g, "case_id": cid})
+    n_parts = -(-len(mapping) // per_part)
+    d.mkdir(parents=True, exist_ok=True)
+    for i in range(n_parts):
+        part = mapping[i * per_part:(i + 1) * per_part]
+        pdir = d / f"part_{i:02d}"
+        pdir.mkdir()
+        for m in part:
+            m["part"] = pdir.name
+        (pdir / "gen_input.json").write_text(json.dumps(
+            [{"case_id": m["case_id"], "system": m["system"], "user": m["user"]} for m in part],
+            ensure_ascii=False, indent=1), encoding="utf-8")
+    KEYS.mkdir(parents=True, exist_ok=True)
+    (KEYS / f"{d.name}.json").write_text(json.dumps(
+        {"export_dir": str(d), "meta": meta, "cases": mapping, "rows": rows}, ensure_ascii=False, default=str),
+        encoding="utf-8")
+    print(f"{len(mapping)} prompts in {n_parts} parts (<= {per_part}) -> {d}; keys -> {KEYS / (d.name + '.json')}")
+
+
+def _norm_answer(a: str) -> str:
+    return re.sub(r"\s+", " ", a).strip().lower()
+
+
+def import_frontier(d: Path, model_label: str, tag: str) -> list[Path]:
+    """Map the stand-in's answers back to the questions and build one report per suite.
+
+    Refuses: a missing part output or answer, an unknown or duplicated case id, an answer filed in
+    another part's output, and identical long answers given to different cases (cross-part
+    contamination). Each prompt is re-checked to contain its own question. The deterministic
+    answer check (`check_flag`) is computed on every imported answer."""
+    from rag_sfar.generation.answer_check import check_answer
+    from rag_sfar.generation.client import _final_answer, build_generation_context
+    from rag_sfar.generation.settings import GenerationConfig
+
+    keys = json.loads((KEYS / f"{d.name}.json").read_text(encoding="utf-8"))
+    meta = keys["meta"]
+    split = meta["split"]
+    cases = {c["case_id"]: c for c in keys["cases"]}
+    errors: list[str] = []
+    answers: dict[str, str] = {}
+    parts = sorted({c["part"] for c in cases.values()})
+    for part in parts:
+        out = d / part / "gen_out.json"
+        if not out.exists():
+            errors.append(f"{part}: gen_out.json missing")
             continue
-        suite = r["suite"]
-        it = {x.id: x for x in load_suite(suite, "dev")}[r["id"]]
-        ans = _final_answer(answers[r["id"]], r.get("mode", ""))
+        for a in json.loads(out.read_text(encoding="utf-8")):
+            cid = a.get("case_id")
+            if cid not in cases:
+                errors.append(f"{part}: unknown case id {cid}")
+            elif cases[cid]["part"] != part:
+                errors.append(f"{part}: case {cid} belongs to {cases[cid]['part']}")
+            elif cid in answers:
+                errors.append(f"{part}: duplicate answer for {cid}")
+            elif not str(a.get("answer", "")).strip():
+                errors.append(f"{part}: empty answer for {cid}")
+            else:
+                answers[cid] = a["answer"]
+    missing = sorted(set(cases) - set(answers))
+    if missing:
+        errors.append(f"{len(missing)} cases without answer: {missing[:10]}")
+    seen: dict[str, str] = {}
+    for cid, a in answers.items():
+        n = _norm_answer(a)
+        if len(n) >= 120:
+            if n in seen:
+                errors.append(f"identical answers for {seen[n]} and {cid}")
+            seen.setdefault(n, cid)
+    items_by_suite = {suite: {it.id: it for it in load_suite(suite, split)} for suite in meta["suites"]}
+    for c in cases.values():
+        it = items_by_suite[c["suite"]].get(c["id"])
+        if it is None or it.formatted_query() not in c["user"]:
+            errors.append(f"prompt {c['case_id']} does not contain the question of {c['id']}")
+    if errors:
+        raise SystemExit("import refused:\n  " + "\n  ".join(errors))
+
+    g = GenerationConfig(**meta["gen_config"])
+    rows_by_id = {(r["suite"], r["id"]): r for r in keys["rows"]}
+    by_suite: dict[str, list[dict[str, Any]]] = defaultdict(list)
+    caches: dict[str, tuple] = {}
+    for cid, c in cases.items():
+        suite = c["suite"]
+        if suite not in caches:
+            m, cache = load_cache(meta["cache"], suite, split)
+            caches[suite] = (config_from_meta(m), cache)
+        cfg, cache = caches[suite]
+        it = items_by_suite[suite][c["id"]]
+        r = dict(rows_by_id[(suite, c["id"])])
+        ans = _final_answer(answers[cid], c["mode"])
+        cr = cache[c["id"]]
+        gen_chunks, _ = build_generation_context(
+            [RetrievedChunk.model_validate(x) for x in cr["retrieved"]], QueryAnalysis.model_validate(cr["analysis"]),
+            cfg, cr["query"], c["mode"], g)
         r.update(harness.score_answer(it, ans))
-        if suite in PROXY_KEY_SUITE:
-            proxy = {x.id: x for x in load_suite(PROXY_KEY_SUITE[suite], "dev")}
-            pc = proxy_correct(suite, r["id"], ans, proxy)
+        proxy = proxy_items(suite, split)
+        if proxy:
+            pc = proxy_correct(suite, c["id"], ans, proxy)
             if pc is not None:
                 r["proxy_correct"] = pc
+        chk = check_answer(ans, gen_chunks, is_abstention=harness.is_abstention(ans), query=it.formatted_query())
+        r["check_flag"] = 1.0 if chk.flagged else 0.0
+        r["answer_check"] = dataclasses.asdict(chk)
         r["answer"] = ans
+        r["opaque_case_id"] = cid
         by_suite[suite].append(r)
+    out_paths = []
     for suite, srows in by_suite.items():
+        srows.sort(key=lambda r: r["id"])
         summary = harness.summarize(srows)
         summary.update(_extra_summary(srows))
-        rep = {"suite": suite, "split": "dev", "k": 0, "n_items": len(srows),
-               "generator": f"{model_label} (Claude Code subagent, prompts captured by gen_replay)",
+        rep = {"suite": suite, "split": split, "k": 0, "n_items": len(srows),
+               "generator": f"{model_label} (stand-in agents, blind export {d.name})",
                "timestamp": dt.datetime.now().isoformat(timespec="seconds"), "replay": meta,
                "runs": [{"config": f"{meta['cache']}|{meta['gen_config']['name']}|{model_label}", "config_params": meta["gen_config"],
                          "summary": summary, "rows": srows}], "comparisons": []}
         jp, _ = harness.save_report(rep, out_dir=ROOT / "reports/eval/b3", tag=f"b3_{tag}_{model_label}")
-        print(f"{suite}: {len(srows)} answers -> {jp}")
+        out_paths.append(jp)
+        print(f"{suite} ({split}): {len(srows)} answers, check_flag {sum(r['check_flag'] for r in srows):.0f} -> {jp}")
+    return out_paths
 
 
 def recheck(report_path: Path) -> None:
@@ -442,11 +608,12 @@ def recheck(report_path: Path) -> None:
 
     rep = json.loads(report_path.read_text(encoding="utf-8"))
     suite = rep["suite"]
-    meta, cache = load_cache(rep["replay"]["cache"], suite)
+    split = rep.get("split", "dev")
+    meta, cache = load_cache(rep["replay"]["cache"], suite, split)
     cfg = config_from_meta(meta)
     g = GenerationConfig(**rep["replay"]["gen_config"])
-    items = {it.id: it for it in load_suite(suite, "dev")}
-    proxy = {it.id: it for it in load_suite(PROXY_KEY_SUITE[suite], "dev")} if suite in PROXY_KEY_SUITE else {}
+    items = {it.id: it for it in load_suite(suite, split)}
+    proxy = proxy_items(suite, split)
     for row in rep["runs"][0]["rows"]:
         if "answer" not in row:
             continue
@@ -501,33 +668,39 @@ if __name__ == "__main__":
     p.add_argument("--n", type=int, default=30)
     p = sub.add_parser("capture")
     p.add_argument("--suite", required=True)
-    p.add_argument("--configs", default="C9")
+    p.add_argument("--split", default="dev", choices=["dev", "test"])
+    p.add_argument("--allow-test", action="store_true", help="required for --split test (lockbox verified)")
+    p.add_argument("--profile", default="", help="serving profile (generation/profile.py): sets --configs and --index-map")
+    p.add_argument("--configs", default="", help="retrieval configuration (required without --profile)")
     p.add_argument("--ablate", default="")
-    p.add_argument("--index-map", default="table_aware_sota=tas_v3_errata")
+    p.add_argument("--index-map", default="", help="strategy=index folder (required without --profile)")
     p.add_argument("--ids-file", default=None)
     p.add_argument("--name", required=True)
     p.add_argument("--device", default="cpu")
     p = sub.add_parser("run")
     p.add_argument("--cache", required=True)
     p.add_argument("--suite", required=True, help="one suite or a comma list")
+    p.add_argument("--split", default="dev", choices=["dev", "test"])
+    p.add_argument("--allow-test", action="store_true", help="required for --split test (lockbox verified)")
+    p.add_argument("--profile", default="", help="serving profile: generation settings and modes exactly as served")
     p.add_argument("--ids-file", default=None)
-    p.add_argument("--preset", default="wide")
+    p.add_argument("--preset", default="", help="generation preset (required without --profile)")
     p.add_argument("--gen", default="", help="GenerationConfig overrides, 'field=value+field=value'")
     p.add_argument("--gen-mode", default="clinical_concise")
     p.add_argument("--mcq-mode", default="route", help="'route' = let the engine route MCQs (production); or force a mode")
-    p.add_argument("--backend", choices=["mlx", "openai", "record"], default="mlx")
+    p.add_argument("--backend", choices=["mlx", "openai", "record"], required=True)
     p.add_argument("--mlx-model-path", default="")
-    p.add_argument("--model", default="qwen3.5-9b-4bit-nothink")
+    p.add_argument("--model", default="")
     p.add_argument("--base-url", default="")
     p.add_argument("--api-key", default="")
-    p.add_argument("--max-tokens", type=int, default=400)
+    p.add_argument("--max-tokens", type=int, default=1024)
     p.add_argument("--tokenizer", default="")
     p.add_argument("--limit", type=int, default=0)
     p.add_argument("--tag", required=True)
     p.add_argument("--system-file", default="", help="prompt variant: system prompt file, registered as mode <file stem>")
     p.add_argument("--drop-rule", default="", help="ablation: drop numbered rule N of the --gen-mode system prompt")
-    p.add_argument("--export-frontier", default="")
-    p.add_argument("--parts", type=int, default=4)
+    p.add_argument("--export-frontier", default="", help="blind export folder for stand-in generators (new folder)")
+    p.add_argument("--per-part", type=int, default=MAX_PER_PART)
     p = sub.add_parser("import-frontier")
     p.add_argument("--dir", required=True)
     p.add_argument("--model-label", required=True)
@@ -542,7 +715,17 @@ if __name__ == "__main__":
     if a.cmd == "subsets":
         make_subsets(a.suites.split(","), a.n)
     elif a.cmd == "capture":
-        capture(a.suite, a.configs, a.ablate, a.index_map, a.ids_file, a.name, a.device)
+        check_split(a.split, a.allow_test)
+        if a.profile:
+            from rag_sfar.generation.profile import get_profile
+
+            prof = get_profile(a.profile)
+            if a.configs or a.index_map or a.ablate:
+                raise SystemExit("--profile fixes --configs/--index-map: do not combine")
+            a.configs, a.index_map = prof.retrieval_config_name, prof.replay_index_map()
+        if not a.configs or not a.index_map:
+            raise SystemExit("give --profile, or both --configs and --index-map (no silent default)")
+        capture(a.suite, a.configs, a.ablate, a.index_map, a.ids_file, a.name, a.device, a.split)
     elif a.cmd == "run":
         run(a)
     elif a.cmd == "recheck":

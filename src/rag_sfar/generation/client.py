@@ -570,7 +570,7 @@ class SfarRagEngine:
         # Verifier-guided repair: if a tracked drug molecule is absent from all shown passages,
         # one corrective pass.
         self_corrected = False
-        if verification.ungrounded_molecules:
+        if verification.ungrounded_molecules and (g is None or g.molecule_repair):
             repair_prompt = (
                 f"{user_prompt}\n\n"
                 f"TA RÉPONSE PRÉCÉDENTE : {raw_answer}\n"
@@ -729,7 +729,7 @@ class SfarRagEngine:
 
         verification = verify_generation(raw_answer, gen_chunks, mode=effective_mode)
         self_corrected = False
-        if verification.ungrounded_molecules:
+        if verification.ungrounded_molecules and (g is None or g.molecule_repair):
             repair_prompt = (
                 f"{user_prompt}\n\n"
                 f"TA RÉPONSE PRÉCÉDENTE : {raw_answer}\n"
@@ -751,6 +751,13 @@ class SfarRagEngine:
                 verification = rep_verif
                 self_corrected = True
 
+        check = None
+        if g is not None and g.answer_check != "off" and effective_mode not in BENCHMARK_MODES:
+            # Streaming cannot regenerate after tokens were sent: the check is a warning here.
+            check = check_answer(raw_answer, gen_chunks, is_abstention=verification.is_abstention, query=query)
+            if check.flagged:
+                verification.warnings.append("Contrôle automatique : " + " ; ".join(check.reasons()))
+
         yield {
             "type": "done",
             "answer": raw_answer,
@@ -764,6 +771,7 @@ class SfarRagEngine:
                 "reasoning_trace": raw_generation if raw_generation != raw_answer else "",
                 # The streaming path never appends a source.
                 "provenance_added_by_code": False,
+                "answer_check": dataclasses.asdict(check) if check is not None else None,
             },
         }
 

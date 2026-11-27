@@ -76,6 +76,10 @@ class GenerationConfig:
     # Deterministic answer check (generation/answer_check.py): "off", "flag" (warning only),
     # "regenerate" (one corrective pass when the check fails).
     answer_check: Literal["off", "flag", "regenerate"] = "off"
+    # Historical verifier-guided repair: a second LLM call when a tracked molecule of the answer
+    # is absent from the shown passages. Kept for the legacy behaviour; off in the evaluated
+    # (wide / production) configuration, which never measured it.
+    molecule_repair: bool = True
 
     def replace(self, **changes: Any) -> "GenerationConfig":
         return dataclasses.replace(self, **changes)
@@ -111,6 +115,9 @@ GENERATION_PRESETS: dict[str, GenerationConfig] = {
         prune_prose=False,
         allergy_note=False,
         enable_thinking=False,
+        answer_check="flag",
+        molecule_repair=False,
+        max_tokens=1024,
     ),
 }
 
