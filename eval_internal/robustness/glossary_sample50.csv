@@ -1,0 +1,51 @@
+abbr,long_form,docs,count,patterns,correct
+ANDEM,Agence Nationale pour le Développement de l'Évaluation Médicale,1,1,inline_long_then_abbr,1
+WFNS,World Federation of Neurological Surgeons,2,11,inline_long_then_abbr,1
+HED,Hematoma Extra-Dural,1,1,inline_abbr_then_long,1
+IRF,insuffisances rénales fonctionnelles,1,1,inline_long_then_abbr,1
+SoFraSimS,Société Francophone de Simulation en Santé,2,2,inline_long_then_abbr,1
+DAS,Difficult Airway Society,1,2,inline_long_then_abbr,1
+DSA,défibrillateur semi-automatique,2,5,glossary_line+glossary_list+glossary_table+inline_long_then_abbr,1
+IFI,infections fongiques invasives,1,1,inline_long_then_abbr,1
+PE,potentiels évoqués,1,1,inline_long_then_abbr,1
+GC,glucocorticoïdes,2,2,inline_long_then_abbr,1
+HP,hématome périmédullaire,1,1,inline_long_then_abbr,1
+CAPS,Centre d'accueil et de permanence des soins,2,4,glossary_line+glossary_table,1
+DOD,Department of Defense,1,2,glossary_line+inline_long_then_abbr,1
+SAGAT,Situation Awareness Global Assessment Technique,1,1,inline_abbr_then_long,1
+ALRIV,anesthésie loco-régionale intraveineuse,2,5,inline_long_then_abbr,1
+DPC,Duodéno-pancréatectomie céphalique,1,2,inline_long_then_abbr,1
+ERC,essais randomisés contrôlés,4,11,inline_long_then_abbr,1
+AP-HP,Assistance Publique-Hôpitaux de Paris,2,2,inline_long_then_abbr,1
+VM,ventilation mécanique,3,5,glossary_line+inline_long_then_abbr,1
+SFGG,Société Française de Gériatrie et Gériontologie,4,14,glossary_table+inline_long_then_abbr,1
+DCPP,dérivation cavo-pulmonaire partielle,1,1,inline_long_then_abbr,1
+AKI,acute kidney injury,1,1,inline_long_then_abbr,1
+ASE,agents stimulants de l'érythropoïèse,1,2,inline_long_then_abbr,1
+REMED,revues d'erreurs médicamenteuses,1,1,inline_long_then_abbr,1
+SMUR,structure mobile d'urgence et de réanimation,3,5,glossary_line+glossary_list+glossary_table,1
+VAS,voies aériennes supérieures,5,11,inline_long_then_abbr,1
+TBI,traumatic brain injury,1,1,inline_long_then_abbr,1
+HTP,hypertension portale,1,2,inline_long_then_abbr,1
+SCA,syndrome coronarien aigu,5,9,glossary_line+glossary_list+glossary_table+inline_long_then_abbr,1
+AMM,autorisation de mise sur le marché,7,8,glossary_line+glossary_list+glossary_table+inline_long_then_abbr,1
+SPCMD,sédation profonde et continue maintenue jusqu'au décès,1,1,inline_long_then_abbr,1
+ALF,acute liver failure,1,1,inline_long_then_abbr,1
+SCCM,Society of Critical Care Medicine,2,4,glossary_line+glossary_table+inline_long_then_abbr,1
+GES,gaz à effet de serre,1,2,inline_long_then_abbr,1
+SIZ,Société de réanimation belge intensive zorgen,2,2,inline_long_then_abbr,0
+DT,drain thoracique,1,1,inline_long_then_abbr,1
+PB,pression du ballonnet,1,1,inline_long_then_abbr,1
+GRHV,groupe de recherche sur le handicap ventilatoire,1,1,inline_long_then_abbr,1
+DGOS,Direction générale de l'offre de soins,1,1,inline_long_then_abbr,1
+HVG,hypertrophie ventriculaire gauche,1,2,glossary_list+inline_long_then_abbr,1
+PLATO,Platelet Inhibition and Patient Outcomes,1,1,inline_abbr_then_long,1
+CSPS,Council on Surgical and Perioperative Safety,1,1,inline_long_then_abbr,1
+RT,radiographie thoracique,2,3,inline_long_then_abbr,1
+FVIIa,facteur VII activé,1,1,inline_long_then_abbr,1
+IEM,interférences électromagnétiques,1,1,inline_long_then_abbr,1
+SI,Système d'Information,1,2,glossary_line+inline_long_then_abbr,1
+SPI,surgical ptelh index,1,2,inline_abbr_then_long,0
+CICr,clairance de la créatinine,1,1,glossary_line,1
+HMS,Hyperthermie Maligne Sensible,1,1,inline_abbr_then_long,1
+CERES,Collectif EcoResponsabilité En Santé,1,1,inline_long_then_abbr,1

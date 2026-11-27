@@ -1,0 +1,112 @@
+{
+ "abpe171": {
+  "n": 102,
+  "clean": {
+   "changed": 0,
+   "ops": {}
+  },
+  "typo1": {
+   "changed": 102,
+   "ops": {
+    "delete": 24,
+    "neighbour": 40,
+    "accent": 6,
+    "transpose": 32
+   }
+  },
+  "typo3": {
+   "changed": 102,
+   "ops": {
+    "delete": 70,
+    "accent": 16,
+    "transpose": 79,
+    "neighbour": 87
+   }
+  },
+  "noaccent": {
+   "changed": 74,
+   "ops": {
+    "noaccent": 74
+   }
+  },
+  "abbr": {
+   "changed": 4,
+   "ops": {
+    "abbreviate": 4
+   }
+  },
+  "expand": {
+   "changed": 6,
+   "ops": {
+    "expand": 6
+   }
+  },
+  "telegraphic": {
+   "changed": 102,
+   "ops": {
+    "telegraphic": 102
+   }
+  },
+  "abbr_user": {
+   "changed": 101,
+   "ops": {
+    "abbreviate": 102
+   }
+  }
+ },
+ "multirfe_synth": {
+  "n": 94,
+  "clean": {
+   "changed": 0,
+   "ops": {}
+  },
+  "typo1": {
+   "changed": 94,
+   "ops": {
+    "neighbour": 28,
+    "accent": 7,
+    "transpose": 31,
+    "delete": 28
+   }
+  },
+  "typo3": {
+   "changed": 94,
+   "ops": {
+    "neighbour": 75,
+    "delete": 67,
+    "transpose": 67,
+    "accent": 24
+   }
+  },
+  "noaccent": {
+   "changed": 93,
+   "ops": {
+    "noaccent": 93
+   }
+  },
+  "abbr": {
+   "changed": 16,
+   "ops": {
+    "abbreviate": 18
+   }
+  },
+  "expand": {
+   "changed": 9,
+   "ops": {
+    "expand": 10
+   }
+  },
+  "telegraphic": {
+   "changed": 94,
+   "ops": {
+    "telegraphic": 94
+   }
+  },
+  "abbr_user": {
+   "changed": 2,
+   "ops": {
+    "abbreviate": 2
+   }
+  }
+ }
+}
