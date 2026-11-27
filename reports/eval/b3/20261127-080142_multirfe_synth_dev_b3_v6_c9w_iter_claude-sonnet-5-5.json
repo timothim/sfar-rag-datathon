@@ -1,0 +1,4502 @@
+{
+ "suite": "multirfe_synth",
+ "split": "dev",
+ "k": 0,
+ "n_items": 30,
+ "generator": "claude-sonnet-5-5 (Claude Code subagent, prompts captured by gen_replay)",
+ "timestamp": "2026-11-27T08:01:42",
+ "replay": {
+  "cache": "c9wide_v6",
+  "suites": [
+   "abpe171",
+   "multirfe_synth"
+  ],
+  "gen_config": {
+   "name": "wide",
+   "selection": "budget",
+   "max_context_chunks": 40,
+   "max_context_chars": 30000,
+   "context_format": "structured",
+   "merge_adjacent": true,
+   "context_order": "rank",
+   "table_rendering": "as_is",
+   "source_header": "rich",
+   "prune_prose": false,
+   "allergy_note": false,
+   "coverage_gate": "off",
+   "dependency_note": false,
+   "question_first": false,
+   "prompt_mode": null,
+   "enable_thinking": false,
+   "temperature": 0.0,
+   "top_p": 0.0,
+   "top_k": 0,
+   "presence_penalty": 0.0,
+   "max_tokens": null,
+   "answer_check": "off"
+  },
+  "gen_mode": "clinical_concise",
+  "mcq_mode": "route",
+  "ids_file": "eval_internal/work/b3_subsets/abpe171_iter.json,eval_internal/work/b3_subsets/multirfe_synth_iter.json"
+ },
+ "runs": [
+  {
+   "config": "c9wide_v6|wide|claude-sonnet-5-5",
+   "config_params": {
+    "name": "wide",
+    "selection": "budget",
+    "max_context_chunks": 40,
+    "max_context_chars": 30000,
+    "context_format": "structured",
+    "merge_adjacent": true,
+    "context_order": "rank",
+    "table_rendering": "as_is",
+    "source_header": "rich",
+    "prune_prose": false,
+    "allergy_note": false,
+    "coverage_gate": "off",
+    "dependency_note": false,
+    "question_first": false,
+    "prompt_mode": null,
+    "enable_thinking": false,
+    "temperature": 0.0,
+    "top_p": 0.0,
+    "top_k": 0,
+    "presence_penalty": 0.0,
+    "max_tokens": null,
+    "answer_check": "off"
+   },
+   "summary": {
+    "n": 30,
+    "passage_hit_curve": {
+     "1": 0.75,
+     "3": 0.875,
+     "5": 0.9166666666666666,
+     "8": 0.9166666666666666,
+     "12": 0.9166666666666666,
+     "16": 0.9166666666666666,
+     "20": 0.9166666666666666
+    },
+    "doc_hit_curve": {
+     "1": 0.7916666666666666,
+     "3": 0.9583333333333334,
+     "5": 0.9583333333333334,
+     "8": 0.9583333333333334,
+     "12": 0.9583333333333334,
+     "16": 0.9583333333333334,
+     "20": 0.9583333333333334
+    },
+    "doc_hit": {
+     "mean": 0.9583333333333334,
+     "ci_low": 0.875,
+     "ci_high": 1.0,
+     "n": 24
+    },
+    "doc_mrr": {
+     "mean": 0.8680555555555555,
+     "ci_low": 0.75,
+     "ci_high": 0.9583333333333334,
+     "n": 24
+    },
+    "doc_recall": {
+     "mean": 0.9583333333333334,
+     "ci_low": 0.875,
+     "ci_high": 1.0,
+     "n": 24
+    },
+    "doc_ndcg": {
+     "mean": 0.41365305308535755,
+     "ci_low": 0.3299100503425755,
+     "ci_high": 0.49719907220147613,
+     "n": 24
+    },
+    "passage_hit": {
+     "mean": 0.9166666666666666,
+     "ci_low": 0.7916666666666666,
+     "ci_high": 1.0,
+     "n": 24
+    },
+    "passage_mrr": {
+     "mean": 0.8229166666666666,
+     "ci_low": 0.6875,
+     "ci_high": 0.9375,
+     "n": 24
+    },
+    "passage_recall": {
+     "mean": 0.8958333333333334,
+     "ci_low": 0.7708333333333334,
+     "ci_high": 1.0,
+     "n": 24
+    },
+    "obsolete_intrusion": {
+     "mean": 0.0,
+     "ci_low": 0.0,
+     "ci_high": 0.0,
+     "n": 21
+    },
+    "answer_terms_in_context": {
+     "mean": 0.9166666666666666,
+     "ci_low": 0.7916666666666666,
+     "ci_high": 1.0,
+     "n": 24
+    },
+    "correct": {
+     "mean": 0.75,
+     "ci_low": 0.5833333333333334,
+     "ci_high": 0.9166666666666666,
+     "n": 24
+    },
+    "abstention_correct": {
+     "mean": 1.0,
+     "ci_low": 1.0,
+     "ci_high": 1.0,
+     "n": 6
+    },
+    "false_abstention": {
+     "mean": 0.041666666666666664,
+     "ci_low": 0.0,
+     "ci_high": 0.125,
+     "n": 24
+    },
+    "sourced": {
+     "mean": 0.7666666666666667,
+     "ci_low": 0.6,
+     "ci_high": 0.9,
+     "n": 30
+    },
+    "latency_ms": {
+     "mean": 1.5655833296477795,
+     "ci_low": 1.4458457978131871,
+     "ci_high": 1.6756250969289492,
+     "n": 30
+    },
+    "by_question_type": {
+     "abstention": {
+      "abstention_correct": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 6
+      },
+      "sourced": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 6
+      },
+      "n": 6
+     },
+     "clinical_case": {
+      "doc_hit": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 7
+      },
+      "doc_mrr": {
+       "mean": 0.7619047619047619,
+       "ci_low": 0.5476190476190477,
+       "ci_high": 0.9285714285714286,
+       "n": 7
+      },
+      "doc_recall": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 7
+      },
+      "doc_ndcg": {
+       "mean": 0.3250257272012421,
+       "ci_low": 0.21295635604633176,
+       "ci_high": 0.4381853677009544,
+       "n": 7
+      },
+      "passage_hit": {
+       "mean": 0.8571428571428571,
+       "ci_low": 0.5714285714285714,
+       "ci_high": 1.0,
+       "n": 7
+      },
+      "passage_mrr": {
+       "mean": 0.6785714285714286,
+       "ci_low": 0.39285714285714285,
+       "ci_high": 0.9285714285714286,
+       "n": 7
+      },
+      "passage_recall": {
+       "mean": 0.8571428571428571,
+       "ci_low": 0.5714285714285714,
+       "ci_high": 1.0,
+       "n": 7
+      },
+      "obsolete_intrusion": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 7
+      },
+      "answer_terms_in_context": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 7
+      },
+      "correct": {
+       "mean": 0.7142857142857143,
+       "ci_low": 0.42857142857142855,
+       "ci_high": 1.0,
+       "n": 7
+      },
+      "false_abstention": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 7
+      },
+      "sourced": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 7
+      },
+      "n": 7
+     },
+     "comparison": {
+      "doc_hit": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 3
+      },
+      "doc_mrr": {
+       "mean": 0.8333333333333334,
+       "ci_low": 0.5,
+       "ci_high": 1.0,
+       "n": 3
+      },
+      "doc_recall": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 3
+      },
+      "doc_ndcg": {
+       "mean": 0.5544459367085178,
+       "ci_low": 0.46945006191052013,
+       "ci_high": 0.6930221935231563,
+       "n": 3
+      },
+      "passage_hit": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 3
+      },
+      "passage_mrr": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 3
+      },
+      "passage_recall": {
+       "mean": 0.8333333333333334,
+       "ci_low": 0.5,
+       "ci_high": 1.0,
+       "n": 3
+      },
+      "answer_terms_in_context": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 3
+      },
+      "correct": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 3
+      },
+      "false_abstention": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 3
+      },
+      "sourced": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 3
+      },
+      "n": 3
+     },
+     "open": {
+      "doc_hit": {
+       "mean": 0.9,
+       "ci_low": 0.7,
+       "ci_high": 1.0,
+       "n": 10
+      },
+      "doc_mrr": {
+       "mean": 0.9,
+       "ci_low": 0.7,
+       "ci_high": 1.0,
+       "n": 10
+      },
+      "doc_recall": {
+       "mean": 0.9,
+       "ci_low": 0.7,
+       "ci_high": 1.0,
+       "n": 10
+      },
+      "doc_ndcg": {
+       "mean": 0.43507554077168037,
+       "ci_low": 0.29420446398415495,
+       "ci_high": 0.5952412802052046,
+       "n": 10
+      },
+      "passage_hit": {
+       "mean": 0.9,
+       "ci_low": 0.7,
+       "ci_high": 1.0,
+       "n": 10
+      },
+      "passage_mrr": {
+       "mean": 0.85,
+       "ci_low": 0.65,
+       "ci_high": 1.0,
+       "n": 10
+      },
+      "passage_recall": {
+       "mean": 0.9,
+       "ci_low": 0.7,
+       "ci_high": 1.0,
+       "n": 10
+      },
+      "obsolete_intrusion": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 10
+      },
+      "answer_terms_in_context": {
+       "mean": 0.8,
+       "ci_low": 0.5,
+       "ci_high": 1.0,
+       "n": 10
+      },
+      "correct": {
+       "mean": 0.8,
+       "ci_low": 0.5,
+       "ci_high": 1.0,
+       "n": 10
+      },
+      "false_abstention": {
+       "mean": 0.1,
+       "ci_low": 0.0,
+       "ci_high": 0.3,
+       "n": 10
+      },
+      "sourced": {
+       "mean": 0.9,
+       "ci_low": 0.7,
+       "ci_high": 1.0,
+       "n": 10
+      },
+      "n": 10
+     },
+     "table": {
+      "doc_hit": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 4
+      },
+      "doc_mrr": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 4
+      },
+      "doc_recall": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 4
+      },
+      "doc_ndcg": {
+       "mean": 0.40959999144938253,
+       "ci_low": 0.27277094501616805,
+       "ci_high": 0.5524331836846068,
+       "n": 4
+      },
+      "passage_hit": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 4
+      },
+      "passage_mrr": {
+       "mean": 0.875,
+       "ci_low": 0.625,
+       "ci_high": 1.0,
+       "n": 4
+      },
+      "passage_recall": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 4
+      },
+      "obsolete_intrusion": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 4
+      },
+      "answer_terms_in_context": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 4
+      },
+      "correct": {
+       "mean": 0.5,
+       "ci_low": 0.0,
+       "ci_high": 1.0,
+       "n": 4
+      },
+      "false_abstention": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 4
+      },
+      "sourced": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 4
+      },
+      "n": 4
+     }
+    },
+    "by_tag": {
+     "abstention": {
+      "abstention_correct": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 6
+      },
+      "sourced": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 6
+      },
+      "n": 6
+     },
+     "dosage": {
+      "doc_hit": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 2
+      },
+      "doc_mrr": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 2
+      },
+      "doc_recall": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 2
+      },
+      "doc_ndcg": {
+       "mean": 0.47763811431819575,
+       "ci_low": 0.3314291830482726,
+       "ci_high": 0.6238470455881189,
+       "n": 2
+      },
+      "passage_hit": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 2
+      },
+      "passage_mrr": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 2
+      },
+      "passage_recall": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 2
+      },
+      "obsolete_intrusion": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 2
+      },
+      "answer_terms_in_context": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 2
+      },
+      "correct": {
+       "mean": 0.5,
+       "ci_low": 0.0,
+       "ci_high": 1.0,
+       "n": 2
+      },
+      "false_abstention": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 2
+      },
+      "sourced": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 2
+      },
+      "n": 2
+     },
+     "drug_choice": {
+      "doc_hit": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 1
+      },
+      "doc_mrr": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 1
+      },
+      "doc_recall": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 1
+      },
+      "doc_ndcg": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 1
+      },
+      "passage_hit": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 1
+      },
+      "passage_mrr": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 1
+      },
+      "passage_recall": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 1
+      },
+      "obsolete_intrusion": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 1
+      },
+      "answer_terms_in_context": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 1
+      },
+      "correct": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 1
+      },
+      "false_abstention": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 1
+      },
+      "sourced": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 1
+      },
+      "n": 1
+     },
+     "edition_diff": {
+      "doc_hit": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 3
+      },
+      "doc_mrr": {
+       "mean": 0.8333333333333334,
+       "ci_low": 0.5,
+       "ci_high": 1.0,
+       "n": 3
+      },
+      "doc_recall": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 3
+      },
+      "doc_ndcg": {
+       "mean": 0.5544459367085178,
+       "ci_low": 0.46945006191052013,
+       "ci_high": 0.6930221935231563,
+       "n": 3
+      },
+      "passage_hit": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 3
+      },
+      "passage_mrr": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 3
+      },
+      "passage_recall": {
+       "mean": 0.8333333333333334,
+       "ci_low": 0.5,
+       "ci_high": 1.0,
+       "n": 3
+      },
+      "answer_terms_in_context": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 3
+      },
+      "correct": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 3
+      },
+      "false_abstention": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 3
+      },
+      "sourced": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 3
+      },
+      "n": 3
+     },
+     "emergency": {
+      "doc_hit": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 5
+      },
+      "doc_mrr": {
+       "mean": 0.7666666666666667,
+       "ci_low": 0.5,
+       "ci_high": 1.0,
+       "n": 5
+      },
+      "doc_recall": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 5
+      },
+      "doc_ndcg": {
+       "mean": 0.354663187636977,
+       "ci_low": 0.23045274218419917,
+       "ci_high": 0.47887363308975495,
+       "n": 5
+      },
+      "passage_hit": {
+       "mean": 0.8,
+       "ci_low": 0.4,
+       "ci_high": 1.0,
+       "n": 5
+      },
+      "passage_mrr": {
+       "mean": 0.65,
+       "ci_low": 0.25,
+       "ci_high": 1.0,
+       "n": 5
+      },
+      "passage_recall": {
+       "mean": 0.8,
+       "ci_low": 0.4,
+       "ci_high": 1.0,
+       "n": 5
+      },
+      "obsolete_intrusion": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 5
+      },
+      "answer_terms_in_context": {
+       "mean": 0.8,
+       "ci_low": 0.4,
+       "ci_high": 1.0,
+       "n": 5
+      },
+      "correct": {
+       "mean": 0.6,
+       "ci_low": 0.2,
+       "ci_high": 1.0,
+       "n": 5
+      },
+      "false_abstention": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 5
+      },
+      "sourced": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 5
+      },
+      "n": 5
+     },
+     "icu": {
+      "doc_hit": {
+       "mean": 0.8571428571428571,
+       "ci_low": 0.5714285714285714,
+       "ci_high": 1.0,
+       "n": 7
+      },
+      "doc_mrr": {
+       "mean": 0.7619047619047619,
+       "ci_low": 0.42857142857142855,
+       "ci_high": 1.0,
+       "n": 7
+      },
+      "doc_recall": {
+       "mean": 0.8571428571428571,
+       "ci_low": 0.5714285714285714,
+       "ci_high": 1.0,
+       "n": 7
+      },
+      "doc_ndcg": {
+       "mean": 0.3923995331337657,
+       "ci_low": 0.23160372807113516,
+       "ci_high": 0.5273866926733612,
+       "n": 7
+      },
+      "passage_hit": {
+       "mean": 0.8571428571428571,
+       "ci_low": 0.5714285714285714,
+       "ci_high": 1.0,
+       "n": 7
+      },
+      "passage_mrr": {
+       "mean": 0.6785714285714286,
+       "ci_low": 0.35714285714285715,
+       "ci_high": 0.9285714285714286,
+       "n": 7
+      },
+      "passage_recall": {
+       "mean": 0.8571428571428571,
+       "ci_low": 0.5714285714285714,
+       "ci_high": 1.0,
+       "n": 7
+      },
+      "obsolete_intrusion": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 7
+      },
+      "answer_terms_in_context": {
+       "mean": 0.8571428571428571,
+       "ci_low": 0.5714285714285714,
+       "ci_high": 1.0,
+       "n": 7
+      },
+      "correct": {
+       "mean": 0.5714285714285714,
+       "ci_low": 0.2857142857142857,
+       "ci_high": 0.8571428571428571,
+       "n": 7
+      },
+      "false_abstention": {
+       "mean": 0.14285714285714285,
+       "ci_low": 0.0,
+       "ci_high": 0.42857142857142855,
+       "n": 7
+      },
+      "sourced": {
+       "mean": 0.8571428571428571,
+       "ci_low": 0.5714285714285714,
+       "ci_high": 1.0,
+       "n": 7
+      },
+      "n": 7
+     },
+     "obstetric": {
+      "doc_hit": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 1
+      },
+      "doc_mrr": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 1
+      },
+      "doc_recall": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 1
+      },
+      "doc_ndcg": {
+       "mean": 0.4690000933206748,
+       "ci_low": 0.4690000933206748,
+       "ci_high": 0.4690000933206748,
+       "n": 1
+      },
+      "passage_hit": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 1
+      },
+      "passage_mrr": {
+       "mean": 0.5,
+       "ci_low": 0.5,
+       "ci_high": 0.5,
+       "n": 1
+      },
+      "passage_recall": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 1
+      },
+      "obsolete_intrusion": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 1
+      },
+      "answer_terms_in_context": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 1
+      },
+      "correct": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 1
+      },
+      "false_abstention": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 1
+      },
+      "sourced": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 1
+      },
+      "n": 1
+     },
+     "other": {
+      "doc_hit": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 7
+      },
+      "doc_mrr": {
+       "mean": 0.7619047619047619,
+       "ci_low": 0.5476190476190477,
+       "ci_high": 0.9285714285714286,
+       "n": 7
+      },
+      "doc_recall": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 7
+      },
+      "doc_ndcg": {
+       "mean": 0.3250257272012421,
+       "ci_low": 0.21295635604633176,
+       "ci_high": 0.4381853677009544,
+       "n": 7
+      },
+      "passage_hit": {
+       "mean": 0.8571428571428571,
+       "ci_low": 0.5714285714285714,
+       "ci_high": 1.0,
+       "n": 7
+      },
+      "passage_mrr": {
+       "mean": 0.6785714285714286,
+       "ci_low": 0.39285714285714285,
+       "ci_high": 0.9285714285714286,
+       "n": 7
+      },
+      "passage_recall": {
+       "mean": 0.8571428571428571,
+       "ci_low": 0.5714285714285714,
+       "ci_high": 1.0,
+       "n": 7
+      },
+      "obsolete_intrusion": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 7
+      },
+      "answer_terms_in_context": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 7
+      },
+      "correct": {
+       "mean": 0.7142857142857143,
+       "ci_low": 0.42857142857142855,
+       "ci_high": 1.0,
+       "n": 7
+      },
+      "false_abstention": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 7
+      },
+      "sourced": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 7
+      },
+      "n": 7
+     },
+     "pediatric": {
+      "doc_hit": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 1
+      },
+      "doc_mrr": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 1
+      },
+      "doc_recall": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 1
+      },
+      "doc_ndcg": {
+       "mean": 0.4783230211921073,
+       "ci_low": 0.4783230211921073,
+       "ci_high": 0.4783230211921073,
+       "n": 1
+      },
+      "passage_hit": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 1
+      },
+      "passage_mrr": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 1
+      },
+      "passage_recall": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 1
+      },
+      "obsolete_intrusion": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 1
+      },
+      "answer_terms_in_context": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 1
+      },
+      "correct": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 1
+      },
+      "false_abstention": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 1
+      },
+      "sourced": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 1
+      },
+      "n": 1
+     },
+     "reco": {
+      "doc_hit": {
+       "mean": 0.9,
+       "ci_low": 0.7,
+       "ci_high": 1.0,
+       "n": 10
+      },
+      "doc_mrr": {
+       "mean": 0.9,
+       "ci_low": 0.7,
+       "ci_high": 1.0,
+       "n": 10
+      },
+      "doc_recall": {
+       "mean": 0.9,
+       "ci_low": 0.7,
+       "ci_high": 1.0,
+       "n": 10
+      },
+      "doc_ndcg": {
+       "mean": 0.43507554077168037,
+       "ci_low": 0.29420446398415495,
+       "ci_high": 0.5952412802052046,
+       "n": 10
+      },
+      "passage_hit": {
+       "mean": 0.9,
+       "ci_low": 0.7,
+       "ci_high": 1.0,
+       "n": 10
+      },
+      "passage_mrr": {
+       "mean": 0.85,
+       "ci_low": 0.65,
+       "ci_high": 1.0,
+       "n": 10
+      },
+      "passage_recall": {
+       "mean": 0.9,
+       "ci_low": 0.7,
+       "ci_high": 1.0,
+       "n": 10
+      },
+      "obsolete_intrusion": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 10
+      },
+      "answer_terms_in_context": {
+       "mean": 0.8,
+       "ci_low": 0.5,
+       "ci_high": 1.0,
+       "n": 10
+      },
+      "correct": {
+       "mean": 0.8,
+       "ci_low": 0.5,
+       "ci_high": 1.0,
+       "n": 10
+      },
+      "false_abstention": {
+       "mean": 0.1,
+       "ci_low": 0.0,
+       "ci_high": 0.3,
+       "n": 10
+      },
+      "sourced": {
+       "mean": 0.9,
+       "ci_low": 0.7,
+       "ci_high": 1.0,
+       "n": 10
+      },
+      "n": 10
+     },
+     "table": {
+      "doc_hit": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 4
+      },
+      "doc_mrr": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 4
+      },
+      "doc_recall": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 4
+      },
+      "doc_ndcg": {
+       "mean": 0.40959999144938253,
+       "ci_low": 0.27277094501616805,
+       "ci_high": 0.5524331836846068,
+       "n": 4
+      },
+      "passage_hit": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 4
+      },
+      "passage_mrr": {
+       "mean": 0.875,
+       "ci_low": 0.625,
+       "ci_high": 1.0,
+       "n": 4
+      },
+      "passage_recall": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 4
+      },
+      "obsolete_intrusion": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 4
+      },
+      "answer_terms_in_context": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 4
+      },
+      "correct": {
+       "mean": 0.5,
+       "ci_low": 0.0,
+       "ci_high": 1.0,
+       "n": 4
+      },
+      "false_abstention": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 4
+      },
+      "sourced": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 4
+      },
+      "n": 4
+     },
+     "threshold": {
+      "doc_hit": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 4
+      },
+      "doc_mrr": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 4
+      },
+      "doc_recall": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 4
+      },
+      "doc_ndcg": {
+       "mean": 0.3831540389978169,
+       "ci_low": 0.27277641344436815,
+       "ci_high": 0.49353166455126574,
+       "n": 4
+      },
+      "passage_hit": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 4
+      },
+      "passage_mrr": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 4
+      },
+      "passage_recall": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 4
+      },
+      "obsolete_intrusion": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 4
+      },
+      "answer_terms_in_context": {
+       "mean": 0.75,
+       "ci_low": 0.25,
+       "ci_high": 1.0,
+       "n": 4
+      },
+      "correct": {
+       "mean": 0.5,
+       "ci_low": 0.0,
+       "ci_high": 1.0,
+       "n": 4
+      },
+      "false_abstention": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 4
+      },
+      "sourced": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 4
+      },
+      "n": 4
+     },
+     "timing": {
+      "doc_hit": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 1
+      },
+      "doc_mrr": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 1
+      },
+      "doc_recall": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 1
+      },
+      "doc_ndcg": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 1
+      },
+      "passage_hit": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 1
+      },
+      "passage_mrr": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 1
+      },
+      "passage_recall": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 1
+      },
+      "obsolete_intrusion": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 1
+      },
+      "answer_terms_in_context": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 1
+      },
+      "correct": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 1
+      },
+      "false_abstention": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 1
+      },
+      "sourced": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 1
+      },
+      "n": 1
+     }
+    },
+    "context_chars": {
+     "mean": 22986.366666666665,
+     "ci_low": 20906.3,
+     "ci_high": 24890.8,
+     "n": 30,
+     "median": 23706.0,
+     "max": 34575.0
+    },
+    "prompt_tokens": {
+     "mean": 6585.666666666667,
+     "ci_low": 6016.0,
+     "ci_high": 7100.333333333333,
+     "n": 30,
+     "median": 6574.0,
+     "max": 9192.0
+    },
+    "n_passages": {
+     "mean": 10.433333333333334,
+     "ci_low": 9.233333333333333,
+     "ci_high": 11.533333333333333,
+     "n": 30,
+     "median": 11.0,
+     "max": 16.0
+    },
+    "coverage_refused": {
+     "mean": 0.0,
+     "ci_low": 0.0,
+     "ci_high": 0.0,
+     "n": 30,
+     "median": 0.0,
+     "max": 0.0
+    },
+    "judge_correct": {
+     "mean": 0.9,
+     "ci_low": 0.7666666666666667,
+     "ci_high": 1.0,
+     "n": 30
+    },
+    "judge_correct_or_partial": {
+     "mean": 0.9666666666666667,
+     "ci_low": 0.9,
+     "ci_high": 1.0,
+     "n": 30
+    },
+    "judge_serious_error": {
+     "mean": 0.0,
+     "ci_low": 0.0,
+     "ci_high": 0.0,
+     "n": 30
+    },
+    "judge_serious_error_types": {}
+   },
+   "rows": [
+    {
+     "id": "MR-gfff2848a70957ac0b7b5",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "clinical_case",
+     "tags": [
+      "emergency",
+      "other"
+     ],
+     "doc_rank": 1,
+     "passage_rank": 1,
+     "n_retrieved": 5,
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 0.5531464700081437,
+     "passage_hit": 1.0,
+     "passage_mrr": 1.0,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "verification": {
+      "citations_found": [],
+      "invalid_citations": [],
+      "mentioned_molecules": [],
+      "ungrounded_molecules": [],
+      "obsolete_sources_used": [],
+      "is_abstention": true,
+      "grounding_score": 1.0,
+      "warnings": [],
+      "provenance_added_by_code": false
+     },
+     "check_regenerated": false,
+     "mode": "clinical_concise",
+     "usage": {},
+     "context_chars": 20052,
+     "n_passages": 5,
+     "coverage_supported": true,
+     "coverage_refused": false,
+     "dependency_note": false,
+     "self_corrected": false,
+     "latency_ms": 1.3687909813597798,
+     "retrieved": [
+      [
+       "2022_RPP-Trauma-cranien-leger_pour-mise-sur-site_autorship-complet_9c1d68",
+       "2022_RPP-Trauma-cranien-leger_pour-mise-sur-site_autorship-complet_9c1d68__c0030_ac70536b+2022_RPP-Trauma-cranien-leger_pour-mise-sur-site_autorship-complet_9c1d68__c0031_c5550085+2022_RPP-Trauma-cranien-leger_pour-mise-sur-site_autorship-complet_9c1d68__c0032_9ebae81e"
+      ],
+      [
+       "2022_RPP-Trauma-cranien-leger_pour-mise-sur-site_autorship-complet_9c1d68",
+       "2022_RPP-Trauma-cranien-leger_pour-mise-sur-site_autorship-complet_9c1d68__c0051_506ca651+2022_RPP-Trauma-cranien-leger_pour-mise-sur-site_autorship-complet_9c1d68__c0052_d34d8d59+2022_RPP-Trauma-cranien-leger_pour-mise-sur-site_autorship-complet_9c1d68__c0053_37d72d30+2022_RPP-Trauma-cranien-leger_pour-mise-sur-site_autorship-complet_9c1d68__c0054_b9c2dead+2022_RPP-Trauma-cranien-leger_pour-mise-sur-site_autorship-complet_9c1d68__c0055_41fa00a0+2022_RPP-Trauma-cranien-leger_pour-mise-sur-site_autorship-complet_9c1d68__c0056_1722db59+2022_RPP-Trauma-cranien-leger_pour-mise-sur-site_autorship-complet_9c1d68__c0057_dd7a2c21+2022_RPP-Trauma-cranien-leger_pour-mise-sur-site_autorship-complet_9c1d68__c0058_1e93b2be+2022_RPP-Trauma-cranien-leger_pour-mise-sur-site_autorship-complet_9c1d68__c0059_a8d46a2f"
+      ],
+      [
+       "2016_RFE-ANREA-Prise-en-charge-des-traumatises-craniens-graves-a-la-p_966f8c",
+       "2016_RFE-ANREA-Prise-en-charge-des-traumatises-craniens-graves-a-la-p_966f8c__c0037_2d99a4c4+2016_RFE-ANREA-Prise-en-charge-des-traumatises-craniens-graves-a-la-p_966f8c__c0038_9b4a3df8+2016_RFE-ANREA-Prise-en-charge-des-traumatises-craniens-graves-a-la-p_966f8c__c0039_021ad046"
+      ],
+      [
+       "2016_RFE-ANREA-Prise-en-charge-des-traumatises-craniens-graves-a-la-p_966f8c",
+       "2016_RFE-ANREA-Prise-en-charge-des-traumatises-craniens-graves-a-la-p_966f8c__c0026_eb259c44+2016_RFE-ANREA-Prise-en-charge-des-traumatises-craniens-graves-a-la-p_966f8c__c0027_a1d4053d+2016_RFE-ANREA-Prise-en-charge-des-traumatises-craniens-graves-a-la-p_966f8c__c0028_c9d14547"
+      ],
+      [
+       "2019_rfe-trauma-vertebro-medulaire_b7be1a",
+       "2019_rfe-trauma-vertebro-medulaire_b7be1a__c0055_e49ebe76"
+      ]
+     ],
+     "prompt_chars": 21635,
+     "prompt_tokens": 5623,
+     "false_abstention": 0.0,
+     "correct": 1.0,
+     "sourced": 1.0,
+     "answer": "Il faut pratiquer un scanner cérébral avec injection, car un syndrome de Claude Bernard Horner et une fracture du rachis cervical sont des signes cliniques évocateurs de dissection carotidienne [S1][S2].\nSource : Prise en charge des patients présentant un traumatisme crânien léger de l'adulte — RPP SFAR 2022 (avis d'experts, accord fort).",
+     "judge": {
+      "case_id": "c9wide_v6|wide|claude-sonnet-5-5::MR-gfff2848a70957ac0b7b5",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Scanner cérébral avec injection, conduite identique à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
+    },
+    {
+     "id": "MR-g8f23afa63325b0d08bd8",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "clinical_case",
+     "tags": [
+      "emergency",
+      "other"
+     ],
+     "doc_rank": 2,
+     "passage_rank": null,
+     "n_retrieved": 8,
+     "doc_hit": 1.0,
+     "doc_mrr": 0.5,
+     "doc_recall": 1.0,
+     "doc_ndcg": 0.15958907712489637,
+     "passage_hit": 0.0,
+     "passage_mrr": 0.0,
+     "passage_recall": 0.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "verification": {
+      "citations_found": [],
+      "invalid_citations": [],
+      "mentioned_molecules": [],
+      "ungrounded_molecules": [],
+      "obsolete_sources_used": [],
+      "is_abstention": true,
+      "grounding_score": 1.0,
+      "warnings": [],
+      "provenance_added_by_code": false
+     },
+     "check_regenerated": false,
+     "mode": "clinical_concise",
+     "usage": {},
+     "context_chars": 23444,
+     "n_passages": 8,
+     "coverage_supported": true,
+     "coverage_refused": false,
+     "dependency_note": false,
+     "self_corrected": false,
+     "latency_ms": 1.5375830116681755,
+     "retrieved": [
+      [
+       "2019_rfe-trauma-abdominale_656ac9",
+       "2019_rfe-trauma-abdominale_656ac9__c0029_fb01f8ed+2019_rfe-trauma-abdominale_656ac9__c0030_a9ae2ef7+2019_rfe-trauma-abdominale_656ac9__c0031_123c9b00+2019_rfe-trauma-abdominale_656ac9__c0032_7aeb0703"
+      ],
+      [
+       "2019_rfe-trauma-abdominal-fiche-synthese_4abf14",
+       "2019_rfe-trauma-abdominal-fiche-synthese_4abf14__c0001_7ff4490c+2019_rfe-trauma-abdominal-fiche-synthese_4abf14__c0002_1639bbc9+2019_rfe-trauma-abdominal-fiche-synthese_4abf14__c0003_97b17c7e"
+      ],
+      [
+       "2019_rfe-trauma-abdominale_656ac9",
+       "2019_rfe-trauma-abdominale_656ac9__c0045_18a75373+2019_rfe-trauma-abdominale_656ac9__c0046_76097ba8+2019_rfe-trauma-abdominale_656ac9__c0047_46109a35"
+      ],
+      [
+       "2017_rfe-prise-en-charge-des-traumatises-pelviens-graves-a-la-phase-p_a08dc6",
+       "2017_rfe-prise-en-charge-des-traumatises-pelviens-graves-a-la-phase-p_a08dc6__c0037_0cc0132e+2017_rfe-prise-en-charge-des-traumatises-pelviens-graves-a-la-phase-p_a08dc6__c0038_908d550b+2017_rfe-prise-en-charge-des-traumatises-pelviens-graves-a-la-phase-p_a08dc6__c0039_c34a3515+2017_rfe-prise-en-charge-des-traumatises-pelviens-graves-a-la-phase-p_a08dc6__c0040_56f346cf+2017_rfe-prise-en-charge-des-traumatises-pelviens-graves-a-la-phase-p_a08dc6__c0041_5335305e+2017_rfe-prise-en-charge-des-traumatises-pelviens-graves-a-la-phase-p_a08dc6__c0042_64ddb772+2017_rfe-prise-en-charge-des-traumatises-pelviens-graves-a-la-phase-p_a08dc6__c0043_ba799898+2017_rfe-prise-en-charge-des-traumatises-pelviens-graves-a-la-phase-p_a08dc6__c0044_4772add9"
+      ],
+      [
+       "2019_rfe-trauma-abdominale_656ac9",
+       "2019_rfe-trauma-abdominale_656ac9__c0005_aec59e60+2019_rfe-trauma-abdominale_656ac9__c0006_33d13952+2019_rfe-trauma-abdominale_656ac9__c0007_c7920ec7"
+      ],
+      [
+       "2019_rfe-trauma-abdominale_656ac9",
+       "2019_rfe-trauma-abdominale_656ac9__c0038_6534db56"
+      ],
+      [
+       "2019_rfe-trauma-abdominale_656ac9",
+       "2019_rfe-trauma-abdominale_656ac9__c0027_44b1eeaa"
+      ],
+      [
+       "2017_rfe-prise-en-charge-des-traumatises-pelviens-graves-a-la-phase-p_a08dc6",
+       "2017_rfe-prise-en-charge-des-traumatises-pelviens-graves-a-la-phase-p_a08dc6__c0064_edce1abb"
+      ]
+     ],
+     "prompt_chars": 25032,
+     "prompt_tokens": 6536,
+     "false_abstention": 0.0,
+     "correct": 1.0,
+     "sourced": 1.0,
+     "answer": "En cas d'hémopéritoine abondant avec un état incompatible avec le scanner, l'algorithme prévoit un traitement opératoire précoce, soumis aux règles de « damage control » en cas de laparotomie [S2]. Chez un patient hémodynamiquement instable avec épanchement intra-abdominal abondant après traumatisme fermé, tout retard avant la laparotomie majore le risque de décès [S3].\nSource : Prise en charge du traumatisme abdominal grave de l'adulte : les 48 premières heures — RFE SFAR 2019 (algorithme de prise en charge hospitalière ; avis d'experts).",
+     "judge": {
+      "case_id": "c9wide_v6|wide|claude-sonnet-5-5::MR-g8f23afa63325b0d08bd8",
+      "correctness": "partial",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Traitement opératoire précoce correct, mais le scanner secondaire de la référence n'est pas mentionné."
+     },
+     "judge_correct": 0.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
+    },
+    {
+     "id": "MR-gd1b252c6b18be4bca7b6",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "clinical_case",
+     "tags": [
+      "icu",
+      "other",
+      "threshold"
+     ],
+     "doc_rank": 1,
+     "passage_rank": 1,
+     "n_retrieved": 5,
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 0.5087403079104241,
+     "passage_hit": 1.0,
+     "passage_mrr": 1.0,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "verification": {
+      "citations_found": [],
+      "invalid_citations": [],
+      "mentioned_molecules": [],
+      "ungrounded_molecules": [],
+      "obsolete_sources_used": [],
+      "is_abstention": true,
+      "grounding_score": 1.0,
+      "warnings": [],
+      "provenance_added_by_code": false
+     },
+     "check_regenerated": false,
+     "mode": "clinical_concise",
+     "usage": {},
+     "context_chars": 20303,
+     "n_passages": 5,
+     "coverage_supported": true,
+     "coverage_refused": false,
+     "dependency_note": false,
+     "self_corrected": false,
+     "latency_ms": 1.3337910058908165,
+     "retrieved": [
+      [
+       "2016_rfe-controle-cible-de-la-temperature-en-reanimation_a712c2",
+       "2016_rfe-controle-cible-de-la-temperature-en-reanimation_a712c2__c0042_8cf5c34c+2016_rfe-controle-cible-de-la-temperature-en-reanimation_a712c2__c0043_568fff3a+2016_rfe-controle-cible-de-la-temperature-en-reanimation_a712c2__c0044_315f2398+2016_rfe-controle-cible-de-la-temperature-en-reanimation_a712c2__c0045_a60f18ba+2016_rfe-controle-cible-de-la-temperature-en-reanimation_a712c2__c0046_47bfa554+2016_rfe-controle-cible-de-la-temperature-en-reanimation_a712c2__c0047_b0ce03c0+2016_rfe-controle-cible-de-la-temperature-en-reanimation_a712c2__c0048_9a3955cb+2016_rfe-controle-cible-de-la-temperature-en-reanimation_a712c2__c0049_32620a8b+2016_rfe-controle-cible-de-la-temperature-en-reanimation_a712c2__c0050_7b9d85c0+2016_rfe-controle-cible-de-la-temperature-en-reanimation_a712c2__c0051_768f3e99"
+      ],
+      [
+       "2016_RFE-ANREA-Prise-en-charge-des-traumatises-craniens-graves-a-la-p_966f8c",
+       "2016_RFE-ANREA-Prise-en-charge-des-traumatises-craniens-graves-a-la-p_966f8c__c0098_a4f1e8f9+2016_RFE-ANREA-Prise-en-charge-des-traumatises-craniens-graves-a-la-p_966f8c__c0099_7db21199+2016_RFE-ANREA-Prise-en-charge-des-traumatises-craniens-graves-a-la-p_966f8c__c0100_ebc5c89f"
+      ],
+      [
+       "2016_rfe-controle-cible-de-la-temperature-en-reanimation_a712c2",
+       "2016_rfe-controle-cible-de-la-temperature-en-reanimation_a712c2__c0057_cee06a27+2016_rfe-controle-cible-de-la-temperature-en-reanimation_a712c2__c0058_2d038636+2016_rfe-controle-cible-de-la-temperature-en-reanimation_a712c2__c0059_1fbae859+2016_rfe-controle-cible-de-la-temperature-en-reanimation_a712c2__c0060_d72598b9+2016_rfe-controle-cible-de-la-temperature-en-reanimation_a712c2__c0061_d0b88ede+2016_rfe-controle-cible-de-la-temperature-en-reanimation_a712c2__c0062_eeb59103"
+      ],
+      [
+       "2006_2_SFAR_texte-court_Monitorage-du-patient-traumatise-grave-en-pre_392959",
+       "2006_2_SFAR_texte-court_Monitorage-du-patient-traumatise-grave-en-pre_392959__c0031_ba5e7131"
+      ],
+      [
+       "2006_2_SFAR_texte-court_Monitorage-du-patient-traumatise-grave-en-pre_392959",
+       "2006_2_SFAR_texte-court_Monitorage-du-patient-traumatise-grave-en-pre_392959__c0053_927c3efb"
+      ]
+     ],
+     "prompt_chars": 21894,
+     "prompt_tokens": 6003,
+     "false_abstention": 0.0,
+     "correct": 1.0,
+     "sourced": 1.0,
+     "answer": "Non : en cas d'HTIC malgré un traitement médical bien conduit, le CCT recommandé est entre 34 et 35 °C [S1][S2], et plusieurs études font état d'une absence de gain clinique supplémentaire à diminuer la température en cas d'échec à 34 °C [S1]. Chez 22 patients TC graves, passer à 31 °C en cas d'HTIC persistante à 34 °C n'a pas apporté de bénéfice supplémentaire sur la PIC [S1].\nSource : Contrôle cible de la température en réanimation (hors nouveau-nés) — RFE SFAR 2016, R2.3 (Grade 2+, accord FORT) ; reprise dans Prise en charge des traumatisés crâniens graves à la phase précoce — RFE SFAR 2016, R12.3 (GRADE 2+, accord FORT).",
+     "judge": {
+      "case_id": "c9wide_v6|wide|claude-sonnet-5-5::MR-gd1b252c6b18be4bca7b6",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Refus d'abaisser à 31 °C et CCT 34-35 °C, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
+    },
+    {
+     "id": "MR-g2c188878f4fca6996f4b",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "table",
+     "tags": [
+      "table",
+      "threshold"
+     ],
+     "doc_rank": 1,
+     "passage_rank": 1,
+     "n_retrieved": 11,
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 0.2073612289146658,
+     "passage_hit": 1.0,
+     "passage_mrr": 1.0,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "verification": {
+      "citations_found": [],
+      "invalid_citations": [],
+      "mentioned_molecules": [],
+      "ungrounded_molecules": [],
+      "obsolete_sources_used": [],
+      "is_abstention": true,
+      "grounding_score": 1.0,
+      "warnings": [],
+      "provenance_added_by_code": false
+     },
+     "check_regenerated": false,
+     "mode": "clinical_concise",
+     "usage": {},
+     "context_chars": 19085,
+     "n_passages": 11,
+     "coverage_supported": true,
+     "coverage_refused": false,
+     "dependency_note": false,
+     "self_corrected": false,
+     "latency_ms": 1.424332964234054,
+     "retrieved": [
+      [
+       "2012_AFAR_Examens-preinterventionnels-systematiques_a99473",
+       "2012_AFAR_Examens-preinterventionnels-systematiques_a99473__c0096_4d6ac22a+2012_AFAR_Examens-preinterventionnels-systematiques_a99473__c0097_4a3de523+2012_AFAR_Examens-preinterventionnels-systematiques_a99473__c0098_aff6d655+2012_AFAR_Examens-preinterventionnels-systematiques_a99473__c0099_f1277f09+2012_AFAR_Examens-preinterventionnels-systematiques_a99473__c0100_c6e2262d+2012_AFAR_Examens-preinterventionnels-systematiques_a99473__c0101_0b638391"
+      ],
+      [
+       "2010_2_AFAR_Prise-en-charge-du-coronarien-qui-doit-etre-opere-en-chir_59da99",
+       "2010_2_AFAR_Prise-en-charge-du-coronarien-qui-doit-etre-opere-en-chir_59da99__c0133_3b89a381+2010_2_AFAR_Prise-en-charge-du-coronarien-qui-doit-etre-opere-en-chir_59da99__c0134_c8fde21e+2010_2_AFAR_Prise-en-charge-du-coronarien-qui-doit-etre-opere-en-chir_59da99__c0135_9dce778b"
+      ],
+      [
+       "2010_2_AFAR_Prise-en-charge-du-coronarien-qui-doit-etre-opere-en-chir_59da99",
+       "2010_2_AFAR_Prise-en-charge-du-coronarien-qui-doit-etre-opere-en-chir_59da99__c0127_5342da3b+2010_2_AFAR_Prise-en-charge-du-coronarien-qui-doit-etre-opere-en-chir_59da99__c0128_3a1a1f0b+2010_2_AFAR_Prise-en-charge-du-coronarien-qui-doit-etre-opere-en-chir_59da99__c0129_fedc7883"
+      ],
+      [
+       "2010_2_AFAR_Prise-en-charge-du-coronarien-qui-doit-etre-opere-en-chir_59da99",
+       "2010_2_AFAR_Prise-en-charge-du-coronarien-qui-doit-etre-opere-en-chir_59da99__c0011_ebbd479d+2010_2_AFAR_Prise-en-charge-du-coronarien-qui-doit-etre-opere-en-chir_59da99__c0012_ac29ebcf+2010_2_AFAR_Prise-en-charge-du-coronarien-qui-doit-etre-opere-en-chir_59da99__c0013_51ae2295+2010_2_AFAR_Prise-en-charge-du-coronarien-qui-doit-etre-opere-en-chir_59da99__c0014_8fbdcad3"
+      ],
+      [
+       "2023_RPP-Anesthesie-adulte-porteur-de-CC_pour-mise-sur-site_6601a6",
+       "2023_RPP-Anesthesie-adulte-porteur-de-CC_pour-mise-sur-site_6601a6__c0093_30d23a6c"
+      ],
+      [
+       "2006_2b_HAS_TEXTE-LONG_Prise-en-charge-de-linfarctus-du-myocarde_ba86c1",
+       "2006_2b_HAS_TEXTE-LONG_Prise-en-charge-de-linfarctus-du-myocarde_ba86c1__c0114_931b96a0"
+      ],
+      [
+       "2006_2b_HAS_TEXTE-LONG_Prise-en-charge-de-linfarctus-du-myocarde_ba86c1",
+       "2006_2b_HAS_TEXTE-LONG_Prise-en-charge-de-linfarctus-du-myocarde_ba86c1__c0116_78452564"
+      ],
+      [
+       "2010_2_AFAR_Prise-en-charge-du-coronarien-qui-doit-etre-opere-en-chir_59da99",
+       "2010_2_AFAR_Prise-en-charge-du-coronarien-qui-doit-etre-opere-en-chir_59da99__c0021_08030bc3"
+      ],
+      [
+       "2018_2_Gestion-des-agents-antiplaquettaires-pour-une-procedure-invasi_89e3af",
+       "2018_2_Gestion-des-agents-antiplaquettaires-pour-une-procedure-invasi_89e3af__c0044_9ec71e4c"
+      ],
+      [
+       "2010_2_AFAR_Prise-en-charge-du-coronarien-qui-doit-etre-opere-en-chir_59da99",
+       "2010_2_AFAR_Prise-en-charge-du-coronarien-qui-doit-etre-opere-en-chir_59da99__c0081_6b135ff7"
+      ],
+      [
+       "2026_Version-courte_3ae465",
+       "2026_Version-courte_3ae465__c0043_28ceff85"
+      ]
+     ],
+     "prompt_chars": 20669,
+     "prompt_tokens": 5523,
+     "false_abstention": 0.0,
+     "correct": 0.0,
+     "sourced": 1.0,
+     "answer": "L'endartériectomie carotidienne se situe dans la catégorie de risque intermédiaire (1 % à 5 % de décès + infarctus du myocarde) [S1][S6][S7][S8]. Elle est exclue des chirurgies vasculaires considérées à haut risque (> 5 %) [S2].\nSource : Examens préinterventionnels systématiques — RFE SFAR 2012 (annexe A, stratification du risque cardiaque) ; Prise en charge du coronarien qui doit être opéré en chirurgie non cardiaque — RFE SFAR 2010.",
+     "judge": {
+      "case_id": "c9wide_v6|wide|claude-sonnet-5-5::MR-g2c188878f4fca6996f4b",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Endartériectomie carotidienne classée à risque intermédiaire (1-5 %), comme la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
+    },
+    {
+     "id": "MR-g6951bd8344b814c79f7e",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "table",
+     "tags": [
+      "dosage",
+      "icu",
+      "table"
+     ],
+     "doc_rank": 1,
+     "passage_rank": 1,
+     "n_retrieved": 6,
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 0.6238470455881189,
+     "passage_hit": 1.0,
+     "passage_mrr": 1.0,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "verification": {
+      "citations_found": [],
+      "invalid_citations": [],
+      "mentioned_molecules": [],
+      "ungrounded_molecules": [],
+      "obsolete_sources_used": [],
+      "is_abstention": true,
+      "grounding_score": 1.0,
+      "warnings": [],
+      "provenance_added_by_code": false
+     },
+     "check_regenerated": false,
+     "mode": "clinical_concise",
+     "usage": {},
+     "context_chars": 13261,
+     "n_passages": 6,
+     "coverage_supported": true,
+     "coverage_refused": false,
+     "dependency_note": false,
+     "self_corrected": false,
+     "latency_ms": 0.9875409887172282,
+     "retrieved": [
+      [
+       "2018_RFE-IH-soins-critiques_f67e16",
+       "2018_RFE-IH-soins-critiques_f67e16__c0101_358b4acd+2018_RFE-IH-soins-critiques_f67e16__c0102_2e6ad0c0+2018_RFE-IH-soins-critiques_f67e16__c0103_9947361e+2018_RFE-IH-soins-critiques_f67e16__c0104_153b9bf1+2018_RFE-IH-soins-critiques_f67e16__c0105_295727c3"
+      ],
+      [
+       "2018_RFE-IH-soins-critiques_f67e16",
+       "2018_RFE-IH-soins-critiques_f67e16__c0091_d68706f7+2018_RFE-IH-soins-critiques_f67e16__c0092_95bcc534+2018_RFE-IH-soins-critiques_f67e16__c0093_fbd6bebb+2018_RFE-IH-soins-critiques_f67e16__c0094_4d288558"
+      ],
+      [
+       "2014_2_REANIMATION_epuration-extrarenale-en-reanimation-adulte-et-ped_3d36e4",
+       "2014_2_REANIMATION_epuration-extrarenale-en-reanimation-adulte-et-ped_3d36e4__c0011_b0882885+2014_2_REANIMATION_epuration-extrarenale-en-reanimation-adulte-et-ped_3d36e4__c0012_935bd3de+2014_2_REANIMATION_epuration-extrarenale-en-reanimation-adulte-et-ped_3d36e4__c0013_e5df48fa"
+      ],
+      [
+       "2018_RFE-IH-soins-critiques_f67e16",
+       "2018_RFE-IH-soins-critiques_f67e16__c0121_20f6a4a9+2018_RFE-IH-soins-critiques_f67e16__c0122_0cc49130+2018_RFE-IH-soins-critiques_f67e16__c0123_ec4a91a0"
+      ],
+      [
+       "2015_ANREA_132_RFE-IRA-_52a541",
+       "2015_ANREA_132_RFE-IRA-_52a541__c0021_8d95c499+2015_ANREA_132_RFE-IRA-_52a541__c0022_2d3260e6"
+      ],
+      [
+       "2015_ANREA_132_RFE-IRA-_52a541",
+       "2015_ANREA_132_RFE-IRA-_52a541__c0024_774f0046"
+      ]
+     ],
+     "prompt_chars": 14841,
+     "prompt_tokens": 4265,
+     "false_abstention": 0.0,
+     "correct": 0.0,
+     "sourced": 1.0,
+     "answer": "Pour retenir un syndrome hépatorénal, il faut une absence de réponse après 2 jours consécutifs d'arrêt des diurétiques et de remplissage vasculaire par de l'albumine (1 g/kg) [S1]. Ce critère s'ajoute aux autres : cirrhose avec ascite, IRA stade 2 ou 3 selon KDIGO modifié, absence de choc, de néphrotoxiques récents et d'atteinte rénale parenchymateuse [S1].\nSource : Insuffisance hépatique en soins critiques — RFE SFAR 2018 (tableau 3, définition du syndrome hépatorénal).",
+     "judge": {
+      "case_id": "c9wide_v6|wide|claude-sonnet-5-5::MR-g6951bd8344b814c79f7e",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Critère de non-réponse après 2 jours d'arrêt des diurétiques et albumine 1 g/kg, conforme."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
+    },
+    {
+     "id": "MR-ga86840965e184a4c0f3d",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "clinical_case",
+     "tags": [
+      "other"
+     ],
+     "doc_rank": 1,
+     "passage_rank": 1,
+     "n_retrieved": 11,
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 0.2697831787557255,
+     "passage_hit": 1.0,
+     "passage_mrr": 1.0,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "verification": {
+      "citations_found": [],
+      "invalid_citations": [],
+      "mentioned_molecules": [],
+      "ungrounded_molecules": [],
+      "obsolete_sources_used": [],
+      "is_abstention": true,
+      "grounding_score": 1.0,
+      "warnings": [],
+      "provenance_added_by_code": false
+     },
+     "check_regenerated": false,
+     "mode": "clinical_concise",
+     "usage": {},
+     "context_chars": 26577,
+     "n_passages": 11,
+     "coverage_supported": true,
+     "coverage_refused": false,
+     "dependency_note": false,
+     "self_corrected": false,
+     "latency_ms": 2.1553339902311563,
+     "retrieved": [
+      [
+       "2019_rfe-rac-lobectomie-pulmonaire_ee63af",
+       "2019_rfe-rac-lobectomie-pulmonaire_ee63af__c0031_bca62a1b+2019_rfe-rac-lobectomie-pulmonaire_ee63af__c0032_e50da1ba+2019_rfe-rac-lobectomie-pulmonaire_ee63af__c0033_2b76809e+2019_rfe-rac-lobectomie-pulmonaire_ee63af__c0034_0620f171+2019_rfe-rac-lobectomie-pulmonaire_ee63af__c0035_a82621e0+2019_rfe-rac-lobectomie-pulmonaire_ee63af__c0036_bc4bd18b"
+      ],
+      [
+       "2017_rfe-anesthesie-du-sujet-age_57537e",
+       "2017_rfe-anesthesie-du-sujet-age_57537e__c0039_9792ce32+2017_rfe-anesthesie-du-sujet-age_57537e__c0040_97f4d07c+2017_rfe-anesthesie-du-sujet-age_57537e__c0041_af711602+2017_rfe-anesthesie-du-sujet-age_57537e__c0042_a673d762+2017_rfe-anesthesie-du-sujet-age_57537e__c0043_a585cabd"
+      ],
+      [
+       "2005_2b_AFAR_TEXTE-LONG_Anesthesie-pour-amygdalectomie-chez-lenfant_f868e3",
+       "2005_2b_AFAR_TEXTE-LONG_Anesthesie-pour-amygdalectomie-chez-lenfant_f868e3__c0028_e8124301+2005_2b_AFAR_TEXTE-LONG_Anesthesie-pour-amygdalectomie-chez-lenfant_f868e3__c0029_6b50d95b+2005_2b_AFAR_TEXTE-LONG_Anesthesie-pour-amygdalectomie-chez-lenfant_f868e3__c0030_d216458b"
+      ],
+      [
+       "2016_RFE-ANREA-Reactualisation-de-la-recommandation-sur-la-douleur-po_c27829",
+       "2016_RFE-ANREA-Reactualisation-de-la-recommandation-sur-la-douleur-po_c27829__c0017_671462c2+2016_RFE-ANREA-Reactualisation-de-la-recommandation-sur-la-douleur-po_c27829__c0018_72293d64+2016_RFE-ANREA-Reactualisation-de-la-recommandation-sur-la-douleur-po_c27829__c0019_cfafd46c"
+      ],
+      [
+       "2014_Recommandation_antalgique_post_amygdalectomie_2014_TC2_9ae464",
+       "2014_Recommandation_antalgique_post_amygdalectomie_2014_TC2_9ae464__c0054_c6a4934e+2014_Recommandation_antalgique_post_amygdalectomie_2014_TC2_9ae464__c0055_74350333+2014_Recommandation_antalgique_post_amygdalectomie_2014_TC2_9ae464__c0056_784ca74c"
+      ],
+      [
+       "2009_2_AFAR_Gestion-perioperatoire-des-traitements-chroniques-et-disp_38a32f",
+       "2009_2_AFAR_Gestion-perioperatoire-des-traitements-chroniques-et-disp_38a32f__c0175_553731b3+2009_2_AFAR_Gestion-perioperatoire-des-traitements-chroniques-et-disp_38a32f__c0176_a90bbe1c+2009_2_AFAR_Gestion-perioperatoire-des-traitements-chroniques-et-disp_38a32f__c0177_4af9939f"
+      ],
+      [
+       "2019_rac-orthepedie-lourde_bc800f",
+       "2019_rac-orthepedie-lourde_bc800f__c0046_6d83b05c"
+      ],
+      [
+       "2013_2_PUROL_Recommandations-chirurgie-ambulatoire-en-urologie_e45cde",
+       "2013_2_PUROL_Recommandations-chirurgie-ambulatoire-en-urologie_e45cde__c0385_d86f0457"
+      ],
+      [
+       "2019_rfe-rac-lobectomie-pulmonaire_ee63af",
+       "2019_rfe-rac-lobectomie-pulmonaire_ee63af__c0052_f413cf39"
+      ],
+      [
+       "2019_rac-orthepedie-lourde_bc800f",
+       "2019_rac-orthepedie-lourde_bc800f__c0044_d7022725"
+      ],
+      [
+       "2021_RFE_20SFAR-SFCTCV_20RAC_20chirurgie_20cardiaque_finale_220921_cd842e",
+       "2021_RFE_20SFAR-SFCTCV_20RAC_20chirurgie_20cardiaque_finale_220921_cd842e__c0032_8339e19a"
+      ]
+     ],
+     "prompt_chars": 28142,
+     "prompt_tokens": 7321,
+     "false_abstention": 0.0,
+     "correct": 1.0,
+     "sourced": 1.0,
+     "answer": "Chez les patients de chirurgie thoracique, un supplément d'information apporté par un support vidéo permet une réduction significative des scores d'anxiété et une amélioration de la satisfaction globale [S1].\nSource : Réhabilitation améliorée après lobectomie pulmonaire — RFE SFAR 2019 (GRADE 1+, accord FORT).",
+     "judge": {
+      "case_id": "c9wide_v6|wide|claude-sonnet-5-5::MR-ga86840965e184a4c0f3d",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Support vidéo d'information, conforme à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
+    },
+    {
+     "id": "MR-gace2db46f6d0fbc9a4b7",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "clinical_case",
+     "tags": [
+      "emergency",
+      "icu",
+      "other"
+     ],
+     "doc_rank": 3,
+     "passage_rank": 4,
+     "n_retrieved": 11,
+     "doc_hit": 1.0,
+     "doc_mrr": 0.3333333333333333,
+     "doc_recall": 1.0,
+     "doc_ndcg": 0.25082818681146524,
+     "passage_hit": 1.0,
+     "passage_mrr": 0.25,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "verification": {
+      "citations_found": [],
+      "invalid_citations": [],
+      "mentioned_molecules": [],
+      "ungrounded_molecules": [],
+      "obsolete_sources_used": [],
+      "is_abstention": true,
+      "grounding_score": 1.0,
+      "warnings": [],
+      "provenance_added_by_code": false
+     },
+     "check_regenerated": false,
+     "mode": "clinical_concise",
+     "usage": {},
+     "context_chars": 23706,
+     "n_passages": 11,
+     "coverage_supported": true,
+     "coverage_refused": false,
+     "dependency_note": false,
+     "self_corrected": false,
+     "latency_ms": 1.5532919787801802,
+     "retrieved": [
+      [
+       "2016_Intubation-et-extubation-du-patient-en-reanimation-ANREA_58d44e",
+       "2016_Intubation-et-extubation-du-patient-en-reanimation-ANREA_58d44e__c0106_22b63891+2016_Intubation-et-extubation-du-patient-en-reanimation-ANREA_58d44e__c0107_f920de1b+2016_Intubation-et-extubation-du-patient-en-reanimation-ANREA_58d44e__c0108_f10957a4+2016_Intubation-et-extubation-du-patient-en-reanimation-ANREA_58d44e__c0109_a1e1a76e+2016_Intubation-et-extubation-du-patient-en-reanimation-ANREA_58d44e__c0110_48dc2fc4+2016_Intubation-et-extubation-du-patient-en-reanimation-ANREA_58d44e__c0111_c3ee92fc"
+      ],
+      [
+       "2016_Intubation-et-extubation-du-patient-en-reanimation-ANREA_58d44e",
+       "2016_Intubation-et-extubation-du-patient-en-reanimation-ANREA_58d44e__c0018_8b23bfd7+2016_Intubation-et-extubation-du-patient-en-reanimation-ANREA_58d44e__c0019_69c86a42+2016_Intubation-et-extubation-du-patient-en-reanimation-ANREA_58d44e__c0020_18c526be"
+      ],
+      [
+       "2006_2b_SFAR_texte-long_Ventilation-Non-Invasive-au-cours-del-insuffi_4c6fe6",
+       "2006_2b_SFAR_texte-long_Ventilation-Non-Invasive-au-cours-del-insuffi_4c6fe6__c0021_11a59e74+2006_2b_SFAR_texte-long_Ventilation-Non-Invasive-au-cours-del-insuffi_4c6fe6__c0022_3ff7a78a"
+      ],
+      [
+       "2006_2b_SFAR_texte-long_Ventilation-Non-Invasive-au-cours-del-insuffi_4c6fe6",
+       "2006_2b_SFAR_texte-long_Ventilation-Non-Invasive-au-cours-del-insuffi_4c6fe6__c0008_5beaa72f+2006_2b_SFAR_texte-long_Ventilation-Non-Invasive-au-cours-del-insuffi_4c6fe6__c0009_54f552a1+2006_2b_SFAR_texte-long_Ventilation-Non-Invasive-au-cours-del-insuffi_4c6fe6__c0010_9030edaf+2006_2b_SFAR_texte-long_Ventilation-Non-Invasive-au-cours-del-insuffi_4c6fe6__c0011_f1b14e98"
+      ],
+      [
+       "2019_rfe-rac-lobectomie-pulmonaire_ee63af",
+       "2019_rfe-rac-lobectomie-pulmonaire_ee63af__c0157_30523305+2019_rfe-rac-lobectomie-pulmonaire_ee63af__c0158_ed59718f+2019_rfe-rac-lobectomie-pulmonaire_ee63af__c0159_67ea8136"
+      ],
+      [
+       "2001_2_SFAR_Sevrage-de-la-ventilation-mecanique_edbac5",
+       "2001_2_SFAR_Sevrage-de-la-ventilation-mecanique_edbac5__c0039_e5e741ca"
+      ],
+      [
+       "2001_2_SFAR_Sevrage-de-la-ventilation-mecanique_edbac5",
+       "2001_2_SFAR_Sevrage-de-la-ventilation-mecanique_edbac5__c0029_05697c2f"
+      ],
+      [
+       "2008_2b_AFAR_texte-long_Securisation-des-procedures-a-risques-en-rean_ac3a62",
+       "2008_2b_AFAR_texte-long_Securisation-des-procedures-a-risques-en-rean_ac3a62__c0205_4ad6ec2f"
+      ],
+      [
+       "2008_2b_AFAR_texte-long_Securisation-des-procedures-a-risques-en-rean_ac3a62",
+       "2008_2b_AFAR_texte-long_Securisation-des-procedures-a-risques-en-rean_ac3a62__c0200_e6b0d625"
+      ],
+      [
+       "2006_2a_SFAR_texte-court_Ventilation-Non-Invasive-au-cours-del-insuff_79b8d5",
+       "2006_2a_SFAR_texte-court_Ventilation-Non-Invasive-au-cours-del-insuff_79b8d5__c0012_5f6ba9dd"
+      ],
+      [
+       "2006_2b_SFAR_texte-long_Ventilation-Non-Invasive-au-cours-del-insuffi_4c6fe6",
+       "2006_2b_SFAR_texte-long_Ventilation-Non-Invasive-au-cours-del-insuffi_4c6fe6__c0001_9d489117"
+      ]
+     ],
+     "prompt_chars": 25278,
+     "prompt_tokens": 6755,
+     "false_abstention": 0.0,
+     "correct": 0.0,
+     "sourced": 1.0,
+     "answer": "Il ne faut probablement pas utiliser la VNI curative en cas d'insuffisance respiratoire aiguë survenant après extubation programmée en réanimation, excepté chez les patients BPCO ou en cas d'OAP évident [S1]. La VNI ne diminue pas la nécessité de réintubation par rapport à un traitement standard et une mortalité plus élevée a été observée avec la VNI, probablement par un délai de réintubation plus long [S4].\nSource : Intubation et extubation du patient de réanimation, RFE SFAR 2016, Grade 2- (Accord FAIBLE) ; Ventilation Non Invasive au cours de l'insuffisance respiratoire aiguë, RFE SFAR 2006.",
+     "judge": {
+      "case_id": "c9wide_v6|wide|claude-sonnet-5-5::MR-gace2db46f6d0fbc9a4b7",
+      "correctness": "partial",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Déconseille la VNI de rattrapage et signale la surmortalité, mais ajoute des exceptions (BPCO, OAP) absentes de la référence et omet de ne pas retarder la réintubation."
+     },
+     "judge_correct": 0.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
+    },
+    {
+     "id": "MR-gfc720f85a7e4c8f6d739",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "open",
+     "tags": [
+      "reco"
+     ],
+     "doc_rank": 1,
+     "passage_rank": 1,
+     "n_retrieved": 7,
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 0.5039399436762,
+     "passage_hit": 1.0,
+     "passage_mrr": 1.0,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "verification": {
+      "citations_found": [],
+      "invalid_citations": [],
+      "mentioned_molecules": [],
+      "ungrounded_molecules": [],
+      "obsolete_sources_used": [],
+      "is_abstention": true,
+      "grounding_score": 1.0,
+      "warnings": [],
+      "provenance_added_by_code": false
+     },
+     "check_regenerated": false,
+     "mode": "clinical_concise",
+     "usage": {},
+     "context_chars": 18812,
+     "n_passages": 7,
+     "coverage_supported": true,
+     "coverage_refused": false,
+     "dependency_note": false,
+     "self_corrected": false,
+     "latency_ms": 1.2800420518033206,
+     "retrieved": [
+      [
+       "2012_2_AFAR_COURT_Bris-dentaires-perianesthesiques-copie_e84cfe",
+       "2012_2_AFAR_COURT_Bris-dentaires-perianesthesiques-copie_e84cfe__c0010_e598b00c+2012_2_AFAR_COURT_Bris-dentaires-perianesthesiques-copie_e84cfe__c0011_09dee55c+2012_2_AFAR_COURT_Bris-dentaires-perianesthesiques-copie_e84cfe__c0012_247485ef+2012_2_AFAR_COURT_Bris-dentaires-perianesthesiques-copie_e84cfe__c0013_d0ed7dd0+2012_2_AFAR_COURT_Bris-dentaires-perianesthesiques-copie_e84cfe__c0014_78a73b24"
+      ],
+      [
+       "2012_3_AFAR_LONG_Bris-dentaires-perianesthesiques-copie_ba6aca",
+       "2012_3_AFAR_LONG_Bris-dentaires-perianesthesiques-copie_ba6aca__c0034_1af02812+2012_3_AFAR_LONG_Bris-dentaires-perianesthesiques-copie_ba6aca__c0035_af8cfaf3+2012_3_AFAR_LONG_Bris-dentaires-perianesthesiques-copie_ba6aca__c0036_36cc5cc4+2012_3_AFAR_LONG_Bris-dentaires-perianesthesiques-copie_ba6aca__c0037_5c68a454+2012_3_AFAR_LONG_Bris-dentaires-perianesthesiques-copie_ba6aca__c0038_a6b35166+2012_3_AFAR_LONG_Bris-dentaires-perianesthesiques-copie_ba6aca__c0039_06e23eec+2012_3_AFAR_LONG_Bris-dentaires-perianesthesiques-copie_ba6aca__c0040_9a33aefa+2012_3_AFAR_LONG_Bris-dentaires-perianesthesiques-copie_ba6aca__c0041_69f49d0f"
+      ],
+      [
+       "2012_2_AFAR_COURT_Bris-dentaires-perianesthesiques-copie_e84cfe",
+       "2012_2_AFAR_COURT_Bris-dentaires-perianesthesiques-copie_e84cfe__c0003_4a9aef95+2012_2_AFAR_COURT_Bris-dentaires-perianesthesiques-copie_e84cfe__c0004_81ee1884+2012_2_AFAR_COURT_Bris-dentaires-perianesthesiques-copie_e84cfe__c0005_88dcd315"
+      ],
+      [
+       "2012_3_AFAR_LONG_Bris-dentaires-perianesthesiques-copie_ba6aca",
+       "2012_3_AFAR_LONG_Bris-dentaires-perianesthesiques-copie_ba6aca__c0063_7f59a62b+2012_3_AFAR_LONG_Bris-dentaires-perianesthesiques-copie_ba6aca__c0064_ffa40212+2012_3_AFAR_LONG_Bris-dentaires-perianesthesiques-copie_ba6aca__c0065_ac96a579"
+      ],
+      [
+       "2012_3_AFAR_LONG_Bris-dentaires-perianesthesiques-copie_ba6aca",
+       "2012_3_AFAR_LONG_Bris-dentaires-perianesthesiques-copie_ba6aca__c0022_9a1f48fc"
+      ],
+      [
+       "2012_3_AFAR_LONG_Bris-dentaires-perianesthesiques-copie_ba6aca",
+       "2012_3_AFAR_LONG_Bris-dentaires-perianesthesiques-copie_ba6aca__c0046_dfa1a26e"
+      ],
+      [
+       "2012_2_AFAR_COURT_Bris-dentaires-perianesthesiques-copie_e84cfe",
+       "2012_2_AFAR_COURT_Bris-dentaires-perianesthesiques-copie_e84cfe__c0008_96a865d5"
+      ]
+     ],
+     "prompt_chars": 20386,
+     "prompt_tokens": 5147,
+     "false_abstention": 0.0,
+     "correct": 1.0,
+     "sourced": 1.0,
+     "answer": "Si l'utilisation d'une gouttière est retenue, il faut probablement recommander une gouttière sur mesure plutôt qu'une gouttière standard, et tracer dans le dossier « incité à fournir un protège-dents sur mesure » [S1][S2]. La gouttière sur mesure protège mieux les dents maxillaires que les gouttières standards, sans aggraver les conditions d'intubation [S2].\nSource : Bris dentaires périanesthésiques, RFE SFAR 2012 (formulation « il faut probablement » ; accord fort du groupe de travail pour l'ensemble des propositions).",
+     "judge": {
+      "case_id": "c9wide_v6|wide|claude-sonnet-5-5::MR-gfc720f85a7e4c8f6d739",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Gouttière sur mesure et traçabilité dans le dossier, conformes."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
+    },
+    {
+     "id": "MR-g9f4e50ab33c87f6858b4",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "open",
+     "tags": [
+      "icu",
+      "reco"
+     ],
+     "doc_rank": 1,
+     "passage_rank": 2,
+     "n_retrieved": 10,
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 0.494639655562801,
+     "passage_hit": 1.0,
+     "passage_mrr": 0.5,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "verification": {
+      "citations_found": [],
+      "invalid_citations": [],
+      "mentioned_molecules": [],
+      "ungrounded_molecules": [],
+      "obsolete_sources_used": [],
+      "is_abstention": true,
+      "grounding_score": 1.0,
+      "warnings": [],
+      "provenance_added_by_code": false
+     },
+     "check_regenerated": false,
+     "mode": "clinical_concise",
+     "usage": {},
+     "context_chars": 25006,
+     "n_passages": 10,
+     "coverage_supported": true,
+     "coverage_refused": false,
+     "dependency_note": false,
+     "self_corrected": false,
+     "latency_ms": 1.644040981773287,
+     "retrieved": [
+      [
+       "2005_122-recosfdv0606_ce421b",
+       "2005_122-recosfdv0606_ce421b__c0003_eabe4eb5+2005_122-recosfdv0606_ce421b__c0004_addf1919+2005_122-recosfdv0606_ce421b__c0005_48528e0f"
+      ],
+      [
+       "2005_122-recosfdv0606_ce421b",
+       "2005_122-recosfdv0606_ce421b__c0017_256ecf08+2005_122-recosfdv0606_ce421b__c0018_5f929c69+2005_122-recosfdv0606_ce421b__c0019_045a57dd+2005_122-recosfdv0606_ce421b__c0020_178ba283+2005_122-recosfdv0606_ce421b__c0021_b55697a8+2005_122-recosfdv0606_ce421b__c0022_f2b84303+2005_122-recosfdv0606_ce421b__c0023_c364d0c0"
+      ],
+      [
+       "2026_RFE-LAT-final-mai-2026-_a26946",
+       "2026_RFE-LAT-final-mai-2026-_a26946__c0138_1aac9cd3+2026_RFE-LAT-final-mai-2026-_a26946__c0139_4311ce7b+2026_RFE-LAT-final-mai-2026-_a26946__c0140_9f0163c5"
+      ],
+      [
+       "2026_RFE-LAT-final-mai-2026-_a26946",
+       "2026_RFE-LAT-final-mai-2026-_a26946__c0037_3eba6bf8+2026_RFE-LAT-final-mai-2026-_a26946__c0038_21b4e834+2026_RFE-LAT-final-mai-2026-_a26946__c0039_67948dda"
+      ],
+      [
+       "2026_RFE-LAT-final-mai-2026-_a26946",
+       "2026_RFE-LAT-final-mai-2026-_a26946__c0110_b1bb4f75+2026_RFE-LAT-final-mai-2026-_a26946__c0111_08e7c824+2026_RFE-LAT-final-mai-2026-_a26946__c0112_7b5c9e0d"
+      ],
+      [
+       "2026_RFE-LAT-final-mai-2026-_a26946",
+       "2026_RFE-LAT-final-mai-2026-_a26946__c0142_4551b310+2026_RFE-LAT-final-mai-2026-_a26946__c0143_952b7969+2026_RFE-LAT-final-mai-2026-_a26946__c0144_3394b7d3"
+      ],
+      [
+       "2026_RFE-LAT-final-mai-2026-_a26946",
+       "2026_RFE-LAT-final-mai-2026-_a26946__c0090_5b372b1b"
+      ],
+      [
+       "2005_122-recosfdv0606_ce421b",
+       "2005_122-recosfdv0606_ce421b__c0026_fe5c1b3e"
+      ],
+      [
+       "2005_122-recosfdv0606_ce421b",
+       "2005_122-recosfdv0606_ce421b__c0011_b6682678"
+      ],
+      [
+       "2018_EXTE-USC-CNP_7fb6b6",
+       "2018_EXTE-USC-CNP_7fb6b6__c0163_52aff348"
+      ]
+     ],
+     "prompt_chars": 26612,
+     "prompt_tokens": 6574,
+     "false_abstention": 0.0,
+     "correct": 1.0,
+     "sourced": 1.0,
+     "answer": "Le médecin consultant donne un avis motivé et ne doit avoir aucun lien de nature hiérarchique avec le médecin en charge du patient [S3]. Il doit être extérieur au service ou à l'hôpital, compétent dans le domaine de l'affection en cause sans être nécessairement un expert, et la SFAR estime qu'il doit examiner le patient [S6]. Il est préférable qu'il ne soit pas impliqué dans les soins ou dans la relation avec l'entourage, et il ne peut donc pas être le chef de service ou de pôle du praticien [S2].\nSource : Décisions de limitation et d'arrêt de traitements (LAT) en soins critiques de l'adulte, RFE SFAR 2026 (mise à jour 2026) ; complété par Recommandations de bonnes pratiques cliniques concernant l'application de la loi n° 2005-370, RFE SFAR 2005.",
+     "judge": {
+      "case_id": "c9wide_v6|wide|claude-sonnet-5-5::MR-g9f4e50ab33c87f6858b4",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Absence de lien hiérarchique et non-implication dans les soins, conformes à la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
+    },
+    {
+     "id": "MR-g83a9315591cd44551dbc",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "open",
+     "tags": [
+      "reco"
+     ],
+     "doc_rank": 1,
+     "passage_rank": 1,
+     "n_retrieved": 2,
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 1.0,
+     "passage_hit": 1.0,
+     "passage_mrr": 1.0,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "verification": {
+      "citations_found": [],
+      "invalid_citations": [],
+      "mentioned_molecules": [],
+      "ungrounded_molecules": [],
+      "obsolete_sources_used": [],
+      "is_abstention": true,
+      "grounding_score": 1.0,
+      "warnings": [],
+      "provenance_added_by_code": false
+     },
+     "check_regenerated": false,
+     "mode": "clinical_concise",
+     "usage": {},
+     "context_chars": 7812,
+     "n_passages": 2,
+     "coverage_supported": true,
+     "coverage_refused": false,
+     "dependency_note": false,
+     "self_corrected": false,
+     "latency_ms": 0.6444579921662807,
+     "retrieved": [
+      [
+       "2010_2_SFAR_Monitorage-de-ladequation-profondeur-de-lanesthesie-a-par_33e093",
+       "2010_2_SFAR_Monitorage-de-ladequation-profondeur-de-lanesthesie-a-par_33e093__c0026_8e6456ab+2010_2_SFAR_Monitorage-de-ladequation-profondeur-de-lanesthesie-a-par_33e093__c0027_6f625336+2010_2_SFAR_Monitorage-de-ladequation-profondeur-de-lanesthesie-a-par_33e093__c0028_82187aaa+2010_2_SFAR_Monitorage-de-ladequation-profondeur-de-lanesthesie-a-par_33e093__c0029_3054b24c+2010_2_SFAR_Monitorage-de-ladequation-profondeur-de-lanesthesie-a-par_33e093__c0030_9563a77b+2010_2_SFAR_Monitorage-de-ladequation-profondeur-de-lanesthesie-a-par_33e093__c0031_3149606e+2010_2_SFAR_Monitorage-de-ladequation-profondeur-de-lanesthesie-a-par_33e093__c0032_87f2e93c+2010_2_SFAR_Monitorage-de-ladequation-profondeur-de-lanesthesie-a-par_33e093__c0033_78b82063+2010_2_SFAR_Monitorage-de-ladequation-profondeur-de-lanesthesie-a-par_33e093__c0034_ffff736b"
+      ],
+      [
+       "2010_2_SFAR_Monitorage-de-ladequation-profondeur-de-lanesthesie-a-par_33e093",
+       "2010_2_SFAR_Monitorage-de-ladequation-profondeur-de-lanesthesie-a-par_33e093__c0002_fddf40a5+2010_2_SFAR_Monitorage-de-ladequation-profondeur-de-lanesthesie-a-par_33e093__c0003_f2e7a4cf+2010_2_SFAR_Monitorage-de-ladequation-profondeur-de-lanesthesie-a-par_33e093__c0004_ea6da594+2010_2_SFAR_Monitorage-de-ladequation-profondeur-de-lanesthesie-a-par_33e093__c0005_3e5bb406"
+      ]
+     ],
+     "prompt_chars": 9344,
+     "prompt_tokens": 2278,
+     "false_abstention": 0.0,
+     "correct": 1.0,
+     "sourced": 1.0,
+     "answer": "Chez un patient curarisé, les signes cliniques d'anesthésie étant modifiés par les curares, les moniteurs de profondeur de l'anesthésie pourraient permettre de détecter un sous- ou un surdosage anesthésique (avis d'experts) [S1]. Ils estiment en outre la variabilité des besoins anesthésiques entre patients et au cours du temps chez un même patient, en complément des concentrations prédites de propofol ou des concentrations téléexpiratoires d'halogénés [S1]. Il faut toutefois savoir que les curares, en supprimant le signal EMG frontal, peuvent modifier les valeurs des index (en général les diminuer) [S1].\nSource : Monitorage de l'adéquation / profondeur de l'anesthésie à partir de l'analyse de l'EEG cortical, RFE SFAR 2010, avis d'experts.",
+     "judge": {
+      "case_id": "c9wide_v6|wide|claude-sonnet-5-5::MR-g83a9315591cd44551dbc",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Intérêt de l'EEG chez le curarisé pour détecter sous/surdosage, conforme."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
+    },
+    {
+     "id": "MR-gff794cd57325dca363d6",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "clinical_case",
+     "tags": [
+      "other"
+     ],
+     "doc_rank": 1,
+     "passage_rank": 1,
+     "n_retrieved": 10,
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 0.41528076708874123,
+     "passage_hit": 1.0,
+     "passage_mrr": 1.0,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "verification": {
+      "citations_found": [],
+      "invalid_citations": [],
+      "mentioned_molecules": [],
+      "ungrounded_molecules": [],
+      "obsolete_sources_used": [],
+      "is_abstention": true,
+      "grounding_score": 1.0,
+      "warnings": [],
+      "provenance_added_by_code": false
+     },
+     "check_regenerated": false,
+     "mode": "clinical_concise",
+     "usage": {},
+     "context_chars": 21171,
+     "n_passages": 10,
+     "coverage_supported": true,
+     "coverage_refused": false,
+     "dependency_note": false,
+     "self_corrected": false,
+     "latency_ms": 1.5002079890109599,
+     "retrieved": [
+      [
+       "2010_2_SFAR_Monitorage-de-ladequation-profondeur-de-lanesthesie-a-par_33e093",
+       "2010_2_SFAR_Monitorage-de-ladequation-profondeur-de-lanesthesie-a-par_33e093__c0031_3149606e+2010_2_SFAR_Monitorage-de-ladequation-profondeur-de-lanesthesie-a-par_33e093__c0032_87f2e93c+2010_2_SFAR_Monitorage-de-ladequation-profondeur-de-lanesthesie-a-par_33e093__c0033_78b82063+2010_2_SFAR_Monitorage-de-ladequation-profondeur-de-lanesthesie-a-par_33e093__c0034_ffff736b+2010_2_SFAR_Monitorage-de-ladequation-profondeur-de-lanesthesie-a-par_33e093__c0035_ff7e8c24+2010_2_SFAR_Monitorage-de-ladequation-profondeur-de-lanesthesie-a-par_33e093__c0036_812970d4+2010_2_SFAR_Monitorage-de-ladequation-profondeur-de-lanesthesie-a-par_33e093__c0037_d8e5d0f0"
+      ],
+      [
+       "2006_2_AFAR_Blocs-perimedullaires-chez-ladulte_c289cc",
+       "2006_2_AFAR_Blocs-perimedullaires-chez-ladulte_c289cc__c0210_5089e763+2006_2_AFAR_Blocs-perimedullaires-chez-ladulte_c289cc__c0211_3c6d8b36+2006_2_AFAR_Blocs-perimedullaires-chez-ladulte_c289cc__c0212_6846d943"
+      ],
+      [
+       "2010_2_SFAR_Monitorage-de-ladequation-profondeur-de-lanesthesie-a-par_33e093",
+       "2010_2_SFAR_Monitorage-de-ladequation-profondeur-de-lanesthesie-a-par_33e093__c0001_73e4a3b0+2010_2_SFAR_Monitorage-de-ladequation-profondeur-de-lanesthesie-a-par_33e093__c0002_fddf40a5+2010_2_SFAR_Monitorage-de-ladequation-profondeur-de-lanesthesie-a-par_33e093__c0003_f2e7a4cf+2010_2_SFAR_Monitorage-de-ladequation-profondeur-de-lanesthesie-a-par_33e093__c0004_ea6da594+2010_2_SFAR_Monitorage-de-ladequation-profondeur-de-lanesthesie-a-par_33e093__c0005_3e5bb406"
+      ],
+      [
+       "2022_RPP-reduction-impact-environnemental_pour-mise-sur-site_b22db8",
+       "2022_RPP-reduction-impact-environnemental_pour-mise-sur-site_b22db8__c0067_342b6704+2022_RPP-reduction-impact-environnemental_pour-mise-sur-site_b22db8__c0068_54af78df+2022_RPP-reduction-impact-environnemental_pour-mise-sur-site_b22db8__c0069_6a6bde57"
+      ],
+      [
+       "2010_2_SFAR_Monitorage-de-ladequation-profondeur-de-lanesthesie-a-par_33e093",
+       "2010_2_SFAR_Monitorage-de-ladequation-profondeur-de-lanesthesie-a-par_33e093__c0027_6f625336+2010_2_SFAR_Monitorage-de-ladequation-profondeur-de-lanesthesie-a-par_33e093__c0028_82187aaa+2010_2_SFAR_Monitorage-de-ladequation-profondeur-de-lanesthesie-a-par_33e093__c0029_3054b24c"
+      ],
+      [
+       "2022_RFE-Programme-doptimisation-perioperatoire_pour-mise-sur-site_26_6ede19",
+       "2022_RFE-Programme-doptimisation-perioperatoire_pour-mise-sur-site_26_6ede19__c0143_a51e4db7"
+      ],
+      [
+       "2022_RPP-reduction-impact-environnemental_pour-mise-sur-site_b22db8",
+       "2022_RPP-reduction-impact-environnemental_pour-mise-sur-site_b22db8__c0063_a0f14409"
+      ],
+      [
+       "2017_rfe-anesthesie-du-sujet-age_57537e",
+       "2017_rfe-anesthesie-du-sujet-age_57537e__c0070_e54a21b8"
+      ],
+      [
+       "2004_2_AFAR_Pratique-des-anesthesies-locales-et-locoregionales-par-de_2ac61d",
+       "2004_2_AFAR_Pratique-des-anesthesies-locales-et-locoregionales-par-de_2ac61d__c0029_a3e6ff96"
+      ],
+      [
+       "2022_RPP-reduction-impact-environnemental_pour-mise-sur-site_b22db8",
+       "2022_RPP-reduction-impact-environnemental_pour-mise-sur-site_b22db8__c0091_c22f6c13"
+      ]
+     ],
+     "prompt_chars": 22759,
+     "prompt_tokens": 5762,
+     "false_abstention": 0.0,
+     "correct": 1.0,
+     "sourced": 1.0,
+     "answer": "Les moniteurs de profondeur de l'anesthésie pourraient être utiles pour affiner le raisonnement médical chez les patients dont la relation dose - concentration - effets des médicaments anesthésiques est inhabituelle [S1]. Ils peuvent permettre de détecter plus facilement le sous- et le surdosage anesthésique dans ces populations [S1][S5].\nSource : Monitorage de l'adéquation / profondeur de l'anesthésie à partir de l'analyse de l'EEG cortical, RFE SFAR 2010 (avis d'experts pour la détection du sous- ou surdosage).",
+     "judge": {
+      "case_id": "c9wide_v6|wide|claude-sonnet-5-5::MR-gff794cd57325dca363d6",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Affiner le raisonnement et détecter sous/surdosage, conforme."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
+    },
+    {
+     "id": "MR-gf761346ec9be5d6ba346",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "open",
+     "tags": [
+      "icu",
+      "reco"
+     ],
+     "doc_rank": 1,
+     "passage_rank": 1,
+     "n_retrieved": 11,
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 0.5305499380894799,
+     "passage_hit": 1.0,
+     "passage_mrr": 1.0,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "verification": {
+      "citations_found": [],
+      "invalid_citations": [],
+      "mentioned_molecules": [],
+      "ungrounded_molecules": [],
+      "obsolete_sources_used": [],
+      "is_abstention": true,
+      "grounding_score": 1.0,
+      "warnings": [],
+      "provenance_added_by_code": false
+     },
+     "check_regenerated": false,
+     "mode": "clinical_concise",
+     "usage": {},
+     "context_chars": 24228,
+     "n_passages": 11,
+     "coverage_supported": true,
+     "coverage_refused": false,
+     "dependency_note": false,
+     "self_corrected": false,
+     "latency_ms": 1.5457500121556222,
+     "retrieved": [
+      [
+       "2026_RFE-LAT-final-mai-2026-_a26946",
+       "2026_RFE-LAT-final-mai-2026-_a26946__c0209_7edacea3+2026_RFE-LAT-final-mai-2026-_a26946__c0210_fdbf3d66+2026_RFE-LAT-final-mai-2026-_a26946__c0211_8fbbbee9"
+      ],
+      [
+       "2009_2_AFAR_Mieux-vivre-la-reanimation_8ed1f4",
+       "2009_2_AFAR_Mieux-vivre-la-reanimation_8ed1f4__c0041_1dc0cd8d+2009_2_AFAR_Mieux-vivre-la-reanimation_8ed1f4__c0042_c10efa4a+2009_2_AFAR_Mieux-vivre-la-reanimation_8ed1f4__c0043_d36b6cf9+2009_2_AFAR_Mieux-vivre-la-reanimation_8ed1f4__c0044_f54a5cf2+2009_2_AFAR_Mieux-vivre-la-reanimation_8ed1f4__c0045_8f84f756+2009_2_AFAR_Mieux-vivre-la-reanimation_8ed1f4__c0046_7957f45c+2009_2_AFAR_Mieux-vivre-la-reanimation_8ed1f4__c0047_fccf579b"
+      ],
+      [
+       "2009_2_AFAR_Mieux-vivre-la-reanimation_8ed1f4",
+       "2009_2_AFAR_Mieux-vivre-la-reanimation_8ed1f4__c0016_7dfe9181+2009_2_AFAR_Mieux-vivre-la-reanimation_8ed1f4__c0017_17238b59+2009_2_AFAR_Mieux-vivre-la-reanimation_8ed1f4__c0018_4e656423+2009_2_AFAR_Mieux-vivre-la-reanimation_8ed1f4__c0019_b054c3c1"
+      ],
+      [
+       "2009_2_AFAR_Mieux-vivre-la-reanimation_8ed1f4",
+       "2009_2_AFAR_Mieux-vivre-la-reanimation_8ed1f4__c0034_87921e36+2009_2_AFAR_Mieux-vivre-la-reanimation_8ed1f4__c0035_58845a1d+2009_2_AFAR_Mieux-vivre-la-reanimation_8ed1f4__c0036_cdda7605"
+      ],
+      [
+       "2009_2_AFAR_Mieux-vivre-la-reanimation_8ed1f4",
+       "2009_2_AFAR_Mieux-vivre-la-reanimation_8ed1f4__c0005_df55ea79+2009_2_AFAR_Mieux-vivre-la-reanimation_8ed1f4__c0006_c61659c5+2009_2_AFAR_Mieux-vivre-la-reanimation_8ed1f4__c0007_c2f86a55"
+      ],
+      [
+       "2026_RFE-LAT-final-mai-2026-_a26946",
+       "2026_RFE-LAT-final-mai-2026-_a26946__c0228_a58b3443"
+      ],
+      [
+       "2026_RFE-LAT-final-mai-2026-_a26946",
+       "2026_RFE-LAT-final-mai-2026-_a26946__c0215_f477032a"
+      ],
+      [
+       "2001_196-reco-anesth-chir-autres-2001_8a8dc3",
+       "2001_196-reco-anesth-chir-autres-2001_8a8dc3__c0047_7383f0a9"
+      ],
+      [
+       "2026_RFE-LAT-final-mai-2026-_a26946",
+       "2026_RFE-LAT-final-mai-2026-_a26946__c0231_ba2cbd9d"
+      ],
+      [
+       "2026_RFE-LAT-final-mai-2026-_a26946",
+       "2026_RFE-LAT-final-mai-2026-_a26946__c0084_6a1621e8"
+      ],
+      [
+       "2026_RFE-LAT-final-mai-2026-_a26946",
+       "2026_RFE-LAT-final-mai-2026-_a26946__c0249_750ed12d"
+      ]
+     ],
+     "prompt_chars": 25780,
+     "prompt_tokens": 6188,
+     "false_abstention": 0.0,
+     "correct": 1.0,
+     "sourced": 1.0,
+     "answer": "En service de soins critiques, les experts suggèrent de former l'équipe médico-soignante à la communication pour prévenir les conflits entre proches et équipes médico-soignantes [S1].\nSource : Décisions de limitation et d'arrêt de traitements (LAT) en soins critiques de l'adulte, RFE SFAR 2026 (R3.2, avis d'experts, accord fort).",
+     "judge": {
+      "case_id": "c9wide_v6|wide|claude-sonnet-5-5::MR-gf761346ec9be5d6ba346",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Formation de l'équipe à la communication, conforme."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
+    },
+    {
+     "id": "MR-gfd6492bcff9d310fa822",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "open",
+     "tags": [
+      "reco"
+     ],
+     "doc_rank": 1,
+     "passage_rank": 1,
+     "n_retrieved": 9,
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 0.3833427799846345,
+     "passage_hit": 1.0,
+     "passage_mrr": 1.0,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "verification": {
+      "citations_found": [],
+      "invalid_citations": [],
+      "mentioned_molecules": [],
+      "ungrounded_molecules": [],
+      "obsolete_sources_used": [],
+      "is_abstention": true,
+      "grounding_score": 1.0,
+      "warnings": [],
+      "provenance_added_by_code": false
+     },
+     "check_regenerated": false,
+     "mode": "clinical_concise",
+     "usage": {},
+     "context_chars": 20288,
+     "n_passages": 9,
+     "coverage_supported": true,
+     "coverage_refused": false,
+     "dependency_note": false,
+     "self_corrected": false,
+     "latency_ms": 1.388917036820203,
+     "retrieved": [
+      [
+       "2009_2b_AFAR_Contrele-de-la-glycemie-en-reanimation-et-en-anesthesie__5f7048",
+       "2009_2b_AFAR_Contrele-de-la-glycemie-en-reanimation-et-en-anesthesie__5f7048__c0021_efc76410+2009_2b_AFAR_Contrele-de-la-glycemie-en-reanimation-et-en-anesthesie__5f7048__c0022_abfd6ed6+2009_2b_AFAR_Contrele-de-la-glycemie-en-reanimation-et-en-anesthesie__5f7048__c0023_09f7b895+2009_2b_AFAR_Contrele-de-la-glycemie-en-reanimation-et-en-anesthesie__5f7048__c0024_73324b03+2009_2b_AFAR_Contrele-de-la-glycemie-en-reanimation-et-en-anesthesie__5f7048__c0025_ffde2cb2+2009_2b_AFAR_Contrele-de-la-glycemie-en-reanimation-et-en-anesthesie__5f7048__c0026_e86bbfb3+2009_2b_AFAR_Contrele-de-la-glycemie-en-reanimation-et-en-anesthesie__5f7048__c0027_ae36fa8f+2009_2b_AFAR_Contrele-de-la-glycemie-en-reanimation-et-en-anesthesie__5f7048__c0028_1cbafcca"
+      ],
+      [
+       "2009_2b_AFAR_Contrele-de-la-glycemie-en-reanimation-et-en-anesthesie__5f7048",
+       "2009_2b_AFAR_Contrele-de-la-glycemie-en-reanimation-et-en-anesthesie__5f7048__c0032_8edafc10+2009_2b_AFAR_Contrele-de-la-glycemie-en-reanimation-et-en-anesthesie__5f7048__c0033_977140f2+2009_2b_AFAR_Contrele-de-la-glycemie-en-reanimation-et-en-anesthesie__5f7048__c0034_9cdcb17a+2009_2b_AFAR_Contrele-de-la-glycemie-en-reanimation-et-en-anesthesie__5f7048__c0035_637c8ce2"
+      ],
+      [
+       "2009_2a_AFAR_UPDATE_Controle-de-la-glycemie-en-reanimation-et-en-anes_1966bb",
+       "2009_2a_AFAR_UPDATE_Controle-de-la-glycemie-en-reanimation-et-en-anes_1966bb__c0004_cf8c0be1+2009_2a_AFAR_UPDATE_Controle-de-la-glycemie-en-reanimation-et-en-anes_1966bb__c0005_3c3bfd78+2009_2a_AFAR_UPDATE_Controle-de-la-glycemie-en-reanimation-et-en-anes_1966bb__c0006_17f2816a"
+      ],
+      [
+       "2008_2_AFAR_Prevention-des-infections-nosocomiales-en-reanimation-tra_c75100",
+       "2008_2_AFAR_Prevention-des-infections-nosocomiales-en-reanimation-tra_c75100__c0063_6790ae98"
+      ],
+      [
+       "2016_RFE-ANREA-Prise-en-charge-des-traumatises-craniens-graves-a-la-p_966f8c",
+       "2016_RFE-ANREA-Prise-en-charge-des-traumatises-craniens-graves-a-la-p_966f8c__c0089_6341f421"
+      ],
+      [
+       "2022_RPP-thrombectomie-2022_version-definitive-octobre-2022_103478",
+       "2022_RPP-thrombectomie-2022_version-definitive-octobre-2022_103478__c0077_d743b7e4"
+      ],
+      [
+       "2024_RPP-RH-AR-validee-CA-SFAR-191224-_994758",
+       "2024_RPP-RH-AR-validee-CA-SFAR-191224-_994758__c0029_046d28f0"
+      ],
+      [
+       "2025_Fiches-simplifiees-19122025-_21fc82",
+       "2025_Fiches-simplifiees-19122025-_21fc82__c0037_1cb3c024"
+      ],
+      [
+       "2025_Fiches-simplifiees-19122025-_21fc82",
+       "2025_Fiches-simplifiees-19122025-_21fc82__c0024_ed2b90ca"
+      ]
+     ],
+     "prompt_chars": 21846,
+     "prompt_tokens": 5872,
+     "false_abstention": 0.0,
+     "correct": 1.0,
+     "sourced": 1.0,
+     "answer": "Oui : il faut probablement mesurer la glycémie peropératoire au cours des interventions à risque [S1]. Chez les patients à risque, il faut aussi réaliser une mesure de glycémie durant le séjour en salle de surveillance post-interventionnelle (SSPI) [S1].\nSource : Contrôle de la glycémie en réanimation et en anesthésie, RFE SFAR 2009 (mesure peropératoire : NGP faible, accord fort).",
+     "judge": {
+      "case_id": "c9wide_v6|wide|claude-sonnet-5-5::MR-gfd6492bcff9d310fa822",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Glycémie peropératoire à risque et en SSPI chez les patients à risque, conforme."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
+    },
+    {
+     "id": "MR-g55e468b6df0cb295c14b",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "table",
+     "tags": [
+      "obstetric",
+      "table"
+     ],
+     "doc_rank": 1,
+     "passage_rank": 2,
+     "n_retrieved": 10,
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 0.4690000933206748,
+     "passage_hit": 1.0,
+     "passage_mrr": 0.5,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "verification": {
+      "citations_found": [],
+      "invalid_citations": [],
+      "mentioned_molecules": [],
+      "ungrounded_molecules": [],
+      "obsolete_sources_used": [],
+      "is_abstention": true,
+      "grounding_score": 1.0,
+      "warnings": [],
+      "provenance_added_by_code": false
+     },
+     "check_regenerated": false,
+     "mode": "clinical_concise",
+     "usage": {},
+     "context_chars": 23723,
+     "n_passages": 10,
+     "coverage_supported": true,
+     "coverage_refused": false,
+     "dependency_note": false,
+     "self_corrected": false,
+     "latency_ms": 1.4621249865740538,
+     "retrieved": [
+      [
+       "2021_preconisations-inssuffisance-d-analgesie-cesarienne-sous-anesthe_416887",
+       "2021_preconisations-inssuffisance-d-analgesie-cesarienne-sous-anesthe_416887__c0008_737aefb4+2021_preconisations-inssuffisance-d-analgesie-cesarienne-sous-anesthe_416887__c0009_76099cdb+2021_preconisations-inssuffisance-d-analgesie-cesarienne-sous-anesthe_416887__c0010_c1a8401b+2021_preconisations-inssuffisance-d-analgesie-cesarienne-sous-anesthe_416887__c0011_2f8f57e6+2021_preconisations-inssuffisance-d-analgesie-cesarienne-sous-anesthe_416887__c0012_88691d00+2021_preconisations-inssuffisance-d-analgesie-cesarienne-sous-anesthe_416887__c0013_1f81de64"
+      ],
+      [
+       "2021_preconisations-inssuffisance-d-analgesie-cesarienne-sous-anesthe_416887",
+       "2021_preconisations-inssuffisance-d-analgesie-cesarienne-sous-anesthe_416887__c0017_6f720d19+2021_preconisations-inssuffisance-d-analgesie-cesarienne-sous-anesthe_416887__c0018_77afeba0+2021_preconisations-inssuffisance-d-analgesie-cesarienne-sous-anesthe_416887__c0019_954fb19c+2021_preconisations-inssuffisance-d-analgesie-cesarienne-sous-anesthe_416887__c0020_20d247bf+2021_preconisations-inssuffisance-d-analgesie-cesarienne-sous-anesthe_416887__c0021_9a6641df+2021_preconisations-inssuffisance-d-analgesie-cesarienne-sous-anesthe_416887__c0022_d51b0f1b+2021_preconisations-inssuffisance-d-analgesie-cesarienne-sous-anesthe_416887__c0023_ddfdf2ae"
+      ],
+      [
+       "2021_preconisations-inssuffisance-d-analgesie-cesarienne-sous-anesthe_416887",
+       "2021_preconisations-inssuffisance-d-analgesie-cesarienne-sous-anesthe_416887__c0029_7e540535+2021_preconisations-inssuffisance-d-analgesie-cesarienne-sous-anesthe_416887__c0030_e5d6dd15+2021_preconisations-inssuffisance-d-analgesie-cesarienne-sous-anesthe_416887__c0031_d5da7eeb"
+      ],
+      [
+       "2025_RFE-analgesie-obstetricale-texte-long_172a5f",
+       "2025_RFE-analgesie-obstetricale-texte-long_172a5f__c0317_8d147607+2025_RFE-analgesie-obstetricale-texte-long_172a5f__c0318_86475e93+2025_RFE-analgesie-obstetricale-texte-long_172a5f__c0319_54382315"
+      ],
+      [
+       "2006_2_AFAR_Blocs-perimedullaires-chez-ladulte_c289cc",
+       "2006_2_AFAR_Blocs-perimedullaires-chez-ladulte_c289cc__c0118_40fd6e92+2006_2_AFAR_Blocs-perimedullaires-chez-ladulte_c289cc__c0119_b3f4d400"
+      ],
+      [
+       "2006_2_AFAR_Blocs-perimedullaires-chez-ladulte_c289cc",
+       "2006_2_AFAR_Blocs-perimedullaires-chez-ladulte_c289cc__c0025_393cb688"
+      ],
+      [
+       "2025_RFE-analgesie-obstetricale-texte-court_51af4c",
+       "2025_RFE-analgesie-obstetricale-texte-court_51af4c__c0037_e05e4155"
+      ],
+      [
+       "2025_RFE-analgesie-obstetricale-texte-court_51af4c",
+       "2025_RFE-analgesie-obstetricale-texte-court_51af4c__c0082_7b76f410+2025_RFE-analgesie-obstetricale-texte-court_51af4c__c0083_f0850336"
+      ],
+      [
+       "2006_2_AFAR_Blocs-perimedullaires-chez-ladulte_c289cc",
+       "2006_2_AFAR_Blocs-perimedullaires-chez-ladulte_c289cc__c0221_8ec6dfd1"
+      ],
+      [
+       "2025_RFE-analgesie-obstetricale-texte-long_172a5f",
+       "2025_RFE-analgesie-obstetricale-texte-long_172a5f__c0201_c7856ea2"
+      ]
+     ],
+     "prompt_chars": 25299,
+     "prompt_tokens": 6776,
+     "false_abstention": 0.0,
+     "correct": 1.0,
+     "sourced": 1.0,
+     "answer": "L'entretien de l'analgésie par perfusion continue, plutôt que par PCEA ou PIEB, figure parmi les facteurs de risque d'échec de l'extension péridurale pour la césarienne [S2].\nSource : Insuffisance d'analgésie au cours de la césarienne sous anesthésie périmédullaire, Préconisation SFAR 2021 (format avis d'experts ; facteurs de risque issus du tableau de la recommandation).",
+     "judge": {
+      "case_id": "c9wide_v6|wide|claude-sonnet-5-5::MR-g55e468b6df0cb295c14b",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Entretien par perfusion continue identifié comme facteur de risque, conforme."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
+    },
+    {
+     "id": "MR-gc6d6192f7b53462c02dd",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "open",
+     "tags": [
+      "dosage",
+      "emergency",
+      "reco"
+     ],
+     "doc_rank": 1,
+     "passage_rank": 1,
+     "n_retrieved": 12,
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 0.3314291830482726,
+     "passage_hit": 1.0,
+     "passage_mrr": 1.0,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "verification": {
+      "citations_found": [],
+      "invalid_citations": [],
+      "mentioned_molecules": [],
+      "ungrounded_molecules": [],
+      "obsolete_sources_used": [],
+      "is_abstention": true,
+      "grounding_score": 1.0,
+      "warnings": [],
+      "provenance_added_by_code": false
+     },
+     "check_regenerated": false,
+     "mode": "clinical_concise",
+     "usage": {},
+     "context_chars": 30008,
+     "n_passages": 12,
+     "coverage_supported": true,
+     "coverage_refused": false,
+     "dependency_note": false,
+     "self_corrected": false,
+     "latency_ms": 1.951292040757835,
+     "retrieved": [
+      [
+       "2012_2_HAS_Texte-court-ransfusion-de-plasma-therapeutique-Produits-in_d3f086",
+       "2012_2_HAS_Texte-court-ransfusion-de-plasma-therapeutique-Produits-in_d3f086__c0106_89d96372+2012_2_HAS_Texte-court-ransfusion-de-plasma-therapeutique-Produits-in_d3f086__c0107_7bb9af63+2012_2_HAS_Texte-court-ransfusion-de-plasma-therapeutique-Produits-in_d3f086__c0108_e36c4b94"
+      ],
+      [
+       "2024_RFE-gestion-de-lanticoagulation-dans-un-contexte-durgence_23_02__d0368c",
+       "2024_RFE-gestion-de-lanticoagulation-dans-un-contexte-durgence_23_02__d0368c__c0086_4ede16be+2024_RFE-gestion-de-lanticoagulation-dans-un-contexte-durgence_23_02__d0368c__c0087_bbd3ee91+2024_RFE-gestion-de-lanticoagulation-dans-un-contexte-durgence_23_02__d0368c__c0088_c4afefc6+2024_RFE-gestion-de-lanticoagulation-dans-un-contexte-durgence_23_02__d0368c__c0089_5ea06794"
+      ],
+      [
+       "2014_2_AFAR_Recommandations-sur-la-reanimation-du-choc-hemorragique_a38f8d",
+       "2014_2_AFAR_Recommandations-sur-la-reanimation-du-choc-hemorragique_a38f8d__c0078_ed432241+2014_2_AFAR_Recommandations-sur-la-reanimation-du-choc-hemorragique_a38f8d__c0079_6ebada96+2014_2_AFAR_Recommandations-sur-la-reanimation-du-choc-hemorragique_a38f8d__c0080_8fd32785"
+      ],
+      [
+       "2024_RFE-gestion-de-lanticoagulation-dans-un-contexte-durgence_23_02__d0368c",
+       "2024_RFE-gestion-de-lanticoagulation-dans-un-contexte-durgence_23_02__d0368c__c0079_b758276c+2024_RFE-gestion-de-lanticoagulation-dans-un-contexte-durgence_23_02__d0368c__c0080_ee4af28b+2024_RFE-gestion-de-lanticoagulation-dans-un-contexte-durgence_23_02__d0368c__c0081_747b5c83+2024_RFE-gestion-de-lanticoagulation-dans-un-contexte-durgence_23_02__d0368c__c0082_0c786a3b"
+      ],
+      [
+       "2012_2_HAS_Texte-court-ransfusion-de-plasma-therapeutique-Produits-in_d3f086",
+       "2012_2_HAS_Texte-court-ransfusion-de-plasma-therapeutique-Produits-in_d3f086__c0051_c87e395a+2012_2_HAS_Texte-court-ransfusion-de-plasma-therapeutique-Produits-in_d3f086__c0052_448b9d84+2012_2_HAS_Texte-court-ransfusion-de-plasma-therapeutique-Produits-in_d3f086__c0053_5b534726+2012_2_HAS_Texte-court-ransfusion-de-plasma-therapeutique-Produits-in_d3f086__c0054_c042f21f"
+      ],
+      [
+       "2024_RFE-gestion-de-lanticoagulation-dans-un-contexte-durgence_23_02__d0368c",
+       "2024_RFE-gestion-de-lanticoagulation-dans-un-contexte-durgence_23_02__d0368c__c0068_fd2ce812+2024_RFE-gestion-de-lanticoagulation-dans-un-contexte-durgence_23_02__d0368c__c0069_7e18a1b2+2024_RFE-gestion-de-lanticoagulation-dans-un-contexte-durgence_23_02__d0368c__c0070_96061c42"
+      ],
+      [
+       "2014_2_AFAR_Recommandations-sur-la-reanimation-du-choc-hemorragique_a38f8d",
+       "2014_2_AFAR_Recommandations-sur-la-reanimation-du-choc-hemorragique_a38f8d__c0005_81c3f367"
+      ],
+      [
+       "2024_RFE-gestion-de-lanticoagulation-dans-un-contexte-durgence_23_02__d0368c",
+       "2024_RFE-gestion-de-lanticoagulation-dans-un-contexte-durgence_23_02__d0368c__c0053_3704bc58"
+      ],
+      [
+       "2012_2_HAS_Texte-court-ransfusion-de-plasma-therapeutique-Produits-in_d3f086",
+       "2012_2_HAS_Texte-court-ransfusion-de-plasma-therapeutique-Produits-in_d3f086__c0118_5f0509de"
+      ],
+      [
+       "2024_Algorithmes_RFE-gestion-de-lanticoagulation-dans-un-contexte-dur_5ab803",
+       "2024_Algorithmes_RFE-gestion-de-lanticoagulation-dans-un-contexte-dur_5ab803__c0008_bf6da4f0"
+      ],
+      [
+       "2004_2b_AFAR_texte-long_Hemorragies-sous-arachnoidienne_5ab378",
+       "2004_2b_AFAR_texte-long_Hemorragies-sous-arachnoidienne_5ab378__c0445_cf24788f"
+      ],
+      [
+       "2014_2_AFAR_Recommandations-sur-la-reanimation-du-choc-hemorragique_a38f8d",
+       "2014_2_AFAR_Recommandations-sur-la-reanimation-du-choc-hemorragique_a38f8d__c0003_5ac10d0c"
+      ]
+     ],
+     "prompt_chars": 31661,
+     "prompt_tokens": 9062,
+     "false_abstention": 0.0,
+     "correct": 1.0,
+     "sourced": 1.0,
+     "answer": "Il peut être licite d'apporter du plasma thérapeutique dans le cadre d'une situation d'urgence hémorragique, à la dose de 10 à 15 mL/kg de poids corporel [S1]. Cette indication est retenue en cas de déficit en un facteur de la coagulation et d'impossibilité d'obtenir rapidement une préparation de facteur purifié [S5].\nSource : Transfusion de plasma thérapeutique : produits, indications, RFE SFAR 2012 (accord professionnel).",
+     "judge": {
+      "case_id": "c9wide_v6|wide|claude-sonnet-5-5::MR-gc6d6192f7b53462c02dd",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Plasma thérapeutique à 10-15 mL/kg, conforme."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
+    },
+    {
+     "id": "MR-g2b5dca4f8dcab2a9f869",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "clinical_case",
+     "tags": [
+      "other"
+     ],
+     "doc_rank": 2,
+     "passage_rank": 2,
+     "n_retrieved": 13,
+     "doc_hit": 1.0,
+     "doc_mrr": 0.5,
+     "doc_recall": 1.0,
+     "doc_ndcg": 0.11781210270929884,
+     "passage_hit": 1.0,
+     "passage_mrr": 0.5,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "verification": {
+      "citations_found": [],
+      "invalid_citations": [],
+      "mentioned_molecules": [],
+      "ungrounded_molecules": [],
+      "obsolete_sources_used": [],
+      "is_abstention": true,
+      "grounding_score": 1.0,
+      "warnings": [],
+      "provenance_added_by_code": false
+     },
+     "check_regenerated": false,
+     "mode": "clinical_concise",
+     "usage": {},
+     "context_chars": 29921,
+     "n_passages": 13,
+     "coverage_supported": true,
+     "coverage_refused": false,
+     "dependency_note": false,
+     "self_corrected": false,
+     "latency_ms": 1.967291987966746,
+     "retrieved": [
+      [
+       "2011_2_AFAR_echographie-en-anesthesie-locoregionale_c3717d",
+       "2011_2_AFAR_echographie-en-anesthesie-locoregionale_c3717d__c0009_34f9a088+2011_2_AFAR_echographie-en-anesthesie-locoregionale_c3717d__c0010_ba1f7e1b+2011_2_AFAR_echographie-en-anesthesie-locoregionale_c3717d__c0011_3c6bd167"
+      ],
+      [
+       "2016_rfe-anesthesie-loco-regionale-perinerveuse_bd75e5",
+       "2016_rfe-anesthesie-loco-regionale-perinerveuse_bd75e5__c0039_9afe23fd+2016_rfe-anesthesie-loco-regionale-perinerveuse_bd75e5__c0040_48910c6e+2016_rfe-anesthesie-loco-regionale-perinerveuse_bd75e5__c0041_203e0c49+2016_rfe-anesthesie-loco-regionale-perinerveuse_bd75e5__c0042_ba204055"
+      ],
+      [
+       "2006_2_AFAR_Blocs-perimedullaires-chez-ladulte_c289cc",
+       "2006_2_AFAR_Blocs-perimedullaires-chez-ladulte_c289cc__c0250_17eb0f9b+2006_2_AFAR_Blocs-perimedullaires-chez-ladulte_c289cc__c0251_dfe2f4f1+2006_2_AFAR_Blocs-perimedullaires-chez-ladulte_c289cc__c0252_e9739403"
+      ],
+      [
+       "2006_2_AFAR_Blocs-perimedullaires-chez-ladulte_c289cc",
+       "2006_2_AFAR_Blocs-perimedullaires-chez-ladulte_c289cc__c0093_7dd4e0ff+2006_2_AFAR_Blocs-perimedullaires-chez-ladulte_c289cc__c0094_03be2cde+2006_2_AFAR_Blocs-perimedullaires-chez-ladulte_c289cc__c0095_7719762a"
+      ],
+      [
+       "2006_2_AFAR_Blocs-perimedullaires-chez-ladulte_c289cc",
+       "2006_2_AFAR_Blocs-perimedullaires-chez-ladulte_c289cc__c0016_3579e253+2006_2_AFAR_Blocs-perimedullaires-chez-ladulte_c289cc__c0017_d310643f+2006_2_AFAR_Blocs-perimedullaires-chez-ladulte_c289cc__c0018_51273cd0"
+      ],
+      [
+       "2018_2_Gestion-des-agents-antiplaquettaires-pour-une-procedure-invasi_89e3af",
+       "2018_2_Gestion-des-agents-antiplaquettaires-pour-une-procedure-invasi_89e3af__c0072_da668dc0+2018_2_Gestion-des-agents-antiplaquettaires-pour-une-procedure-invasi_89e3af__c0073_a7b9e7d5+2018_2_Gestion-des-agents-antiplaquettaires-pour-une-procedure-invasi_89e3af__c0074_5d38cf8d+2018_2_Gestion-des-agents-antiplaquettaires-pour-une-procedure-invasi_89e3af__c0075_4daec9e2+2018_2_Gestion-des-agents-antiplaquettaires-pour-une-procedure-invasi_89e3af__c0076_80d1f0bc+2018_2_Gestion-des-agents-antiplaquettaires-pour-une-procedure-invasi_89e3af__c0077_be158a81"
+      ],
+      [
+       "2018_2_Recos-Org-Blocs-moteurs-SOFMER-SFAR_994996",
+       "2018_2_Recos-Org-Blocs-moteurs-SOFMER-SFAR_994996__c0175_ba5d6a4f+2018_2_Recos-Org-Blocs-moteurs-SOFMER-SFAR_994996__c0176_0a23f4f1+2018_2_Recos-Org-Blocs-moteurs-SOFMER-SFAR_994996__c0177_c8d9b8e2"
+      ],
+      [
+       "2006_2_AFAR_Blocs-perimedullaires-chez-ladulte_c289cc",
+       "2006_2_AFAR_Blocs-perimedullaires-chez-ladulte_c289cc__c0228_92d326b6"
+      ],
+      [
+       "2026_TEXTE-RFE-ALR-PEDIA-VERSION-FINALE-010926_63f95f",
+       "2026_TEXTE-RFE-ALR-PEDIA-VERSION-FINALE-010926_63f95f__c0101_00f4b554"
+      ],
+      [
+       "2026_TEXTE-RFE-ALR-PEDIA-VERSION-FINALE-010926_63f95f",
+       "2026_TEXTE-RFE-ALR-PEDIA-VERSION-FINALE-010926_63f95f__c0089_4c33a88b"
+      ],
+      [
+       "2001_art54_dossieraranncomplet_df1465",
+       "2001_art54_dossieraranncomplet_df1465__c0021_82ae7114"
+      ],
+      [
+       "2011_2_AFAR_echographie-en-anesthesie-locoregionale_c3717d",
+       "2011_2_AFAR_echographie-en-anesthesie-locoregionale_c3717d__c0003_00d6768f"
+      ],
+      [
+       "2026_TEXTE-RFE-ALR-PEDIA-VERSION-FINALE-010926_63f95f",
+       "2026_TEXTE-RFE-ALR-PEDIA-VERSION-FINALE-010926_63f95f__c0123_f5ce4638"
+      ]
+     ],
+     "prompt_chars": 31505,
+     "prompt_tokens": 8064,
+     "false_abstention": 0.0,
+     "correct": 0.0,
+     "sourced": 1.0,
+     "answer": "Oui, mais en première intention il est probablement recommandé de réaliser l'ALR chez un patient éveillé ou légèrement sédaté, calme et coopérant ; après discussion avec le patient, il est possible de réaliser le bloc sous anesthésie (générale ou régionale) ou sédation profonde s'il existe un bénéfice, et la traçabilité du choix est importante [S2]. Dans ce cas, l'échographie apporte probablement une sécurité supplémentaire [S2][S1].\nSource : Anesthésie Loco-Régionale périnerveuse, RFE SFAR 2016 (R5.2, avis d'experts) ; Échographie en anesthésie locorégionale, RFE SFAR 2011.",
+     "judge": {
+      "case_id": "c9wide_v6|wide|claude-sonnet-5-5::MR-g2b5dca4f8dcab2a9f869",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Réponse « oui, possible » avec les conditions de première intention, compatible avec la référence."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
+    },
+    {
+     "id": "MR-ga7998a95924ce47cf4b2",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "open",
+     "tags": [
+      "reco"
+     ],
+     "doc_rank": 1,
+     "passage_rank": 1,
+     "n_retrieved": 14,
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 0.17821029819465137,
+     "passage_hit": 1.0,
+     "passage_mrr": 1.0,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "verification": {
+      "citations_found": [],
+      "invalid_citations": [],
+      "mentioned_molecules": [],
+      "ungrounded_molecules": [],
+      "obsolete_sources_used": [],
+      "is_abstention": true,
+      "grounding_score": 1.0,
+      "warnings": [],
+      "provenance_added_by_code": false
+     },
+     "check_regenerated": false,
+     "mode": "clinical_concise",
+     "usage": {},
+     "context_chars": 30143,
+     "n_passages": 14,
+     "coverage_supported": true,
+     "coverage_refused": false,
+     "dependency_note": false,
+     "self_corrected": false,
+     "latency_ms": 1.919124973937869,
+     "retrieved": [
+      [
+       "2016_rfe-anesthesie-loco-regionale-perinerveuse_bd75e5",
+       "2016_rfe-anesthesie-loco-regionale-perinerveuse_bd75e5__c0041_203e0c49+2016_rfe-anesthesie-loco-regionale-perinerveuse_bd75e5__c0042_ba204055+2016_rfe-anesthesie-loco-regionale-perinerveuse_bd75e5__c0043_6b067b3b+2016_rfe-anesthesie-loco-regionale-perinerveuse_bd75e5__c0044_3f47b1cc+2016_rfe-anesthesie-loco-regionale-perinerveuse_bd75e5__c0045_9c935206"
+      ],
+      [
+       "2006_2_AFAR_Blocs-perimedullaires-chez-ladulte_c289cc",
+       "2006_2_AFAR_Blocs-perimedullaires-chez-ladulte_c289cc__c0196_7546f92b+2006_2_AFAR_Blocs-perimedullaires-chez-ladulte_c289cc__c0197_1b31571d+2006_2_AFAR_Blocs-perimedullaires-chez-ladulte_c289cc__c0198_d08a51e9+2006_2_AFAR_Blocs-perimedullaires-chez-ladulte_c289cc__c0199_8ab3ad41"
+      ],
+      [
+       "2018_2_Recos-Org-Blocs-moteurs-SOFMER-SFAR_994996",
+       "2018_2_Recos-Org-Blocs-moteurs-SOFMER-SFAR_994996__c0121_c5e37099+2018_2_Recos-Org-Blocs-moteurs-SOFMER-SFAR_994996__c0122_f8265a8f+2018_2_Recos-Org-Blocs-moteurs-SOFMER-SFAR_994996__c0123_62742965"
+      ],
+      [
+       "2018_2_Recos-Org-Blocs-moteurs-SOFMER-SFAR_994996",
+       "2018_2_Recos-Org-Blocs-moteurs-SOFMER-SFAR_994996__c0088_3f59f036+2018_2_Recos-Org-Blocs-moteurs-SOFMER-SFAR_994996__c0089_afc2db18+2018_2_Recos-Org-Blocs-moteurs-SOFMER-SFAR_994996__c0090_ddf5c294"
+      ],
+      [
+       "2018_2_Recos-Org-Blocs-moteurs-SOFMER-SFAR_994996",
+       "2018_2_Recos-Org-Blocs-moteurs-SOFMER-SFAR_994996__c0174_402dd777+2018_2_Recos-Org-Blocs-moteurs-SOFMER-SFAR_994996__c0175_ba5d6a4f+2018_2_Recos-Org-Blocs-moteurs-SOFMER-SFAR_994996__c0176_0a23f4f1"
+      ],
+      [
+       "2018_2_Recos-Org-Blocs-moteurs-SOFMER-SFAR_994996",
+       "2018_2_Recos-Org-Blocs-moteurs-SOFMER-SFAR_994996__c0010_92482767+2018_2_Recos-Org-Blocs-moteurs-SOFMER-SFAR_994996__c0011_3beffb08+2018_2_Recos-Org-Blocs-moteurs-SOFMER-SFAR_994996__c0012_4a011edd"
+      ],
+      [
+       "2018_2_Recos-Org-Blocs-moteurs-SOFMER-SFAR_994996",
+       "2018_2_Recos-Org-Blocs-moteurs-SOFMER-SFAR_994996__c0136_699d6063"
+      ],
+      [
+       "2006_2_AFAR_Blocs-perimedullaires-chez-ladulte_c289cc",
+       "2006_2_AFAR_Blocs-perimedullaires-chez-ladulte_c289cc__c0253_b7a8689d"
+      ],
+      [
+       "2018_2_Recos-Org-Blocs-moteurs-SOFMER-SFAR_994996",
+       "2018_2_Recos-Org-Blocs-moteurs-SOFMER-SFAR_994996__c0178_b382f104"
+      ],
+      [
+       "2018_2_Recos-Org-Blocs-moteurs-SOFMER-SFAR_994996",
+       "2018_2_Recos-Org-Blocs-moteurs-SOFMER-SFAR_994996__c0119_48cef5bc"
+      ],
+      [
+       "2006_2_AFAR_Blocs-perimedullaires-chez-ladulte_c289cc",
+       "2006_2_AFAR_Blocs-perimedullaires-chez-ladulte_c289cc__c0145_c6e72c01"
+      ],
+      [
+       "2012_3_AFAR_LONG_Bris-dentaires-perianesthesiques-copie_ba6aca",
+       "2012_3_AFAR_LONG_Bris-dentaires-perianesthesiques-copie_ba6aca__c0066_0b11c7ca"
+      ],
+      [
+       "2020_RFE_TSM_2020_48fd8d",
+       "2020_RFE_TSM_2020_48fd8d__c0056_e8562a0b"
+      ],
+      [
+       "2020_RFE_TSM_2020_48fd8d",
+       "2020_RFE_TSM_2020_48fd8d__c0058_d81f1b99"
+      ]
+     ],
+     "prompt_chars": 31797,
+     "prompt_tokens": 7892,
+     "false_abstention": 0.0,
+     "correct": 1.0,
+     "sourced": 1.0,
+     "answer": "Il faut faire un examen neurologique précis si la durée du bloc dépasse la durée prévisible, et obtenir rapidement un avis de neurochirurgien en cas de déficit complet (avis de neurologue en cas de déficit incomplet) [S1]. En cas de suspicion de lésion nerveuse secondaire au bloc, l'examen complémentaire recommandé est un examen électrophysiologique par EMG, précoce avant le 3e jour après l'ALR (valeur de référence et dépistage d'une neuropathie préexistante), puis retardé à 3 semaines pour préciser le diagnostic topographique et lésionnel [S1]. Une imagerie peut être réalisée dans le cadre du bilan étiologique, avec probablement un apport supérieur de l'IRM par rapport à l'échographie ou à la tomodensitométrie [S1].\nSource : Anesthésie Loco-Régionale périnerveuse, RFE SFAR 2016 (relecture de la RPC 2003, points d'actualisation ; avis d'experts).",
+     "judge": {
+      "case_id": "c9wide_v6|wide|claude-sonnet-5-5::MR-ga7998a95924ce47cf4b2",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Avis neurochirurgical rapide en déficit complet et EMG, conformes."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
+    },
+    {
+     "id": "MR-gcb7201d68bfd3c66882d",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "open",
+     "tags": [
+      "drug_choice",
+      "icu",
+      "reco",
+      "timing"
+     ],
+     "doc_rank": null,
+     "passage_rank": null,
+     "n_retrieved": 16,
+     "doc_hit": 0.0,
+     "doc_mrr": 0.0,
+     "doc_recall": 0.0,
+     "doc_ndcg": 0.0,
+     "passage_hit": 0.0,
+     "passage_mrr": 0.0,
+     "passage_recall": 0.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 0.0,
+     "verification": {
+      "citations_found": [],
+      "invalid_citations": [],
+      "mentioned_molecules": [],
+      "ungrounded_molecules": [],
+      "obsolete_sources_used": [],
+      "is_abstention": true,
+      "grounding_score": 1.0,
+      "warnings": [],
+      "provenance_added_by_code": false
+     },
+     "check_regenerated": false,
+     "mode": "clinical_concise",
+     "usage": {},
+     "context_chars": 34575,
+     "n_passages": 16,
+     "coverage_supported": true,
+     "coverage_refused": false,
+     "dependency_note": false,
+     "self_corrected": false,
+     "latency_ms": 2.371791983023286,
+     "retrieved": [
+      [
+       "2006_2_AFAR_Blocs-perimedullaires-chez-ladulte_c289cc",
+       "2006_2_AFAR_Blocs-perimedullaires-chez-ladulte_c289cc__c0035_5cfa83dd+2006_2_AFAR_Blocs-perimedullaires-chez-ladulte_c289cc__c0036_8cf48567+2006_2_AFAR_Blocs-perimedullaires-chez-ladulte_c289cc__c0037_33c3795d"
+      ],
+      [
+       "2008_2a_AFAR_Texte_court_Securisation-des-procedures-a-risques-en-rea_632cc7",
+       "2008_2a_AFAR_Texte_court_Securisation-des-procedures-a-risques-en-rea_632cc7__c0020_1bd17c45+2008_2a_AFAR_Texte_court_Securisation-des-procedures-a-risques-en-rea_632cc7__c0021_4562fcd0+2008_2a_AFAR_Texte_court_Securisation-des-procedures-a-risques-en-rea_632cc7__c0022_b3b9dc49"
+      ],
+      [
+       "2013_2_PUROL_Recommandations-chirurgie-ambulatoire-en-urologie_e45cde",
+       "2013_2_PUROL_Recommandations-chirurgie-ambulatoire-en-urologie_e45cde__c0309_8289957a+2013_2_PUROL_Recommandations-chirurgie-ambulatoire-en-urologie_e45cde__c0310_35439ab4+2013_2_PUROL_Recommandations-chirurgie-ambulatoire-en-urologie_e45cde__c0311_2da0534e"
+      ],
+      [
+       "2001_Annales-de-Readaptation-et-de-Medecine-Physique_Les-traumatises-_15d654",
+       "2001_Annales-de-Readaptation-et-de-Medecine-Physique_Les-traumatises-_15d654__c0041_167d345f+2001_Annales-de-Readaptation-et-de-Medecine-Physique_Les-traumatises-_15d654__c0042_912acfc6+2001_Annales-de-Readaptation-et-de-Medecine-Physique_Les-traumatises-_15d654__c0043_98165e3b"
+      ],
+      [
+       "2011_2_AFAR_Transport-intrahospitalier-des-patients-a-risque-vital_2f8adb",
+       "2011_2_AFAR_Transport-intrahospitalier-des-patients-a-risque-vital_2f8adb__c0038_abdba28f+2011_2_AFAR_Transport-intrahospitalier-des-patients-a-risque-vital_2f8adb__c0039_29779c13+2011_2_AFAR_Transport-intrahospitalier-des-patients-a-risque-vital_2f8adb__c0040_4bed77fa"
+      ],
+      [
+       "2008_2b_AFAR_texte-long_Securisation-des-procedures-a-risques-en-rean_ac3a62",
+       "2008_2b_AFAR_texte-long_Securisation-des-procedures-a-risques-en-rean_ac3a62__c0041_4f97ded9+2008_2b_AFAR_texte-long_Securisation-des-procedures-a-risques-en-rean_ac3a62__c0042_aee20af0+2008_2b_AFAR_texte-long_Securisation-des-procedures-a-risques-en-rean_ac3a62__c0043_a3419311"
+      ],
+      [
+       "2001_Dossier-AnesthRea-SFAR_e8d945",
+       "2001_Dossier-AnesthRea-SFAR_e8d945__c0029_0b63b09a+2001_Dossier-AnesthRea-SFAR_e8d945__c0030_572d43b4+2001_Dossier-AnesthRea-SFAR_e8d945__c0031_e8b1ab90"
+      ],
+      [
+       "2011_2_AFAR_Transport-intrahospitalier-des-patients-a-risque-vital_2f8adb",
+       "2011_2_AFAR_Transport-intrahospitalier-des-patients-a-risque-vital_2f8adb__c0033_85ff9889+2011_2_AFAR_Transport-intrahospitalier-des-patients-a-risque-vital_2f8adb__c0034_7d513f5d+2011_2_AFAR_Transport-intrahospitalier-des-patients-a-risque-vital_2f8adb__c0035_1bcc8d78"
+      ],
+      [
+       "2017_Tracheotomie-en-reanimation-ANREA_404540",
+       "2017_Tracheotomie-en-reanimation-ANREA_404540__c0029_b583fa57"
+      ],
+      [
+       "2001_196-reco-anesth-chir-autres-2001_8a8dc3",
+       "2001_196-reco-anesth-chir-autres-2001_8a8dc3__c0026_96d2a0ce"
+      ],
+      [
+       "2017_Pneumonies-associees-au-soins-de-reanimation-ANREA_c53a1e",
+       "2017_Pneumonies-associees-au-soins-de-reanimation-ANREA_c53a1e__c0126_f7bf43aa"
+      ],
+      [
+       "2001_Dossier-AnesthRea-SFAR_e8d945",
+       "2001_Dossier-AnesthRea-SFAR_e8d945__c0152_bd4845cc"
+      ],
+      [
+       "2023_RPP-Anesthesie-adulte-porteur-de-CC_pour-mise-sur-site_6601a6",
+       "2023_RPP-Anesthesie-adulte-porteur-de-CC_pour-mise-sur-site_6601a6__c0148_c3301e61"
+      ],
+      [
+       "2001_Dossier-AnesthRea-SFAR_e8d945",
+       "2001_Dossier-AnesthRea-SFAR_e8d945__c0056_1e96ec49"
+      ],
+      [
+       "2010_2b_HAS_Texte_Long-Delivrance-de-l-information-a-la-personne-sur-_7d3a7b",
+       "2010_2b_HAS_Texte_Long-Delivrance-de-l-information-a-la-personne-sur-_7d3a7b__c0100_38a8eda5"
+      ],
+      [
+       "2018_2_RFE-CURARE-3_4eac96",
+       "2018_2_RFE-CURARE-3_4eac96__c0019_54221c8c"
+      ]
+     ],
+     "prompt_chars": 36182,
+     "prompt_tokens": 9075,
+     "false_abstention": 1.0,
+     "correct": 0.0,
+     "sourced": 0.0,
+     "answer": "Les recommandations SFAR fournies ne traitent pas cette question.",
+     "judge": {
+      "case_id": "c9wide_v6|wide|claude-sonnet-5-5::MR-gcb7201d68bfd3c66882d",
+      "correctness": "incorrect",
+      "abstained": true,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Abstention alors que la référence donne une conduite (prescriptions de FQ des 6 mois précédents) : abstention à tort, non grave."
+     },
+     "judge_correct": 0.0,
+     "judge_correct_or_partial": 0.0,
+     "judge_serious_error": 0.0
+    },
+    {
+     "id": "MR-g394ecc098e4d21e40da0",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "table",
+     "tags": [
+      "icu",
+      "table",
+      "threshold"
+     ],
+     "doc_rank": 1,
+     "passage_rank": 1,
+     "n_retrieved": 11,
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 0.3381915979740705,
+     "passage_hit": 1.0,
+     "passage_mrr": 1.0,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "verification": {
+      "citations_found": [],
+      "invalid_citations": [],
+      "mentioned_molecules": [],
+      "ungrounded_molecules": [],
+      "obsolete_sources_used": [],
+      "is_abstention": true,
+      "grounding_score": 1.0,
+      "warnings": [],
+      "provenance_added_by_code": false
+     },
+     "check_regenerated": false,
+     "mode": "clinical_concise",
+     "usage": {},
+     "context_chars": 20715,
+     "n_passages": 11,
+     "coverage_supported": true,
+     "coverage_refused": false,
+     "dependency_note": false,
+     "self_corrected": false,
+     "latency_ms": 1.5649169799871743,
+     "retrieved": [
+      [
+       "2021_RFE_20SFAR_20pancreatite_20aigue_finale_220921_b98663",
+       "2021_RFE_20SFAR_20pancreatite_20aigue_finale_220921_b98663__c0150_5c205542+2021_RFE_20SFAR_20pancreatite_20aigue_finale_220921_b98663__c0151_d296937f+2021_RFE_20SFAR_20pancreatite_20aigue_finale_220921_b98663__c0152_78aeab68+2021_RFE_20SFAR_20pancreatite_20aigue_finale_220921_b98663__c0153_739c91e0+2021_RFE_20SFAR_20pancreatite_20aigue_finale_220921_b98663__c0154_dfe71dfd+2021_RFE_20SFAR_20pancreatite_20aigue_finale_220921_b98663__c0155_68539656+2021_RFE_20SFAR_20pancreatite_20aigue_finale_220921_b98663__c0156_ac1244ba+2021_RFE_20SFAR_20pancreatite_20aigue_finale_220921_b98663__c0157_c0430679+2021_RFE_20SFAR_20pancreatite_20aigue_finale_220921_b98663__c0158_a9d4d7e9"
+      ],
+      [
+       "2021_RFE_20SFAR_20pancreatite_20aigue_finale_220921_b98663",
+       "2021_RFE_20SFAR_20pancreatite_20aigue_finale_220921_b98663__c0024_9647442b+2021_RFE_20SFAR_20pancreatite_20aigue_finale_220921_b98663__c0025_e0605ac7+2021_RFE_20SFAR_20pancreatite_20aigue_finale_220921_b98663__c0026_01f65049"
+      ],
+      [
+       "2006_2a_SFAR_texte-court_Ventilation-Non-Invasive-au-cours-del-insuff_79b8d5",
+       "2006_2a_SFAR_texte-court_Ventilation-Non-Invasive-au-cours-del-insuff_79b8d5__c0020_2e46bf14+2006_2a_SFAR_texte-court_Ventilation-Non-Invasive-au-cours-del-insuff_79b8d5__c0021_2d3ef496+2006_2a_SFAR_texte-court_Ventilation-Non-Invasive-au-cours-del-insuff_79b8d5__c0022_f7541728"
+      ],
+      [
+       "2006_2a_SFAR_texte-court_Ventilation-Non-Invasive-au-cours-del-insuff_79b8d5",
+       "2006_2a_SFAR_texte-court_Ventilation-Non-Invasive-au-cours-del-insuff_79b8d5__c0033_c72249c8+2006_2a_SFAR_texte-court_Ventilation-Non-Invasive-au-cours-del-insuff_79b8d5__c0034_408af2e4+2006_2a_SFAR_texte-court_Ventilation-Non-Invasive-au-cours-del-insuff_79b8d5__c0035_a6cbca20"
+      ],
+      [
+       "2006_2b_SFAR_texte-long_Ventilation-Non-Invasive-au-cours-del-insuffi_4c6fe6",
+       "2006_2b_SFAR_texte-long_Ventilation-Non-Invasive-au-cours-del-insuffi_4c6fe6__c0018_1d48f8f0+2006_2b_SFAR_texte-long_Ventilation-Non-Invasive-au-cours-del-insuffi_4c6fe6__c0019_eb6fe677+2006_2b_SFAR_texte-long_Ventilation-Non-Invasive-au-cours-del-insuffi_4c6fe6__c0020_074010ef"
+      ],
+      [
+       "2023_RPP-epanchement-pleural-2023_mise-sur-site-_e86215",
+       "2023_RPP-epanchement-pleural-2023_mise-sur-site-_e86215__c0044_17cf7768"
+      ],
+      [
+       "2025_reco_sepsis_367583",
+       "2025_reco_sepsis_367583__c0166_641646ea"
+      ],
+      [
+       "2018_2_Recos-SDRA_a93bac",
+       "2018_2_Recos-SDRA_a93bac__c0036_063973cb"
+      ],
+      [
+       "2025_argu_sepsis_a5219e",
+       "2025_argu_sepsis_a5219e__c0502_60addbdd"
+      ],
+      [
+       "2018_2_Recos-SDRA_a93bac",
+       "2018_2_Recos-SDRA_a93bac__c0001_4c7ba98d"
+      ],
+      [
+       "2025_reco_sepsis_367583",
+       "2025_reco_sepsis_367583__c0179_e48fa999"
+      ]
+     ],
+     "prompt_chars": 22307,
+     "prompt_tokens": 6849,
+     "false_abstention": 0.0,
+     "correct": 1.0,
+     "sourced": 1.0,
+     "answer": "Un rapport PaO2/FiO2 de 250 correspond à la ligne « Poumon (PaO2/FiO2) » 201-300, soit un score respiratoire de 2 [S1]. Un score de 2 ou plus pour un organe définit l'existence d'une défaillance de cet organe [S1].\n\nSource : Pancréatite aigüe du patient adulte en soins critiques, RFE SFAR 2021 (score de Marshall modifié, Tableau 1).",
+     "judge": {
+      "case_id": "c9wide_v6|wide|claude-sonnet-5-5::MR-g394ecc098e4d21e40da0",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Score respiratoire de 2 pour PaO2/FiO2 de 250, conforme."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
+    },
+    {
+     "id": "MR-g1fa665d53b3782891db2",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "open",
+     "tags": [
+      "reco"
+     ],
+     "doc_rank": 1,
+     "passage_rank": 1,
+     "n_retrieved": 11,
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 0.4503205879686568,
+     "passage_hit": 1.0,
+     "passage_mrr": 1.0,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "verification": {
+      "citations_found": [],
+      "invalid_citations": [],
+      "mentioned_molecules": [],
+      "ungrounded_molecules": [],
+      "obsolete_sources_used": [],
+      "is_abstention": true,
+      "grounding_score": 1.0,
+      "warnings": [],
+      "provenance_added_by_code": false
+     },
+     "check_regenerated": false,
+     "mode": "clinical_concise",
+     "usage": {},
+     "context_chars": 25691,
+     "n_passages": 11,
+     "coverage_supported": true,
+     "coverage_refused": false,
+     "dependency_note": false,
+     "self_corrected": false,
+     "latency_ms": 1.5989160165190697,
+     "retrieved": [
+      [
+       "2026_gestion_voies_aeriennes_argumentaire_mel_vd_a9b593",
+       "2026_gestion_voies_aeriennes_argumentaire_mel_vd_a9b593__c0125_e90671ca+2026_gestion_voies_aeriennes_argumentaire_mel_vd_a9b593__c0126_5b25e461+2026_gestion_voies_aeriennes_argumentaire_mel_vd_a9b593__c0127_be0a64d1+2026_gestion_voies_aeriennes_argumentaire_mel_vd_a9b593__c0128_605ada6b+2026_gestion_voies_aeriennes_argumentaire_mel_vd_a9b593__c0129_0f21b9ac+2026_gestion_voies_aeriennes_argumentaire_mel_vd_a9b593__c0130_2a4739c5+2026_gestion_voies_aeriennes_argumentaire_mel_vd_a9b593__c0131_6f7770af"
+      ],
+      [
+       "2026_gestion_voies_aeriennes_recommandations_mel_vd_19eb83",
+       "2026_gestion_voies_aeriennes_recommandations_mel_vd_19eb83__c0091_559d64fb+2026_gestion_voies_aeriennes_recommandations_mel_vd_19eb83__c0092_da710ce7+2026_gestion_voies_aeriennes_recommandations_mel_vd_19eb83__c0093_7e1a24de"
+      ],
+      [
+       "2026_gestion_voies_aeriennes_argumentaire_mel_vd_a9b593",
+       "2026_gestion_voies_aeriennes_argumentaire_mel_vd_a9b593__c0121_a2d94ca3+2026_gestion_voies_aeriennes_argumentaire_mel_vd_a9b593__c0122_44ab171d+2026_gestion_voies_aeriennes_argumentaire_mel_vd_a9b593__c0123_d49bc02c"
+      ],
+      [
+       "2026_gestion_voies_aeriennes_recommandations_mel_vd_19eb83",
+       "2026_gestion_voies_aeriennes_recommandations_mel_vd_19eb83__c0203_5da6c05f+2026_gestion_voies_aeriennes_recommandations_mel_vd_19eb83__c0204_0b0f5f9d+2026_gestion_voies_aeriennes_recommandations_mel_vd_19eb83__c0205_62fd6772"
+      ],
+      [
+       "2026_gestion_voies_aeriennes_recommandations_mel_vd_19eb83",
+       "2026_gestion_voies_aeriennes_recommandations_mel_vd_19eb83__c0274_f43a8ec9+2026_gestion_voies_aeriennes_recommandations_mel_vd_19eb83__c0275_afbcb57d+2026_gestion_voies_aeriennes_recommandations_mel_vd_19eb83__c0276_8cf3ed46"
+      ],
+      [
+       "2026_gestion_voies_aeriennes_argumentaire_mel_vd_a9b593",
+       "2026_gestion_voies_aeriennes_argumentaire_mel_vd_a9b593__c0042_5e2c3ef8+2026_gestion_voies_aeriennes_argumentaire_mel_vd_a9b593__c0043_3cfe9fb5+2026_gestion_voies_aeriennes_argumentaire_mel_vd_a9b593__c0044_38a53b1c"
+      ],
+      [
+       "2026_gestion_voies_aeriennes_recommandations_mel_vd_19eb83",
+       "2026_gestion_voies_aeriennes_recommandations_mel_vd_19eb83__c0211_97ccd844"
+      ],
+      [
+       "2026_gestion_voies_aeriennes_argumentaire_mel_vd_a9b593",
+       "2026_gestion_voies_aeriennes_argumentaire_mel_vd_a9b593__c0036_c26d39c2"
+      ],
+      [
+       "2025_2025_RFE-Intubation-adulte-hors-bloc-hors-rea-_f68924",
+       "2025_2025_RFE-Intubation-adulte-hors-bloc-hors-rea-_f68924__c0135_f1179dde"
+      ],
+      [
+       "2026_gestion_voies_aeriennes_recommandations_mel_vd_19eb83",
+       "2026_gestion_voies_aeriennes_recommandations_mel_vd_19eb83__c0053_63326d07"
+      ],
+      [
+       "2026_1_algorithme-difficultes_previsibles_gestion_voies_aeriennes_adu_8a521f",
+       "2026_1_algorithme-difficultes_previsibles_gestion_voies_aeriennes_adu_8a521f__c0003_5d139ce3"
+      ]
+     ],
+     "prompt_chars": 27324,
+     "prompt_tokens": 6998,
+     "false_abstention": 0.0,
+     "correct": 1.0,
+     "sourced": 1.0,
+     "answer": "Après une préoxygénation bien conduite, chez l'adulte avec intubation difficile prévue sans indication au maintien de la ventilation spontanée (patient a priori ventilable), y compris obèse ou estomac plein, il est recommandé de mettre en place pendant la laryngoscopie un dispositif d'oxygénation nasale à haut débit (ONHD) afin de prolonger le temps sans désaturation [S2][S3][S4].\n\nSource : Prise en charge des voies aériennes de l'adulte au bloc opératoire, RFE SFAR 2026, R2.1.1, avis d'experts (AE).",
+     "judge": {
+      "case_id": "c9wide_v6|wide|claude-sonnet-5-5::MR-g1fa665d53b3782891db2",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Oxygénation nasale à haut débit pendant l'apnée, conforme."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
+    },
+    {
+     "id": "MR-g6d7e10b60e750f150a7a",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "open",
+     "tags": [
+      "emergency",
+      "pediatric",
+      "reco",
+      "threshold"
+     ],
+     "doc_rank": 1,
+     "passage_rank": 1,
+     "n_retrieved": 13,
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 0.4783230211921073,
+     "passage_hit": 1.0,
+     "passage_mrr": 1.0,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 0.0,
+     "verification": {
+      "citations_found": [],
+      "invalid_citations": [],
+      "mentioned_molecules": [],
+      "ungrounded_molecules": [],
+      "obsolete_sources_used": [],
+      "is_abstention": true,
+      "grounding_score": 1.0,
+      "warnings": [],
+      "provenance_added_by_code": false
+     },
+     "check_regenerated": false,
+     "mode": "clinical_concise",
+     "usage": {},
+     "context_chars": 29664,
+     "n_passages": 13,
+     "coverage_supported": true,
+     "coverage_refused": false,
+     "dependency_note": false,
+     "self_corrected": false,
+     "latency_ms": 1.7923340201377869,
+     "retrieved": [
+      [
+       "2018_rfe-gestion-des-voies-aeriennes-de-lenfant_3f7a1f",
+       "2018_rfe-gestion-des-voies-aeriennes-de-lenfant_3f7a1f__c0072_af5f71a8+2018_rfe-gestion-des-voies-aeriennes-de-lenfant_3f7a1f__c0073_1c92c0b0+2018_rfe-gestion-des-voies-aeriennes-de-lenfant_3f7a1f__c0074_d98694b7+2018_rfe-gestion-des-voies-aeriennes-de-lenfant_3f7a1f__c0075_23bb59f8+2018_rfe-gestion-des-voies-aeriennes-de-lenfant_3f7a1f__c0076_c9c7132a"
+      ],
+      [
+       "2018_rfe-gestion-des-voies-aeriennes-de-lenfant_3f7a1f",
+       "2018_rfe-gestion-des-voies-aeriennes-de-lenfant_3f7a1f__c0024_f41fe238+2018_rfe-gestion-des-voies-aeriennes-de-lenfant_3f7a1f__c0025_2c43eb8a+2018_rfe-gestion-des-voies-aeriennes-de-lenfant_3f7a1f__c0026_ddf2a27c"
+      ],
+      [
+       "2018_rfe-gestion-des-voies-aeriennes-de-lenfant_3f7a1f",
+       "2018_rfe-gestion-des-voies-aeriennes-de-lenfant_3f7a1f__c0005_47d438b8+2018_rfe-gestion-des-voies-aeriennes-de-lenfant_3f7a1f__c0006_c5031d41+2018_rfe-gestion-des-voies-aeriennes-de-lenfant_3f7a1f__c0007_11e4373b"
+      ],
+      [
+       "2018_rfe-gestion-des-voies-aeriennes-de-lenfant_3f7a1f",
+       "2018_rfe-gestion-des-voies-aeriennes-de-lenfant_3f7a1f__c0018_c3df652d+2018_rfe-gestion-des-voies-aeriennes-de-lenfant_3f7a1f__c0019_aec8f4cd+2018_rfe-gestion-des-voies-aeriennes-de-lenfant_3f7a1f__c0020_e224c335"
+      ],
+      [
+       "2025_2025_RFE-Intubation-adulte-hors-bloc-hors-rea-_f68924",
+       "2025_2025_RFE-Intubation-adulte-hors-bloc-hors-rea-_f68924__c0137_26df3489+2025_2025_RFE-Intubation-adulte-hors-bloc-hors-rea-_f68924__c0138_b8d6fa31+2025_2025_RFE-Intubation-adulte-hors-bloc-hors-rea-_f68924__c0139_603399f7"
+      ],
+      [
+       "2019_rpp-urgence-brule-fiches-synthese_7eb1e1",
+       "2019_rpp-urgence-brule-fiches-synthese_7eb1e1__c0027_601313cd+2019_rpp-urgence-brule-fiches-synthese_7eb1e1__c0028_78404afb+2019_rpp-urgence-brule-fiches-synthese_7eb1e1__c0029_f4b02721"
+      ],
+      [
+       "2016_Intubation-et-extubation-du-patient-en-reanimation-ANREA_58d44e",
+       "2016_Intubation-et-extubation-du-patient-en-reanimation-ANREA_58d44e__c0089_f985bf8f+2016_Intubation-et-extubation-du-patient-en-reanimation-ANREA_58d44e__c0090_d8509c60+2016_Intubation-et-extubation-du-patient-en-reanimation-ANREA_58d44e__c0091_ba3f72e7"
+      ],
+      [
+       "2025_2025_RFE-Intubation-adulte-hors-bloc-hors-rea-_f68924",
+       "2025_2025_RFE-Intubation-adulte-hors-bloc-hors-rea-_f68924__c0193_56ce7b34"
+      ],
+      [
+       "2006_2_AFAR_Prise-en-charge-de-larret-cardiaque-1_c70196",
+       "2006_2_AFAR_Prise-en-charge-de-larret-cardiaque-1_c70196__c0059_52654912"
+      ],
+      [
+       "2025_2025_RFE-Intubation-adulte-hors-bloc-hors-rea-_f68924",
+       "2025_2025_RFE-Intubation-adulte-hors-bloc-hors-rea-_f68924__c0127_74e8f6fb"
+      ],
+      [
+       "2025_reco_sepsis_367583",
+       "2025_reco_sepsis_367583__c0165_6b4298ec"
+      ],
+      [
+       "2002_REANIMATION_Prise-en-charge-des-crises-dasthme-aigues-graves-de-_4ff021",
+       "2002_REANIMATION_Prise-en-charge-des-crises-dasthme-aigues-graves-de-_4ff021__c0047_88021d70"
+      ],
+      [
+       "2002_REANIMATION_Prise-en-charge-des-crises-dasthme-aigues-graves-de-_4ff021",
+       "2002_REANIMATION_Prise-en-charge-des-crises-dasthme-aigues-graves-de-_4ff021__c0032_65f5f6fc"
+      ]
+     ],
+     "prompt_chars": 31263,
+     "prompt_tokens": 9155,
+     "false_abstention": 0.0,
+     "correct": 0.0,
+     "sourced": 1.0,
+     "answer": "Lors d'une induction en séquence rapide chez l'enfant, les experts suggèrent de ventiler l'enfant au masque dès que la SpO2 est inférieure à 95 %, avec une FiO2 ≥ 0,8 et de faibles niveaux de pression de ventilation, juste suffisants pour soulever le thorax et éviter une insufflation gastrique, idéalement < 15 cmH2O [S1].\n\nSource : Gestion des voies aériennes de l'enfant, RFE SFAR 2018, avis d'experts.",
+     "judge": {
+      "case_id": "c9wide_v6|wide|claude-sonnet-5-5::MR-g6d7e10b60e750f150a7a",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Ventilation au masque sous 95 % de SpO2, FiO2 ≥ 0,8, pressions < 15 cmH2O, conforme."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
+    },
+    {
+     "id": "MR-g1b4ad3d31046fdbdd025",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "comparison",
+     "tags": [
+      "edition_diff"
+     ],
+     "doc_rank": 1,
+     "passage_rank": 1,
+     "n_retrieved": 9,
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 0.5008655546918773,
+     "passage_hit": 1.0,
+     "passage_mrr": 1.0,
+     "passage_recall": 0.5,
+     "answer_terms_in_context": 1.0,
+     "verification": {
+      "citations_found": [],
+      "invalid_citations": [],
+      "mentioned_molecules": [],
+      "ungrounded_molecules": [],
+      "obsolete_sources_used": [
+       "S2 (Les blocs périphériques des membres chez l’adulte, 2001)",
+       "S3 (Les blocs périphériques des membres chez l’adulte, 2001)"
+      ],
+      "is_abstention": true,
+      "grounding_score": 1.0,
+      "warnings": [
+       "Sources antérieures dans le contexte : S2 (Les blocs périphériques des membres chez l’adulte, 2001); S3 (Les blocs périphériques des membres chez l’adulte, 2001)"
+      ],
+      "provenance_added_by_code": false
+     },
+     "check_regenerated": false,
+     "mode": "temporal_diff",
+     "usage": {},
+     "context_chars": 20676,
+     "n_passages": 9,
+     "coverage_supported": true,
+     "coverage_refused": false,
+     "dependency_note": false,
+     "self_corrected": false,
+     "latency_ms": 1.4430839801207185,
+     "retrieved": [
+      [
+       "2016_rfe-anesthesie-loco-regionale-perinerveuse_bd75e5",
+       "2016_rfe-anesthesie-loco-regionale-perinerveuse_bd75e5__c0039_9afe23fd+2016_rfe-anesthesie-loco-regionale-perinerveuse_bd75e5__c0040_48910c6e+2016_rfe-anesthesie-loco-regionale-perinerveuse_bd75e5__c0041_203e0c49+2016_rfe-anesthesie-loco-regionale-perinerveuse_bd75e5__c0042_ba204055+2016_rfe-anesthesie-loco-regionale-perinerveuse_bd75e5__c0043_6b067b3b"
+      ],
+      [
+       "2001_2_AFAR_Les-blocs-peripheriques-des-membres-chez-l-adulte_9b260f",
+       "2001_2_AFAR_Les-blocs-peripheriques-des-membres-chez-l-adulte_9b260f__c0098_00e67867+2001_2_AFAR_Les-blocs-peripheriques-des-membres-chez-l-adulte_9b260f__c0099_3327d4e7+2001_2_AFAR_Les-blocs-peripheriques-des-membres-chez-l-adulte_9b260f__c0100_64e5b16f"
+      ],
+      [
+       "2001_2_AFAR_Les-blocs-peripheriques-des-membres-chez-l-adulte_9b260f",
+       "2001_2_AFAR_Les-blocs-peripheriques-des-membres-chez-l-adulte_9b260f__c0020_27c7eebd+2001_2_AFAR_Les-blocs-peripheriques-des-membres-chez-l-adulte_9b260f__c0021_bd7cc64e+2001_2_AFAR_Les-blocs-peripheriques-des-membres-chez-l-adulte_9b260f__c0022_d9bdaed8+2001_2_AFAR_Les-blocs-peripheriques-des-membres-chez-l-adulte_9b260f__c0023_672cd093"
+      ],
+      [
+       "2024_RPP-RH-AR-validee-CA-SFAR-191224-_994758",
+       "2024_RPP-RH-AR-validee-CA-SFAR-191224-_994758__c0003_5681e202+2024_RPP-RH-AR-validee-CA-SFAR-191224-_994758__c0004_279c319c+2024_RPP-RH-AR-validee-CA-SFAR-191224-_994758__c0005_761be120"
+      ],
+      [
+       "2006_2_AFAR_Blocs-perimedullaires-chez-ladulte_c289cc",
+       "2006_2_AFAR_Blocs-perimedullaires-chez-ladulte_c289cc__c0093_7dd4e0ff+2006_2_AFAR_Blocs-perimedullaires-chez-ladulte_c289cc__c0094_03be2cde+2006_2_AFAR_Blocs-perimedullaires-chez-ladulte_c289cc__c0095_7719762a"
+      ],
+      [
+       "2026_TEXTE-RFE-ALR-PEDIA-VERSION-FINALE-010926_63f95f",
+       "2026_TEXTE-RFE-ALR-PEDIA-VERSION-FINALE-010926_63f95f__c0017_0ebfeb12+2026_TEXTE-RFE-ALR-PEDIA-VERSION-FINALE-010926_63f95f__c0018_790b282e+2026_TEXTE-RFE-ALR-PEDIA-VERSION-FINALE-010926_63f95f__c0019_53c6415d"
+      ],
+      [
+       "2001_196-reco-anesth-chir-autres-2001_8a8dc3",
+       "2001_196-reco-anesth-chir-autres-2001_8a8dc3__c0062_63bb8f16"
+      ],
+      [
+       "2026_RFE_sedationproceduraleUrgences_24juin2026_1f0c12",
+       "2026_RFE_sedationproceduraleUrgences_24juin2026_1f0c12__c0161_a0609169"
+      ],
+      [
+       "2011_2_AFAR_echographie-en-anesthesie-locoregionale_c3717d",
+       "2011_2_AFAR_echographie-en-anesthesie-locoregionale_c3717d__c0010_ba1f7e1b"
+      ]
+     ],
+     "prompt_chars": 21569,
+     "prompt_tokens": 5499,
+     "false_abstention": 0.0,
+     "correct": 1.0,
+     "sourced": 1.0,
+     "answer": "**Éditions comparées** : « Les blocs périphériques des membres chez l'adulte », RFE SFAR 2001 (édition antérieure, remplacée) [S2][S3], et « Anesthésie Loco-Régionale périnerveuse », RFE SFAR 2016 (en vigueur) [S1].\n\n**Ce qui a changé**\n- 2001 : les experts ne recommandent qu'une sédation légère, avec réactivité conservée aux stimulations verbales, chez des patients coopérants, aussi bien pour la réalisation du bloc que pendant l'intervention [S3]. Les extraits de 2001 fournis ne mentionnent pas explicitement la réalisation d'un bloc sous anesthésie générale ou sous sédation profonde.\n- 2016 (R5.2) : l'ALR est probablement recommandée en première intention chez un patient éveillé ou légèrement sédaté, calme et coopérant. Toutefois, après discussion avec le patient, il est désormais possible de réaliser un bloc associé à une anesthésie (générale ou régionale) ou à une sédation profonde s'il existe un bénéfice [S1].\n- 2016 : la traçabilité du choix est importante, et l'échographie apporte probablement une sécurité supplémentaire dans ce cas [S1].\n- 2016 (argumentaire) : les données disponibles, observationnelles, indiquent que la réalisation d'une ALR sous anesthésie générale n'est pas associée à une augmentation des risques ; la visualisation échographique de l'aiguille et du nerf et la réduction du risque de ponction vasculaire suggèrent une meilleure sécurité [S1].\n- Niveau de preuve : R5.2 (2016) relève de l'avis d'experts [S1] ; les extraits de 2001 ne précisent pas de grade pour ce point de sédation.\n\n**Ce qui est resté inchangé**\n- La préférence pour un patient éveillé ou légèrement sédaté, coopérant, demeure le principe de départ en 2016 comme en 2001 [S1][S3].\n\nSource : Les blocs périphériques des membres chez l'adulte, RFE SFAR 2001 (édition antérieure) ; Anesthésie Loco-Régionale périnerveuse, RFE SFAR 2016 (avis d'experts).",
+     "judge": {
+      "case_id": "c9wide_v6|wide|claude-sonnet-5-5::MR-g1b4ad3d31046fdbdd025",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Changement 2001 vers 2016 (ALR possible sous AG ou sédation profonde après discussion, échographie) reproduit."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
+    },
+    {
+     "id": "MR-g518431a84972e17017d1",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "comparison",
+     "tags": [
+      "edition_diff"
+     ],
+     "doc_rank": 1,
+     "passage_rank": 1,
+     "n_retrieved": 9,
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 0.6930221935231563,
+     "passage_hit": 1.0,
+     "passage_mrr": 1.0,
+     "passage_recall": 1.0,
+     "answer_terms_in_context": 1.0,
+     "verification": {
+      "citations_found": [],
+      "invalid_citations": [],
+      "mentioned_molecules": [],
+      "ungrounded_molecules": [],
+      "obsolete_sources_used": [
+       "S2 (Recommandations pour les structures et le matériel de l’anesthésie pédiatrique, 2000)",
+       "S5 (Recommandations pour les structures et le matériel de l’anesthésie pédiatrique, 2000)",
+       "S6 (Recommandations AVK, 2008)",
+       "S7 (Recommandations AVK, 2008)",
+       "S8 (Prise en charge initiale des états septiques graves de l’adulte et de l’enfant, 2006)",
+       "S9 (Prise en charge des voies aériennes en anesthésie adulte à l’exception de l’intubation difficile, 2003)"
+      ],
+      "is_abstention": true,
+      "grounding_score": 1.0,
+      "warnings": [
+       "Sources antérieures dans le contexte : S2 (Recommandations pour les structures et le matériel de l’anesthésie pédiatrique, 2000); S5 (Recommandations pour les structures et le matériel de l’anesthésie pédiatrique, 2000)"
+      ],
+      "provenance_added_by_code": false
+     },
+     "check_regenerated": false,
+     "mode": "temporal_diff",
+     "usage": {},
+     "context_chars": 17401,
+     "n_passages": 9,
+     "coverage_supported": true,
+     "coverage_refused": false,
+     "dependency_note": false,
+     "self_corrected": false,
+     "latency_ms": 1.3194999773986638,
+     "retrieved": [
+      [
+       "2023_RPP-Organisation-Anesthesie-Pediatrique_-Version-pour-mise-sur-s_1a40f2",
+       "2023_RPP-Organisation-Anesthesie-Pediatrique_-Version-pour-mise-sur-s_1a40f2__c0056_23415335+2023_RPP-Organisation-Anesthesie-Pediatrique_-Version-pour-mise-sur-s_1a40f2__c0057_bb920f9b+2023_RPP-Organisation-Anesthesie-Pediatrique_-Version-pour-mise-sur-s_1a40f2__c0058_f73b6f12"
+      ],
+      [
+       "2000_2_SFAR_Recommandations-pour-les-structures-et-le-materiel-de-lan_140c93",
+       "2000_2_SFAR_Recommandations-pour-les-structures-et-le-materiel-de-lan_140c93__c0023_76d43bc5+2000_2_SFAR_Recommandations-pour-les-structures-et-le-materiel-de-lan_140c93__c0024_a5b3a179+2000_2_SFAR_Recommandations-pour-les-structures-et-le-materiel-de-lan_140c93__c0025_6cd7bccf+2000_2_SFAR_Recommandations-pour-les-structures-et-le-materiel-de-lan_140c93__c0026_8a096564+2000_2_SFAR_Recommandations-pour-les-structures-et-le-materiel-de-lan_140c93__c0027_18fd0911+2000_2_SFAR_Recommandations-pour-les-structures-et-le-materiel-de-lan_140c93__c0028_7793f3a4"
+      ],
+      [
+       "2023_RPP-Organisation-Anesthesie-Pediatrique_-Version-pour-mise-sur-s_1a40f2",
+       "2023_RPP-Organisation-Anesthesie-Pediatrique_-Version-pour-mise-sur-s_1a40f2__c0188_3e03af73+2023_RPP-Organisation-Anesthesie-Pediatrique_-Version-pour-mise-sur-s_1a40f2__c0189_c4d183be+2023_RPP-Organisation-Anesthesie-Pediatrique_-Version-pour-mise-sur-s_1a40f2__c0190_635fdf9b"
+      ],
+      [
+       "2023_RPP-Organisation-Anesthesie-Pediatrique_-Version-pour-mise-sur-s_1a40f2",
+       "2023_RPP-Organisation-Anesthesie-Pediatrique_-Version-pour-mise-sur-s_1a40f2__c0193_a47ef195+2023_RPP-Organisation-Anesthesie-Pediatrique_-Version-pour-mise-sur-s_1a40f2__c0194_0a6e64bd+2023_RPP-Organisation-Anesthesie-Pediatrique_-Version-pour-mise-sur-s_1a40f2__c0195_9cb21554"
+      ],
+      [
+       "2000_2_SFAR_Recommandations-pour-les-structures-et-le-materiel-de-lan_140c93",
+       "2000_2_SFAR_Recommandations-pour-les-structures-et-le-materiel-de-lan_140c93__c0031_db799737+2000_2_SFAR_Recommandations-pour-les-structures-et-le-materiel-de-lan_140c93__c0032_528b3a90+2000_2_SFAR_Recommandations-pour-les-structures-et-le-materiel-de-lan_140c93__c0033_3803a5ae"
+      ],
+      [
+       "2008_2_HAS_Prise-en-charge-des-surdosages-en-antivitamines-K_277613",
+       "2008_2_HAS_Prise-en-charge-des-surdosages-en-antivitamines-K_277613__c0140_dd4bf500+2008_2_HAS_Prise-en-charge-des-surdosages-en-antivitamines-K_277613__c0141_face00d3+2008_2_HAS_Prise-en-charge-des-surdosages-en-antivitamines-K_277613__c0142_53e3c0ac"
+      ],
+      [
+       "2008_2_HAS_Prise-en-charge-des-surdosages-en-antivitamines-K_277613",
+       "2008_2_HAS_Prise-en-charge-des-surdosages-en-antivitamines-K_277613__c0135_d24c68d8"
+      ],
+      [
+       "2006_2_AFAR_Prise-en-charge-initiale-des-etats-septiques-graves-de-la_78dfac",
+       "2006_2_AFAR_Prise-en-charge-initiale-des-etats-septiques-graves-de-la_78dfac__c0232_8380ebeb+2006_2_AFAR_Prise-en-charge-initiale-des-etats-septiques-graves-de-la_78dfac__c0233_03016634+2006_2_AFAR_Prise-en-charge-initiale-des-etats-septiques-graves-de-la_78dfac__c0234_c9dc5192"
+      ],
+      [
+       "2003_2b_AFAR_Texte-Long__ff2a6f",
+       "2003_2b_AFAR_Texte-Long__ff2a6f__c0000_51461c07"
+      ]
+     ],
+     "prompt_chars": 18276,
+     "prompt_tokens": 5290,
+     "false_abstention": 0.0,
+     "correct": 1.0,
+     "sourced": 1.0,
+     "answer": "**Éditions comparées** : « Recommandations pour les structures et le matériel de l'anesthésie pédiatrique », RFE SFAR 2000 (édition antérieure, remplacée) [S2], et « Organisation de l'anesthésie pédiatrique », RPP SFAR 2023 (en vigueur) [S1].\n\n**Ce qui a changé (gamme de cathéters veineux périphériques)**\n- 2000 : il est indispensable de disposer de toute la gamme de tailles de cathéters courts transcutanés, des plus petits (24 Gauge) jusqu'au plus grand (14 Gauge) [S2].\n- 2023 : il est recommandé de disposer de toutes les tailles de cathéters entre le 26 gauge et le 16 gauge afin de pouvoir adapter son choix [S1]. L'extrémité petite de la gamme descend donc de 24 G à 26 G, et l'extrémité grande passe de 14 G à 16 G.\n- Le terme change aussi : « indispensable » en 2000 [S2], « recommandé » en 2023 [S1] (cet énoncé figure dans l'argumentaire, rattaché à des recommandations classées avis d'experts, accord fort [S1]).\n- 2023 : un tableau en annexe précise diamètre et débit des cathéters, de 26 G à 16 G (par exemple 24 G : 15-18 ml/min ; 18 G : 100 ml/min ; 16 G : 175 ml/min) [S3][S4].\n\n**Ce qui est resté inchangé**\n- Le principe de disposer d'une gamme complète de tailles de cathéters courts pour l'abord veineux périphérique chez l'enfant, afin de s'adapter aux veines accessibles [S1][S2].\n\nSource : Recommandations pour les structures et le matériel de l'anesthésie pédiatrique, RFE SFAR 2000 (édition antérieure) ; Organisation de l'anesthésie pédiatrique, RPP SFAR 2023 (avis d'experts, accord fort).",
+     "judge": {
+      "case_id": "c9wide_v6|wide|claude-sonnet-5-5::MR-g518431a84972e17017d1",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Gamme de cathéters 24G-14G en 2000 et 26G-16G en 2023, conforme."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
+    },
+    {
+     "id": "MR-g78a74d874a76bbb543f1",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "comparison",
+     "tags": [
+      "edition_diff"
+     ],
+     "doc_rank": 2,
+     "passage_rank": 1,
+     "n_retrieved": 11,
+     "doc_hit": 1.0,
+     "doc_mrr": 0.5,
+     "doc_recall": 1.0,
+     "doc_ndcg": 0.4694500619105201,
+     "passage_hit": 1.0,
+     "passage_mrr": 1.0,
+     "passage_recall": 1.0,
+     "answer_terms_in_context": 1.0,
+     "verification": {
+      "citations_found": [],
+      "invalid_citations": [],
+      "mentioned_molecules": [],
+      "ungrounded_molecules": [],
+      "obsolete_sources_used": [
+       "S2 (Thrombopénie induite par l’héparine, 2002)",
+       "S4 (Thrombopénie induite par l’héparine, 2002)",
+       "S7 (La gestion périopératoire des patients sous AOD pour un acte programmé, 2015)",
+       "S9 (Recommandations AVK, 2008)",
+       "S11 (Recommandations AVK, 2008)"
+      ],
+      "is_abstention": true,
+      "grounding_score": 1.0,
+      "warnings": [
+       "Sources antérieures dans le contexte : S2 (Thrombopénie induite par l’héparine, 2002); S4 (Thrombopénie induite par l’héparine, 2002)"
+      ],
+      "provenance_added_by_code": false
+     },
+     "check_regenerated": false,
+     "mode": "temporal_diff",
+     "usage": {},
+     "context_chars": 19032,
+     "n_passages": 11,
+     "coverage_supported": true,
+     "coverage_refused": false,
+     "dependency_note": false,
+     "self_corrected": false,
+     "latency_ms": 1.3650420005433261,
+     "retrieved": [
+      [
+       "2019_diagnostic-et-prise-ne-charge-dune-TIH_cde74d",
+       "2019_diagnostic-et-prise-ne-charge-dune-TIH_cde74d__c0083_6dc15e4f+2019_diagnostic-et-prise-ne-charge-dune-TIH_cde74d__c0084_587d74c9+2019_diagnostic-et-prise-ne-charge-dune-TIH_cde74d__c0085_f7db44bf"
+      ],
+      [
+       "2002_2_AFAR_Thrombopenie-induite-par-lheparine_7850bd",
+       "2002_2_AFAR_Thrombopenie-induite-par-lheparine_7850bd__c0065_7b20ba74+2002_2_AFAR_Thrombopenie-induite-par-lheparine_7850bd__c0066_fecb9b1d+2002_2_AFAR_Thrombopenie-induite-par-lheparine_7850bd__c0067_59d1cf2c"
+      ],
+      [
+       "2019_propositions-tih-gihp-gfht-sfar_20_7a3660",
+       "2019_propositions-tih-gihp-gfht-sfar_20_7a3660__c0125_857334d4+2019_propositions-tih-gihp-gfht-sfar_20_7a3660__c0126_3951ec1f+2019_propositions-tih-gihp-gfht-sfar_20_7a3660__c0127_c50b9f62"
+      ],
+      [
+       "2002_2_AFAR_Thrombopenie-induite-par-lheparine_7850bd",
+       "2002_2_AFAR_Thrombopenie-induite-par-lheparine_7850bd__c0024_0e586032+2002_2_AFAR_Thrombopenie-induite-par-lheparine_7850bd__c0025_4fbbfd29+2002_2_AFAR_Thrombopenie-induite-par-lheparine_7850bd__c0026_608a6538"
+      ],
+      [
+       "2019_propositions-tih-gihp-gfht-sfar_20_7a3660",
+       "2019_propositions-tih-gihp-gfht-sfar_20_7a3660__c0113_637e0bf1+2019_propositions-tih-gihp-gfht-sfar_20_7a3660__c0114_742284c9+2019_propositions-tih-gihp-gfht-sfar_20_7a3660__c0115_9cfdc0a3"
+      ],
+      [
+       "2019_diagnostic-et-prise-ne-charge-dune-TIH_cde74d",
+       "2019_diagnostic-et-prise-ne-charge-dune-TIH_cde74d__c0070_e4c30713+2019_diagnostic-et-prise-ne-charge-dune-TIH_cde74d__c0071_12b5e552+2019_diagnostic-et-prise-ne-charge-dune-TIH_cde74d__c0072_1a87766d"
+      ],
+      [
+       "2015_Reactualisation-GIHP_AOD_actes-programmes_Septembre-20151_33c9a7",
+       "2015_Reactualisation-GIHP_AOD_actes-programmes_Septembre-20151_33c9a7__c0003_f0267b07+2015_Reactualisation-GIHP_AOD_actes-programmes_Septembre-20151_33c9a7__c0004_6de37eea+2015_Reactualisation-GIHP_AOD_actes-programmes_Septembre-20151_33c9a7__c0005_f392777d"
+      ],
+      [
+       "2019_propositions-tih-gihp-gfht-sfar_20_7a3660",
+       "2019_propositions-tih-gihp-gfht-sfar_20_7a3660__c0152_75b34fcb"
+      ],
+      [
+       "2008_2_HAS_Prise-en-charge-des-surdosages-en-antivitamines-K_277613",
+       "2008_2_HAS_Prise-en-charge-des-surdosages-en-antivitamines-K_277613__c0023_0fe438c5"
+      ],
+      [
+       "2019_diagnostic-et-prise-ne-charge-dune-TIH_cde74d",
+       "2019_diagnostic-et-prise-ne-charge-dune-TIH_cde74d__c0075_0902364b"
+      ],
+      [
+       "2008_2_HAS_Prise-en-charge-des-surdosages-en-antivitamines-K_277613",
+       "2008_2_HAS_Prise-en-charge-des-surdosages-en-antivitamines-K_277613__c0018_5201832d"
+      ]
+     ],
+     "prompt_chars": 19936,
+     "prompt_tokens": 5769,
+     "false_abstention": 0.0,
+     "correct": 1.0,
+     "sourced": 1.0,
+     "answer": "**Éditions comparées** : « Thrombopénie induite par l'héparine », RFE SFAR 2002 (édition antérieure, remplacée) [S4], et « Diagnostic et prise en charge d'une thrombopénie induite par l'héparine », Préconisation SFAR 2019 (en vigueur) [S1][S10].\n\n**Ce qui a changé (seuil plaquettaire pour le relais danaparoïde sodique-AVK)**\n- 2002 : le relais n'est institué que lorsque les plaquettes sont remontées au-delà de 100 G/L [S4].\n- 2019 : le relais n'est initié que lorsque les plaquettes sont au-dessus de 150 G/L [S1]. Le seuil passe donc de 100 à 150 G/L.\n- 2019 : la même exigence est formulée pour la phase aiguë d'une TIH de façon générale : ne prescrire un AVK que lorsque la numération plaquettaire est corrigée (> 150 G/L), avec relais sous couvert d'un traitement parentéral (accord fort) [S10].\n\n**Ce qui est resté inchangé**\n- Le relais danaparoïde sodique-AVK n'est initié que lorsque le risque thromboembolique est bien contrôlé, soit en règle après 5 à 7 jours de traitement [S1][S4].\n- Le danaparoïde n'est arrêté que lorsque l'INR se situe dans la zone thérapeutique deux jours de suite et après une durée minimale de 72 h d'AVK [S1][S4].\n\nSource : Thrombopénie induite par l'héparine, RFE SFAR 2002 (édition antérieure, grade non précisé dans l'extrait) ; Diagnostic et prise en charge d'une thrombopénie induite par l'héparine, Préconisation SFAR 2019 (accord fort pour la proposition sur l'AVK à la phase aiguë).",
+     "judge": {
+      "case_id": "c9wide_v6|wide|claude-sonnet-5-5::MR-g78a74d874a76bbb543f1",
+      "correctness": "correct",
+      "abstained": false,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Seuil plaquettaire passant de 100 à 150 G/L, conforme."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
+    },
+    {
+     "id": "MR-abst000",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "abstention",
+     "tags": [
+      "abstention"
+     ],
+     "verification": {
+      "citations_found": [],
+      "invalid_citations": [],
+      "mentioned_molecules": [],
+      "ungrounded_molecules": [],
+      "obsolete_sources_used": [],
+      "is_abstention": true,
+      "grounding_score": 1.0,
+      "warnings": [],
+      "provenance_added_by_code": false
+     },
+     "check_regenerated": false,
+     "mode": "clinical_concise",
+     "usage": {},
+     "context_chars": 17769,
+     "n_passages": 10,
+     "coverage_supported": false,
+     "coverage_refused": false,
+     "dependency_note": false,
+     "self_corrected": false,
+     "latency_ms": 1.3580419472418725,
+     "retrieved": [
+      [
+       "2009_2_AFAR_Gestion-perioperatoire-des-traitements-chroniques-et-disp_38a32f",
+       "2009_2_AFAR_Gestion-perioperatoire-des-traitements-chroniques-et-disp_38a32f__c0264_b09f65fc+2009_2_AFAR_Gestion-perioperatoire-des-traitements-chroniques-et-disp_38a32f__c0265_9b4d172d+2009_2_AFAR_Gestion-perioperatoire-des-traitements-chroniques-et-disp_38a32f__c0266_92648579+2009_2_AFAR_Gestion-perioperatoire-des-traitements-chroniques-et-disp_38a32f__c0267_6717bd97"
+      ],
+      [
+       "2019_diagnostic-et-prise-ne-charge-dune-TIH_cde74d",
+       "2019_diagnostic-et-prise-ne-charge-dune-TIH_cde74d__c0138_4a9bb192+2019_diagnostic-et-prise-ne-charge-dune-TIH_cde74d__c0139_20d6d564+2019_diagnostic-et-prise-ne-charge-dune-TIH_cde74d__c0140_cd9efda5"
+      ],
+      [
+       "2025_RFE-analgesie-obstetricale-texte-long_172a5f",
+       "2025_RFE-analgesie-obstetricale-texte-long_172a5f__c0375_cf5785ff+2025_RFE-analgesie-obstetricale-texte-long_172a5f__c0376_75f02c4f+2025_RFE-analgesie-obstetricale-texte-long_172a5f__c0377_e597ef3d+2025_RFE-analgesie-obstetricale-texte-long_172a5f__c0378_40bee188"
+      ],
+      [
+       "2022_RPP-reduction-impact-environnemental_pour-mise-sur-site_b22db8",
+       "2022_RPP-reduction-impact-environnemental_pour-mise-sur-site_b22db8__c0046_a1ba8227+2022_RPP-reduction-impact-environnemental_pour-mise-sur-site_b22db8__c0047_8c12314e+2022_RPP-reduction-impact-environnemental_pour-mise-sur-site_b22db8__c0048_fa7f84e8"
+      ],
+      [
+       "2019_diagnostic-et-prise-ne-charge-dune-TIH_cde74d",
+       "2019_diagnostic-et-prise-ne-charge-dune-TIH_cde74d__c0129_d639096a+2019_diagnostic-et-prise-ne-charge-dune-TIH_cde74d__c0130_3bde7438+2019_diagnostic-et-prise-ne-charge-dune-TIH_cde74d__c0131_4722e943+2019_diagnostic-et-prise-ne-charge-dune-TIH_cde74d__c0132_047bca2f+2019_diagnostic-et-prise-ne-charge-dune-TIH_cde74d__c0133_4f6e1f63"
+      ],
+      [
+       "2025_RFE-analgesie-obstetricale-texte-court_51af4c",
+       "2025_RFE-analgesie-obstetricale-texte-court_51af4c__c0126_47483ddf+2025_RFE-analgesie-obstetricale-texte-court_51af4c__c0127_c00885a6+2025_RFE-analgesie-obstetricale-texte-court_51af4c__c0128_69544952"
+      ],
+      [
+       "2019_diagnostic-et-prise-ne-charge-dune-TIH_cde74d",
+       "2019_diagnostic-et-prise-ne-charge-dune-TIH_cde74d__c0025_7f58e3ed+2019_diagnostic-et-prise-ne-charge-dune-TIH_cde74d__c0026_0c43c2cf+2019_diagnostic-et-prise-ne-charge-dune-TIH_cde74d__c0027_6afa190b"
+      ],
+      [
+       "2022_RPP-reduction-impact-environnemental_pour-mise-sur-site_b22db8",
+       "2022_RPP-reduction-impact-environnemental_pour-mise-sur-site_b22db8__c0039_b6247a61"
+      ],
+      [
+       "2023_RPP-epanchement-pleural-2023_mise-sur-site-_e86215",
+       "2023_RPP-epanchement-pleural-2023_mise-sur-site-_e86215__c0096_521d0b5a"
+      ],
+      [
+       "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1",
+       "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0038_6321e553"
+      ]
+     ],
+     "prompt_chars": 19323,
+     "prompt_tokens": 5877,
+     "abstention_correct": 1.0,
+     "sourced": 0.0,
+     "answer": "Les recommandations SFAR fournies ne traitent pas cette question.",
+     "judge": {
+      "case_id": "c9wide_v6|wide|claude-sonnet-5-5::MR-abst000",
+      "correctness": "correct",
+      "abstained": true,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Abstention attendue, réponse conforme."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
+    },
+    {
+     "id": "MR-abst015",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "abstention",
+     "tags": [
+      "abstention"
+     ],
+     "verification": {
+      "citations_found": [],
+      "invalid_citations": [],
+      "mentioned_molecules": [],
+      "ungrounded_molecules": [],
+      "obsolete_sources_used": [],
+      "is_abstention": true,
+      "grounding_score": 1.0,
+      "warnings": [],
+      "provenance_added_by_code": false
+     },
+     "check_regenerated": false,
+     "mode": "clinical_concise",
+     "usage": {},
+     "context_chars": 19572,
+     "n_passages": 13,
+     "coverage_supported": true,
+     "coverage_refused": false,
+     "dependency_note": false,
+     "self_corrected": false,
+     "latency_ms": 1.5206669922918081,
+     "retrieved": [
+      [
+       "2014_2_HAS_transfusion_de_globules_rouges_homologues_-_produits_indic_57ad8e",
+       "2014_2_HAS_transfusion_de_globules_rouges_homologues_-_produits_indic_57ad8e__c0241_2b391405+2014_2_HAS_transfusion_de_globules_rouges_homologues_-_produits_indic_57ad8e__c0242_dcd91bd4+2014_2_HAS_transfusion_de_globules_rouges_homologues_-_produits_indic_57ad8e__c0243_816d2c0f"
+      ],
+      [
+       "2019_rac-orthepedie-lourde_bc800f",
+       "2019_rac-orthepedie-lourde_bc800f__c0065_0bc80865+2019_rac-orthepedie-lourde_bc800f__c0066_dd04f40f+2019_rac-orthepedie-lourde_bc800f__c0067_080f1982"
+      ],
+      [
+       "2014_2_AFAR_Recommandations-sur-la-reanimation-du-choc-hemorragique_a38f8d",
+       "2014_2_AFAR_Recommandations-sur-la-reanimation-du-choc-hemorragique_a38f8d__c0038_310e6e81+2014_2_AFAR_Recommandations-sur-la-reanimation-du-choc-hemorragique_a38f8d__c0039_3901ed70+2014_2_AFAR_Recommandations-sur-la-reanimation-du-choc-hemorragique_a38f8d__c0040_0fce9f23"
+      ],
+      [
+       "2012_AFAR_Examens-preinterventionnels-systematiques_a99473",
+       "2012_AFAR_Examens-preinterventionnels-systematiques_a99473__c0048_75d35a4d+2012_AFAR_Examens-preinterventionnels-systematiques_a99473__c0049_ab9755c5+2012_AFAR_Examens-preinterventionnels-systematiques_a99473__c0050_84704e60"
+      ],
+      [
+       "2005_2b_AFAR_TEXTE-LONG_Anesthesie-pour-amygdalectomie-chez-lenfant_f868e3",
+       "2005_2b_AFAR_TEXTE-LONG_Anesthesie-pour-amygdalectomie-chez-lenfant_f868e3__c0045_9761b8c9+2005_2b_AFAR_TEXTE-LONG_Anesthesie-pour-amygdalectomie-chez-lenfant_f868e3__c0046_16841a09+2005_2b_AFAR_TEXTE-LONG_Anesthesie-pour-amygdalectomie-chez-lenfant_f868e3__c0047_5236aaf3+2005_2b_AFAR_TEXTE-LONG_Anesthesie-pour-amygdalectomie-chez-lenfant_f868e3__c0048_2140e0e0"
+      ],
+      [
+       "2020_RPP_PLYO_2020_a9118d",
+       "2020_RPP_PLYO_2020_a9118d__c0044_a6b1a8b2+2020_RPP_PLYO_2020_a9118d__c0045_b59a6a70+2020_RPP_PLYO_2020_a9118d__c0046_9296cf7f"
+      ],
+      [
+       "2005_2b_AFAR_TEXTE-LONG_Anesthesie-pour-amygdalectomie-chez-lenfant_f868e3",
+       "2005_2b_AFAR_TEXTE-LONG_Anesthesie-pour-amygdalectomie-chez-lenfant_f868e3__c0032_cd0bb1aa+2005_2b_AFAR_TEXTE-LONG_Anesthesie-pour-amygdalectomie-chez-lenfant_f868e3__c0033_9a1d817d+2005_2b_AFAR_TEXTE-LONG_Anesthesie-pour-amygdalectomie-chez-lenfant_f868e3__c0034_21ab2177"
+      ],
+      [
+       "2014_2_HAS_transfusion_de_globules_rouges_homologues_-_produits_indic_57ad8e",
+       "2014_2_HAS_transfusion_de_globules_rouges_homologues_-_produits_indic_57ad8e__c0118_51d388f8"
+      ],
+      [
+       "2019_diagnostic-et-prise-ne-charge-dune-TIH_cde74d",
+       "2019_diagnostic-et-prise-ne-charge-dune-TIH_cde74d__c0026_0c43c2cf"
+      ],
+      [
+       "2019_diagnostic-et-prise-ne-charge-dune-TIH_cde74d",
+       "2019_diagnostic-et-prise-ne-charge-dune-TIH_cde74d__c0137_d428431c"
+      ],
+      [
+       "2014_2_AFAR_Recommandations-sur-la-reanimation-du-choc-hemorragique_a38f8d",
+       "2014_2_AFAR_Recommandations-sur-la-reanimation-du-choc-hemorragique_a38f8d__c0059_9fab28d7"
+      ],
+      [
+       "2019_rac-orthepedie-lourde_bc800f",
+       "2019_rac-orthepedie-lourde_bc800f__c0069_f340a6ab"
+      ],
+      [
+       "2019_diagnostic-et-prise-ne-charge-dune-TIH_cde74d",
+       "2019_diagnostic-et-prise-ne-charge-dune-TIH_cde74d__c0045_a8f1229a"
+      ]
+     ],
+     "prompt_chars": 21151,
+     "prompt_tokens": 5629,
+     "abstention_correct": 1.0,
+     "sourced": 0.0,
+     "answer": "Les recommandations SFAR fournies ne traitent pas cette question.",
+     "judge": {
+      "case_id": "c9wide_v6|wide|claude-sonnet-5-5::MR-abst015",
+      "correctness": "correct",
+      "abstained": true,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Abstention attendue, réponse conforme."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
+    },
+    {
+     "id": "MR-abst016",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "abstention",
+     "tags": [
+      "abstention"
+     ],
+     "verification": {
+      "citations_found": [],
+      "invalid_citations": [],
+      "mentioned_molecules": [],
+      "ungrounded_molecules": [],
+      "obsolete_sources_used": [],
+      "is_abstention": true,
+      "grounding_score": 1.0,
+      "warnings": [],
+      "provenance_added_by_code": false
+     },
+     "check_regenerated": false,
+     "mode": "clinical_concise",
+     "usage": {},
+     "context_chars": 30726,
+     "n_passages": 14,
+     "coverage_supported": true,
+     "coverage_refused": false,
+     "dependency_note": false,
+     "self_corrected": false,
+     "latency_ms": 1.9528749980963767,
+     "retrieved": [
+      [
+       "2005_2b_AFAR_TEXTE-LONG_Anesthesie-pour-amygdalectomie-chez-lenfant_f868e3",
+       "2005_2b_AFAR_TEXTE-LONG_Anesthesie-pour-amygdalectomie-chez-lenfant_f868e3__c0076_81e8d7ae+2005_2b_AFAR_TEXTE-LONG_Anesthesie-pour-amygdalectomie-chez-lenfant_f868e3__c0077_f2f1c101+2005_2b_AFAR_TEXTE-LONG_Anesthesie-pour-amygdalectomie-chez-lenfant_f868e3__c0078_8ff91cef"
+      ],
+      [
+       "2026_TEXTE-RFE-ALR-PEDIA-VERSION-FINALE-010926_63f95f",
+       "2026_TEXTE-RFE-ALR-PEDIA-VERSION-FINALE-010926_63f95f__c0067_cbfe3ee6+2026_TEXTE-RFE-ALR-PEDIA-VERSION-FINALE-010926_63f95f__c0068_ef73327f+2026_TEXTE-RFE-ALR-PEDIA-VERSION-FINALE-010926_63f95f__c0069_ffab9e19+2026_TEXTE-RFE-ALR-PEDIA-VERSION-FINALE-010926_63f95f__c0070_4044e527+2026_TEXTE-RFE-ALR-PEDIA-VERSION-FINALE-010926_63f95f__c0071_749625f8"
+      ],
+      [
+       "2005_2b_AFAR_TEXTE-LONG_Anesthesie-pour-amygdalectomie-chez-lenfant_f868e3",
+       "2005_2b_AFAR_TEXTE-LONG_Anesthesie-pour-amygdalectomie-chez-lenfant_f868e3__c0163_63b9fdbd+2005_2b_AFAR_TEXTE-LONG_Anesthesie-pour-amygdalectomie-chez-lenfant_f868e3__c0164_b8129bd7+2005_2b_AFAR_TEXTE-LONG_Anesthesie-pour-amygdalectomie-chez-lenfant_f868e3__c0165_49df5d30"
+      ],
+      [
+       "2005_2b_AFAR_TEXTE-LONG_Anesthesie-pour-amygdalectomie-chez-lenfant_f868e3",
+       "2005_2b_AFAR_TEXTE-LONG_Anesthesie-pour-amygdalectomie-chez-lenfant_f868e3__c0191_6565147e+2005_2b_AFAR_TEXTE-LONG_Anesthesie-pour-amygdalectomie-chez-lenfant_f868e3__c0192_06d5089e+2005_2b_AFAR_TEXTE-LONG_Anesthesie-pour-amygdalectomie-chez-lenfant_f868e3__c0193_31274028"
+      ],
+      [
+       "2026_TEXTE-RFE-ALR-PEDIA-VERSION-FINALE-010926_63f95f",
+       "2026_TEXTE-RFE-ALR-PEDIA-VERSION-FINALE-010926_63f95f__c0202_f3108346+2026_TEXTE-RFE-ALR-PEDIA-VERSION-FINALE-010926_63f95f__c0203_f0f05691+2026_TEXTE-RFE-ALR-PEDIA-VERSION-FINALE-010926_63f95f__c0204_53783735"
+      ],
+      [
+       "2026_TEXTE-RFE-ALR-PEDIA-VERSION-FINALE-010926_63f95f",
+       "2026_TEXTE-RFE-ALR-PEDIA-VERSION-FINALE-010926_63f95f__c0198_1e02e861+2026_TEXTE-RFE-ALR-PEDIA-VERSION-FINALE-010926_63f95f__c0199_3e755f83"
+      ],
+      [
+       "2016_RFE-ANREA-Reactualisation-de-la-recommandation-sur-la-douleur-po_c27829",
+       "2016_RFE-ANREA-Reactualisation-de-la-recommandation-sur-la-douleur-po_c27829__c0013_bc0b1344+2016_RFE-ANREA-Reactualisation-de-la-recommandation-sur-la-douleur-po_c27829__c0014_4f390400+2016_RFE-ANREA-Reactualisation-de-la-recommandation-sur-la-douleur-po_c27829__c0015_5604219f"
+      ],
+      [
+       "2005_2a_SFAR_TEXTE-COURT_Anesthesie-pour-amygdalectomie-chez-lenfant_cf569a",
+       "2005_2a_SFAR_TEXTE-COURT_Anesthesie-pour-amygdalectomie-chez-lenfant_cf569a__c0028_a3ac8adf+2005_2a_SFAR_TEXTE-COURT_Anesthesie-pour-amygdalectomie-chez-lenfant_cf569a__c0029_56a5552c+2005_2a_SFAR_TEXTE-COURT_Anesthesie-pour-amygdalectomie-chez-lenfant_cf569a__c0030_a98a4cc8"
+      ],
+      [
+       "2016_RFE-ANREA-Reactualisation-de-la-recommandation-sur-la-douleur-po_c27829",
+       "2016_RFE-ANREA-Reactualisation-de-la-recommandation-sur-la-douleur-po_c27829__c0033_d87fee4c"
+      ],
+      [
+       "2022_RFE-Programme-doptimisation-perioperatoire_pour-mise-sur-site_26_6ede19",
+       "2022_RFE-Programme-doptimisation-perioperatoire_pour-mise-sur-site_26_6ede19__c0059_c8236a0c"
+      ],
+      [
+       "2007_2_AFAR_Prise-en-charge-des-nausees-et-vomissements-postoperatoir_a6f4bb",
+       "2007_2_AFAR_Prise-en-charge-des-nausees-et-vomissements-postoperatoir_a6f4bb__c0102_fbd04b20"
+      ],
+      [
+       "2007_2c_AFAR_Texte_long_Sedation-et-analgesie-en-reanimation_nouveau-_1eab5a",
+       "2007_2c_AFAR_Texte_long_Sedation-et-analgesie-en-reanimation_nouveau-_1eab5a__c0114_e5cdf808"
+      ],
+      [
+       "2005_2b_AFAR_TEXTE-LONG_Anesthesie-pour-amygdalectomie-chez-lenfant_f868e3",
+       "2005_2b_AFAR_TEXTE-LONG_Anesthesie-pour-amygdalectomie-chez-lenfant_f868e3__c0081_f4f55bcf"
+      ],
+      [
+       "2005_2b_AFAR_TEXTE-LONG_Anesthesie-pour-amygdalectomie-chez-lenfant_f868e3",
+       "2005_2b_AFAR_TEXTE-LONG_Anesthesie-pour-amygdalectomie-chez-lenfant_f868e3__c0209_5b1582d1"
+      ]
+     ],
+     "prompt_chars": 32282,
+     "prompt_tokens": 9192,
+     "abstention_correct": 1.0,
+     "sourced": 0.0,
+     "answer": "Les recommandations SFAR fournies ne traitent pas cette question.",
+     "judge": {
+      "case_id": "c9wide_v6|wide|claude-sonnet-5-5::MR-abst016",
+      "correctness": "correct",
+      "abstained": true,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Abstention attendue, réponse conforme."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
+    },
+    {
+     "id": "MR-abst026",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "abstention",
+     "tags": [
+      "abstention"
+     ],
+     "verification": {
+      "citations_found": [],
+      "invalid_citations": [],
+      "mentioned_molecules": [],
+      "ungrounded_molecules": [],
+      "obsolete_sources_used": [],
+      "is_abstention": true,
+      "grounding_score": 1.0,
+      "warnings": [],
+      "provenance_added_by_code": false
+     },
+     "check_regenerated": false,
+     "mode": "clinical_concise",
+     "usage": {},
+     "context_chars": 24676,
+     "n_passages": 12,
+     "coverage_supported": false,
+     "coverage_refused": false,
+     "dependency_note": false,
+     "self_corrected": false,
+     "latency_ms": 1.606707985047251,
+     "retrieved": [
+      [
+       "2013_2a_AFAR_Techniques-analgesiques-locoregionales-et-douleur-chroni_e21315",
+       "2013_2a_AFAR_Techniques-analgesiques-locoregionales-et-douleur-chroni_e21315__c0048_a7f60049+2013_2a_AFAR_Techniques-analgesiques-locoregionales-et-douleur-chroni_e21315__c0049_85f65caa+2013_2a_AFAR_Techniques-analgesiques-locoregionales-et-douleur-chroni_e21315__c0050_c5ba696b+2013_2a_AFAR_Techniques-analgesiques-locoregionales-et-douleur-chroni_e21315__c0051_fd9bf286+2013_2a_AFAR_Techniques-analgesiques-locoregionales-et-douleur-chroni_e21315__c0052_fe04cdbb+2013_2a_AFAR_Techniques-analgesiques-locoregionales-et-douleur-chroni_e21315__c0053_f20fd2a2+2013_2a_AFAR_Techniques-analgesiques-locoregionales-et-douleur-chroni_e21315__c0054_8f5a0f22"
+      ],
+      [
+       "2026_RFE_sedationproceduraleUrgences_24juin2026_1f0c12",
+       "2026_RFE_sedationproceduraleUrgences_24juin2026_1f0c12__c0052_3782dd26+2026_RFE_sedationproceduraleUrgences_24juin2026_1f0c12__c0053_2261d146+2026_RFE_sedationproceduraleUrgences_24juin2026_1f0c12__c0054_82b60a04"
+      ],
+      [
+       "2013_2a_AFAR_Techniques-analgesiques-locoregionales-et-douleur-chroni_e21315",
+       "2013_2a_AFAR_Techniques-analgesiques-locoregionales-et-douleur-chroni_e21315__c0027_866d31b1+2013_2a_AFAR_Techniques-analgesiques-locoregionales-et-douleur-chroni_e21315__c0028_d0ae51f3+2013_2a_AFAR_Techniques-analgesiques-locoregionales-et-douleur-chroni_e21315__c0029_197c37d4"
+      ],
+      [
+       "2013_2a_AFAR_Techniques-analgesiques-locoregionales-et-douleur-chroni_e21315",
+       "2013_2a_AFAR_Techniques-analgesiques-locoregionales-et-douleur-chroni_e21315__c0060_5763095b+2013_2a_AFAR_Techniques-analgesiques-locoregionales-et-douleur-chroni_e21315__c0061_1b868d82+2013_2a_AFAR_Techniques-analgesiques-locoregionales-et-douleur-chroni_e21315__c0062_0072cf85"
+      ],
+      [
+       "2013_2b_Annexe_SFAR_TableauxRFEDCALR2_145d45",
+       "2013_2b_Annexe_SFAR_TableauxRFEDCALR2_145d45__c0012_565a0f19"
+      ],
+      [
+       "2018_RFE-IH-soins-critiques_f67e16",
+       "2018_RFE-IH-soins-critiques_f67e16__c0122_0cc49130"
+      ],
+      [
+       "2016_3-Tableaux-Reactualisation-de-la-recommandation-sur-la-douleur-p_7b4c8a",
+       "2016_3-Tableaux-Reactualisation-de-la-recommandation-sur-la-douleur-p_7b4c8a__c0165_bfd8d2d9"
+      ],
+      [
+       "2022_RPP-Trauma-cranien-leger_pour-mise-sur-site_autorship-complet_9c1d68",
+       "2022_RPP-Trauma-cranien-leger_pour-mise-sur-site_autorship-complet_9c1d68__c0034_b0ffe225"
+      ],
+      [
+       "2013_2b_Annexe_SFAR_TableauxRFEDCALR2_145d45",
+       "2013_2b_Annexe_SFAR_TableauxRFEDCALR2_145d45__c0084_8685a082"
+      ],
+      [
+       "2016_3-Tableaux-Reactualisation-de-la-recommandation-sur-la-douleur-p_7b4c8a",
+       "2016_3-Tableaux-Reactualisation-de-la-recommandation-sur-la-douleur-p_7b4c8a__c0263_204b419b"
+      ],
+      [
+       "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1",
+       "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0422_a5d02df1"
+      ],
+      [
+       "2013_2b_Annexe_SFAR_TableauxRFEDCALR2_145d45",
+       "2013_2b_Annexe_SFAR_TableauxRFEDCALR2_145d45__c0373_827e18cf"
+      ]
+     ],
+     "prompt_chars": 26247,
+     "prompt_tokens": 7349,
+     "abstention_correct": 1.0,
+     "sourced": 0.0,
+     "answer": "Les recommandations SFAR fournies ne traitent pas cette question.",
+     "judge": {
+      "case_id": "c9wide_v6|wide|claude-sonnet-5-5::MR-abst026",
+      "correctness": "correct",
+      "abstained": true,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Abstention attendue, réponse conforme."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
+    },
+    {
+     "id": "MR-abst031",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "abstention",
+     "tags": [
+      "abstention"
+     ],
+     "verification": {
+      "citations_found": [],
+      "invalid_citations": [],
+      "mentioned_molecules": [],
+      "ungrounded_molecules": [],
+      "obsolete_sources_used": [],
+      "is_abstention": true,
+      "grounding_score": 1.0,
+      "warnings": [],
+      "provenance_added_by_code": false
+     },
+     "check_regenerated": false,
+     "mode": "clinical_concise",
+     "usage": {},
+     "context_chars": 26033,
+     "n_passages": 15,
+     "coverage_supported": false,
+     "coverage_refused": false,
+     "dependency_note": false,
+     "self_corrected": false,
+     "latency_ms": 1.6679580439813435,
+     "retrieved": [
+      [
+       "2025_RBP_-SFAR_AFEF_ACHBPT_RESECTION_-HEPATIQUE_-ARGUMENTAIRE_VF-1-AB_2e42b6",
+       "2025_RBP_-SFAR_AFEF_ACHBPT_RESECTION_-HEPATIQUE_-ARGUMENTAIRE_VF-1-AB_2e42b6__c0328_20fc0628+2025_RBP_-SFAR_AFEF_ACHBPT_RESECTION_-HEPATIQUE_-ARGUMENTAIRE_VF-1-AB_2e42b6__c0329_1cdb14bf+2025_RBP_-SFAR_AFEF_ACHBPT_RESECTION_-HEPATIQUE_-ARGUMENTAIRE_VF-1-AB_2e42b6__c0330_0631007c"
+      ],
+      [
+       "2025_Fiches-simplifiees-19122025-_21fc82",
+       "2025_Fiches-simplifiees-19122025-_21fc82__c0054_a20cefc2+2025_Fiches-simplifiees-19122025-_21fc82__c0055_fac6db26+2025_Fiches-simplifiees-19122025-_21fc82__c0056_c9dd0466+2025_Fiches-simplifiees-19122025-_21fc82__c0057_281db439+2025_Fiches-simplifiees-19122025-_21fc82__c0058_0e60a8be"
+      ],
+      [
+       "2019_rpp-prise-en-charge-du-brule-grave_20_e49758",
+       "2019_rpp-prise-en-charge-du-brule-grave_20_e49758__c0064_178216ff+2019_rpp-prise-en-charge-du-brule-grave_20_e49758__c0065_69d819ef+2019_rpp-prise-en-charge-du-brule-grave_20_e49758__c0066_8b5eb598"
+      ],
+      [
+       "2010_2_AFAR_Prise-en-charge-du-coronarien-qui-doit-etre-opere-en-chir_59da99",
+       "2010_2_AFAR_Prise-en-charge-du-coronarien-qui-doit-etre-opere-en-chir_59da99__c0092_913b8a92+2010_2_AFAR_Prise-en-charge-du-coronarien-qui-doit-etre-opere-en-chir_59da99__c0093_08fbe6ae+2010_2_AFAR_Prise-en-charge-du-coronarien-qui-doit-etre-opere-en-chir_59da99__c0094_ef21a605"
+      ],
+      [
+       "2006_2b_HAS_TEXTE-LONG_Prise-en-charge-de-linfarctus-du-myocarde_ba86c1",
+       "2006_2b_HAS_TEXTE-LONG_Prise-en-charge-de-linfarctus-du-myocarde_ba86c1__c0139_aa1dcdb8+2006_2b_HAS_TEXTE-LONG_Prise-en-charge-de-linfarctus-du-myocarde_ba86c1__c0140_c9dc275d+2006_2b_HAS_TEXTE-LONG_Prise-en-charge-de-linfarctus-du-myocarde_ba86c1__c0141_4ee25f00"
+      ],
+      [
+       "2018_2_Recos-Org-Blocs-moteurs-SOFMER-SFAR_994996",
+       "2018_2_Recos-Org-Blocs-moteurs-SOFMER-SFAR_994996__c0166_57e2e3ad+2018_2_Recos-Org-Blocs-moteurs-SOFMER-SFAR_994996__c0167_3e2dc936+2018_2_Recos-Org-Blocs-moteurs-SOFMER-SFAR_994996__c0168_941c9ea4"
+      ],
+      [
+       "2024_RFE-gestion-de-lanticoagulation-dans-un-contexte-durgence_23_02__d0368c",
+       "2024_RFE-gestion-de-lanticoagulation-dans-un-contexte-durgence_23_02__d0368c__c0108_0f41e986+2024_RFE-gestion-de-lanticoagulation-dans-un-contexte-durgence_23_02__d0368c__c0109_81dcda83+2024_RFE-gestion-de-lanticoagulation-dans-un-contexte-durgence_23_02__d0368c__c0110_a1991362"
+      ],
+      [
+       "2006_2b_HAS_TEXTE-LONG_Prise-en-charge-de-linfarctus-du-myocarde_ba86c1",
+       "2006_2b_HAS_TEXTE-LONG_Prise-en-charge-de-linfarctus-du-myocarde_ba86c1__c0080_1e3885cf"
+      ],
+      [
+       "2006_2a_HAS_TEXTE-COURT_Prise-en-charge-de-linfarctus-du-myocarde_110064",
+       "2006_2a_HAS_TEXTE-COURT_Prise-en-charge-de-linfarctus-du-myocarde_110064__c0043_f7b02fb0"
+      ],
+      [
+       "2019_rpp-prise-en-charge-du-brule-grave_20_e49758",
+       "2019_rpp-prise-en-charge-du-brule-grave_20_e49758__c0070_2463388f"
+      ],
+      [
+       "2018_RPP_beta-lactamines-en-soins-critiques_041018_logoSFPT_9e9437",
+       "2018_RPP_beta-lactamines-en-soins-critiques_041018_logoSFPT_9e9437__c0164_9bb36558"
+      ],
+      [
+       "2010_2_AFAR_Prise-en-charge-du-coronarien-qui-doit-etre-opere-en-chir_59da99",
+       "2010_2_AFAR_Prise-en-charge-du-coronarien-qui-doit-etre-opere-en-chir_59da99__c0097_c9e1e347"
+      ],
+      [
+       "2009_2_AFAR_Gestion-perioperatoire-des-traitements-chroniques-et-disp_38a32f",
+       "2009_2_AFAR_Gestion-perioperatoire-des-traitements-chroniques-et-disp_38a32f__c0021_858fde45"
+      ],
+      [
+       "2018_RPP_beta-lactamines-en-soins-critiques_041018_logoSFPT_9e9437",
+       "2018_RPP_beta-lactamines-en-soins-critiques_041018_logoSFPT_9e9437__c0035_8601b78c"
+      ],
+      [
+       "2024_RFE-gestion-de-lanticoagulation-dans-un-contexte-durgence_23_02__d0368c",
+       "2024_RFE-gestion-de-lanticoagulation-dans-un-contexte-durgence_23_02__d0368c__c0081_747b5c83"
+      ]
+     ],
+     "prompt_chars": 27579,
+     "prompt_tokens": 7724,
+     "abstention_correct": 1.0,
+     "sourced": 0.0,
+     "answer": "Les recommandations SFAR fournies ne traitent pas cette question.",
+     "judge": {
+      "case_id": "c9wide_v6|wide|claude-sonnet-5-5::MR-abst031",
+      "correctness": "correct",
+      "abstained": true,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Abstention attendue, réponse conforme."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
+    },
+    {
+     "id": "MR-abst037",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "abstention",
+     "tags": [
+      "abstention"
+     ],
+     "verification": {
+      "citations_found": [],
+      "invalid_citations": [],
+      "mentioned_molecules": [],
+      "ungrounded_molecules": [],
+      "obsolete_sources_used": [],
+      "is_abstention": true,
+      "grounding_score": 1.0,
+      "warnings": [],
+      "provenance_added_by_code": false
+     },
+     "check_regenerated": false,
+     "mode": "clinical_concise",
+     "usage": {},
+     "context_chars": 25521,
+     "n_passages": 14,
+     "coverage_supported": true,
+     "coverage_refused": false,
+     "dependency_note": false,
+     "self_corrected": false,
+     "latency_ms": 1.741749991197139,
+     "retrieved": [
+      [
+       "2018_2_RFE-Hypothermie-Version-Finale-_-Validee-CRC120618_f30664",
+       "2018_2_RFE-Hypothermie-Version-Finale-_-Validee-CRC120618_f30664__c0026_27ed10bd+2018_2_RFE-Hypothermie-Version-Finale-_-Validee-CRC120618_f30664__c0027_2a617598+2018_2_RFE-Hypothermie-Version-Finale-_-Validee-CRC120618_f30664__c0028_e30fe0c3"
+      ],
+      [
+       "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc",
+       "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0125_fc603a49+2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0126_a94e1628+2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0127_af099310"
+      ],
+      [
+       "2025_RBP_-SFAR_AFEF_ACHBPT_RESECTION_-HEPATIQUE_-ARGUMENTAIRE_VF-1-AB_2e42b6",
+       "2025_RBP_-SFAR_AFEF_ACHBPT_RESECTION_-HEPATIQUE_-ARGUMENTAIRE_VF-1-AB_2e42b6__c0163_ef08ed8c+2025_RBP_-SFAR_AFEF_ACHBPT_RESECTION_-HEPATIQUE_-ARGUMENTAIRE_VF-1-AB_2e42b6__c0164_8d1940b5+2025_RBP_-SFAR_AFEF_ACHBPT_RESECTION_-HEPATIQUE_-ARGUMENTAIRE_VF-1-AB_2e42b6__c0165_cf7dc27b+2025_RBP_-SFAR_AFEF_ACHBPT_RESECTION_-HEPATIQUE_-ARGUMENTAIRE_VF-1-AB_2e42b6__c0166_07822f6e"
+      ],
+      [
+       "2009_2_AFAR_Gestion-perioperatoire-des-traitements-chroniques-et-disp_38a32f",
+       "2009_2_AFAR_Gestion-perioperatoire-des-traitements-chroniques-et-disp_38a32f__c0191_410ce9ab+2009_2_AFAR_Gestion-perioperatoire-des-traitements-chroniques-et-disp_38a32f__c0192_800a8f5f+2009_2_AFAR_Gestion-perioperatoire-des-traitements-chroniques-et-disp_38a32f__c0193_7fd44062"
+      ],
+      [
+       "2018_RFE-IH-soins-critiques_f67e16",
+       "2018_RFE-IH-soins-critiques_f67e16__c0132_88f90e8a+2018_RFE-IH-soins-critiques_f67e16__c0133_8d3db63f+2018_RFE-IH-soins-critiques_f67e16__c0134_3bf34dd8"
+      ],
+      [
+       "2025_RESECTION_-HEPATIQUE_-RECOMMANDATIONS_MEL_e8bdcf",
+       "2025_RESECTION_-HEPATIQUE_-RECOMMANDATIONS_MEL_e8bdcf__c0088_5007741c+2025_RESECTION_-HEPATIQUE_-RECOMMANDATIONS_MEL_e8bdcf__c0089_d8d8851b+2025_RESECTION_-HEPATIQUE_-RECOMMANDATIONS_MEL_e8bdcf__c0090_a6908a1b"
+      ],
+      [
+       "2025_RBP_-SFAR_AFEF_ACHBPT_RESECTION_-HEPATIQUE_-ARGUMENTAIRE_VF-1-AB_2e42b6",
+       "2025_RBP_-SFAR_AFEF_ACHBPT_RESECTION_-HEPATIQUE_-ARGUMENTAIRE_VF-1-AB_2e42b6__c0368_00595287+2025_RBP_-SFAR_AFEF_ACHBPT_RESECTION_-HEPATIQUE_-ARGUMENTAIRE_VF-1-AB_2e42b6__c0369_704f25fb+2025_RBP_-SFAR_AFEF_ACHBPT_RESECTION_-HEPATIQUE_-ARGUMENTAIRE_VF-1-AB_2e42b6__c0370_883859f2"
+      ],
+      [
+       "2026_RecoCIAFU_ECBU_Note-de-cadrage_10_10_2024_d649f3",
+       "2026_RecoCIAFU_ECBU_Note-de-cadrage_10_10_2024_d649f3__c0066_8f486b16"
+      ],
+      [
+       "2016_RFE-ANREA-Reactualisation-de-la-recommandation-sur-la-douleur-po_c27829",
+       "2016_RFE-ANREA-Reactualisation-de-la-recommandation-sur-la-douleur-po_c27829__c0014_4f390400"
+      ],
+      [
+       "2010_2b_HAS_Texte_Long-Delivrance-de-l-information-a-la-personne-sur-_7d3a7b",
+       "2010_2b_HAS_Texte_Long-Delivrance-de-l-information-a-la-personne-sur-_7d3a7b__c0131_7af1e2f9"
+      ],
+      [
+       "2007_2_AFAR_Prise-en-charge-des-nausees-et-vomissements-postoperatoir_a6f4bb",
+       "2007_2_AFAR_Prise-en-charge-des-nausees-et-vomissements-postoperatoir_a6f4bb__c0049_a4b51cf9"
+      ],
+      [
+       "2009_2_AFAR_Gestion-perioperatoire-des-traitements-chroniques-et-disp_38a32f",
+       "2009_2_AFAR_Gestion-perioperatoire-des-traitements-chroniques-et-disp_38a32f__c0097_2ed06ef1"
+      ],
+      [
+       "2014_2_AFAR_Rehabilitation-rapide-apres-une-chirurgie-colorectale-pro_84aad5",
+       "2014_2_AFAR_Rehabilitation-rapide-apres-une-chirurgie-colorectale-pro_84aad5__c0080_6edc31ed"
+      ],
+      [
+       "2019_diagnostic-et-prise-ne-charge-dune-TIH_cde74d",
+       "2019_diagnostic-et-prise-ne-charge-dune-TIH_cde74d__c0130_3bde7438"
+      ]
+     ],
+     "prompt_chars": 27099,
+     "prompt_tokens": 7523,
+     "abstention_correct": 1.0,
+     "sourced": 0.0,
+     "answer": "Les recommandations SFAR fournies ne traitent pas cette question.",
+     "judge": {
+      "case_id": "c9wide_v6|wide|claude-sonnet-5-5::MR-abst037",
+      "correctness": "correct",
+      "abstained": true,
+      "serious_error": "none",
+      "faithful": null,
+      "justification": "Abstention attendue, réponse conforme."
+     },
+     "judge_correct": 1.0,
+     "judge_correct_or_partial": 1.0,
+     "judge_serious_error": 0.0
+    }
+   ]
+  }
+ ],
+ "comparisons": [],
+ "judge": {
+  "label": "haiku (rubric v3)",
+  "dir": "eval_internal/judge/runs/b3_v6_c9w_iter_mult",
+  "missing": 0
+ }
+}

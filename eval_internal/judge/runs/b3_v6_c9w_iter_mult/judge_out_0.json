@@ -1,0 +1,242 @@
+[
+ {
+  "case_id": "c9wide_v6|wide|claude-sonnet-5-5::MR-gfff2848a70957ac0b7b5",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Scanner cérébral avec injection, conduite identique à la référence."
+ },
+ {
+  "case_id": "c9wide_v6|wide|claude-sonnet-5-5::MR-g8f23afa63325b0d08bd8",
+  "correctness": "partial",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Traitement opératoire précoce correct, mais le scanner secondaire de la référence n'est pas mentionné."
+ },
+ {
+  "case_id": "c9wide_v6|wide|claude-sonnet-5-5::MR-gd1b252c6b18be4bca7b6",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Refus d'abaisser à 31 °C et CCT 34-35 °C, conforme à la référence."
+ },
+ {
+  "case_id": "c9wide_v6|wide|claude-sonnet-5-5::MR-g2c188878f4fca6996f4b",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Endartériectomie carotidienne classée à risque intermédiaire (1-5 %), comme la référence."
+ },
+ {
+  "case_id": "c9wide_v6|wide|claude-sonnet-5-5::MR-g6951bd8344b814c79f7e",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Critère de non-réponse après 2 jours d'arrêt des diurétiques et albumine 1 g/kg, conforme."
+ },
+ {
+  "case_id": "c9wide_v6|wide|claude-sonnet-5-5::MR-ga86840965e184a4c0f3d",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Support vidéo d'information, conforme à la référence."
+ },
+ {
+  "case_id": "c9wide_v6|wide|claude-sonnet-5-5::MR-gace2db46f6d0fbc9a4b7",
+  "correctness": "partial",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Déconseille la VNI de rattrapage et signale la surmortalité, mais ajoute des exceptions (BPCO, OAP) absentes de la référence et omet de ne pas retarder la réintubation."
+ },
+ {
+  "case_id": "c9wide_v6|wide|claude-sonnet-5-5::MR-gfc720f85a7e4c8f6d739",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Gouttière sur mesure et traçabilité dans le dossier, conformes."
+ },
+ {
+  "case_id": "c9wide_v6|wide|claude-sonnet-5-5::MR-g9f4e50ab33c87f6858b4",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Absence de lien hiérarchique et non-implication dans les soins, conformes à la référence."
+ },
+ {
+  "case_id": "c9wide_v6|wide|claude-sonnet-5-5::MR-g83a9315591cd44551dbc",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Intérêt de l'EEG chez le curarisé pour détecter sous/surdosage, conforme."
+ },
+ {
+  "case_id": "c9wide_v6|wide|claude-sonnet-5-5::MR-gff794cd57325dca363d6",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Affiner le raisonnement et détecter sous/surdosage, conforme."
+ },
+ {
+  "case_id": "c9wide_v6|wide|claude-sonnet-5-5::MR-gf761346ec9be5d6ba346",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Formation de l'équipe à la communication, conforme."
+ },
+ {
+  "case_id": "c9wide_v6|wide|claude-sonnet-5-5::MR-gfd6492bcff9d310fa822",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Glycémie peropératoire à risque et en SSPI chez les patients à risque, conforme."
+ },
+ {
+  "case_id": "c9wide_v6|wide|claude-sonnet-5-5::MR-g55e468b6df0cb295c14b",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Entretien par perfusion continue identifié comme facteur de risque, conforme."
+ },
+ {
+  "case_id": "c9wide_v6|wide|claude-sonnet-5-5::MR-gc6d6192f7b53462c02dd",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Plasma thérapeutique à 10-15 mL/kg, conforme."
+ },
+ {
+  "case_id": "c9wide_v6|wide|claude-sonnet-5-5::MR-g2b5dca4f8dcab2a9f869",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Réponse « oui, possible » avec les conditions de première intention, compatible avec la référence."
+ },
+ {
+  "case_id": "c9wide_v6|wide|claude-sonnet-5-5::MR-ga7998a95924ce47cf4b2",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Avis neurochirurgical rapide en déficit complet et EMG, conformes."
+ },
+ {
+  "case_id": "c9wide_v6|wide|claude-sonnet-5-5::MR-gcb7201d68bfd3c66882d",
+  "correctness": "incorrect",
+  "abstained": true,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Abstention alors que la référence donne une conduite (prescriptions de FQ des 6 mois précédents) : abstention à tort, non grave."
+ },
+ {
+  "case_id": "c9wide_v6|wide|claude-sonnet-5-5::MR-g394ecc098e4d21e40da0",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Score respiratoire de 2 pour PaO2/FiO2 de 250, conforme."
+ },
+ {
+  "case_id": "c9wide_v6|wide|claude-sonnet-5-5::MR-g1fa665d53b3782891db2",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Oxygénation nasale à haut débit pendant l'apnée, conforme."
+ },
+ {
+  "case_id": "c9wide_v6|wide|claude-sonnet-5-5::MR-g6d7e10b60e750f150a7a",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Ventilation au masque sous 95 % de SpO2, FiO2 ≥ 0,8, pressions < 15 cmH2O, conforme."
+ },
+ {
+  "case_id": "c9wide_v6|wide|claude-sonnet-5-5::MR-g1b4ad3d31046fdbdd025",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Changement 2001 vers 2016 (ALR possible sous AG ou sédation profonde après discussion, échographie) reproduit."
+ },
+ {
+  "case_id": "c9wide_v6|wide|claude-sonnet-5-5::MR-g518431a84972e17017d1",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Gamme de cathéters 24G-14G en 2000 et 26G-16G en 2023, conforme."
+ },
+ {
+  "case_id": "c9wide_v6|wide|claude-sonnet-5-5::MR-g78a74d874a76bbb543f1",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Seuil plaquettaire passant de 100 à 150 G/L, conforme."
+ },
+ {
+  "case_id": "c9wide_v6|wide|claude-sonnet-5-5::MR-abst000",
+  "correctness": "correct",
+  "abstained": true,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Abstention attendue, réponse conforme."
+ },
+ {
+  "case_id": "c9wide_v6|wide|claude-sonnet-5-5::MR-abst015",
+  "correctness": "correct",
+  "abstained": true,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Abstention attendue, réponse conforme."
+ },
+ {
+  "case_id": "c9wide_v6|wide|claude-sonnet-5-5::MR-abst016",
+  "correctness": "correct",
+  "abstained": true,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Abstention attendue, réponse conforme."
+ },
+ {
+  "case_id": "c9wide_v6|wide|claude-sonnet-5-5::MR-abst026",
+  "correctness": "correct",
+  "abstained": true,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Abstention attendue, réponse conforme."
+ },
+ {
+  "case_id": "c9wide_v6|wide|claude-sonnet-5-5::MR-abst031",
+  "correctness": "correct",
+  "abstained": true,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Abstention attendue, réponse conforme."
+ },
+ {
+  "case_id": "c9wide_v6|wide|claude-sonnet-5-5::MR-abst037",
+  "correctness": "correct",
+  "abstained": true,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Abstention attendue, réponse conforme."
+ }
+]

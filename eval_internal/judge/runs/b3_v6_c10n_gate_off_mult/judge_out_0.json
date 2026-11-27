@@ -1,0 +1,74 @@
+[
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-abst000",
+  "correctness": "correct",
+  "abstained": true,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "La référence indique que la question n'est pas couverte et la réponse s'abstient de répondre, ce qui correspond à la conduite attendue."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-abst004",
+  "correctness": "correct",
+  "abstained": true,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "La référence indique que la question n'est pas couverte et la réponse s'abstient de répondre, ce qui correspond à la conduite attendue."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-abst007",
+  "correctness": "correct",
+  "abstained": true,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "La référence indique que la question n'est pas couverte et la réponse s'abstient de répondre, ce qui correspond à la conduite attendue."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-abst013",
+  "correctness": "correct",
+  "abstained": true,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "La référence indique que la question n'est pas couverte et la réponse s'abstient de répondre, ce qui correspond à la conduite attendue."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-abst017",
+  "correctness": "correct",
+  "abstained": true,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "La référence indique que la question n'est pas couverte et la réponse s'abstient de répondre, ce qui correspond à la conduite attendue."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-abst020",
+  "correctness": "correct",
+  "abstained": true,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "La référence indique que la question n'est pas couverte et la réponse s'abstient de répondre, ce qui correspond à la conduite attendue."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-abst026",
+  "correctness": "correct",
+  "abstained": true,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "La référence indique que la question n'est pas couverte et la réponse s'abstient de répondre, ce qui correspond à la conduite attendue."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-abst031",
+  "correctness": "correct",
+  "abstained": true,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "La référence indique que la question n'est pas couverte et la réponse s'abstient de répondre, ce qui correspond à la conduite attendue."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-abst036",
+  "correctness": "correct",
+  "abstained": true,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "La référence indique que la question n'est pas couverte et la réponse s'abstient de répondre, ce qui correspond à la conduite attendue."
+ }
+]

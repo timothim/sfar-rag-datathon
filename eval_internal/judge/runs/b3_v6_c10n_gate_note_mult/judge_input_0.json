@@ -1,0 +1,56 @@
+[
+ {
+  "case_id": "c10notes_v6|wide+coverage_gate=note|claude-sonnet-5-5::MR-abst000",
+  "question": "Pour une tympanoplastie, faut-il arrêter le protoxyde d'azote avant la pose de la greffe tympanique, et combien de temps avant ?",
+  "reference": "(La question n'est pas couverte par les recommandations SFAR : la bonne réponse est de s'abstenir.)",
+  "answer": "Les recommandations SFAR fournies ne traitent pas cette question."
+ },
+ {
+  "case_id": "c10notes_v6|wide+coverage_gate=note|claude-sonnet-5-5::MR-abst004",
+  "question": "Après une vitrectomie avec injection de gaz SF6 ou C3F8, combien de temps faut-il proscrire le protoxyde d'azote lors d'une anesthésie ultérieure ?",
+  "reference": "(La question n'est pas couverte par les recommandations SFAR : la bonne réponse est de s'abstenir.)",
+  "answer": "Les recommandations SFAR fournies ne traitent pas cette question."
+ },
+ {
+  "case_id": "c10notes_v6|wide+coverage_gate=note|claude-sonnet-5-5::MR-abst007",
+  "question": "Avant une chirurgie de la fosse postérieure en position assise, faut-il rechercher systématiquement un foramen ovale perméable par échographie transœsophagienne ?",
+  "reference": "(La question n'est pas couverte par les recommandations SFAR : la bonne réponse est de s'abstenir.)",
+  "answer": "Les recommandations SFAR fournies ne traitent pas cette question."
+ },
+ {
+  "case_id": "c10notes_v6|wide+coverage_gate=note|claude-sonnet-5-5::MR-abst013",
+  "question": "Chez un nourrisson avec sténose du pylore, quels seuils de chlorémie et de bicarbonates faut-il atteindre avant la pylorotomie ?",
+  "reference": "(La question n'est pas couverte par les recommandations SFAR : la bonne réponse est de s'abstenir.)",
+  "answer": "Les recommandations SFAR fournies ne traitent pas cette question."
+ },
+ {
+  "case_id": "c10notes_v6|wide+coverage_gate=note|claude-sonnet-5-5::MR-abst017",
+  "question": "Pour une appendicectomie cœlioscopique au deuxième trimestre de grossesse, quelle pression de pneumopéritoine et quelle surveillance fœtale recommander ?",
+  "reference": "(La question n'est pas couverte par les recommandations SFAR : la bonne réponse est de s'abstenir.)",
+  "answer": "Les recommandations SFAR fournies ne traitent pas cette question."
+ },
+ {
+  "case_id": "c10notes_v6|wide+coverage_gate=note|claude-sonnet-5-5::MR-abst020",
+  "question": "Pour un TAVI par voie fémorale chez un patient de 88 ans, la sédation consciente est-elle préférable à l'anesthésie générale ?",
+  "reference": "(La question n'est pas couverte par les recommandations SFAR : la bonne réponse est de s'abstenir.)",
+  "answer": "Les recommandations SFAR fournies ne traitent pas cette question."
+ },
+ {
+  "case_id": "c10notes_v6|wide+coverage_gate=note|claude-sonnet-5-5::MR-abst026",
+  "question": "Dans un syndrome douloureux régional complexe de type 1 après fracture du poignet, les bisphosphonates sont-ils efficaces et à quelle posologie ?",
+  "reference": "(La question n'est pas couverte par les recommandations SFAR : la bonne réponse est de s'abstenir.)",
+  "answer": "Les recommandations SFAR fournies ne traitent pas cette question."
+ },
+ {
+  "case_id": "c10notes_v6|wide+coverage_gate=note|claude-sonnet-5-5::MR-abst031",
+  "question": "Dans une intoxication grave aux bêtabloquants, à quelle posologie débuter l'insulinothérapie euglycémique à haute dose ?",
+  "reference": "(La question n'est pas couverte par les recommandations SFAR : la bonne réponse est de s'abstenir.)",
+  "answer": "Les recommandations SFAR fournies ne traitent pas cette question."
+ },
+ {
+  "case_id": "c10notes_v6|wide+coverage_gate=note|claude-sonnet-5-5::MR-abst036",
+  "question": "Avant une surrénalectomie pour phéochromocytome, combien de temps dure la préparation par alpha-bloquant et quels objectifs tensionnels viser ?",
+  "reference": "(La question n'est pas couverte par les recommandations SFAR : la bonne réponse est de s'abstenir.)",
+  "answer": "Les recommandations SFAR fournies ne traitent pas cette question."
+ }
+]
