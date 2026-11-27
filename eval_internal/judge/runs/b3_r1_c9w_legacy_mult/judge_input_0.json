@@ -1,0 +1,182 @@
+[
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|legacy|clinical_concise::MR-gfff2848a70957ac0b7b5",
+  "question": "Un adulte victime d'un traumatisme crânien léger présente un syndrome de Claude Bernard Horner et une fracture du rachis cervical. Quelle imagerie réaliser ?",
+  "reference": "Un scanner cérébral avec injection, devant ces signes évocateurs de dissection carotidienne.",
+  "answer": "Pratiquer un scanner cérébral avec injection devant les signes cliniques évocateurs de dissection carotidienne, à savoir le syndrome de Claude Bernard Horner et la fracture du rachis cervical [S1], [S3].\n\nSource : Prise en charge des patients présentant un traumatisme crânien léger de l’adulte — RPP SFAR 2022 [EN VIGUEUR]"
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|legacy|clinical_concise::MR-g8f23afa63325b0d08bd8",
+  "question": "Un adulte victime d'un traumatisme abdominal grave a, à la FAST, un hémopéritoine abondant et son état ne permet pas de passer au scanner. Quelle conduite tenir ?",
+  "reference": "Traitement opératoire précoce, suivi d'un scanner secondaire.",
+  "answer": "En cas d'hémopéritoine abondant et d'état incompatible avec le scanner, il est recommandé de procéder à un traitement opératoire précoce (laparotomie) [S1].\n\nSource : Prise en charge du traumatisme abdominal grave de l'adulte : les 48 premières heures — RFE SFAR 2019 [EN VIGUEUR]"
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|legacy|clinical_concise::MR-gd1b252c6b18be4bca7b6",
+  "question": "Un traumatisé crânien grave garde une PIC élevée malgré un contrôle ciblé de la température à 34 °C. Faut-il abaisser davantage la température, par exemple à 31 °C ?",
+  "reference": "Non : abaisser la température en dessous de 34 °C (par ex. 31 °C) n'apporte pas de bénéfice supplémentaire démontré sur la PIC, et l'hypothermie expose à des effets secondaires proportionnels à sa profondeur et à sa durée.",
+  "answer": "Non, il ne faut pas abaisser davantage la température, car les études montrent une absence de gain clinique supplémentaire et un risque probable d'effets secondaires délétères (augmentation des pneumopathies, altération des marqueurs métaboliques) en cas d'hypothermie inférieure à 35 °C [S8].\n\nSource : Contrôle cible de la température en réanimation (hors nouveau-nés) — RFE SFAR 2016 [EN VIGURE]"
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|legacy|clinical_concise::MR-g2c188878f4fca6996f4b",
+  "question": "Dans la stratification du risque cardiaque (décès et infarctus) en chirurgie non cardiaque, dans quelle catégorie se situe une endartériectomie carotidienne ?",
+  "reference": "Risque intermédiaire, de 1 % à 5 %.",
+  "answer": "Une endartériectomie carotidienne se situe dans la catégorie du risque intermédiaire (1 % à 5 %) pour les événements cardiaques (décès + infarctus) en chirurgie non cardiaque, selon les recommandations de 2012 [S1, S6, S22] et de 2010 [S23].\n\nSource : Recommandations de la Société Française d'Anesthésie et de Réanimation (SFAR) sur la prise en charge du coronarien en chirurgie non cardiaque et la stratification du risque cardiaque, 2010 et 2012."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|legacy|clinical_concise::MR-g6951bd8344b814c79f7e",
+  "question": "Chez un cirrhotique avec ascite et insuffisance rénale aiguë KDIGO stade 2, quelle épreuve doit rester sans réponse pour retenir un syndrome hépatorénal ?",
+  "reference": "Absence de réponse après 2 jours consécutifs d'arrêt des diurétiques et d'expansion volémique par albumine à 1 g/kg.",
+  "answer": "Pour retenir un syndrome hépatorénal chez un cirrhotique avec ascite et IRA stade 2, il faut qu'il y ait une absence de réponse après 2 jours consécutifs d'arrêt des diurétiques et de remplissage vasculaire par de l'albumine (1 g/kg) [S3].\n\nSource : Insuffisance hépatique en soins critiques — RFE SFAR 2018 [EN VIGUEUR]"
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|legacy|clinical_concise::MR-ga86840965e184a4c0f3d",
+  "question": "Un patient anxieux est programmé pour une chirurgie thoracique. Quel complément d'information préopératoire permet de réduire son anxiété ?",
+  "reference": "Un support vidéo d'information, qui réduit l'anxiété et améliore la satisfaction.",
+  "answer": "Chez les patients de chirurgie thoracique, un supplément d'information apporté par un support vidéo permet une réduction significative des scores d'anxiété [S1].\n\nSource : Réhabilitation améliorée après lobectomie pulmonaire — RFE SFAR 2019 [EN VIGUEUR]"
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|legacy|clinical_concise::MR-gace2db46f6d0fbc9a4b7",
+  "question": "Un patient extubé la veille en réanimation développe une nouvelle détresse respiratoire. Quelle conduite tenir vis-à-vis d'une VNI de rattrapage ?",
+  "reference": "La VNI de rattrapage n'est pas indiquée : elle ne diminue pas le recours à la réintubation et s'associe à une mortalité plus élevée, probablement par retard de réintubation ; il ne faut pas retarder la réintubation.",
+  "answer": "Il faut probablement utiliser la VNI curative pour traiter cette détresse respiratoire aiguë post-extubation, sauf si le patient présente une pneumopathie hypoxémiante grave ou un syndrome de détresse respiratoire aigu (SDRA), où la VNI est contre-indiquée [S8], [S21], [S22]. La surveillance doit être particulièrement attentive pour ne pas retarder la réintubation si celle-ci s'avère nécessaire [S8], [S19].\n\nSource : Intubation et extubation du patient de réanimation — RFE SFAR 2016 [EN VIGUEUR] ; Ventilation Non Invasive au cours de l’insuffisance respiratoire aiguë (nouveau-né exclu) — RFE SFAR 2006 [EN VIGUEUR] ; Grades : Grade 2, Accord FAIBLE (pour la recommandation curative en post-extubation)."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|legacy|clinical_concise::MR-gfc720f85a7e4c8f6d739",
+  "question": "Pour protéger les dents d'un patient à risque de bris dentaire lors de l'anesthésie, si l'on opte pour une gouttière, quel type faut-il conseiller ?",
+  "reference": "Une gouttière sur mesure plutôt qu'une gouttière standard, en traçant l'information dans le dossier.",
+  "answer": "Il faut probablement recommander l'utilisation d'une gouttière sur mesure plutôt que de gouttière standard, car elle permet une protection des dents maxillaires de meilleure qualité [S10], [S4].\n\nSource : Bris dentaires périanesthésiques — RFE SFAR 2012 [EN VIGUEUR], accord fort."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|legacy|clinical_concise::MR-g9f4e50ab33c87f6858b4",
+  "question": "En réanimation, lors d'une procédure collégiale de limitation thérapeutique chez un patient incapable d'exprimer sa volonté, quelles conditions doit remplir le médecin consultant ?",
+  "reference": "Il ne doit avoir aucun lien hiérarchique avec le praticien en charge (donc ni chef de service ni chef de pôle) et de préférence ne pas être impliqué dans les soins.",
+  "answer": "Le médecin consultant doit être extérieur à l'équipe soignante en charge du patient et ne doit avoir aucun lien de nature hiérarchique avec elle [S13, S20, S21]. De plus, il doit examiner le patient in situ pour apprécier sa situation clinique et son état de conscience, notamment si une évaluation de l'état de coma ou de la sédation est nécessaire [S16, S7].\n\nSource : Décisions de limitation et d’arrêt de traitements (LAT) en soins critiques de l’adulte — RFE SFAR 2026 (Mise à jour 2026) [EN VIGUEUR], avis d'experts (accord fort)"
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|legacy|clinical_concise::MR-g83a9315591cd44551dbc",
+  "question": "Quel intérêt peut-on attendre d'un monitorage EEG de la profondeur d'anesthésie chez un patient curarisé ?",
+  "reference": "Il pourrait permettre de détecter un sous- ou un surdosage anesthésique lorsque les signes cliniques sont masqués par les curares (avis d'experts).",
+  "answer": "Les moniteurs de profondeur d'anesthésie pourraient permettre de détecter un sous- ou un surdosage anesthésique chez les patients curarisés, notamment lorsque les signes cliniques d'anesthésie sont modifiés par les curares [S7].\n\nSource : Monitorage de l'adéquation / profondeur de l'anesthésie à partir de l'analyse de l'EEG cortical — RFE SFAR 2010, avis d'experts, édition antérieure."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|legacy|clinical_concise::MR-gff794cd57325dca363d6",
+  "question": "Vous anesthésiez un patient chez qui la réponse aux agents anesthésiques est réputée imprévisible. Quel apport peut avoir un moniteur de profondeur d'anesthésie ?",
+  "reference": "Il peut aider à affiner le raisonnement et à détecter plus facilement un sous- ou un surdosage anesthésique.",
+  "answer": "Un moniteur de profondeur d'anesthésie peut permettre de détecter plus facilement le sous- et le surdosage anesthésique dans cette population de patients, en affinant le raisonnement médical compte tenu de la relation dose-concentration-effets inhabituelle [S7].\n\nSource : Monitorage de l’adéquation / profondeur de l’anesthésie à partir de l’analyse de l’EEG cortical — RFE SFAR 2010 [EN VIGUEUR]"
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|legacy|clinical_concise::MR-gf761346ec9be5d6ba346",
+  "question": "En réanimation, quelle mesure concernant les soignants est proposée pour limiter les conflits avec les familles des patients ?",
+  "reference": "Former l'équipe médico-soignante à la communication (avis d'experts, accord fort).",
+  "answer": "En service de soins critiques, les experts suggèrent de former l'équipe médico-soignante à la communication pour permettre de prévenir les conflits entre proches et équipes médico-soignantes [S2].\n\nSource : Décisions de limitation et d’arrêt de traitements (LAT) en soins critiques de l’adulte — RFE SFAR 2026 (Mise à jour 2026), AVIS D'EXPERTS (accord fort)."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|legacy|clinical_concise::MR-gfd6492bcff9d310fa822",
+  "question": "Chez un patient opéré considéré à risque sur le plan glycémique, faut-il contrôler la glycémie pendant l'intervention et au réveil ?",
+  "reference": "Il faut probablement la mesurer en peropératoire lors des interventions à risque, et réaliser une mesure en SSPI chez les patients à risque.",
+  "answer": "Oui, il faut probablement mesurer la glycémie peropératoire au cours des interventions à risque (notamment si le patient présente un NGP faible) et réaliser une mesure durant le séjour en salle de surveillance post-interventionnelle (SSPI) [S1].\n\nSource : Contrôle de la glycémie en réanimation et en anesthésie — RFE SFAR 2009 [EN VIGUEUR], édition antérieure"
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|legacy|clinical_concise::MR-g55e468b6df0cb295c14b",
+  "question": "Chez une parturiente sous péridurale de travail, quel mode d'entretien de l'analgésie est associé à un risque d'échec de l'extension pour césarienne ?",
+  "reference": "L'entretien par perfusion continue plutôt que par PCEA ou PIEB.",
+  "answer": "Les experts suggèrent que l'entretien par perfusion continue plutôt que par PCEA ou PIEB expose au risque d'échec de conversion de la péridurale analgésique en péridurale anesthésique pour la césarienne [S1].\n\nSource : Insuffisance d’analgésie au cours de la césarienne sous anesthésie périmédullaire — Preconisation SFAR 2021 [EN VIGUEUR]"
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|legacy|clinical_concise::MR-gc6d6192f7b53462c02dd",
+  "question": "Un patient porteur d'un déficit en facteur de coagulation, pour lequel un concentré spécifique existe mais n'est pas disponible rapidement, présente une hémorragie grave. Quel produit sanguin administrer et à quelle posologie ?",
+  "reference": "Du plasma thérapeutique peut être administré, à la dose de 10 à 15 mL/kg (accord professionnel).",
+  "answer": "En cas de déficit en un facteur de coagulation pour lequel une préparation de facteur purifié existe mais sans possibilité d'obtention rapide du produit, il peut être licite d'apporter du plasma thérapeutique dans le cadre d'une situation d'urgence hémorragique [S1]. La dose de plasma thérapeutique à transfuser est alors de 10 à 15 mL/kg de poids corporel [S1].\n\nSource : Transfusion de plasma thérapeutique : produits, indications — RFE SFAR 2012 [EN VIGUEUR] (grade B, avis d'experts)."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|legacy|clinical_concise::MR-g2b5dca4f8dcab2a9f869",
+  "question": "Un patient doit bénéficier d'un bloc nerveux périphérique échoguidé et souhaite être endormi au préalable. Peut-on réaliser ce bloc sous anesthésie générale ?",
+  "reference": "C'est possible : l'échoguidage suggère une meilleure sécurité et les données disponibles (observationnelles) ne montrent pas d'augmentation des risques d'une ALR réalisée sous anesthésie générale.",
+  "answer": "Oui, il est possible de réaliser un bloc nerveux périphéchoguidé chez un patient sous anesthésie générale, à condition que le rapport bénéfice–risque soit favorable et justifié, l'échographie apportant probablement une sécurité supplémentaire dans ce contexte [S4], [S6].\n\nSource : Anesthésie Loco-Régionale périnerveuse — RFE SFAR 2016 [EN VIGUEUR] (AVIS D'EXPERTS)"
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|legacy|clinical_concise::MR-ga7998a95924ce47cf4b2",
+  "question": "Après un bloc périphérique d'un membre, un patient présente un bloc anormalement prolongé avec un déficit moteur complet dans le territoire bloqué. Quel avis spécialisé obtenir rapidement et quel examen complémentaire demander ?",
+  "reference": "Un avis neurochirurgical rapide (déficit complet) et un examen électrophysiologique par EMG.",
+  "answer": "Obtenir rapidement un avis neurologue en cas de déficit incomplet et un avis neurochirurgical en cas de déficit complet, et réaliser un examen électrophysiologique par EMG [S1].\n\nSource : Anesthésie Loco-Régionale périnerveuse — RFE SFAR 2016 [EN VIGUEUR], avis d'experts."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|legacy|clinical_concise::MR-gcb7201d68bfd3c66882d",
+  "question": "En réanimation, sur quelle période faut-il vérifier les traitements antérieurs par fluoroquinolone avant d'en represcrire chez le même malade, et quelle est la force de cet accord ?",
+  "reference": "Il faut tenir compte des prescriptions de FQ des 6 mois précédents, quelle qu'en soit l'indication, pour éviter les prescriptions répétées (accord fort).",
+  "answer": "Il ne faut pas prescrire de fluoroquinolones de façon répétée chez un même patient en prenant en compte les prescriptions antérieures de FQ dans les 6 mois précédents quelle qu'en soit l'indication [S1].\n\nSource : Stratégies de réduction de l’utilisation des antibiotiques à visée curative en réanimation — RFE SFAR 2014, Accord fort."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|legacy|clinical_concise::MR-g394ecc098e4d21e40da0",
+  "question": "Dans le score de défaillance d'organes utilisé au cours de la pancréatite aiguë, quel score respiratoire attribuer à un patient dont le rapport PaO2/FiO2 est de 250 ?",
+  "reference": "Un score de 2 (PaO2/FiO2 entre 201 et 300).",
+  "answer": "Attribuez un score de 2, car le rapport PaO2/FiO2 de 250 mmHg se situe dans la tranche de 201 à 300 mmHg définie par le score de Marshall modifié [S9].\n\nSource : Pancréatite aigüe du patient adulte en soins critiques — RFE SFAR 2021 [EN VIGUEUR], édition antérieure"
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|legacy|clinical_concise::MR-g1fa665d53b3782891db2",
+  "question": "Chez l'adulte présentant des critères prédictifs d'intubation difficile, quel dispositif d'oxygénation mettre en place pendant l'apnée, après préoxygénation au masque étanche, pour retarder la désaturation ?",
+  "reference": "Les experts suggèrent l'oxygénation nasale à haut débit (ONHD) durant la phase d'apnée.",
+  "answer": "Chez l'adulte présentant des critères prédictifs d'intubation difficile, il est recommandé de mettre en place un dispositif d'oxygénation nasale à haut débit (ONHD) pendant la phase apnée après une préoxygenation au masque facial étanche pour prolonger le délai avant désaturation [S1], [S7], [S9], [S11], [S20], [S21].\n\nSource : Prise en charge des voies aériennes de l’adulte au bloc opératoire — RFE SFAR 2026, avis d'experts (AE)."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|legacy|clinical_concise::MR-g6d7e10b60e750f150a7a",
+  "question": "Pendant l'intubation en séquence rapide d'un enfant, à partir de quelle SpO2 faut-il ventiler au masque, avec quelle FiO2 et quelle pression d'insufflation maximale idéale ?",
+  "reference": "Dès que la SpO2 passe sous 95 %, ventiler au masque avec une FiO2 ≥ 0,8 et des pressions faibles, idéalement < 15 cmH2O (avis d'experts).",
+  "answer": "Ventilez au masque dès que la SpO2 est inférieure à 95 %, avec une FiO2 ≥ 0,8 et une pression de ventilation faible (< 15 cmH2O) pour éviter l'insufflation gastrique [S1].\n\nSource : Gestion des voies aériennes de l’enfant — RFE SFAR 2018 [EN VIGUEUR], AVIS D'EXPERTS, édition antérieure."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|legacy|clinical_concise::MR-g1b4ad3d31046fdbdd025",
+  "question": "Pour un bloc périphérique, qu'est-ce qui a changé entre la recommandation de 2001 et celle de 2016 concernant la réalisation du bloc chez un patient sous anesthésie générale ou sédation profonde ?",
+  "reference": "En 2001, il était recommandé de réaliser toute ALR chez un patient éveillé ou éventuellement sous sédation légère, le bloc sous AG privant de signes d'alerte. En 2016, l'ALR chez un patient éveillé ou légèrement sédaté reste la première intention, mais il devient possible, après discussion avec le patient, de réaliser le bloc sous anesthésie générale ou régionale ou sédation profonde s'il existe un bénéfice, l'échographie apportant probablement une sécurité supplémentaire.",
+  "answer": "Voici l'analyse comparative structurée des extraits fournis, concernant spécifiquement la question : **la réalisation d'un bloc périphérique chez un patient sous anesthésie générale (AG) ou sédation profonde**.\n\n### 1. Éditions comparées\n*   **Édition antérieure :** [S14] et [S4] (RFE SFAR 2001).\n*   **Édition actuelle :** [S1] et [S3] (RFE SFAR 2016).\n\n### 2. Ce qui a CHANGÉ (Évolution des recommandations)\n\nL'évolution majeure porte sur la **flexibilité du niveau de sédation** et la **légitimité de la réalisation sous AG**, conditionnée par l'échographie.\n\n| Aspect | Recommandation 2001 ([S4], [S14]) | Recommandation 2016 ([S1], [S3]) | Nature du changement |\n| :--- | :--- | :--- | :--- |\n| **Niveau de sédation recommandé** | **Sédation légère uniquement** (réactivité conservée aux stimulations verbales). | **Éveillé / légèrement sédaté** en première intention. | **Restriction levée** : La sédation profonde devient une option possible. |\n| **Réalisation sous AG** | **Non mentionnée / Non recommandée** (implicite restriction à la sédation légère ou à l'AG seule sans bloc). | **Possible** si discussion avec le patient et existence d'un bénéfice. | **Nouvelle option** : L'AG n'est plus exclue a priori. |\n| **Condition sine qua non** | Aucune condition technique spécifique mentionnée pour permettre l'AG. | **Utilisation de l'échographie** apporte une sécurité supplémentaire. | **Nouveau crit"
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|legacy|clinical_concise::MR-g518431a84972e17017d1",
+  "question": "Pour l'abord veineux périphérique en anesthésie pédiatrique, qu'est-ce qui a changé entre la recommandation de 2000 et celle de 2023 concernant la gamme de cathéters à disposer ?",
+  "reference": "En 2000, il fallait disposer de toute la gamme de cathéters courts du 24 Gauge au 14 Gauge. En 2023, il est recommandé de disposer de toutes les tailles de cathéters entre le 26 gauge et le 16 gauge.",
+  "answer": "Voici l'analyse comparative longitudinale des recommandations SFAR concernant la gamme de cathéters pour les abords veineux périphériques en pédiatrie, entre l'édition de 2000 et celle de 2023.\n\n### 1. Éditions comparées\n*   **Édition antérieure :** [S4] Recommandations pour les structures et le matériel de l'anesthésie pédiatrique — RFE SFAR **2000**.\n*   **Édition actuelle :** [S1] Organisation de l'anesthésie pédiatrique — RPP SFAR **2023**.\n\n### 2. Ce qui a changé (Évolution des recommandations)\n\n| Aspect de la recommandation | Édition 2000 [S4] | Édition 2023 [S1] | Nature du changement |\n| :--- | :--- | :--- | :--- |\n| **Gamme de tailles recommandée** | De **24 Gauge** au **14 Gauge**. | De **26 Gauge** au **16 Gauge**. | **Restriction de la gamme** vers des cathéters de plus petit calibre (plus fins). |\n| **Justification du choix** | \"Taille adaptée aux veines accessibles\". | \"Adapter son choix\" en fonction de la **durée de perfusion** et de la **difficulté prévisible** de l'abord. | Ajout de critères décisionnels (durée, difficulté) et abandon de la règle de la seule accessibilité. |\n| **Type de cathéter recommandé** | Cathéters courts **transcutanés**. | Cathéters courts de type **cathlon** (pour < 4 jours). | Changement de terminologie et de spécificité du produit (cathlon). |\n|"
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|legacy|clinical_concise::MR-g78a74d874a76bbb543f1",
+  "question": "Dans une thrombopénie induite par l'héparine traitée par danaparoïde, qu'est-ce qui a changé entre la recommandation de 2002 et celle de 2019 concernant le seuil plaquettaire pour débuter le relais par AVK ?",
+  "reference": "En 2002, le relais danaparoïde–AVK était institué quand le risque thromboembolique était contrôlé et que les plaquettes étaient remontées au-delà de 100 G/L. En 2019, ce relais n'est initié que lorsque les plaquettes sont au-dessus de 150 G/L, l'AVK n'étant prescrit qu'une fois la numération plaquettaire corrigée (>150 G/L).",
+  "answer": "Voici l'analyse comparative des extraits fournis concernant le seuil plaquettaire pour débuter le relais par Antivitamines K (AVK) chez un patient traité par danaparoïde.\n\n### 1. Éditions comparées\n*   **[S5], [S9], [S11], [S16], [S4]** : Correspondent à l'édition **2002** (RFE SFAR 2002).\n*   **[S1], [S6], [S24]** : Correspondent à l'édition **2019** (RFE SFAR 2019).\n\n### 2. Ce qui a changé (Seuil plaquettaire)\n\nIl y a une **baisse du seuil plaquettaire** requis pour initier le relais par AVK, accompagnée d'une modification des critères de sécurité associés.\n\n*   **En 2002 ([S5], [S9], [S11], [S16], [S4]) :**\n    *   Le relais danaparoïde–AVK n'est institué que lorsque les plaquettes sont remontées **au-delà de 100 G/l** (ou $100 \\text{ g l}^{-1}$).\n    *   *Contexte :* Ce seuil était associé à une durée de traitement par danaparoïde de 5 à 7 jours.\n\n*   **En 2019 ([S1], [S6], [S24]) :**\n    *   Le relais danaparoïde–AVK n'est initié que lorsque la ré-ascension plaquettaire est confirmée avec un seuil **> 150 G/l** (ou $>150 \\text{ G/L}$).\n    *   *Context"
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|legacy|clinical_concise::MR-abst000",
+  "question": "Pour une tympanoplastie, faut-il arrêter le protoxyde d'azote avant la pose de la greffe tympanique, et combien de temps avant ?",
+  "reference": "(La question n'est pas couverte par les recommandations SFAR : la bonne réponse est de s'abstenir.)",
+  "answer": "Les recommandations SFAR fournies ne traitent pas cette question.\n\nSource : Aucune recommandation SFAR ne traite spécifiquement de la gestion du protoxyde d'azote avant une tympanoplastie ou la pose de greffe tympanique."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|legacy|clinical_concise::MR-abst015",
+  "question": "Chez un enfant drépanocytaire homozygote programmé pour une cholécystectomie, faut-il une transfusion préopératoire et avec quel objectif d'hémoglobine ?",
+  "reference": "(La question n'est pas couverte par les recommandations SFAR : la bonne réponse est de s'abstenir.)",
+  "answer": "Les recommandations SFAR fournies ne traitent pas cette question.\n\nSource : Les extraits fournis concernent soit les patients drépanocytaires en contexte de transfusion chronique (S1, S3), soit les arthroplasties du membre inférieur (S5, S6, S25), soit les amygdalectomies pédiatriques (S11, S13, S18, S20, S14), soit la réanimation du choc hémorragique (S7, S8, S15, S16, S21, S24, S28). Aucun extrait ne spécifie les indications de transfusion préopératoire ni les objectifs d'hémoglobine pour un enfant drépanocytaire homozygote devant subir une cholécystectomie."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|legacy|clinical_concise::MR-abst016",
+  "question": "Quelle posologie de dexmédétomidine intranasale utiliser en prémédication chez l'enfant anxieux, et quel délai avant l'induction ?",
+  "reference": "(La question n'est pas couverte par les recommandations SFAR : la bonne réponse est de s'abstenir.)",
+  "answer": "Les recommandations SFAR fournies ne traitent pas cette question."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|legacy|clinical_concise::MR-abst026",
+  "question": "Dans un syndrome douloureux régional complexe de type 1 après fracture du poignet, les bisphosphonates sont-ils efficaces et à quelle posologie ?",
+  "reference": "(La question n'est pas couverte par les recommandations SFAR : la bonne réponse est de s'abstenir.)",
+  "answer": "Les recommandations SFAR fournies ne traitent pas cette question.\n\nSource : Les extraits des recommandations SFAR fournis ne contiennent aucune information sur l'efficacité ou la posologie des bisphosphonates dans le traitement du syndrome douloureux régional complexe (SDRC) de type 1."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|legacy|clinical_concise::MR-abst031",
+  "question": "Dans une intoxication grave aux bêtabloquants, à quelle posologie débuter l'insulinothérapie euglycémique à haute dose ?",
+  "reference": "(La question n'est pas couverte par les recommandations SFAR : la bonne réponse est de s'abstenir.)",
+  "answer": "Les recommandations SFAR fournies ne traitent pas cette question."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|legacy|clinical_concise::MR-abst037",
+  "question": "Chez un patient porteur d'une tumeur carcinoïde, faut-il administrer de l'octréotide en préopératoire pour prévenir une crise carcinoïde peropératoire ?",
+  "reference": "(La question n'est pas couverte par les recommandations SFAR : la bonne réponse est de s'abstenir.)",
+  "answer": "Les recommandations SFAR fournies ne traitent pas cette question."
+ }
+]
