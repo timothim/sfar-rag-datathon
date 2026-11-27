@@ -307,7 +307,8 @@ def create_app(
                         yield f"data: {json.dumps(ev, ensure_ascii=False)}\n\n"
                         var = {"type": "variant", "requested": choice, "used": used,
                                "label": rob.LABELS[used], "retrieval_config": cfg.name,
-                               "unavailable": unavailable, "rewrite": rob.rewrite_trace(eng.retriever)}
+                               "unavailable": unavailable, "rewrite": rob.rewrite_trace(eng.retriever),
+                               "expansions": rob.expansions(eng.retriever)}
                         yield f"data: {json.dumps(var, ensure_ascii=False)}\n\n"
                         continue
                     elif ev["type"] == "token":

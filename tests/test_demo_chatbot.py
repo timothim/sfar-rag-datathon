@@ -301,21 +301,44 @@ def _events_rob(client, query, robustness, retrieval_only=False):
     return [json.loads(b[5:]) for b in r.text.split("\n\n") if b.startswith("data:")]
 
 
-def test_robustness_lexical_switches_the_two_flags_only(monkeypatch):
+def test_robustness_lexical_subword_and_plain_acronyms_only(monkeypatch):
     app, c = _app()
     retriever = app.state.engine.retriever
     seen = []
     orig = retriever.retrieve
-    monkeypatch.setattr(retriever, "retrieve", lambda query, config=None, **kw: (seen.append(config), orig(query, config=config, **kw))[1])
-    ev = _events_rob(c, Q, "lexical", retrieval_only=True)
+    monkeypatch.setattr(retriever, "retrieve", lambda query, config=None, **kw: (seen.append((query, config)), orig(query, config=config, **kw))[1])
+    q = "Quelle ABP pour le geste alpha chez un patient sous AOD ?"
+    ev = _events_rob(c, q, "lexical", retrieval_only=True)
     base = app.state.profile.retrieval_config()
-    cfg = seen[-1]
-    assert cfg.use_subword and cfg.use_medical_lexicon and cfg.name == "C10_context_notes+subword+lexicon"
+    query, cfg = seen[-1]
+    assert cfg.use_subword and not cfg.use_medical_lexicon and cfg.name == "C10_context_notes+subword+plain_acronyms"
     import dataclasses
     diff = {f.name for f in dataclasses.fields(base) if getattr(base, f.name) != getattr(cfg, f.name)}
-    assert diff <= {"use_subword", "use_medical_lexicon", "name"}
+    assert diff <= {"use_subword", "name"} and not base.use_medical_lexicon
+    # plain acronym expanded to its long form; molecule-adding entry (AOD) not expanded at all
     assert ev[1]["used"] == "lexical" and ev[1]["rewrite"] is None
-    assert base.use_subword is False or base.use_medical_lexicon is False  # off in the frozen profile
+    assert ev[1]["expansions"] == {"ABP": "antibioprophylaxie"}
+    assert query == q + " (antibioprophylaxie)"
+    assert "apixaban" not in query and "rivaroxaban" not in query
+
+
+def test_plain_acronym_table_excludes_entries_adding_terms():
+    from rag_sfar.interfaces import robustness as rob
+    from rag_sfar.retrieval.medical_lexicon import MEDICAL_ACRONYMS
+
+    entries = {e["abbr"]: e["long_form"] for e in rob.plain_entries()}
+    for abbr in ("C1G", "C2G", "C3G", "AOD", "AVK", "AAP", "HBPM"):
+        assert abbr in MEDICAL_ACRONYMS and abbr not in entries
+    exp = rob.RobustnessVariants(None, None).expander()
+    for abbr in ("C1G", "C3G", "AVK", "HBPM"):
+        assert exp.expand(f"Quelle dose de {abbr} ?")[1] == {}
+    assert len(entries) == len(MEDICAL_ACRONYMS) - 13
+
+
+def test_robustness_none_never_expands():
+    _, c = _app()
+    ev = _events_rob(c, "Quelle ABP pour le geste alpha ?", "none", retrieval_only=True)
+    assert ev[1]["expansions"] is None
 
 
 def test_robustness_normalize_goes_through_the_add_wrapper_and_is_shown():
@@ -334,7 +357,7 @@ def test_robustness_normalize_goes_through_the_add_wrapper_and_is_shown():
         srv.rewrite_reply = "INCHANGEE"
         ev = _events_rob(c, Q, "both", retrieval_only=True)
         assert ev[1]["used"] == "both" and ev[1]["rewrite"]["used"] is False and ev[1]["rewrite"]["unchanged"]
-        assert ev[1]["retrieval_config"].endswith("+subword+lexicon")
+        assert ev[1]["retrieval_config"].endswith("+subword+plain_acronyms")
     finally:
         srv.stop()
 

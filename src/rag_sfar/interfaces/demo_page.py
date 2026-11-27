@@ -286,6 +286,10 @@ async function ask(question, passagesOnly) {
         } else if (ev.type === 'variant') {
           let h = `<div class="notice info">Variante : <strong>${esc(ev.label)}</strong>${ev.used !== 'none' ? ' — option mesurée sur questions de développement seulement, hors évaluation' : ''}.`;
           if (ev.unavailable) h += ` ${esc(ev.unavailable)}`;
+          if (ev.expansions) {
+            const ex = Object.entries(ev.expansions);
+            h += ex.length ? `<br>Sigles développés dans la recherche : ${ex.map(([k, v]) => `${esc(k)} → ${esc(v)}`).join(' ; ')}` : '<br>Aucun sigle développé dans la recherche.';
+          }
           const rw = ev.rewrite;
           if (rw) {
             if (rw.used) h += `<br>Question normalisée par le modèle (recherchée en plus de la question d'origine) : <em>${esc(rw.normalized_question)}</em> (${rw.n_added} passages ajoutés)`;

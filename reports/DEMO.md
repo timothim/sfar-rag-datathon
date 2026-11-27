@@ -8,10 +8,10 @@ Ce que le jury teste est le système évalué : la page passe par `/api/query/st
 
 ```bash
 cd /Users/tim/Me/SFAR-datathon
-HF_HUB_OFFLINE=1 .venv/bin/rag-sfar-serve --host 127.0.0.1 --port 8010
+HF_HUB_OFFLINE=1 .venv/bin/rag-sfar-serve --host 127.0.0.1 --port 8000
 ```
 
-Ouvrir ensuite http://127.0.0.1:8010/. Le démarrage a pris 10 s lors du test du 27/11 (chargement de l'index, de l'embedder et du reranker). La mémoire nécessaire sans générateur n'a pas été mesurée de façon fiable ; estimation : 2 à 4 Go. L'index servi par défaut est celui du profil (`index/tas_v6`). Le `--host 127.0.0.1` est obligatoire en local, car la valeur par défaut des réglages est `0.0.0.0`.
+Ouvrir ensuite http://127.0.0.1:8000/. Le démarrage a pris 10 s lors du test du 27/11 (chargement de l'index, de l'embedder et du reranker). La mémoire nécessaire sans générateur n'a pas été mesurée de façon fiable ; estimation : 2 à 4 Go. L'index servi par défaut est celui du profil (`index/tas_v6`). Le `--host 127.0.0.1` est obligatoire en local, car la valeur par défaut des réglages est `0.0.0.0`. Ports : le chatbot écoute par défaut sur 8000 (`RAG_SFAR_API_PORT`, aussi dans l'image Docker) ; le serveur MCP HTTP sur 8765 par défaut dans le code (`RAG_SFAR_MCP_PORT`), 8020 dans l'image Docker et dans `reports/MCP_DEPLOIEMENT.md`. Si le port 8000 est occupé, choisir un autre port avec `--port` (le test du 27/11 a utilisé 8010).
 
 ### Brancher un générateur
 
@@ -19,9 +19,9 @@ Trois possibilités :
 
 1. **Depuis la page** : ouvrir « Réglages du générateur », saisir l'URL de base (terminée par `/v1`) et éventuellement la clé, cliquer sur « Tester la connexion » (la page liste alors les modèles servis), choisir le modèle, puis cliquer sur « Appliquer ». Le réglage vaut pour les questions suivantes.
 2. **Au démarrage, par variables d'environnement** (aucun clic nécessaire) :
-   `RAG_SFAR_LLM_BASE_URL=https://…/v1 RAG_SFAR_LLM_MODEL=<nom listé> RAG_SFAR_LLM_API_KEY=<clé> HF_HUB_OFFLINE=1 .venv/bin/rag-sfar-serve --host 127.0.0.1 --port 8010`
-3. **Modèle local Qwen3.5-9B MLX** (le générateur de substitution de l'évaluation). Il demande environ 11 Go au pic : à lancer seulement quand aucune autre tâche n'utilise le GPU. Sur une machine de 16 Go, il ne peut pas tourner en même temps que des évaluations.
-   - En processus : `HF_HUB_OFFLINE=1 .venv/bin/rag-sfar-serve --host 127.0.0.1 --port 8010 --mlx-model /Users/tim/.cache/rag_sfar_models/Qwen3.5-9B-MLX-4bit-nothink`. Le panneau de réglages est alors en lecture seule.
+   `RAG_SFAR_LLM_BASE_URL=https://…/v1 RAG_SFAR_LLM_MODEL=<nom listé> RAG_SFAR_LLM_API_KEY=<clé> HF_HUB_OFFLINE=1 .venv/bin/rag-sfar-serve --host 127.0.0.1 --port 8000`
+3. **Modèle local Qwen3.5-9B MLX**. Ce petit modèle a seulement servi de substitut pendant le développement ; le générateur de substitution de l'évaluation pré-enregistrée était Claude Sonnet. Il demande environ 11 Go au pic : à lancer seulement quand aucune autre tâche n'utilise le GPU. Sur une machine de 16 Go, il ne peut pas tourner en même temps que des évaluations.
+   - En processus : `HF_HUB_OFFLINE=1 .venv/bin/rag-sfar-serve --host 127.0.0.1 --port 8000 --mlx-model /Users/tim/.cache/rag_sfar_models/Qwen3.5-9B-MLX-4bit-nothink`. Le panneau de réglages est alors en lecture seule.
    - Ou comme serveur compatible OpenAI : `.venv/bin/mlx_lm.server --model /Users/tim/.cache/rag_sfar_models/Qwen3.5-9B-MLX-4bit-nothink --host 127.0.0.1 --port 8080`, puis saisir `http://127.0.0.1:8080/v1` dans la page. Si ce serveur refuse le champ `chat_template_kwargs`, décocher « Envoyer enable_thinking=false » ; le dossier `-nothink` désactive déjà la réflexion dans son modèle de chat. **Non testé.**
 
 Paramètres d'appel : par défaut, ceux du profil évalué (max_tokens 1024, température 0, `enable_thinking=false` transmis par `chat_template_kwargs`, comme pour Qwen servi par vLLM). Les champs « Tokens max » et « Température » permettent d'y déroger ; tout écart sort de la configuration évaluée.
@@ -58,7 +58,7 @@ Ce mode n'utilise aucun modèle de langage. Il affiche les passages retrouvés, 
 On peut poser la même question avec chaque option et comparer. Chaque réponse indique la variante qui l'a produite.
 
 - **aucune** (par défaut) : la configuration gelée, celle qui a été évaluée.
-- **lexicale** : la recherche active en plus l'index de n-grammes de caractères et le lexique médical (`use_subword`, `use_medical_lexicon`). La recherche tolère ainsi mieux les fautes de frappe et les sigles. Aucun appel au modèle.
+- **lexicale** : la recherche active en plus l'index de n-grammes de caractères (`use_subword`) et développe les sigles « purs » de la question (ABP → antibioprophylaxie), affichés sous la réponse. La recherche tolère ainsi mieux les fautes de frappe et les sigles, sans appel au modèle. Les candidats mesurés utilisaient le lexique complet ; la démonstration sert la version réduite aux 60 sigles purs (aucun nom de molécule ni mot de thème ajouté, `use_medical_lexicon` reste désactivé), que Q1 a mesurée équivalente sur dev.
 - **normalisation par le modèle** : le générateur corrige l'orthographe et développe les abréviations de la question. Le système cherche ensuite avec la question d'origine **et** la question normalisée (mode `add`) : le contexte gelé est conservé, puis complété. La question normalisée est affichée à l'écran ; si le modèle l'a laissée inchangée ou s'il est injoignable, la page le dit. Option indisponible sans générateur.
 - **les deux** : les deux options combinées.
 

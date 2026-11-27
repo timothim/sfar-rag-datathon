@@ -65,7 +65,7 @@ rag-sfar-mcp-http --port 8020            # MCP sur http://127.0.0.1:8020/mcp, sa
 # stdio (lancé par le client MCP lui-même)
 rag-sfar-mcp
 # Web API + chatbot de démonstration (agent C1), générateur OpenAI-compatible
-RAG_SFAR_LLM_BASE_URL=https://…/v1 RAG_SFAR_LLM_MODEL=… RAG_SFAR_LLM_API_KEY=… rag-sfar-serve --port 8000
+RAG_SFAR_LLM_BASE_URL=https://…/v1 RAG_SFAR_LLM_MODEL=… RAG_SFAR_LLM_API_KEY=… rag-sfar-serve --host 127.0.0.1 --port 8000
 ```
 
 Variables d'environnement (les options de ligne de commande priment) :
@@ -73,7 +73,8 @@ Variables d'environnement (les options de ligne de commande priment) :
 | Variable | Rôle | Défaut |
 |---|---|---|
 | `RAG_SFAR_INDEX_DIR` | dossier d'index | `index/tas_v6` (profil `PRODUCTION`, chemin relatif au dossier courant) |
-| `RAG_SFAR_MCP_HOST` / `RAG_SFAR_MCP_PORT` | adresse d'écoute du serveur MCP HTTP | `127.0.0.1` / `8765` |
+| `RAG_SFAR_MCP_HOST` / `RAG_SFAR_MCP_PORT` | adresse d'écoute du serveur MCP HTTP | `127.0.0.1` / `8765` (défaut du code) ; l'image Docker fixe `0.0.0.0` / `8020` ; les commandes de ce document passent `--port 8020` |
+| `RAG_SFAR_API_HOST` / `RAG_SFAR_API_PORT` | adresse d'écoute du chatbot (`rag-sfar-serve`) | `0.0.0.0` / `8000` (défaut du code : passer `--host 127.0.0.1` en local) ; l'image Docker : `0.0.0.0` / `8000` |
 | `RAG_SFAR_MCP_ALLOWED_HOSTS` | en-têtes `Host` acceptés (protection DNS rebinding du SDK quand on écoute hors loopback) | vide (protection automatique sur 127.0.0.1) |
 | `RAG_SFAR_LLM_BASE_URL`, `RAG_SFAR_LLM_MODEL`, `RAG_SFAR_LLM_API_KEY` | générateur du chatbot (`rag-sfar-serve` seulement ; le serveur MCP ne génère rien) | Ollama local |
 
