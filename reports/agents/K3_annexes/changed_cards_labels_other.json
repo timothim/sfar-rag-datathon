@@ -1,0 +1,182 @@
+[
+{
+"chunk_id": "2001_Dossier-AnesthRea-SFAR_e8d945__c0098_28e31802",
+"label": "corrected"
+},
+{
+"chunk_id": "2010_2_AFAR_Nutrition-artificielle-perioperatoire-en-chirurgie-progra_5c9884__c0017_d52b8404",
+"label": "corrected"
+},
+{
+"chunk_id": "2014_2_HAS_transfusion_de_globules_rouges_homologues_-_produits_indic_57ad8e__c0418_a404754f",
+"label": "corrected"
+},
+{
+"chunk_id": "2014_2_HAS_transfusion_de_globules_rouges_homologues_-_produits_indic_57ad8e__c0423_d66fbfc0",
+"label": "corrected"
+},
+{
+"chunk_id": "2014_2_HAS_transfusion_de_globules_rouges_homologues_-_produits_indic_57ad8e__c0424_49cbf3bb",
+"label": "corrected"
+},
+{
+"chunk_id": "2016_texte-long-Preconisations-2016-erreurs-med-SFAR-SFPC-version-fin_32ecd9__c0187_6cd2a3d0",
+"label": "same_meaning"
+},
+{
+"chunk_id": "2016_texte-long-Preconisations-2016-erreurs-med-SFAR-SFPC-version-fin_32ecd9__c0188_9bd08c78",
+"label": "same_meaning"
+},
+{
+"chunk_id": "2024_RFE-gestion-de-lanticoagulation-dans-un-contexte-durgence_23_02__d0368c__c0273_3934c5fb",
+"label": "corrected"
+},
+{
+"chunk_id": "2024_RFE-gestion-de-lanticoagulation-dans-un-contexte-durgence_23_02__d0368c__c0274_c17f901b",
+"label": "corrected"
+},
+{
+"chunk_id": "2025_RBP_-SFAR_AFEF_ACHBPT_RESECTION_-HEPATIQUE_-ARGUMENTAIRE_VF-1-AB_2e42b6__c0414_d4db631e",
+"label": "corrected"
+},
+{
+"chunk_id": "2025_RESECTION_-HEPATIQUE_-RECOMMANDATIONS_MEL_e8bdcf__c0087_3fa5205c",
+"label": "corrected"
+},
+{
+"chunk_id": "2025_RESECTION_-HEPATIQUE_-RECOMMANDATIONS_MEL_e8bdcf__c0089_d8d8851b",
+"label": "corrected"
+},
+{
+"chunk_id": "2025_RESECTION_-HEPATIQUE_-RECOMMANDATIONS_MEL_e8bdcf__c0090_a6908a1b",
+"label": "corrected"
+},
+{
+"chunk_id": "2025_RESECTION_-HEPATIQUE_-RECOMMANDATIONS_MEL_e8bdcf__c0102_21833cbd",
+"label": "corrected"
+},
+{
+"chunk_id": "2025_RESECTION_-HEPATIQUE_-RECOMMANDATIONS_MEL_e8bdcf__c0106_4aa66cd3",
+"label": "corrected"
+},
+{
+"chunk_id": "2025_RESECTION_-HEPATIQUE_-RECOMMANDATIONS_MEL_e8bdcf__c0110_1df20018",
+"label": "corrected"
+},
+{
+"chunk_id": "2025_RESECTION_-HEPATIQUE_-RECOMMANDATIONS_MEL_e8bdcf__c0142_142c7ab6",
+"label": "corrected"
+},
+{
+"chunk_id": "2025_argu_sepsis_a5219e__c0347_1a183c3a",
+"label": "corrected"
+},
+{
+"chunk_id": "2025_argu_sepsis_a5219e__c0349_3e5b20d9",
+"label": "corrected"
+},
+{
+"chunk_id": "2025_argu_sepsis_a5219e__c0350_27e20320",
+"label": "corrected"
+},
+{
+"chunk_id": "2025_argu_sepsis_a5219e__c0531_830a9a70",
+"label": "degraded_lost_correct_labels"
+},
+{
+"chunk_id": "2025_argu_sepsis_a5219e__c0534_19cf380c",
+"label": "degraded_lost_correct_labels"
+},
+{
+"chunk_id": "2025_argu_sepsis_a5219e__c0537_e202efd1",
+"label": "degraded_lost_correct_labels"
+},
+{
+"chunk_id": "2025_argu_sepsis_a5219e__c0543_6c69c4bc",
+"label": "degraded_lost_correct_labels"
+},
+{
+"chunk_id": "2025_argu_sepsis_a5219e__c0545_34d4793c",
+"label": "degraded_lost_correct_labels"
+},
+{
+"chunk_id": "2025_argu_sepsis_a5219e__c0548_61e1107c",
+"label": "degraded_lost_correct_labels"
+},
+{
+"chunk_id": "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0190_2cdb2f14",
+"label": "degraded_lost_correct_labels"
+},
+{
+"chunk_id": "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0192_f7b1c6fd",
+"label": "degraded_lost_correct_labels"
+},
+{
+"chunk_id": "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0193_2caa36dc",
+"label": "degraded_lost_correct_labels"
+},
+{
+"chunk_id": "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0659_56afe0df",
+"label": "corrected"
+},
+{
+"chunk_id": "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0662_0ce1c97b",
+"label": "corrected"
+},
+{
+"chunk_id": "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0663_fcb4e864",
+"label": "corrected"
+},
+{
+"chunk_id": "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0664_063b7276",
+"label": "corrected"
+},
+{
+"chunk_id": "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0677_19312f25",
+"label": "corrected"
+},
+{
+"chunk_id": "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0680_051ad83e",
+"label": "same_meaning"
+},
+{
+"chunk_id": "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0774_2a01f50a",
+"label": "degraded_lost_correct_labels"
+},
+{
+"chunk_id": "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0775_de909014",
+"label": "degraded_lost_correct_labels"
+},
+{
+"chunk_id": "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0776_b9f2feeb",
+"label": "degraded_lost_correct_labels"
+},
+{
+"chunk_id": "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0778_8e8ecd38",
+"label": "degraded_lost_correct_labels"
+},
+{
+"chunk_id": "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0779_4d5c58f5",
+"label": "degraded_lost_correct_labels"
+},
+{
+"chunk_id": "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0782_106f38b7",
+"label": "degraded_lost_correct_labels"
+},
+{
+"chunk_id": "2026_Version-longue_8281a1__c0428_3ec25704",
+"label": "corrected"
+},
+{
+"chunk_id": "2026_gestion_voies_aeriennes_argumentaire_mel_vd_a9b593__c0308_ad345f13",
+"label": "corrected"
+},
+{
+"chunk_id": "2026_gestion_voies_aeriennes_argumentaire_mel_vd_a9b593__c0310_2bc5b67a",
+"label": "corrected"
+},
+{
+"chunk_id": "2026_gestion_voies_aeriennes_recommandations_mel_vd_19eb83__c0169_289d6dff",
+"label": "corrected"
+}
+]
