@@ -1,0 +1,3512 @@
+{
+ "suite": "multirfe_synth",
+ "split": "dev",
+ "k": 8,
+ "n_items": 12,
+ "generator": "mlx:qwen3.5-9b-4bit-nothink",
+ "timestamp": "2026-11-27T01:43:51",
+ "runs": [
+  {
+   "config": "C9_simple_hybrid_rerank",
+   "config_params": {
+    "name": "C9_simple_hybrid_rerank",
+    "chunking_strategy": "table_aware_sota",
+    "use_bm25": true,
+    "use_subword": false,
+    "use_dense": true,
+    "bm25_weight": 1.0,
+    "subword_weight": 0.65,
+    "dense_weight": 1.0,
+    "rrf_k": 60,
+    "use_dbsf_fusion": false,
+    "dbsf_blend": 0.35,
+    "use_crag_multihop": false,
+    "use_u_shape_ordering": true,
+    "use_context_pruning": true,
+    "use_medical_lexicon": false,
+    "use_query_router": true,
+    "exclude_references": true,
+    "prefer_french": true,
+    "latest_edition_only": true,
+    "exclude_abrogated": true,
+    "use_soft_metadata_boost": false,
+    "use_hard_subdomain_filter": false,
+    "use_reranker": true,
+    "initial_candidates": 45,
+    "rerank_top_k": 24,
+    "final_top_k": 8,
+    "dedup_by_content": true,
+    "max_chunks_per_doc": 7,
+    "expand_neighbors": false,
+    "expand_section_callouts": false,
+    "max_context_chars": 16000,
+    "context_window": 0,
+    "context_window_top": 8,
+    "expand_table_parent": false,
+    "context_char_budget": 30000,
+    "domain_boost": 0.18,
+    "population_boost": 0.25,
+    "population_mismatch_penalty": 0.35,
+    "setting_boost": 0.2,
+    "role_boost_map": {
+     "recommandation": 0.12,
+     "texte_court": 0.12,
+     "tableaux_synthese": 0.15,
+     "algorithme": 0.1,
+     "aide_cognitive": 0.08,
+     "argumentaire": -0.04,
+     "annexe": -0.05
+    },
+    "table_card_boost": 0.1
+   },
+   "summary": {
+    "n": 12,
+    "passage_hit_curve": {
+     "1": 0.6666666666666666,
+     "3": 0.8333333333333334,
+     "5": 0.9166666666666666,
+     "8": 0.9166666666666666,
+     "12": 0.9166666666666666,
+     "16": 0.9166666666666666,
+     "20": 0.9166666666666666
+    },
+    "doc_hit_curve": {
+     "1": 0.8333333333333334,
+     "3": 0.9166666666666666,
+     "5": 0.9166666666666666,
+     "8": 0.9166666666666666,
+     "12": 0.9166666666666666,
+     "16": 0.9166666666666666,
+     "20": 0.9166666666666666
+    },
+    "doc_hit": {
+     "mean": 0.9166666666666666,
+     "ci_low": 0.75,
+     "ci_high": 1.0,
+     "n": 12
+    },
+    "doc_mrr": {
+     "mean": 0.8611111111111112,
+     "ci_low": 0.6666666666666666,
+     "ci_high": 1.0,
+     "n": 12
+    },
+    "doc_recall": {
+     "mean": 0.9166666666666666,
+     "ci_low": 0.75,
+     "ci_high": 1.0,
+     "n": 12
+    },
+    "doc_ndcg": {
+     "mean": 0.6542617755483058,
+     "ci_low": 0.4635601704570951,
+     "ci_high": 0.835695282588159,
+     "n": 12
+    },
+    "passage_hit": {
+     "mean": 0.9166666666666666,
+     "ci_low": 0.75,
+     "ci_high": 1.0,
+     "n": 12
+    },
+    "passage_mrr": {
+     "mean": 0.7527777777777778,
+     "ci_low": 0.5361111111111111,
+     "ci_high": 0.9444444444444445,
+     "n": 12
+    },
+    "passage_recall": {
+     "mean": 0.9166666666666666,
+     "ci_low": 0.75,
+     "ci_high": 1.0,
+     "n": 12
+    },
+    "obsolete_intrusion": {
+     "mean": 0.0,
+     "ci_low": 0.0,
+     "ci_high": 0.0,
+     "n": 12
+    },
+    "answer_terms_in_context": {
+     "mean": 1.0,
+     "ci_low": 1.0,
+     "ci_high": 1.0,
+     "n": 12
+    },
+    "correct": {
+     "mean": 0.5833333333333334,
+     "ci_low": 0.3333333333333333,
+     "ci_high": 0.8333333333333334,
+     "n": 12
+    },
+    "false_abstention": {
+     "mean": 0.08333333333333333,
+     "ci_low": 0.0,
+     "ci_high": 0.25,
+     "n": 12
+    },
+    "sourced": {
+     "mean": 0.9166666666666666,
+     "ci_low": 0.75,
+     "ci_high": 1.0,
+     "n": 12
+    },
+    "latency_ms": {
+     "mean": 17270.096493006957,
+     "ci_low": 13507.423260161886,
+     "ci_high": 21410.180441166933,
+     "n": 12
+    },
+    "by_question_type": {
+     "clinical_case": {
+      "doc_hit": {
+       "mean": 0.8,
+       "ci_low": 0.4,
+       "ci_high": 1.0,
+       "n": 5
+      },
+      "doc_mrr": {
+       "mean": 0.6666666666666667,
+       "ci_low": 0.26666666666666666,
+       "ci_high": 1.0,
+       "n": 5
+      },
+      "doc_recall": {
+       "mean": 0.8,
+       "ci_low": 0.4,
+       "ci_high": 1.0,
+       "n": 5
+      },
+      "doc_ndcg": {
+       "mean": 0.4056686782115815,
+       "ci_low": 0.15130120674940675,
+       "ci_high": 0.6600361496737561,
+       "n": 5
+      },
+      "passage_hit": {
+       "mean": 0.8,
+       "ci_low": 0.4,
+       "ci_high": 1.0,
+       "n": 5
+      },
+      "passage_mrr": {
+       "mean": 0.5066666666666666,
+       "ci_low": 0.14666666666666667,
+       "ci_high": 0.8666666666666666,
+       "n": 5
+      },
+      "passage_recall": {
+       "mean": 0.8,
+       "ci_low": 0.4,
+       "ci_high": 1.0,
+       "n": 5
+      },
+      "obsolete_intrusion": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 5
+      },
+      "answer_terms_in_context": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 5
+      },
+      "correct": {
+       "mean": 0.2,
+       "ci_low": 0.0,
+       "ci_high": 0.6,
+       "n": 5
+      },
+      "false_abstention": {
+       "mean": 0.2,
+       "ci_low": 0.0,
+       "ci_high": 0.6,
+       "n": 5
+      },
+      "sourced": {
+       "mean": 0.8,
+       "ci_low": 0.4,
+       "ci_high": 1.0,
+       "n": 5
+      },
+      "n": 5
+     },
+     "open": {
+      "doc_hit": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 5
+      },
+      "doc_mrr": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 5
+      },
+      "doc_recall": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 5
+      },
+      "doc_ndcg": {
+       "mean": 0.8237759652975255,
+       "ci_low": 0.5916419679522362,
+       "ci_high": 1.0,
+       "n": 5
+      },
+      "passage_hit": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 5
+      },
+      "passage_mrr": {
+       "mean": 0.9,
+       "ci_low": 0.7,
+       "ci_high": 1.0,
+       "n": 5
+      },
+      "passage_recall": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 5
+      },
+      "obsolete_intrusion": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 5
+      },
+      "answer_terms_in_context": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 5
+      },
+      "correct": {
+       "mean": 0.8,
+       "ci_low": 0.4,
+       "ci_high": 1.0,
+       "n": 5
+      },
+      "false_abstention": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 5
+      },
+      "sourced": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 5
+      },
+      "n": 5
+     },
+     "table": {
+      "doc_hit": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 2
+      },
+      "doc_mrr": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 2
+      },
+      "doc_recall": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 2
+      },
+      "doc_ndcg": {
+       "mean": 0.8519590445170673,
+       "ci_low": 0.7039180890341347,
+       "ci_high": 1.0,
+       "n": 2
+      },
+      "passage_hit": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 2
+      },
+      "passage_mrr": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 2
+      },
+      "passage_recall": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 2
+      },
+      "obsolete_intrusion": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 2
+      },
+      "answer_terms_in_context": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 2
+      },
+      "correct": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 2
+      },
+      "false_abstention": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 2
+      },
+      "sourced": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 2
+      },
+      "n": 2
+     }
+    },
+    "by_tag": {
+     "contraindication": {
+      "doc_hit": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 1
+      },
+      "doc_mrr": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 1
+      },
+      "doc_recall": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 1
+      },
+      "doc_ndcg": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 1
+      },
+      "passage_hit": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 1
+      },
+      "passage_mrr": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 1
+      },
+      "passage_recall": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 1
+      },
+      "obsolete_intrusion": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 1
+      },
+      "answer_terms_in_context": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 1
+      },
+      "correct": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 1
+      },
+      "false_abstention": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 1
+      },
+      "sourced": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 1
+      },
+      "n": 1
+     },
+     "emergency": {
+      "doc_hit": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 3
+      },
+      "doc_mrr": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 3
+      },
+      "doc_recall": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 3
+      },
+      "doc_ndcg": {
+       "mean": 0.7397547524122806,
+       "ci_low": 0.45390362024822023,
+       "ci_high": 1.0,
+       "n": 3
+      },
+      "passage_hit": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 3
+      },
+      "passage_mrr": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 3
+      },
+      "passage_recall": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 3
+      },
+      "obsolete_intrusion": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 3
+      },
+      "answer_terms_in_context": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 3
+      },
+      "correct": {
+       "mean": 0.3333333333333333,
+       "ci_low": 0.0,
+       "ci_high": 1.0,
+       "n": 3
+      },
+      "false_abstention": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 3
+      },
+      "sourced": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 3
+      },
+      "n": 3
+     },
+     "icu": {
+      "doc_hit": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 4
+      },
+      "doc_mrr": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 4
+      },
+      "doc_recall": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 4
+      },
+      "doc_ndcg": {
+       "mean": 0.9144444817679147,
+       "ci_low": 0.7433334453037439,
+       "ci_high": 1.0,
+       "n": 4
+      },
+      "passage_hit": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 4
+      },
+      "passage_mrr": {
+       "mean": 0.675,
+       "ci_low": 0.35,
+       "ci_high": 1.0,
+       "n": 4
+      },
+      "passage_recall": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 4
+      },
+      "obsolete_intrusion": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 4
+      },
+      "answer_terms_in_context": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 4
+      },
+      "correct": {
+       "mean": 0.75,
+       "ci_low": 0.25,
+       "ci_high": 1.0,
+       "n": 4
+      },
+      "false_abstention": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 4
+      },
+      "sourced": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 4
+      },
+      "n": 4
+     },
+     "other": {
+      "doc_hit": {
+       "mean": 0.8,
+       "ci_low": 0.4,
+       "ci_high": 1.0,
+       "n": 5
+      },
+      "doc_mrr": {
+       "mean": 0.6666666666666667,
+       "ci_low": 0.26666666666666666,
+       "ci_high": 1.0,
+       "n": 5
+      },
+      "doc_recall": {
+       "mean": 0.8,
+       "ci_low": 0.4,
+       "ci_high": 1.0,
+       "n": 5
+      },
+      "doc_ndcg": {
+       "mean": 0.4056686782115815,
+       "ci_low": 0.15130120674940675,
+       "ci_high": 0.6600361496737561,
+       "n": 5
+      },
+      "passage_hit": {
+       "mean": 0.8,
+       "ci_low": 0.4,
+       "ci_high": 1.0,
+       "n": 5
+      },
+      "passage_mrr": {
+       "mean": 0.5066666666666666,
+       "ci_low": 0.14666666666666667,
+       "ci_high": 0.8666666666666666,
+       "n": 5
+      },
+      "passage_recall": {
+       "mean": 0.8,
+       "ci_low": 0.4,
+       "ci_high": 1.0,
+       "n": 5
+      },
+      "obsolete_intrusion": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 5
+      },
+      "answer_terms_in_context": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 5
+      },
+      "correct": {
+       "mean": 0.2,
+       "ci_low": 0.0,
+       "ci_high": 0.6,
+       "n": 5
+      },
+      "false_abstention": {
+       "mean": 0.2,
+       "ci_low": 0.0,
+       "ci_high": 0.6,
+       "n": 5
+      },
+      "sourced": {
+       "mean": 0.8,
+       "ci_low": 0.4,
+       "ci_high": 1.0,
+       "n": 5
+      },
+      "n": 5
+     },
+     "pediatric": {
+      "doc_hit": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 3
+      },
+      "doc_mrr": {
+       "mean": 0.7777777777777778,
+       "ci_low": 0.3333333333333333,
+       "ci_high": 1.0,
+       "n": 3
+      },
+      "doc_recall": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 3
+      },
+      "doc_ndcg": {
+       "mean": 0.5236554044620613,
+       "ci_low": 0.15130120674940675,
+       "ci_high": 1.0,
+       "n": 3
+      },
+      "passage_hit": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 3
+      },
+      "passage_mrr": {
+       "mean": 0.611111111111111,
+       "ci_low": 0.3333333333333333,
+       "ci_high": 1.0,
+       "n": 3
+      },
+      "passage_recall": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 3
+      },
+      "obsolete_intrusion": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 3
+      },
+      "answer_terms_in_context": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 3
+      },
+      "correct": {
+       "mean": 0.6666666666666666,
+       "ci_low": 0.0,
+       "ci_high": 1.0,
+       "n": 3
+      },
+      "false_abstention": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 3
+      },
+      "sourced": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 3
+      },
+      "n": 3
+     },
+     "reco": {
+      "doc_hit": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 5
+      },
+      "doc_mrr": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 5
+      },
+      "doc_recall": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 5
+      },
+      "doc_ndcg": {
+       "mean": 0.8237759652975255,
+       "ci_low": 0.5916419679522362,
+       "ci_high": 1.0,
+       "n": 5
+      },
+      "passage_hit": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 5
+      },
+      "passage_mrr": {
+       "mean": 0.9,
+       "ci_low": 0.7,
+       "ci_high": 1.0,
+       "n": 5
+      },
+      "passage_recall": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 5
+      },
+      "obsolete_intrusion": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 5
+      },
+      "answer_terms_in_context": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 5
+      },
+      "correct": {
+       "mean": 0.8,
+       "ci_low": 0.4,
+       "ci_high": 1.0,
+       "n": 5
+      },
+      "false_abstention": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 5
+      },
+      "sourced": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 5
+      },
+      "n": 5
+     },
+     "table": {
+      "doc_hit": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 2
+      },
+      "doc_mrr": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 2
+      },
+      "doc_recall": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 2
+      },
+      "doc_ndcg": {
+       "mean": 0.8519590445170673,
+       "ci_low": 0.7039180890341347,
+       "ci_high": 1.0,
+       "n": 2
+      },
+      "passage_hit": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 2
+      },
+      "passage_mrr": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 2
+      },
+      "passage_recall": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 2
+      },
+      "obsolete_intrusion": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 2
+      },
+      "answer_terms_in_context": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 2
+      },
+      "correct": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 2
+      },
+      "false_abstention": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 2
+      },
+      "sourced": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 2
+      },
+      "n": 2
+     },
+     "threshold": {
+      "doc_hit": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 2
+      },
+      "doc_mrr": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 2
+      },
+      "doc_recall": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 2
+      },
+      "doc_ndcg": {
+       "mean": 0.6808480080528967,
+       "ci_low": 0.6577779270716586,
+       "ci_high": 0.7039180890341347,
+       "n": 2
+      },
+      "passage_hit": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 2
+      },
+      "passage_mrr": {
+       "mean": 0.6,
+       "ci_low": 0.2,
+       "ci_high": 1.0,
+       "n": 2
+      },
+      "passage_recall": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 2
+      },
+      "obsolete_intrusion": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 2
+      },
+      "answer_terms_in_context": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 2
+      },
+      "correct": {
+       "mean": 0.5,
+       "ci_low": 0.0,
+       "ci_high": 1.0,
+       "n": 2
+      },
+      "false_abstention": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 2
+      },
+      "sourced": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 2
+      },
+      "n": 2
+     },
+     "timing": {
+      "doc_hit": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 1
+      },
+      "doc_mrr": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 1
+      },
+      "doc_recall": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 1
+      },
+      "doc_ndcg": {
+       "mean": 0.419665006636777,
+       "ci_low": 0.419665006636777,
+       "ci_high": 0.419665006636777,
+       "n": 1
+      },
+      "passage_hit": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 1
+      },
+      "passage_mrr": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 1
+      },
+      "passage_recall": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 1
+      },
+      "obsolete_intrusion": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 1
+      },
+      "answer_terms_in_context": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 1
+      },
+      "correct": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 1
+      },
+      "false_abstention": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 1
+      },
+      "sourced": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 1
+      },
+      "n": 1
+     }
+    }
+   },
+   "rows": [
+    {
+     "id": "MR-g3b9708b3518cddf9bccf",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "open",
+     "tags": [
+      "emergency",
+      "reco"
+     ],
+     "doc_rank": 1,
+     "passage_rank": 1,
+     "n_retrieved": 6,
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 1.0,
+     "passage_hit": 1.0,
+     "passage_mrr": 1.0,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 0.0,
+     "correct": 0.0,
+     "sourced": 1.0,
+     "answer": "Non, le patient ne peut pas rentrer chez lui car les recommandations exigent que les patients sous anticoagulants répondent à des critères cliniques spécifiques (absence d'intoxication, absence de vomissements itératifs, absence de céphalées importantes persistantes, Score de Glasgow à 15, absence de déficit neurologique et absence d'autres motifs d'hospitalisation) pour être autorisés à sortir des urgences [S1].\n\nSource : Prise en charge des patients présentant un traumatisme crânien léger de l’adulte — RPP SFAR 2022, Avis d'experts (Accord Fort), édition antérieure non mentionnée.",
+     "retrieved": [
+      [
+       "2022_RPP-Trauma-cranien-leger_pour-mise-sur-site_autorship-complet_9c1d68",
+       "2022_RPP-Trauma-cranien-leger_pour-mise-sur-site_autorship-complet_9c1d68__c0063_a5501c29"
+      ],
+      [
+       "2022_RPP-Trauma-cranien-leger_pour-mise-sur-site_autorship-complet_9c1d68",
+       "2022_RPP-Trauma-cranien-leger_pour-mise-sur-site_autorship-complet_9c1d68__c0023_40697eec"
+      ],
+      [
+       "2022_RPP-Trauma-cranien-leger_pour-mise-sur-site_autorship-complet_9c1d68",
+       "2022_RPP-Trauma-cranien-leger_pour-mise-sur-site_autorship-complet_9c1d68__c0055_62d31afc"
+      ],
+      [
+       "2022_RPP-Trauma-cranien-leger_pour-mise-sur-site_autorship-complet_9c1d68",
+       "2022_RPP-Trauma-cranien-leger_pour-mise-sur-site_autorship-complet_9c1d68__c0048_f788d039"
+      ],
+      [
+       "2022_RPP-Trauma-cranien-leger_pour-mise-sur-site_autorship-complet_9c1d68",
+       "2022_RPP-Trauma-cranien-leger_pour-mise-sur-site_autorship-complet_9c1d68__c0046_fb7c9715"
+      ],
+      [
+       "2022_RPP-Trauma-cranien-leger_pour-mise-sur-site_autorship-complet_9c1d68",
+       "2022_RPP-Trauma-cranien-leger_pour-mise-sur-site_autorship-complet_9c1d68__c0032_9ebae81e"
+      ]
+     ],
+     "usage": {
+      "prompt_tokens": 2420,
+      "completion_tokens": 143,
+      "total_tokens": 2563
+     },
+     "latency_ms": 32459.16266698623
+    },
+    {
+     "id": "MR-gfff2848a70957ac0b7b5",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "clinical_case",
+     "tags": [
+      "emergency",
+      "other"
+     ],
+     "doc_rank": 1,
+     "passage_rank": 1,
+     "n_retrieved": 3,
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 0.7653606369886217,
+     "passage_hit": 1.0,
+     "passage_mrr": 1.0,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 0.0,
+     "correct": 1.0,
+     "sourced": 1.0,
+     "answer": "Réaliser un scanner cérébral avec injection, car la présence d'un syndrome de Claude Bernard Horner et d'une fracture du rachis cervical constituent des signes cliniques évocateurs de dissection carotidienne nécessitant cette imagerie spécifique [S1], [S2].\n\nSource : Prise en charge des patients présentant un traumatisme crânien léger de l’adulte — RPP SFAR 2022, avis d'experts (Accord Fort).",
+     "retrieved": [
+      [
+       "2022_RPP-Trauma-cranien-leger_pour-mise-sur-site_autorship-complet_9c1d68",
+       "2022_RPP-Trauma-cranien-leger_pour-mise-sur-site_autorship-complet_9c1d68__c0031_c5550085"
+      ],
+      [
+       "2022_RPP-Trauma-cranien-leger_pour-mise-sur-site_autorship-complet_9c1d68",
+       "2022_RPP-Trauma-cranien-leger_pour-mise-sur-site_autorship-complet_9c1d68__c0049_aaf8b4cb"
+      ],
+      [
+       "2016_RFE-ANREA-Prise-en-charge-des-traumatises-craniens-graves-a-la-p_966f8c",
+       "2016_RFE-ANREA-Prise-en-charge-des-traumatises-craniens-graves-a-la-p_966f8c__c0040_18b95883"
+      ]
+     ],
+     "usage": {
+      "prompt_tokens": 1348,
+      "completion_tokens": 100,
+      "total_tokens": 1448
+     },
+     "latency_ms": 19256.938167032786
+    },
+    {
+     "id": "MR-g8f23afa63325b0d08bd8",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "clinical_case",
+     "tags": [
+      "emergency",
+      "other"
+     ],
+     "doc_rank": 1,
+     "passage_rank": 1,
+     "n_retrieved": 6,
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 0.45390362024822023,
+     "passage_hit": 1.0,
+     "passage_mrr": 1.0,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 0.0,
+     "correct": 0.0,
+     "sourced": 1.0,
+     "answer": "En cas d'hémopéritoine abondant et d'état incompatible avec le scanner, la conduite à tenir est une laparotomie précoce [S1], [S3], [S5].\n\nSource : Prise en charge du traumatisme abdominal grave de l’adulte : les 48 premières heures — RFE SFAR 2019 [EN VIGUEUR]",
+     "retrieved": [
+      [
+       "2019_rfe-trauma-abdominal-fiche-synthese_4abf14",
+       "2019_rfe-trauma-abdominal-fiche-synthese_4abf14__c0002_56954172"
+      ],
+      [
+       "2019_rfe-trauma-abdominale_656ac9",
+       "2019_rfe-trauma-abdominale_656ac9__c0031_f775ce4b"
+      ],
+      [
+       "2019_rfe-trauma-abdominal-fiche-synthese_4abf14",
+       "2019_rfe-trauma-abdominal-fiche-synthese_4abf14__c0003_fbba5ee4"
+      ],
+      [
+       "2017_rfe-prise-en-charge-des-traumatises-pelviens-graves-a-la-phase-p_a08dc6",
+       "2017_rfe-prise-en-charge-des-traumatises-pelviens-graves-a-la-phase-p_a08dc6__c0043_90224e5b"
+      ],
+      [
+       "2019_rfe-trauma-abdominale_656ac9",
+       "2019_rfe-trauma-abdominale_656ac9__c0047_5bb66c52"
+      ],
+      [
+       "2017_rfe-prise-en-charge-des-traumatises-pelviens-graves-a-la-phase-p_a08dc6",
+       "2017_rfe-prise-en-charge-des-traumatises-pelviens-graves-a-la-phase-p_a08dc6__c0039_33eb2e69"
+      ]
+     ],
+     "usage": {
+      "prompt_tokens": 2468,
+      "completion_tokens": 85,
+      "total_tokens": 2553
+     },
+     "latency_ms": 23793.507541005965
+    },
+    {
+     "id": "MR-g8e54d9655989718c1639",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "open",
+     "tags": [
+      "contraindication",
+      "icu",
+      "reco"
+     ],
+     "doc_rank": 1,
+     "passage_rank": 1,
+     "n_retrieved": 6,
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 1.0,
+     "passage_hit": 1.0,
+     "passage_mrr": 1.0,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 0.0,
+     "correct": 1.0,
+     "sourced": 1.0,
+     "answer": "Chez les patients comateux avec une méningite bactérienne en absence d'HTIC, il ne faut probablement pas pratiquer d'hypothermie, en comparaison avec une normothermie, dans le but d'améliorer la survie avec un bon pronostic neurologique [S2].\n\nSource : Contrôle cible de la température en réanimation (hors nouveau-nés) — RFE SFAR 2016 [EN VIGUEUR], Avis d'experts.",
+     "retrieved": [
+      [
+       "2016_rfe-controle-cible-de-la-temperature-en-reanimation_a712c2",
+       "2016_rfe-controle-cible-de-la-temperature-en-reanimation_a712c2__c0069_a04341d3"
+      ],
+      [
+       "2016_rfe-controle-cible-de-la-temperature-en-reanimation_a712c2",
+       "2016_rfe-controle-cible-de-la-temperature-en-reanimation_a712c2__c0068_eae15f34"
+      ],
+      [
+       "2016_rfe-controle-cible-de-la-temperature-en-reanimation_a712c2",
+       "2016_rfe-controle-cible-de-la-temperature-en-reanimation_a712c2__c0059_cfc08ec0"
+      ],
+      [
+       "2016_rfe-controle-cible-de-la-temperature-en-reanimation_a712c2",
+       "2016_rfe-controle-cible-de-la-temperature-en-reanimation_a712c2__c0037_d7ea2df1"
+      ],
+      [
+       "2016_rfe-controle-cible-de-la-temperature-en-reanimation_a712c2",
+       "2016_rfe-controle-cible-de-la-temperature-en-reanimation_a712c2__c0070_0cb88112"
+      ],
+      [
+       "2016_rfe-controle-cible-de-la-temperature-en-reanimation_a712c2",
+       "2016_rfe-controle-cible-de-la-temperature-en-reanimation_a712c2__c0055_99c42319"
+      ]
+     ],
+     "usage": {
+      "prompt_tokens": 1989,
+      "completion_tokens": 106,
+      "total_tokens": 2095
+     },
+     "latency_ms": 23123.195166990627
+    },
+    {
+     "id": "MR-gd1b252c6b18be4bca7b6",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "clinical_case",
+     "tags": [
+      "icu",
+      "other",
+      "threshold"
+     ],
+     "doc_rank": 1,
+     "passage_rank": 5,
+     "n_retrieved": 6,
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 0.6577779270716586,
+     "passage_hit": 1.0,
+     "passage_mrr": 0.2,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 0.0,
+     "correct": 0.0,
+     "sourced": 1.0,
+     "answer": "Non, il ne faut pas abaisser davantage la température à 31 °C, car les études ne montrent aucun bénéfice supplémentaire sur la pression intracrânienne et un risque probable d'effets secondaires délétères à une hypothermie inférieure à 35 °C [S5].\n\nSource : Contrôle cible de la température en réanimation (hors nouveau-nés) — RFE SFAR 2016 [EN VIGUEUR]",
+     "retrieved": [
+      [
+       "2016_rfe-controle-cible-de-la-temperature-en-reanimation_a712c2",
+       "2016_rfe-controle-cible-de-la-temperature-en-reanimation_a712c2__c0045_3b3c1972"
+      ],
+      [
+       "2016_RFE-ANREA-Prise-en-charge-des-traumatises-craniens-graves-a-la-p_966f8c",
+       "2016_RFE-ANREA-Prise-en-charge-des-traumatises-craniens-graves-a-la-p_966f8c__c0102_6bfdc99e"
+      ],
+      [
+       "2016_RFE-ANREA-Prise-en-charge-des-traumatises-craniens-graves-a-la-p_966f8c",
+       "2016_RFE-ANREA-Prise-en-charge-des-traumatises-craniens-graves-a-la-p_966f8c__c0103_94114bc7"
+      ],
+      [
+       "2016_rfe-controle-cible-de-la-temperature-en-reanimation_a712c2",
+       "2016_rfe-controle-cible-de-la-temperature-en-reanimation_a712c2__c0047_c45254c4"
+      ],
+      [
+       "2016_rfe-controle-cible-de-la-temperature-en-reanimation_a712c2",
+       "2016_rfe-controle-cible-de-la-temperature-en-reanimation_a712c2__c0049_7ab5a396"
+      ],
+      [
+       "2016_rfe-controle-cible-de-la-temperature-en-reanimation_a712c2",
+       "2016_rfe-controle-cible-de-la-temperature-en-reanimation_a712c2__c0052_f14e6e3a"
+      ]
+     ],
+     "usage": {
+      "prompt_tokens": 2157,
+      "completion_tokens": 98,
+      "total_tokens": 2255
+     },
+     "latency_ms": 20653.076125017833
+    },
+    {
+     "id": "MR-gd9a325c36650ee68a17f",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "open",
+     "tags": [
+      "icu",
+      "pediatric",
+      "reco"
+     ],
+     "doc_rank": 1,
+     "passage_rank": 2,
+     "n_retrieved": 6,
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 1.0,
+     "passage_hit": 1.0,
+     "passage_mrr": 0.5,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 0.0,
+     "correct": 1.0,
+     "sourced": 1.0,
+     "answer": "Oui, les experts pédiatres considèrent que les données rapportées dans la population adulte concernant le CCT visant la normothermie au cours de l'EME peuvent s'appliquer à l'enfant [S2].\n\nSource : Contrôle cible de la température en réanimation (hors nouveau-nés) — RFE SFAR 2016, Avis d'experts, édition antérieure.",
+     "retrieved": [
+      [
+       "2016_rfe-controle-cible-de-la-temperature-en-reanimation_a712c2",
+       "2016_rfe-controle-cible-de-la-temperature-en-reanimation_a712c2__c0061_45d75faf"
+      ],
+      [
+       "2016_rfe-controle-cible-de-la-temperature-en-reanimation_a712c2",
+       "2016_rfe-controle-cible-de-la-temperature-en-reanimation_a712c2__c0072_94bc0cd9"
+      ],
+      [
+       "2016_rfe-controle-cible-de-la-temperature-en-reanimation_a712c2",
+       "2016_rfe-controle-cible-de-la-temperature-en-reanimation_a712c2__c0005_fca41be5"
+      ],
+      [
+       "2016_rfe-controle-cible-de-la-temperature-en-reanimation_a712c2",
+       "2016_rfe-controle-cible-de-la-temperature-en-reanimation_a712c2__c0071_4d7d4967"
+      ],
+      [
+       "2016_rfe-controle-cible-de-la-temperature-en-reanimation_a712c2",
+       "2016_rfe-controle-cible-de-la-temperature-en-reanimation_a712c2__c0062_5c6bc0ca"
+      ],
+      [
+       "2016_rfe-controle-cible-de-la-temperature-en-reanimation_a712c2",
+       "2016_rfe-controle-cible-de-la-temperature-en-reanimation_a712c2__c0023_862a2dfc"
+      ]
+     ],
+     "usage": {
+      "prompt_tokens": 2501,
+      "completion_tokens": 85,
+      "total_tokens": 2586
+     },
+     "latency_ms": 19390.45679202536
+    },
+    {
+     "id": "MR-ge6178ab7ed0b124f3edc",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "open",
+     "tags": [
+      "reco"
+     ],
+     "doc_rank": 1,
+     "passage_rank": 1,
+     "n_retrieved": 5,
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 0.6992148198508501,
+     "passage_hit": 1.0,
+     "passage_mrr": 1.0,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 0.0,
+     "correct": 1.0,
+     "sourced": 1.0,
+     "answer": "Non, il n'est pas recommandé de prescrire de manière systématique une radiographie de thorax préinterventionnelle en chirurgie non cardiothoracique, quel que soit l'âge du patient, sauf en cas de pathologie cardiopulmonaire évolutive ou aiguë [S1].\n\nSource : Examens pré-interventionnels systématiques — RFE SFAR 2012 [EN VIGUEUR], GRADE I–, avis d'experts.",
+     "retrieved": [
+      [
+       "2012_AFAR_Examens-preinterventionnels-systematiques_a99473",
+       "2012_AFAR_Examens-preinterventionnels-systematiques_a99473__c0024_72ff7ec5"
+      ],
+      [
+       "2012_AFAR_Examens-preinterventionnels-systematiques_a99473",
+       "2012_AFAR_Examens-preinterventionnels-systematiques_a99473__c0027_6af57834"
+      ],
+      [
+       "2010_2_AFAR_Prise-en-charge-du-coronarien-qui-doit-etre-opere-en-chir_59da99",
+       "2010_2_AFAR_Prise-en-charge-du-coronarien-qui-doit-etre-opere-en-chir_59da99__c0152_a7c6d0c4"
+      ],
+      [
+       "2012_AFAR_Examens-preinterventionnels-systematiques_a99473",
+       "2012_AFAR_Examens-preinterventionnels-systematiques_a99473__c0021_107fd415"
+      ],
+      [
+       "2010_2_AFAR_Prise-en-charge-du-coronarien-qui-doit-etre-opere-en-chir_59da99",
+       "2010_2_AFAR_Prise-en-charge-du-coronarien-qui-doit-etre-opere-en-chir_59da99__c0159_f0ace753"
+      ]
+     ],
+     "usage": {
+      "prompt_tokens": 1947,
+      "completion_tokens": 102,
+      "total_tokens": 2049
+     },
+     "latency_ms": 15455.179375014268
+    },
+    {
+     "id": "MR-g2c188878f4fca6996f4b",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "table",
+     "tags": [
+      "table",
+      "threshold"
+     ],
+     "doc_rank": 1,
+     "passage_rank": 1,
+     "n_retrieved": 3,
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 0.7039180890341347,
+     "passage_hit": 1.0,
+     "passage_mrr": 1.0,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 0.0,
+     "correct": 1.0,
+     "sourced": 1.0,
+     "answer": "Une endartériectomie carotidienne se situe dans la catégorie de risque intermédiaire (1 % à 5 %) pour la stratification du risque cardiaque en chirurgie non cardiaque [S1], [S3].\n\nSource : Examens pré-interventionnels systématiques — RFE SFAR 2012, avis d'experts.",
+     "retrieved": [
+      [
+       "2012_AFAR_Examens-preinterventionnels-systematiques_a99473",
+       "2012_AFAR_Examens-preinterventionnels-systematiques_a99473__c0099_bcde3f7b"
+      ],
+      [
+       "2010_2_AFAR_Prise-en-charge-du-coronarien-qui-doit-etre-opere-en-chir_59da99",
+       "2010_2_AFAR_Prise-en-charge-du-coronarien-qui-doit-etre-opere-en-chir_59da99__c0137_5eeadd67"
+      ],
+      [
+       "2012_AFAR_Examens-preinterventionnels-systematiques_a99473",
+       "2012_AFAR_Examens-preinterventionnels-systematiques_a99473__c0097_814fa038"
+      ]
+     ],
+     "usage": {
+      "prompt_tokens": 1193,
+      "completion_tokens": 77,
+      "total_tokens": 1270
+     },
+     "latency_ms": 7550.036999979056
+    },
+    {
+     "id": "MR-gae3cda1acd4e903f01fd",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "clinical_case",
+     "tags": [
+      "other"
+     ],
+     "doc_rank": null,
+     "passage_rank": null,
+     "n_retrieved": 6,
+     "doc_hit": 0.0,
+     "doc_mrr": 0.0,
+     "doc_recall": 0.0,
+     "doc_ndcg": 0.0,
+     "passage_hit": 0.0,
+     "passage_mrr": 0.0,
+     "passage_recall": 0.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 1.0,
+     "correct": 0.0,
+     "sourced": 0.0,
+     "answer": "Les recommandations SFAR fournies ne traitent pas cette question.",
+     "retrieved": [
+      [
+       "2010_2_AFAR_Prise-en-charge-du-coronarien-qui-doit-etre-opere-en-chir_59da99",
+       "2010_2_AFAR_Prise-en-charge-du-coronarien-qui-doit-etre-opere-en-chir_59da99__c0049_87927381"
+      ],
+      [
+       "2010_2_AFAR_Prise-en-charge-du-coronarien-qui-doit-etre-opere-en-chir_59da99",
+       "2010_2_AFAR_Prise-en-charge-du-coronarien-qui-doit-etre-opere-en-chir_59da99__c0046_667108fc"
+      ],
+      [
+       "2010_2_AFAR_Prise-en-charge-du-coronarien-qui-doit-etre-opere-en-chir_59da99",
+       "2010_2_AFAR_Prise-en-charge-du-coronarien-qui-doit-etre-opere-en-chir_59da99__c0075_b4d5e428"
+      ],
+      [
+       "2010_2_AFAR_Prise-en-charge-du-coronarien-qui-doit-etre-opere-en-chir_59da99",
+       "2010_2_AFAR_Prise-en-charge-du-coronarien-qui-doit-etre-opere-en-chir_59da99__c0056_58f90814"
+      ],
+      [
+       "2010_2_AFAR_Prise-en-charge-du-coronarien-qui-doit-etre-opere-en-chir_59da99",
+       "2010_2_AFAR_Prise-en-charge-du-coronarien-qui-doit-etre-opere-en-chir_59da99__c0061_ce266ff9"
+      ],
+      [
+       "2010_2_AFAR_Prise-en-charge-du-coronarien-qui-doit-etre-opere-en-chir_59da99",
+       "2010_2_AFAR_Prise-en-charge-du-coronarien-qui-doit-etre-opere-en-chir_59da99__c0074_7b50ff62"
+      ]
+     ],
+     "usage": {
+      "prompt_tokens": 2259,
+      "completion_tokens": 15,
+      "total_tokens": 2274
+     },
+     "latency_ms": 10129.66299999971
+    },
+    {
+     "id": "MR-geb9482ee3d54334a43fd",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "open",
+     "tags": [
+      "pediatric",
+      "reco",
+      "timing"
+     ],
+     "doc_rank": 1,
+     "passage_rank": 1,
+     "n_retrieved": 6,
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 0.419665006636777,
+     "passage_hit": 1.0,
+     "passage_mrr": 1.0,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 0.0,
+     "correct": 1.0,
+     "sourced": 1.0,
+     "answer": "L'intervention doit être programmée le plus tôt possible dans la matinée pour permettre une surveillance postopératoire de six heures avant la sortie [S1, S4]. La sortie est autorisée après cette surveillance de six heures, en l'absence de saignement, de vomissements, de fièvre (température < 38 °C) et avec une douleur contrôlée par des antalgiques oraux [S3].\n\nSource : Anesthésie pour amygdalectomie chez l'enfant — RFE SFAR 2005, Accord fort, édition antérieure.",
+     "retrieved": [
+      [
+       "2005_2a_SFAR_TEXTE-COURT_Anesthesie-pour-amygdalectomie-chez-lenfant_cf569a",
+       "2005_2a_SFAR_TEXTE-COURT_Anesthesie-pour-amygdalectomie-chez-lenfant_cf569a__c0026_cfb87188"
+      ],
+      [
+       "2005_2b_AFAR_TEXTE-LONG_Anesthesie-pour-amygdalectomie-chez-lenfant_f868e3",
+       "2005_2b_AFAR_TEXTE-LONG_Anesthesie-pour-amygdalectomie-chez-lenfant_f868e3__c0239_79378fe8"
+      ],
+      [
+       "2005_2b_AFAR_TEXTE-LONG_Anesthesie-pour-amygdalectomie-chez-lenfant_f868e3",
+       "2005_2b_AFAR_TEXTE-LONG_Anesthesie-pour-amygdalectomie-chez-lenfant_f868e3__c0246_4ef64dd7"
+      ],
+      [
+       "2005_2b_AFAR_TEXTE-LONG_Anesthesie-pour-amygdalectomie-chez-lenfant_f868e3",
+       "2005_2b_AFAR_TEXTE-LONG_Anesthesie-pour-amygdalectomie-chez-lenfant_f868e3__c0244_ebd2c5a0"
+      ],
+      [
+       "2005_2a_SFAR_TEXTE-COURT_Anesthesie-pour-amygdalectomie-chez-lenfant_cf569a",
+       "2005_2a_SFAR_TEXTE-COURT_Anesthesie-pour-amygdalectomie-chez-lenfant_cf569a__c0017_34a183f3"
+      ],
+      [
+       "2005_2b_AFAR_TEXTE-LONG_Anesthesie-pour-amygdalectomie-chez-lenfant_f868e3",
+       "2005_2b_AFAR_TEXTE-LONG_Anesthesie-pour-amygdalectomie-chez-lenfant_f868e3__c0109_0c23ed83"
+      ]
+     ],
+     "usage": {
+      "prompt_tokens": 2403,
+      "completion_tokens": 126,
+      "total_tokens": 2529
+     },
+     "latency_ms": 14335.695458052214
+    },
+    {
+     "id": "MR-g9dbb7b8cb49592f9fa97",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "clinical_case",
+     "tags": [
+      "other",
+      "pediatric"
+     ],
+     "doc_rank": 3,
+     "passage_rank": 3,
+     "n_retrieved": 6,
+     "doc_hit": 1.0,
+     "doc_mrr": 0.3333333333333333,
+     "doc_recall": 1.0,
+     "doc_ndcg": 0.15130120674940675,
+     "passage_hit": 1.0,
+     "passage_mrr": 0.3333333333333333,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 0.0,
+     "correct": 0.0,
+     "sourced": 1.0,
+     "answer": "Oui, chez un enfant de 2 ans, l'interrogatoire préopératoire ne peut être considéré comme fiable pour évaluer le risque hémorragique, ce qui impose la réalisation systématique d'un bilan d'hémostase [S1], [S3], [S2].\n\nSource : Anesthésie pour amygdalectomie chez l'enfant — RFE SFAR 2005, Accord fort, édition antérieure.",
+     "retrieved": [
+      [
+       "2005_2b_AFAR_TEXTE-LONG_Anesthesie-pour-amygdalectomie-chez-lenfant_f868e3",
+       "2005_2b_AFAR_TEXTE-LONG_Anesthesie-pour-amygdalectomie-chez-lenfant_f868e3__c0026_5d642639"
+      ],
+      [
+       "2005_2b_AFAR_TEXTE-LONG_Anesthesie-pour-amygdalectomie-chez-lenfant_f868e3",
+       "2005_2b_AFAR_TEXTE-LONG_Anesthesie-pour-amygdalectomie-chez-lenfant_f868e3__c0041_50102f18"
+      ],
+      [
+       "2005_2a_SFAR_TEXTE-COURT_Anesthesie-pour-amygdalectomie-chez-lenfant_cf569a",
+       "2005_2a_SFAR_TEXTE-COURT_Anesthesie-pour-amygdalectomie-chez-lenfant_cf569a__c0014_479fbc5f"
+      ],
+      [
+       "2005_2b_AFAR_TEXTE-LONG_Anesthesie-pour-amygdalectomie-chez-lenfant_f868e3",
+       "2005_2b_AFAR_TEXTE-LONG_Anesthesie-pour-amygdalectomie-chez-lenfant_f868e3__c0240_2b4592df"
+      ],
+      [
+       "2005_2b_AFAR_TEXTE-LONG_Anesthesie-pour-amygdalectomie-chez-lenfant_f868e3",
+       "2005_2b_AFAR_TEXTE-LONG_Anesthesie-pour-amygdalectomie-chez-lenfant_f868e3__c0038_d1be468f"
+      ],
+      [
+       "2005_2b_AFAR_TEXTE-LONG_Anesthesie-pour-amygdalectomie-chez-lenfant_f868e3",
+       "2005_2b_AFAR_TEXTE-LONG_Anesthesie-pour-amygdalectomie-chez-lenfant_f868e3__c0040_a1f6f3ac"
+      ]
+     ],
+     "usage": {
+      "prompt_tokens": 2382,
+      "completion_tokens": 98,
+      "total_tokens": 2480
+     },
+     "latency_ms": 13810.920165968128
+    },
+    {
+     "id": "MR-gbe3dad7d7f9b1ae34b88",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "table",
+     "tags": [
+      "icu",
+      "table"
+     ],
+     "doc_rank": 1,
+     "passage_rank": 1,
+     "n_retrieved": 2,
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 1.0,
+     "passage_hit": 1.0,
+     "passage_mrr": 1.0,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 0.0,
+     "correct": 1.0,
+     "sourced": 1.0,
+     "answer": "Surveillez l'hypokaliémie, l'hypomagnésémie, l'insuffisance rénale, la fièvre, les frissons lors de l'injection et la cytopénie [S1].\n\nSource : Prise en charge des candidoses et aspergilloses invasives de l'adulte — RFE SFAR 2004 [EN VIGUEUR], avis d'experts.",
+     "retrieved": [
+      [
+       "2004_2_SFAR_Prise-en-charge-des-candidoses-et-aspergilloses-invasives_d7c8a9",
+       "2004_2_SFAR_Prise-en-charge-des-candidoses-et-aspergilloses-invasives_d7c8a9__c0020_3b6504f9"
+      ],
+      [
+       "2004_2_SFAR_Prise-en-charge-des-candidoses-et-aspergilloses-invasives_d7c8a9",
+       "2004_2_SFAR_Prise-en-charge-des-candidoses-et-aspergilloses-invasives_d7c8a9__c0019_5979ac71"
+      ]
+     ],
+     "usage": {
+      "prompt_tokens": 985,
+      "completion_tokens": 94,
+      "total_tokens": 1079
+     },
+     "latency_ms": 7283.326458011288
+    }
+   ]
+  },
+  {
+   "config": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true",
+   "config_params": {
+    "name": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true",
+    "chunking_strategy": "table_aware_sota",
+    "use_bm25": true,
+    "use_subword": false,
+    "use_dense": true,
+    "bm25_weight": 1.0,
+    "subword_weight": 0.65,
+    "dense_weight": 1.0,
+    "rrf_k": 60,
+    "use_dbsf_fusion": false,
+    "dbsf_blend": 0.35,
+    "use_crag_multihop": false,
+    "use_u_shape_ordering": true,
+    "use_context_pruning": true,
+    "use_medical_lexicon": false,
+    "use_query_router": true,
+    "exclude_references": true,
+    "prefer_french": true,
+    "latest_edition_only": true,
+    "exclude_abrogated": true,
+    "use_soft_metadata_boost": false,
+    "use_hard_subdomain_filter": false,
+    "use_reranker": true,
+    "initial_candidates": 45,
+    "rerank_top_k": 24,
+    "final_top_k": 16,
+    "dedup_by_content": true,
+    "max_chunks_per_doc": 7,
+    "expand_neighbors": false,
+    "expand_section_callouts": false,
+    "max_context_chars": 16000,
+    "context_window": 1,
+    "context_window_top": 8,
+    "expand_table_parent": true,
+    "context_char_budget": 30000,
+    "domain_boost": 0.18,
+    "population_boost": 0.25,
+    "population_mismatch_penalty": 0.35,
+    "setting_boost": 0.2,
+    "role_boost_map": {
+     "recommandation": 0.12,
+     "texte_court": 0.12,
+     "tableaux_synthese": 0.15,
+     "algorithme": 0.1,
+     "aide_cognitive": 0.08,
+     "argumentaire": -0.04,
+     "annexe": -0.05
+    },
+    "table_card_boost": 0.1
+   },
+   "summary": {
+    "n": 12,
+    "passage_hit_curve": {
+     "1": 0.6666666666666666,
+     "3": 0.75,
+     "5": 0.8333333333333334,
+     "8": 0.8333333333333334,
+     "12": 0.8333333333333334,
+     "16": 0.8333333333333334,
+     "20": 0.8333333333333334
+    },
+    "doc_hit_curve": {
+     "1": 0.8333333333333334,
+     "3": 0.8333333333333334,
+     "5": 0.9166666666666666,
+     "8": 0.9166666666666666,
+     "12": 0.9166666666666666,
+     "16": 0.9166666666666666,
+     "20": 0.9166666666666666
+    },
+    "doc_hit": {
+     "mean": 0.9166666666666666,
+     "ci_low": 0.75,
+     "ci_high": 1.0,
+     "n": 12
+    },
+    "doc_mrr": {
+     "mean": 0.85,
+     "ci_low": 0.6333333333333333,
+     "ci_high": 1.0,
+     "n": 12
+    },
+    "doc_recall": {
+     "mean": 0.9166666666666666,
+     "ci_low": 0.75,
+     "ci_high": 1.0,
+     "n": 12
+    },
+    "doc_ndcg": {
+     "mean": 0.6958538394269062,
+     "ci_low": 0.511847636781347,
+     "ci_high": 0.873380819919437,
+     "n": 12
+    },
+    "passage_hit": {
+     "mean": 0.8333333333333334,
+     "ci_low": 0.5833333333333334,
+     "ci_high": 1.0,
+     "n": 12
+    },
+    "passage_mrr": {
+     "mean": 0.725,
+     "ci_low": 0.4916666666666667,
+     "ci_high": 0.9333333333333332,
+     "n": 12
+    },
+    "passage_recall": {
+     "mean": 0.8333333333333334,
+     "ci_low": 0.5833333333333334,
+     "ci_high": 1.0,
+     "n": 12
+    },
+    "obsolete_intrusion": {
+     "mean": 0.0,
+     "ci_low": 0.0,
+     "ci_high": 0.0,
+     "n": 12
+    },
+    "answer_terms_in_context": {
+     "mean": 0.8333333333333334,
+     "ci_low": 0.5833333333333334,
+     "ci_high": 1.0,
+     "n": 12
+    },
+    "correct": {
+     "mean": 0.6666666666666666,
+     "ci_low": 0.4166666666666667,
+     "ci_high": 0.9166666666666666,
+     "n": 12
+    },
+    "false_abstention": {
+     "mean": 0.3333333333333333,
+     "ci_low": 0.08333333333333333,
+     "ci_high": 0.5833333333333334,
+     "n": 12
+    },
+    "sourced": {
+     "mean": 0.8333333333333334,
+     "ci_low": 0.5833333333333334,
+     "ci_high": 1.0,
+     "n": 12
+    },
+    "latency_ms": {
+     "mean": 19542.01318398312,
+     "ci_low": 16245.821527559505,
+     "ci_high": 22885.211864559096,
+     "n": 12
+    },
+    "by_question_type": {
+     "clinical_case": {
+      "doc_hit": {
+       "mean": 0.8,
+       "ci_low": 0.4,
+       "ci_high": 1.0,
+       "n": 5
+      },
+      "doc_mrr": {
+       "mean": 0.64,
+       "ci_low": 0.24,
+       "ci_high": 1.0,
+       "n": 5
+      },
+      "doc_recall": {
+       "mean": 0.8,
+       "ci_low": 0.4,
+       "ci_high": 1.0,
+       "n": 5
+      },
+      "doc_ndcg": {
+       "mean": 0.47263990275347556,
+       "ci_low": 0.17988139812997958,
+       "ci_high": 0.7437790300464886,
+       "n": 5
+      },
+      "passage_hit": {
+       "mean": 0.6,
+       "ci_low": 0.2,
+       "ci_high": 1.0,
+       "n": 5
+      },
+      "passage_mrr": {
+       "mean": 0.44000000000000006,
+       "ci_low": 0.04,
+       "ci_high": 0.8400000000000001,
+       "n": 5
+      },
+      "passage_recall": {
+       "mean": 0.6,
+       "ci_low": 0.2,
+       "ci_high": 1.0,
+       "n": 5
+      },
+      "obsolete_intrusion": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 5
+      },
+      "answer_terms_in_context": {
+       "mean": 0.6,
+       "ci_low": 0.2,
+       "ci_high": 1.0,
+       "n": 5
+      },
+      "correct": {
+       "mean": 0.4,
+       "ci_low": 0.0,
+       "ci_high": 0.8,
+       "n": 5
+      },
+      "false_abstention": {
+       "mean": 0.6,
+       "ci_low": 0.2,
+       "ci_high": 1.0,
+       "n": 5
+      },
+      "sourced": {
+       "mean": 0.6,
+       "ci_low": 0.2,
+       "ci_high": 1.0,
+       "n": 5
+      },
+      "n": 5
+     },
+     "open": {
+      "doc_hit": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 5
+      },
+      "doc_mrr": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 5
+      },
+      "doc_recall": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 5
+      },
+      "doc_ndcg": {
+       "mean": 0.8771468250306474,
+       "ci_low": 0.6961139678066489,
+       "ci_high": 1.0,
+       "n": 5
+      },
+      "passage_hit": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 5
+      },
+      "passage_mrr": {
+       "mean": 0.9,
+       "ci_low": 0.7,
+       "ci_high": 1.0,
+       "n": 5
+      },
+      "passage_recall": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 5
+      },
+      "obsolete_intrusion": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 5
+      },
+      "answer_terms_in_context": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 5
+      },
+      "correct": {
+       "mean": 0.8,
+       "ci_low": 0.4,
+       "ci_high": 1.0,
+       "n": 5
+      },
+      "false_abstention": {
+       "mean": 0.2,
+       "ci_low": 0.0,
+       "ci_high": 0.6,
+       "n": 5
+      },
+      "sourced": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 5
+      },
+      "n": 5
+     },
+     "table": {
+      "doc_hit": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 2
+      },
+      "doc_mrr": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 2
+      },
+      "doc_recall": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 2
+      },
+      "doc_ndcg": {
+       "mean": 0.8006562171011296,
+       "ci_low": 0.6013124342022591,
+       "ci_high": 1.0,
+       "n": 2
+      },
+      "passage_hit": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 2
+      },
+      "passage_mrr": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 2
+      },
+      "passage_recall": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 2
+      },
+      "obsolete_intrusion": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 2
+      },
+      "answer_terms_in_context": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 2
+      },
+      "correct": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 2
+      },
+      "false_abstention": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 2
+      },
+      "sourced": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 2
+      },
+      "n": 2
+     }
+    },
+    "by_tag": {
+     "contraindication": {
+      "doc_hit": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 1
+      },
+      "doc_mrr": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 1
+      },
+      "doc_recall": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 1
+      },
+      "doc_ndcg": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 1
+      },
+      "passage_hit": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 1
+      },
+      "passage_mrr": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 1
+      },
+      "passage_recall": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 1
+      },
+      "obsolete_intrusion": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 1
+      },
+      "answer_terms_in_context": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 1
+      },
+      "correct": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 1
+      },
+      "false_abstention": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 1
+      },
+      "sourced": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 1
+      },
+      "n": 1
+     },
+     "emergency": {
+      "doc_hit": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 3
+      },
+      "doc_mrr": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 3
+      },
+      "doc_recall": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 3
+      },
+      "doc_ndcg": {
+       "mean": 0.8311744265592494,
+       "ci_low": 0.6013124342022591,
+       "ci_high": 1.0,
+       "n": 3
+      },
+      "passage_hit": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 3
+      },
+      "passage_mrr": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 3
+      },
+      "passage_recall": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 3
+      },
+      "obsolete_intrusion": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 3
+      },
+      "answer_terms_in_context": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 3
+      },
+      "correct": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 3
+      },
+      "false_abstention": {
+       "mean": 0.3333333333333333,
+       "ci_low": 0.0,
+       "ci_high": 1.0,
+       "n": 3
+      },
+      "sourced": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 3
+      },
+      "n": 3
+     },
+     "icu": {
+      "doc_hit": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 4
+      },
+      "doc_mrr": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 4
+      },
+      "doc_recall": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 4
+      },
+      "doc_ndcg": {
+       "mean": 0.9112061216067887,
+       "ci_low": 0.7336183648203662,
+       "ci_high": 1.0,
+       "n": 4
+      },
+      "passage_hit": {
+       "mean": 0.75,
+       "ci_low": 0.25,
+       "ci_high": 1.0,
+       "n": 4
+      },
+      "passage_mrr": {
+       "mean": 0.625,
+       "ci_low": 0.25,
+       "ci_high": 1.0,
+       "n": 4
+      },
+      "passage_recall": {
+       "mean": 0.75,
+       "ci_low": 0.25,
+       "ci_high": 1.0,
+       "n": 4
+      },
+      "obsolete_intrusion": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 4
+      },
+      "answer_terms_in_context": {
+       "mean": 0.75,
+       "ci_low": 0.25,
+       "ci_high": 1.0,
+       "n": 4
+      },
+      "correct": {
+       "mean": 0.75,
+       "ci_low": 0.25,
+       "ci_high": 1.0,
+       "n": 4
+      },
+      "false_abstention": {
+       "mean": 0.5,
+       "ci_low": 0.0,
+       "ci_high": 1.0,
+       "n": 4
+      },
+      "sourced": {
+       "mean": 0.75,
+       "ci_low": 0.25,
+       "ci_high": 1.0,
+       "n": 4
+      },
+      "n": 4
+     },
+     "other": {
+      "doc_hit": {
+       "mean": 0.8,
+       "ci_low": 0.4,
+       "ci_high": 1.0,
+       "n": 5
+      },
+      "doc_mrr": {
+       "mean": 0.64,
+       "ci_low": 0.24,
+       "ci_high": 1.0,
+       "n": 5
+      },
+      "doc_recall": {
+       "mean": 0.8,
+       "ci_low": 0.4,
+       "ci_high": 1.0,
+       "n": 5
+      },
+      "doc_ndcg": {
+       "mean": 0.47263990275347556,
+       "ci_low": 0.17988139812997958,
+       "ci_high": 0.7437790300464886,
+       "n": 5
+      },
+      "passage_hit": {
+       "mean": 0.6,
+       "ci_low": 0.2,
+       "ci_high": 1.0,
+       "n": 5
+      },
+      "passage_mrr": {
+       "mean": 0.44000000000000006,
+       "ci_low": 0.04,
+       "ci_high": 0.8400000000000001,
+       "n": 5
+      },
+      "passage_recall": {
+       "mean": 0.6,
+       "ci_low": 0.2,
+       "ci_high": 1.0,
+       "n": 5
+      },
+      "obsolete_intrusion": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 5
+      },
+      "answer_terms_in_context": {
+       "mean": 0.6,
+       "ci_low": 0.2,
+       "ci_high": 1.0,
+       "n": 5
+      },
+      "correct": {
+       "mean": 0.4,
+       "ci_low": 0.0,
+       "ci_high": 0.8,
+       "n": 5
+      },
+      "false_abstention": {
+       "mean": 0.6,
+       "ci_low": 0.2,
+       "ci_high": 1.0,
+       "n": 5
+      },
+      "sourced": {
+       "mean": 0.6,
+       "ci_low": 0.2,
+       "ci_high": 1.0,
+       "n": 5
+      },
+      "n": 5
+     },
+     "pediatric": {
+      "doc_hit": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 3
+      },
+      "doc_mrr": {
+       "mean": 0.7333333333333334,
+       "ci_low": 0.20000000000000004,
+       "ci_high": 1.0,
+       "n": 3
+      },
+      "doc_recall": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 3
+      },
+      "doc_ndcg": {
+       "mean": 0.5727916757800743,
+       "ci_low": 0.22485174766247448,
+       "ci_high": 1.0,
+       "n": 3
+      },
+      "passage_hit": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 3
+      },
+      "passage_mrr": {
+       "mean": 0.5666666666666667,
+       "ci_low": 0.20000000000000004,
+       "ci_high": 1.0,
+       "n": 3
+      },
+      "passage_recall": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 3
+      },
+      "obsolete_intrusion": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 3
+      },
+      "answer_terms_in_context": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 3
+      },
+      "correct": {
+       "mean": 0.6666666666666666,
+       "ci_low": 0.0,
+       "ci_high": 1.0,
+       "n": 3
+      },
+      "false_abstention": {
+       "mean": 0.3333333333333333,
+       "ci_low": 0.0,
+       "ci_high": 1.0,
+       "n": 3
+      },
+      "sourced": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 3
+      },
+      "n": 3
+     },
+     "reco": {
+      "doc_hit": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 5
+      },
+      "doc_mrr": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 5
+      },
+      "doc_recall": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 5
+      },
+      "doc_ndcg": {
+       "mean": 0.8771468250306474,
+       "ci_low": 0.6961139678066489,
+       "ci_high": 1.0,
+       "n": 5
+      },
+      "passage_hit": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 5
+      },
+      "passage_mrr": {
+       "mean": 0.9,
+       "ci_low": 0.7,
+       "ci_high": 1.0,
+       "n": 5
+      },
+      "passage_recall": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 5
+      },
+      "obsolete_intrusion": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 5
+      },
+      "answer_terms_in_context": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 5
+      },
+      "correct": {
+       "mean": 0.8,
+       "ci_low": 0.4,
+       "ci_high": 1.0,
+       "n": 5
+      },
+      "false_abstention": {
+       "mean": 0.2,
+       "ci_low": 0.0,
+       "ci_high": 0.6,
+       "n": 5
+      },
+      "sourced": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 5
+      },
+      "n": 5
+     },
+     "table": {
+      "doc_hit": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 2
+      },
+      "doc_mrr": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 2
+      },
+      "doc_recall": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 2
+      },
+      "doc_ndcg": {
+       "mean": 0.8006562171011296,
+       "ci_low": 0.6013124342022591,
+       "ci_high": 1.0,
+       "n": 2
+      },
+      "passage_hit": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 2
+      },
+      "passage_mrr": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 2
+      },
+      "passage_recall": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 2
+      },
+      "obsolete_intrusion": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 2
+      },
+      "answer_terms_in_context": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 2
+      },
+      "correct": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 2
+      },
+      "false_abstention": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 2
+      },
+      "sourced": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 2
+      },
+      "n": 2
+     },
+     "threshold": {
+      "doc_hit": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 2
+      },
+      "doc_mrr": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 2
+      },
+      "doc_recall": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 2
+      },
+      "doc_ndcg": {
+       "mean": 0.623068460314707,
+       "ci_low": 0.6013124342022591,
+       "ci_high": 0.644824486427155,
+       "n": 2
+      },
+      "passage_hit": {
+       "mean": 0.5,
+       "ci_low": 0.0,
+       "ci_high": 1.0,
+       "n": 2
+      },
+      "passage_mrr": {
+       "mean": 0.5,
+       "ci_low": 0.0,
+       "ci_high": 1.0,
+       "n": 2
+      },
+      "passage_recall": {
+       "mean": 0.5,
+       "ci_low": 0.0,
+       "ci_high": 1.0,
+       "n": 2
+      },
+      "obsolete_intrusion": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 2
+      },
+      "answer_terms_in_context": {
+       "mean": 0.5,
+       "ci_low": 0.0,
+       "ci_high": 1.0,
+       "n": 2
+      },
+      "correct": {
+       "mean": 0.5,
+       "ci_low": 0.0,
+       "ci_high": 1.0,
+       "n": 2
+      },
+      "false_abstention": {
+       "mean": 0.5,
+       "ci_low": 0.0,
+       "ci_high": 1.0,
+       "n": 2
+      },
+      "sourced": {
+       "mean": 0.5,
+       "ci_low": 0.0,
+       "ci_high": 1.0,
+       "n": 2
+      },
+      "n": 2
+     },
+     "timing": {
+      "doc_hit": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 1
+      },
+      "doc_mrr": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 1
+      },
+      "doc_recall": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 1
+      },
+      "doc_ndcg": {
+       "mean": 0.4935232796777482,
+       "ci_low": 0.4935232796777482,
+       "ci_high": 0.4935232796777482,
+       "n": 1
+      },
+      "passage_hit": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 1
+      },
+      "passage_mrr": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 1
+      },
+      "passage_recall": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 1
+      },
+      "obsolete_intrusion": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 1
+      },
+      "answer_terms_in_context": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 1
+      },
+      "correct": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 1
+      },
+      "false_abstention": {
+       "mean": 0.0,
+       "ci_low": 0.0,
+       "ci_high": 0.0,
+       "n": 1
+      },
+      "sourced": {
+       "mean": 1.0,
+       "ci_low": 1.0,
+       "ci_high": 1.0,
+       "n": 1
+      },
+      "n": 1
+     }
+    }
+   },
+   "rows": [
+    {
+     "id": "MR-g3b9708b3518cddf9bccf",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "open",
+     "tags": [
+      "emergency",
+      "reco"
+     ],
+     "doc_rank": 1,
+     "passage_rank": 1,
+     "n_retrieved": 6,
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 1.0,
+     "passage_hit": 1.0,
+     "passage_mrr": 1.0,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 0.0,
+     "correct": 1.0,
+     "sourced": 1.0,
+     "answer": "Les recommandations SFAR autorisent le retour à domicile d'un patient sous anticoagulant avec un scanner cérébral normal, à condition qu'il remplisse l'ensemble des critères suivants : absence d'intoxication associée, absence de vomissements itératifs, absence de céphalées importantes persistantes, Score de Glasgow à 15, absence de déficit neurologique et absence d'autres motifs justifiant une hospitalisation [S1].\n\nSource : Prise en charge des patients présentant un traumatisme crânien léger de l'adulte — RPP SFAR 2022, Avis d'experts (Accord Fort), édition antérieure.",
+     "retrieved": [
+      [
+       "2022_RPP-Trauma-cranien-leger_pour-mise-sur-site_autorship-complet_9c1d68",
+       "2022_RPP-Trauma-cranien-leger_pour-mise-sur-site_autorship-complet_9c1d68__c0063_a5501c29"
+      ],
+      [
+       "2022_RPP-Trauma-cranien-leger_pour-mise-sur-site_autorship-complet_9c1d68",
+       "2022_RPP-Trauma-cranien-leger_pour-mise-sur-site_autorship-complet_9c1d68__c0062_bbaf17b9"
+      ],
+      [
+       "2022_RPP-Trauma-cranien-leger_pour-mise-sur-site_autorship-complet_9c1d68",
+       "2022_RPP-Trauma-cranien-leger_pour-mise-sur-site_autorship-complet_9c1d68__c0064_4d2e8507"
+      ],
+      [
+       "2022_RPP-Trauma-cranien-leger_pour-mise-sur-site_autorship-complet_9c1d68",
+       "2022_RPP-Trauma-cranien-leger_pour-mise-sur-site_autorship-complet_9c1d68__c0023_40697eec"
+      ],
+      [
+       "2022_RPP-Trauma-cranien-leger_pour-mise-sur-site_autorship-complet_9c1d68",
+       "2022_RPP-Trauma-cranien-leger_pour-mise-sur-site_autorship-complet_9c1d68__c0022_cb2e0f9a"
+      ],
+      [
+       "2022_RPP-Trauma-cranien-leger_pour-mise-sur-site_autorship-complet_9c1d68",
+       "2022_RPP-Trauma-cranien-leger_pour-mise-sur-site_autorship-complet_9c1d68__c0024_77837caa"
+      ]
+     ],
+     "usage": {
+      "prompt_tokens": 2249,
+      "completion_tokens": 139,
+      "total_tokens": 2388
+     },
+     "latency_ms": 13394.581083965022
+    },
+    {
+     "id": "MR-gfff2848a70957ac0b7b5",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "clinical_case",
+     "tags": [
+      "emergency",
+      "other"
+     ],
+     "doc_rank": 1,
+     "passage_rank": 1,
+     "n_retrieved": 6,
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 0.8922108454754891,
+     "passage_hit": 1.0,
+     "passage_mrr": 1.0,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 0.0,
+     "correct": 1.0,
+     "sourced": 1.0,
+     "answer": "Pratiquer un scanner cérébral avec injection devant les signes cliniques évocateurs de dissection carotidienne, tels qu'un syndrome de Claude Bernard Horner et une fracture du rachis cervical [S1], [S3], [S6].\n\nSource : Prise en charge des patients présentant un traumatisme crânien léger de l’adulte — RPP SFAR 2022 [EN VIGUEUR] ; Prise en charge des traumatisés crâniens graves à la phase précoce (24 premières heures) — RFE SFAR 2016 [EN VIGUEUR]",
+     "retrieved": [
+      [
+       "2022_RPP-Trauma-cranien-leger_pour-mise-sur-site_autorship-complet_9c1d68",
+       "2022_RPP-Trauma-cranien-leger_pour-mise-sur-site_autorship-complet_9c1d68__c0031_c5550085"
+      ],
+      [
+       "2022_RPP-Trauma-cranien-leger_pour-mise-sur-site_autorship-complet_9c1d68",
+       "2022_RPP-Trauma-cranien-leger_pour-mise-sur-site_autorship-complet_9c1d68__c0030_ac70536b"
+      ],
+      [
+       "2022_RPP-Trauma-cranien-leger_pour-mise-sur-site_autorship-complet_9c1d68",
+       "2022_RPP-Trauma-cranien-leger_pour-mise-sur-site_autorship-complet_9c1d68__c0049_aaf8b4cb"
+      ],
+      [
+       "2022_RPP-Trauma-cranien-leger_pour-mise-sur-site_autorship-complet_9c1d68",
+       "2022_RPP-Trauma-cranien-leger_pour-mise-sur-site_autorship-complet_9c1d68__c0048_f788d039"
+      ],
+      [
+       "2022_RPP-Trauma-cranien-leger_pour-mise-sur-site_autorship-complet_9c1d68",
+       "2022_RPP-Trauma-cranien-leger_pour-mise-sur-site_autorship-complet_9c1d68__c0050_14bef458"
+      ],
+      [
+       "2016_RFE-ANREA-Prise-en-charge-des-traumatises-craniens-graves-a-la-p_966f8c",
+       "2016_RFE-ANREA-Prise-en-charge-des-traumatises-craniens-graves-a-la-p_966f8c__c0040_18b95883"
+      ]
+     ],
+     "usage": {
+      "prompt_tokens": 2310,
+      "completion_tokens": 132,
+      "total_tokens": 2442
+     },
+     "latency_ms": 14108.319040969945
+    },
+    {
+     "id": "MR-g8f23afa63325b0d08bd8",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "clinical_case",
+     "tags": [
+      "emergency",
+      "other"
+     ],
+     "doc_rank": 1,
+     "passage_rank": 1,
+     "n_retrieved": 6,
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 0.6013124342022591,
+     "passage_hit": 1.0,
+     "passage_mrr": 1.0,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 1.0,
+     "correct": 1.0,
+     "sourced": 1.0,
+     "answer": "En cas d'hémopéritoine abondant à la FAST chez un patient dont l'état ne permet pas de passer au scanner, il est recommandé de procéder à un traitement opératoire précoce [S1], [S6].\n\nSource : Prise en charge du traumatisme abdominal grave de l’adulte : les 48 premières heures — RFE SFAR 2019 [EN VIGUEUR]",
+     "retrieved": [
+      [
+       "2019_rfe-trauma-abdominal-fiche-synthese_4abf14",
+       "2019_rfe-trauma-abdominal-fiche-synthese_4abf14__c0002_56954172"
+      ],
+      [
+       "2019_rfe-trauma-abdominal-fiche-synthese_4abf14",
+       "2019_rfe-trauma-abdominal-fiche-synthese_4abf14__c0001_39b35a32"
+      ],
+      [
+       "2019_rfe-trauma-abdominale_656ac9",
+       "2019_rfe-trauma-abdominale_656ac9__c0031_f775ce4b"
+      ],
+      [
+       "2019_rfe-trauma-abdominale_656ac9",
+       "2019_rfe-trauma-abdominale_656ac9__c0030_e1f33c3f"
+      ],
+      [
+       "2019_rfe-trauma-abdominale_656ac9",
+       "2019_rfe-trauma-abdominale_656ac9__c0032_92ce87d1"
+      ],
+      [
+       "2019_rfe-trauma-abdominal-fiche-synthese_4abf14",
+       "2019_rfe-trauma-abdominal-fiche-synthese_4abf14__c0003_fbba5ee4"
+      ]
+     ],
+     "usage": {
+      "prompt_tokens": 2564,
+      "completion_tokens": 90,
+      "total_tokens": 2654
+     },
+     "latency_ms": 15825.438625004608
+    },
+    {
+     "id": "MR-g8e54d9655989718c1639",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "open",
+     "tags": [
+      "contraindication",
+      "icu",
+      "reco"
+     ],
+     "doc_rank": 1,
+     "passage_rank": 1,
+     "n_retrieved": 6,
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 1.0,
+     "passage_hit": 1.0,
+     "passage_mrr": 1.0,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 0.0,
+     "correct": 1.0,
+     "sourced": 1.0,
+     "answer": "Non, il ne faut probablement pas pratiquer d'hypothermie chez ce patient, en comparaison avec une normothermie, dans le but d'améliorer la survie avec un bon pronostic neurologique [S2].\n\nSource : Contrôle cible de la température en réanimation (hors nouveau-nés) — RFE SFAR 2016 [EN VIGUEUR], Avis d'experts.",
+     "retrieved": [
+      [
+       "2016_rfe-controle-cible-de-la-temperature-en-reanimation_a712c2",
+       "2016_rfe-controle-cible-de-la-temperature-en-reanimation_a712c2__c0069_a04341d3"
+      ],
+      [
+       "2016_rfe-controle-cible-de-la-temperature-en-reanimation_a712c2",
+       "2016_rfe-controle-cible-de-la-temperature-en-reanimation_a712c2__c0068_eae15f34"
+      ],
+      [
+       "2016_rfe-controle-cible-de-la-temperature-en-reanimation_a712c2",
+       "2016_rfe-controle-cible-de-la-temperature-en-reanimation_a712c2__c0067_83da1bfc"
+      ],
+      [
+       "2016_rfe-controle-cible-de-la-temperature-en-reanimation_a712c2",
+       "2016_rfe-controle-cible-de-la-temperature-en-reanimation_a712c2__c0059_cfc08ec0"
+      ],
+      [
+       "2016_rfe-controle-cible-de-la-temperature-en-reanimation_a712c2",
+       "2016_rfe-controle-cible-de-la-temperature-en-reanimation_a712c2__c0058_b989bdd6"
+      ],
+      [
+       "2016_rfe-controle-cible-de-la-temperature-en-reanimation_a712c2",
+       "2016_rfe-controle-cible-de-la-temperature-en-reanimation_a712c2__c0060_f9642b49"
+      ]
+     ],
+     "usage": {
+      "prompt_tokens": 2209,
+      "completion_tokens": 89,
+      "total_tokens": 2298
+     },
+     "latency_ms": 12465.688332973514
+    },
+    {
+     "id": "MR-gd1b252c6b18be4bca7b6",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "clinical_case",
+     "tags": [
+      "icu",
+      "other",
+      "threshold"
+     ],
+     "doc_rank": 1,
+     "passage_rank": null,
+     "n_retrieved": 6,
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 0.644824486427155,
+     "passage_hit": 0.0,
+     "passage_mrr": 0.0,
+     "passage_recall": 0.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 0.0,
+     "false_abstention": 1.0,
+     "correct": 0.0,
+     "sourced": 0.0,
+     "answer": "Les recommandations SFAR fournies ne traitent pas cette question.",
+     "retrieved": [
+      [
+       "2016_rfe-controle-cible-de-la-temperature-en-reanimation_a712c2",
+       "2016_rfe-controle-cible-de-la-temperature-en-reanimation_a712c2__c0045_3b3c1972"
+      ],
+      [
+       "2016_rfe-controle-cible-de-la-temperature-en-reanimation_a712c2",
+       "2016_rfe-controle-cible-de-la-temperature-en-reanimation_a712c2__c0044_12e3f302"
+      ],
+      [
+       "2016_rfe-controle-cible-de-la-temperature-en-reanimation_a712c2",
+       "2016_rfe-controle-cible-de-la-temperature-en-reanimation_a712c2__c0046_4e98b6b3"
+      ],
+      [
+       "2016_RFE-ANREA-Prise-en-charge-des-traumatises-craniens-graves-a-la-p_966f8c",
+       "2016_RFE-ANREA-Prise-en-charge-des-traumatises-craniens-graves-a-la-p_966f8c__c0102_6bfdc99e"
+      ],
+      [
+       "2016_RFE-ANREA-Prise-en-charge-des-traumatises-craniens-graves-a-la-p_966f8c",
+       "2016_RFE-ANREA-Prise-en-charge-des-traumatises-craniens-graves-a-la-p_966f8c__c0101_91074404"
+      ],
+      [
+       "2016_RFE-ANREA-Prise-en-charge-des-traumatises-craniens-graves-a-la-p_966f8c",
+       "2016_RFE-ANREA-Prise-en-charge-des-traumatises-craniens-graves-a-la-p_966f8c__c0103_94114bc7"
+      ]
+     ],
+     "usage": {
+      "prompt_tokens": 2336,
+      "completion_tokens": 15,
+      "total_tokens": 2351
+     },
+     "latency_ms": 14196.618832997046
+    },
+    {
+     "id": "MR-gd9a325c36650ee68a17f",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "open",
+     "tags": [
+      "icu",
+      "pediatric",
+      "reco"
+     ],
+     "doc_rank": 1,
+     "passage_rank": 2,
+     "n_retrieved": 6,
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 1.0,
+     "passage_hit": 1.0,
+     "passage_mrr": 0.5,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 1.0,
+     "correct": 1.0,
+     "sourced": 1.0,
+     "answer": "Les recommandations SFAR indiquent que les données adultes sur le CCT peuvent être transposées aux enfants pour les états de mal épileptique réfractaire ou superréfractaire, mais elles ne mentionnent pas de transposition pour le CCT visant la normothermie, car les experts jugent qu'il n'existe pas de littérature suffisante pour émettre de recommandation sur l'hypothermie dans ces indications [S2], [S6].\n\nSource : Contrôle ciblé de la température en réanimation (hors nouveau-nés) — RFE SFAR 2016, Avis d'experts, édition antérieure.",
+     "retrieved": [
+      [
+       "2016_rfe-controle-cible-de-la-temperature-en-reanimation_a712c2",
+       "2016_rfe-controle-cible-de-la-temperature-en-reanimation_a712c2__c0061_45d75faf"
+      ],
+      [
+       "2016_rfe-controle-cible-de-la-temperature-en-reanimation_a712c2",
+       "2016_rfe-controle-cible-de-la-temperature-en-reanimation_a712c2__c0072_94bc0cd9"
+      ],
+      [
+       "2016_rfe-controle-cible-de-la-temperature-en-reanimation_a712c2",
+       "2016_rfe-controle-cible-de-la-temperature-en-reanimation_a712c2__c0073_e8c7c7eb"
+      ],
+      [
+       "2016_rfe-controle-cible-de-la-temperature-en-reanimation_a712c2",
+       "2016_rfe-controle-cible-de-la-temperature-en-reanimation_a712c2__c0005_fca41be5"
+      ],
+      [
+       "2016_rfe-controle-cible-de-la-temperature-en-reanimation_a712c2",
+       "2016_rfe-controle-cible-de-la-temperature-en-reanimation_a712c2__c0004_1c1e06b3"
+      ],
+      [
+       "2016_rfe-controle-cible-de-la-temperature-en-reanimation_a712c2",
+       "2016_rfe-controle-cible-de-la-temperature-en-reanimation_a712c2__c0006_975d3100"
+      ]
+     ],
+     "usage": {
+      "prompt_tokens": 2610,
+      "completion_tokens": 139,
+      "total_tokens": 2749
+     },
+     "latency_ms": 29084.22429196071
+    },
+    {
+     "id": "MR-ge6178ab7ed0b124f3edc",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "open",
+     "tags": [
+      "reco"
+     ],
+     "doc_rank": 1,
+     "passage_rank": 1,
+     "n_retrieved": 6,
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 0.8922108454754891,
+     "passage_hit": 1.0,
+     "passage_mrr": 1.0,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 0.0,
+     "correct": 0.0,
+     "sourced": 1.0,
+     "answer": "Non, il n'est pas recommandé de prescrire systématiquement une radiographie de thorax préinterventionnelle en chirurgie non cardiothoracique, quel que soit l'âge du patient, sauf en cas de pathologie cardiopulmonaire évolutive ou aiguë [S1].\n\nSource : Examens pré-interventionnels systématiques — RFE SFAR 2012 [EN VIGUEUR], avis d'experts.",
+     "retrieved": [
+      [
+       "2012_AFAR_Examens-preinterventionnels-systematiques_a99473",
+       "2012_AFAR_Examens-preinterventionnels-systematiques_a99473__c0024_72ff7ec5"
+      ],
+      [
+       "2012_AFAR_Examens-preinterventionnels-systematiques_a99473",
+       "2012_AFAR_Examens-preinterventionnels-systematiques_a99473__c0023_dc820440"
+      ],
+      [
+       "2012_AFAR_Examens-preinterventionnels-systematiques_a99473",
+       "2012_AFAR_Examens-preinterventionnels-systematiques_a99473__c0027_6af57834"
+      ],
+      [
+       "2012_AFAR_Examens-preinterventionnels-systematiques_a99473",
+       "2012_AFAR_Examens-preinterventionnels-systematiques_a99473__c0026_baa8dc26"
+      ],
+      [
+       "2012_AFAR_Examens-preinterventionnels-systematiques_a99473",
+       "2012_AFAR_Examens-preinterventionnels-systematiques_a99473__c0028_209e5219"
+      ],
+      [
+       "2010_2_AFAR_Prise-en-charge-du-coronarien-qui-doit-etre-opere-en-chir_59da99",
+       "2010_2_AFAR_Prise-en-charge-du-coronarien-qui-doit-etre-opere-en-chir_59da99__c0152_a7c6d0c4"
+      ]
+     ],
+     "usage": {
+      "prompt_tokens": 2148,
+      "completion_tokens": 96,
+      "total_tokens": 2244
+     },
+     "latency_ms": 20355.43100000359
+    },
+    {
+     "id": "MR-g2c188878f4fca6996f4b",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "table",
+     "tags": [
+      "table",
+      "threshold"
+     ],
+     "doc_rank": 1,
+     "passage_rank": 1,
+     "n_retrieved": 6,
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 0.6013124342022591,
+     "passage_hit": 1.0,
+     "passage_mrr": 1.0,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 0.0,
+     "correct": 1.0,
+     "sourced": 1.0,
+     "answer": "Une endartériectomie carotidienne se situe dans la catégorie de risque intermédiaire (1 % à 5 %) pour les complications cardiaques (décès ou infarctus) en chirurgie non cardiaque, selon la stratification du risque cardiaque [S1], [S6].\n\nSource : Recommandations de la Société Française d'Anesthésie et de Réanimation (SFAR) sur les examens pré-interventionnels systématiques et la prise en charge du coronarien en chirurgie non cardiaque, RFE SFAR 2012 et 2010.",
+     "retrieved": [
+      [
+       "2012_AFAR_Examens-preinterventionnels-systematiques_a99473",
+       "2012_AFAR_Examens-preinterventionnels-systematiques_a99473__c0099_bcde3f7b"
+      ],
+      [
+       "2012_AFAR_Examens-preinterventionnels-systematiques_a99473",
+       "2012_AFAR_Examens-preinterventionnels-systematiques_a99473__c0098_8f8240da"
+      ],
+      [
+       "2010_2_AFAR_Prise-en-charge-du-coronarien-qui-doit-etre-opere-en-chir_59da99",
+       "2010_2_AFAR_Prise-en-charge-du-coronarien-qui-doit-etre-opere-en-chir_59da99__c0137_5eeadd67"
+      ],
+      [
+       "2010_2_AFAR_Prise-en-charge-du-coronarien-qui-doit-etre-opere-en-chir_59da99",
+       "2010_2_AFAR_Prise-en-charge-du-coronarien-qui-doit-etre-opere-en-chir_59da99__c0136_e24af6e4"
+      ],
+      [
+       "2010_2_AFAR_Prise-en-charge-du-coronarien-qui-doit-etre-opere-en-chir_59da99",
+       "2010_2_AFAR_Prise-en-charge-du-coronarien-qui-doit-etre-opere-en-chir_59da99__c0138_c9a48cfb"
+      ],
+      [
+       "2012_AFAR_Examens-preinterventionnels-systematiques_a99473",
+       "2012_AFAR_Examens-preinterventionnels-systematiques_a99473__c0097_814fa038"
+      ]
+     ],
+     "usage": {
+      "prompt_tokens": 2006,
+      "completion_tokens": 129,
+      "total_tokens": 2135
+     },
+     "latency_ms": 27812.49083398143
+    },
+    {
+     "id": "MR-gae3cda1acd4e903f01fd",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "clinical_case",
+     "tags": [
+      "other"
+     ],
+     "doc_rank": null,
+     "passage_rank": null,
+     "n_retrieved": 6,
+     "doc_hit": 0.0,
+     "doc_mrr": 0.0,
+     "doc_recall": 0.0,
+     "doc_ndcg": 0.0,
+     "passage_hit": 0.0,
+     "passage_mrr": 0.0,
+     "passage_recall": 0.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 0.0,
+     "false_abstention": 1.0,
+     "correct": 0.0,
+     "sourced": 0.0,
+     "answer": "Les recommandations SFAR fournies ne traitent pas cette question.",
+     "retrieved": [
+      [
+       "2010_2_AFAR_Prise-en-charge-du-coronarien-qui-doit-etre-opere-en-chir_59da99",
+       "2010_2_AFAR_Prise-en-charge-du-coronarien-qui-doit-etre-opere-en-chir_59da99__c0049_87927381"
+      ],
+      [
+       "2010_2_AFAR_Prise-en-charge-du-coronarien-qui-doit-etre-opere-en-chir_59da99",
+       "2010_2_AFAR_Prise-en-charge-du-coronarien-qui-doit-etre-opere-en-chir_59da99__c0048_05fc12e9"
+      ],
+      [
+       "2010_2_AFAR_Prise-en-charge-du-coronarien-qui-doit-etre-opere-en-chir_59da99",
+       "2010_2_AFAR_Prise-en-charge-du-coronarien-qui-doit-etre-opere-en-chir_59da99__c0050_717acfb6"
+      ],
+      [
+       "2010_2_AFAR_Prise-en-charge-du-coronarien-qui-doit-etre-opere-en-chir_59da99",
+       "2010_2_AFAR_Prise-en-charge-du-coronarien-qui-doit-etre-opere-en-chir_59da99__c0046_667108fc"
+      ],
+      [
+       "2010_2_AFAR_Prise-en-charge-du-coronarien-qui-doit-etre-opere-en-chir_59da99",
+       "2010_2_AFAR_Prise-en-charge-du-coronarien-qui-doit-etre-opere-en-chir_59da99__c0045_8e596356"
+      ],
+      [
+       "2010_2_AFAR_Prise-en-charge-du-coronarien-qui-doit-etre-opere-en-chir_59da99",
+       "2010_2_AFAR_Prise-en-charge-du-coronarien-qui-doit-etre-opere-en-chir_59da99__c0047_21ad6f65"
+      ]
+     ],
+     "usage": {
+      "prompt_tokens": 2158,
+      "completion_tokens": 15,
+      "total_tokens": 2173
+     },
+     "latency_ms": 27878.665665979497
+    },
+    {
+     "id": "MR-geb9482ee3d54334a43fd",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "open",
+     "tags": [
+      "pediatric",
+      "reco",
+      "timing"
+     ],
+     "doc_rank": 1,
+     "passage_rank": 1,
+     "n_retrieved": 6,
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 0.4935232796777482,
+     "passage_hit": 1.0,
+     "passage_mrr": 1.0,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 0.0,
+     "correct": 1.0,
+     "sourced": 1.0,
+     "answer": "L'intervention doit être programmée le plus tôt possible dans la matinée pour permettre une surveillance postopératoire d'au moins six heures avant la sortie [S1].\n\nSource : Anesthésie pour amygdalectomie chez l'enfant — RFE SFAR 2005 [EN VIGUEUR]",
+     "retrieved": [
+      [
+       "2005_2a_SFAR_TEXTE-COURT_Anesthesie-pour-amygdalectomie-chez-lenfant_cf569a",
+       "2005_2a_SFAR_TEXTE-COURT_Anesthesie-pour-amygdalectomie-chez-lenfant_cf569a__c0026_cfb87188"
+      ],
+      [
+       "2005_2a_SFAR_TEXTE-COURT_Anesthesie-pour-amygdalectomie-chez-lenfant_cf569a",
+       "2005_2a_SFAR_TEXTE-COURT_Anesthesie-pour-amygdalectomie-chez-lenfant_cf569a__c0025_64a5b1ac"
+      ],
+      [
+       "2005_2b_AFAR_TEXTE-LONG_Anesthesie-pour-amygdalectomie-chez-lenfant_f868e3",
+       "2005_2b_AFAR_TEXTE-LONG_Anesthesie-pour-amygdalectomie-chez-lenfant_f868e3__c0239_79378fe8"
+      ],
+      [
+       "2005_2b_AFAR_TEXTE-LONG_Anesthesie-pour-amygdalectomie-chez-lenfant_f868e3",
+       "2005_2b_AFAR_TEXTE-LONG_Anesthesie-pour-amygdalectomie-chez-lenfant_f868e3__c0240_2b4592df"
+      ],
+      [
+       "2005_2b_AFAR_TEXTE-LONG_Anesthesie-pour-amygdalectomie-chez-lenfant_f868e3",
+       "2005_2b_AFAR_TEXTE-LONG_Anesthesie-pour-amygdalectomie-chez-lenfant_f868e3__c0246_4ef64dd7"
+      ],
+      [
+       "2005_2b_AFAR_TEXTE-LONG_Anesthesie-pour-amygdalectomie-chez-lenfant_f868e3",
+       "2005_2b_AFAR_TEXTE-LONG_Anesthesie-pour-amygdalectomie-chez-lenfant_f868e3__c0245_3d77c68c"
+      ]
+     ],
+     "usage": {
+      "prompt_tokens": 2278,
+      "completion_tokens": 71,
+      "total_tokens": 2349
+     },
+     "latency_ms": 16423.954624973703
+    },
+    {
+     "id": "MR-g9dbb7b8cb49592f9fa97",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "clinical_case",
+     "tags": [
+      "other",
+      "pediatric"
+     ],
+     "doc_rank": 5,
+     "passage_rank": 5,
+     "n_retrieved": 6,
+     "doc_hit": 1.0,
+     "doc_mrr": 0.2,
+     "doc_recall": 1.0,
+     "doc_ndcg": 0.22485174766247448,
+     "passage_hit": 1.0,
+     "passage_mrr": 0.2,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 0.0,
+     "correct": 0.0,
+     "sourced": 1.0,
+     "answer": "Oui, un bilan d'hémostase doit être réalisé car l'interrogatoire est peu fiable chez un enfant de moins de trois ans, âge où l'évaluation clinique n'est pas considérée comme fiable. [S5]\n\nSource : Anesthésie pour amygdalectomie chez l'enfant — RFE SFAR 2005, Accord fort, édition antérieure.",
+     "retrieved": [
+      [
+       "2005_2b_AFAR_TEXTE-LONG_Anesthesie-pour-amygdalectomie-chez-lenfant_f868e3",
+       "2005_2b_AFAR_TEXTE-LONG_Anesthesie-pour-amygdalectomie-chez-lenfant_f868e3__c0026_5d642639"
+      ],
+      [
+       "2005_2b_AFAR_TEXTE-LONG_Anesthesie-pour-amygdalectomie-chez-lenfant_f868e3",
+       "2005_2b_AFAR_TEXTE-LONG_Anesthesie-pour-amygdalectomie-chez-lenfant_f868e3__c0025_ec3d94c4"
+      ],
+      [
+       "2005_2b_AFAR_TEXTE-LONG_Anesthesie-pour-amygdalectomie-chez-lenfant_f868e3",
+       "2005_2b_AFAR_TEXTE-LONG_Anesthesie-pour-amygdalectomie-chez-lenfant_f868e3__c0041_50102f18"
+      ],
+      [
+       "2005_2b_AFAR_TEXTE-LONG_Anesthesie-pour-amygdalectomie-chez-lenfant_f868e3",
+       "2005_2b_AFAR_TEXTE-LONG_Anesthesie-pour-amygdalectomie-chez-lenfant_f868e3__c0042_997e1f00"
+      ],
+      [
+       "2005_2a_SFAR_TEXTE-COURT_Anesthesie-pour-amygdalectomie-chez-lenfant_cf569a",
+       "2005_2a_SFAR_TEXTE-COURT_Anesthesie-pour-amygdalectomie-chez-lenfant_cf569a__c0014_479fbc5f"
+      ],
+      [
+       "2005_2a_SFAR_TEXTE-COURT_Anesthesie-pour-amygdalectomie-chez-lenfant_cf569a",
+       "2005_2a_SFAR_TEXTE-COURT_Anesthesie-pour-amygdalectomie-chez-lenfant_cf569a__c0013_f68ce878"
+      ]
+     ],
+     "usage": {
+      "prompt_tokens": 2460,
+      "completion_tokens": 84,
+      "total_tokens": 2544
+     },
+     "latency_ms": 24496.146959019825
+    },
+    {
+     "id": "MR-gbe3dad7d7f9b1ae34b88",
+     "suite": "multirfe_synth",
+     "provenance": "llm_synthetic",
+     "question_type": "table",
+     "tags": [
+      "icu",
+      "table"
+     ],
+     "doc_rank": 1,
+     "passage_rank": 1,
+     "n_retrieved": 4,
+     "doc_hit": 1.0,
+     "doc_mrr": 1.0,
+     "doc_recall": 1.0,
+     "doc_ndcg": 1.0,
+     "passage_hit": 1.0,
+     "passage_mrr": 1.0,
+     "passage_recall": 1.0,
+     "obsolete_intrusion": 0.0,
+     "answer_terms_in_context": 1.0,
+     "false_abstention": 0.0,
+     "correct": 1.0,
+     "sourced": 1.0,
+     "answer": "Les effets indésirables principaux à surveiller sont l'hypokaliémie, l'hypomagnésémie, l'insuffisance rénale, la fièvre, les frissons lors de l'injection et la cytopénie [S1], [S3].\n\nSource : Prise en charge des candidoses et aspergilloses invasives de l’adulte — RFE SFAR 2004 [EN VIGUEUR]",
+     "retrieved": [
+      [
+       "2004_2_SFAR_Prise-en-charge-des-candidoses-et-aspergilloses-invasives_d7c8a9",
+       "2004_2_SFAR_Prise-en-charge-des-candidoses-et-aspergilloses-invasives_d7c8a9__c0020_3b6504f9"
+      ],
+      [
+       "2004_2_SFAR_Prise-en-charge-des-candidoses-et-aspergilloses-invasives_d7c8a9",
+       "2004_2_SFAR_Prise-en-charge-des-candidoses-et-aspergilloses-invasives_d7c8a9__c0021_6c642591"
+      ],
+      [
+       "2004_2_SFAR_Prise-en-charge-des-candidoses-et-aspergilloses-invasives_d7c8a9",
+       "2004_2_SFAR_Prise-en-charge-des-candidoses-et-aspergilloses-invasives_d7c8a9__c0019_5979ac71"
+      ],
+      [
+       "2004_2_SFAR_Prise-en-charge-des-candidoses-et-aspergilloses-invasives_d7c8a9",
+       "2004_2_SFAR_Prise-en-charge-des-candidoses-et-aspergilloses-invasives_d7c8a9__c0018_d0072a02"
+      ]
+     ],
+     "usage": {
+      "prompt_tokens": 1281,
+      "completion_tokens": 100,
+      "total_tokens": 1381
+     },
+     "latency_ms": 18462.598915968556
+    }
+   ]
+  }
+ ],
+ "comparisons": [
+  {
+   "metric": "passage_hit",
+   "a": "C9_simple_hybrid_rerank",
+   "b": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true",
+   "diff": -0.08333333333333333,
+   "ci_low": -0.25,
+   "ci_high": 0.0,
+   "p_le_zero": 1.0
+  },
+  {
+   "metric": "doc_hit",
+   "a": "C9_simple_hybrid_rerank",
+   "b": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true",
+   "diff": 0.0,
+   "ci_low": 0.0,
+   "ci_high": 0.0,
+   "p_le_zero": 1.0
+  },
+  {
+   "metric": "correct",
+   "a": "C9_simple_hybrid_rerank",
+   "b": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true",
+   "diff": 0.08333333333333333,
+   "ci_low": -0.16666666666666666,
+   "ci_high": 0.3333333333333333,
+   "p_le_zero": 0.3785
+  },
+  {
+   "metric": "obsolete_intrusion",
+   "a": "C9_simple_hybrid_rerank",
+   "b": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true",
+   "diff": 0.0,
+   "ci_low": 0.0,
+   "ci_high": 0.0,
+   "p_le_zero": 1.0
+  }
+ ],
+ "index_map": {},
+ "reranker_model": "cross-encoder/mmarco-mMiniLMv2-L12-H384-v1"
+}
