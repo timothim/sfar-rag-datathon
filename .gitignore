@@ -98,3 +98,8 @@ eval_internal/work/frontier/
 # session-specific job queues
 scripts/queue_dev_generation.sh
 scripts/queue_h_ab.sh
+
+# anticoagulant benchmark supplied by the team on 27/11: local only
+eval/datasets/anticoag2026.jsonl
+eval/splits/anticoag2026/
+reports/eval/*anticoag2026*
