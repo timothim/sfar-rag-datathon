@@ -59,6 +59,15 @@ def cited_ids(text: str) -> list[int]:
     return out
 
 
+# Visible erratum mention of the ingestion ("[corrigé selon l'erratum officiel … ; texte initial :
+# « 10 mg/kg »]"): the superseded value must not count as support for an answer.
+_SUPERSEDED = re.compile(r"texte initial\s*:\s*«[^»]*»", re.I)
+
+
+def _strip_superseded(text: str) -> str:
+    return _SUPERSEDED.sub("", text)
+
+
 def _norm_text(text: str) -> str:
     t = fold_accents(text.lower()).replace("μ", "µ")
     t = re.sub(r"(?<=\d)[   ](?=\d{3}\b)", "", t)  # thousands separators
@@ -130,8 +139,9 @@ def check_answer(answer: str, passages: list[RetrievedChunk], is_abstention: boo
     drug names stated in the question itself (patient data) are accepted."""
     res = AnswerCheck()
     n = len(passages)
-    texts = [_norm_text(p.chunk.text) for p in passages]
-    ctx_doses = set().union(*(doses(p.chunk.text) for p in passages)) if passages else set()
+    raw = [_strip_superseded(p.chunk.text) for p in passages]
+    texts = [_norm_text(t) for t in raw]
+    ctx_doses = set().union(*(doses(t) for t in raw)) if passages else set()
     ctx_all = " ".join(texts) + " " + _norm_text(query)
     ctx_doses |= doses(query)
     query_numbers = {n.replace(",", ".") for n in re.findall(r"\d+(?:[.,]\d+)?", query)}
@@ -143,7 +153,7 @@ def check_answer(answer: str, passages: list[RetrievedChunk], is_abstention: boo
     body = re.split(r"(?im)^\s*\**\s*sources?\s*\**\s*:", answer)[0]
     for sent in _sentences(body):
         s_cites = [i for i in cited_ids(sent) if 1 <= i <= n]
-        s_ctx_doses = set().union(*(doses(passages[i - 1].chunk.text) for i in s_cites)) if s_cites else set()
+        s_ctx_doses = set().union(*(doses(raw[i - 1]) for i in s_cites)) if s_cites else set()
         s_ctx = " ".join(texts[i - 1] for i in s_cites)
         for d in doses(sent):
             res.n_doses += 1

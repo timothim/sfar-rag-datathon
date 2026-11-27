@@ -226,3 +226,13 @@ def test_cited_ids_groups_and_ranges():
     from rag_sfar.generation.answer_check import cited_ids
 
     assert cited_ids("a [S1] b [S1, S4] c [S2-S4] d [S5–6]") == [1, 1, 4, 2, 3, 4, 5, 6]
+
+
+def test_answer_check_erratum_superseded_value():
+    from rag_sfar.generation.answer_check import check_answer
+
+    p = [_rc("e", "Dose de 10 µg/kg [corrigé selon l'erratum officiel publié dans le même document ; "
+                  "texte initial : « 10 mg/kg »] en intraveineux.", 1)]
+    assert not check_answer("10 µg/kg en IV [S1] (valeur corrigée par erratum).", p).flagged
+    bad = check_answer("10 mg/kg en IV [S1].", p)
+    assert bad.flagged and bad.unsupported_doses == ["10 mg/kg"]
