@@ -145,6 +145,20 @@ Différences appariées, sur les questions dont aucune des deux réponses compar
 | RAG − LLM seul | 51 | +13,7 [−3,9 ; +31,4] | 15 / 8 | −25,5 [−37,3 ; −13,7] |
 | Lexicale − RAG | 48 | +6,2 [−10,4 ; +22,9] | 10 / 7 | — |
 
+### Sensibilité, troisième juge sur le lot 0
+
+Analyse de sensibilité seulement, décidée avant de voir son résultat : le résultat principal reste celui du § 1. Un troisième juge Haiku, indépendant (mêmes consignes, sans accès aux deux premières passes), a rejugé les 25 réponses du lot 0. Sur ce lot, une réponse est alors comptée correcte si au moins deux juges sur trois le disent ; hors du lot 0, la combinaison stricte est inchangée.
+
+| Condition | Combinaison stricte (§ 1) | Lot 0 tranché à la majorité de trois |
+|---|---|---|
+| LLM seul | 24/65 (36,9 %) | 26/65 (40,0 %) |
+| RAG évalué | 36/65 (55,4 %) | 37/65 (56,9 %) |
+| Option lexicale | 37/65 (56,9 %) | 43/65 (66,2 %) |
+
+- Sur les 14 réponses du lot 0 jugées correctes par le juge a et partielles par le juge b, le troisième juge en note 9 correctes et 5 partielles.
+- Les erreurs graves ne changent pas : le troisième juge n'en signale aucune nouvelle (20 / 1 / 1).
+- Lecture : l'ordre des trois conditions ne change pas. L'écart entre l'option lexicale et le RAG évalué dépend du juge du lot 0 (de +1,5 à +9,2 points) et reste non démontré.
+
 ### Champs manquants dans les verdicts
 
 Certains verdicts ne contiennent que les clés de base : `correctness`, `abstained`, `serious_error`, `faithful` et la justification. La fusion les a acceptés : aucun verdict n'a été compté comme manquant ou invalide.
