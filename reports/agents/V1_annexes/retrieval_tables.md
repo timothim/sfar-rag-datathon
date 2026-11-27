@@ -98,3 +98,67 @@ Index `tas_v6`, k = 64, configuration gelée `C10_context_notes` et variantes (n
 - abpvern test (post hoc) : Q12, Q16, Q24, Q33, Q34, Q35, Q49, Q60, Q76, Q116, Q146, Q152
 
 Latence moyenne de `retrieve` (ms) : frozen 198, subword 206, lexicon 196, subword_lexicon 205
+
+## NORM sur les formulations des cliniciens (`abpvern`)
+
+REF = gelée ; NORM = normalisation de la question par LLM (Q2, variante normalize, mode add) ; LEX+NORM = NORM avec n-grammes + lexique. « full » = tout le contexte retourné (k = 64, comme les tableaux précédents) ; « gen » = contexte lu par le générateur (40 extraits, 30 000 caractères, comme Q2/G1). Différences appariées setup − REF, IC 95 % bootstrap ; +g/−p = questions gagnées / perdues. Test : passe post hoc unique.
+
+### sufficiency (full)
+
+| setup | sous-ensemble | dev | test (post hoc) |
+|---|---|---|---|
+| REF (niveau) | 171 | 81.2 [74.0–88.5] (n=96) | 81.2 [71.9–90.6] (n=64) |
+| REF (niveau) | 88 modifiés | 72.7 [60.0–83.6] (n=55) | 78.6 [64.3–92.9] (n=28) |
+| REF (niveau) | 29 publiées | 81.2 [56.2–100.0] (n=16) | 70.0 [40.0–100.0] (n=10) |
+| NORM − REF | 171 | +6.2 [+2.1 ; +11.5] (n=96, +6/−0) | +1.6 [+0.0 ; +4.7] (n=64, +1/−0) |
+| NORM − REF | 88 modifiés | +9.1 [+1.8 ; +18.2] (n=55, +5/−0) | +3.6 [+0.0 ; +10.7] (n=28, +1/−0) |
+| NORM − REF | 29 publiées | +12.5 [+0.0 ; +31.2] (n=16, +2/−0) | +10.0 [+0.0 ; +30.0] (n=10, +1/−0) |
+| LEX_NORM − REF | 171 | +8.3 [+2.1 ; +15.6] (n=96, +10/−2) | +6.2 [+1.6 ; +12.5] (n=64, +4/−0) |
+| LEX_NORM − REF | 88 modifiés | +10.9 [+0.0 ; +21.8] (n=55, +8/−2) | +10.7 [+0.0 ; +21.4] (n=28, +3/−0) |
+| LEX_NORM − REF | 29 publiées | +12.5 [-12.5 ; +37.5] (n=16, +3/−1) | +20.0 [+0.0 ; +50.0] (n=10, +2/−0) |
+
+### evidence_recall (full)
+
+| setup | sous-ensemble | dev | test (post hoc) |
+|---|---|---|---|
+| REF (niveau) | 171 | 85.9 [79.3–91.8] (n=96) | 90.0 [84.0–95.3] (n=64) |
+| REF (niveau) | 88 modifiés | 77.6 [67.0–87.0] (n=55) | 86.0 [74.7–96.4] (n=28) |
+| REF (niveau) | 29 publiées | 84.4 [65.6–100.0] (n=16) | 82.5 [60.0–100.0] (n=10) |
+| NORM − REF | 171 | +5.2 [+1.6 ; +9.9] (n=96, +6/−0) | +0.8 [+0.0 ; +2.3] (n=64, +1/−0) |
+| NORM − REF | 88 modifiés | +8.2 [+1.8 ; +16.4] (n=55, +5/−0) | +1.8 [+0.0 ; +5.4] (n=28, +1/−0) |
+| NORM − REF | 29 publiées | +12.5 [+0.0 ; +31.2] (n=16, +2/−0) | +5.0 [+0.0 ; +15.0] (n=10, +1/−0) |
+| LEX_NORM − REF | 171 | +6.2 [+1.5 ; +11.6] (n=96, +10/−3) | +3.0 [+0.4 ; +6.4] (n=64, +4/−0) |
+| LEX_NORM − REF | 88 modifiés | +9.4 [+1.8 ; +18.5] (n=55, +8/−3) | +5.1 [+0.0 ; +11.6] (n=28, +3/−0) |
+| LEX_NORM − REF | 29 publiées | +12.5 [-3.1 ; +34.4] (n=16, +3/−1) | +7.5 [+0.0 ; +20.0] (n=10, +2/−0) |
+
+### sufficiency (gen)
+
+| setup | sous-ensemble | dev | test (post hoc) |
+|---|---|---|---|
+| REF (niveau) | 171 | 81.2 [74.0–88.5] (n=96) | 81.2 [71.9–90.6] (n=64) |
+| REF (niveau) | 88 modifiés | 72.7 [60.0–83.6] (n=55) | 78.6 [64.3–92.9] (n=28) |
+| REF (niveau) | 29 publiées | 81.2 [56.2–100.0] (n=16) | 70.0 [40.0–100.0] (n=10) |
+| NORM − REF | 171 | +6.2 [+2.1 ; +11.5] (n=96, +6/−0) | +1.6 [+0.0 ; +4.7] (n=64, +1/−0) |
+| NORM − REF | 88 modifiés | +9.1 [+1.8 ; +18.2] (n=55, +5/−0) | +3.6 [+0.0 ; +10.7] (n=28, +1/−0) |
+| NORM − REF | 29 publiées | +12.5 [+0.0 ; +31.2] (n=16, +2/−0) | +10.0 [+0.0 ; +30.0] (n=10, +1/−0) |
+| LEX_NORM − REF | 171 | +8.3 [+2.1 ; +15.6] (n=96, +10/−2) | +6.2 [+1.6 ; +12.5] (n=64, +4/−0) |
+| LEX_NORM − REF | 88 modifiés | +10.9 [+0.0 ; +21.8] (n=55, +8/−2) | +10.7 [+0.0 ; +21.4] (n=28, +3/−0) |
+| LEX_NORM − REF | 29 publiées | +12.5 [-12.5 ; +37.5] (n=16, +3/−1) | +20.0 [+0.0 ; +50.0] (n=10, +2/−0) |
+
+### evidence_recall (gen)
+
+| setup | sous-ensemble | dev | test (post hoc) |
+|---|---|---|---|
+| REF (niveau) | 171 | 85.9 [79.3–91.8] (n=96) | 90.0 [84.0–95.3] (n=64) |
+| REF (niveau) | 88 modifiés | 77.6 [67.0–87.0] (n=55) | 86.0 [74.7–96.4] (n=28) |
+| REF (niveau) | 29 publiées | 84.4 [65.6–100.0] (n=16) | 82.5 [60.0–100.0] (n=10) |
+| NORM − REF | 171 | +5.2 [+1.6 ; +9.9] (n=96, +6/−0) | +0.8 [+0.0 ; +2.3] (n=64, +1/−0) |
+| NORM − REF | 88 modifiés | +8.2 [+1.8 ; +16.4] (n=55, +5/−0) | +1.8 [+0.0 ; +5.4] (n=28, +1/−0) |
+| NORM − REF | 29 publiées | +12.5 [+0.0 ; +31.2] (n=16, +2/−0) | +5.0 [+0.0 ; +15.0] (n=10, +1/−0) |
+| LEX_NORM − REF | 171 | +6.2 [+1.5 ; +11.6] (n=96, +10/−3) | +3.0 [+0.4 ; +6.4] (n=64, +4/−0) |
+| LEX_NORM − REF | 88 modifiés | +9.4 [+1.8 ; +18.5] (n=55, +8/−3) | +5.1 [+0.0 ; +11.6] (n=28, +3/−0) |
+| LEX_NORM − REF | 29 publiées | +12.5 [-3.1 ; +34.4] (n=16, +3/−1) | +7.5 [+0.0 ; +20.0] (n=10, +2/−0) |
+
+Normalisation utilisée (requête ajoutée) : dev 39/102, test 20/69.
+
+Latence non rapportée (job concurrent sur le GPU). Les métriques « gen » sont identiques aux « full » : tout le contexte retourné tient dans le budget du générateur.

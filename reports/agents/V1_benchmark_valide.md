@@ -96,3 +96,24 @@ Protocole : 200 questions de la release v31.2, générateur local Qwen3.5-9B (LM
 | LLM + oracle | 153/200 (76,5 %) | 28/200 |
 
 Ils rapportent aussi un ensemble complet de passages annotés retrouvé pour 114/186 questions avant sélection et 82/186 dans le contexte transmis (leur mesure, pas la nôtre).
+
+## 6. Normalisation de la question par LLM (NORM, agent Q2) sur les formulations des cliniciens
+
+Demande du coordinateur. Module `rag_sfar.retrieval.query_rewrite` inchangé (variante `normalize`, mode `add`, prompt de Q2, options de QCM jamais montrées au modèle). Réponses du modèle : agents Haiku remplaçants (consigne `reports/agents/Q2_annexes/STANDIN_INSTRUCTIONS.md`), 171 prompts en 4 lots (`eval_internal/work/v1/exports/norm_vern/`, local), import avec contrôle strict du format, 0 réponse manquante. Un seul job GPU ; pilote : `eval_internal/benchmark_valide/norm_vern.py`. Suite `abpvern`, index `tas_v6`, k = 64. REF = configuration gelée (redonne 81,2 / 81,2, comme au §3). LEX+NORM = NORM avec n-grammes + lexique. **Côté test : une passe post hoc unique sur configurations fixes ; rien n'a été réglé dessus.** Latence non rapportée (job concurrent sur le GPU).
+
+Sufficiency, différence appariée setup − REF (IC 95 % bootstrap ; +questions gagnées / −perdues) :
+
+| setup | sous-ensemble | dev | test (post hoc) |
+|---|---|---|---|
+| NORM | 171 | **+6,2 [+2,1 ; +11,5]** (n=96, +6/−0) | +1,6 [0 ; +4,7] (n=64, +1/−0) |
+| NORM | 88 modifiés | **+9,1 [+1,8 ; +18,2]** (n=55, +5/−0) | +3,6 [0 ; +10,7] (n=28, +1/−0) |
+| NORM | 29 publiées | +12,5 [0 ; +31,2] (n=16, +2/−0) | +10,0 [0 ; +30,0] (n=10, +1/−0) |
+| LEX+NORM | 171 | **+8,3 [+2,1 ; +15,6]** (n=96, +10/−2) | **+6,2 [+1,6 ; +12,5]** (n=64, +4/−0) |
+| LEX+NORM | 88 modifiés | +10,9 [0 ; +21,8] (n=55, +8/−2) | +10,7 [0 ; +21,4] (n=28, +3/−0) |
+| LEX+NORM | 29 publiées | +12,5 [−12,5 ; +37,5] (n=16, +3/−1) | +20,0 [0 ; +50,0] (n=10, +2/−0) |
+
+Rappel des preuves : NORM +5,2 [+1,6 ; +9,9] dev, +0,8 [0 ; +2,3] test ; LEX+NORM +6,2 [+1,5 ; +11,6] dev, +3,0 [+0,4 ; +6,4] test (tableaux complets dans l'annexe). Mêmes chiffres sur le contexte lu par le générateur (40 extraits, 30 000 caractères), qui contient tout le contexte retourné.
+
+Fidélité : le modèle a modifié 59/171 questions (dev 39, test 20), dont 55 des 88 énoncés réécrits par les experts. Lecture manuelle de 30 réécritures tirées au hasard (Q01, Q04, Q06, Q34, Q35, Q43, Q45, Q47, Q48, Q59, Q68, Q83, Q84, Q88, Q90, Q92, Q95, Q98, Q100, Q119, Q124, Q131, Q132, Q139, Q141, Q146, Q153, Q159, Q167, Q171) et des cas signalés par les agents (Q44, Q54, Q126) : **0 contenu clinique perdu, 0 ajouté, 0 modifié**. Toutes les réécritures gardent le texte d'origine et ajoutent la forme développée entre parenthèses. Une expansion est incertaine (Q98, sigle de drainage développé de façon plausible mais non vérifiée), une est approximative sans changer le sens (Q90, porteur d'une BLSE). Les sigles ambigus relevés par les experts (HT, PMK, GPE, LEC, « promonto », NLPC) sont laissés tels quels, sauf HT, développé en hystérectomie dans un contexte gynécologique explicite (Q153). Pour ces sigles laissés tels quels, la normalisation n'apporte rien.
+
+**Lecture.** NORM aide de façon mesurable sur les formulations des cliniciens au dev, où elle rattrape environ un tiers de la perte due à la formulation (+9 points sur les 88 énoncés réécrits, contre −25,5 de perte), sans aucune question perdue. Au test post hoc le gain seul est petit (+1,6, une question). LEX+NORM est le seul réglage positif sur les deux parties : 14 questions gagnées, 2 perdues. Ce test a déjà servi : il confirme le sens de l'effet, il ne sert pas à choisir.
