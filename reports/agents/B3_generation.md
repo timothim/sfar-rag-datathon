@@ -96,7 +96,7 @@ C9 + fenêtres contre C9 étroit : +6,7 pts [−3,3 ; +16,7], non significatif. 
 |---|---|---|---|---|
 | C9 + fenêtres, concise + QCM routé (`tas_v3_errata`) | 83 / 90 | 100 / 100 | 0 / 0 | Sonnet − 9B (concise) : +6,7 pts [0 ; +15,0], graves −5,0 [−11,7 ; 0] |
 | C9 + fenêtres, production v2 | 83 / 90 | 100 / 100 | 0 / 0 | v2 − concise : 0,0 [−5 ; +5] → prompt riche inutile même sur un modèle fort |
-| `tas_v6`, C9 + fenêtres vs `C10_context_notes` | multirfe : identiques (27 correctes, 2 partielles, 1 incorrecte, 0 grave) | | | abpe171 en re-jugement (rubrique v3) |
+| `tas_v6`, C9 + fenêtres vs `C10_context_notes` (rubrique v3) | abpe171 : 86,7 / 86,7 ; multirfe : 27 correctes, 2 partielles, 1 incorrecte dans les deux cas | abpe171 : 100 / 100 | abpe171 : 1 (dose incohérente) / 0 ; multirfe : 0 / 0 | différence appariée sur 60 q. : 0,0 [−8,3 ; +8,3] → **C10_context_notes retenu** (retrieval figée) |
 | Note de couverture (11 items signalés), off / note | 11 / 11 correctes dans les deux cas | | | **non activée** |
 | Note de dépendance de population (18 items), off / note (rubrique v3) | 12 / 11 correctes, 6 / 7 partielles, 0 / 0 incorrectes | | 0 / 1 | Interdits violés : 2 / 4. **Non activée.** |
 
@@ -163,9 +163,44 @@ Avec Sonnet, la note ajoutée sur ce signal n'apporte rien : Sonnet répond déj
 
 **Réserve sur les métriques de clarification** : avant la rubrique v3 (commit 54e4346), le juge ne recevait pas les comportements acceptables du benchmark. Une réponse conditionnelle qui ne choisit pas était donc comptée comme violation. Les métriques de clarification jugées en rubriques v1 et v2 (tous les tours 9B) étaient trop sévères sur ces items, et on n'en tire aucune conclusion.
 
-## 6. Confirmation sur le reste de dev (en attente)
+## 6. Confirmation sur le reste de dev
 
-Prompts exportés : `eval_internal/work/replay/frontier/v6_c10n_confirm/`. Contenu : 136 questions (72 abpe171 + 64 multirfe), 12 fichiers d'au plus 12 prompts, 13 QCM routés, environ 27 700 caractères par prompt. L'alignement question/prompt a été vérifié. Résultats à compléter après jugement.
+Configuration finale :
+- substitut Sonnet ;
+- retrieval `C10_context_notes` sur `tas_v6` ;
+- prompt concise, QCM routés ;
+- aucune note.
+
+Questions : 136, soit tout dev hors sous-ensembles d'itération, exécuté une seule fois. Rubrique v3.
+
+| Jeu | n | Correct | Correct ou partiel | Graves | Faits oblig. | Comportement accepté | Interdits violés |
+|---|---|---|---|---|---|---|---|
+| abpe171, confirmation | 72 | 83,3 % [75–92] | 98,6 % | 0 | 89,3 % | 95,8 % | 2 / 12 |
+| multirfe, confirmation | 64 | 100 % | — | 0 | — | — | — (12 / 12 hors corpus refusées) |
+| abpe171, itération (même rubrique) | 30 | 86,7 % | 100 % | 0 | | | |
+| multirfe, itération | 30 | 90,0 % | | | | | |
+| **abpe171, tout dev** | 102 | **84,3 % [76–91]** | 99,0 % | **0** | | | |
+| **multirfe, tout dev** | 94 | **96,8 % [93–100]** | 98,9 % | **0** | | | |
+
+Les choix faits sur les 60 questions d'itération tiennent sur les 136 autres.
+
+Réponses abpe171 non correctes de la confirmation :
+- **8 partielles** (Q27, Q40, Q46, Q102, Q114, Q118, Q119, Q132) : la réponse donne la conduite adulte seule alors que la référence attend aussi la branche pédiatrique. Pour les huit, la suffisance des preuves vaut 1,0 : la preuve pédiatrique était dans le contexte et le générateur l'a laissée de côté.
+- **Q81** omet une alternative.
+- **Q85 et Q88** sont des items de clarification auxquels le modèle répond pour l'adulte seulement.
+- **Q131** est une abstention à tort alors que la preuve est dans le contexte.
+
+L'omission de la branche pédiatrique est donc l'échec dominant restant sur le benchmark de référence. C'est ce que vise la note de dépendance de population. Sur le parcours de 18 items, la note n'avait rien apporté, mais la référence sans note n'y comptait qu'une seule omission de ce type.
+
+L'ablation est **pré-enregistrée** par l'orchestrateur, sur abpe171 tout dev (n = 102, apparié).
+
+Règle de décision fixée d'avance : activer la note seulement si :
+- l'exactitude ou le taux de faits obligatoires progresse avec un IC apparié qui exclut 0 ;
+- et les erreurs graves n'augmentent pas.
+
+La note se pose sur 33 des 102 prompts abpe171. Aucune de ces 33 questions ne nomme une population ; les 15 questions qui en nomment une ne la reçoivent pas. Sur multirfe dev, la note ne se pose que sur une question (MR-g7efa49eea406c3678a28, traumatisé thoracique), exportée à part pour vérifier qu'elle n'est pas dégradée. Sur les 12 réponses non correctes listées ci-dessus, la note porterait sur 7 (Q27, Q40, Q102, Q118, Q119, Q132, Q88) ; Q46, Q114, Q81, Q85 et Q131 ne la reçoivent pas.
+
+*Résultat : à compléter.*
 
 ## 7. Analyse des échecs (9B et Sonnet)
 
