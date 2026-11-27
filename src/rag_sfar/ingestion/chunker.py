@@ -18,11 +18,12 @@ from __future__ import annotations
 
 import collections
 import hashlib
+import os
 import re
 import unicodedata
 from typing import Literal
 
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 
 from rag_sfar.ingestion.loader import LoadedDocument
 from rag_sfar.ingestion.population import infer_chunk_populations, legacy_hint_from_populations
@@ -87,6 +88,95 @@ BIBLIO_LINE_RE = re.compile(
     re.I | re.M,
 )
 
+# ---------------------------------------------------------------------------------------------
+# K2 — graded-recommendation structure (each behind its own switch, off by default so that the
+# historical output, and therefore index/tas_v6, is reproduced byte for byte). The rules are
+# keyed on the form of the text only (grade vocabulary, statement identifiers, citation lines),
+# never on a document name or an evaluation question.
+# ---------------------------------------------------------------------------------------------
+def _env_flag(name: str) -> bool:
+    return os.environ.get(name, "").strip().lower() in ("1", "true", "yes", "on")
+
+
+# One grade token, in the formats used by SFAR/HAS texts across periods: GRADE 1+/2-, G1+/G2-,
+# (1+)/(2-), Avis d'experts, Accord fort/faible/relatif/professionnel, Recommandation
+# forte/faible, grade A/B/C, (AE).
+_GRADE_TOKEN = (
+    r"GRADE\s*[12]\s*[+\-−]?|\bG\s?[12]\s?[+\-−](?![\w])|\(\s*[12]\s?[+\-−]\s*\)|"
+    r"\bAvis\s+d['’]\s?experts?\b|\bAccord\s+(?:fort|faible|relatif|professionnel)\b|"
+    r"\bRecommandation\s+(?:forte|faible)\b|\bgrade\s+[ABC]\b|\(\s*AE\s*\)"
+)
+GRADE_RE_EXT = re.compile(_GRADE_TOKEN, re.I)
+# A heading whose whole content is a grade line ("GRADE 1 (recommandation forte)", "Avis
+# d'experts (Accord FORT)", "G2+"): only grade vocabulary, digits, signs and punctuation.
+_GRADE_LINE_WORDS_RE = re.compile(
+    r"\b(?:grade|avis|d['’]\s?experts?|experts?|accord|forte?|faible|relatif|professionnel|"
+    r"recommandations?|consensus|G[12]|[A-C]|AE)\b",
+    re.I,
+)
+
+
+def _is_grade_line(text: str) -> bool:
+    t = re.sub(r"[\*_`]+", "", text).strip()
+    if not t or len(t) > 90 or not re.match(r"[\W]*(?:" + _GRADE_TOKEN + r")", t, re.I):
+        return False
+    return not re.search(r"[A-Za-zÀ-ÿ]", _GRADE_LINE_WORDS_RE.sub(" ", t))
+
+
+# Statement identifiers beyond "R1.1": "R 1.1", "R1 –", "Recommandation 3", at the start of a line.
+REC_STMT_EXT_RE = re.compile(
+    r"(?m)^[ \t>*_\-#•]*(?:\*\*)?\s*(R\s?\d+(?:\.\d+){0,2}|Recommandation\s+(?:n°\s*)?\d+(?:\.\d+){0,2})"
+    r"\s*(?:\*\*)?\s*[–—\-:.)]\s*(?:\*\*)?\s*(?=[A-ZÀ-Ýa-zé«(])"
+)
+# Unnumbered recommendation formulae; a paragraph holding one of them AND a grade token is a
+# graded statement ("il faut" alone is excluded: it is also the wording of method sections).
+RECO_FORMULA_RE = re.compile(
+    r"\b(?:il\s+est\s+(?:probablement\s+)?recommand[ée]|il\s+n['’]est\s+(?:probablement\s+)?pas\s+recommand[ée]|"
+    r"les\s+experts\s+(?:sugg[èe]rent|recommandent|proposent)|we\s+(?:recommend|suggest)|"
+    r"the\s+experts\s+suggest)\b",
+    re.I,
+)
+# A citation line (one bibliography entry): a journal reference "2015;12(3):45" or a DOI, or an
+# entry marker ("[12]", "12.", "-") followed by an author list ("Dupont JM, ..." / "... et al").
+_CITATION_SOURCE_RE = re.compile(r"\b(?:19|20)\d{2}\s*;\s*\d+\s*(?:\(\d+\))?\s*:\s*\d|\bdoi\s*[:.]?\s*10\.", re.I)
+_CITATION_ENTRY_RE = re.compile(
+    r"^\s*(?:[-*•]\s*)?(?:\[\d+\]|\d{1,3}[.)])?\s*[A-Z][\w'’-]+\s+[A-Z]{1,3}[,.]\s*(?:[A-Z][\w'’-]+\s+[A-Z]{1,3}[,.]|et\s+al)"
+)
+
+
+def _is_citation_line(line: str) -> bool:
+    line = line.strip()
+    return 0 < len(line) <= 600 and bool(_CITATION_SOURCE_RE.search(line) or _CITATION_ENTRY_RE.match(line))
+_CLINICAL_IN_BIBLIO_RE = re.compile(
+    r"(?:\bR\d+\.\d+(?:\.\d+)?\s*[–\-:]|il\s+est\s+(?:probablement\s+)?recommand[ée]|"
+    r"les\s+experts\s+sugg[èe]rent|\bGRADE\s*[12]|\bmg/kg\b|\bposologie\b)",
+    re.I,
+)
+
+
+def _looks_like_bibliography(text: str) -> bool:
+    """A paragraph group that is a list of citations: at least 3 citation lines, at least half of
+    the non-empty lines, and no clinical statement (recommendation id, formula, grade, dose)."""
+    lines = [ln for ln in text.splitlines() if ln.strip()]
+    hits = sum(_is_citation_line(ln) for ln in lines)
+    return hits >= 3 and hits / max(1, len(lines)) >= 0.5 and not _CLINICAL_IN_BIBLIO_RE.search(text)
+
+
+def _is_graded_statement(text: str, ext_ids: bool) -> bool:
+    """Extended recommendation test: a numbered statement (R-id, or the extended id formats when
+    `ext_ids`) with a grade token, or one paragraph holding a recommendation formula followed by a
+    grade token (outside quotation marks)."""
+    has_id = bool(REC_ID_RE.search(text)) or (ext_ids and bool(REC_STMT_EXT_RE.search(text)))
+    if has_id and GRADE_RE_EXT.search(text):
+        return True
+    for p in re.split(r"\n\s*\n", text):
+        # Quoted formulae and grades are method text ("GRADE 1 « il est recommandé de faire »").
+        p = re.sub(r"«[^»]{0,300}»|\"[^\"\n]{0,300}\"|“[^”]{0,300}”", " ", p)
+        f = RECO_FORMULA_RE.search(p)
+        if f and GRADE_RE_EXT.search(p, f.end()):
+            return True
+    return False
+
 
 def _is_truly_reference_text(text: str) -> bool:
     """Confirm a passage under a `Références` heading is genuinely bibliographic noise
@@ -99,21 +189,26 @@ def _is_truly_reference_text(text: str) -> bool:
     return True
 
 
-def _extract_grades(text: str) -> list[str]:
+def _extract_grades(text: str, extended: bool = False) -> list[str]:
     found = []
-    for m in GRADE_RE.finditer(text):
+    for m in (GRADE_RE_EXT if extended else GRADE_RE).finditer(text):
         val = re.sub(r"\s+", " ", m.group(0)).strip()
         if val not in found:
             found.append(val)
     return found[:8]
 
 
-def _extract_rec_ids(text: str) -> list[str]:
+def _extract_rec_ids(text: str, extended: bool = False) -> list[str]:
     found = []
     for m in REC_ID_RE.finditer(text):
         val = m.group(0)
         if val not in found:
             found.append(val)
+    if extended:
+        for m in REC_STMT_EXT_RE.finditer(text):
+            val = re.sub(r"\s+", " ", m.group(1)).strip()
+            if val not in found and not any(val == f for f in found):
+                found.append(val)
     return found[:10]
 
 
@@ -162,6 +257,19 @@ class ChunkOptions:
     # Recommendation units were neutral on dev (B2): off by default, available for tests.
     reco_units: bool = False
     table_cards_min_cols: int = 2
+    # K2 switches (off by default; environment variables so that shared files need no change).
+    # grade_heading_as_text: a Markdown heading whose whole content is a grade line stays in the
+    #   text (bold line) instead of becoming a section title (RAG_SFAR_CHUNK_GRADE_HEADINGS=1);
+    # extended_grades: grade formats G1+, (1+), grade A/B/C, accord relatif/professionnel, (AE)
+    #   in grade_levels, and a paragraph with a recommendation formula and a grade is typed
+    #   recommendation_box, never note (RAG_SFAR_CHUNK_GRADES=1);
+    # extended_rec_ids: statement ids "R 1.1", "R1 –", "Recommandation 3" (RAG_SFAR_CHUNK_REC_IDS=1);
+    # unheaded_biblio: a prose piece that is a list of citations is flagged as references even
+    #   without a "Références" heading (RAG_SFAR_CHUNK_BIBLIO=1).
+    grade_heading_as_text: bool = field(default_factory=lambda: _env_flag("RAG_SFAR_CHUNK_GRADE_HEADINGS"))
+    extended_grades: bool = field(default_factory=lambda: _env_flag("RAG_SFAR_CHUNK_GRADES"))
+    extended_rec_ids: bool = field(default_factory=lambda: _env_flag("RAG_SFAR_CHUNK_REC_IDS"))
+    unheaded_biblio: bool = field(default_factory=lambda: _env_flag("RAG_SFAR_CHUNK_BIBLIO"))
 
 
 LEGACY_HEADER = ChunkOptions()
@@ -230,8 +338,8 @@ def _make_chunk(
         section_id=section_id,
         text=clean_text,
         indexed_text=indexed_text,
-        grade_levels=_extract_grades(clean_text),
-        recommendation_ids=_extract_rec_ids(clean_text),
+        grade_levels=_extract_grades(clean_text, extended=bool(opts and opts.extended_grades)),
+        recommendation_ids=_extract_rec_ids(clean_text, extended=bool(opts and opts.extended_rec_ids)),
         population_hint=pop_hint,
         populations=pops,
         population_source=pop_src,
@@ -261,7 +369,7 @@ def _refresh_indexed_text(c: Chunk, meta: DocumentMetadata, opts: ChunkOptions |
     header = _build_context_header(meta, c.section_path, c.chunk_type, opts)
     c.indexed_text = f"{header}\n{c.text}"
     c.has_dosage_info = bool(DOSAGE_RE.search(c.text))
-    c.grade_levels = _extract_grades(c.text)
+    c.grade_levels = _extract_grades(c.text, extended=bool(opts and opts.extended_grades))
 
 
 def _link_neighbors(chunks: list[Chunk]) -> None:
@@ -788,6 +896,13 @@ def _chunk_table_aware_sota(
                 for sub in sub_pieces:
                     is_allergy_box = bool(ALLERGY_BOX_RE.search(sub))
                     is_rec_box = bool(REC_ID_RE.search(sub) and GRADE_RE.search(sub))
+                    if not is_rec_box and not is_allergy_box and (opts.extended_grades or opts.extended_rec_ids):
+                        is_rec_box = _is_graded_statement(sub, ext_ids=opts.extended_rec_ids) if opts.extended_grades else bool(
+                            REC_STMT_EXT_RE.search(sub) and GRADE_RE.search(sub)
+                        )
+                    if opts.unheaded_biblio and not is_rec_box and not is_allergy_box and _looks_like_bibliography(sub):
+                        chunks.append(_mk(sub, sec_path, "references", is_ref=True))
+                        continue
                     is_footnote = (
                         not is_rec_box
                         and not is_allergy_box
@@ -836,6 +951,10 @@ def _chunk_table_aware_sota(
                     heading_stack.pop()
             if re.match(r"^#{1,6}\s+", line.strip()):
                 lvl, htext = _clean_heading_text(line)
+                if opts.grade_heading_as_text and _is_grade_line(htext):
+                    # A grade line is not a section title: keep it with the statement it grades.
+                    buf_lines.append(f"**{htext}**")
+                    continue
                 if _is_valid_heading(lvl, htext):
                     _flush_prose()
                     buf_lines = []

@@ -1,0 +1,39 @@
+{
+ "abpe171": {
+  "metric": "sufficiency",
+  "n": 96,
+  "tas_v6": 95.83333333333333,
+  "tas_v7": 96.875,
+  "diff_pts": 1.0416666666666665,
+  "ci_low": 0.0,
+  "ci_high": 3.125,
+  "won": [
+   "Q07"
+  ],
+  "lost": []
+ },
+ "abpvern": {
+  "metric": "sufficiency",
+  "n": 96,
+  "tas_v6": 81.25,
+  "tas_v7": 82.29166666666667,
+  "diff_pts": 1.0416666666666665,
+  "ci_low": 0.0,
+  "ci_high": 3.125,
+  "won": [
+   "Q07"
+  ],
+  "lost": []
+ },
+ "multirfe_synth": {
+  "metric": "passage_hit",
+  "n": 76,
+  "tas_v6": 96.05263157894737,
+  "tas_v7": 96.05263157894737,
+  "diff_pts": 0.0,
+  "ci_low": 0.0,
+  "ci_high": 0.0,
+  "won": [],
+  "lost": []
+ }
+}

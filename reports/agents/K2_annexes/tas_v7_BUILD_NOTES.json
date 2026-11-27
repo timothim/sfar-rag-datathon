@@ -1,0 +1,10 @@
+{
+  "built_by": "agent K2, 2026-11-27 12:04:07-12:08:46 (wall 274.8 s; manifest build_seconds 266.0)",
+  "command": "env -u RAG_SFAR_TABLE_ADJACENT_HEADERS HF_HUB_OFFLINE=1 RAG_SFAR_CHUNK_GRADE_HEADINGS=1 RAG_SFAR_CHUNK_GRADES=1 RAG_SFAR_CHUNK_REC_IDS=1 RAG_SFAR_CHUNK_BIBLIO=1 scripts/with_gpu_lock.sh K2 .venv/bin/rag-sfar-index --strategy table_aware_sota --output-dir index/tas_v7",
+  "k2_switches_on": {"RAG_SFAR_CHUNK_GRADE_HEADINGS": 1, "RAG_SFAR_CHUNK_GRADES": 1, "RAG_SFAR_CHUNK_REC_IDS": 1, "RAG_SFAR_CHUNK_BIBLIO": 1},
+  "k3_switch": {"RAG_SFAR_TABLE_ADJACENT_HEADERS": "unset (off)"},
+  "other_chunker_options": "defaults, identical to tas_v6 (see manifest.json chunker_options)",
+  "embeddings": "full re-embedding (no reuse), intfloat/multilingual-e5-small, as tas_v6",
+  "base_commit": "88df9af + uncommitted K2 chunker change; table_parser.py had K3's uncommitted change with its switch off",
+  "switches_off_check": "with all K2 switches off the chunker output is byte-identical to the pre-K2 chunker on all 265 documents (tests/test_k2_graded_chunking.py)"
+}

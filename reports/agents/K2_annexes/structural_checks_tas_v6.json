@@ -1,0 +1,684 @@
+{
+ "num_documents": 265,
+ "num_chunks": 36872,
+ "chunk_types": {
+  "prose": 20177,
+  "table_markdown": 2639,
+  "table_row_card": 9924,
+  "callout_footnote": 489,
+  "references": 2736,
+  "recommendation_box": 849,
+  "callout_allergy": 58
+ },
+ "text_len": {
+  "median": 631,
+  "p99": 1985,
+  "max": 4096,
+  "gt_4000": 1,
+  "gt_2500": 40
+ },
+ "indexed_len_max": 4383,
+ "largest": [
+  [
+   "2001_art54_dossieraranncomplet_df1465",
+   "table_row_card",
+   4096
+  ],
+  [
+   "2013_2_PUROL_Recommandations-chirurgie-ambulatoire",
+   "table_row_card",
+   3528
+  ],
+  [
+   "2026_RFE-antibioprophylaxie-2023_V3_0_pour-mise-su",
+   "recommendation_box",
+   3461
+  ],
+  [
+   "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-su",
+   "recommendation_box",
+   3460
+  ],
+  [
+   "2017_2_RFE-EC-en-rea-version-15-12-16_cdc74d",
+   "table_markdown",
+   3424
+  ]
+ ],
+ "cards_with_generic_headers": 0,
+ "table_md_with_generic_headers": 0,
+ "uncovered": {
+  "units": 112,
+  "units_total": 62145,
+  "chars": 21426,
+  "chars_total": 12931473,
+  "share_chars_pct": 0.17,
+  "by_kind": {
+   "line": 104,
+   "cell": 8
+  },
+  "examples": [
+   [
+    "2026_RECO_641-_URGENCE-VITALE_INTRAHOSPI",
+    "line",
+    "(à remplir une fois par an)"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_M",
+    "line",
+    " 12  Tension free Vaginal Tape"
+   ],
+   [
+    "2026_RFE-20_4_2026-deifinitif-et-validei",
+    "line",
+    "F1[Pas de prise la veille au soir"
+   ],
+   [
+    "2026_RFE-20_4_2026-deifinitif-et-validei",
+    "line",
+    "S1[Dernière prise à J-31"
+   ],
+   [
+    "2026_RFE-20_4_2026-deifinitif-et-validei",
+    "line",
+    "N1[Dernière prise à J-51"
+   ],
+   [
+    "2026_RFE-20_4_2026-deifinitif-et-validei",
+    "line",
+    "EP[EP, TVP et AVC < 3 mois]"
+   ],
+   [
+    "2026_RFE-20_4_2026-deifinitif-et-validei",
+    "line",
+    "Postpone[Surseoir à la chirurgie]"
+   ],
+   [
+    "2026_RFE-20_4_2026-deifinitif-et-validei",
+    "line",
+    "PostponeSurg[Envisager de repousser la chirurgie]"
+   ],
+   [
+    "2026_RFE-20_4_2026-deifinitif-et-validei",
+    "line",
+    "ClinicSurg[Prise en charge en pratique de ville]"
+   ],
+   [
+    "2026_RFE-20_4_2026-deifinitif-et-validei",
+    "line",
+    "ClinicSurgPost[Prise en charge en pratique de ville]"
+   ],
+   [
+    "2025_RESECTION_-HEPATIQUE_-RECOMMANDATIO",
+    "cell",
+    "3,78 \\times \\ln(\\text{bilirubine [mg/dl]}) + 11,2 \\times \\ln(\\text{INR}) + 9,57 \\times \\ln(\\text{créatinine [mg/dl]}) + 6,43"
+   ],
+   [
+    "2026_RFE-LAT-final-mai-2026-_a26946",
+    "line",
+    "Marie Citrini (Ile de France, HAS)"
+   ],
+   [
+    "2026_RFE-LAT-final-mai-2026-_a26946",
+    "line",
+    "Jonathan Levy (Ile-de-France, CHU)"
+   ],
+   [
+    "2025_2025_SFAR-SFA_RFE-Diagnostic-et-pri",
+    "line",
+    "AG_ATCD[\"ATCD de réaction lors d'une AG\"]"
+   ],
+   [
+    "2025_2025_SFAR-SFA_RFE-Diagnostic-et-pri",
+    "line",
+    "AL_ATCD[\"ATCD de réaction lors d'une AL / ALR\"]"
+   ],
+   [
+    "2025_2025_SFAR-SFA_RFE-Diagnostic-et-pri",
+    "line",
+    "AG_Oui[\"Oui ou Inconnu\"]"
+   ],
+   [
+    "2025_2025_SFAR-SFA_RFE-Diagnostic-et-pri",
+    "line",
+    "AL_Oui[\"Oui ou Inconnu\"]"
+   ],
+   [
+    "2025_2025_SFAR-SFA_RFE-Diagnostic-et-pri",
+    "line",
+    "AG_Priv[\"Privilégier AL/ALR si possible"
+   ],
+   [
+    "2025_2025_RFE-Intubation-adulte-hors-blo",
+    "line",
+    "Start[Pré-oxygénation systématique"
+   ],
+   [
+    "2024_RPP-Prevention-des-erreurs-medicame",
+    "line",
+    "L1([ ]) --- L1t[erreur résultante]"
+   ],
+   [
+    "2024_RPP-Prevention-des-erreurs-medicame",
+    "line",
+    "L2([ ]) --- L2t[erreur intermédiaire]"
+   ],
+   [
+    "2024_RPP-Prevention-des-erreurs-medicame",
+    "line",
+    "L3{ } --- L3t[erreur non détaillée]"
+   ],
+   [
+    "2024_RPP-Prevention-des-erreurs-medicame",
+    "line",
+    "L4(( )) --- L4t[erreur élémentaire]"
+   ],
+   [
+    "2026_RFE-antibioprophylaxie-2023_V3_0_po",
+    "cell",
+    "▪ Abdominoplastie ○ Durée ≤ 2h ○ Durée > 2h"
+   ],
+   [
+    "2026_RFE-antibioprophylaxie-2023_V3_0_po",
+    "cell",
+    "▪ Lifting cervico-facial ou mask-lift : ○ Durée ≤ 2h ○ Durée > 2h ○ Avec greffon ou remodelage osseux"
+   ],
+   [
+    "2026_RFE-antibioprophylaxie-2023_V3_0_po",
+    "cell",
+    "○ Abord extra-oral ( sans contamination locale ) : - Durée ≤ 2h - Durée > 2h"
+   ],
+   [
+    "2023_RPP-Anestheesie-adulte-porteur-CC_f",
+    "line",
+    "proposition votée par les experts"
+   ],
+   [
+    "2023_RPP-Anestheesie-adulte-porteur-CC_f",
+    "line",
+    "Proposition votée par les experts"
+   ],
+   [
+    "2021_Gestion_20perioperatoire_20des_20pa",
+    "line",
+    "Title --- HG[Hémorragie grave autre]"
+   ],
+   [
+    "2021_Gestion_20perioperatoire_20des_20pa",
+    "line",
+    "Title --- HNG[Hémorragie non grave]"
+   ],
+   [
+    "2013_2013_20AFAR_20GIHP_c80a1a",
+    "line",
+    "D1[\"[Dabigatran] ≤ 30 ng/ml\"]"
+   ],
+   [
+    "2013_2013_20AFAR_20GIHP_c80a1a",
+    "line",
+    "D2[\"30 < [Dabigatran] ≤ 200 ng/ml\"]"
+   ],
+   [
+    "2013_2013_20AFAR_20GIHP_c80a1a",
+    "line",
+    "D3[\"200 < [Dabigatran] ≤ 400 ng/ml\"]"
+   ],
+   [
+    "2013_2013_20AFAR_20GIHP_c80a1a",
+    "line",
+    "D4[\"[Dabigatran] > 400 ng/ml\"]"
+   ],
+   [
+    "2021_Gestion_20perioperatoire_20des_20pa",
+    "line",
+    "13. 23. Hémostase, Rouen, France"
+   ],
+   [
+    "2021_RFE-SFAR-SFMU-Solute_CC_81s-de-remp",
+    "line",
+    "Olivier Joannes-Boyau (Bordeaux)"
+   ],
+   [
+    "2022_RPP-SFAR-COVID_Version-Avril-2022_a",
+    "line",
+    "circuit COVID-19\"]; D -.-> H[\"Nouveau report\"]; H -.-> A;"
+   ],
+   [
+    "2019_diagnostic-et-prise-ne-charge-dune-",
+    "line",
+    "Start[Post-chirurgie cardiaque"
+   ],
+   [
+    "2019_diagnostic-et-prise-ne-charge-dune-",
+    "line",
+    "Deux stratégies sont possibles :"
+   ],
+   [
+    "2019_rfe-gestion-anemie-reanimation_0364",
+    "line",
+    "Start[\"Hb < 13 g/dl Homme"
+   ],
+   [
+    "2019_rfe-anemie-arbre-diagnostic-anemie_",
+    "line",
+    "Start[\"Hb < 13 g/dl Homme"
+   ],
+   [
+    "2019_rpp-urgence-brule-fiches-synthese_7",
+    "line",
+    "A2[\"EPREUVE DE REMPLISSAGE « test »\"]"
+   ],
+   [
+    "2019_rpp-urgence-brule-fiches-synthese_7",
+    "line",
+    "• NORADRENALINE ? Eliminer un sepsis précoce"
+   ],
+   [
+    "2019_propositions-tih-gihp-gfht-sfar_20_",
+    "line",
+    "Start[Post-chirurgie cardiaque"
+   ],
+   [
+    "2019_propositions-tih-gihp-gfht-sfar_20_",
+    "line",
+    "Deux stratégies sont possibles :"
+   ],
+   [
+    "2020_RFE_20pr_C3_A9-_C3_A9clampsie_final",
+    "line",
+    "ou Nicardipine LOXEN®\"]; D[\"PRESENCE D'AU MOINS UN SIGNE DE GRAVITÉ (1)"
+   ],
+   [
+    "2018_2_RFE-CURARE-3_4eac96",
+    "line",
+    "Dominique Fletcher et Lionel Velly"
+   ],
+   [
+    "2019_rfe-trauma-abdominale_656ac9",
+    "line",
+    "Coordonnateur : T. Gauss (SFAR)"
+   ],
+   [
+    "2019_rfe-trauma-abdominale_656ac9",
+    "line",
+    "Coordonnateur : J. Charbit (SFAR)"
+   ],
+   [
+    "2018_rfe-gestion-des-agents-antiplaquett",
+    "line",
+    "13. 23. Hémostase, Rouen, France"
+   ],
+   [
+    "2017_Pneumonies-associees-au-soins-de-re",
+    "line",
+    "O. Brissaud, S. Dauger, F. Michel."
+   ],
+   [
+    "2017_Pneumonies-associees-au-soins-de-re",
+    "line",
+    "Start[\"≥48h de l'admission en milieu de soins"
+   ],
+   [
+    "2018_RPP_beta-lactamines-en-soins-critiq",
+    "cell",
+    "C_{min} : 8-16 \\text{ mg/L}^{\\S} C_{éq} : 8-16 \\text{ mg/L}"
+   ],
+   [
+    "2017_RFE-ANREA-Intubation-difficile-et-e",
+    "line",
+    "A([INTUBATION DIFFICILE (ID)"
+   ],
+   [
+    "2016_RFE-ANREA-Prise-en-charge-des-traum",
+    "line",
+    "E. Javouhey, G. Oriaguet, S. Courtil-Teyssedre, P. Meyer"
+   ],
+   [
+    "2016_2-SFAR-RFE-tabac_proposition-CRC_a9",
+    "line",
+    "Bertrand Dureuil, Sébastien Pierre"
+   ],
+   [
+    "2016_RFE-ANREA-Reactualisation-de-la-rec",
+    "line",
+    "F. Aubrun, K. Nouette Gaulain."
+   ],
+   [
+    "2014_2_HAS_transfusion_de_globules_rouge",
+    "line",
+    "Dénomination abrégée : CGR irradié"
+   ],
+   [
+    "2014_2_HAS_transfusion_de_globules_rouge",
+    "line",
+    "$$\\dot{T}aO_2 = \\dot{Q} \\times CaO_2 \\approx \\dot{Q} \\times SaO_2 \\times [Hb] \\times 1,39$$"
+   ],
+   [
+    "2016_rfe-controle-cible-de-la-temperatur",
+    "line",
+    "Guillaume Debaty, CHU de Grenoble."
+   ],
+   [
+    "2016_Protection-oculaire-en-Anesthesie-e",
+    "line",
+    "Claude Guérin (réanimateur, Lyon)."
+   ],
+   [
+    "2015_2_AFAR_Prise-en-charge-des-infectio",
+    "line",
+    "style I fill:none,stroke:none"
+   ],
+   [
+    "2009_2_HAS_Accident-vasculaire-cerebral-",
+    "line",
+    "Start([Suspicion d'AVC"
+   ],
+   [
+    "2009_2_HAS_Accident-vasculaire-cerebral-",
+    "line",
+    "Start -.->|Conférence à 3| Call15"
+   ],
+   [
+    "2009_2_HAS_Accident-vasculaire-cerebral-",
+    "line",
+    "Start -.->|Médecin généraliste| Call15"
+   ],
+   [
+    "2008_2_AFAR_Prevention-des-infections-no",
+    "line",
+    "CVC : cathéters veineux centraux."
+   ],
+   [
+    "2008_2b_AFAR_texte-long_Securisation-des",
+    "line",
+    "Élevé – réduction de la mortalité."
+   ],
+   [
+    "2006_2_AFAR_Blocs-perimedullaires-chez-l",
+    "line",
+    "Start[Césarienne non programmée]"
+   ],
+   [
+    "2006_2_AFAR_Prise-en-charge-de-larret-ca",
+    "line",
+    "A[Absence de conscience"
+   ],
+   [
+    "2006_2_AFAR_Prise-en-charge-de-larret-ca",
+    "line",
+    "Start[\"RCP 15 : 2 avec FiO2 = 1"
+   ],
+   [
+    "2006_2a_HAS_TEXTE-COURT_Prise-en-charge-",
+    "line",
+    "Start[Patient douleur thoracique +]"
+   ],
+   [
+    "2005_2b_TEXTE-LONG_AFAR_Prise-en-charge-",
+    "line",
+    "P.E. Bollaert, J. Kienlen"
+   ],
+   [
+    "2002_2_AFAR_Thrombopenie-induite-par-lhe",
+    "line",
+    "Un barrage cave peut être discuté."
+   ],
+   [
+    "2001_Dossier-AnesthRea-SFAR_e8d945",
+    "line",
+    "Mineur :    autorisation d'opérer"
+   ],
+   [
+    "2001_Dossier-AnesthRea-SFAR_e8d945",
+    "line",
+    "(source : DIM CHU Angers)"
+   ],
+   [
+    "2001_Dossier-AnesthRea-SFAR_e8d945",
+    "line",
+    "Précisions sur l'état du patient"
+   ],
+   [
+    "2000_2_SFAR_Corticotherapie-au-cours-du-",
+    "line",
+    "**Jeudi 12 octobre 2000**"
+   ],
+   [
+    "2014_Recommandation_Prise_en_charge_doul",
+    "line",
+    "(grille adaptée Score de Sackett)"
+   ],
+   [
+    "2014_Recommandation_antalgique_post_amyg",
+    "line",
+    "(grille adaptée Score de Sackett)"
+   ],
+   [
+    "2021_Propositions_20GIHP_20GFHT_202021-c",
+    "line",
+    "C[Facteur de risque et/ou oxygène"
+   ]
+  ]
+ },
+ "full_width_rows": {
+  "total": 780,
+  "lost": 0,
+  "examples": []
+ },
+ "residues_in_text": {
+  "html_entity": 0,
+  "latex_dollar": 2,
+  "latex_cmd": 0,
+  "math_tag": 0,
+  "nul": 0,
+  "english_figure": 0,
+  "image_md": 0,
+  "mermaid": 12,
+  "glued_heading": 1,
+  "html_tag": 0
+ },
+ "residues_in_indexed_text": {
+  "html_entity": 0,
+  "latex_cmd": 210,
+  "math_tag": 0,
+  "nul": 0,
+  "english_figure": 0,
+  "mermaid": 12
+ },
+ "population_hint": {
+  "adulte": 10032,
+  "non_specifie": 20503,
+  "pediatrie": 4886,
+  "mixte": 1451
+ },
+ "fidelity": {
+  "tables": {
+   "rows_with_tokens": 8944,
+   "rows_not_in_one_unit": 9,
+   "tokens": 32959,
+   "tokens_missing": 4,
+   "examples": [
+    [
+     "2016_3-Tableaux-Reactualisation-de-la-re",
+     [
+      "1",
+      "11",
+      "12",
+      "20",
+      "2002j",
+      "3",
+      "5"
+     ],
+     [
+      "2002j"
+     ]
+    ],
+    [
+     "2016_3-Tableaux-Reactualisation-de-la-re",
+     [
+      "1",
+      "12",
+      "2002j",
+      "69"
+     ],
+     [
+      "2002j"
+     ]
+    ],
+    [
+     "2016_3-Tableaux-Reactualisation-de-la-re",
+     [
+      "1",
+      "11",
+      "12",
+      "20",
+      "2002j",
+      "3",
+      "5"
+     ],
+     [
+      "2002j"
+     ]
+    ],
+    [
+     "2013_2b_Annexe_SFAR_TableauxRFEDCALR2_14",
+     [
+      "0,5%",
+      "12",
+      "1ml",
+      "2",
+      "2010",
+      "3",
+      "40%",
+      "4ml"
+     ],
+     []
+    ],
+    [
+     "2013_2b_Annexe_SFAR_TableauxRFEDCALR2_14",
+     [
+      "0,001",
+      "0,019",
+      "0,045",
+      "0,5%",
+      "1",
+      "12",
+      "2",
+      "2010"
+     ],
+     []
+    ],
+    [
+     "2013_2b_Annexe_SFAR_TableauxRFEDCALR2_14",
+     [
+      "0",
+      "0.09mg/kg/h",
+      "1",
+      "10",
+      "10j",
+      "1132",
+      "1135",
+      "16"
+     ],
+     []
+    ],
+    [
+     "2013_2b_Annexe_SFAR_TableauxRFEDCALR2_14",
+     [
+      "0.125%",
+      "10",
+      "21j",
+      "3"
+     ],
+     []
+    ],
+    [
+     "2006_2_AFAR_Prise-en-charge-initiale-des",
+     [
+      "150.10",
+      "4",
+      "9",
+      "<150.10"
+     ],
+     []
+    ],
+    [
+     "2001_art54_dossierarannpre_a530d4",
+     [
+      "0",
+      "1",
+      "12",
+      "156",
+      "21,37g",
+      "24h",
+      "52kg",
+      "7"
+     ],
+     [
+      "21,37g"
+     ]
+    ]
+   ]
+  },
+  "flowcharts": {
+   "blocks": 164,
+   "blocks_losing_tokens": 0,
+   "examples": []
+  },
+  "single_line_table_chunks": 0,
+  "table_markdown_chunks": 2639,
+  "micro_unit_corruptions": 0,
+  "raw_latex_mu": 0,
+  "population_exclusion_contradictions": 0
+ },
+ "errata": {
+  "documents": [
+   {
+    "doc_id": "2026_RFE-antibioprophylaxie-2023_V3_0_pour-mise-sur-site-juin-2026_sa_9ff419",
+    "kind": "version_history_corrections",
+    "status": "reviewed",
+    "patches": [],
+    "reason": "Même historique des versions que la V3.1 (corrections intégrées) ; édition remplacée par la V3.1.",
+    "excerpt": "correction de coquilles dans les schémas de réinjection dans les tableaux de chirurgie thoracique (Partie 4, page 54), de chirurgie sénologique (Partie 6, page 64), de chirurgie viscérale (Partie 8, pages 80 et 81), et de chirurgie urologique (Partie 9, pages 87 et 88) ; ajout d'un auteur dans le gr"
+   },
+   {
+    "doc_id": "2011_2_AFAR_Prevention-de-la-maladie-thromboembolique-veineuse-postop_da2bda",
+    "kind": "erratum_section",
+    "status": "patched",
+    "patches": [
+     "D1-E3"
+    ],
+    "reason": "",
+    "excerpt": " ## Erratum Erratum à « Prévention de la maladie thromboembolique veineuse postopératoire. Actualisation 2011. Texte court » [Ann Fr Anesth Reanim 2011;30(12):947–51] *Erratum to “French Society of Anaesthesia and Intensive Care. Guidelines on perioperative venous thromboembolism prophylaxis. Up"
+   },
+   {
+    "doc_id": "2006_2_AFAR_Prise-en-charge-de-larret-cardiaque-1_c70196",
+    "kind": "erratum_section",
+    "status": "patched",
+    "patches": [
+     "D1-E1",
+     "D1-E2"
+    ],
+    "reason": "",
+    "excerpt": "Une erreur s'est glissée à la page 1018 de l'article du cahier de formation/information, les posologies d'adrénaline doivent être lues en « µg » et non mg. 10. Champ 9. Prise en charge de l'AC pédiatrique (F) 10.4.3. Accès veineux L'obtention d'une voie veineuse périphérique est souvent difficile"
+   },
+   {
+    "doc_id": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1",
+    "kind": "version_history_corrections",
+    "status": "reviewed",
+    "patches": [],
+    "reason": "« HISTORIQUE DES VERSIONS » : corrections (coquilles des schémas de réinjection, V1.2 etc.) déjà intégrées dans le texte de la version publiée ; aucun texte fautif ne subsiste à corriger.",
+    "excerpt": "correction de coquilles dans les schémas de réinjection dans les tableaux de chirurgie thoracique (Partie 4, page 54), de chirurgie sénologique (Partie 6, page 64), de chirurgie viscérale (Partie 8, pages 80 et 81), et de chirurgie urologique (Partie 9, pages 87 et 88) ; ajout d'un auteur dans le gr"
+   }
+  ],
+  "uncovered": [],
+  "ok": true
+ },
+ "populations": {
+  "adulte": 11310,
+  "obstetrique": 1752,
+  "(vide)": 21430,
+  "pediatrie": 4435,
+  "neonatal": 1253
+ }
+}

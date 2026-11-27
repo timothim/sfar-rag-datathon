@@ -1,0 +1,18 @@
+{
+ "queries": 64,
+ "docs": 33,
+ "stmt_in_context": 63,
+ "stmt_rank1": 36,
+ "stmt_rank_le3": 51,
+ "stmt_chunk_type": {
+  "recommendation_box": 58,
+  "prose": 5
+ },
+ "stmt_chunk_without_grade": 12,
+ "queries_with_argument_above_stmt": 26,
+ "top1_is_same_doc_argument_prose": 24,
+ "top1_other_doc": 2,
+ "queries_with_ge1_chunk_ge3_biblio_lines": 26,
+ "queries_with_ge1_mostly_biblio_chunk": 26,
+ "mean_context": 24.234375
+}
