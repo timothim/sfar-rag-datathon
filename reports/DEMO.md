@@ -11,7 +11,7 @@ cd /Users/tim/Me/SFAR-datathon
 HF_HUB_OFFLINE=1 .venv/bin/rag-sfar-serve --host 127.0.0.1 --port 8010
 ```
 
-Ouvrir ensuite http://127.0.0.1:8010/. Le démarrage prend environ 30 à 60 s (chargement de l'index, de l'embedder et du reranker), pour environ 2 à 3 Go de mémoire sans générateur. L'index servi par défaut est celui du profil (`index/tas_v6`). Le `--host 127.0.0.1` est obligatoire en local, car la valeur par défaut des réglages est `0.0.0.0`.
+Ouvrir ensuite http://127.0.0.1:8010/. Le démarrage a pris 10 s lors du test du 27/11 (chargement de l'index, de l'embedder et du reranker). La mémoire nécessaire sans générateur n'a pas été mesurée de façon fiable ; estimation : 2 à 4 Go. L'index servi par défaut est celui du profil (`index/tas_v6`). Le `--host 127.0.0.1` est obligatoire en local, car la valeur par défaut des réglages est `0.0.0.0`.
 
 ### Brancher un générateur
 
@@ -81,7 +81,7 @@ L'image Docker est écrite par ailleurs (agent M1) ; voici ce dont l'application
 - **Code** : le paquet `rag_sfar` installé (`pip install -e .`), Python 3.11 ou plus récent.
 - **Index** : le dossier `index/tas_v6` (environ 580 Mo : `bm25.pkl`, `embeddings.npy`, `subword.pkl`, `metadata.sqlite`, `manifest.json`), monté ou copié. Si son chemin n'est pas `index/tas_v6` sous le répertoire de travail : `RAG_SFAR_INDEX_DIR=/chemin/tas_v6`.
 - **Modèles locaux, hors ligne** (cache Hugging Face, environ 1 Go chacun avec les fichiers du cache local, moins en ne copiant que les poids) : `intfloat/multilingual-e5-small` (embedder) et `cross-encoder/mmarco-mMiniLMv2-L12-H384-v1` (reranker). Copier le cache (`HF_HOME`) dans l'image et lancer avec `HF_HUB_OFFLINE=1`. Les deux modèles tournent sur CPU.
-- **Mémoire** : prévoir environ 3 à 4 Go pour l'application (index, n-grammes, embedder, reranker). Le générateur Qwen 27B tourne à part, sur le service LibreDataHub.
+- **Mémoire** : prévoir environ 4 Go pour l'application (estimation, non mesurée) (index, n-grammes, embedder, reranker). Le générateur Qwen 27B tourne à part, sur le service LibreDataHub.
 - **Commande** : `rag-sfar-serve --host 0.0.0.0 --port 8000`. Dans un conteneur, `0.0.0.0` est nécessaire ; l'exposition réelle est décidée par la plateforme.
 - **Variables d'environnement** :
   - `RAG_SFAR_LLM_BASE_URL` : URL de base du point d'accès compatible OpenAI, **terminée par `/v1`** ;
