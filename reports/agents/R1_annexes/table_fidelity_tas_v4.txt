@@ -1,0 +1,15 @@
+{"tables": 2190, "tokens": 8935, "rows_checked": 1015, "rows_no_card_with_key": 468, "lost": 11, "rows_dose_not_with_key": 1}
+lost tokens by doc: [["2016_3-Tableaux-Reactualisation-de-la-recommandation-sur-la-douleur-p_7b4c8a", 7], ["2018_RFE-IH-soins-critiques_f67e16", 3], ["2001_art54_dossierarannpre_a530d4", 1]]
+rows with dose not in the card of their key, by doc: [["2017_rfe-antibioprophylaxie-in-surgery-and-interventional-medicine_643bc8", 1]]
+2018_RFE-IH-soins-critiques_f67e16	TOKEN	≤5μg/kg	Dopamine \leq 5 \mu\text{g/kg/min} ou Dobutamine* ou Terlipressine*
+2018_RFE-IH-soins-critiques_f67e16	TOKEN	≤15μg/kg	5< Dopamine \leq 15 \mu\text{g/kg/min} ou adrénaline \leq 0,1 \mu\text{g/kg/min} ou noradrénaline \leq 0,1 \mu\text{g/kg/min}
+2018_RFE-IH-soins-critiques_f67e16	TOKEN	>15μg/kg	>15 \mu\text{g/kg/min} >0,1 \mu\text{g/kg/min} >0,1 \mu\text{g/kg/min}
+2017_rfe-antibioprophylaxie-in-surgery-and-interventional-medicine_643bc8	ROW	or cefamandole	or Cefamandole || 2100 mg IV slow 5 mg/kg/day (dose based on actual weight) || Single dose
+2016_3-Tableaux-Reactualisation-de-la-recommandation-sur-la-douleur-p_7b4c8a	TOKEN	2002j	Hartrick CT 2002 J Clin Anesth
+2016_3-Tableaux-Reactualisation-de-la-recommandation-sur-la-douleur-p_7b4c8a	TOKEN	2002j	Suraseranivongse S 2002 J Med Assoc Thai
+2016_3-Tableaux-Reactualisation-de-la-recommandation-sur-la-douleur-p_7b4c8a	TOKEN	2002j	Hartrick CT 2002 J Clin Anesth
+2016_3-Tableaux-Reactualisation-de-la-recommandation-sur-la-douleur-p_7b4c8a	TOKEN	5,2μg/kg	Consommation remi plus faible dans le groupe guidé par SPI 9,5 +/- 3,8 vs 12,3 +/- 5,2 \mu\text{g/kg/h} p < 0,05
+2016_3-Tableaux-Reactualisation-de-la-recommandation-sur-la-douleur-p_7b4c8a	TOKEN	0,05μg/kg	Consommation remi plus faible dans le groupe guidé par SPI 0,06 +/- 0,04 vs 0,08 +/- 0,05 \mu\text{g/kg/min} p < 0,05
+2016_3-Tableaux-Reactualisation-de-la-recommandation-sur-la-douleur-p_7b4c8a	TOKEN	0,59μg/kg	Consommation fentanyl plus faible dans le groupe guidé par SPI 0,43 +/- 0,53 vs 1,73 +/- 0,59 \mu\text{g/kg} p < 0,001
+2016_3-Tableaux-Reactualisation-de-la-recommandation-sur-la-douleur-p_7b4c8a	TOKEN	0,3μg/kg	Consommation fentanyl en SSPI plus élevée dans le groupe guidé par SPI 0,5 +/- 0,34 vs 0,29 +/- 0,3 \mu\text{g/kg} p = 0,04
+2001_art54_dossierarannpre_a530d4	TOKEN	21,37g	Hospitalisation > 24h Poids: 52 Kg Taille: 156 Cm BMI: 21,37 G. S.: O+ Pouls: 0 TA: 12/7 INTUBATION: Dents: RAS Bouche: RAS Cou: RAS Rachis: RAS Mallampati: 1 AINS: Transfusion: ASA 1

@@ -1,0 +1,405 @@
+===== T1 doc=unk_guide-mise-en-place-gestion-reanimation-ephemere_1a72c8 year=None key='département pharmacie du hôpit'
+SOURCE:
+    DÉPARTEMENT PHARMACIE DU HÔPITAL DE LA VIEILLE MONTAGNE SERVICE PHARMACIE GÉNÉRALE || Secteur des Médicaments || 37.18.93
+    [cs2]CISATRACURIUM || Page 1/2
+    [cs2]Crée le 09/04/2020 par C.Besson || Index 1
+    [cs3]Suite à une rupture d'approvisionnement en CISATRACURIUM 150MG FL 30ML (NIMBEX) , nous vou
+CHUNK[table_markdown]: DÉPARTEMENT PHARMACIE DU HÔPITAL DE LA VIEILLE MONTAGNE / SERVICE PHARMACIE GÉNÉRALE | Secteur des Médicaments | 37.18.93 ⏎ CISATRACURIUM | Page 1/2 ⏎ Crée le 09/04/2020 par C.Besson | Index 1 ⏎ Note : Suite à une rupture d'approvisionnement en CISATRACURIUM 150MG FL 30ML (NIMBEX), nous vous approvisionnons en CISATRACURIUM 20MG AMP 10ML. / ATTENTION, les concentrations des 2 spécialités sont différentes : CISATRACURIUM 150MG FL 30ML = 5MG/ML / CISATRACURIUM 20MG AMP 10ML = 2MG/ML
+CHUNK[table_row_card]: Section : 2/ Les actions engagées par la pharmacie dans le cadre de la crise COVID > 3/ Prévenir les erreurs médicamenteuses induites par la crise COVID ⏎ DÉPARTEMENT PHARMACIE DU HÔPITAL DE LA VIEILLE MONTAGNE / SERVICE PHARMACIE GÉNÉRALE — Secteur des Médicaments — 37.18.93
+===== T2 doc=2001_2_AFAR_Les-blocs-peripheriques-des-membres-chez-l-adulte_9b260f year=2001 key="prothèse d'épaule"
+SOURCE:
+    Indications chirurgicales || Type de bloc || Cathéter
+    Prothèse d'épaule || BIS || +
+    Rupture coiffe des rotateurs || BIS || +
+    Arthrolyse d'épaule || BIS || +
+    Acromioplastie à ciel ouvert || BIS || +
+    Acromioplastie arthroscopique || BIS || 0
+    Bankart || BIS || + (peu douloureux si arthroscopie)
+CHUNK[table_markdown]: | Indications chirurgicales | Type de bloc | Cathéter | --- | --- | --- | Prothèse d'épaule | BIS | + | Rupture coiffe des rotateurs | BIS | + | Arthrolyse d'épaule | BIS | + | Acromioplastie à ciel ouvert | BIS | + | Acromioplastie arthroscopique | BIS | 0 | Bankart | BIS | + (peu douloureux si arthroscopie) | Butée d'épaule | BIS | + | Luxation acromioclavulaire | BIS | 0 | Luxation d'épaule | BIS | 0 | Ostéosynthèse de clavicule | BIS + Plexus cervical superficiel | 0 | Ostéosynthèse tête humérale | BSC | + | Ostéosynthèse diaphyse humérale | BSC ou BIC | + | Fracture de la palette humérale | BSC ou BIC Complément éventuel canal huméral | + | Arthrolyse du coude | BSC, BIC ou BAX | + | Ar
+CHUNK[table_row_card]: Section : QUELLES RECOMMANDATIONS POUR LES BLOCS PLEXIQUES ET TRONCULAIRES DES MEMBRES SUPÉRIEURS ? > 7.4. Pour la chirurgie orthopédique et vasculaire de l'avant-bras et de la main ⏎ Indications chirurgicales : Prothèse d'épaule | Type de bloc : BIS | Cathéter : +
+===== T3 doc=2001_art54_dossierarannpre_a530d4 year=2001 key='consultation pré-anesthésie cl'
+SOURCE:
+    [cs2]Consultation Pré-Anesthésie Clinique Anesthésie-Reanimation || Patient: Madam Née le: NIP: Numéro service: Med TT: Monsieur le Docteur
+    Anesth. CS || Date CS 4 OCT 2000 || Entrée 9 OCT 2000
+    [cs2]Heure 10:30 || Interv. 9 OCT 2000
+    Info. Hospitalisation || Chambre || Heure Intervention :
+    Anesth. Interv || Praticien || Type A* GENOU
+    [cs2]Type Anesthésie Prévue: RACHIANESTHESIE Antécédent FAMILIAUX : RAS CHIRURGICAUX : fistule  || Hospitalisation > 24h Poids: 52 Kg Taille: 156 Cm BMI: 21,37 G. S.: O+ Pouls: 0 TA: 12/7 I
+    [cs2]Examen Clinique TA= 12/7 Pouls= 0 CARDIO-VASCULAIRE : RAS PULMONAIRE : RAS || 
+CHUNK: none found
+===== T4 doc=2001_Dossier-AnesthRea-SFAR_e8d945 year=2001 key='fréquence cardiaque'
+SOURCE:
+     || Installat ° en salle || Induct° || [cs10]Per opératoire || Sortie
+    Heure ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  || 
+    Fréquence Cardiaque ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  || 
+    Pression artérielle ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  || 
+    SpO 2 (air ambiant - ou autres à préciser) ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  || 
+    Curarisation ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  || 
+    PetCO 2 ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  || 
+CHUNK[table_markdown]: | Antécédents Médicaux | Antécédents Chirurgicaux | --- | --- | - Poids kgs / - Fréquence cardiaque \| bat/mn / - Abord vasculaire..... /..... | - Taille cm / - Pression artérielle / mmHg / - Risque thrombo embolique : Faible / Modéré / Elevé..... /..... |
+CHUNK[table_row_card]: Section : CONSULTATION et VISITE PREANESTHESIQUES > Identification Patient ⏎ Antécédents Médicaux : - Poids kgs / - Fréquence cardiaque | bat/mn / - Abord vasculaire..... /..... | Antécédents Chirurgicaux : - Taille cm / - Pression artérielle / mmHg / - Risque thrombo embolique : Faible / Modéré / Elevé..... /.....
+CHUNK[table_markdown]: | Installat / ° en salle | Induct° | Per opératoire | Sortie | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | Heure | Fréquence Cardiaque | Pression artérielle | SpO2 (air ambiant - ou autres à préciser) | Curarisation | PetCO2 | Température | Diurèse |
+===== T5 doc=2003_2_AFAR_Prise-en-charge-d-un-blesse-adulte-presentant-un-traumati_ year=2003 key=''
+SOURCE:
+    [cs2]Toucher || [cs2]Piqûre
+    D || G || D || G
+    C2 ||  || C2 || 
+    C3 ||  || C3 || 
+    C4 ||  || C4 || 
+    C5 ||  || C5 || 
+    C6 ||  || C6 || 
+CHUNK: none found
+===== T6 doc=2004_2_SFAR_Traitement-des-urgences-transfusionnelles-obstetricales_86 year=2004 key='documents ih disponibles compl'
+SOURCE:
+    [cs3]Distribuer immédiatement (ou faire distribuer selon l'organisation locale) les PSL
+    Documents IH disponibles complets || Documents IH disponibles incomplets (1 seule détermination de groupe, RAI > 3j) || Absence de documents IH
+    Sang isogroupe, si disponible immédiatement 2 CGR O Rh nég, Kell nég ou 2 CGR O Rh pos (c- || 2 CGR O Rh nég, Kell nég ou 2 CGR O Rh pos (c-, E-) Kell nég • prélèvement pour RAI • prél || 2 CGR O Rh nég, Kell nég ou 2 CGR O Rh pos (c-, E-) Kell nég • prélèvement pour RAI + grou
+CHUNK[table_markdown]: | Distribuer immédiatement (ou faire distribuer selon l'organisation locale) les PSL | --- | --- | --- | Documents IH disponibles complets | Documents IH disponibles incomplets (1 seule détermination de groupe, RAI > 3j) | Absence de documents IH | Sang isogroupe, si disponible immédiatement / 2 CGR O Rh nég, Kell nég ou 2 CGR O Rh pos (c-, E-) Kell nég / poursuivre par CGR compatibles | 2 CGR O Rh nég, Kell nég ou 2 CGR O Rh pos (c-, E-) Kell nég / prélèvement pour RAI; prélèvement la 2ème détermination de groupe + phénotype Rh Kell, si besoin; ☞ poursuivre selon le résultat | 2 CGR O Rh nég, Kell nég ou 2 CGR O Rh pos (c-, E-) Kell nég / prélèvement pour RAI + groupe sanguin avec phénotype
+CHUNK[table_row_card]: Section : II-2-2 Identification > III) Propositions d'organisations ⏎ Distribuer immédiatement (ou faire distribuer selon l'organisation locale) les PSL : Documents IH disponibles complets | Documents IH disponibles incomplets (1 seule détermination de groupe, RAI > 3j) | Absence de documents IH
+===== T7 doc=2005_2a_SFAR_TEXTE-COURT_Anesthesie-pour-amygdalectomie-chez-lenfant_c year=2005 key='deux (ou plus) études de nivea'
+SOURCE:
+    Grade A || Deux (ou plus) études de niveau I
+    Grade B || Une étude de niveau I
+    Grade C || Etude(s) de niveau II
+    Grade D || Une étude (ou plus) de niveau III
+    Grade E || Etude(s) de niveau IV ou V
+CHUNK[table_markdown]: Tableau : Tableau 2 : Force des recommandations en médecine factuelle. ⏎ Grade A | Deux (ou plus) études de niveau I ⏎ Grade B | Une étude de niveau I ⏎ Grade C | Etude(s) de niveau II ⏎ Grade D | Une étude (ou plus) de niveau III ⏎ Grade E | Etude(s) de niveau IV ou V
+CHUNK[table_row_card]: Tableau : Tableau 2 : Force des recommandations en médecine factuelle. ⏎ Section : Introduction > Réalisation du texte court/recommandations et de la cotation ⏎ Grade A — Deux (ou plus) études de niveau I
+===== T8 doc=2006_2a_SFAR_texte-court_Ventilation-Non-Invasive-au-cours-del-insuff_ year=2006 key='décompensation de bpco'
+SOURCE:
+    [cs3]Tableau 4 – Critères associés à un risque d'échec accru
+    Indication || À l'admission || Réévaluation précoce
+    Décompensation de BPCO || pH < 7,25 FR > 35 cycles/min GCS < 11 Pneumonie Comorbidités cardio-vasculaires Score d'ac || À la 2 e heure : pH < 7,25, FR > 35 cycles/min GCS < 11
+    IRA hypoxémique sur cœur et poumons antérieurement sains || Age > 40 ans FR > 38 cycles/min Pneumonie communautaire Sepsis IRA post-opératoire par com || À la 1 re heure : PaO 2 /FiO 2 < 200 mmHg
+CHUNK[table_markdown]: | Tableau 2 – Niveaux de recommandation pour les indications de la VNI | --- | --- | Intérêt certain / Il faut faire (G1+) | Décompensation de BPCO / OAP cardiogénique | Intérêt non établi de façon certaine / Il faut probablement faire (G2+) | IRA hypoxémique de l'immunodéprimé / Post-opératoire de chirurgie thoracique et abdominale / Stratégie de sevrage de la ventilation invasive chez les BPCO / Prévention d'une IRA post extubation / Traumatisme thoracique fermé isolé / Décompensation de maladies neuromusculaires chroniques et autres IRC restrictives / Mucoviscidose décompensée / Forme apnéisante de la bronchiolite aiguë / Laryngo-trachéomalacie | Aucun avantage démontré / Il ne faut proba
+CHUNK[table_row_card]: Section : Question 1 : > Quels patients relèvent ou ne relèvent pas de la VNI ? ⏎ Tableau 2 – Niveaux de recommandation pour les indications de la VNI : Intérêt certain / Il faut faire (G1+) | Décompensation de BPCO / OAP cardiogénique
+CHUNK[prose]: Ce sont : ⏎  ⏎ - Le site de réalisation : ⏎  - Pré-hospitalier et urgences : la VNI se limite à la VS-PEP dans l'OAP (G1+). La VS-AI-PEP dans l'OAP cardiogénique ou la décompensation de BPCO est réservée aux équipes formées et entraînées disposant de respirateurs adaptés (G2+). ⏎  - Services de médecine : la VNI peut être envisagée pour les décompensations modérées de BPCO ( pH ≥ 7,30 ), dans un environnement aux conditions de surveillance adaptées (G2+). ⏎ - Le niveau de performance de l'équipe : ratio personnels/malades, compétences, disponibilité, pratiques protocolisées. ⏎ - La tolérance est conditionnée par le choix des matériels et leur maîtrise. ⏎ - L'identification et le traitement précoce des ris
+===== T9 doc=2006_2b_HAS_TEXTE-LONG_Prise-en-charge-de-linfarctus-du-myocarde_ba86c year=2006 key='syndrome coronaire instable in'
+SOURCE:
+    [rs5]Élevés || Syndrome coronaire instable Infarctus du myocarde récent (< 1 mois) Angor instable
+    Insuffisance cardiaque décompensée
+    Troubles du rythme ou de conduction Bloc auriculo-ventriculaire de haut grade Troubles du 
+    Valvulopathie sévère
+    
+    [rs5]Intermédiaires || Angor stable
+    Antécédent d'infarctus du myocarde à l'interrogatoire ou présence d'ondes Q sur l'électroc
+CHUNK: none found
+===== T10 doc=2006_2_AFAR_Gestion-du-traitement-anti-plaquettaire-_07c550 year=2006 key="reporter l'intervention au-del"
+SOURCE:
+    [rs2][cs2] || [cs3]Risque hémorragique de l'intervention (à évaluer avec le responsable du geste invasif ou l
+    Majeur || Intermédiaire || Mineur
+    [rs3]Risque de thrombose du stent (à évaluer avec le cardiologue) || Endoprothèse Coronaire (EC) Pharmaco-active ||  ||  || 
+    Majeur || Reporter l'intervention au-delà de 6 mois à 1 an après la pose de l'EC si impossible : Arr || Reporter l'intervention au-delà de 6 mois à 1 an après la pose de l'EC si impossible : Mai || Maintien aspirine et clopidogrel
+    Modéré || Arrêt aspirine-clopidogrel 5 jours ou Arrêt aspirine-clopidogrel 10 jours maxi et substitu || Maintien aspirine Arrêt clopidogrel 5 jours || Maintien aspirine et clopidogrel ou Maintien aspirine Arrêt clopidogrel 5 jours
+    [cs2] || [cs3]Risque hémorragique: Majeur: Intervention ne pouvant être réalisée sous AAP Modéré: Interv
+    [cs2] || [cs3]Risque de thrombose d'EC pharmaco-active Majeur: Mise en place depuis moins de 6 mois à 1 
+CHUNK[table_markdown]: | Risque hémorragique de l'intervention (à évaluer avec le responsable du geste invasif ou le chirurgien) / Majeur | Intermédiaire | Mineur | --- | --- | --- | --- | --- | Risque de thrombose du stent (à évaluer avec le cardiologue) | Endoprothèse / Coronaire (EC) / Pharmaco-active | Risque de thrombose du stent (à évaluer avec le cardiologue) | Majeur | Reporter l'intervention au-delà de 6 mois à 1 an après la pose de l'EC si impossible : Arrêt aspirine-clopidogrel 5 jours ou Arrêt aspirine-clopidogrel 10 jours maxi et substitution | Reporter l'intervention au-delà de 6 mois à 1 an après la pose de l'EC si impossible : Maintien aspirine / Arrêt clopidogrel 5 jours | Maintien aspirine et clo
+CHUNK[table_row_card]: Risque de thrombose du stent (à évaluer avec le cardiologue) ⏎ • Schéma 1 : Endoprothèse / Coronaire (EC) / Pharmaco-active ⏎ • Schéma 2 : Majeur | Risque hémorragique de l'intervention (à évaluer avec le responsable du geste invasif ou le chirurgien) / Majeur = Reporter l'intervention au-delà de 6 mois à 1 an après la pose de l'EC si impossible : Arrêt aspirine-clopidogrel 5 jours ou Arrêt aspirine-clopidogrel 10 jours maxi et substitution | Intermédiaire = Reporter l'intervention au-delà de 6 mois à 1 an après la pose de l'EC si impossible : Maintien aspirine / Arrêt clopidogrel 5 jours | Mineur = Maintien aspirine et clopidogrel ⏎ • Schéma 3 : Modéré | Risque hémorragique de l'intervention (à é
+===== T11 doc=2007_2_AFAR_Prise-en-charge-des-nausees-et-vomissements-postoperatoir_ year=2007 key=''
+SOURCE:
+    Nombre de facteurs || [cs2]Risque de NVPO en (%) selon le nombre de facteurs
+    0 || < 10 || 17
+    1 || 21 || 18
+    2 || 39 || 42
+    3 || 61 || 54
+    4 || 79 || 74
+    5 || % || 87
+CHUNK: none found
+===== T12 doc=2008_2_AFAR_Prevention-des-infections-nosocomiales-en-reanimation-tra_ year=2008 key="taux d'incidence globale/100 p"
+SOURCE:
+     || Pneumonies nosocomiales || Infections urinaires || Bactériémies || CVC (infection locale, générale ou bactériémie)
+    Taux d'incidence globale/100 patients || 8,52 || 6,46 || 3,42 || 1,30
+    Taux d'attaque spécifique/100 patients exposés || 13,49 || 7,82 || 3,42 || 2,18
+    Taux d'incidence/1000 jours d'exposition au dispositif || 16,17 || 7,94 || 3,27 || 1,86
+    Taux d'incidence/1000 jours d'exposition au dispositif chez l'enfant || 2,90–11,60 || 5,40 ||  || 7,10–9,70
+CHUNK[table_markdown]: | Pneumonies nosocomiales | Infections urinaires | Bactériémies | CVC (infection locale, générale ou bactériémie) | --- | --- | --- | --- | --- | Taux d'incidence globale/100 patients | 8,52 | 6,46 | 3,42 | 1,30 | Taux d'attaque spécifique/100 patients exposés | 13,49 | 7,82 | 3,42 | 2,18 | Taux d'incidence/1000 jours d'exposition au dispositif | 16,17 | 7,94 | 3,27 | 1,86 | Taux d'incidence/1000 jours d'exposition au dispositif chez l'enfant | 2,90–11,60 | 5,40 | 7,10–9,70 |
+CHUNK[table_row_card]: Section : Encadré 3. Critères diagnostiques des bactériémies nosocomiales (selon CTINLS). > Chambres des patients ⏎ Taux d'incidence globale/100 patients | Pneumonies nosocomiales : 8,52 | Infections urinaires : 6,46 | Bactériémies : 3,42 | CVC (infection locale, générale ou bactériémie) : 1,30
+===== T13 doc=2009_2_SFAR_Prise-en-charge-pre-et-interhospitaliere-des-formes-grave_ year=2009 key='t. pottecher'
+SOURCE:
+    Pilotage ||  || Relecteurs || Sociétés
+    M. Collet || SFMP || F. Bonnet || SFAR
+    D. Luton || CNGOF || F. Mercier || 
+    T. Pottecher || SFAR || MP. Bonnet || 
+    V. Zupan || SFP || A. Le Gouez || 
+     ||  || M. Bruyere || 
+    Experts ||  || S. Roger-Christoph || 
+CHUNK[prose]: **Date de publication : 27 janvier 2009** ⏎  ⏎ Recommandations formalisées d'experts communes SFAR/CNGOF/SFMP/SFNN ⏎  ⏎ Comité de pilotage : T. Pottecher (SFAR), D. Luton (CNGOF), V. Zupan (SFNN), M. Collet (SFMP) ⏎  ⏎ Correspondance : T. Pottecher ⏎  ⏎ SFAR : Société française d'anesthésie et de réanimation ⏎  ⏎ CNGOF : Collège national des gynécologues et obstétriciens français ⏎  ⏎ SFNN : Société française de néonatologie ⏎  ⏎ SFMP : Société française de médecine périnatale ⏎  ⏎ Liste des experts et relecteurs en fin du document
+CHUNK[table_markdown]: | Pilotage | Relecteurs | Sociétés | --- | --- | --- | --- | M. Collet | SFMP | F. Bonnet | SFAR | D. Luton | CNGOF | F. Mercier | T. Pottecher | SFAR | MP. Bonnet | V. Zupan | SFP | A. Le Gouez | M. Bruyere | Experts | S. Roger-Christoph | Définitions et conséquences des HTA de la grossesse | N. Berkane | D. Edouard | Epidémiologie de la pré éclampsie | F. Goffinet | JP. Bellefleur | Physiopath générale de la PE | V. Tsatsaris | D. Benhamou | Marqueurs prédictifs de la PE | F. Bretelle | A. Launoy | Le placenta de la PE :correlations anatomocliniques | P. Marcorelles | Médicaments utilisables au cours de la PE | R. Serreau | S. Marret | SFP | Prise en charge en réseau de la pré éclampsie | 
+CHUNK[table_row_card]: Section : Prise en charge multidisciplinaire des formes graves de prééclampsie > Liste des participant à la RFE prééclampsie ⏎ Pilotage : T. Pottecher | SFAR | Relecteurs : MP. Bonnet
+===== T14 doc=2010_2_AFAR_Urgences-Obstetricales-Extrahospitalieres_47ad85 year=2010 key='début de grossesse ou grossess'
+SOURCE:
+    Groupe 1 || Groupe 2 || Groupe 3 || Groupe 4
+    Début de grossesse ou grossesse ignorée || Terme \leq 24 SA || Terme > 24 SA || Détresse maternelle ou inefficacité circulatoire
+    Test de grossesse positif chez une femme en période d'activité génitale ayant eu un trauma || Fœtus non viable, bien protégé par le bassin maternel (peu de lésions) || Fœtus viable, moins bien protégé par le bassin maternel || Si traitement inefficace : césarienne post-mortem ?
+    Adaptation diagnostique (radios) et thérapeutique || Prise en charge essentiellement maternelle || Prise en charge maternelle et fœtale (monitorage, échographie, extraction prématurée ?) || Nécessité de délais très courts et problèmes éthiques
+CHUNK[table_markdown]: | Groupe 1 | Groupe 2 | Groupe 3 | Groupe 4 | --- | --- | --- | --- | Début de grossesse ou grossesse ignorée | Terme ≤ 24 SA | Terme > 24 SA | Détresse maternelle ou inefficacité circulatoire | Test de grossesse positif chez une femme en période d'activité génitale ayant eu un traumatisme grave | Fœtus non viable, bien protégé par le bassin maternel (peu de lésions) | Fœtus viable, moins bien protégé par le bassin maternel | Si traitement inefficace : césarienne post-mortem ? | Adaptation diagnostique (radios) et thérapeutique | Prise en charge essentiellement maternelle | Prise en charge maternelle et fœtale (monitorage, échographie, extraction prématurée ?) | Nécessité de délais très cour
+CHUNK[table_row_card]: Section : 5. CHAPITRE 5 – TRAUMATISMES CHEZ LA FEMME ENCEINTE ⏎ Groupe 1 : Début de grossesse ou grossesse ignorée | Groupe 2 : Terme ≤ 24 SA | Groupe 3 : Terme > 24 SA | Groupe 4 : Détresse maternelle ou inefficacité circulatoire
+===== T15 doc=2010_2_AFAR_Prise-en-charge-du-coronarien-qui-doit-etre-opere-en-chir_ year=2010 key='chirurgie à haut risque défini'
+SOURCE:
+    [cs3]Score de risque cardiaque de Lee
+    Calcul du score de Lee classique || Facteur de risque || Calcul du score de Lee clinique
+    1 point || Chirurgie à haut risque définie par une chirurgie vasculaire supra-inguinale, intrathoraci || 
+    1 point || Coronaropathie définie par un antécédent d'infarctus du myocarde, un angor clinique, une u || 1 point
+    1 point || Insuffisance cardiaque définie par un antécédent d'insuffisance cardiaque congestive, d'œd || 1 point
+    1 point || Antécédent d'accident vasculaire cérébral ischémique ou d'accident cérébral ischémique tra || 1 point
+    1 point || Diabète avec insulinothérapie || 1 point
+CHUNK[table_markdown]: | Score de risque cardiaque de Lee / Calcul du score de Lee classique | Facteur de risque | Calcul du score de Lee clinique | --- | --- | --- | 1 point | Chirurgie à haut risque définie par une chirurgie vasculaire supra-inguinale, intrathoracique ou intrapéritonéale | 1 point | Coronaropathie définie par un antécédent d'infarctus du myocarde, un angor clinique, une utilisation de nitrés, une onde Q sur l'ECG ou un test non invasif de la circulation coronaire positif | 1 point | 1 point | Insuffisance cardiaque définie par un antécédent d'insuffisance cardiaque congestive, d'œdème pulmonaire, une dyspnée nocturne paroxystique, des crépitants bilatéraux ou un galop B3, ou une redistribution v
+CHUNK[table_row_card]: Section : Scores de risque > Risque lié à la capacité à l'effort ⏎ Score de risque cardiaque de Lee / Calcul du score de Lee classique : 1 point | Facteur de risque : Chirurgie à haut risque définie par une chirurgie vasculaire supra-inguinale, intrathoracique ou intrapéritonéale
+===== T16 doc=2011_2_AFAR_echographie-en-anesthesie-locoregionale_c3717d year=2011 key='introduction dans le système v'
+SOURCE:
+    [rs2]Destination du matériel || [rs2]Classement du matériel || [cs2]Niveau de
+    Risque infectieux || Traitement requis
+    Introduction dans le système vasculaire ou dans une cavité ou tissu stérile quelle que soi || Critique || Haut risque || Stérilisation ou usage unique stérile à défaut Désinfection de haut niveau
+    En contact avec une muqueuse, ou la peau lésée superficiellement || Semi-critique || Risque médian || Désinfection de niveau intermédiaire
+    En contact avec la peau intacte du patient ou sans contact avec le patient || Non critique || Risque bas || Désinfection de bas niveau
+CHUNK[table_markdown]: | Destination du matériel | Classement du matériel | Niveau de / Risque infectieux | Traitement requis | --- | --- | --- | --- | Introduction dans le système vasculaire ou dans une cavité ou tissu stérile quelle que soit la voie d'abord | Critique | Haut risque | Stérilisation ou usage unique stérile à défaut / Désinfection de haut niveau | En contact avec une muqueuse, ou la peau lésée superficiellement | Semi-critique | Risque médian | Désinfection de niveau intermédiaire | En contact avec la peau intacte du patient ou sans contact avec le patient | Non critique | Risque bas | Désinfection de bas niveau |
+CHUNK[table_row_card]: Section : 3. MATÉRIEL ET ASPECT TECHNIQUE > 6. CONDITIONS DE RÉALISATION, HYGIÈNE ⏎ Destination du matériel : Introduction dans le système vasculaire ou dans une cavité ou tissu stérile quelle que soit la voie d'abord | Classement du matériel : Critique | Niveau de / Risque infectieux : Haut risque | Traitement requis : Stérilisation ou usage unique stérile à défaut / Désinfection de haut niveau
+===== T17 doc=2013_2b_Annexe_SFAR_TableauxRFEDCALR2_145d45 year=2013 key='kedlaya [39]'
+SOURCE:
+    Référence || Recherche || Technique || Articles (n) || Patients (n) || Qualité de vie || Douleur || conclusions
+    Kedlaya [39] || 1970 -2002 || IT || 22 || 839 || [rs4]plus de complications en péridurales sur longue durée améliore la qualité de vie || Diminution de la douleur > 30% || [rs4]le meilleur contrôle de la douleur améliore la qualité de vie
+    2002 ||  || peri || 3 || 483 || Efficacité identique IT et péridurale
+     ||  || IT et peri. || 5 || 557 || 
+     ||  || Total || 30 || 1879 || 
+    Raffaeli [42] || 1990 - 2005 || IT : 19 || 19 || 831 || [rs3]diminution des effets indésirables || [rs3]Efficacité dans toutes les études || [rs3]Amélioration du contrôle de la douleur et de la qualité de vie Manque d'essais randomisés
+    2005 ||  || peridurale || 2 || 102
+CHUNK[table_markdown]: | Référence | Recherche | Technique | Articles (n) | Patients (n) | Qualité de vie | Douleur | conclusions | --- | --- | --- | --- | --- | --- | --- | --- | Kedlaya [39] | 1970 -2002 | IT | 22 | 839 | plus de complications en péridurales sur longue durée améliore la qualité de vie | Diminution de la douleur > 30% | le meilleur contrôle de la douleur améliore la qualité de vie | 2002 | peri | 3 | 483 | plus de complications en péridurales sur longue durée améliore la qualité de vie | Efficacité identique IT et péridurale | le meilleur contrôle de la douleur améliore la qualité de vie | IT et peri. | 5 | 557 | plus de complications en péridurales sur longue durée améliore la qualité de vie | l
+CHUNK[table_row_card]: Section : QUESTION 5 : QUELLES SONT LES RECOMMANDATIONS CONCERNANT L'ALR DANS LE TRAITEMENT DES DOULEURS CANCÉREUSES? > Études cliniques analgésie spinale ⏎ Référence : Kedlaya [39] | Recherche : 1970 -2002 | Technique : IT | Articles (n) : 22 | Patients (n) : 839 | Qualité de vie : plus de complications en péridurales sur longue durée améliore la qualité de vie | Douleur : Diminution de la douleur > 30% | conclusions : le meilleur contrôle de la douleur améliore la qualité de vie
+===== T18 doc=2014_2_AFAR_Rehabilitation-rapide-apres-une-chirurgie-colorectale-pro_ year=2014 key='apports liquidiens peropératoi'
+SOURCE:
+    Paramètres || Recommandations principales || Recommandations secondaires || Absence de recommandation
+    Apports liquidiens peropératoires || Oui : optimisation de la volémie Non : un apport excessif de solutés ||  || 
+    Prévention du stress opératoire || Oui : dose unique de corticostéroïdes en préopératoire immédiat ||  || 
+    Prévention des infections du site opératoire || Oui par La prévention de l'hypothermie peropératoire L'administration d'une antibioprophyl ||  || 
+    Prévention des NVPO || Oui , systématique ||  || 
+    Voies d'abord chirurgical || Par laparoscopie ||  || Si laparotomie : aucune recommandation ne peut être faite sur le type d'incision
+CHUNK[prose]: Recommandation 12 – L'optimisation des apports liquidiens peropératoires, basée sur la mesure d'un paramètre hémodynamique reflétant la volémie, est recommandée lors de la chirurgie colorectale programmée. (GRADE 1+) *Accord Fort* ⏎  ⏎ Trois méta-analyses [26–28], dont une exclusivement dédiée à la chirurgie colorectale [27], s'intéressent à l'impact d'une stratégie de guidage des apports liquidiens peropératoires par des épreuves de remplissage sur la durée de séjour. Toutes retrouvent un bénéfice d'environ 2 jours en faveur du groupe bénéficiant de la stratégie d'optimisation. Les modalités techniques de surveillance du remplissage sont variées mais le Doppler œsophagien représente la techniqu
+CHUNK[table_markdown]: | Paramètres | Recommandations principales | Recommandations secondaires | Absence de recommandation | --- | --- | --- | --- | Apports liquidiens peropératoires | Oui : optimisation de la volémie / Non : un apport excessif de solutés | Prévention du stress opératoire | Oui : dose unique de corticostéroïdes en préopératoire immédiat | Prévention des infections du site opératoire | Oui par La prévention de l'hypothermie peropératoire / L'administration d'une antibioprophylaxie | Prévention des NVPO | Oui, systématique | Voies d'abord chirurgical | Par laparoscopie | Si laparotomie : aucune recommandation ne peut être faite sur le type d'incision |
+CHUNK[table_row_card]: Section : ANNEXE. CLASSEMENT DES RECOMMANDATIONS EN FONCTION DE LA PÉRIODE OPÉRATOIRE ET DE LEUR IMPACT. > Période peropératoire. ⏎ Paramètres : Apports liquidiens peropératoires | Recommandations principales : Oui : optimisation de la volémie / Non : un apport excessif de solutés
+===== T19 doc=2014_2_HAS_transfusion_de_globules_rouges_homologues_-_produits_indic_ year=2014 key='preuve scientifique établie fo'
+SOURCE:
+    [cs2]Grade des recommandations
+    A || Preuve scientifique établie Fondée sur des études de fort niveau de preuve (niveau de preu
+    B || Présomption scientifique Fondée sur une présomption scientifique fournie par des études de
+    C || Faible niveau de preuve Fondée sur des études de moindre niveau de preuve, comme des étude
+    AE || Accord d'experts En l'absence d'études, les recommandations sont fondées sur un accord ent
+CHUNK: none found
+===== T20 doc=2015_RECOCHIRAMBUSNFCP-120315_de5fbe year=2015 key='preuve scientifique établie fo'
+SOURCE:
+    [cs2]Grade des recommandations
+    A || Preuve scientifique établie Fondée sur des études de fort niveau de
+CHUNK: none found
+===== T21 doc=2016_preparation-colique-anesthesie-generale_47550d year=2016 key=''
+SOURCE:
+    Si l'examen a lieu entre : || Alimentation légère jusqu'à : || Préparation colique Jusqu'à : || Autres liquides clairs : eau, thé, café, tisane sucrés, jus de pomme ou de raisin, jusqu'à
+    8h - 10h || 2h || 5h || 6h
+    10h – 12h || 4h || 7h || 8h
+    12h – 14h || 6h || 9h || 10h
+    14 – 16h || 8h || 11h || 12h
+    16h- 18h || 10h || 13h || 14h
+CHUNK: none found
+===== T22 doc=2016_RFE-ANREA-Reactualisation-de-la-recommandation-sur-la-douleur-po_ year=2016 key='lidocaïne adrénalinée'
+SOURCE:
+    Agent || Dose maximale en mg/kg
+    Lidocaïne adrénalinée || 7
+    Mépivacaïne || 5
+    Lévobupivacaïne || 3
+    Ropivacaïne || 3
+CHUNK[table_markdown]: | Agent | Dose maximale en mg/kg | --- | --- | Lidocaïne adrénalinée | 7 | Mépivacaïne | 5 | Lévobupivacaïne | 3 | Ropivacaïne | 3 |
+CHUNK[table_row_card]: Section : Anesthésie locale et locorégionale postopératoire > Quelles indications et limites pour un cathéter d'infiltration ? ⏎ Agent : Lidocaïne adrénalinée | Dose maximale en mg/kg : 7
+===== T23 doc=2017_Antibioprophylaxie-version-2017-CRC_CA_MODIF_ecc6c7 year=2017 key='fracture fermée nécessitant un'
+SOURCE:
+    Acte Chirurgical || Produit || Posologie || Réinjection et Durée
+    Fracture fermée nécessitant une ostéosynthèse extra focale isolée || [cs3]Pas d'ABP
+    [rs4]Fracture fermée nécessitant une ostéosynthèse intra focale quel que soit le matériel mis e || céfazoline || 2g IV lente || 1g si durée > 4h Limitée à la période opératoire (24h max) 0,75g si durée > 2h
+    Céfamandole || 1,5g IV lente || Limitée à la période opératoire (24h max) 0,75g si durée > 2h
+    Céfuoxime || 1,5g IV lente || Limitée à la période opératoire (24h max)
+    Allergie : clindamycine + gentamicine || 900 mg IV lente 5 mg/kg/j || 600mg si durée > 4h
+    Fracture ouverte stade II et III de Cauchoux, quel que soit le matériel mis en place. || Péni A + IB * || 2g IV lente || 1g si durée > 2h 48h maximum
+CHUNK[table_markdown]: | Acte Chirurgical | Produit | Posologie | Réinjection et Durée | --- | --- | --- | --- | Fracture fermée nécessitant une ostéosynthèse extra focale isolée | Pas d'ABP |
+CHUNK[table_markdown]: | Acte Chirurgical | Produit | Posologie | Réinjection et Durée | --- | --- | --- | --- | Fracture fermée nécessitant une ostéosynthèse intra focale quel que soit le matériel mis en place / Fracture ouverte de stade I de Cauchoux quel que soit le matériel mis en place / Plaie des parties molles non contuse et non souillée, avec ou sans atteinte de structures nobles (artère, nerf, tendon). / Plaie articulaire | céfazoline | 2g IV lente | 1g si durée > 4h / Limitée à la période opératoire (24h max) / 0,75g si durée > 2h | Fracture fermée nécessitant une ostéosynthèse intra focale quel que soit le matériel mis en place / Fracture ouverte de stade I de Cauchoux quel que soit le matériel mis en p
+CHUNK[table_row_card]: Section : Texte plus valable mis à jour en juillet 2018 telecharger > Antibioprophylaxie en traumatologie ⏎ Acte Chirurgical : Fracture fermée nécessitant une ostéosynthèse extra focale isolée | Produit : Pas d'ABP
+===== T24 doc=2017_rfe-prise-en-charge-des-traumatises-pelviens-graves-a-la-phase-p_ year=2017 key='[1] sauerland s, bouillon b, r'
+SOURCE:
+    [1] Sauerland S, Bouillon B, Rixen D, Raum MR, Koy T, Neugebauer EA. The reliability of cl || [4] Giannoudis PV, Grotz MR, Tzioupis C, Dinopoulos H, Wells GE, Bouamra O, et al. Prevale || [7] Ustundag M, Aldemir M, Orak M, Guloglu C. Predictors of mortality in blunt multi-traum
+CHUNK[table_markdown]: Tableau : Références ⏎ [1] Sauerland S, Bouillon B, Rixen D, Raum MR, Koy T, Neugebauer EA. The reliability of clinical examination in detecting pelvic fractures in blunt trauma patients: a meta-analysis. Arch Orthop Trauma Surg 2004;124:123-8. / [2] Riou B, Thicoipé M, Atain-Kouadio P, et al. Comment évaluer la gravité ? In: Samu de France, editor. Actualités en réanimation pré-hospitalière : la traumatisé grave. Paris: SFEM Editions; 2002. p. 115-28. / [3] Ooi CK, Goh HK, Tay SY, Phua DH. Patients with pelvic fracture: what factors are associated with mortality? Int J Emerg Med 2010;3:299-304. | [4] Giannoudis PV, Grotz MR, Tzioupis C, Dinopoulos H, Wells GE, Bouamra O, et al. Prevalence of 
+CHUNK[table_row_card]: Tableau : Références ⏎ Section : Résultats > Argumentaire ⏎ [1] Sauerland S, Bouillon B, Rixen D, Raum MR, Koy T, Neugebauer EA. The reliability of clinical examination in detecting pelvic fractures in blunt trauma patients: a meta-analysis. Arch Orthop Trauma Surg 2004;124:123-8. / [2] Riou B, Thicoipé M, Atain-Kouadio P, et al. Comment évaluer la gravité ? In: Samu de France, editor. Actualités en réanimation pré-hospitalière : la traumatisé grave. Paris: SFEM Editions; 2002. p. 115-28. / [3] Ooi CK, Goh HK, Tay SY, Phua DH. Patients with pelvic fracture: what factors are associated with mortality? Int J Emerg Med 2010;3:299-304. — [4] Giannoudis PV, Grotz MR, Tzioupis C, Dinopoulos H, Wells G
+===== T25 doc=2018_ACCPM-335_e0976b year=2018 key='chronic kidney disease (i.e. c'
+SOURCE:
+    Chronic kidney disease (i.e. creatinine clearance < 60 mL/min)
+    Diffuse multivessel disease especially in diabetic patients
+    Prior stent thrombosis on adequate antiplatelet therapy
+    Stenting of the last remaining patent coronary artery
+    At least 3 lesions treated
+    At least 3 stents implanted
+    Bifurcation with 2 stents implanted
+CHUNK[table_markdown]: Chronic kidney disease (i.e. creatinine clearance < 60 mL/min) ⏎ Diffuse multivessel disease especially in diabetic patients ⏎ Prior stent thrombosis on adequate antiplatelet therapy ⏎ Stenting of the last remaining patent coronary artery ⏎ At least 3 lesions treated ⏎ At least 3 stents implanted ⏎ Bifurcation with 2 stents implanted ⏎ Total stent length > 60 mm ⏎ Treatment of a chronic total occlusion
+===== T26 doc=2018_RPP_beta-lactamines-en-soins-critiques_041018_logoSFPT_9e9437 year=2018 key='amoxicilline'
+SOURCE:
+    [rs2] || [rs2]Fraction libre % || [cs2]Concentrations cibles recommandées # || [rs2]CMI seuil considérée £ (5) || [rs2]Réf.
+    Infection documentée || Infection non documentée
+    Amoxicilline || ≈80% || C min L ou C eq L ≥ 4x CMI C min ou C eq < 80 mg/L || C min : 40 -80 * mg/L § C eq : 40-80 mg/L || 8 mg/L ( E. coli ) || (12)
+    Céfazoline || ≈15-20% || C min L ou C eq L ≥ 4x CMI C min ou C eq < 80 mg/L || C min : 40-80 mg/L § C eq : 40-80 mg/L || 2 mg/L ( S. aureus ) || (13)
+    Céfépime || 80% || C min L ou C eq L ≥ 4x CMI C min <20mg/L C eq <35 mg/L || C min : 5-20 mg/L C eq : 5-35 mg/L || 1 mg/L (Enterobactéries) §§ || (6,7,14)
+    Céfotaxime || ≈60-80% || C min L ou C eq L ≥ 4x CMI C min ou C eq < 60 mg/L || C min : 25-60 mg/L C eq : 25-60 mg/L || 4 mg/L ( S. aureus ) || (15)
+    Ceftazidime || ≈90% || C min L ou C eq L ≥ 4x CMI C min ou C eq < 80 mg/L || C min : 35-80 mg/L § C eq : 35-80 mg/L || 8 mg/L ( P. aeruginosa ) || (16)
+CHUNK[prose]: Le syndrome de réponse inflammatoire généralisée associé au sepsis, le remplissage vasculaire, l'utilisation de catécholamines, certains types de lésions (brûlures, médiastinite, etc.), l'existence de défaillance(s) d'organe(s) (état de choc, dysfonction rénale, dysfonction hépatique, etc.) et l'usage de certaines techniques de suppléance d'organe(s) (ventilation mécanique, circulation extracorporelle pour oxygénation (ECMO), épuration extra-rénale, etc.) modifient la PK des antibiotiques en soins critiques (1,2). L'étude multicentrique internationale DALI menée chez 361 patients a mis en évidence cette variabilité (3). Une variabilité considérable des concentrations mesurées chez les patien
+CHUNK[prose]: Parmi les principales causes de variabilité PK observées chez le patient de soins critiques, les modifications du volume de distribution (Vd) des bêta-lactamines et de leur clairance rénale occupent une place importante. La figure 1 compare les valeurs de volume de distribution du cefépime et de sa clairance chez les patients de soins critiques et chez l'adulte sain. Ceci illustre l'importante variabilité observée *in vivo* pour une même posologie administrée. De plus, la pathologie du patient affecte également la PK. Par exemple, Isla *et al.* ont rapporté un Vd et une clairance du Méropénème plus élevés chez les patients traumatisés que chez les patients septiques (Vd 69,5 L vs 15,7 L et C
+CHUNK[table_markdown]: Tableau : R4.6. Les experts suggèrent de considérer comme cibles thérapeutiques les concentrations plasmatiques indiquées dans le tableau ci-dessous. | Fraction libre % | Concentrations cibles recommandées# / Infection documentée | Infection non documentée | CMI seuil considérée£ (5) | Réf. | --- | --- | --- | --- | --- | --- | Amoxicilline | ≈80% | CminL ou CeqL ≥ 4x CMI / Cmin ou Ceq < 80 mg/L | Cmin : 40 -80* mg/L§ / Ceq : 40-80 mg/L | 8 mg/L (E. coli) | (12) | Céfazoline | ≈15-20% | CminL ou CeqL ≥ 4x CMI / Cmin ou Ceq < 80 mg/L | Cmin : 40-80 mg/L§ / Ceq : 40-80 mg/L | 2 mg/L (S. aureus) | (13) | Céfépime | 80% | CminL ou CeqL ≥ 4x CMI / Cmin <20mg/L / Ceq <35 mg/L | Cmin : 5-20 mg/L / 
+===== T27 doc=2018_Antibioprophylaxie-RFE-mise-a-jour-2018_c6a5c4 year=2018 key='uréthroplastie, uréthrotomie'
+SOURCE:
+    [cs4]Chirurgie de l'urètre
+    Acte chirurgical || Produit || Dose initiale || Ré-injection et durée
+    [rs4]Uréthroplastie, uréthrotomie || Céfazoline || 2 g IV lente || Dose unique
+    Céfamandole ou Céfuroxime || 1,5 g IV lente || Dose unique
+    Allergie : Gentamicine || 5 mg/kg/j || Dose unique
+    Céfoxitine || 2g IV lente || Dose unique
+    [rs4]Sphincter artificiel || PENI A + IB* || 2g IV lente || Dose unique
+CHUNK[table_markdown]: | Chirurgie de l'urètre / Acte chirurgical | Produit | Dose initiale | Ré-injection et durée | --- | --- | --- | --- | Uréthroplastie, uréthrotomie | Céfazoline | 2 g IV lente | Dose unique | Uréthroplastie, uréthrotomie | Céfamandole ou Céfuroxime | 1,5 g IV lente | Dose unique | Uréthroplastie, uréthrotomie | Allergie : Gentamicine | 5 mg/kg/j | Dose unique | Uréthroplastie, uréthrotomie | Céfoxitine | 2g IV lente | Dose unique | Sphincter artificiel | PENI A + IB* | 2g IV lente | Dose unique | Sphincter artificiel | Allergie : Gentamicine / + / Métronidazole | 5 mg/kg / 1 g en perfusion | Dose unique / Dose unique | Sphincter artificiel | PENI A + IB* | 2 g IV lente | Dose unique | Sphinc
+CHUNK[table_row_card]: Section : Recommandations Formalisées d'Experts > Antibioprophylaxie en chirurgie urologique (urine stérile) (suite) ⏎ Chirurgie de l'urètre / Acte chirurgical : Uréthroplastie, uréthrotomie | Ré-injection et durée : Dose unique ⏎ • Schéma 1 : Produit = Céfazoline | Dose initiale = 2 g IV lente ⏎ • Schéma 2 : Produit = Céfamandole ou Céfuroxime | Dose initiale = 1,5 g IV lente ⏎ • Schéma 3 : Produit = Allergie : Gentamicine | Dose initiale = 5 mg/kg/j ⏎ • Schéma 4 : Produit = Céfoxitine | Dose initiale = 2g IV lente
+===== T28 doc=2019_rfe-gestion-anemie-reanimation_03645b year=2019 key='réanimation générale'
+SOURCE:
+    Situation clinique || Taux d'Hb à cibler (g/dL) || Degré d'incertitude || Grade de recommandation
+    Réanimation générale || 7 - 9 || Élevé || GRADE 1
+    Traumatisme || 7 - 9 || Élevé || GRADE 1
+    Sepsis || 7 - 9 || Élevé || GRADE 1
+    Lésions cérébrales || 7 - 10 || Élevé || GRADE 2
+    Post-opératoire chirurgie cardiaque || 8 - 10 || Élevé || GRADE 1
+    Syndrome coronaire aigu || 7 - 10 || Élevé || GRADE 2
+CHUNK[prose]: **Taux d'Hémoglobine à cibler pour la transfusion (g/dL)** ⏎  ⏎ [Image, description automatique en anglais : Figure 1: A horizontal bar chart showing the recommended target hemoglobin levels for transfusion in various clinical situations. The x-axis represents hemoglobin levels in g/dL, with markers at 7, 8, 9, and 10. The y-axis lists clinical situations: Réanimation générale, Traumatisme, Sepsis, Lésions cérébrales, Post-opératoire chirurgie cardiaque, and Syndrome coronaire aigu. Each situation has a green bar representing the recommended range and a grey bar representing the uncertainty. The recommended ranges are: Réanimation générale (7-9), Traumatisme (7-9), Sepsis (7-9), Lésions cérébral
+CHUNK[table_markdown]: | Situation clinique | Taux d'Hb à cibler (g/dL) | Degré d'incertitude | Grade de recommandation | --- | --- | --- | --- | Réanimation générale | 7 - 9 | Élevé | GRADE 1 | Traumatisme | 7 - 9 | Élevé | GRADE 1 | Sepsis | 7 - 9 | Élevé | GRADE 1 | Lésions cérébrales | 7 - 10 | Élevé | GRADE 2 | Post-opératoire chirurgie cardiaque | 8 - 10 | Élevé | GRADE 1 | Syndrome coronaire aigu | 7 - 10 | Élevé | GRADE 2 |
+CHUNK[table_row_card]: Section : Méthode > Synthèse des résultats ⏎ Situation clinique : Réanimation générale | Taux d'Hb à cibler (g/dL) : 7 - 9 | Degré d'incertitude : Élevé | Grade de recommandation : GRADE 1
+===== T29 doc=2019_rac-orthepedie-lourde_bc800f year=2019 key='argumentaire : cette question '
+SOURCE:
+    Argumentaire : Cette question a fait l'objet d'une analyse récente par la SFAR dans le cad
+CHUNK[table_markdown]: Argumentaire : Cette question a fait l'objet d'une analyse récente par la SFAR dans le cadre des RFE sur la prise en charge de la douleur postopératoire) [1]. Aucune étude complémentaire ne permet à ce jour de modifier cette recommandation depuis la parution de ce précédent texte.
+===== T30 doc=2020_RPP_PLYO_2020_a9118d year=2020 key='55 + 1.5*âge'
+SOURCE:
+    Age || Fréquence respiratoire (Limite supérieure) || Fréquence cardiaque (Limite supérieure) || PAS (Limite inférieure) || PAM (Limite inférieure)
+    1 mois || 35 (55) || 120 (175) || 60 (50) || 45 (35)
+    1 an || 30 (40) || 110 (170) || 80 (70) || 55 (40)
+    2 ans || 25 (30) || 100 (160) || 90 + 2* âge || 55 + 1.5*âge
+    6 ans || 20 (25) || 90 (130) || 90 + 2* âge || 55 + 1.5 *âge
+    12 ans || 15 (20) || 80 (100) || 120 (90) || 80 (65)
+CHUNK[table_markdown]: | Age | Fréquence respiratoire (Limite supérieure) | Fréquence cardiaque (Limite supérieure) | PAS (Limite inférieure) | PAM (Limite inférieure) | --- | --- | --- | --- | --- | 1 mois | 35 (55) | 120 (175) | 60 (50) | 45 (35) | 1 an | 30 (40) | 110 (170) | 80 (70) | 55 (40) | 2 ans | 25 (30) | 100 (160) | 90 + 2* âge | 55 + 1.5*âge | 6 ans | 20 (25) | 90 (130) | 90 + 2* âge | 55 + 1.5 *âge | 12 ans | 15 (20) | 80 (100) | 120 (90) | 80 (65) |
+CHUNK[table_row_card]: Section : Introduction > Synthèse des résultats ⏎ Age : 2 ans | Fréquence respiratoire (Limite supérieure) : 25 (30) | Fréquence cardiaque (Limite supérieure) : 100 (160) | PAS (Limite inférieure) : 90 + 2* âge | PAM (Limite inférieure) : 55 + 1.5*âge
+===== T31 doc=2020_RFE-pre-eclampsie_Fiches-pratiques_2e9124 year=2020 key='labétalol (trandate®)'
+SOURCE:
+    Agent anti-hypertenseur IV || Modalités et précautions d'utilisation || Stratégie de titration par bolus IV (Indication: PAS \geq 180 mmHg et/ou PAD \geq 120 mmHg || Perfusion continue IVSE
+    Labétalol (TRANDATE®) || • A privilégier en première intention • Hors contre-indications : (asthme, BPCO, bradycard || 1 er bolus: 20 mg en IV sur >2 minutes ↓ si échec * 2 ème bolus: 40 mg en IV sur >2 minute || 0.5 à 1 mg/Kg/h Objectif : PAS < 160 mmHg et PAD < 110 mmHg
+    Nicardipine (LOXEN®) || • A privilégier en seconde intention ou en association || Bolus de 0,5 mg en IV sur >2 minutes à répéter 3 fois si échec* ↓ si échec * Poursuite nic || 0.5 à 4 mg/h Objectif : PAS < 160 mmHg et PAD < 110 mmHg
+    Urapidil (EUPRESSYL®) || • A privilégier en seconde intention ou en association || Bolus de 6,25 à 12,5 mg en IV sur >2 minutes à répéter 3 fois si échec* ↓ si échec * Pours || 10 à 60 mg/h Objectif : PAS < 160 mmHg et PAD < 110 mmHg
+CHUNK[table_markdown]: | Agent anti-hypertenseur IV | Modalités et précautions d'utilisation | Stratégie de titration par bolus IV (Indication: PAS ≥ 180 mmHg et/ou PAD ≥ 120 mmHg) | Perfusion continue IVSE | --- | --- | --- | --- | Labétalol (TRANDATE®) | A privilégier en première intention; Hors contre-indications : (asthme, BPCO, bradycardie, présence ou antécédent de trouble de conduction intra-cardiaque, antécédent de réaction d'hypersensibilité) | 1er bolus: 20 mg en IV sur >2 minutes / ↓ si échec * / 2ème bolus: 40 mg en IV sur >2 minutes / ↓ si échec * / 3ème bolus: 80 mg en IV sur >2 minutes / ↓ si échec * / 4ème bolus: 80 mg en IV sur >2 minutes / ↓ si échec * / poursuite labétalol 1 mg/kg/h IVSE et ajou
+CHUNK[table_row_card]: Section : Algorithme de prise en charge thérapeutique de l'HTA au cours de la pré-éclampsie sévère > (4) INSUFFISANCE RÉNALE AIGUÉ\ ⏎ Agent anti-hypertenseur IV : Labétalol (TRANDATE®) | Modalités et précautions d'utilisation : A privilégier en première intention; Hors contre-indications : (asthme, BPCO, bradycardie, présence ou antécédent de trouble de conduction intra-cardiaque, antécédent de réaction d'hypersensibilité) | Stratégie de titration par bolus IV (Indication: PAS ≥ 180 mmHg et/ou PAD ≥ 120 mmHg) : 1er bolus: 20 mg en IV sur >2 minutes / ↓ si échec * / 2ème bolus: 40 mg en IV sur >2 minutes / ↓ si échec * / 3ème bolus: 80 mg en IV sur >2 minutes / ↓ si échec * / 4ème bolus: 80 mg 
+===== T32 doc=2021_RFE-SFAR-SFMU-Solute_CC_81s-de-remplissage_finale_220921_c91c4c year=2021 key='na + (mmol/l)'
+SOURCE:
+    Composition || Plasma || NaCl 0,9% || Ringer's Lactate || Plasma-lyte || Isofundine
+    Na + (mmol/l) || 142 || 154 || 130 || 140 || 145
+    K + (mmol/l) || 4 ||  || 4 || 5 || 4
+    Cl - (mmol/l) || 103 || 154 || 108 || 98 || 127
+    Ca 2+ (mmol/l) || 2,4 ||  || 0,9 || 0 || 2,5
+    Mg 2+ (mmol/l) || 1 ||  ||  || 3 || 1
+    HCO 3 - (mmol/l) || 27 ||  ||  ||  || 
+CHUNK: none found
+===== T33 doc=2021_RFE_20SFAR_20pancreatite_20aigue_finale_220921_b98663 year=2021 key='poumon ( pao_2/fio_2 )*'
+SOURCE:
+    [rs2]Organe || [cs5]Score
+    0 || 1 || 2 || 3 || 4
+    Poumon ( PaO_2/FiO_2 )* || >400 || 301-400 || 201-300 || 101-200 || ≤100
+    Rein (créatinémie) || ≤134 || 134-169 || 170-310 || 311-439 || >439
+    Cardiovasculaire (PAS en mmHg)** || >90 || <90, réponse au remplissage vasculaire || <90, pas de réponse au remplissage vasculaire || <90, pH<7,3 || <90, pH<7,2
+CHUNK: none found
+===== T34 doc=2022_RPP-SFAR-COVID_Version-Avril-2022_abrogee-010723_682252 year=2022 key='neurochirurgie et rachis'
+SOURCE:
+     || Spécialité chirurgicale ou interventionnelle || Recommandations liées à la pandémie de COVID-19 || Lien
+    [rs4]Tête et cou || Neurochirurgie et rachis || Oui || Société Française de neurochirurgie Pathologies rachidiennes Neurochirurgie pédiatrique Ne
+    Ophthalmologie || Oui || Société Française d'Ophthalmologie
+    ORL-Otologie || Oui || Association Française d'Otologie et Neuro-Otologie Société Française de Chirurgie Oncologi
+    Maxillo- faciale et stomatologie || Oui || Société française de stomatologie, chirurgie maxillo- faciale et chirurgie orale
+    [rs4]Thorax || Thoracique et cardio-vasculaire || Oui || Société Française de Chirurgie Thoracique et Cardio-Vasculaire*
+    Cardiologie interventionnelle || Oui || Société Française de Cardiologie
+CHUNK[table_markdown]: | Spécialité chirurgicale ou interventionnelle | Recommandations liées à la pandémie de COVID-19 | Lien | --- | --- | --- | --- | Tête et cou | Neurochirurgie et rachis | Oui | Société Française de neurochirurgie / Pathologies rachidiennes / Neurochirurgie pédiatrique / Neurochirurgie fonctionnelle / Base du crâne / Neurochirurgie vasculaire | Tête et cou | Ophthalmologie | Oui | Société Française d'Ophthalmologie | Tête et cou | ORL-Otologie | Oui | Association Française d'Otologie et Neuro-Otologie / Société Française de Chirurgie Oncologique / Endoscopies et fibroscopies ORL | Tête et cou | Maxillo- faciale et stomatologie | Oui | Société française de stomatologie, chirurgie maxillo- faci
+CHUNK[table_row_card]: Section : CHAMP 7. GESTION DE L'ACTIVITÉ EN PERIODE DE TENSION DES PLATEAUX INTERVENTIONNELS À CAUSE DE LA PANDÉMIE A COVID-19 ⏎ Tête et cou | Recommandations liées à la pandémie de COVID-19 : Oui ⏎ • Schéma 1 : Spécialité chirurgicale ou interventionnelle = Neurochirurgie et rachis | Lien = Société Française de neurochirurgie / Pathologies rachidiennes / Neurochirurgie pédiatrique / Neurochirurgie fonctionnelle / Base du crâne / Neurochirurgie vasculaire ⏎ • Schéma 2 : Spécialité chirurgicale ou interventionnelle = Ophthalmologie | Lien = Société Française d'Ophthalmologie ⏎ • Schéma 3 : Spécialité chirurgicale ou interventionnelle = ORL-Otologie | Lien = Association Française d'Otologie et Neuro-O
+===== T35 doc=2022_RPP_20SFAR_20COVID_Version_20Avril_202022_finale_20sans_20marque_ year=2022 key='liés au patient'
+SOURCE:
+    [cs2]Critères
+    Liés au patient || Score ASA Obésité (IMC supérieur à 35 kg/m 2 ) Âge (≥65 ans) Score de fragilité clinique P
+    Liés à la pathologie || Alternatives thérapeutiques possibles Perte de chance en l'absence d'intervention
+    Liés à la procédure || Durée opératoire Durée de séjour Nécessité de soins critiques Besoins transfusionnels Chir
+CHUNK[prose]: **Argumentaire :** La circulation du SARS-CoV-2 dans la population et l'existence de porteurs asymptomatiques affectent le rapport bénéfice/risque de la réalisation d'un acte chirurgical programmé pendant la pandémie de COVID-19 et impose une évaluation rigoureuse. Cette réflexion doit intégrer trois types de critères liés au patient, à la pathologie et à la procédure. Les données de la littérature individualisent plusieurs facteurs de risque de formes graves de COVID-19 liés au patient potentiellement associés à une majoration des complications postopératoires. La liste actualisée de ces facteurs de risque est rappelée dans le préambule de ces recommandations. Parmi celles-ci on peut soulig
+CHUNK[table_markdown]: Tableau : Tableau 1. Critères permettant d'évaluer le rapport bénéfice/risque d'une intervention chirurgicale programmée chez un patient en période de pandémie de COVID-19. Mise à jour d'avril 2022. ⏎ | Critères | --- | --- | Liés au patient | Score ASA / Obésité (IMC supérieur à 35 kg/m2) / Âge (≥65 ans) / Score de fragilité clinique / Présence d'une pathologie pulmonaire ou cardio-vasculaire sous-jacente / Syndrome d'Apnée du sommeil / Diabète / Immunodépression / Infection à SARS-CoV2 récente / Schéma vaccinal complet | Liés à la pathologie | Alternatives thérapeutiques possibles / Perte de chance en l'absence d'intervention | Liés à la procédure | Durée opératoire / Durée de séjour / Néces
+CHUNK[table_row_card]: Tableau : Tableau 1. Critères permettant d'évaluer le rapport bénéfice/risque d'une intervention chirurgicale programmée chez un patient en période de pandémie de COVID-19. Mise à jour d'avril 2022. ⏎ Section : CHAMP 2 : BÉNÉFICE/RISQUE DE L'INDICATION OPÉRATOIRE ET INFORMATION DU PATIENT ? ⏎ Critères : Liés au patient | Score ASA / Obésité (IMC supérieur à 35 kg/m2) / Âge (≥65 ans) / Score de fragilité clinique / Présence d'une pathologie pulmonaire ou cardio-vasculaire sous-jacente / Syndrome d'Apnée du sommeil / Diabète / Immunodépression / Infection à SARS-CoV2 récente / Schéma vaccinal complet
+===== T36 doc=2023_RPP-Anesthesie-adulte-porteur-de-CC_pour-mise-sur-site_6601a6 year=2023 key='shunts gauche droite'
+SOURCE:
+    [cs2]Catégorie physiopathologique || Statut Physiologique (Cf. tableau 3) || Risque liée à la CC (Cf. Tableau 2) || Risques communs
+    [cs5]Shunts
+    [rs6]Shunts gauche droite || [rs3]Pré-tricuspidé : RVPA CIA large (>10mm) CAV partiel || A || faible || [rs3]Dysfonction VD sévère, IT > modérée HTAP
+    B || faible
+    C || intermédiaire
+    [rs3]Post-tricuspidé : CIV Canal artériel CAV complet || A || faible || [rs3]Trouble du rythme supraventriculaire ++, trouble de la conduction + /-
+    B || intermédiaire
+CHUNK[table_markdown]: Tableau : Tableau 4 : risque et classification physiopathologique des cardiopathies congénitales ⏎ | Catégorie physiopathologique | Statut Physiologique (Cf. tableau 3) | Risque liée à la CC (Cf. Tableau 2) | Risques communs | --- | --- | --- | --- | --- | **Shunts** | Shunts gauche droite | Pré-tricuspidé : RVPA / CIA large (>10mm) / CAV partiel | A | faible | Dysfonction VD sévère, IT > modérée / HTAP | Shunts gauche droite | Pré-tricuspidé : RVPA / CIA large (>10mm) / CAV partiel | B | faible | Dysfonction VD sévère, IT > modérée / HTAP | Shunts gauche droite | Pré-tricuspidé : RVPA / CIA large (>10mm) / CAV partiel | C | intermédiaire | Dysfonction VD sévère, IT > modérée / HTAP | Shunts g
+CHUNK[table_row_card]: Tableau : Tableau 4 : risque et classification physiopathologique des cardiopathies congénitales ⏎ Section : Anesthésie pour chirurgie non cardiaque des patients adultes porteurs de cardiopathie congénitale > 1.5 Classification par groupes selon le niveau de gravité des cardiopathies congénitales ⏎ Sous-catégorie : Shunts ⏎ Catégorie physiopathologique : Shunts gauche droite ⏎ • Schéma 1 : Pré-tricuspidé : RVPA / CIA large (>10mm) / CAV partiel | Statut Physiologique (Cf. tableau 3) = A | Risque liée à la CC (Cf. Tableau 2) = faible | Risques communs = Dysfonction VD sévère, IT > modérée / HTAP ⏎ • Schéma 2 : Pré-tricuspidé : RVPA / CIA large (>10mm) / CAV partiel | Statut Physiologique (Cf. tableau 3
+===== T37 doc=2024_RPP-Prevention-des-erreurs-medicamenteuses_39d8ef year=2024 key='champ 1. environnement de trav'
+SOURCE:
+    [cs2]RECOMMANDATIONS || ACCORD
+    [cs3]CHAMP 1. Environnement de travail et Processus
+    R 1.1 || Les experts suggèrent que la standardisation et l'utilisation de protocoles de prescriptio || Fort
+    R 1.2.1 || Les experts suggèrent d'utiliser un logiciel de prescription en soins critiques pour dimin || Fort
+    R 1.2.2 || Les experts suggèrent d'implémenter en soins critiques des outils informatisés d'aide à la || Fort
+    R 1.2.3 || Les experts suggèrent que les logiciels de prescription et les outils d'aide à la prescrip || Fort
+    R 1.3 || Les experts suggèrent de réaliser un bilan médicamenteux et une conciliation médicamenteus || Fort
+CHUNK[table_row_card]: Section : CHAMP 1. ENVIRONNEMENT DE TRAVAIL ET PROCESSUS > AVIS d'EXPERTS (Accord Fort) ⏎ Recueil d'informations : Réalisable par tout professionnel de santé / Nécessité d'un minimum de 3 sources d'information concordantes | Rédaction du BM : Réalisable par tout professionnel de santé membre de l'équipe pharmaceutique ou tout prescripteur | Validation du BM : Validation du BM réalisée par le pharmacien expert en produits de santé ou tout prescripteur | Partage et exploitation du BM : Analyse des divergences et mise à jour des prescriptions. / Echange collaboratif entre pharmacien et médecin
+CHUNK[table_row_card]: Tableau : Code couleur selon la classe pharmacologique de la spécialité (norme ISO26825) ⏎ Section : CHAMP 1. ENVIRONNEMENT DE TRAVAIL ET PROCESSUS > AVIS d'EXPERTS (Accord Fort) ⏎ Classe pharmacologique : Hypnotiques (hors benzodiazépines) | Substances actives : étomidate, kétamine, eskétamine, propofol | Couleur Pantone et trame : jaune
+CHUNK[table_row_card]: Tableau : Code couleur selon la classe pharmacologique de la spécialité (norme ISO26825) ⏎ Section : CHAMP 1. ENVIRONNEMENT DE TRAVAIL ET PROCESSUS > AVIS d'EXPERTS (Accord Fort) ⏎ Classe pharmacologique : benzodiazépines | Substances actives : diazépam, midazolam | Couleur Pantone et trame : orange 151
+===== T38 doc=2024_2024_RFE-optimisation-hemodynamique-perioperatoire_adulte-dont-o_ year=2024 key='population adulte obstétricale'
+SOURCE:
+    [cs3]P du PICO : Patients
+    [cs3]Population adulte obstétricale ayant une césarienne programmée avec rachianesthésie dans l
+    [cs3]O du PICO : Outcomes / Critères de jugement
+    [cs3]- Critères de jugement cruciaux ou majeurs (importance de 9 le plus fort à 7)
+    Mortalité toutes causes maternelle et fœtale || Importance 9 || Critère principal
+    Morbidité maternelle définie comme : inhalation, complications cardio-vasculaires nécessit || Importance 8 || Critère secondaire
+    Morbidité néonatale définie comme décès , séquelles neurologiques , nécessité de réanimati || Importance 8 || Critère secondaire
+CHUNK[table_markdown]: | P du PICO : Patients | --- | --- | --- | Note : Population adulte obstétricale ayant une césarienne programmée avec rachianesthésie dans le contexte d'une grossesse monofœtale, hors pathologie maternelle spécifique (notamment pré-éclampsie ou cardiopathie congénitale) | O du PICO : Outcomes / Critères de jugement | **- Critères de jugement cruciaux ou majeurs (importance de 9 le plus fort à 7)** | Mortalité toutes causes maternelle et fœtale | Importance 9 | Critère principal | Morbidité maternelle définie comme : inhalation, complications cardio-vasculaires nécessitant une prise en charge réanimatoire spécifique, perte de connaissance, hypotension artérielle, nausées-vomissements, baisse 
+CHUNK[table_row_card]: Section : INTRODUCTION > TABLEAU DE SYNTHÈSE – Population Adulte Obstétricale ⏎ Note du tableau : Population adulte obstétricale ayant une césarienne programmée avec rachianesthésie dans le contexte d'une grossesse monofœtale, hors pathologie maternelle spécifique (notamment pré-éclampsie ou cardiopathie congénitale) ⏎ P du PICO : Patients : O du PICO : Outcomes / Critères de jugement
+CHUNK[table_row_card]: Section : INTRODUCTION > TABLEAU DE SYNTHÈSE – Population Adulte Obstétricale ⏎ Note du tableau : Population adulte obstétricale ayant une césarienne programmée avec rachianesthésie dans le contexte d'une grossesse monofœtale, hors pathologie maternelle spécifique (notamment pré-éclampsie ou cardiopathie congénitale) ⏎ Sous-catégorie : - Critères de jugement cruciaux ou majeurs (importance de 9 le plus fort à 7) ⏎ P du PICO : Patients : Mortalité toutes causes maternelle et fœtale | Importance 9 | Critère principal
+===== T39 doc=2025_RFE-analgesie-obstetricale-texte-long_172a5f year=2025 key='tenue professionnelle propre, '
+SOURCE:
+    [cs2]Opérateur : asepsie chirurgicale
+    - Tenue professionnelle propre, manches courtes ; - Absence de bijoux sur les mains et poi || - Port de gants stériles ; - Antisepsie cutanée large avec un antiseptique alcoolique (si 
+    [cs2]Personnes présentes dans la salle d'intervention
+    [cs2]- Tenue professionnelle propre, manches courtes ; - Absence de bijoux sur les mains et poi
+CHUNK[table_markdown]: Tableau : Tableau 2. Mesures d'asepsie recommandées pour la prévention du risque infectieux lors de la pose d'une APM (Société française d'hygiène hospitalière, Avis d'experts) ⏎ | Opérateur : asepsie chirurgicale | --- | --- | Tenue professionnelle propre, manches courtes; Absence de bijoux sur les mains et poignets; Ongles courts sans vernis; Désinfection chirurgicale des mains par friction hydro-alcoolique (FHA); Port d'un calot/coiffe; Port d'un masque chirurgical; Port d'une casaque stérile; Préparation du matériel de façon aseptique sur un champ stérile, sur une surface préalablement désinfectée | Port de gants stériles; Antisepsie cutanée large avec un antiseptique alcoolique (si la pea
+CHUNK[table_row_card]: Tableau : Tableau 2. Mesures d'asepsie recommandées pour la prévention du risque infectieux lors de la pose d'une APM (Société française d'hygiène hospitalière, Avis d'experts) ⏎ Section : Champ 1- Pose de l'APM > 1.4. Mesures d'asepsie ⏎ Opérateur : asepsie chirurgicale : Tenue professionnelle propre, manches courtes; Absence de bijoux sur les mains et poignets; Ongles courts sans vernis; Désinfection chirurgicale des mains par friction hydro-alcoolique (FHA); Port d'un calot/coiffe; Port d'un masque chirurgical; Port d'une casaque stérile; Préparation du matériel de façon aseptique sur un champ stérile, sur une surface préalablement désinfectée | Port de gants stériles; Antisepsie cutanée larg
+===== T40 doc=2025_argu_sepsis_a5219e year=2025 key=''
+SOURCE:
+    [rs3]Poids de l'enfant (kg) || [cs6]Volume de sang (mL) || [rs3]Volume total cultivé (mL) || [rs3]Volume total sous-trait (%)
+    [cs2]Culture 1 || [cs2]Culture 2 || [cs2]Culture 3
+    Aérobie || Anaérobie || Aérobie || Anaérobie || Aérobie || Anaérobie
+    ≤ 1 || 0,5 à 2 ||  ||  ||  ||  ||  || 0,5 à 2 || 1,5 à 3
+    1,1-2 || 1,5 à 4,5 ||  ||  ||  ||  ||  || 1,5 à 4,5 || 1,7-3
+    2,1-3,9 || 3 à 6 ||  ||  ||  ||  ||  || 3 à 6 || 1,8
+    4- 7,9 || 6 ||  ||  ||  ||  ||  || 6 || 1 à 2
+CHUNK: none found
+===== T41 doc=2025_Figure-1-Fiche-synthese-FR_95dfa6 year=2025 key='non autonome'
+SOURCE:
+    [cs2]Modified Frailty Index 5 ≥ 2
+    Diabète || +1
+    HTA || +1
+    OAP<30j || +1
+    BPCO || +1
+    Non autonome || +1
+CHUNK[table_markdown]: | Modified Frailty Index 5 ≥ 2 | --- | --- | Diabète | +1 | HTA | +1 | OAP<30j | +1 | BPCO | +1 | Non autonome | +1 |
+CHUNK[table_row_card]: Modified Frailty Index 5 ≥ 2 : Non autonome | +1
+===== T42 doc=2026_RFE-Infections-intra-abdominales-version-lecture-doc-finale-14-0_ year=2026 key="état clinique à l'admission"
+SOURCE:
+    Variable || Description || Points
+    [rs2]État clinique à l'admission || Sepsis grave (dysfonction aiguë d'organe) || 3
+    Choc septique (nécessitant des vasopresseurs avec hypotension persistante) || 5
+    Contexte d'acquisition de l'infection || Infection associée aux soins || 2
+    [rs3]Origine de l'infection intra-abdominale || Péritonite par perforation colique non diverticulaire || 2
+    Péritonite par perforation du grêle || 3
+    Péritonite diffuse diverticulaire || 2
+CHUNK[table_markdown]: Tableau : World Society of Emergency Surgery (WSES) Sepsis Severity Score (Plage du score: 0–18) ⏎ | Variable | Description | Points | --- | --- | --- | État clinique à l'admission | Sepsis grave (dysfonction aiguë d'organe) | 3 | État clinique à l'admission | Choc septique (nécessitant des vasopresseurs avec hypotension persistante) | 5 | Contexte d'acquisition de l'infection | Infection associée aux soins | 2 | Origine de l'infection intra-abdominale | Péritonite par perforation colique non diverticulaire | 2 | Origine de l'infection intra-abdominale | Péritonite par perforation du grêle | 3 | Origine de l'infection intra-abdominale | Péritonite diffuse diverticulaire | 2 |
+CHUNK[table_row_card]: Tableau : World Society of Emergency Surgery (WSES) Sepsis Severity Score (Plage du score: 0–18) ⏎ Section : CHAMP 3 : Prise en charge des complications évolutives des infections intra-abdominales > CPIRO: PIRO Score for Prediction of Mortality in Surgical Patients with Intra-Abdominal Sepsis ⏎ Variable : État clinique à l'admission ⏎ • Schéma 1 : Description = Sepsis grave (dysfonction aiguë d'organe) | Points = 3 ⏎ • Schéma 2 : Description = Choc septique (nécessitant des vasopresseurs avec hypotension persistante) | Points = 5

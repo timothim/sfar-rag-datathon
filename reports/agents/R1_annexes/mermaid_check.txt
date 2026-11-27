@@ -1,0 +1,79 @@
+{'blocks': 164, 'edges': 2706, 'arrows': 2686, 'labels': 327, 'conds': 331}
+blocks with fewer arrows than source edges, missing edge labels, or '&' fan-out: 13
+   ('2026_RFE_sedationproceduraleUrgences_24juin2026_1f0c12', 10, 10, 3, 3, 1, [])
+   ('2024_Algorithmes_RFE-gestion-de-lanticoagulation-dans-un-contexte-dur_5ab803', 25, 22, 0, 0, 0, [])
+   ('2017_RFE-ANREA-Intubation-difficile-et-extubation-en-anesthesie-chez-_71af0f', 13, 11, 0, 0, 0, [])
+   ('2013_2_PUROL_Recommandations-chirurgie-ambulatoire-en-urologie_e45cde', 10, 9, 3, 3, 0, [])
+   ('2010_2_AFAR_Urgences-Obstetricales-Extrahospitalieres_47ad85', 21, 21, 11, 11, 0, ['non "opérateur non formé"'])
+   ('2009_2_HAS_Accident-vasculaire-cerebral-prise-en-charge-precoce_d95bcf', 22, 20, 9, 9, 0, ['TM', 'TM'])
+   ('2007_2b_AFAR_aspet-pediatriques_d85e1f', 22, 18, 7, 7, 0, [])
+   ('2006_2_AFAR_Prise-en-charge-initiale-des-etats-septiques-graves-de-la_78dfac', 18, 17, 0, 0, 0, [])
+   ('2006_2_AFAR_Prise-en-charge-de-larret-cardiaque-1_c70196', 10, 8, 0, 0, 0, [])
+   ('2006_2b_HAS_TEXTE-LONG_Prise-en-charge-de-linfarctus-du-myocarde_ba86c1', 13, 11, 8, 10, 0, [])
+   ('2006_2a_HAS_TEXTE-COURT_Prise-en-charge-de-linfarctus-du-myocarde_110064', 13, 11, 8, 10, 0, [])
+   ('2001_2_SFAR_Sevrage-de-la-ventilation-mecanique_edbac5', 15, 14, 2, 2, 0, [])
+   ('2021_Propositions_20GIHP_20GFHT_202021-combin_C3_A9_d07531', 19, 17, 0, 0, 0, [])
+
+== blocks whose rewrite loses numeric tokens or words ==
+  2026_gestion_voies_aeriennes_recommandations_mel_vd_19eb83  lost_numbers=['1', '2']  lost_words=[]
+  2026_Version-longue_8281a1  lost_numbers=[]  lost_words=['direction']
+  2026_Version-longue_8281a1  lost_numbers=[]  lost_words=['direction']
+  2026_Version-courte_3ae465  lost_numbers=[]  lost_words=['direction']
+  2026_algo_synthese_IIA_RFE_moderne-defitives-depot-site-SFAR_ed5281  lost_numbers=['1', '2']  lost_words=['Start']
+  2026_RFE-20_4_2026-deifinitif-et-validei_1b550e  lost_numbers=[]  lost_words=['Elevé']
+  2026_RFE-20_4_2026-deifinitif-et-validei_1b550e  lost_numbers=['1', '10', '11', '6H', '9']  lost_words=[]
+  2026_RFE-20_4_2026-deifinitif-et-validei_1b550e  lost_numbers=['4g']  lost_words=[]
+  2025_RESECTION_-HEPATIQUE_-RECOMMANDATIONS_MEL_e8bdcf  lost_numbers=['1', '2', '3', '4']  lost_words=[]
+  2025_Fiches-simplifiees-19122025-_21fc82  lost_numbers=[]  lost_words=['direction']
+  2026_RFE-LAT-final-mai-2026-_a26946  lost_numbers=['10', '11', '12', '4', '5', '6', '7', '8']  lost_words=[]
+  2025_2025_SFAR-SFA_RFE-Diagnostic-et-prise-en-charge-des-reactions-dh_  lost_numbers=['1', '2', '3', '4', '5']  lost_words=[]
+  2025_2025_RFE-Intubation-adulte-hors-bloc-hors-rea-_f68924  lost_numbers=['3', '4']  lost_words=[]
+  2025_2025_RFE-Intubation-adulte-hors-bloc-hors-rea-_f68924  lost_numbers=['3']  lost_words=[]
+  2024_RFE-gestion-de-lanticoagulation-dans-un-contexte-durgence_23_02__  lost_numbers=['12-24h', '4-6h', '<30ml', '>200ng/mL', '>600ng/mL']  lost_words=['initiale']
+  2024_RFE-gestion-de-lanticoagulation-dans-un-contexte-durgence_23_02__  lost_numbers=['17', '≥60']  lost_words=[]
+  2024_Algorithmes_RFE-gestion-de-lanticoagulation-dans-un-contexte-dur_  lost_numbers=[]  lost_words=['administration', 'après', 'modifiée']
+  2024_Algorithmes_RFE-gestion-de-lanticoagulation-dans-un-contexte-dur_  lost_numbers=['12-24h', '25-50UI/kg', '30ng/mL', '5g', '>200ng/mL', '≤50ng/mL']  lost_words=['Discuter', 'Nouvelle', 'Retarder', 'après', 'chance', 'discuter', 'entraîne', 'neurochirurgie']
+  2024_Algorithmes_RFE-gestion-de-lanticoagulation-dans-un-contexte-dur_  lost_numbers=['17']  lost_words=[]
+  2024_RPP-Prevention-des-erreurs-medicamenteuses_39d8ef  lost_numbers=['31', '32']  lost_words=[]
+  2021_Gestion_20perioperatoire_20des_20patients_20sous_20AOD_20en_20ur_  lost_numbers=['1']  lost_words=[]
+  2022_RPP-SFAR-COVID_Version-Avril-2022_abrogee-010723_682252  lost_numbers=['3']  lost_words=[]
+  2022_RPP-SFAR-COVID_Version-Avril-2022_abrogee-010723_682252  lost_numbers=['1']  lost_words=[]
+  2019_diagnostic-et-prise-ne-charge-dune-TIH_cde74d  lost_numbers=['05', '15']  lost_words=[]
+  2019_rpp-urgence-brule-fiches-synthese_7eb1e1  lost_numbers=['4']  lost_words=[]
+  2019_propositions-tih-gihp-gfht-sfar_20_7a3660  lost_numbers=['05', '15']  lost_words=[]
+  2018_2_RFE-CURARE-3_4eac96  lost_numbers=['12']  lost_words=[]
+  2020_covid-19-evaluation-du-risque-covid-19-et-impact-sur-la-prise-en_  lost_numbers=['2']  lost_words=[]
+  2020_covid-19-evaluation-du-risque-covid-19-et-impact-sur-la-prise-en_  lost_numbers=['2']  lost_words=[]
+  2019_rfe-trauma-vertebro-medulaire_b7be1a  lost_numbers=['2', '3', '4']  lost_words=['DIRECTE', 'Eschmann', 'LARYNGOSCOPIE', 'MANDRIN', 'Stabilisation', 'ligne', 'rachis']
+  2019_rfe-vertebro-medullaire-fiche-synthese_e042e3  lost_numbers=[]  lost_words=['Start']
+  2019_rfe-vertebro-medullaire-fiche-synthese_e042e3  lost_numbers=['2', '3', '4']  lost_words=['DIRECTE', 'Eschmann', 'LARYNGOSCOPIE', 'MANDRIN', 'Stabilisation', 'VIDEOLARYNGOSCOPIE', 'ligne', 'rachis']
+  2018_RFE-IH-soins-critiques_f67e16  lost_numbers=['23']  lost_words=[]
+  2018_RPP_beta-lactamines-en-soins-critiques_041018_logoSFPT_9e9437  lost_numbers=['1', '3']  lost_words=[]
+  2017_RFE-ANREA-Intubation-difficile-et-extubation-en-anesthesie-chez-_  lost_numbers=['1', '2', '3']  lost_words=[]
+  2017_RFE-ANREA-Intubation-difficile-et-extubation-en-anesthesie-chez-_  lost_numbers=['1', '3', '4']  lost_words=[]
+  2017_Tracheotomy-in-the-ICU-ACCPM_491ddc  lost_numbers=['3', '4', '5']  lost_words=[]
+  2013_2_PUROL_Recommandations-chirurgie-ambulatoire-en-urologie_e45cde  lost_numbers=['48h', '>200ml']  lost_words=['alpha', 'bloquant']
+  2013_2_PUROL_Recommandations-chirurgie-ambulatoire-en-urologie_e45cde  lost_numbers=[]  lost_words=['Title']
+  2009_2_HAS_Accident-vasculaire-cerebral-prise-en-charge-precoce_d95bcf  lost_numbers=['2']  lost_words=[]
+  2007_2b_AFAR_aspet-pediatriques_d85e1f  lost_numbers=['1', '7', '8', '<11', '<8', '>22', '>26', '>30']  lost_words=['Atteinte', 'COMFORT', 'Instauration', 'Réduction', 'analgiques', 'curarisé', 'impossible', 'majoration']
+  2007_2a_AFAR_Texte_court_Sedation-et-analgesie-en-reanimation_nouveau_  lost_numbers=[]  lost_words=['PatientAgité']
+  2006_2_AFAR_Blocs-perimedullaires-chez-ladulte_c289cc  lost_numbers=['1', '2', '3', '4']  lost_words=[]
+  2006_2_AFAR_Prise-en-charge-initiale-des-etats-septiques-graves-de-la_  lost_numbers=[]  lost_words=['dysfonctions', 'organes', 'évaluation']
+  2006_2_AFAR_Prise-en-charge-initiale-des-etats-septiques-graves-de-la_  lost_numbers=[]  lost_words=['Timeline']
+  2006_2_AFAR_Prise-en-charge-de-larret-cardiaque-1_c70196  lost_numbers=['0,01mg/kg', '3-5min']  lost_words=['Adrénaline', 'Envisager', 'Mettre', 'Vérifier', 'abord', 'amiodarone', 'après', 'atropine']
+  2006_2b_HAS_TEXTE-LONG_Prise-en-charge-de-linfarctus-du-myocarde_ba86c  lost_numbers=['6']  lost_words=[]
+  2006_2b_HAS_TEXTE-LONG_Prise-en-charge-de-linfarctus-du-myocarde_ba86c  lost_numbers=['>0,12']  lost_words=['aberrante', 'conduc', 'conduction', 'large', 'polymorphe']
+  2006_2a_HAS_TEXTE-COURT_Prise-en-charge-de-linfarctus-du-myocarde_1100  lost_numbers=['2']  lost_words=[]
+  2006_2a_HAS_TEXTE-COURT_Prise-en-charge-de-linfarctus-du-myocarde_1100  lost_numbers=['>0,12']  lost_words=['aberrante', 'conduction', 'large', 'polymorphe']
+  2005_2b_TEXTE-LONG_AFAR_Prise-en-charge-hemodynamique-du-sepsis-grave_  lost_numbers=['3', '7', '8']  lost_words=[]
+  2005_2b_TEXTE-LONG_AFAR_Prise-en-charge-hemodynamique-du-sepsis-grave_  lost_numbers=['3']  lost_words=[]
+  2004_2_SFAR_Prise-en-charge-des-candidoses-et-aspergilloses-invasives_  lost_numbers=['4']  lost_words=[]
+  2004_2_SFAR_Prise-en-charge-des-candidoses-et-aspergilloses-invasives_  lost_numbers=['4']  lost_words=[]
+  2001_2_SFAR_Sevrage-de-la-ventilation-mecanique_edbac5  lost_numbers=['10', '11', '13', '7', '9', '>30']  lost_words=[]
+  2021_Propositions_20GIHP_20GFHT_202021-combin_C3_A9_d07531  lost_numbers=['3']  lost_words=['AIGUE', 'EVALUATION']
+  unk_guide-mise-en-place-gestion-reanimation-ephemere_1a72c8  lost_numbers=['1', '10', '100', '101', '102', '103', '104', '105']  lost_words=['information']
+  1996_2b_AFAR_Texte-Long_Intubation-difficile_850d77  lost_numbers=['1', '10', '100', '11', '12', '13', '14', '15']  lost_words=[]
+  1996_2b_AFAR_Texte-Long_Intubation-difficile_850d77  lost_numbers=['1', '3', '4', '5']  lost_words=[]
+  2006_2a_SFAR_texte_court_Intubation-difficile_168b4a  lost_numbers=['2', '2g']  lost_words=[]
+  2006_2a_SFAR_texte_court_Intubation-difficile_168b4a  lost_numbers=['1']  lost_words=[]
+blocks with losses: 61

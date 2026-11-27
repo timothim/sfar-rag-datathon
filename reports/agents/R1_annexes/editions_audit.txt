@@ -1,0 +1,119 @@
+documents 265
+
+== Documents with supersession_evidence from the two new rules ==
+- 2022_RPP_20SFAR_20COVID_Version_20Avril_202022_finale_20sans_20marque_c5bf31 (2022) active=False latest=False -> None
+    quasi-copie (Jaccard 5-grammes 0.94) du document abrogé 2022_RPP-SFAR-COVID_Version-Avril-2022_abrogee-010723_682252
+- 2010_2_AFAR_Urgences-Obstetricales-Extrahospitalieres_47ad85 (2010) active=True latest=False -> 2022_rpp-urgences-obstetricales-en-medecine-durgence_32dd15
+    mention explicite dans 2022_rpp-urgences-obstetricales-en-medecine-durgence_32dd15 : « En 2010, la société française d'anesthésie et de réanimation (SFAR) et la société française de médecine d'urgence (SFMU) ont publié des recommandations formalisées d'experts sur les urgences obstétricales extrahospitalières [1]. Depuis, la modification de l'organisation territoriale a directement im »
+
+== Near misses of _apply_explicit_update_mentions ==
+[near] new=2026_RFE-Infections-intra-abdominales-version-lecture-doc-finale-14-0_7f27c6 (2026, role=recommandation) old=2015_2_AFAR_Prise-en-charge-des-infections-intra-abdominales_b6b3b6 (2015) title_in_para=0.67 title_in_newtitle=1.00 |tw|=3
+     old title: Prise en charge des infections intra-abdominales
+     new title: Prise en charge thérapeutique des Infections intra-abdominales de l’adulte
+     para: **Methods:** The latest SFAR guidelines on management of intra-abdominal infections in adults were published in 2015. The literature is now sufficient for an update. The experts studied questions within 3 domains. Each question was formulated according to the 
+[FIRES] new=2026_RFE-Infections-intra-abdominales-version-lecture-doc-finale-14-0_7f27c6 (2026, role=recommandation) old=2015_2_AFAR_Prise-en-charge-des-infections-intra-abdominales_b6b3b6 (2015) title_in_para=1.00 title_in_newtitle=1.00 |tw|=3
+     old title: Prise en charge des infections intra-abdominales
+     new title: Prise en charge thérapeutique des Infections intra-abdominales de l’adulte
+     para: Au regard de ces évolutions, une actualisation des RFE "Prise en charge thérapeutique des infections intra-abdominales de l'adulte" était nécessaire et pertinente. Cette actualisation a suivi la méthodologie GRADE, permettant une analyse rigoureuse de la litté
+[near] new=2026_RFE-Infections-intra-abdominales-version-lecture-doc-finale-14-0_7f27c6 (2026, role=recommandation) old=2015_2_AFAR_Prise-en-charge-des-infections-intra-abdominales_b6b3b6 (2015) title_in_para=0.67 title_in_newtitle=1.00 |tw|=3
+     old title: Prise en charge des infections intra-abdominales
+     new title: Prise en charge thérapeutique des Infections intra-abdominales de l’adulte
+     para: - [1] Vincent JL, Sakr Y, Singer M, Martin-Loeches I, Machado FR, Marshall JC, et al. Prevalence and Outcomes of Infection Among Patients in Intensive Care Units in 2017. *Jama* 2020;323(15):1478–87. 10.1001/jama.2020.2717. - [2] Sartelli M, Catena F, Ansaloni
+[near] new=2026_RFE_sedationproceduraleUrgences_24juin2026_1f0c12 (2026, role=recommandation) old=2010_2_AFAR_Sedation-analgesie-en-structure-d-urgence_f6f9b2 (2010) title_in_para=0.75 title_in_newtitle=0.50 |tw|=4
+     old title: Sédation et analgésie en Structures d’Urgence
+     new title: Sédation procédurale en structure de Médecine d’Urgence
+     para: *Contexte et justification* : Vingt-six ans après la première conférence d'experts de la SFAR [1] et seize ans après la recommandation conjointe SFMU-SFAR de 2010 [2], une réactualisation des recommandations sur la sédation procédurale en contexte d'urgence ét
+[near] new=2026_RFE_sedationproceduraleUrgences_24juin2026_1f0c12 (2026, role=recommandation) old=2010_2_AFAR_Sedation-analgesie-en-structure-d-urgence_f6f9b2 (2010) title_in_para=0.75 title_in_newtitle=0.50 |tw|=4
+     old title: Sédation et analgésie en Structures d’Urgence
+     new title: Sédation procédurale en structure de Médecine d’Urgence
+     para: - [1]. Société Française d'Anesthésie et de Réanimation (1999) Modalités de la sédation et/ou de l'analgésie en situation extrahospitalière. Conférence d'experts. Paris : Elsevier p. 7-135. - [2]. Vivien B, Adnet F, Bounes V, et al (2011) Recommandations forma
+[near] new=2025_2025_SFAR-SFA_RFE-Diagnostic-et-prise-en-charge-des-reactions-dh_66bc8a (2025, role=recommandation) old=2011_2_AFAR_Prevention-du-risque-allergique-peranesthesique_5c26e4 (2011) title_in_para=1.00 title_in_newtitle=0.00 |tw|=4
+     old title: Prévention du risque allergique peranesthésique
+     new title: Diagnostic et prise en charge des réactions d’hypersensibilité immédiate périopératoires
+     para: Ces recommandations formalisées d'experts sont une actualisation des recommandations conjointes éditées par la SFAR et la SFA en 2011 sous le titre initial : Prévention du risque allergique peranesthésique [1].
+[near] new=2024_240516-Txt-definitif-_6379ef (2024, role=recommandation) old=2011_2_AFAR_Prevention-de-la-maladie-thromboembolique-veineuse-postop_da2bda (2011) title_in_para=0.80 title_in_newtitle=0.80 |tw|=5
+     old title: Prévention de la maladie thromboembolique veineuse postopératoire
+     new title: Prévention de la maladie thromboembolique veineuse péri-opératoire
+     para: Tout acte chirurgical comporte un risque thrombotique potentiel. Dans ce contexte, la prévention de la maladie thromboembolique veineuse (MTEV) post-opératoire a fait l'objet de recommandations de la Société Française d'Anesthésie-Réanimation (SFAR) en 2005, m
+[FIRES] new=2024_240516-Txt-definitif-_6379ef (2024, role=recommandation) old=2011_2_AFAR_Prevention-de-la-maladie-thromboembolique-veineuse-postop_da2bda (2011) title_in_para=1.00 title_in_newtitle=0.80 |tw|=5
+     old title: Prévention de la maladie thromboembolique veineuse postopératoire
+     new title: Prévention de la maladie thromboembolique veineuse péri-opératoire
+     para: - [1] Samama CM, Gafsou B, Jeandel T, Laporte S, Steib A, Marret E, et al.; French Society of Anaesthesia and Intensive Care. Prévention de la maladie thromboembolique veineuse postopératoire. Actualisation 2011. Texte court [French Society of Anaesthesia and 
+[near] new=2024_2024_RFE-optimisation-hemodynamique-perioperatoire_adulte-dont-o_520b05 (2024, role=recommandation) old=2012_2a_AFAR_FRANCAIS_Strategie-du-remplissage-vasculaire-perioperato_28a916 (2012) title_in_para=1.00 title_in_newtitle=0.25 |tw|=4
+     old title: Stratégie du remplissage vasculaire périopératoire
+     new title: Optimisation hémodynamique périopératoire – Adulte dont obstétrique
+     para: **Méthodes :** Les dernières recommandations SFAR sur la stratégie du remplissage vasculaire périopératoire ont été publiées en 2012. Nous avons souhaité réactualiser ces recommandations après analyse de la littérature selon la méthodologie GRADE® en identifia
+[near] new=2024_2024_RFE-optimisation-hemodynamique-perioperatoire_adulte-dont-o_520b05 (2024, role=recommandation) old=2012_2a_AFAR_FRANCAIS_Strategie-du-remplissage-vasculaire-perioperato_28a916 (2012) title_in_para=1.00 title_in_newtitle=0.25 |tw|=4
+     old title: Stratégie du remplissage vasculaire périopératoire
+     new title: Optimisation hémodynamique périopératoire – Adulte dont obstétrique
+     para: Les précédentes recommandations françaises formulées par la SFAR concernant les stratégies d'expansion volémique peropératoire remontent à 2012 [11]. Plus récemment, des recommandations sur le choix du type de soluté d'expansion volémique en réanimation (hors 
+[near] new=2024_2024_RFE-optimisation-hemodynamique-perioperatoire_adulte-dont-o_520b05 (2024, role=recommandation) old=2021_RFE-SFAR-SFMU-Solute_CC_81s-de-remplissage_finale_220921_c91c4c (2021) title_in_para=1.00 title_in_newtitle=0.00 |tw|=6
+     old title: Choix du soluté pour le remplissage vasculaire en situation critique
+     new title: Optimisation hémodynamique périopératoire – Adulte dont obstétrique
+     para: Les précédentes recommandations françaises formulées par la SFAR concernant les stratégies d'expansion volémique peropératoire remontent à 2012 [11]. Plus récemment, des recommandations sur le choix du type de soluté d'expansion volémique en réanimation (hors 
+[FIRES] new=2024_RPP-Prevention-des-erreurs-medicamenteuses_39d8ef (2024, role=recommandation) old=2016_texte-court-preco-erreurs-med-2016-SFAR-SFPC-version-finale-25-o_9787c5 (2016) title_in_para=1.00 title_in_newtitle=1.00 |tw|=3
+     old title: Prévention des erreurs médicamenteuses en A-R
+     new title: Prévention des erreurs médicamenteuses
+     para: [2] Société Française d'Anesthésie Réanimation (SFAR) – Société Française de Pharmacie Clinique (SFPC). Prévention des erreurs médicamenteuses en anesthésie et en réanimation (texte long et texte court). Préconisations de la SFAR en partenariat avec la SFPC, a
+[FIRES] new=2024_RPP-Prevention-des-erreurs-medicamenteuses_39d8ef (2024, role=recommandation) old=2016_texte-long-Preconisations-2016-erreurs-med-SFAR-SFPC-version-fin_32ecd9 (2016) title_in_para=1.00 title_in_newtitle=1.00 |tw|=3
+     old title: Prévention des erreurs médicamenteuses en A-R
+     new title: Prévention des erreurs médicamenteuses
+     para: [2] Société Française d'Anesthésie Réanimation (SFAR) – Société Française de Pharmacie Clinique (SFPC). Prévention des erreurs médicamenteuses en anesthésie et en réanimation (texte long et texte court). Préconisations de la SFAR en partenariat avec la SFPC, a
+[FIRES] new=2024_RPP-Prevention-des-erreurs-medicamenteuses_39d8ef (2024, role=recommandation) old=2016_texte-court-preco-erreurs-med-2016-SFAR-SFPC-version-finale-25-o_9787c5 (2016) title_in_para=1.00 title_in_newtitle=1.00 |tw|=3
+     old title: Prévention des erreurs médicamenteuses en A-R
+     new title: Prévention des erreurs médicamenteuses
+     para: (Source : SFAR SFPC. Prévention des erreurs médicamenteuses en anesthésie et en réanimation. Actualisation 2016.
+[FIRES] new=2024_RPP-Prevention-des-erreurs-medicamenteuses_39d8ef (2024, role=recommandation) old=2016_texte-long-Preconisations-2016-erreurs-med-SFAR-SFPC-version-fin_32ecd9 (2016) title_in_para=1.00 title_in_newtitle=1.00 |tw|=3
+     old title: Prévention des erreurs médicamenteuses en A-R
+     new title: Prévention des erreurs médicamenteuses
+     para: (Source : SFAR SFPC. Prévention des erreurs médicamenteuses en anesthésie et en réanimation. Actualisation 2016.
+[near] new=2024_PEDIA_RPP-Optimisation-Hemodynamique-Perioperatoire_Pediatrie_c6d39a (2024, role=recommandation) old=2012_2a_AFAR_FRANCAIS_Strategie-du-remplissage-vasculaire-perioperato_28a916 (2012) title_in_para=1.00 title_in_newtitle=0.25 |tw|=4
+     old title: Stratégie du remplissage vasculaire périopératoire
+     new title: Optimisation hémodynamique périopératoire – Pédiatrie
+     para: **Méthodes :** Les dernières recommandations SFAR sur la stratégie du remplissage vasculaire périopératoire ont été publiées en 2012. Nous avons souhaité réactualiser ces recommandations après analyse de la littérature selon la méthodologie GRADE® en identifia
+[FIRES] new=2022_rpp-urgences-obstetricales-en-medecine-durgence_32dd15 (2022, role=recommandation) old=2010_2_AFAR_Urgences-Obstetricales-Extrahospitalieres_47ad85 (2010) title_in_para=1.00 title_in_newtitle=0.67 |tw|=3
+     old title: Urgences Obstétricales Extrahospitalières
+     new title: Prise en charge des urgences obstétricales en médecine d’urgence
+     para: En 2010, la société française d'anesthésie et de réanimation (SFAR) et la société française de médecine d'urgence (SFMU) ont publié des recommandations formalisées d'experts sur les urgences obstétricales extrahospitalières [1]. Depuis, la modification de l'or
+[FIRES] new=2019_diagnostic-et-prise-ne-charge-dune-TIH_cde74d (2019, role=recommandation) old=2002_2_AFAR_Thrombopenie-induite-par-lheparine_7850bd (2002) title_in_para=1.00 title_in_newtitle=1.00 |tw|=3
+     old title: Thrombopénie induite par l’héparine
+     new title: Diagnostic et prise en charge d’une thrombopénie induite par l’héparine
+     para: La Thrombopénie Induite par l'Héparine (TIH) est une pathologie rare, iatrogène, caractérisée par sa gravité potentielle, essentiellement liée aux thromboses, et par ses difficultés diagnostiques et thérapeutiques. En 2002, une conférence d'experts mobilisée p
+[near] new=2021_RFE_20SFAR_20pancreatite_20aigue_finale_220921_b98663 (2021, role=recommandation) old=2001_cc_pancreatiteaigue20010_942691 (2001) title_in_para=1.00 title_in_newtitle=1.00 |tw|=2
+     old title: Pancréatite aiguë
+     new title: Pancréatite aigüe du patient adulte en soins critiques
+     para: *Méthodes.* Les dernières recommandations SFAR sur la prise en charge du patient de réanimation avec une pancréatite aiguë ont été publiées en 2001. Nous avons souhaité réactualiser ces recommandations après analyse de la littérature selon la méthodologie GRAD
+[FIRES] new=2019_propositions-tih-gihp-gfht-sfar_20_7a3660 (2019, role=recommandation) old=2002_2_AFAR_Thrombopenie-induite-par-lheparine_7850bd (2002) title_in_para=1.00 title_in_newtitle=1.00 |tw|=3
+     old title: Thrombopénie induite par l’héparine
+     new title: Propositions du GIHP et du GFHT pour le diagnostic et la prise en charge d’une thrombopénie induite par l’héparine
+     para: La Thrombopénie Induite par l'Héparine (TIH) est une pathologie rare, iatrogène, caractérisée par sa gravité potentielle, essentiellement liée aux thromboses, et par ses difficultés diagnostiques et thérapeutiques. En 2002, une conférence d'experts mobilisée p
+[near] new=2019_rpp-hyperthermie-maligne_ca17f7 (2019, role=recommandation) old=2013_2_SFAR_HyperthermieMaligne_088c5f (2013) title_in_para=1.00 title_in_newtitle=0.40 |tw|=5
+     old title: Recommandations d’Experts pour le Risque d’HYPERTHERMIE MALIGNE en Anesthésie Réanimation
+     new title: Prise en charge de l’Hyperthermie Maligne
+     para: *Ce document est une mise à jour des Recommandations d'Experts pour le risque d'HYPERTHERMIE MALIGNE en anesthésie-réanimation de septembre 2013.*
+[near] new=2018_2_RFE-CURARE-3_4eac96 (2018, role=recommandation) old=2017_RFE-ANREA-Intubation-difficile-et-extubation-en-anesthesie-chez-_71af0f (2017) title_in_para=1.00 title_in_newtitle=0.20 |tw|=5
+     old title: Intubation difficile et extubation en anesthésie chez l’adulte
+     new title: Curarisation et décurarisation en anesthésie
+     para: - [1] Indication de la curarisation en anesthésie. *Ann Fr Anesth Reanim* 2000;19:fi 34-37 - [2] Debaene B, Bruder N, Chollet-Rivier M. Agents d'induction : agents intraveineux, agents halogénés, morphiniques et curares ; monitoring. *Ann Fr Anesth Réanim* 200
+[near] new=2018_2_RFE-CURARE-3_4eac96 (2018, role=recommandation) old=2011_2_AFAR_Prevention-du-risque-allergique-peranesthesique_5c26e4 (2011) title_in_para=1.00 title_in_newtitle=0.00 |tw|=4
+     old title: Prévention du risque allergique peranesthésique
+     new title: Curarisation et décurarisation en anesthésie
+     para: - [1] Indication de la curarisation en anesthésie. *Ann Fr Anesth Reanim* 2000;19:fi 34-37 - [2] Debaene B, Bruder N, Chollet-Rivier M. Agents d'induction : agents intraveineux, agents halogénés, morphiniques et curares ; monitoring. *Ann Fr Anesth Réanim* 200
+[near] new=2017_RFE-ANREA-Intubation-difficile-et-extubation-en-anesthesie-chez-_71af0f (2017, role=recommandation) old=2006_2a_SFAR_texte_court_Intubation-difficile_168b4a (2006) title_in_para=1.00 title_in_newtitle=1.00 |tw|=2
+     old title: Intubation difficile
+     new title: Intubation difficile et extubation en anesthésie chez l’adulte
+     para: <sup>\*</sup> Actualisation de la Conférence d'experts. Intubation difficile (2006). Texte validé par le Conseil d'administration de la SFAR (29/06/2017). 2017 Société française d'anesthésie et de réanimation.
+[near] new=2017_RFE-ANREA-Intubation-difficile-et-extubation-en-anesthesie-chez-_71af0f (2017, role=recommandation) old=2006_2a_SFAR_texte_court_Intubation-difficile_168b4a (2006) title_in_para=1.00 title_in_newtitle=1.00 |tw|=2
+     old title: Intubation difficile
+     new title: Intubation difficile et extubation en anesthésie chez l’adulte
+     para: Ces recommandations formalisées sont le résultat du travail d'un groupe d'experts réunis par la Société française d'anesthésie et de réanimation (SFAR) afin de réactualiser la Conférence d'experts/intubation difficile de 2006.
+[near] new=2012_3_AFAR_LONG_Bris-dentaires-perianesthesiques-copie_ba6aca (2012, role=argumentaire) old=2006_2a_SFAR_texte_court_Intubation-difficile_168b4a (2006) title_in_para=1.00 title_in_newtitle=0.00 |tw|=2
+     old title: Intubation difficile
+     new title: Bris dentaires périanesthésiques
+     para: **2.1.3.1. Évaluation du risque d'intubation et/ou de ventilation au masque difficiles.** Les critères prédictifs d'intubation difficile ont été précisés dans la conférence d'experts réactualisée en 2006 [12]. Ces critères sont recherchés et consignés dans le 
+
+== Jaccard 5-grams: abrogated vs any document (>=0.5) and all pairs in [0.8,0.9) ==
+J=0.996 2026_RFE-antibioprophylaxie-2023_V3_0_pour-mise-sur-site-juin-2026_sa_9ff419 (2026, active=True, latest=False) ~ 2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1 (2026, active=True, latest=True)
+J=0.974 2021_Gestion_20perioperatoire_20des_20patients_20sous_20AAP_20en_20ur_5a9220 (2021, active=True, latest=True) ~ 2018_rfe-gestion-des-agents-antiplaquettaires_2e0942 (2018, active=True, latest=True)
+J=0.936 2022_RPP-SFAR-COVID_Version-Avril-2022_abrogee-010723_682252 (2022, active=False, latest=True) ~ 2022_RPP_20SFAR_20COVID_Version_20Avril_202022_finale_20sans_20marque_c5bf31 (2022, active=False, latest=False)
+J=0.999 2019_diagnostic-et-prise-ne-charge-dune-TIH_cde74d (2019, active=True, latest=True) ~ 2019_propositions-tih-gihp-gfht-sfar_20_7a3660 (2019, active=True, latest=True)

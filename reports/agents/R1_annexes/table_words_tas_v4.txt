@@ -1,0 +1,6 @@
+cells checked 18950, cells with missing words 4, docs 2
+[["2026_RFE-antibioprophylaxie-2023_V3_0_pour-mise-sur-site-juin-2026_sa_9ff419", 2], ["2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1", 2]]
+2026_RFE-antibioprophylaxie-2023_V3_0_pour-mise-sur-site-juin-2026_sa_9ff419	LOCAL	missing=['frontoplastie']	cell=▪ septo-rhinoplastie sans greffe de cartilage ▪ septo-rhinoplastie avec greffe de cartilage ▪ implants ou appositions modelantes à la face (malaire) ▪ frontoplastie
+2026_RFE-antibioprophylaxie-2023_V3_0_pour-mise-sur-site-juin-2026_sa_9ff419	LOCAL	missing=['sans', 'contamination', 'locale']	cell=○ abord extra-oral ( sans contamination locale ) : - durée ≤ 2h - durée > 2h
+2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1	LOCAL	missing=['frontoplastie']	cell=▪ septo-rhinoplastie sans greffe de cartilage ▪ septo-rhinoplastie avec greffe de cartilage ▪ implants ou appositions modelantes à la face (malaire) ▪ frontoplastie
+2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1	LOCAL	missing=['sans', 'contamination', 'locale']	cell=○ abord extra-oral ( sans contamination locale ) : - durée ≤ 2h - durée > 2h

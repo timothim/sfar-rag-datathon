@@ -1,0 +1,425 @@
+#1 [L] pops=['pediatrie'] src=table type=table_row_card doc=2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-jui
+  title=Antibioprophylaxie en chirurgie et médecine interventionnelle
+  section=elle par disciplines pédiatriques et néonatales. > PARTIE 5 : ANTIBIOPROPHYLAXIE EN CHIRURGIE PLASTIQUE PEDIATRIQUE ET CHIRURGIE DES ENFANTS BRULES > ANTIBIOPROPHYLAXIE EN CHIRURGIE DES ENFANTS BRULES
+  text="Section : PARTIE 5 : ANTIBIOPROPHYLAXIE EN CHIRURGIE PLASTIQUE PEDIATRIQUE ET CHIRURGIE DES ENFANTS BRULES > ANTIBIOPROPHYLAXIE EN CHIRURGIE DES ENFANTS BRULES\nPérimètre : Les posologies de ce tableau concernent l'enfant (hors néonatalogie) de moins de 50 kg. Au-delà, se référer au tableau adulte. La posologie unitaire de bêtalactamine ne peut pas dépasser celle utilisée chez l'adulte, soit 2g maximum.\nActes chirurgi"
+
+#2 [L] pops=['pediatrie'] src=table type=table_row_card doc=2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-jui
+  title=Antibioprophylaxie en chirurgie et médecine interventionnelle
+  section=plines pédiatriques et néonatales. > PARTIE 7 : ANTIBIOPROPHYLAXIE EN CHIRURGIE DIGESTIVE PEDIATRIQUE, ENDOSCOPIE DIGESTIVE ET RADIOLOGIE INTERVENTIONNELLE DIGESTIVE PEDIATRIQUES > Chirurgie hépatique
+  text="Section : PARTIE 7 : ANTIBIOPROPHYLAXIE EN CHIRURGIE DIGESTIVE PEDIATRIQUE, ENDOSCOPIE DIGESTIVE ET RADIOLOGIE INTERVENTIONNELLE DIGESTIVE PEDIATRIQUES > Chirurgie hépatique\nPérimètre : Les posologies de ce tableau concernent l'enfant (hors néonatalogie) de moins de 50 kg. Au-delà, se référer au tableau adulte. La posologie unitaire de bêtalactamine ne peut pas dépasser celle utilisée chez l'adulte, soit 2g maximum.\n"
+
+#3 [L] pops=['pediatrie'] src=table type=table_row_card doc=2023_RPP-Organisation-Anesthesie-Pediatrique_-Version-pour-m
+  title=Organisation de l’anesthésie pédiatrique
+  section=INTRODUCTION > 5- Fiches d'urgences / Protocoles d'anesthésie selon habitudes de service > ANNEXE 4 : Taille des brassards à tension pédiatriques en fonction de l'âge de l'enfant.
+  text="Tableau : ANNEXE 5 : Activités pour assurer le maintien et l'actualisation des connaissances et compétences en anesthésie pédiatrique\nSection : 5- Fiches d'urgences / Protocoles d'anesthésie selon habitudes de service > ANNEXE 4 : Taille des brassards à tension pédiatriques en fonction de l'âge de l'enfant.\n6 — Lecture de publications (ex : Pediatric Anesthesia) et d'ouvrage sur l'anesthésie pédiatrique"
+
+#4 [L] pops=['pediatrie'] src=table type=table_row_card doc=2026_RFE-antibioprophylaxie-2023_V3_0_pour-mise-sur-site-jui
+  title=Antibioprophylaxie en chirurgie et médecine interventionnelle
+  section=hirurgie et médecine interventionnelle par disciplines pédiatriques et néonatales. > PARTIE 6 : ANTI BIOPROPHYLAXIE EN CHIRURGIE ORTHOPEDIQUE ET TRAUMATOLOGIQUE PEDIATRIQUE > Chirurgie traumatologique
+  text="Section : PARTIE 6 : ANTI BIOPROPHYLAXIE EN CHIRURGIE ORTHOPEDIQUE ET TRAUMATOLOGIQUE PEDIATRIQUE > Chirurgie traumatologique\nPérimètre : Les posologies de ce tableau concernent l'enfant (hors néonatalogie) de moins de 50 kg. Au-delà, se référer au tableau adulte. La posologie unitaire de bêtalactamine ne peut pas dépasser celle utilisée chez l'adulte, soit 2g maximum.\nActes chirurgicaux ou interventionnels : Ostéosy"
+
+#5 [L] pops=['pediatrie'] src=table type=table_row_card doc=2026_RFE-antibioprophylaxie-2023_V3_0_pour-mise-sur-site-jui
+  title=Antibioprophylaxie en chirurgie et médecine interventionnelle
+  section=elle par disciplines pédiatriques et néonatales. > PARTIE 5 : ANTIBIOPROPHYLAXIE EN CHIRURGIE PLASTIQUE PEDIATRIQUE ET CHIRURGIE DES ENFANTS BRULES > ANTIBIOPROPHYLAXIE EN CHIRURGIE DES ENFANTS BRULES
+  text="Section : PARTIE 5 : ANTIBIOPROPHYLAXIE EN CHIRURGIE PLASTIQUE PEDIATRIQUE ET CHIRURGIE DES ENFANTS BRULES > ANTIBIOPROPHYLAXIE EN CHIRURGIE DES ENFANTS BRULES\nPérimètre : Les posologies de ce tableau concernent l'enfant (hors néonatalogie) de moins de 50 kg. Au-delà, se référer au tableau adulte. La posologie unitaire de bêtalactamine ne peut pas dépasser celle utilisée chez l'adulte, soit 2g maximum.\nActes chirurgi"
+
+#6 [L] pops=['pediatrie'] src=table type=table_row_card doc=2019_liste-des-centres-de-traitement-des-brules-francais-et-
+  title=Prise en charge du brûlé grave à la phase aiguë chez l’adulte et l’enfant
+  section=
+  text='Sous-catégorie : Centres de Traitement des Brûlés Enfants Métropole\nCentres de Traitement des Brûlés Adultes Métropole : Paris | APHP Trousseau | 26 Avenue du Dr Arnold Netter 75012 PARIS | 01 44 73 62 54'
+
+#7 [L] pops=['pediatrie'] src=table type=table_row_card doc=2019_liste-des-centres-de-traitement-des-brules-francais-et-
+  title=Prise en charge du brûlé grave à la phase aiguë chez l’adulte et l’enfant
+  section=
+  text='Sous-catégorie : Centres de Traitement des Brûlés Enfants Métropole\nCentres de Traitement des Brûlés Adultes Métropole : Nantes | CHU Nantes PTMC Réa Pédiatrique | Boulevard Jean Monnet 44000 NANTES | 02 40 08 73 12'
+
+#8 [L] pops=['adulte'] src=table type=table_row_card doc=2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc
+  title=Place de l’ECBU avant une prise en charge urologique chirurgicale ou interventionnelle chez l’adulte et modalités de tra
+  section=1 Introduction > ECBU avant une prise en charge urologique interventionnelle ou chirurgicale Argumentaire > 3.2. Deuxième tour de cotation
+  text="Tableau : Tableau 11: Résultat du 2nd tour de cotation\nSection : ECBU avant une prise en charge urologique interventionnelle ou chirurgicale Argumentaire > 3.2. Deuxième tour de cotation\nSous-catégorie : Question 1 : Quelle est la place de l'ECBU dans le diagnostic d'une colonisation urinaire avant une prise en charge urologique interventionnelle ou chirurgicale chez l'adulte ?\nRecommandations après intégration des m"
+
+#9 [L] pops=['pediatrie'] src=table type=table_markdown doc=2023_RPP-Organisation-Anesthesie-Pediatrique_-Version-pour-m
+  title=Organisation de l’anesthésie pédiatrique
+  section=INTRODUCTION > 5- Fiches d'urgences / Protocoles d'anesthésie selon habitudes de service > ANNEXE 4 : Taille des brassards à tension pédiatriques en fonction de l'âge de l'enfant.
+  text="Tableau : ANNEXE 5 : Activités pour assurer le maintien et l'actualisation des connaissances et compétences en anesthésie pédiatrique\n1 | Validation d'un DU ou DIU d'anesthésie pédiatrique (ex : DU Maintien des compétences en anesthésie pédiatrique – Hôpital Trousseau; DIU Perfectionnement en anesthésie pédiatrique – Angers, Nantes, Rennes, Tours; DIU Perfectionnement en anesthésie-réanimation pédiatrique – Bordeaux,"
+
+#10 [L] pops=['adulte'] src=table type=table_markdown doc=2016_3-Tableaux-Reactualisation-de-la-recommandation-sur-la-
+  title=Réactualisation de la recommandation sur la douleur postopératoire
+  section=Tableaux RFE > 1- L'évaluation de la douleur chez l'adulte et l'enfant > Tableau :
+  text="Tableau : Echelle évaluation douleur du patient adulte non communicant\n| Reference | Echelle / méthodologie | Population / nombre de patients | Critères d'évaluation / résultats | Commentaires | --- | --- | --- | --- | --- | Neville / Pain Manag / Nurs. 2014 | Comparaison / Abbey PainScale, the DOLOPLUS-2 / Scale, and Checklist of / Nonverbal Pain Indicat ors Scale / Etude observationnelle | Moderate to severe dement"
+
+#11 [L] pops=['adulte'] src=table type=table_row_card doc=2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc
+  title=Place de l’ECBU avant une prise en charge urologique chirurgicale ou interventionnelle chez l’adulte et modalités de tra
+  section=1 Introduction > ECBU avant une prise en charge urologique interventionnelle ou chirurgicale Argumentaire > 3.2. Deuxième tour de cotation
+  text="Tableau : Tableau 11: Résultat du 2nd tour de cotation\nSection : ECBU avant une prise en charge urologique interventionnelle ou chirurgicale Argumentaire > 3.2. Deuxième tour de cotation\nSous-catégorie : Question 1 : Quelle est la place de l'ECBU dans le diagnostic d'une colonisation urinaire avant une prise en charge urologique interventionnelle ou chirurgicale chez l'adulte ?\nRecommandations après intégration des m"
+
+#12 [L] pops=['neonatal', 'pediatrie'] src=table type=table_markdown doc=2025_argu_sepsis_a5219e
+  title=Prise en charge du sepsis du nouveau-né, de l’enfant et de l’adulte – HAS 2025
+  section=1. Introduction > Argumentaire > Argumentaire
+  text="Tableau : Tableau 5 : Recommandations de la Surviving Sepsis Campaign (SSC) 2020 pour les enfants (y compris nouveau-nés) ajustées au contexte français\n| Recommandation SSC 2020 | Recommandation ajustée | --- | --- | 10. Chez les enfants immuno-compétents et sans risque élevé d'infection à un agent pathogène multirésistant, nous déconseillons l'utilisation systématique de plusieurs antimicrobiens empiriques dirigés c"
+
+#13 [L] pops=['neonatal', 'pediatrie'] src=table type=table_row_card doc=2025_argu_sepsis_a5219e
+  title=Prise en charge du sepsis du nouveau-né, de l’enfant et de l’adulte – HAS 2025
+  section=1. Introduction > Argumentaire > Argumentaire
+  text="Tableau : Tableau 5 : Recommandations de la Surviving Sepsis Campaign (SSC) 2020 pour les enfants (y compris nouveau-nés) ajustées au contexte français\nSection : Argumentaire > Argumentaire\nRecommandation SSC 2020 : 1. Chez les enfants gravement malades, nous suggérons de mettre en œuvre un dépistage systématique pour reconnaître rapidement le choc septique et d'autres dysfonctionnements d'organes associés au sepsis "
+
+#14 [L] pops=['adulte'] src=table type=table_markdown doc=2023_RPP-Anesthesie-adulte-porteur-de-CC_pour-mise-sur-site_
+  title=Anesthésie pour chirurgie non cardiaque des patients adultes porteurs de cardiopathie congénitale
+  section=Anesthésie pour chirurgie non cardiaque des patients adultes porteurs de cardiopathie congénitale > 1.5 Classification par groupes selon le niveau de gravité des cardiopathies congénitales
+  text="Tableau : Tableau 3 : Classification des cardiopathies congénitales chez l'adulte selon le statut physiologique\n| État physiologique | --- | A / NYHA I / Absence de séquelles hémodynamique ou anatomique / Sinusal, absence d'arythmie / Capacité physique normale / Fonction rénale, hépatique et pulmonaire normales | B / Séquelles hémodynamiques modérées (Dilatation modérée aortique, ventriculaire, dysfonction ventricula"
+
+#15 [L] pops=['adulte'] src=table type=table_row_card doc=2016_3-Tableaux-Reactualisation-de-la-recommandation-sur-la-
+  title=Réactualisation de la recommandation sur la douleur postopératoire
+  section=Tableaux RFE > 1- L'évaluation de la douleur chez l'adulte et l'enfant > Tableau :
+  text="Tableau : Echelle évaluation douleur du patient adulte non communicant\nSection : 1- L'évaluation de la douleur chez l'adulte et l'enfant > Tableau :\nReference : Smith I / Arch Gerontol / Geriatr 2013 | Echelle / méthodologie : Facial Action Coding / System (FACS) and DOLOPLUS-2 / Méta analyse / 9 études en qualitatif / 2 études en quantitatif (sur délire postop) | Population / nombre de patients : Patients following "
+
+#16 [L] pops=['adulte'] src=section type=prose doc=2025_reco_sepsis_367583
+  title=Prise en charge du sepsis du nouveau-né, de l’enfant et de l’adulte – HAS 2025
+  section=Table des annexes > Annexe 5. Recommandations de la Surviving Sepsis Campaign (SSC) 2021 pour les adultes validées pour le contexte français > PRESSION ARTERIELLE MOYENNE
+  text='9. Pour les patients adultes en sepsis ou en choc septique, nous recommandons un objectif initial de pression artérielle moyenne à 65 mmHg par rapport à des objectifs supérieurs.'
+
+#17 [L] pops=['pediatrie'] src=section type=prose doc=2024_PEDIA_RPP-Optimisation-Hemodynamique-Perioperatoire_Ped
+  title=Optimisation hémodynamique périopératoire – Pédiatrie
+  section=Optimisation hémodynamique périopératoire > - Pédiatrie -
+  text="**Groupe d'experts (ordre alphabétique) :**\n\nOsama ABOU-ARAB, Marc BEAUSSIER, Matthieu BIAIS, Bernard CHOLLEY, Benjamin CHOUSTERMAN, Isabelle CONSTANT, Olivier DESEBBE, Claude ECOFFEY, Jean-Luc FELLAHI, Emmanuel FUTIER, Etienne GAYAT, Max GONZALEZ ESTEVEZ, Pierre-Grégoire GUINOT, Matthias JACQUET-LAGREZE, Alexandre JOOSTEN, Florence JULIEN-MARSOLLIER, Marc LILOT, Dan LONGROIS, Emmanuel LORNE, Marie-ReineLOSSER, Frédé"
+
+#18 [L] pops=['pediatrie'] src=section type=prose doc=2000_2_SFAR_Recommandations-pour-les-structures-et-le-materi
+  title=Recommandations pour les structures et le matériel de l’anesthésie pédiatrique
+  section=Recommandations pour les structures et le matériel de l'anesthésie pédiatrique > II - Matériel > 1. Assistance respiratoire > 1.4. Valves
+  text="Les valves doivent être munies d'un système de détrompage, pour éviter toute erreur de montage (arrêté du 30 août 1996).\n\nPour l'induction de l'anesthésie, il est possible d'utiliser des valves avec réinhalation (valve de David® ou circuit respirateur) ou sans réinhalation (valve de Ruben®, valve d'Ambu® enfant et adulte). En théorie, le circuit machine n'est pas utilisable pour l'induction des enfants de moins d'un "
+
+#19 [L] pops=['neonatal', 'pediatrie'] src=section type=table_row_card doc=2014_2_HAS_transfusion_de_globules_rouges_homologues_-_produ
+  title=Transfusion de globules rouges homologues : produits, indications alternatives
+  section=Sommaire > PARTIE 4 : NÉONATOLOGIE > 19.1 Indications de l'exsanguino-transfusion
+  text="Section : PARTIE 4 : NÉONATOLOGIE > 19.1 Indications de l'exsanguino-transfusion\nAE — Chez le nouveau-né avec un terme de plus de 35 semaines d'aménorrhée, il est recommandé d'utiliser les valeurs seuils de bilirubine totale sérique établies par les recommandations de l'AAP de 2004 (site Internet : www.bilitool.org) et britanniques de 2010 (site Internet : www.nice.org.uk) pour poser l'indication de l'exsanguino-tran"
+
+#20 [L] pops=['pediatrie'] src=section type=prose doc=2010_2b_HAS_Texte_Long-Delivrance-de-l-information-a-la-pers
+  title=Délivrance de l’information à la personne sur son état de santé
+  section=Sommaire > ► L'accueil de l'enfant
+  text="Le placement en vue de l'adoption se traduit par la **remise effective aux futurs adoptants d'un enfant** pour lequel il a été valablement et définitivement consenti à l'adoption, d'un pupille de l'État ou d'un enfant déclaré abandonné par décision judiciaire²⁷².\n\nDès que l'enfant est placé chez ses futurs adoptants, il n'est plus possible de le rendre à la famille d'origine²⁷³, si elle était connue. Il n'est plus po"
+
+#21 [L] pops=['adulte'] src=section type=prose doc=2001_2_AFAR_Les-blocs-peripheriques-des-membres-chez-l-adult
+  title=Les blocs périphériques des membres chez l’adulte
+  section=Les blocs périphériques des membres chez l'adulte > 2.7. La réalisation du bloc
+  text='La dose-test peut être recommandée pour les blocs profonds (bloc du plexus lombaire par voie postérieure, par exemple) (E). - Les injections lentes et fractionnées sont recommandées (D).'
+
+#22 [L] pops=['pediatrie'] src=section type=prose doc=2010_2_SFAR_Anesthesie-loco-regionale-en-pediatrie_626352
+  title=Anesthésie loco-régionale en pédiatrie
+  section=QUESTION N° 5 : QUELLES SONT LES MÉTHODES DE PRÉVENTION, LES SIGNES ET LES TRAITEMENTS DES COMPLICATIONS DE L'ALR PÉDIATRIQUE ? > 5-1 Complications toxiques > 5-1-2 Toxicité locale
+  text="- En l'absence d'étude démontrant une relation entre neurotoxicité locale des Alx et stade de myélinisation en fonction de l'âge, aucune précaution liée à ce facteur n'est recommandée."
+
+#23 [L] pops=['pediatrie'] src=section type=prose doc=2010_2b_HAS_Texte_Long-Delivrance-de-l-information-a-la-pers
+  title=Délivrance de l’information à la personne sur son état de santé
+  section=Sommaire > ► L'accueil de l'enfant > ► L'adoption simple
+  text="---\n\n²⁷⁹ Article 365 du Code civil : « ***L'adoptant est seul investi à l'égard de l'adopté de tous les droits d'autorité parentale***, inclus celui de consentir au mariage de l'adopté, ***à moins qu'il ne soit le conjoint du père ou de la mère de l'adopté*** ; dans ce cas, ***l'adoptant a l'autorité parentale concurremment avec son conjoint***, lequel en conserve seul l'exercice, sous réserve d'une déclaration conjo"
+
+#24 [L] pops=['adulte', 'obstetrique'] src=section type=table_row_card doc=2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-jui
+  title=Antibioprophylaxie en chirurgie et médecine interventionnelle
+  section=entionnelle par disciplines adultes. > PARTIE 6 : CHIRURGIE GYNECOLOGIQUE, PROCREATION MEDICALEMENT ASSISTEE, OBSTETRIQUE ET RADIOLOGIE > Chirurgie des annexes et des paramètres par voie laparotomique
+  text='Section : PARTIE 6 : CHIRURGIE GYNECOLOGIQUE, PROCREATION MEDICALEMENT ASSISTEE, OBSTETRIQUE ET RADIOLOGIE > Chirurgie des annexes et des paramètres par voie laparotomique\nActes chirurgicaux ou interventionnels : Exérèse de lésions endométriosiques de la cloison rectovaginale | Molécules : Céfazoline / + / Métronidazole | Dose initiale : 2 g IVL / 1 g IVL | Réinjections et durée : 1g si durée > 4h puis toutes les 4h '
+
+#25 [L] pops=['adulte', 'pediatrie'] src=section type=prose doc=2002_REANIMATION_Prise-en-charge-des-crises-dasthme-aigues-g
+  title=Prise en charge des crises d’asthme aiguës graves de l’adulte et de l’enfant (à l’exclusion du nourrisson)
+  section=estion n° 4 : Quelles sont les indications de l'hospitalisation et quelles en sont les modalités ? > Quelles sont les modalités de la ventilation des patients intubés pour crise d'asthme aiguë grave ?
+  text="Le mode volumétrique est préféré par certaines équipes à un mode en pression contrôlée car il permet d'insuffler le même volume courant en un temps plus court. Pour une même Pplat, la pression inspiratoire de pointe (Ppointe) est plus importante en mode volumétrique, sans effet délétère en théorie, puisqu'elle comprend une importante composante résistive et ne reflète donc pas la pression de distension alvéolaire."
+
+#26 [L] pops=['adulte'] src=section type=prose doc=2001_2_AFAR_Les-blocs-peripheriques-des-membres-chez-l-adult
+  title=Les blocs périphériques des membres chez l’adulte
+  section=Les blocs périphériques des membres chez l'adulte > 2.9. Chronologie de l'association AG – ALR > 3. QUESTION 3 > QUELLES RECOMMANDATIONS POUR L'ANESTHÉSIE LOCORÉGIONALE INTRAVEINEUSE (ALRIV) ?
+  text="Le garrot inférieur est dégonflé (A). Après vérification de l'absence de pouls périphérique et du gonflement effectif du garrot, 3 mg kg⁻¹ (0,5 à 0,6 ml kg⁻¹) de lidocaïne 0,5 % sont injectés en plus de 90 s pour éviter l'hyperpression veineuse. (A). En cours d'ALRIV, il est possible de regonfler le garrot inférieur et de dégonfler le garrot supérieur pour soulager le patient (B). - La lidocaïne est le seul AL recomm"
+
+#27 [L] pops=['pediatrie'] src=section type=prose doc=2004_2_AFAR_Antibiotherapie-probabiliste-des-etats-septiques
+  title=Antibiothérapie probabiliste des états septiques graves
+  section=3. SPÉCIFICITÉ PÉDIATRIQUE
+  text="L'évolution d'un processus infectieux sévère est souvent plus rapide que chez l'adulte, avec le risque d'apparition souvent précoce d'une insuffisance circulatoire. L'administration urgente d'une antibiothérapie probabiliste est dans ce contexte essentiel. Cette prescription doit tenir compte de la variation des paramètres pharmacocinétiques en fonction de l'âge. Avant six mois, le volume de distribution est"
+
+#28 [L] pops=['adulte'] src=section type=table_markdown doc=2026_RFE-antibioprophylaxie-2023_V3_0_pour-mise-sur-site-jui
+  title=Antibioprophylaxie en chirurgie et médecine interventionnelle
+  section=ine interventionnelle par disciplines adultes. > PARTIE 8 : CHIRURGIE DIGESTIVE ET BARIATRIQUE, ENDOSCOPIE DIGESTIVE ET RADIOLOGIE INTERVENTIONNELLE DIGESTIVE > Chirurgie des kystes hépatiques simples
+  text="| Actes chirurgicaux ou interventionnels | Molécules | Dose initiale | Réinjections et durée | Force de la recommandation | --- | --- | --- | --- | --- | Résection du dôme saillant; Péri-kystectomie; Chirurgie de kystes hydatiques | PAS D'ANTIBIOPROPHYLAXIE | ●●● (Avis d'experts) |"
+
+#29 [L] pops=['pediatrie'] src=section type=prose doc=2017_RFE-Hospital-acquired-pneumonia-in-ICU_e091db
+  title=Pneumonies associées aux soins de réanimation
+  section=aediatrics – We suggest using a standardised multimodal approach aiming at preventing HAP in order to decrease pediatric ICU patient morbidity. > Evidence summary and rationale for the recommendation:
+  text='The major studies that have demonstrated the efficiency of SDD were conducted in environments where the prevalence of multiresistant bacteria was low [25]. It is therefore recommended to follow the effects of this prevention strategy on the local bacterial ecology on a regular basis. Consequently, we cannot recommend such a strategy in units where the prevalence of multiresistant bacteria is high.'
+
+#30 [L] pops=['pediatrie'] src=section type=prose doc=2025_argu_sepsis_a5219e
+  title=Prise en charge du sepsis du nouveau-né, de l’enfant et de l’adulte – HAS 2025
+  section= post-aiguë à la réintégration sociale et professionnelle > 4.1. Quelle prise en charge post-aiguë avant le retour à domicile du patient septique ? > Argumentaire > 4.1.2. Chez l'enfant > Argumentaire
+  text="Le bilan conseillé par les experts d'immunologie comporte dans un premier temps une NFS, un dosage pondéral des immunoglobulines G, A et M, des sérologies vaccinales et une exploration du complément en cas de sepsis à pneumocoque ou meningocoque (193). Une consultation spécialisée en immunologie au cours de l'épisode de sepsis est conseillée pour décider de la pertinence de pousser les explorations au-delà de ce bila"
+
+#31 [L] pops=['adulte'] src=section type=prose doc=2026_RFE-Infections-intra-abdominales-version-lecture-doc-fi
+  title=Prise en charge thérapeutique des Infections intra-abdominales de l’adulte
+  section=Prise en charge thérapeutique des Infections intra-abdominales de l'adulte
+  text="Philippe MONTRAVERS : Menarini, MSD, Mundipharma, Pfizer, Shionogi, Viatis\n\nEmmanuel NOVY : MSD France, Mundipharma, Pfizer SAS\n\nClaire ROGER : Advanz Pharma, Biomérieux, MSD France, Pfizer SAS, Viatis\n\nStéphanie RUIZ : Advanz Pharma, Gilead Sciences, Pfizer SAS, Shionogi\n\nThomas SCHULZ : Pfizer SAS, MSD France\n\nAlexy TRAN-DINH : MSD France, Pfizer SAS\n\nEmmanuel WEISS : pas de lien d'intérêt en rapport avec la présen"
+
+#32 [L] pops=['obstetrique'] src=section type=table_row_card doc=2010_2_AFAR_Urgences-Obstetricales-Extrahospitalieres_47ad85
+  title=Urgences Obstétricales Extrahospitalières
+  section=2. CHAPITRE 2 – ACCOUCHEMENT INOPINÉ EXTRAHOSPITALIER
+  text='Section : 2. CHAPITRE 2 – ACCOUCHEMENT INOPINÉ EXTRAHOSPITALIER\nTerme : 2e, 3e trimestres | Symptômes : Métrorragie peu abondante de sang noir / Douleur abdominale intense et permanente / Absence de mouvements foetaux actifs / Métrorragie abondante de sang rouge / Avec caillots, contractions / Céphalée, douleur abdominale, prise de poids, nausée, trouble visuel / Convulsion | Diagnostiques à évoquer : Hématome rétrop'
+
+#33 [L] pops=['adulte'] src=section type=table_markdown doc=2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-jui
+  title=Antibioprophylaxie en chirurgie et médecine interventionnelle
+  section=laxie en chirurgie et médecine interventionnelle par disciplines adultes. > PARTIE 8 : CHIRURGIE DIGESTIVE ET BARIATRIQUE, ENDOSCOPIE DIGESTIVE ET RADIOLOGIE INTERVENTIONNELLE DIGESTIVE > Splénectomie
+  text="| Actes chirurgicaux ou interventionnels | Molécules | Dose initiale | Réinjections et durée | Force de la recommandation | --- | --- | --- | --- | --- | Splénectomie programmée ou en urgence, par laparotomie ou laparoscopie | Céfazoline / Alternative : Céfuoxime | 2g IVL / 1,5g IVL | 1g si durée > 4h puis toutes les 4h jusqu'à fin de chirurgie / 0,75g si durée >2h puis toutes les 2h jusqu'à fin de chirurgie | ●●● (A"
+
+#34 [L] pops=['adulte'] src=section type=table_row_card doc=2014_Recommandation_antalgique_post_amygdalectomie_2014_TC2_
+  title=Recommandations Antalgiques en chirurgie ORL
+  section=RECOMMANDATION POUR LA PRATIQUE CLINIQUE > 5.2.2 Adultes > 5.2.2.1 Après amygdalectomie conventionnelle chez l'adulte
+  text="Section : 5.2.2 Adultes > 5.2.2.1 Après amygdalectomie conventionnelle chez l'adulte\nTemps : J-2 / J-3 | Type 1 : 2 | Type 2 : 7 | Type 3 : 5 | Type 4 : 4 | Type 5 : 9"
+
+#35 [L] pops=['adulte'] src=section type=prose doc=2023_RPP-Anesthesie-adulte-porteur-de-CC_pour-mise-sur-site_
+  title=Anesthésie pour chirurgie non cardiaque des patients adultes porteurs de cardiopathie congénitale
+  section=Anesthésie pour chirurgie non cardiaque des patients adultes porteurs de cardiopathie congénitale > 1.5 Classification par groupes selon le niveau de gravité des cardiopathies congénitales
+  text='Risque composite faible\n\nRisque composite intermédiaire\n\nRisque composite élevé\n\nA, B, C, D : statuts physiologiques (Cf tableau 3)\n\n\\*Une procédure sous ALR **périphérique** est considérée à score composite faible quel que soit le statut de la cardiopathie.'
+
+#36 [L] pops=['adulte', 'neonatal', 'pediatrie'] src=document type=table_row_card doc=2025_argu_sepsis_a5219e
+  title=Prise en charge du sepsis du nouveau-né, de l’enfant et de l’adulte – HAS 2025
+  section=Abréviations et acronymes
+  text='Section : Abréviations et acronymes\nScvO2 — Saturation veineuse en oxygène'
+
+#37 [L] pops=['adulte'] src=document type=prose doc=2018_Antibioprophylaxie-RFE-mise-a-jour-2018_c6a5c4
+  title=Antibioprophylaxie en chirurgie et médecine interventionnelle (patients adultes)
+  section=Recommandations Formalisées d'Experts > Apports pour la pratique de la réactualisation 2017 > Quelques nouveautés :
+  text="- Recommandations d'injection intra-camérulaire de céfuroxime en chirurgie ophtalmologique (AMM obtenue en 2014). - Suppression de la prescription de gentamicine antérieurement recommandée en association avec la vancomycine en chirurgie orthopédique pour les sujets allergiques aux bêta-lactamines. - Lorsque l'association pénicilline A + inhibiteur de bêtalactamases est proposée les experts ont pesé le risque/bénéfice"
+
+#38 [L] pops=['adulte'] src=document type=prose doc=2025_RBP_-SFAR_AFEF_ACHBPT_RESECTION_-HEPATIQUE_-ARGUMENTAIR
+  title=Prise en charge péri-opératoire du patient adulte lors d’une résection hépatique
+  section=Champ 2. Stratégie d'optimisation peropératoire > Argumentaire
+  text="Par ailleurs, il n'existe à notre connaissance que peu d'études s'intéressant à des critères objectifs tels que la mortalité ou la morbidité postopératoire pour évaluer l'impact des différentes techniques d'analgésie loco-régionales. Seules des études comparant l'analgésie péridurale avec une ALR périphérique [5, 56-61] existent, mais sans comparaison avec un groupe ne recevant qu'une analgésie intraveineuse."
+
+#39 [L] pops=['adulte', 'neonatal', 'pediatrie'] src=document type=table_row_card doc=2025_argu_sepsis_a5219e
+  title=Prise en charge du sepsis du nouveau-né, de l’enfant et de l’adulte – HAS 2025
+  section=1. Introduction > Argumentaire
+  text="Section : 1. Introduction > Argumentaire\nRecommandation SSC 2021 : 39. Pour les adultes présentant un choc septique et des niveaux de pression artérielle moyenne inadéquats mal- | Recommandation ajustée : 28. Chez un patient avec sepsis, de l'intervention d'un professionnel de médecine d'urgence au terme de la prise en charge aiguë, en cas de niveau insuffisant de pression ar-"
+
+#40 [L] pops=['adulte', 'pediatrie'] src=document type=table_row_card doc=2006_2_AFAR_Prise-en-charge-initiale-des-etats-septiques-gra
+  title=Prise en charge initiale des états septiques graves de l’adulte et de l’enfant
+  section=2.2. Définitions et identification des états septiques > 2.2.2. Identification des malades à risque de sepsis grave
+  text='Section : 2.2. Définitions et identification des états septiques > 2.2.2. Identification des malades à risque de sepsis grave\nVariable : Pression artérielle systolique < 110 mmHg | Nombre de points / Score complet : 4 | Score abrégéa : 4'
+
+#41 [L] pops=['adulte'] src=document type=prose doc=2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc
+  title=Place de l’ECBU avant une prise en charge urologique chirurgicale ou interventionnelle chez l’adulte et modalités de tra
+  section=1 Introduction > ECBU avant une prise en charge urologique interventionnelle ou chirurgicale > Lithotripsie extra-corporelle (LEC)
+  text="Aucune étude relative à la réalisation systématique d'un ECBU avant LEC n'est identifiée."
+
+#42 [L] pops=['adulte'] src=document type=table_row_card doc=2023_RPP-Anestheesie-adulte-porteur-CC_fiches-pratiques_pour
+  title=Anesthésie pour chirurgie non cardiaque des patients adultes porteurs de cardiopathie congénitale
+  section=FICHE PRATIQUE #1 : Gestion des traitements cardiotropes, anti-arythmiques, anti-hypertenseurs pulmonaires et anticoagulants
+  text="Section : FICHE PRATIQUE #1 : Gestion des traitements cardiotropes, anti-arythmiques, anti-hypertenseurs pulmonaires et anticoagulants\nTraitement de l'insuffisance cardiaque : IEC | Gestion péri opératoire [1,2,3] / La veille de l'intervention : Poursuite | Le matin de l'intervention : Arrêt | Conduite à tenir : Poursuite en cas d'insuffisance cardiaque et/ou FE ventricule systémique < 40%"
+
+#43 [L] pops=['adulte'] src=document type=prose doc=2025_RESECTION_-HEPATIQUE_-RECOMMANDATIONS_MEL_e8bdcf
+  title=Prise en charge péri-opératoire du patient adulte lors d’une résection hépatique
+  section=Préambule > Objectifs
+  text="L'objectif de ces recommandations est de produire un cadre facilitant la prise en charge périopératoire d'une chirurgie de résection hépatique.\n\nLe groupe s'est efforcé de produire un nombre minimal de recommandations afin de mettre en évidence les points forts à retenir dans les 3 champs prédéfinis.\n\n---\n\n² 1 Cf. Guide méthodologique « Attribution du label de la HAS à une recommandation de bonne pratique élaborée pa"
+
+#44 [L] pops=['adulte'] src=document type=prose doc=2018_Antibioprophylaxie-RFE-mise-a-jour-2018_c6a5c4
+  title=Antibioprophylaxie en chirurgie et médecine interventionnelle (patients adultes)
+  section=Recommandations Formalisées d'Experts > 1. Méthodologie > Introduction générale sur la méthode GRADE
+  text="La méthode de travail utilisée pour l'élaboration de ces recommandations est la méthode GRADE®. Cette méthode permet, après une analyse quantitative de la littérature, de déterminer séparément la qualité des preuves, et donc de donner une estimation de la confiance que l'on peut avoir de l'analyse quantitative et un niveau de recommandation. La qualité des preuves est répartie en quatre catégories :\n\n- haute : les re"
+
+#45 [L] pops=['obstetrique'] src=document type=table_markdown doc=2025_RFE-analgesie-obstetricale-texte-long_172a5f
+  title=Prise en charge de la douleur de l’accouchement : analgésie périmédullaire et alternatives médicamenteuses
+  section=Champ 5 – Alternatives médicamenteuses à l'APM > Synthèse des recommandations
+  text="| Analgésie périmédullaire obstétricale (APM) / Recommandations | GRADE | --- | --- | --- | **Stratégie non médicamenteuse dans la gestion de l'insuffisance ou de l'échec** | ABS | Devant l'absence de données disponibles dans la littérature, les experts ne sont pas en mesure d'émettre de recommandation concernant l'impact d'une position maternelle spécifique dans le but de corriger une insuffisance ou un échec de l'a"
+
+#46 [L] pops=['obstetrique'] src=document type=prose doc=2025_RFE-analgesie-obstetricale-texte-long_172a5f
+  title=Prise en charge de la douleur de l’accouchement : analgésie périmédullaire et alternatives médicamenteuses
+  section=Champ 5 – Alternatives médicamenteuses à l'APM > Argumentaire
+  text='Sur une échelle visuelle de 0 à 3, Halpern et al. notaient une incidence de sédation supérieure à 1 (facilement éveillée à la stimulation) de 39% dans le groupe rémifentanil versus 5% dans le groupeAPM [2]. Même constat pour Volmanen et al., avec une échelle de sédation de 0-3, les scores de sédation étaient supérieurs dans le groupe opioïdes avec un score de 2,3 [1,3-2,6] versus 0 [0-0,8] dans le groupe APM [4]. Dou'
+
+#47 [L] pops=['adulte'] src=document type=table_row_card doc=2026_RecoCIAFU_ECBU_Note-de-cadrage_10_10_2024_d649f3
+  title=Place de l’ECBU avant une prise en charge urologique chirurgicale ou interventionnelle chez l’adulte et modalités de tra
+  section=LISTE DES ABRÉVIATIONS
+  text='Section : LISTE DES ABRÉVIATIONS\n1 — Synthèse des objectifs de cette expertise — .....Erreur ! Signet non défini.'
+
+#48 [L] pops=['adulte'] src=document type=prose doc=2025_2025_RFE-Intubation-adulte-hors-bloc-hors-rea-_f68924
+  title=Intubation en urgence d’un adulte hors bloc opératoire et hors unité des soins critiques
+  section=CHAMP 2. Intubation trachéale : Check-list, matériel, formation > Laryngoscopie directe
+  text='Bien que la définition d\'un opérateur entraîné varie en fonction des études, le consensus semble être qu\'un opérateur est estimé "compétent" s\'il réussit 90% de ses intubations oro-trachéale (IOT) en laryngoscopie à la 1ère tentative. Il est reconnu que l\'échec de la première tentative de laryngoscopie est associé à une augmentation de la morbidité en lien avec la procédure [1]. Une méta-analyse de 2016 (1400 étudian'
+
+#49 [L] pops=['adulte', 'pediatrie'] src=document type=recommendation_box doc=2019_rpp-prise-en-charge-du-brule-grave_20_e49758
+  title=Prise en charge du brûlé grave à la phase aiguë chez l’adulte et l’enfant
+  section=CHAMP 3 : VOIES AERIENNES ET INHALATION DE FUMÉES D'INCENDIES
+  text="**Question 3.4 : Faut-il réaliser systématiquement une séance de caisson hyperbare en cas de suspicion d'inhalation de fumées d'incendie ?**\n\n**R3.4 – Les experts suggèrent de ne pas réaliser systématiquement une séance d'oxygénéothérapie hyperbare en cas de suspicion d'intoxication au monoxyde de carbone secondaire à une inhalation de fumées d'incendie.**\n\n**Accord FORT**\n\n**Argumentaire :** Les indications potentie"
+
+#50 [L] pops=['adulte'] src=document type=prose doc=2026_gestion_voies_aeriennes_recommandations_mel_vd_19eb83
+  title=Prise en charge des voies aériennes de l’adulte au bloc opératoire
+  section=Introduction > Patient 3
+  text="*« L'intubation par le nez, c'est mon plus mauvais souvenir : il n'est pas dans mes habitudes de me plaindre, mais c'était à la limite du supportable. Une anesthésiste qui ne me semblait pas débutante**mais qui manifestement n'avait jamais pratiqué cet acte ; avant l'intervention, elle a demandé si monsieur X était disponible, mais sinon ce n'était pas grave ; cela m'a un peu inquiété, et j'avais raison ; après plusi"
+
+#51 [L] pops=['neonatal', 'pediatrie'] src=document type=table_row_card doc=2007_2b_AFAR_aspet-pediatriques_d85e1f
+  title=Sédation et analgésie en réanimation (nouveau-né exclu)
+  section=3.3. Outils et impact de l'évaluation de la sédation et de l'analgésie > 3.3.2. Place de l'index bispectral (BIS) > 3.4. Quand et comment arrêter une sédation-analgésie ?
+  text="Section : 3.3.2. Place de l'index bispectral (BIS) > 3.4. Quand et comment arrêter une sédation-analgésie ?\nSigne/symptôme : Excoriations | Score : 1"
+
+#52 [L] pops=['adulte'] src=document type=table_markdown doc=2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc
+  title=Place de l’ECBU avant une prise en charge urologique chirurgicale ou interventionnelle chez l’adulte et modalités de tra
+  section=1 Introduction > 4 Relecture nationale et francophone : synthèse > 4.1 Commentaires par question clinique issus de la relecture nationale et réponses apportées par le groupe de travail
+  text="| Lecteur | Commentaire | Recommandation concernée et réponse du groupe de travail | --- | --- | --- | Urologue | Pour le R13 : le dépistage de l'infection urinaire est dans les recommandations du produit même si on ne traite pas la colonisation : problème médico-légal https: www.sciencedirect.com/science/article/abs/pii/S1761676X21000626 | Idem ci-dessus | Anesthésiste | La R13 pose question: si je suis ok pour la B"
+
+#53 [L] pops=['pediatrie'] src=document type=prose doc=2023_RPP-Organisation-Anesthesie-Pediatrique_-Version-pour-m
+  title=Organisation de l’anesthésie pédiatrique
+  section=INTRODUCTION
+  text="Les recommandations de la SFAR concernant la surveillance des patients en cours d'anesthésie et pendant les soins post-anesthésiques ainsi que le Décret n°94-1050 du 5 décembre 1994 [1] sur la sécurité en anesthésie s'appliquent également au contexte de l'anesthésie pédiatrique. Cependant, certaines particularités liées à l'enfant, notamment en fonction de son âge, amènent à discuter ou préciser certains points struc"
+
+#54 [L] pops=['obstetrique'] src=document type=prose doc=2025_RFE-analgesie-obstetricale-texte-court_51af4c
+  title=Prise en charge de la douleur de l’accouchement : analgésie périmédullaire et alternatives médicamenteuses
+  section=Préambule
+  text="Ces recommandations concernent la « **prise en charge de la douleur de l'accouchement : analgésie périmédullaire et alternatives médicamenteuses** ».\n\nCette recommandation de bonne pratique a été réalisée dans le cadre de la labellisation par la HAS† garantissant le respect des critères méthodologiques, scientifiques et déontologiques de la HAS, notamment dans la prévention des conflits d'intérêt.\n\nLes sociétés promo"
+
+#55 [L] pops=['adulte'] src=document type=table_row_card doc=2025_RESECTION_-HEPATIQUE_-RECOMMANDATIONS_MEL_e8bdcf
+  title=Prise en charge péri-opératoire du patient adulte lors d’une résection hépatique
+  section=Champ 3. Stratégie d'optimisation postopératoire > Recherche documentaire
+  text="Tableau : Tableau 2. Recherche documentaire et éléments clés\nSection : Champ 3. Stratégie d'optimisation postopératoire > Recherche documentaire\nSous-catégorie : Critères de jugement cruciaux ou majeurs (importance de 9 le plus fort à 7)\nImportance 7 | Insuffisance hépatique"
+
+#56 [U] pops=[] src= type=prose doc=2004_2a_SFAR_texte-court_Hemorragies-sous-arachnoidienne_c64
+  title=Hémorragie sous-arachnoïdienne grave
+  section=Introduction > VASOSPASME > 3.3. Traitement endovasculaire
+  text="L'infusion intra-artérielle de vasodilatateur et/ou l'angioplastie sont deux techniques endovasculaires utilisables pour le traitement du vasospasme (Grade E). Elles font encore l'objet d'évaluation et leurs indications ne peuvent encore être généralisées.\n\nLa papavérine a un pouvoir vasodilatateur très important. Sa demi-vie est courte, expliquant le caractère transitoire de son action (60 à 90 min après la perfusio"
+
+#57 [U] pops=[] src= type=prose doc=2021_Tests_20viscoelastiques_202018_ba60e3
+  title=Tests viscoélastiques
+  section=4. Severe trauma
+  text='A single randomised trial was conducted in trauma patients to assess the value of VETs in guiding ACT treatment. This single-centre trial compared two protocols for massive transfusion, one based on TEG® performed on de-shocking, the other on routine tests for 111 severe trauma patients [49]. Mortality at 28 days was reduced in the group whose management was guided by TEG®, with a decrease in deaths occurring mainly '
+
+#58 [U] pops=[] src= type=prose doc=2009_2_AFAR_Gestion-perioperatoire-des-traitements-chronique
+  title=Gestion périopératoire des traitements chroniques et dispositifs médicaux
+  section=ular pathologies > 4. ANALGÉSIFIQUES NON MORPHINIQUES : ANTIDÉPRESSEURS > 5. ANALGÉSIIQUES NON MORPHINIQUES : BENZODIAZÉPINES > 5.3. Existe-t-il une interférence avec les médicaments de l'anesthésie ?
+  text="Risque de majoration des effets sédatifs des médicaments de l'anesthésie."
+
+#59 [U] pops=[] src= type=prose doc=2018_2_Recos-SDRA_a93bac
+  title=Recommandations pour la prise en charge du SDRA
+  section=Résumé méthodologique
+  text='Pour y répondre, des études randomisées comparant une ventilation spontanée partiellement assistée à une ventilation mécanique strictement contrôlée sont nécessaires. De plus, des études randomisées sont nécessaires pour déterminer si une réduction encore plus importante du volume courant (par exemple en dessous de 6 mL/kg, ou même de 4 mL/kg de poids théorique) ou de la pression de plateau, serait associée à une amé'
+
+#60 [U] pops=[] src= type=prose doc=2018_2_Recos-Org-Blocs-moteurs-SOFMER-SFAR_994996
+  title=Recommandations pour la pratique des blocs moteurs périphériques en Médecine Physique et de Réadaptation (MPR)
+  section=2.3 Toxicité nerveuse centrale et cardiaque > 5 : Contre-indications non liées au produit anesthésiant > 5.2 Contre-indications aux injections péri-nerveuses
+  text="Les modalités de l'arrêt des AVK et d'un éventuel relais par héparine en fonction de l'indication de l'anticoagulation sont décrites dans les recommandations de l'HAS (28).\n\nEn MPR, outre le risque de saignement, dans la pratique des blocs moteurs souvent distaux et intéressant des troncs nerveux profonds, le groupe d'experts propose de considérer le risque des conséquences de la survenue d'un hématome : minime en ca"
+
+#61 [U] pops=[] src= type=table_row_card doc=2026_RFE-20_4_2026-deifinitif-et-validei_1b550e
+  title=Gestion des anticoagulants pour une procédure invasive programmée
+  section=e, quels que soient le poids corporel et l'IMC. > Synthèse des recommandations par indication et type d'anticoagulant > Patients traités par AOD pour de la FA et programmés pour une procédure invasive
+  text="Section : Synthèse des recommandations par indication et type d'anticoagulant > Patients traités par AOD pour de la FA et programmés pour une procédure invasive\nSous-catégorie : Procédures à risque hémorragique élevé : gestion pré-procédurale\n6.2 | Patients traités par AVK pour une valve cardiaque mécanique : Les experts suggèrent que la procédure ait lieu le matin pour ne pas prolonger l'arrêt des anticoagulants. | "
+
+#62 [U] pops=[] src= type=table_markdown doc=2019_rfe-interets-de-lapprentissage-par-simulation-en-soins-
+  title=Intérêts de l’apprentissage par simulation en soins critiques
+  section=Introduction
+  text="| Adaptation de la classification de Kirkpatrick pour la simulation en santé | --- | Niveau 3 (K3) : ce niveau évalue les modifications du comportement des formés (ici dans la réalisation des gestes techniques) après l'apprentissage par simulation. L'évaluation peut se faire par auto-questionnaire évaluant la perception de ce transfert par l'apprenant dans sa vie clinique, mais l'emploi d'outils objectifs doit à prio"
+
+#63 [U] pops=[] src= type=prose doc=2010_2b_HAS_Texte_Long-Delivrance-de-l-information-a-la-pers
+  title=Délivrance de l’information à la personne sur son état de santé
+  section= du patient visées sont multiples et mélangées > 4.1 Code de déontologie médicale, arrêts des cours suprêmes, recommandations de bonne pratique de l'Anaes, loi du 4 mars 2002 : des sources entremêlées
+  text="On peut repérer deux temps – avant et après la loi du 4 mars 2002 – sans pour autant déceler de différences notables dans les modes de compréhension du rôle des règles.\n\nAvant 2002, sont mis en avant le devoir déontologique d'information du malade (à l'époque son article 35 du Code de déontologie médicale¹⁵), les solutions des arrêts de la Cour de cassation, puis celles du Conseil d'État, celles-ci étant présentées c"
+
+#64 [U] pops=[] src= type=prose doc=2014_Recommandation_antalgique_post_amygdalectomie_2014_TC2_
+  title=Recommandations Antalgiques en chirurgie ORL
+  section=RECOMMANDATION POUR LA PRATIQUE CLINIQUE > 5 La douleur lors du retour à domicile > 5.1 Les critères de sortie
+  text="On recommandera ainsi une prise d'antalgique systématique avant les principaux repas et avant le coucher pendant les quatre à cinq premiers jours puis selon la persistance des phénomènes douloureux. Les consignes de surveillance et les conseils concernant les thérapies adjuvantes y seront jointes."
+
+#65 [U] pops=[] src= type=table_row_card doc=2019_rfe-rac-lobectomie-pulmonaire_ee63af
+  title=Réhabilitation améliorée après lobectomie pulmonaire
+  section=CHAMP 5. REHABILITATION POSTOPERATOIRE
+  text="Section : CHAMP 5. REHABILITATION POSTOPERATOIRE\nRecommandation : 4.2 | En cas de thoracotomie, possibilité d'utiliser une voie postérolatérale ou latérale d'épargne musculaire | GRADE : 2- | Accord : Fort"
+
+#66 [U] pops=[] src= type=prose doc=2010_2b_HAS_Texte_Long-Delivrance-de-l-information-a-la-pers
+  title=Délivrance de l’information à la personne sur son état de santé
+  section=Sommaire > L'évaluation de l'information donnée > Évaluation des pratiques
+  text="Une évaluation régulière des pratiques mérite d'être mise en place. Elle est fondée :\n\n- sur des enquêtes auprès des patients afin de savoir si l'information leur a été donnée et de quelle manière ;\n- sur l'analyse rétrospective des dossiers médicaux afin de vérifier, entre autres, que l'information y figure."
+
+#67 [U] pops=[] src= type=recommendation_box doc=2016_RFE-Targeted-temperature-management-in-the-ICU-Guidelin
+  title=Contrôle cible de la température en réanimation (hors nouveau-nés)
+  section=2. Methods > 3.1.2. TTM after traumatic brain injury
+  text='R2.1 In patients with severe traumatic brain injury, we suggest considering TTM at 35–37 °C in order to control intracranial pressure.\n(Grade 2+)\n\n**Rationale:** In a case-control series of patients with severe traumatic brain injury (TBI), Puccio et al. [59] showed that patients with TTM maintained at 36–36.5 °C within 72 h of TBI presented a lower averaged intracranial pressure (ICP) and fewer episodes of ICP > 25 '
+
+#68 [U] pops=[] src= type=prose doc=2020_RFE_TSM_2020_48fd8d
+  title=Prise en charge des patients présentant un traumatisme sévère de membre(s)
+  section=« Prise en charge des patients présentant un traumatisme sévère de membre(s) »
+  text='**Argumentaire :** Plusieurs techniques chirurgicales ont été évaluées chez les patients porteurs de fracture diaphysaire des os longs. Ces études portent principalement sur les fractures de diaphyse fémorale. Le traitement définitif de référence est l’ostéosynthèse par enclouage centromédullaire ou pose de plaque. L’alternative est une stratégie en deux temps par pose de fixateur externe (de type *damage control*) à'
+
+#69 [U] pops=[] src= type=prose doc=2026_RFE_sedationproceduraleUrgences_24juin2026_1f0c12
+  title=Sédation procédurale en structure de Médecine d’Urgence
+  section=Champ 4 : Modalités de réalisation > Argumentaire
+  text="En comparaison de l'association kétamine-propofol, la kétamine seule augmente le risque d'évènements neurologiques (RR 2,38 [IC95% 1,33-4,23] ; niveau de preuve élevé) tandis que le propofol n'entraîne pas de différence sur ce critère (avec un faible niveau de preuve). A noter que les données suggèrent que l'association midazolam-kétamine n'entraîne pas de différence sur ce critère comparé à la kétamine seule (niveau"
+
+#70 [U] pops=[] src= type=prose doc=2021_Tests_20viscoelastiques_202018_ba60e3
+  title=Tests viscoélastiques
+  section=
+  text='[Image : Journal cover image for Anaesthesia Critical Care & Pain Medicine]\nGuidelines'
+
+#71 [U] pops=[] src= type=table_row_card doc=2017_RFE-Hospital-acquired-pneumonia-in-ICU_e091db
+  title=Pneumonies associées aux soins de réanimation
+  section=Second area, DIAGNOSIS: > Protocol 3: suggested diagnostic procedure (EXPERT'S OPINION)
+  text="Section : Second area, DIAGNOSIS: > Protocol 3: suggested diagnostic procedure (EXPERT'S OPINION)\nAntimicrobials : In case of allergy to β-lactam Aztreonam + | Dosing regimena : 3 to 6 g/d"
+
+#72 [U] pops=[] src= type=prose doc=2014_2_SPILF_Strategies-de-reduction-de-lutilisation-des-ant
+  title=Stratégies de réduction de l’utilisation des antibiotiques à visée curative en réanimation
+  section=Introduction > TRAITEMENT DOCUMENTE > 4- Comment optimiser l'administration des antibiotiques ? > a) Dans quelles situations, l'indication d'une antibiothérapie est-elle formelle ?
+  text="Les études pharmacocinétiques et les données de modélisation sont concordantes : l'administration des bêta-lactamines en perfusion intraveineuse continue ou allongée (sur 3 ou 4 heures) augmente le temps passé au-dessus de la CMI entre deux doses administrées [186,187]. Plusieurs études, pour la plupart rétrospectives, sont concordantes et suggèrent que la perfusion « allongée » de bêta-lactamines (céfépime, pipéraci"
+
+#73 [U] pops=[] src= type=prose doc=2019_propositions-tih-gihp-gfht-sfar_20_7a3660
+  title=Propositions du GIHP et du GFHT pour le diagnostic et la prise en charge d’une thrombopénie induite par l’héparine
+  section=Diagnostic et prise en charge d'une thrombopénie induite par l'héparine > B. Anesthésie loco-régionale > C. En per-opératoire
+  text="Ce chapitre ne concerne que les gestes nécessitant un traitement anticoagulant pendant l'intervention. Si le délai le permet, une recherche d'anticorps anti-FP4 (test ELISA) est recommandée ; si les anticorps ne sont plus détectables, une exposition à l'héparine est possible pendant la durée de l'intervention.\n\nSi les anticorps anti-FP4 sont présents, il est proposé de discuter l'administration de danaparoïde, d'arga"
+
+#74 [U] pops=[] src= type=prose doc=2021_Gestion_20perioperatoire_20des_20patients_20sous_20AAP_
+  title=Gestion perioperatoire des patients sous AAP en urgence
+  section=Place des tests fonctionnels plaquettaires > La transfusion plaquettaire permet-elle de neutraliser l'effet des AAP ? > Transfusion plaquettaire et neutralisation des AAP
+  text="inhibée par le ticagrelor [60,64]. À l'inverse, l'agrégation plaquettaire à l'ADP d'échantillons de volontaires sains est inhibée in vitro par l'apport, même en faible proportion (10 %) de plasma riche en plaquettes de patients traités par ticagrelor [61]. De même, la transfusion de 8,5 × 10¹¹ plaquettes à un patient traité par aspirine et ticagrelor et nécessitant une procédure neurochirurgicale en urgence a augment"
+
+#75 [U] pops=[] src= type=table_markdown doc=2026_RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-ARGUMENTAIR
+  title=Organisation de la prise en charge des urgences vitales intra-hospitalières
+  section=Champ 4. Spécificités organisationnelles > Synthèse des recommandations
+  text="| Organisation de la prise en charge des urgences vitales intrahospitalières (UVIH) / RECOMMANDATION | Niveau de preuve | --- | --- | --- | R2.6.4 | Les experts suggèrent que l'équipe d'intervention de l'UVIH d'un établissement ait à disposition un sac d'intervention adulte et un sac d'intervention pédiatrique, afin d'améliorer la qualité de prise en charge. | AE | R2.6.5 | Les experts suggèrent que les services part"
+
+#76 [U] pops=[] src= type=table_row_card doc=2020_covid-19-rfe-reanimation_2c7bbc
+  title=Recommandations d’experts portant sur la prise en charge en réanimation des patients en période d’épidémie à SARS-CoV2
+  section=Introduction
+  text='Section : Introduction\nDans la chambre : 2 | Filtres antibactériens tiroir respi'
+
+#77 [U] pops=[] src= type=prose doc=2024_240516-Txt-definitif-_6379ef
+  title=Prévention de la maladie thromboembolique veineuse péri-opératoire
+  section=Prévention de la maladie thromboembolique veineuse péri-opératoire > Autres experts :
+  text='Jean-Philippe Galanaud (SFMV), Marie-Antoinette Sevestre (SFMV)'
+
+#78 [U] pops=[] src= type=prose doc=2022_RPP_20SFAR_20COVID_Version_20Avril_202022_finale_20sans
+  title=Préconisations pour l’adaptation de l’offre de soins en anesthésie-réanimation dans le contexte de pandémie de COVID-19 
+  section=Introduction > Méthode
+  text="Les propositions de recommandations ont été présentées et discutées une à une. Le but n'était pas d'aboutir obligatoirement à un avis unique et convergent des experts sur l'ensemble des propositions, mais de dégager les points de concordance et les points de divergence ou d'indécision. Chaque recommandation a alors été évaluée par chacun des experts et soumise à une cotation individuelle à l'aide d'une échelle allant"
+
+#79 [U] pops=[] src= type=table_row_card doc=2014_Recommandation_antalgique_post_amygdalectomie_2014_TC2_
+  title=Recommandations Antalgiques en chirurgie ORL
+  section=NDATION POUR LA PRATIQUE CLINIQUE > 4.2.2 Evaluation du ratio bénéfice risque dans le contexte de l'amygdalectomie et Algorithmes décisionnels (en fonction de l'âge) > Rappel concernant le paracétamol
+  text="Tableau : Tableau 5 : Propositions de schémas thérapeutiques.\nSection : 4.2.2 Evaluation du ratio bénéfice risque dans le contexte de l'amygdalectomie et Algorithmes décisionnels (en fonction de l'âge) > Rappel concernant le paracétamol\nÀ l'hôpital\n• Schéma 1 : Option AINS = Dexaméthasone per op | Option tramadol = Dexaméthasone per op | Option corticoïdes = Dexaméthasone per op\n• Schéma 2 : Option AINS = Morphine SS"
+
+#80 [U] pops=[] src= type=prose doc=2005_2_AFAR_Prise-en-charge-des-sujets-en-etat-de-mort-encep
+  title=Prise en charge des sujets en état de mort encéphalique dans l’optique d’un prélèvement d’organes
+  section= : HISTORIQUE, CONCEPT ET DIAGNOSTIC > 3. CHAPITRE 2. PRISE EN CHARGE EN RÉANIMATION DU DONNEUR POTENTIEL > 4. CHAPITRE 3. CRITÈRES D'ÉVALUATION DES ORGANES ET DES TISSUS > 4.3. Prélèvement pulmonaire
+  text="Compte tenu de la rareté des prélèvements pulmonaires, il est particulièrement recommandé de tenir compte de l'évolution des critères de prélèvement.\n\n- La recherche d'antécédents respiratoires chroniques et de tabagisme ainsi qu'un examen clinique détaillé sont indispensables mais insuffisants pour évaluer la sélection pulmonaire. Une évaluation régulière de l'hématose et de l'imagerie sont donc recommandées au cour"
+
+#81 [U] pops=[] src= type=table_markdown doc=2014_Recommandation_Prise_en_charge_douleurs_induites_par_tr
+  title=Recommandations Antalgiques en chirurgie ORL
+  section=RECOMMANDATION POUR LA PRATIQUE CLINIQUE > 3 Evaluation de la douleur > Questionnaire douleur Saint Antoine
+  text='| 0 absent non | 1 faible un peu | 2 modéré modérément | 3 fort beaucoup | 4 extrêmement fort extrêmement | --- | --- | --- | --- | --- | --- | Élancements | Pénétrante | Décharges électriques | Coups de poignard | En étau | Tiraillement | Brûlure | Fourmillements | Lourdeur | Épuisante | Angoissante | Obsédante | Insupportable | Énervante | Exaspérante | Déprimante |'
+
+#82 [U] pops=[] src= type=prose doc=2017_2_RFE-EC-en-rea-version-15-12-16_cdc74d
+  title=Pertinence de la prescription des examens biologiques et de la radiographie thoracique en réanimation
+  section=Méthodologie
+  text="L'analyse de la qualité des preuves est réalisée pour chaque étude puis un niveau global de preuve est défini pour une question et un critère donné.\n\nLes recommandations sont toujours formulées de manière binaire soit positive soit négative et soit forte soit faible :\n\n**Forte** : Il faut faire ou ne pas faire (GRADE 1+ ou 1-)\n\n**Faible** : Il faut probablement faire ou ne pas faire (GRADE 2+ ou 2-)\n\nLa force de la r"
+
+#83 [U] pops=[] src= type=table_row_card doc=2001_Dossier-AnesthRea-SFAR_e8d945
+  title=Dossier anesthésique
+  section=Introduction > Méthode d'évaluation des dossiers d'anesthésie > Grille d'évaluation de l'organisation du service :
+  text="Section : Méthode d'évaluation des dossiers d'anesthésie > Grille d'évaluation de l'organisation du service :\nDossier d'anesthésie aspects organisationnels : Ente SSPI et unité"
+
+#84 [U] pops=[] src= type=table_row_card doc=2016_RFE-ACCPM-Eye-protection-in-anaesthesia-and-intensive-c
+  title=Protection oculaire en Anesthésie et Réanimation
+  section=Appendix A. Tabulated summary—Prevention of corneal injuries in anaesthesia
+  text='Tableau : Tabulated summary–prevention of corneal injuries in anaesthesia (continued).\nSection : Appendix A. Tabulated summary—Prevention of corneal injuries in anaesthesia\nQuality assessment / Number of studies : Corneal injuries under general anaesthesia: prevention by eyelid occlusion using adhesive strips alone / 2 | Type of study : Randomised controlled | Plan of study : High risk of bias | Heterogeneity : High '
+
+#85 [U] pops=[] src= type=table_row_card doc=2001_Dossier-AnesthRea-SFAR_e8d945
+  title=Dossier anesthésique
+  section=Introduction > Mortalité et morbidité per et post interventionnelles
+  text='Section : Introduction > Mortalité et morbidité per et post interventionnelles\nSous-catégorie : Ventilation\nCatégorie : Hypercapnie >50 mmHg'
+

@@ -1,0 +1,436 @@
+{
+ "full_width_label": {
+  "n_docs": 63,
+  "n_events": 1016,
+  "top_docs": [
+   [
+    "2026_RFE-antibioprophylaxie-2023_V3_0_pour-mise-sur-site-juin-2026_sa_9ff419",
+    102
+   ],
+   [
+    "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1",
+    102
+   ],
+   [
+    "2026_RFE-20_4_2026-deifinitif-et-validei_1b550e",
+    60
+   ],
+   [
+    "2026_Version-longue_8281a1",
+    57
+   ],
+   [
+    "2026_RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-ARGUMENTAIRE_CD_2026_f46e3f",
+    55
+   ],
+   [
+    "2016_2-SFAR-RFE-tabac_proposition-CRC_a9f16a",
+    53
+   ]
+  ]
+ },
+ "inherited_headers": {
+  "n_docs": 45,
+  "n_events": 488,
+  "top_docs": [
+   [
+    "2026_RFE-antibioprophylaxie-2023_V3_0_pour-mise-sur-site-juin-2026_sa_9ff419",
+    77
+   ],
+   [
+    "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1",
+    77
+   ],
+   [
+    "2016_3-Tableaux-Reactualisation-de-la-recommandation-sur-la-douleur-p_7b4c8a",
+    64
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc",
+    31
+   ],
+   [
+    "2013_2b_Annexe_SFAR_TableauxRFEDCALR2_145d45",
+    29
+   ],
+   [
+    "2008_livretadaptationIDEReanimation_d1306f",
+    25
+   ]
+  ]
+ },
+ "full_width_note": {
+  "n_docs": 37,
+  "n_events": 106,
+  "top_docs": [
+   [
+    "2026_RFE-antibioprophylaxie-2023_V3_0_pour-mise-sur-site-juin-2026_sa_9ff419",
+    20
+   ],
+   [
+    "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1",
+    20
+   ],
+   [
+    "2001_Dossier-AnesthRea-SFAR_e8d945",
+    7
+   ],
+   [
+    "2019_rfe-interets-de-lapprentissage-par-simulation-en-soins-critiques_3d1b9f",
+    6
+   ],
+   [
+    "2026_RFE-Infections-intra-abdominales-version-lecture-doc-finale-14-0_7f27c6",
+    4
+   ],
+   [
+    "2024_2024_RFE-optimisation-hemodynamique-perioperatoire_adulte-dont-o_520b05",
+    4
+   ]
+  ]
+ },
+ "carry_first_cell": {
+  "n_docs": 27,
+  "n_events": 112,
+  "top_docs": [
+   [
+    "2016_3-Tableaux-Reactualisation-de-la-recommandation-sur-la-douleur-p_7b4c8a",
+    37
+   ],
+   [
+    "2008_livretadaptationIDEReanimation_d1306f",
+    14
+   ],
+   [
+    "2013_2b_Annexe_SFAR_TableauxRFEDCALR2_145d45",
+    13
+   ],
+   [
+    "2026_RFE-Infections-intra-abdominales-version-lecture-doc-finale-14-0_7f27c6",
+    7
+   ],
+   [
+    "2026_RFE-20_4_2026-deifinitif-et-validei_1b550e",
+    5
+   ],
+   [
+    "2025_RBP_-SFAR_AFEF_ACHBPT_RESECTION_-HEPATIQUE_-ARGUMENTAIRE_VF-1-AB_2e42b6",
+    5
+   ]
+  ]
+ },
+ "footnotes_linked": {
+  "n_docs": 57,
+  "n_events": 321,
+  "top_docs": [
+   [
+    "2026_RFE-antibioprophylaxie-2023_V3_0_pour-mise-sur-site-juin-2026_sa_9ff419",
+    60
+   ],
+   [
+    "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1",
+    60
+   ],
+   [
+    "2018_Antibioprophylaxie-RFE-mise-a-jour-2018_c6a5c4",
+    24
+   ],
+   [
+    "2026_RFE-20_4_2026-deifinitif-et-validei_1b550e",
+    23
+   ],
+   [
+    "2017_Antibioprophylaxie-version-2017-CRC_CA_MODIF_ecc6c7",
+    22
+   ],
+   [
+    "2026_Version-longue_8281a1",
+    12
+   ]
+  ]
+ },
+ "titled": {
+  "n_docs": 79,
+  "n_events": 266,
+  "top_docs": [
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc",
+    32
+   ],
+   [
+    "2025_RFE-analgesie-obstetricale-texte-long_172a5f",
+    30
+   ],
+   [
+    "2013_2b_Annexe_SFAR_TableauxRFEDCALR2_145d45",
+    20
+   ],
+   [
+    "2001_art54_dossieraranninform_da0124",
+    10
+   ],
+   [
+    "2001_art54_dossieraranncomplet_df1465",
+    9
+   ],
+   [
+    "2024_RFE-gestion-de-lanticoagulation-dans-un-contexte-durgence_23_02__d0368c",
+    8
+   ]
+  ]
+ },
+ "carried_first_cell": {
+  "n_docs": 25,
+  "n_events": 105,
+  "top_docs": [
+   [
+    "2016_3-Tableaux-Reactualisation-de-la-recommandation-sur-la-douleur-p_7b4c8a",
+    36
+   ],
+   [
+    "2013_2b_Annexe_SFAR_TableauxRFEDCALR2_145d45",
+    13
+   ],
+   [
+    "2008_livretadaptationIDEReanimation_d1306f",
+    12
+   ],
+   [
+    "2026_RFE-Infections-intra-abdominales-version-lecture-doc-finale-14-0_7f27c6",
+    6
+   ],
+   [
+    "2026_RFE-20_4_2026-deifinitif-et-validei_1b550e",
+    5
+   ],
+   [
+    "2025_RBP_-SFAR_AFEF_ACHBPT_RESECTION_-HEPATIQUE_-ARGUMENTAIRE_VF-1-AB_2e42b6",
+    5
+   ]
+  ]
+ },
+ "full_width_notes": {
+  "n_docs": 37,
+  "n_events": 106,
+  "top_docs": [
+   [
+    "2026_RFE-antibioprophylaxie-2023_V3_0_pour-mise-sur-site-juin-2026_sa_9ff419",
+    20
+   ],
+   [
+    "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1",
+    20
+   ],
+   [
+    "2001_Dossier-AnesthRea-SFAR_e8d945",
+    7
+   ],
+   [
+    "2019_rfe-interets-de-lapprentissage-par-simulation-en-soins-critiques_3d1b9f",
+    6
+   ],
+   [
+    "2026_RFE-Infections-intra-abdominales-version-lecture-doc-finale-14-0_7f27c6",
+    4
+   ],
+   [
+    "2024_2024_RFE-optimisation-hemodynamique-perioperatoire_adulte-dont-o_520b05",
+    4
+   ]
+  ]
+ },
+ "tables": {
+  "n_docs": 183,
+  "n_events": 2190,
+  "top_docs": [
+   [
+    "2026_RFE-antibioprophylaxie-2023_V3_0_pour-mise-sur-site-juin-2026_sa_9ff419",
+    138
+   ],
+   [
+    "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1",
+    138
+   ],
+   [
+    "2014_2_HAS_transfusion_de_globules_rouges_homologues_-_produits_indic_57ad8e",
+    102
+   ],
+   [
+    "2016_3-Tableaux-Reactualisation-de-la-recommandation-sur-la-douleur-p_7b4c8a",
+    99
+   ],
+   [
+    "2013_2b_Annexe_SFAR_TableauxRFEDCALR2_145d45",
+    91
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc",
+    85
+   ]
+  ]
+ },
+ "mermaid_rewritten_chunk": {
+  "n_docs": 83,
+  "n_events": 164,
+  "top_docs": [
+   [
+    "2024_Algorithmes_RFE-gestion-de-lanticoagulation-dans-un-contexte-dur_5ab803",
+    8
+   ],
+   [
+    "2022_RPP-SFAR-COVID_Version-Avril-2022_abrogee-010723_682252",
+    7
+   ],
+   [
+    "2013_2013_20AFAR_20GIHP_c80a1a",
+    6
+   ],
+   [
+    "2022_RPP_20SFAR_20COVID_Version_20Avril_202022_finale_20sans_20marque_c5bf31",
+    6
+   ],
+   [
+    "2006_2_AFAR_Prise-en-charge-de-larret-cardiaque-1_c70196",
+    5
+   ],
+   [
+    "2026_RFE-20_4_2026-deifinitif-et-validei_1b550e",
+    4
+   ]
+  ]
+ },
+ "chunk_with_linked_footnote": {
+  "n_docs": 39,
+  "n_events": 552,
+  "top_docs": [
+   [
+    "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1",
+    110
+   ],
+   [
+    "2026_RFE-antibioprophylaxie-2023_V3_0_pour-mise-sur-site-juin-2026_sa_9ff419",
+    109
+   ],
+   [
+    "2026_RFE-20_4_2026-deifinitif-et-validei_1b550e",
+    67
+   ],
+   [
+    "2018_Antibioprophylaxie-RFE-mise-a-jour-2018_c6a5c4",
+    47
+   ],
+   [
+    "2017_Antibioprophylaxie-version-2017-CRC_CA_MODIF_ecc6c7",
+    45
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc",
+    28
+   ]
+  ]
+ },
+ "invented_Categorie_header": {
+  "n_docs": 8,
+  "n_events": 16,
+  "top_docs": [
+   [
+    "2026_gestion_voies_aeriennes_argumentaire_mel_vd_a9b593",
+    4
+   ],
+   [
+    "2001_Dossier-AnesthRea-SFAR_e8d945",
+    4
+   ],
+   [
+    "2026_RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-ARGUMENTAIRE_CD_2026_f46e3f",
+    2
+   ],
+   [
+    "2016_3-Tableaux-Reactualisation-de-la-recommandation-sur-la-douleur-p_7b4c8a",
+    2
+   ],
+   [
+    "2026_Version-courte_3ae465",
+    1
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc",
+    1
+   ]
+  ]
+ },
+ "tables_under_reference_heading": {
+  "n_docs": 1,
+  "n_events": 1,
+  "top_docs": [
+   [
+    "2026_RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-ARGUMENTAIRE_CD_2026_f46e3f",
+    1
+   ]
+  ]
+ },
+ "td_header_heuristic": {
+  "n_docs": 2,
+  "n_events": 2,
+  "top_docs": [
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc",
+    1
+   ],
+   [
+    "2013_2b_Annexe_SFAR_TableauxRFEDCALR2_145d45",
+    1
+   ]
+  ]
+ },
+ "with_scope_note": {
+  "n_docs": 2,
+  "n_events": 92,
+  "top_docs": [
+   [
+    "2026_RFE-antibioprophylaxie-2023_V3_0_pour-mise-sur-site-juin-2026_sa_9ff419",
+    46
+   ],
+   [
+    "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1",
+    46
+   ]
+  ]
+ },
+ "callout_allergy": {
+  "n_docs": 2,
+  "n_events": 58,
+  "top_docs": [
+   [
+    "2026_RFE-antibioprophylaxie-2023_V3_0_pour-mise-sur-site-juin-2026_sa_9ff419",
+    29
+   ],
+   [
+    "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1",
+    29
+   ]
+  ]
+ },
+ "demerge_candidate_tables(PAS D'ABP + rowspan)": {
+  "n_docs": 4,
+  "n_events": 44,
+  "top_docs": [
+   [
+    "2018_Antibioprophylaxie-RFE-mise-a-jour-2018_c6a5c4",
+    16
+   ],
+   [
+    "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1",
+    14
+   ],
+   [
+    "2026_RFE-antibioprophylaxie-2023_V3_0_pour-mise-sur-site-juin-2026_sa_9ff419",
+    13
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc",
+    1
+   ]
+  ]
+ }
+}

@@ -1,0 +1,508 @@
+== full_width_note
+2026_gestion_voies_aeriennes_recommandations_mel_v	Q. Place du monitoring de la capnie lors de l'utilisation de l'oxygénation nasale à haut débit avec sédation procédurale.
+2026_gestion_voies_aeriennes_argumentaire_mel_vd_a	Q2.4 - En cas d'intubation impossible et de ventilation impossible malgré la mise en place d'un dispositif supraglottique de seconde générat
+2026_gestion_voies_aeriennes_argumentaire_mel_vd_a	Q. Place du monitoring de la capnie lors de l'utilisation de l'oxygénation nasale à haut débit avec sédation procédurale.
+2026_RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-A	L'équipe UVIH est-elle la même que l'équipe de prise en charge des ACR intrahospitaliers ? Oui Non
+2026_TEXTE-RFE-ALR-PEDIA-VERSION-FINALE-010926_63f	Analgésie locorégionale, blocs nerveux périphériques (tous les types de bloc), blocs centraux (péridurale, rachianesthésie, caudale), douleu
+2026_TEXTE-RFE-ALR-PEDIA-VERSION-FINALE-010926_63f	Langue anglaise, française.
+2026_RFE-Infections-intra-abdominales-version-lect	RCT; méta-analyses; études observationnelles avec critère de qualité effectif > 100.
+2026_RFE-Infections-intra-abdominales-version-lect	CHAMP 1. Prise en charge initiale des infections intra-abdominales.
+2026_RFE-Infections-intra-abdominales-version-lect	CHAMP 2. Surveillance clinique et thérapeutique des infections intra-abdominales.
+2026_RFE-Infections-intra-abdominales-version-lect	CHAMP 3. Prise en charge des complications évolutives des infections intra-abdominales.
+2026_RecoCIAFU_ECBU_Note-de-cadrage_10_10_2024_d64	Q1. Quelle est la place de l'ECBU (indication, délai de réalisation,...) dans le diagnostic d'une colonisation urinaire avant une prise en c
+2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972	Q1. Quelle est la place de l'ECBU (indication, délai de réalisation,...) dans le diagnostic d'une colonisation urinaire avant une prise en c
+2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc	Q1. Quelle est la place de l'ECBU (indication, délai de réalisation,...) dans le diagnostic d'une colonisation urinaire avant une prise en c
+2026_RFE-20_4_2026-deifinitif-et-validei_1b550e	Question 8 : Chez un patient traité par un anticoagulant pour une assistance ventriculaire gauche de longue durée (LVAD) et programmé pour u
+2026_RFE-LAT-final-mai-2026-_a26946	Décisions de limitation et arrêt des traitements (LAT), limitation de traitements, arrêt de traitements, proportionnalité des traitements, n
+2026_RFE-LAT-final-mai-2026-_a26946	Méta-analyses d'essais contrôlés randomisés; Revues de la littérature; Essais contrôlés randomisés; Essais prospectifs non randomisés; Cohor
+2026_RFE-LAT-final-mai-2026-_a26946	Langue anglaise, française.
+2025_RFE-analgesie-obstetricale-texte-long_172a5f	Tenue professionnelle propre, manches courtes; Absence de bijoux sur les mains et poignets; Ongles courts sans vernis; Désinfection des main
+2025_RFE-analgesie-obstetricale-texte-court_51af4c	Tenue professionnelle propre, manches courtes; Absence de bijoux sur les mains et poignets; Ongles courts sans vernis; Désinfection des main
+2025_2025_SFAR-SFA_RFE-Diagnostic-et-prise-en-char	Quels sont les patients concernés ? (si ce sont toujours les mêmes)
+2025_2025_RFE-Intubation-adulte-hors-bloc-hors-rea	CHAMP 1. Indications de l'intubation trachéale en urgence chez l'adulte hors bloc opératoire ou unité de soins critiques.
+2024_2024_RFE-optimisation-hemodynamique-periopera	Population adulte ayant une chirurgie non cardiaque avec anesthésie générale ou locorégionale, hors états de choc (septique, hémorragique, c
+2024_2024_RFE-optimisation-hemodynamique-periopera	- Critères de jugement cruciaux ou majeurs (importance de 9 le plus fort à 7)
+2024_2024_RFE-optimisation-hemodynamique-periopera	- Critères de jugement importants mais non cruciaux (importance de 7 le plus fort à 5)
+2024_2024_RFE-optimisation-hemodynamique-periopera	Population adulte obstétricale ayant une césarienne programmée avec rachianesthésie dans le contexte d'une grossesse monofœtale, hors pathol
+2024_RFE-gestion-de-lanticoagulation-dans-un-conte	Dans tous les cas surveillance clinique* et recherche de l'étiologie †
+2024_RFE-gestion-de-lanticoagulation-dans-un-conte	Argumentaire : La reprise d'une anticoagulation curative dans les 24 premières heures postopératoires d'une procédure à risque hémorragique 
+2024_Algorithmes_RFE-gestion-de-lanticoagulation-d	Dans tous les cas surveillance clinique* et recherche de l'étiologie †
+2024_RPP-Prevention-des-erreurs-medicamenteuses_39	Quels sont les patients concernés ? / Patients pris en charge au bloc opératoire ou en soins critiques. / Les patients pris en charge en amo
+2024_RPP-Prevention-des-erreurs-medicamenteuses_39	Erreurs médicamenteuses, incidence des événements indésirables graves, incidence des événements indésirables.
+2026_RFE-antibioprophylaxie-2023_V3_0_pour-mise-su	* Possibilité d'étendre l'antibioprophylaxie pour 24h à 48h postopératoires maximum en cas de constatation opératoire d'une plaie souillée ●
+2026_RFE-antibioprophylaxie-2023_V3_0_pour-mise-su	* pour la prévention des pneumonies post-opératoires, chez les patients atteints de BPCO et/ou dans les centres à incidence élevée de pneumo
+2026_RFE-antibioprophylaxie-2023_V3_0_pour-mise-su	En cas d'allergie vraie aux bêtalactamines, vancomycine 20 mg/kg IVL ou teicoplanine 12 mg/kg IVL [●●● (Avis d'expert)]
+2026_RFE-antibioprophylaxie-2023_V3_0_pour-mise-su	* en cas de création de néo-vagin, poursuite postopératoire de l'amoxicilline/clavulanate 1g/6h (si allergie : métronidazole 500mg/8h) chez 
+2026_RFE-antibioprophylaxie-2023_V3_0_pour-mise-su	si portage rectal d'entérobactérie BLSE *** : Antibioprophylaxie active sur la souche identifiée (cf. R1.7) [●●● Avis d'experts]
+2026_RFE-antibioprophylaxie-2023_V3_0_pour-mise-su	Pour la coelio-chirurgie des trompes, considérer une antibioprophylaxie par céfazoline limitée à la période opératoire en cas d'endométrieus
+2026_RFE-antibioprophylaxie-2023_V3_0_pour-mise-su	En cas d'incision vaginale large peropératoire créant une continuité entre l'espace péritonéal et le vagin, la céfoxitine limitée à la pério
+2026_RFE-antibioprophylaxie-2023_V3_0_pour-mise-su	Considérer une antibioprophylaxie par céfazoline limitée à la période opératoire en cas d'endométrieuse, d'antécédent de chirurgies pelvienn
+2026_RFE-antibioprophylaxie-2023_V3_0_pour-mise-su	Antibiothérapie curative postopératoire adaptée aux résultats du prélèvement vaginal [●●● (Avis d'experts)]
+2026_RFE-antibioprophylaxie-2023_V3_0_pour-mise-su	Considérer une antibiotoprophylaxie par céfazoline limitée à la période opératoire pour la ponction ovocytaire et le transfert embryonnaire 
+2026_RFE-antibioprophylaxie-2023_V3_0_pour-mise-su	Injection de l'antiobiprophylaxie en cas de césarienne selon les mêmes modalités que pour les autres chirurgies (Cf. R1.1), soit, autant que
+2026_RFE-antibioprophylaxie-2023_V3_0_pour-mise-su	En cas de chirurgie prothétique de hanche par voie antérieure et d'allergie aux bêtalactamines : préférer la vancomycine ou la teicoplanine 
+2026_RFE-antibioprophylaxie-2023_V3_0_pour-mise-su	En cas d'ablation de matériel d'ostéosynthèse avec ouverture articulaire ou de geste prévu difficile/avec temps opératoire long, une antibio
+2026_RFE-antibioprophylaxie-2023_V3_0_pour-mise-su	En cas de chirurgie prothétique d'épaule et d'allergie aux bêtalactamines : préférer la vancomycine ou la teicoplanine à la clindamycine* (●
+2026_RFE-antibioprophylaxie-2023_V3_0_pour-mise-su	En cas d'ablation de matériel d'ostéosynthèse ou de chirurgie sans pose de matériel exposant à une ouverture de la dure-mère, ou de geste pr
+2026_RFE-antibioprophylaxie-2023_V3_0_pour-mise-su	En cas de chirurgie pour fracture ouverte considérée comme Altemeier 3 ou 4, considérer une antibiothérapie curative poursuivie au-delà du b
+2026_RFE-antibioprophylaxie-2023_V3_0_pour-mise-su	Spectre à élargir et/ou à adapter à l'écologie locale si facteurs de risque de BMR et/ou antécédent d'infection fongique [●●● (Avis d'expert
+2026_RFE-antibioprophylaxie-2023_V3_0_pour-mise-su	Considérer une antibioprophylaxie individuelle adaptée à la flore du site opératoire et au risque du patient en cas de patient avec parcours
+2026_RFE-antibioprophylaxie-2023_V3_0_pour-mise-su	Considérer une antibioprophylaxie individuelle adaptée à la flore du site opératoire et au risque du patient en cas de patient avec parcours
+2026_RFE-antibioprophylaxie-2023_V3_0_pour-mise-su	Chirurgie du tube digestif *
+2021_RFE_20SFAR_20pancreatite_20aigue_finale_22092	Le CTSI correspond à la somme des deux valeurs
+2019_rfe-interets-de-lapprentissage-par-simulation	Leadership : partant du principe que le chef d'équipe est, soit désigné soit qu'il se soit dégagé par rapport au reste de l'équipe où qu'il 
+2019_rfe-interets-de-lapprentissage-par-simulation	Question 1 : Le chef d'équipe a informé l'équipe de ce que l'on attendait d'elle en donnant les directives et les ordres.
+2019_rfe-interets-de-lapprentissage-par-simulation	Travail en équipe : Les évaluations devront inclure l'équipe en totalité, c'est-à-dire le chef d'équipe et l'équipe collectivement
+2019_rfe-interets-de-lapprentissage-par-simulation	Question 4 : L'équipe a travaillé ensemble pour compléter à bien les tâches requises en temps voulu.
+2019_rfe-interets-de-lapprentissage-par-simulation	Question 9 : L'équipe a anticipé les actions possibles ? / Suggestions : préparation du défibrillateur, médicaments, équipement des voies aé
+2019_rfe-interets-de-lapprentissage-par-simulation	Question 11 : L'équipe a suivi les standards et les directives homologués / Suggestions : certaines dérogations peuvent être appropriées
+2017_Antibioprophylaxie-version-2017-CRC_CA_MODIF_	Chirurgie de la prostate.
+2016_2-SFAR-RFE-tabac_proposition-CRC_a9f16a	Morbidités majeures (Infection profonde, pneumonie, intubation non prévue, embolie pulmonaire, ventilation>48h, AVC, Coma>24h, arrêt cardiaq
+2016_2-SFAR-RFE-tabac_proposition-CRC_a9f16a	Smoking cessation at time of surgery - Intensive behavioural intervention (multiple contacts, initiated at least 4 weeks before surgery) (fo
+2017_2_RFE-EC-en-rea-version-15-12-16_cdc74d	*Crucial (7-9) - Important (4-6) - Pas important (1-3)
+2013_2_PUROL_Recommandations-chirurgie-ambulatoire	Coronaires :; Autres : RA, autres valves, HTA, FA, atcd vasculaires...
+2013_2_PUROL_Recommandations-chirurgie-ambulatoire	La chirurgie peut elle être repoussée ? : Oui Non
+2011_2_AFAR_Prevention-du-risque-allergique-perane	Antiseptiques
+2011_2_AFAR_Prevention-du-risque-allergique-perane	Colorants
+2006_2_AFAR_Gestion-du-traitement-anti-plaquettair	Dans tous les cas, l'intervention doit être reportée au-delà de six semaines d'un syndrome coronaire aigu dans la mesure du possible
+2006_2_AFAR_Prise-en-charge-initiale-des-etats-sep	Faible risque [0–8]
+2006_2_AFAR_Prise-en-charge-initiale-des-etats-sep	Risque modéré [8–16]
+2006_2_AFAR_Prise-en-charge-initiale-des-etats-sep	Risque élevé [16–24]
+2006_2_AFAR_Prise-en-charge-initiale-des-etats-sep	Risque très élevé [> 24]
+2006_2C_SFAR_EPP_Ventilation-Non-Invasive-au-cours	Critère 3. : Les équipes médicales et paramédicales sont formées (formation théorique et pratique) à la technique.
+2004_2_SFAR_Prise-en-charge-des-candidoses-et-aspe	Candida sp.
+2004_2_SFAR_Prise-en-charge-des-candidoses-et-aspe	Aspergillus sp.
+2001_Dossier-AnesthRea-SFAR_e8d945	Autre :.....
+2001_Dossier-AnesthRea-SFAR_e8d945	.....
+2001_Dossier-AnesthRea-SFAR_e8d945	.....
+2001_Dossier-AnesthRea-SFAR_e8d945	.....
+2001_Dossier-AnesthRea-SFAR_e8d945	Ventilation FiO2 : □□ % Pression ventilatoire :..... Débit ventilatoire :.....
+2001_Dossier-AnesthRea-SFAR_e8d945	(1) Circulaire N° 47 du 15/01/1992 indique que le dossier de transfusion sanguine fait partie du dossier patient / Circulaire 97-149 du 26/0
+2001_Dossier-AnesthRea-SFAR_e8d945	(AG, Péricurale, Rachianesthésie, ALR IV, Caudale, Bloc périphérique, Autre ALR, Sédation, Surveillance)
+2001_art54_dossieraranninform_da0124	DIVERS / Doppler carotidien : sténose moyenne à G (Dr ); demande par l'angiologue de faire une artério TSA et mbres inf.
+2001_art54_dossieraranninform_da0124	BIOLOGIE / NFS CPK, CPK-MB Plaquettes Bilirubine T+D Groupe (ABO,Rh,Kell) / 1 détermination / 2 déterminations Protéines, Albumine RAI Gaz d
+2001_art54_dossierarannperpost_d24207	.....
+2008_livretadaptationIDEReanimation_d1306f	L'infirmier(e) décrit les risques liés au transport.
+2018_2_Recos-Org-Blocs-moteurs-SOFMER-SFAR_994996	Si le patient reste instable : Refaire 1 ou 2 bolus similaires et doubler la vitesse de perfusion (dose limite 12ml/Kg) / En cas de réanimat
+unk_guide-mise-en-place-gestion-reanimation-epheme	Suite à une rupture d'approvisionnement en CISATRACURIUM 150MG FL 30ML (NIMBEX), nous vous approvisionnons en CISATRACURIUM 20MG AMP 10ML. /
+2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-su	* Possibilité d'étendre l'antibioprophylaxie pour 24h à 48h postopératoires maximum en cas de constatation opératoire d'une plaie souillée ●
+2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-su	* pour la prévention des pneumonies post-opératoires, chez les patients atteints de BPCO et/ou dans les centres à incidence élevée de pneumo
+2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-su	En cas d'allergie vraie aux bêtalactamines, vancomycine 20 mg/kg IVL ou teicoplanine 12 mg/kg IVL [●●● (Avis d'expert)]
+2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-su	* en cas de création de néo-vagin, poursuite postopératoire de l'amoxicilline/clavulanate 1g/6h (si allergie : métronidazole 500mg/8h) chez 
+2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-su	si portage rectal d'entérobactérie BLSE *** : Antibioprophylaxie active sur la souche identifiée (cf. R1.7) [●●● Avis d'experts]
+2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-su	Pour la coelio-chirurgie des trompes, considérer une antibioprophylaxie par céfazoline limitée à la période opératoire en cas d'endométrieus
+2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-su	En cas d'incision vaginale large peropératoire créant une continuité entre l'espace péritonéal et le vagin, la céfoxitine limitée à la pério
+2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-su	Considérer une antibioprophylaxie par céfazoline limitée à la période opératoire en cas d'endométrieuse, d'antécédent de chirurgies pelvienn
+2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-su	Antibiothérapie curative postopératoire adaptée aux résultats du prélèvement vaginal [●●● (Avis d'experts)]
+2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-su	Considérer une antibiotoprophylaxie par céfazoline limitée à la période opératoire pour la ponction ovocytaire et le transfert embryonnaire 
+2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-su	Injection de l'antiobiprophylaxie en cas de césarienne selon les mêmes modalités que pour les autres chirurgies (Cf. R1.1), soit, autant que
+2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-su	En cas de chirurgie prothétique de hanche par voie antérieure et d'allergie aux bêtalactamines : préférer la vancomycine ou la teicoplanine 
+2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-su	En cas d'ablation de matériel d'ostéosynthèse avec ouverture articulaire ou de geste prévu difficile/avec temps opératoire long, une antibio
+2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-su	En cas de chirurgie prothétique d'épaule et d'allergie aux bêtalactamines : préférer la vancomycine ou la teicoplanine à la clindamycine* (●
+2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-su	En cas d'ablation de matériel d'ostéosynthèse ou de chirurgie sans pose de matériel exposant à une ouverture de la dure-mère, ou de geste pr
+2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-su	En cas de chirurgie pour fracture ouverte considérée comme Altemeier 3 ou 4, considérer une antibiothérapie curative poursuivie au-delà du b
+2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-su	Spectre à élargir et/ou à adapter à l'écologie locale si facteurs de risque de BMR et/ou antécédent d'infection fongique [●●● (Avis d'expert
+2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-su	Considérer une antibioprophylaxie individuelle adaptée à la flore du site opératoire et au risque du patient en cas de patient avec parcours
+2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-su	Considérer une antibioprophylaxie individuelle adaptée à la flore du site opératoire et au risque du patient en cas de patient avec parcours
+2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-su	Chirurgie du tube digestif *
+== full_width_label
+2026_gestion_voies_aeriennes_recommandations_mel_v	Actualisation
+2026_gestion_voies_aeriennes_recommandations_mel_v	Autres formats
+2026_gestion_voies_aeriennes_recommandations_mel_v	Champ 1. Prise en charge des voies aériennes sans difficulté prévisible
+2026_gestion_voies_aeriennes_recommandations_mel_v	Q1.1 - En l'absence de critères prédictifs d'intubation difficile, faut-il utiliser un vidéolaryngoscope en première intention pour facilite
+2026_gestion_voies_aeriennes_recommandations_mel_v	Q1.2 - En l'absence de critères prédictifs d'intubation difficile, l'utilisation d'un vidéolaryngoscope permet-elle de s'affranchir de l'adm
+2026_gestion_voies_aeriennes_recommandations_mel_v	Q1.3 - Chez les patients adultes requérant une anesthésie générale programmée sous ventilation mécanique, les dispositifs supraglottiques so
+2026_gestion_voies_aeriennes_recommandations_mel_v	Q1.4 - Chez les patients adultes requérant une anesthésie générale, l'utilisation de l'échographie gastrique permet-elle d'identifier la vac
+2026_gestion_voies_aeriennes_recommandations_mel_v	Q1.5 - Lors d'une sédation procédurale (c'est-à-dire sans intubation trachéale ni pose de dispositif supraglottique), quelle est la place de
+2026_gestion_voies_aeriennes_recommandations_mel_v	Q1.6 - Lors d'une sédation procédurale nécessitant une apnée (absence de ventilation spontanée), la mise en place d'un dispositif d'oxygénat
+2026_gestion_voies_aeriennes_recommandations_mel_v	Q1.7 - Place du monitoring de la capnie lors de l'utilisation de l'oxygénation nasale à haut débit avec sédation procédurale ?
+2026_gestion_voies_aeriennes_recommandations_mel_v	Champ 2. Prise en charge des voies aériennes difficiles (prévue ou non)
+2026_gestion_voies_aeriennes_recommandations_mel_v	Q2.1 - Lors d'une intubation difficile prévue sans indication au maintien de la ventilation spontanée (intubation difficile prévue chez un p
+2026_gestion_voies_aeriennes_recommandations_mel_v	Q2.2 - Lors d'une intubation trachéale avec indication de maintien de la ventilation spontanée (intubation difficile prévue chez un patient 
+2026_gestion_voies_aeriennes_recommandations_mel_v	Q2.3 - En cas d'intubation difficile associée à une ventilation au masque difficile, quelle est la place des dispositifs supraglottiques de 
+2026_gestion_voies_aeriennes_recommandations_mel_v	Q2.4 - En cas d'intubation impossible et de ventilation impossible malgré la mise en place d'un dispositif supraglottique de seconde générat
+2026_gestion_voies_aeriennes_recommandations_mel_v	Champ 3. Facteurs humains – dimensions organisationnelles
+2026_gestion_voies_aeriennes_recommandations_mel_v	Q3.1 - Dans la préparation à une gestion difficile des voies aériennes, la simulation permet-elle d'améliorer la performance individuelle et
+2026_gestion_voies_aeriennes_recommandations_mel_v	Q3.2 - Dans la préparation à une gestion difficile des voies aériennes, un nombre minimal de procédures permet-il d'améliorer la performance
+2026_gestion_voies_aeriennes_recommandations_mel_v	Q3.3 - Dans la préparation à une gestion difficile des voies aériennes, la réalisation d'un briefing permet-elle d'améliorer la performance 
+2026_gestion_voies_aeriennes_recommandations_mel_v	Champ 1. Prise en charge des voies aériennes sans difficulté prévisible
+2026_gestion_voies_aeriennes_recommandations_mel_v	Champ 1. Prise en charge des voies aériennes sans difficulté prévisible
+2026_gestion_voies_aeriennes_recommandations_mel_v	Champ 1. Prise en charge des voies aériennes sans difficulté prévisible
+2026_gestion_voies_aeriennes_recommandations_mel_v	Champ 1. Prise en charge des voies aériennes sans difficulté prévisible
+2026_gestion_voies_aeriennes_recommandations_mel_v	Champ 1. Prise en charge des voies aériennes sans difficulté prévisible
+2026_gestion_voies_aeriennes_recommandations_mel_v	Champ 1. Prise en charge des voies aériennes sans difficulté prévisible
+2026_gestion_voies_aeriennes_recommandations_mel_v	Champ 1. Prise en charge des voies aériennes sans difficulté prévisible
+2026_gestion_voies_aeriennes_recommandations_mel_v	Champ 2. Prise en charge voies aériennes difficiles (prévue ou non)
+2026_gestion_voies_aeriennes_recommandations_mel_v	Champ 2. Prise en charge des voies aériennes difficiles (prévue ou non)
+2026_gestion_voies_aeriennes_recommandations_mel_v	Champ 2. Prise en charge des voies aériennes difficiles (prévue ou non)
+2026_gestion_voies_aeriennes_recommandations_mel_v	Champ 2. Prise en charge des voies aériennes difficiles (prévue ou non)
+2026_gestion_voies_aeriennes_recommandations_mel_v	Champ 3. Facteurs humains – Dimensions organisationnelles
+2026_gestion_voies_aeriennes_recommandations_mel_v	Champ 3. Facteurs humains – Dimensions organisationnelles
+2026_gestion_voies_aeriennes_recommandations_mel_v	Champ 3. Facteurs humains – Dimensions organisationnelles
+2026_gestion_voies_aeriennes_recommandations_mel_v	Champ 3. Facteurs humains – Dimensions organisationnelles
+2026_gestion_voies_aeriennes_recommandations_mel_v	Champ 3. Facteurs humains – Dimensions organisationnelles
+2026_gestion_voies_aeriennes_recommandations_mel_v	Champ 3. Facteurs humains – Dimensions organisationnelles
+2026_gestion_voies_aeriennes_recommandations_mel_v	Champ 3. Facteurs humains – Dimensions organisationnelles
+2026_gestion_voies_aeriennes_recommandations_mel_v	Autre technique :
+2026_gestion_voies_aeriennes_recommandations_mel_v	Champ 1. Prise en charge des voies aériennes sans difficulté prévisible
+2026_gestion_voies_aeriennes_recommandations_mel_v	Q. En l'absence de critères prédictifs d'intubation difficile, faut-il utiliser un vidéolaryngoscope en première intention pour faciliter l'
+2026_gestion_voies_aeriennes_recommandations_mel_v	Q. En l'absence de critères prédictifs d'intubation difficile, l'utilisation d'un vidéolaryngoscope permet-elle de s'affranchir de l'adminis
+2026_gestion_voies_aeriennes_recommandations_mel_v	Q. Chez les patients adultes requérant une anesthésie générale programmée sous ventilation mécanique, les dispositifs supraglottiques sont-i
+2026_gestion_voies_aeriennes_recommandations_mel_v	Q. Chez les patients adultes requérant une anesthésie générale, l'utilisation de l'échographie gastrique permet-elle d'identifier la vacuité
+2026_gestion_voies_aeriennes_recommandations_mel_v	Q. Lors d'une sédation procédurale (c'est-à-dire sans intubation trachéale ni pose de dispositif supraglottique), quelle est la place de l'o
+2026_gestion_voies_aeriennes_recommandations_mel_v	Q. Lors d'une sédation procédurale nécessitant une apnée (absence de ventilation spontanée), la mise en place d'un dispositif d'oxygénation 
+2026_gestion_voies_aeriennes_recommandations_mel_v	Champ 2. Prise en charge des voies aériennes difficiles (prévue ou non)
+2026_gestion_voies_aeriennes_recommandations_mel_v	Q. Lors d'une intubation difficile prévue sans indication au maintien de la ventilation spontanée (intubation difficile prévue chez un patie
+2026_gestion_voies_aeriennes_recommandations_mel_v	Q. Lors d'une intubation trachéale avec indication de maintien de la ventilation spontanée (intubation difficile prévue chez un patient a pr
+2026_gestion_voies_aeriennes_recommandations_mel_v	Q. En cas d'intubation difficile associée à une ventilation au masque difficile, quelle est la place des dispositifs supraglottiques de seco
+2026_gestion_voies_aeriennes_recommandations_mel_v	Q. En cas d'intubation impossible et de ventilation impossible malgré la mise en place d'un dispositif supraglottique de seconde génération 
+2026_gestion_voies_aeriennes_recommandations_mel_v	Q. Après une gestion difficile d'accès aux voies aériennes, la réalisation d'un debriefing permet-elle d'améliorer la performance individuel
+2026_gestion_voies_aeriennes_recommandations_mel_v	Q. Après une gestion difficile d'accès aux voies aériennes, la réalisation d'une revue de mortalité et de morbidité permet-elle d'améliorer 
+2026_gestion_voies_aeriennes_argumentaire_mel_vd_a	Actualisation
+2026_gestion_voies_aeriennes_argumentaire_mel_vd_a	Autres formats
+2026_gestion_voies_aeriennes_argumentaire_mel_vd_a	Champ 1. Prise en charge des voies aériennes sans difficulté prévisible
+2026_gestion_voies_aeriennes_argumentaire_mel_vd_a	Q1.1 - En l'absence de critères prédictifs d'intubation difficile, faut-il utiliser un vidéolaryngoscope en première intention pour facilite
+2026_gestion_voies_aeriennes_argumentaire_mel_vd_a	Q1.2 - En l'absence de critères prédictifs d'intubation difficile, l'utilisation d'un vidéolaryngoscope permet-elle de s'affranchir de l'adm
+2026_gestion_voies_aeriennes_argumentaire_mel_vd_a	Q1.3 - Chez les patients adultes requérant une anesthésie générale programmée sous ventilation mécanique, les dispositifs supraglottiques so
+2026_gestion_voies_aeriennes_argumentaire_mel_vd_a	Q1.4 - Chez les patients adultes requérant une anesthésie générale, l'utilisation de l'échographie gastrique permet-elle d'identifier la vac
+2026_gestion_voies_aeriennes_argumentaire_mel_vd_a	Q1.5 - Lors d'une sédation procédurale (c'est-à-dire sans intubation trachéale ni pose de dispositif supraglottique), quelle est la place de
+2026_gestion_voies_aeriennes_argumentaire_mel_vd_a	Q1.6 - Lors d'une sédation procédurale nécessitant une apnée (absence de ventilation spontanée), la mise en place d'un dispositif d'oxygénat
+2026_gestion_voies_aeriennes_argumentaire_mel_vd_a	Q1.7 - Place du monitoring de la capnie lors de l'utilisation de l'oxygénation nasale à haut débit avec sédation procédurale ?
+2026_gestion_voies_aeriennes_argumentaire_mel_vd_a	Champ 2. Prise en charge des voies aériennes difficiles (prévue ou non)
+2026_gestion_voies_aeriennes_argumentaire_mel_vd_a	Q2.1 - Lors d'une intubation difficile prévue sans indication au maintien de la ventilation spontanée (intubation difficile prévue chez un p
+2026_gestion_voies_aeriennes_argumentaire_mel_vd_a	Q2.2 - Lors d'une intubation trachéale avec indication de maintien de la ventilation spontanée (intubation difficile prévue chez un patient 
+2026_gestion_voies_aeriennes_argumentaire_mel_vd_a	Q2.3 - En cas d'intubation difficile associée à une ventilation au masque difficile, quelle est la place des dispositifs supraglottiques de 
+2026_gestion_voies_aeriennes_argumentaire_mel_vd_a	Champ 1. Prise en charge des voies aériennes sans difficulté prévisible
+2026_gestion_voies_aeriennes_argumentaire_mel_vd_a	Champ 1. Prise en charge des voies aériennes sans difficulté prévisible
+2026_gestion_voies_aeriennes_argumentaire_mel_vd_a	Champ 1. Prise en charge des voies aériennes sans difficulté prévisible
+2026_gestion_voies_aeriennes_argumentaire_mel_vd_a	Champ 1. Prise en charge des voies aériennes sans difficulté prévisible
+2026_gestion_voies_aeriennes_argumentaire_mel_vd_a	Champ 1. Prise en charge des voies aériennes sans difficulté prévisible
+2026_gestion_voies_aeriennes_argumentaire_mel_vd_a	Champ 1. Prise en charge des voies aériennes sans difficulté prévisible
+2026_gestion_voies_aeriennes_argumentaire_mel_vd_a	Champ 1. Prise en charge des voies aériennes sans difficulté prévisible
+2026_gestion_voies_aeriennes_argumentaire_mel_vd_a	Champ 2. Prise en charge des voies aériennes difficiles (prévue ou non)
+2026_gestion_voies_aeriennes_argumentaire_mel_vd_a	Champ 2. Prise en charge des voies aériennes difficiles (prévue ou non)
+2026_gestion_voies_aeriennes_argumentaire_mel_vd_a	Champ 2. Prise en charge des voies aériennes difficiles (prévue ou non)
+2026_gestion_voies_aeriennes_argumentaire_mel_vd_a	Champ 2. Prise en charge des voies aériennes difficiles (prévue ou non)
+2026_gestion_voies_aeriennes_argumentaire_mel_vd_a	Champ 3. Facteurs humains – Dimensions organisationnelles
+2026_gestion_voies_aeriennes_argumentaire_mel_vd_a	Champ 3. Facteurs humains – Dimensions organisationnelles
+2026_gestion_voies_aeriennes_argumentaire_mel_vd_a	Champ 3. Facteurs humains – Dimensions organisationnelles
+2026_gestion_voies_aeriennes_argumentaire_mel_vd_a	Champ 3. Facteurs humains – Dimensions organisationnelles
+2026_gestion_voies_aeriennes_argumentaire_mel_vd_a	Champ 3. Facteurs humains – Dimensions organisationnelles
+2026_gestion_voies_aeriennes_argumentaire_mel_vd_a	Champ 3. Facteurs humains – Dimensions organisationnelles
+2026_gestion_voies_aeriennes_argumentaire_mel_vd_a	Champ 3. Facteurs humains – Dimensions organisationnelles
+2026_gestion_voies_aeriennes_argumentaire_mel_vd_a	Champ 1. Prise en charge initiale des voies aériennes sans difficulté prévisible
+2026_gestion_voies_aeriennes_argumentaire_mel_vd_a	Q. En l'absence de critères prédictifs d'intubation difficile, faut-il utiliser un vidéolaryngoscope en première intention pour faciliter l'
+2026_gestion_voies_aeriennes_argumentaire_mel_vd_a	Q. En l'absence de critères prédictifs d'intubation difficile, l'utilisation d'un vidéolaryngoscope permet-elle de s'affranchir de l'adminis
+2026_gestion_voies_aeriennes_argumentaire_mel_vd_a	Q. Chez les patients adultes requérant une anesthésie générale programmée sous ventilation mécanique, les dispositifs supraglottiques sont-i
+2026_gestion_voies_aeriennes_argumentaire_mel_vd_a	Q. Chez les patients adultes requérant une anesthésie générale, l'utilisation de l'échographie gas-trique permet-elle d'identifier la vacuit
+2026_gestion_voies_aeriennes_argumentaire_mel_vd_a	Q. Lors d'une sédation procédurale (c'est-à-dire sans intubation trachéale ni pose de dispositif supraglottique), quelle est la place de l'o
+2026_gestion_voies_aeriennes_argumentaire_mel_vd_a	Q. Lors d'une sédation procédurale nécessitant une apnée (absence de ventilation spontanée), la mise en place d'un dispositif d'oxygénation 
+2026_gestion_voies_aeriennes_argumentaire_mel_vd_a	Champ 2. Prise en charge initiale voies aériennes difficiles (prévue ou non)
+2026_gestion_voies_aeriennes_argumentaire_mel_vd_a	Q. Lors d'une intubation difficile prévue sans indication au maintien de la ventilation spontanée (intubation difficile prévue chez un patie
+2026_gestion_voies_aeriennes_argumentaire_mel_vd_a	Q. Lors d'une intubation trachéale avec indication de maintien de la ventilation spontanée (intubation difficile prévue chez un patient a pr
+2026_gestion_voies_aeriennes_argumentaire_mel_vd_a	Q. En cas d'intubation difficile associée à une ventilation au masque difficile, quelle est la place des dispositifs supraglottiques de seco
+2026_gestion_voies_aeriennes_argumentaire_mel_vd_a	Q. En cas d'intubation impossible et de ventilation impossible malgré la mise en place d'un dispositif supraglottique de seconde génération 
+2026_gestion_voies_aeriennes_argumentaire_mel_vd_a	Champ 3. Facteurs humains – Dimensions organisationnelles
+2026_gestion_voies_aeriennes_argumentaire_mel_vd_a	Q. Dans la préparation à une gestion difficile des voies aériennes, la simulation permet-elle d'améliorer la performance individuelle et col
+2026_gestion_voies_aeriennes_argumentaire_mel_vd_a	Q. Dans la préparation à une gestion difficile des voies aériennes, un nombre minimal de procédures permet-il d'améliorer la performance ind
+2026_gestion_voies_aeriennes_argumentaire_mel_vd_a	Q. Dans la préparation à une gestion difficile des voies aériennes, la réalisation d'un briefing permet-elle d'améliorer la performance indi
+2026_gestion_voies_aeriennes_argumentaire_mel_vd_a	Q. Dans la préparation à une gestion difficile des voies aériennes, les techniques de préparation mentale améliorent-elles la performance in
+2026_gestion_voies_aeriennes_argumentaire_mel_vd_a	Q. Après une gestion difficile d'accès aux voies aériennes, la réalisation d'un defusing permet-elle d'améliorer la performance individuelle
+2026_gestion_voies_aeriennes_argumentaire_mel_vd_a	Q. Après une gestion difficile d'accès aux voies aériennes, la réalisation d'un debriefing permet-elle d'améliorer la performance individuel
+2026_gestion_voies_aeriennes_argumentaire_mel_vd_a	Q. Après une gestion difficile d'accès aux voies aériennes, la réalisation d'une revue de mortalité et de morbidité permet-elle d'améliorer 
+2026_7_certificat_de_voies_aeriennes_difficiles_61	Autre technique :
+2026_RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-A	Actualisation
+2026_RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-A	Autres formats
+2026_RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-A	Champ 1. Mise en place et procédure de déclenchement de la filière UVIH
+2026_RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-A	Quelles modalités de mise en place de la filière UVIH doivent être instaurées par les établissements de santé et les équipes soignantes afin
+2026_RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-A	Champ 1. Mise en place et procédure de déclenchement de la filière UVIH
+2026_RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-A	Chez les patients présentant une UVIH, l'utilisation des scores d'alerte précoce améliore-t-elle la qualité de la prise en charge par rappor
+2026_RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-A	Champ 1. Mise en place et procédure de déclenchement de la filière UVIH
+2026_RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-A	Chez les patients présentant une UVIH, la mise en place d'un numéro unique pour le déclenchement de l'équipe spécialisée permet-elle d'améli
+2026_RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-A	Champ 1. Mise en place et procédure de déclenchement de la filière UVIH
+2026_RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-A	Chez les patients présentant une urgence vitale intra-hospitalière, une régulation de l'appel par un intervenant non-membre de l'équipe spéc
+2026_RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-A	Champ 2. Conditions matérielles et ressources humaines
+2026_RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-A	La standardisation et la gestion des équipements et médicaments d'urgence devant être disponibles dans les services d'hospitalisation (chari
+2026_RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-A	MÉDICAMENTS DISPONIBLES
+2026_RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-A	Champ 2. Conditions matérielles et ressources humaines
+2026_RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-A	Quels équipements spécifiques doivent-ils être apportés par l'équipe spécialisée afin d'améliorer la qualité de prise en charge des patients
+2026_RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-A	Champ 2. Conditions matérielles et ressources humaines
+2026_RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-A	Chez les patients présentant une UVIH, la mise à disposition et l'utilisation d'aides cognitives dans les services permet-elle d'améliorer l
+2026_RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-A	CONSTANTES HÉMODYNAMIQUES
+2026_RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-A	Aiguille jaune (45 mm) : obèse, humérale chez l'adulte
+2026_RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-A	Champ 2. Conditions matérielles et ressources humaines
+2026_RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-A	Au sein des établissements disposant d'une permanence médicale compétente en soins critiques sur site, quelle est la composition minimale de
+2026_RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-A	Champ 3. Conditions matérielles et ressources humaines
+2026_RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-A	Pour la mise en place d'une filière d'UVIH, quelles modalités de suivi de la filière doivent-elles être instaurées afin d'améliorer la quali
+2026_RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-A	2. Capacité
+2026_RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-A	3. Composition de l'équipe UVIH standard
+2026_RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-A	Parfois, préciser :
+2026_RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-A	4. Couverture
+2026_RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-A	5. Critères de déclenchement de l'équipe UVIH
+2026_RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-A	6. Suivi
+2026_RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-A	Champ 3. Conditions matérielles et ressources humaines
+2026_RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-A	Chez les patients présentant une UVIH, quelle équipe est responsable de l'information des proches et des procédures administratives à la sui
+2026_RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-A	Champ 3. Conditions matérielles et ressources humaines
+2026_RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-A	Chez les professionnels de santé, quelles modalités de formation initiale et continue doivent être proposées afin d'améliorer la qualité de 
+2026_RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-A	Champ 4. Spécificités organisationnelles
+2026_RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-A	Dans les établissements sans présence médicale 24h/24, quelles sont les modalités organisationnelles améliorant la qualité de prise en charg
+2026_RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-A	Champ 4. Spécificités organisationnelles
+2026_RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-A	Dans les établissements ayant une activité mixte adulte et pédiatrique et disposant d'un médecin compétent en soins critiques pédiatriques, 
+2026_RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-A	Champ 1. Mise en place et procédure de déclenchement de la filière UVIH
+2026_RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-A	Q1. Quelles modalités de mise en place de la filière UVIH doivent être instaurées par les établissements de santé et les équipes soignantes 
+2026_RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-A	Q2. Chez les patients présentant une UVIH, l'utilisation des scores d'alerte précoce améliore-t-elle la qualité de la prise en charge par ra
+2026_RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-A	Q3. Chez les patients présentant une UVIH, la mise en place d'un numéro unique pour le déclenchement de l'équipe spécialisée permet-elle d'a
+2026_RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-A	Q4. Chez les patients présentant une urgence vitale intra-hospitalière, une régulation de l'appel par un intervenant non-membre de l'équipe 
+2026_RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-A	Champ 2. Conditions matérielles et ressources humaines
+2026_RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-A	Q5 La standardisation et la gestion des équipements et médicaments d'urgence devant être disponibles dans les services d'hospitalisation (ch
+2026_RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-A	Q6. Quels équipements spécifiques doivent-ils être apportés par l'équipe spécialisée afin d'améliorer la qualité de prise en charge des pati
+2026_RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-A	Q7. Chez les patients présentant une UVIH, la mise à disposition et l'utilisation d'aides cognitives dans les services permet-elle d'amélior
+2026_RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-A	Q8. Au sein des établissements disposant d'une permanence médicale compétente en soins critiques sur site, quelle est la composition minimal
+2026_RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-A	Champ 3. Conditions matérielles et ressources humaines
+2026_RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-A	Q9. Pour la mise en place d'une filière d'UVIH, quelles modalités de suivi de la filière doivent-elles être instaurées afin d'améliorer la q
+2026_RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-A	Q10. Chez les patients présentant une UVIH, quelle équipe est responsable de l'information des proches et des procédures administratives à l
+2026_RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-A	Q11. Chez les professionnels de santé, quelles modalités de formation initiale et continue doivent être proposées afin d'améliorer la qualit
+2026_RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-A	Champ 4. Spécificités organisationnelles
+2026_RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-A	Q12. Dans les établissements sans présence médicale 24h/24, quelles sont les modalités organisationnelles améliorant la qualité de prise en 
+2026_RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-A	Q13. Dans les établissements ayant une activité mixte adulte et pédiatrique et disposant d'un médecin compétent en soins critiques pédiatriq
+2026_RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-A	Q14. Faut-il des procédures spécifiques d'UVIH selon que l'urgence vitale concerne un patient hospitalisé ou une personne non-hospitalisée (
+2026_Version-longue_8281a1	Actualisation
+2026_Version-longue_8281a1	Champ 1. Périopératoire
+2026_Version-longue_8281a1	Q1.1 - Chez les patients opérés d'une chirurgie à risque intermédiaire ou élevé, la recherche d'une dénutrition ou du risque de dénutrition 
+2026_Version-longue_8281a1	Q1.2 - Chez les patients opérés d'une chirurgie programmée à risque intermédiaire ou élevé, quelles stratégies nutritionnelles préopératoire
+2026_Version-longue_8281a1	Q1.3 - Chez les patients opérés d'une chirurgie à risque intermédiaire ou élevé, quelles stratégies nutritionnelles postopératoires permette
+2026_Version-longue_8281a1	Q1.4 - Chez les patients opérés d'une chirurgie programmée à risque intermédiaire ou élevé, la prise en charge par un diététicien permet-ell
+2026_Version-longue_8281a1	Champ 2. Soins critiques
+2026_Version-longue_8281a1	Q2.1 - Chez les patients hospitalisés en soins critiques, la recherche d'une dénutrition ou du risque de dénutrition permet-elle de prédire 
+2026_Version-longue_8281a1	Q2.2 - Chez les patients hospitalisés en soins critiques, quel délai d'instauration du support nutritionnel est associé à une diminution de 
+2026_Version-longue_8281a1	Q2.3 - Chez les patients hospitalisés en soins critiques en état de choc / défaillance multiviscérale, quel support nutritionnel est associé
+2026_Version-longue_8281a1	Q2.4 - Chez les patients hospitalisés en soins critiques et stabilisés, quel support nutritionnel est associé à une diminution de la morbi-m
+2026_Version-longue_8281a1	Q2.5 - Chez les patients hospitalisés en soins critiques en phase de réhabilitation, une stratégie nutritionnelle multimodale est-elle assoc
+2026_Version-longue_8281a1	Q2.6 - Chez les patients hospitalisés en soins critiques recevant une nutrition entérale, quelles interventions peuvent améliorer la toléran
+2026_Version-longue_8281a1	Q2.7 - Chez les patients hospitalisés en soins critiques, une surveillance clinique et/ou biologique permet-elle d'évaluer la tolérance du s
+2026_Version-longue_8281a1	Q2.8 - Chez les patients hospitalisés en soins critiques, une surveillance clinique et/ou biologique permet-elle d'évaluer l'efficacité du s
+2026_Version-longue_8281a1	Q2.9 - Chez les patients hospitalisés en soins critiques, la prise en charge par un diététicien permet-elle d'optimiser la prise en charge n
+2026_Version-longue_8281a1	Champ 1 – Nutrition clinique en contexte périopératoire
+2026_Version-longue_8281a1	1.1 Recherche d'une dénutrition ou du risque de dénutrition en contexte périopératoire (Figure 1)
+2026_Version-longue_8281a1	Champ 1 - Nutrition clinique en contexte périopératoire
+2026_Version-longue_8281a1	1.2 Stratégie nutritionnelle préopératoire (Figure 2)
+2026_Version-longue_8281a1	Champ 1 – Nutrition clinique en contexte périopératoire
+2026_Version-longue_8281a1	1.3 Stratégie nutritionnelle postopératoire (Figure 2)
+2026_Version-longue_8281a1	Champ 1 - Nutrition clinique en contexte périopératoire
+2026_Version-longue_8281a1	1.4 - Prise en charge périopératoire par un diététicien (Figure 2)
+2026_Version-longue_8281a1	Champ 2 – Nutrition clinique en soins critiques
+2026_Version-longue_8281a1	2.1 - Recherche d'une dénutrition ou du risque de dénutrition en soins critiques (Figure 3)
+2026_Version-longue_8281a1	Champ 2 - Nutrition clinique en soins critiques (suite)
+2026_Version-longue_8281a1	2.2 – Délai d'instauration du support nutritionnel chez le patient de soins critiques (Figure 4)
+2026_Version-longue_8281a1	Champ 2 - Nutrition clinique en soins critiques (suite)
+2026_Version-longue_8281a1	2.3 – Support nutritionnel chez le patient en état de choc / défaillance multiviscérale (Figures 4 et 5)
+2026_Version-longue_8281a1	Champ 2 - Nutrition clinique en soins critiques (suite)
+2026_Version-longue_8281a1	2.4 – Support nutritionnel chez le patient stabilisé (Figure 4)
+2026_Version-longue_8281a1	Champ 2 – Nutrition clinique en soins critiques (suite)
+2026_Version-longue_8281a1	2.5 - Support nutritionnel chez le patient en phase de réhabilitation (Figure 4)
+2026_Version-longue_8281a1	Champ 2 – Nutrition clinique en soins critiques (suite)
+2026_Version-longue_8281a1	2.6 – Amélioration de la tolérance digestive de la nutrition entérale (Figures 6 et 7)
+2026_Version-longue_8281a1	Champ 2 – Nutrition clinique en soins critiques (suite)
+2026_Version-longue_8281a1	2.7 – Surveillance de la tolérance du support nutritionnel (Figures 8 et 9)
+2026_Version-longue_8281a1	Champ 2 – Nutrition clinique en soins critiques (suite)
+2026_Version-longue_8281a1	2.8 - Évaluation de l'efficacité du support nutritionnel (Figure 8)
+2026_Version-longue_8281a1	Champ 2 – Nutrition clinique en soins critiques (suite)
+2026_Version-longue_8281a1	2.9 - Prise en charge par un diététicien (Figure 4)
+2026_Version-longue_8281a1	CHAMP 1 – NUTRITION CLINIQUE EN CONTEXTE PERIOPERATOIRE
+2026_Version-longue_8281a1	1.1 Recherche d'une dénutrition ou du risque de dénutrition en contexte périopératoire (Figure 1)
+2026_Version-longue_8281a1	1.2 Stratégie nutritionnelle préopératoire (Figure 2)
+2026_Version-longue_8281a1	1.3 Stratégie nutritionnelle postopératoire (Figure 2)
+2026_Version-longue_8281a1	1.4 - Prise en charge périopératoire par un diététicien (Figure 2)
+2026_Version-longue_8281a1	CHAMP 2 – NUTRITION CLINIQUE EN SOINS CRITIQUES
+2026_Version-longue_8281a1	2.1 - Recherche d'une dénutrition ou du risque de dénutrition en soins critiques (Figure 3)
+2026_Version-longue_8281a1	2.2 – Délai d'instauration du support nutritionnel chez le patient de soins critiques (Figure 4)
+2026_Version-longue_8281a1	2.3 – Support nutritionnel chez le patient en état de choc / défaillance multiviscérale (Figures 4 et 5)
+2026_Version-longue_8281a1	2.4 – Support nutritionnel chez le patient stabilisé (Figure 4)
+2026_Version-longue_8281a1	2.5 - Support nutritionnel chez le patient en phase de réhabilitation (Figure 4)
+2026_Version-longue_8281a1	2.6 – Amélioration de la tolérance digestive de la nutrition entérale (Figures 6 et 7)
+2026_Version-longue_8281a1	2.7 – Surveillance de la tolérance du support nutritionnel (Figures 8 et 9)
+2026_Version-longue_8281a1	2.8 - Évaluation de l'efficacité du support nutritionnel (Figure 8)
+2026_Version-longue_8281a1	2.9 - Prise en charge par un diététicien (Figure 4)
+2026_Version-courte_3ae465	Champ 1. Périopératoire
+2026_Version-courte_3ae465	Q1.1 - Chez les patients opérés d'une chirurgie à risque intermédiaire ou élevé, la recherche d'une dénutrition ou du risque de dénutrition 
+2026_Version-courte_3ae465	Q1.2 - Chez les patients opérés d'une chirurgie programmée à risque intermédiaire ou élevé, quelles stratégies nutritionnelles préopératoire
+2026_Version-courte_3ae465	Q1.3 - Chez les patients opérés d'une chirurgie à risque intermédiaire ou élevé, quelles stratégies nutritionnelles postopératoires permette
+2026_Version-courte_3ae465	Q1.4 - Chez les patients opérés d'une chirurgie programmée à risque intermédiaire ou élevé, la prise en charge par un diététicien permet-ell
+2026_Version-courte_3ae465	Champ 2. Soins critiques
+2026_Version-courte_3ae465	Q2.1 - Chez les patients hospitalisés en soins critiques, la recherche d'une dénutrition ou du risque de dénutrition permet-elle de prédire 
+2026_Version-courte_3ae465	Q2.2 - Chez les patients hospitalisés en soins critiques, quel délai d'instauration du support nutritionnel est associé à une diminution de 
+2026_Version-courte_3ae465	Q2.3 - Chez les patients hospitalisés en soins critiques en état de choc / défaillance multiviscérale, quel support nutritionnel est associé
+2026_Version-courte_3ae465	Q2.4 - Chez les patients hospitalisés en soins critiques et stabilisés, quel support nutritionnel est associé à une diminution de la morbi-m
+2026_Version-courte_3ae465	Q2.5 - Chez les patients hospitalisés en soins critiques en phase de réhabilitation, une stratégie nutritionnelle multimodale est-elle assoc
+2026_Version-courte_3ae465	Q2.6 - Chez les patients hospitalisés en soins critiques recevant une nutrition entérale, quelles interventions peuvent améliorer la toléran
+2026_Version-courte_3ae465	Q2.7 - Chez les patients hospitalisés en soins critiques, une surveillance clinique et/ou biologique permet-elle d'évaluer la tolérance du s
+2026_Version-courte_3ae465	Q2.8 - Chez les patients hospitalisés en soins critiques, une surveillance clinique et/ou biologique permet-elle d'évaluer l'efficacité du s
+2026_Version-courte_3ae465	Q2.9 - Chez les patients hospitalisés en soins critiques, la prise en charge par un diététicien permet-elle d'optimiser la prise en charge n
+2026_Version-courte_3ae465	Champ 1 - Nutrition clinique en contexte périopératoire
+2026_Version-courte_3ae465	1.1 Recherche d'une dénutrition ou du risque de dénutrition en contexte périopératoire (Figure 1)
+2026_Version-courte_3ae465	Champ 1 - Nutrition clinique en contexte périopératoire (suite)
+2026_Version-courte_3ae465	1.2 Stratégie nutritionnelle préopératoire (Figure 2)
+2026_Version-courte_3ae465	1.3 Stratégie nutritionnelle postopératoire (Figure 2)
+2026_Version-courte_3ae465	1.4 - Prise en charge périopératoire par un diététicien (Figure 2)
+2026_Version-courte_3ae465	Champ 2 – Nutrition clinique en soins critiques
+2026_Version-courte_3ae465	2.1 - Recherche d'une dénutrition ou du risque de dénutrition en soins critiques (Figure 3)
+2026_Version-courte_3ae465	Champ 2 – Nutrition clinique en soins critiques (suite)
+2026_Version-courte_3ae465	2.2 – Délai d'instauration du support nutritionnel chez le patient de soins critiques (Figure 4)
+2026_Version-courte_3ae465	2.3 – Support nutritionnel chez le patient en état de choc / défaillance multiviscérale (Figures 4 et 5)
+2026_Version-courte_3ae465	2.4 – Support nutritionnel chez le patient stabilisé (Figure 4)
+2026_Version-courte_3ae465	2.5 - Support nutritionnel chez le patient en phase de réhabilitation (Figure 4)
+2026_Version-courte_3ae465	Champ 2 – Nutrition clinique en soins critiques (suite)
+2026_Version-courte_3ae465	2.6 – Amélioration de la tolérance digestive de la nutrition entérale (Figures 6 et 7)
+2026_Version-courte_3ae465	Champ 2 – Nutrition clinique en soins critiques (suite)
+2026_Version-courte_3ae465	2.7 – Surveillance de la tolérance du support nutritionnel (Figures 8 et 9)
+2026_Version-courte_3ae465	2.8 - Évaluation de l'efficacité du support nutritionnel (Figure 8)
+2026_Version-courte_3ae465	2.9 - Prise en charge par un diététicien (Figure 4)
+2026_Version-courte_3ae465	Champ 1. Périopératoire
+2026_Version-courte_3ae465	Champ 2. Soins critiques
+2026_TEXTE-RFE-ALR-PEDIA-VERSION-FINALE-010926_63f	P du PICO : Patients
+2026_TEXTE-RFE-ALR-PEDIA-VERSION-FINALE-010926_63f	O du PICO : Outcomes / Critères de jugement
+2026_TEXTE-RFE-ALR-PEDIA-VERSION-FINALE-010926_63f	- Critères de jugement importants mais non cruciaux
+2026_TEXTE-RFE-ALR-PEDIA-VERSION-FINALE-010926_63f	Mots-clés
+2026_TEXTE-RFE-ALR-PEDIA-VERSION-FINALE-010926_63f	Critères de restriction de la recherche bibliographique
+2026_TEXTE-RFE-ALR-PEDIA-VERSION-FINALE-010926_63f	Méta-analyses,; Essais contrôlés randomisés,; Cohortes prospectives de plus de 5000 patients (champ 1)
+2026_TEXTE-RFE-ALR-PEDIA-VERSION-FINALE-010926_63f	Années de publication comprise entre 2010 et 2025
+2026_TEXTE-RFE-ALR-PEDIA-VERSION-FINALE-010926_63f	CHAMP 1. Méthodes de localisation et médicaments utilisés
+2026_TEXTE-RFE-ALR-PEDIA-VERSION-FINALE-010926_63f	CHAMP 2. Indications d'anesthésie locorégionale pour les chirurgies céphaliques
+2026_TEXTE-RFE-ALR-PEDIA-VERSION-FINALE-010926_63f	CHAMP 3. Indications d'anesthésie locorégionale pour les chirurgies du thorax et du rachis
+2026_TEXTE-RFE-ALR-PEDIA-VERSION-FINALE-010926_63f	CHAMP 4. Indications d'anesthésie locorégionale pour les chirurgies de l'abdomen et des organes génitaux externes
+2026_TEXTE-RFE-ALR-PEDIA-VERSION-FINALE-010926_63f	CHAMP 5. Indications d'anesthésie locorégionale pour les chirurgies de la hanche
+2026_RFE-Infections-intra-abdominales-version-lect	O du PICO : Outcomes / Critères de jugement
+2026_RFE-Infections-intra-abdominales-version-lect	- Critères de jugement cruciaux ou majeurs (importance de 9 le plus fort à 7)
+2026_RFE-Infections-intra-abdominales-version-lect	- Critères de jugement importants mais non cruciaux (importance de 7 le plus fort à 5)
+2026_RFE-Infections-intra-abdominales-version-lect	Mots-clés
+2026_RFE-Infections-intra-abdominales-version-lect	Infection intra-abdominale, péritonite, sepsis intra-abdominal, appendicite
+2026_RFE-Infections-intra-abdominales-version-lect	Critères de restriction de la recherche bibliographique
+2026_RFE-Infections-intra-abdominales-version-lect	Années de la recherche bibliographique: 2012 à 2024
+2026_RFE-Infections-intra-abdominales-version-lect	Langues : Français et Anglais
+2026_RFE_sedationproceduraleUrgences_24juin2026_1f	Tous les patients adultes nécessitant une sédation procédurale en urgence en extrahospitalier et en intrahospitalier
+2026_RFE_sedationproceduraleUrgences_24juin2026_1f	O du PICO : Outcomes / Critères de jugement
+2026_RFE_sedationproceduraleUrgences_24juin2026_1f	Critères de jugement cruciaux ou majeurs (importance de 9 le plus fort à 7) de sécurité
+2026_RFE_sedationproceduraleUrgences_24juin2026_1f	Critères de jugement cruciaux ou majeurs (importance de 9 le plus fort à 7) d'efficacité
+2026_RFE_sedationproceduraleUrgences_24juin2026_1f	Mots-clés
+2026_RFE_sedationproceduraleUrgences_24juin2026_1f	Critères de restriction de la recherche bibliographique
+2026_RecoCIAFU_ECBU_Note-de-cadrage_10_10_2024_d64	Q2. Quelles sont les méthodes de dépistage d'une colonisation urinaire en préopératoire (ECBU,...) ?
+2026_RecoCIAFU_ECBU_Note-de-cadrage_10_10_2024_d64	Q3. Quelle prise en charge du patient, en cas de positivité de l'ECBU en péri-opératoire ?
+2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972	Q2. Quelles sont les méthodes de dépistage d'une colonisation urinaire en préopératoire (ECBU,...) ?
+2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972	Q3. Quelle prise en charge du patient, en cas de positivité de l'ECBU en péri-opératoire ?
+2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972	Prostate
+2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972	Vessie
+2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972	Organes génitaux de l'homme
+2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972	Chirurgie endo-urologique du tractus urinaire
+2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972	ECBU indiqué
+2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972	ECBU non indiqué
+2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972	Le groupe de travail ne se prononce pas
+2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc	Q2. Quelles sont les méthodes de dépistage d'une colonisation urinaire en préopératoire (ECBU,...) ?
+2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc	Q3. Quelle prise en charge du patient, en cas de positivité de l'ECBU en péri-opératoire ?
+2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc	Chirurgie de la prostate
+2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc	Chirurgie de la vessie
+2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc	Chirurgie des organes génitaux de l'homme
+2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc	Chirurgie des voies excrétrices
+2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc	Cathéter de dialyse intrapéritonéale
+2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc	Chirurgies du rein
+2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc	Prostate
+2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc	Vessie
+2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc	Organes génitaux de l'homme
+2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc	Chirurgie endo-urologique du tractus urinaire
+2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc	ECBU indiqué
+2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc	ECBU non indiqué
+2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc	Le groupe de travail ne se prononce pas
+2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc	Question 1 : Quelle est la place de l'ECBU dans le diagnostic d'une colonisation urinaire avant une prise en charge urologique interventionn
+2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc	Énucléation prostatique par laparatomie, coelioscopie ou coelioscopie robot-assistée
+2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc	Traitements mini-invasifs de l'hyperplasie bénigne de la prostate
+2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc	NLPC
+2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc	Question 2 : Quelles sont les méthodes de dépistage d'une colonisation urinaire en préopératoire (ECBU,...) ?
+2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc	Question 3 : Quelle prise en charge du patient, en cas de positivité de l'ECBU en péri-opératoire ?
+2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc	Question 1 : Quelle est la place de l'ECBU dans le diagnostic d'une colonisation urinaire avant une prise en charge urologique interventionn
+2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc	Question 2 : Quelles sont les méthodes de dépistage d'une colonisation urinaire en préopératoire (ECBU,...) ?
+2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc	Question 3 : Quelle prise en charge du patient, en cas de positivité de l'ECBU en péri-opératoire ?
+2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc	Objectif global de la RBP. questions cliniques abordées et groupes de patients cibles
+2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc	Participation des groupes concernés
+2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc	Rigueur de rédaction
+2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc	Clarté et présentation
+2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc	Applicabilité
+2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc	Objectifs questions cliniques sont-elles explicites
+2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc	Les questions cliniques sont-elles explicites ?
+2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc	Patients cibles
+2026_Tableau-de-synthese_04_03_2026_MEL_5e509f	ECBU indiqué
+2026_Tableau-de-synthese_04_03_2026_MEL_5e509f	ECBU non indiqué
+2026_Tableau-de-synthese_04_03_2026_MEL_5e509f	Le groupe de travail ne se prononce pas
+2026_RFE-20_4_2026-deifinitif-et-validei_1b550e	Déterminants de la gestion péri-procédurale des anticoagulants
+2026_RFE-20_4_2026-deifinitif-et-validei_1b550e	Patients traités par un AVK
+2026_RFE-20_4_2026-deifinitif-et-validei_1b550e	Patients traités par un AOD
+2026_RFE-20_4_2026-deifinitif-et-validei_1b550e	Patients traités par un AVK
+2026_RFE-20_4_2026-deifinitif-et-validei_1b550e	Patients traités par un AOD
+2026_RFE-20_4_2026-deifinitif-et-validei_1b550e	Patients traités par un AVK
+2026_RFE-20_4_2026-deifinitif-et-validei_1b550e	Patients traités par un AOD
+2026_RFE-20_4_2026-deifinitif-et-validei_1b550e	Thromboprophylaxie veineuse
+2026_RFE-20_4_2026-deifinitif-et-validei_1b550e	Patients traités par un AVK pour de la FA
+2026_RFE-20_4_2026-deifinitif-et-validei_1b550e	Procédures à risque hémorragique élevé : gestion pré-procédurale
+2026_RFE-20_4_2026-deifinitif-et-validei_1b550e	Procédures à risque hémorragique élevé : gestion post-procédurale
+2026_RFE-20_4_2026-deifinitif-et-validei_1b550e	Patients traités par un AOD pour de la FA
+2026_RFE-20_4_2026-deifinitif-et-validei_1b550e	Procédures à risque hémorragique élevé : gestion pré-procédurale
+2026_RFE-20_4_2026-deifinitif-et-validei_1b550e	Procédures à risque hémorragique élevé : gestion post-procédurale
+2026_RFE-20_4_2026-deifinitif-et-validei_1b550e	Procédures à risque hémorragique élevé : gestion pré-procédurale
+2026_RFE-20_4_2026-deifinitif-et-validei_1b550e	Procédures à risque hémorragique élevé : gestion post-procédurale
+2026_RFE-20_4_2026-deifinitif-et-validei_1b550e	Déterminants de la gestion des anticoagulants
+2026_RFE-20_4_2026-deifinitif-et-validei_1b550e	Patients traités par un AVK pour une MTEV (hors cas complexes)
+2026_RFE-20_4_2026-deifinitif-et-validei_1b550e	Procédures à risque hémorragique élevé : gestion pré-procédurale
+2026_RFE-20_4_2026-deifinitif-et-validei_1b550e	Procédures à risque hémorragique élevé : gestion post-procédurale
+2026_RFE-20_4_2026-deifinitif-et-validei_1b550e	Patients traités par un AOD pour une MTEV (hors cas complexes)
+2026_RFE-20_4_2026-deifinitif-et-validei_1b550e	Procédures à risque hémorragique élevé : gestion pré-procédurale
+2026_RFE-20_4_2026-deifinitif-et-validei_1b550e	Procédures à risque hémorragique élevé : gestion post-procédurale
+2026_RFE-20_4_2026-deifinitif-et-validei_1b550e	MTEV : place du filtre cave
+2026_RFE-20_4_2026-deifinitif-et-validei_1b550e	Cas particulier de la TVP distale
+2026_RFE-20_4_2026-deifinitif-et-validei_1b550e	Thromboprophylaxie mécanique
+2026_RFE-20_4_2026-deifinitif-et-validei_1b550e	Prise en charge de l'AVC en péri-procédural
+2026_RFE-20_4_2026-deifinitif-et-validei_1b550e	Délai pour la reprise d'un traitement anticoagulant après un infarctus cérébral
+2026_RFE-20_4_2026-deifinitif-et-validei_1b550e	AOD
+2026_RFE-20_4_2026-deifinitif-et-validei_1b550e	AVK
+2026_RFE-20_4_2026-deifinitif-et-validei_1b550e	Relais pré-procédural des AVK
+2026_RFE-20_4_2026-deifinitif-et-validei_1b550e	Relais post-procédural des AVK
+2026_RFE-20_4_2026-deifinitif-et-validei_1b550e	Thromboprophylaxie veineuse :
+2026_RFE-20_4_2026-deifinitif-et-validei_1b550e	Gestion péri-procédurale des AVK et post-procédurale des AOD en cas de poids < 50 kg* #
+2026_RFE-20_4_2026-deifinitif-et-validei_1b550e	Pas de relais 3 / Pas de dosage
+2026_RFE-20_4_2026-deifinitif-et-validei_1b550e	Procédures à faible risque hémorragique
+2026_RFE-20_4_2026-deifinitif-et-validei_1b550e	Procédures à risque hémorragique élevé : gestion pré-procédurale
+2026_RFE-20_4_2026-deifinitif-et-validei_1b550e	Procédures à risque hémorragique élevé : gestion post-procédurale
+2026_RFE-20_4_2026-deifinitif-et-validei_1b550e	Thromboprophylaxie veineuse
+2026_RFE-20_4_2026-deifinitif-et-validei_1b550e	Procédures à faible risque hémorragique
+2026_RFE-20_4_2026-deifinitif-et-validei_1b550e	Procédures à risque hémorragique élevé : gestion pré-procédurale
+2026_RFE-20_4_2026-deifinitif-et-validei_1b550e	Procédures à risque hémorragique élevé : gestion post-procédurale
+2026_RFE-20_4_2026-deifinitif-et-validei_1b550e	Thromboprophylaxie veineuse
+2026_RFE-20_4_2026-deifinitif-et-validei_1b550e	Procédures à faible risque hémorragique
+2026_RFE-20_4_2026-deifinitif-et-validei_1b550e	Procédures à risque hémorragique élevé : gestion pré-procédurale
+2026_RFE-20_4_2026-deifinitif-et-validei_1b550e	Procédures à risque hémorragique élevé : gestion post-procédurale
+2026_RFE-20_4_2026-deifinitif-et-validei_1b550e	Déterminants de la gestion des anticoagulants
+2026_RFE-20_4_2026-deifinitif-et-validei_1b550e	Procédures à faible risque hémorragique
+2026_RFE-20_4_2026-deifinitif-et-validei_1b550e	Procédures à risque hémorragique élevé : gestion pré-procédurale
+2026_RFE-20_4_2026-deifinitif-et-validei_1b550e	Procédures à risque hémorragique élevé : gestion post-procédurale
+2026_RFE-20_4_2026-deifinitif-et-validei_1b550e	Thromboprophylaxie veineuse
+2026_RFE-20_4_2026-deifinitif-et-validei_1b550e	MTEV : place du filtre cave
+2026_RFE-20_4_2026-deifinitif-et-validei_1b550e	Thromboprophylaxie mécanique
+2026_RFE-20_4_2026-deifinitif-et-validei_1b550e	Déterminants de la gestion des anticoagulants
+2026_RFE-20_4_2026-deifinitif-et-validei_1b550e	Procédures à faible risque hémorragique
+2026_RFE-20_4_2026-deifinitif-et-validei_1b550e	Procédures à risque hémorragique élevé : gestion pré-procédurale
+2026_RFE-20_4_2026-deifinitif-et-validei_1b550e	Procédures à risque hémorragique élevé : gestion post-procédurale
+2026_RFE-20_4_2026-deifinitif-et-validei_1b550e	Thromboprophylaxie veineuse
+2026_RFE-20_4_2026-deifinitif-et-validei_1b550e	MTEV : place du filtre cave
+2026_RFE-20_4_2026-deifinitif-et-validei_1b550e	Thromboprophylaxie mécanique
+2025_RPP-Trauma-cranio-encephaliques-V1-finalisee_	motor Glasgow Coma Score
+2025_RPP-Trauma-cranio-encephaliques-V1-finalisee_	Pupilles
+2025_RPP-Trauma-cranio-encephaliques-V1-finalisee_	Blessure auto-infligée
+2025_RPP-Trauma-cranio-encephaliques-V1-finalisee_	Transfert d'un autre hôpital
+2025_RPP-Trauma-cranio-encephaliques-V1-finalisee_	Sexe
+2025_RPP-Trauma-cranio-encephaliques-V1-finalisee_	Injury Severity Score (ISS)
+2025_RPP-Trauma-cranio-encephaliques-V1-finalisee_	INR
+2025_RESECTION_-HEPATIQUE_-RECOMMANDATIONS_MEL_e8b	Actualisation
+2025_RESECTION_-HEPATIQUE_-RECOMMANDATIONS_MEL_e8b	Champ 1. Stratégie d'évaluation et d'optimisation préopératoire
+2025_RESECTION_-HEPATIQUE_-RECOMMANDATIONS_MEL_e8b	Question 1.1 : Chez les patients opérés d'une résection hépatique, quels éléments spécifiques doivent être recherchés lors du bilan d'évalua
+2025_RESECTION_-HEPATIQUE_-RECOMMANDATIONS_MEL_e8b	Champ 2 – Stratégie d'optimisation peropératoire
+2025_RESECTION_-HEPATIQUE_-RECOMMANDATIONS_MEL_e8b	Question 2.1 : Chez les patients opérés d'une résection hépatique, le choix d'un agent anesthésique permet-il de diminuer la morbi-mortalité
+2025_RESECTION_-HEPATIQUE_-RECOMMANDATIONS_MEL_e8b	Champ 3 – : Stratégie d'optimisation postopératoire
+2025_RESECTION_-HEPATIQUE_-RECOMMANDATIONS_MEL_e8b	Question 3.1: En postopératoire de résection hépatique, quels critères doivent être utilisés pour décider de l'admission en unité de soins c
+2025_RESECTION_-HEPATIQUE_-RECOMMANDATIONS_MEL_e8b	1.2. Stratégies spécifiques d'optimisation préopératoire

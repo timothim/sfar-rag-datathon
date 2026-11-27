@@ -1,0 +1,5 @@
+1. table_markdown with >= 2 rows in tas_v4_t: 1854; single-line tables in tas_v4: 1838
+2. tas_v3_errata: corrupted micro units 40 in 15 docs {'cdot': 40}
+2. tas_v4: corrupted micro units 161 in 42 docs {'\\mug': 36, 'mumol': 26, 'mug': 70, 'cdot': 29}
+3. tas_v3_errata: {'5 g IVL': 1, '≤50 ng/mL': 1, '2ème dose': 1, '200 ng/mL': 2}
+3. tas_v4: {'5 g IVL': 0, '≤50 ng/mL': 0, '2ème dose': 0, '200 ng/mL': 1}
