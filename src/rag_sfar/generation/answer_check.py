@@ -78,7 +78,7 @@ def _norm_dose(num: str, unit: str) -> str:
 def _pre(text: str) -> str:
     """Typographic normalisation of units: HTML sub/superscripts (cmH<sub>2</sub>O,
     g l<sup>-1</sup>), "x l-1" -> "x/l", "Gauge" -> "G"."""
-    t = re.sub(r"</?su[bp]>", "", text, flags=re.I)
+    t = re.sub(r"</?su[bp]>", "", text, flags=re.I).replace("⁻¹", "-1")
     t = re.sub(r"(?i)\b([a-zµμ]{1,4})\s*(?:\.|\s)\s*([a-z]{1,3})\s*-1\b", r"\1/\2", t)
     t = re.sub(r"(?i)\bgauges?\b", "G", t)
     return t
@@ -134,6 +134,7 @@ def check_answer(answer: str, passages: list[RetrievedChunk], is_abstention: boo
     ctx_doses = set().union(*(doses(p.chunk.text) for p in passages)) if passages else set()
     ctx_all = " ".join(texts) + " " + _norm_text(query)
     ctx_doses |= doses(query)
+    query_numbers = {n.replace(",", ".") for n in re.findall(r"\d+(?:[.,]\d+)?", query)}
     cited = sorted(set(cited_ids(answer)))
     res.invalid_citations = [f"S{i}" for i in cited if i < 1 or i > n]
     res.uncited = (not cited) and not is_abstention
@@ -146,7 +147,7 @@ def check_answer(answer: str, passages: list[RetrievedChunk], is_abstention: boo
         s_ctx = " ".join(texts[i - 1] for i in s_cites)
         for d in doses(sent):
             res.n_doses += 1
-            if d not in ctx_doses:
+            if d not in ctx_doses and d.split(" ")[0] not in query_numbers:
                 res.unsupported_doses.append(d)
             elif s_cites and d not in s_ctx_doses:
                 res.doses_not_in_cited.append(d)
