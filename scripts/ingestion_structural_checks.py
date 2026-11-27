@@ -138,7 +138,7 @@ RESIDUES = {
 
 _COMPARE_RE = re.compile(r"[<>≤≥]\s*=?\s*\d+(?:[.,]\d+)?")
 _NUM_UNIT_RE = re.compile(
-    r"\d+(?:[.,]\d+)?\s*(?:mg/kg/j|mg/kg/h|mg/kg|µg/kg|mg|µg|g|ui|ml/kg|ml|mmol/l|mmol|kg|%|h|min|j|sa)?(?![a-z])",
+    r"\d+(?:[.,]\d+)?\s*(?:mg/kg/j|mg/kg/h|mg/kg|µg/kg|mg|µg|g|ui|ml/kg|ml|mmol/l|mmol|mmhg|kg|%|h|min|j|sa)?(?![a-z])",
     re.I,
 )
 _DRUG_RE = re.compile(
@@ -270,7 +270,49 @@ def exclusion_contradictions(chunks) -> int:
     return n
 
 
-def parse_options(spec: str):
+# Erratum sections printed in the PDFs (publisher errata), and correction notes of a version
+# history. Every document that has one must be covered by a corpus patch
+# (data/corpus_updates/patches.json, "patches") or reviewed ("reviewed_errata", with a reason).
+ERRATUM_RE = re.compile(
+    r"(?im)^\W*(?:#+\s*)?\**\s*(?:erratum|errata|corrigendum)\b(?!\s+in\b)|une erreur s.est glissée|il fallait lire|"
+    r"doivent être lues?\b|nous prions nos lecteurs|au lieu de lire"
+)
+# "Erratum in: <journal>" notes of PubMed-style references are not errata of the document.
+VERSION_CORRECTION_RE = re.compile(r"(?i)\bcorrection (?:de coquilles?|d.une erreur|d.erreurs?)\b")
+
+
+def erratum_check(docs) -> dict:
+    import json as _json
+
+    from rag_sfar.ingestion.loader import resolve_corpus_updates_dir
+
+    upd = resolve_corpus_updates_dir(Settings().corpus_dir)
+    cfg = {}
+    if upd is not None and (upd / "patches.json").exists():
+        cfg = _json.loads((upd / "patches.json").read_text(encoding="utf-8"))
+    reviewed = {Path(r["document"]).name: r for r in cfg.get("reviewed_errata", [])}
+    found, failures = [], []
+    for d in docs:
+        m = d.metadata
+        hits = list(ERRATUM_RE.finditer(d.text))
+        kind = "erratum_section"
+        if not hits:
+            hist = [h for h in VERSION_CORRECTION_RE.finditer(d.text) if "version" in d.text[max(0, h.start() - 3000) : h.start()].lower()]
+            if not hist:
+                continue
+            hits, kind = hist, "version_history_corrections"
+        name = Path(m.md_path).name
+        status = "patched" if m.applied_patches else ("reviewed" if name in reviewed else "UNCOVERED")
+        entry = {
+            "doc_id": m.doc_id, "kind": kind, "status": status, "patches": m.applied_patches,
+            "reason": reviewed.get(name, {}).get("reason", ""),
+            "excerpt": re.sub(r"\s+", " ", d.text[hits[0].start() : hits[0].start() + 300]),
+        }
+        found.append(entry)
+        if status == "UNCOVERED":
+            failures.append(m.doc_id)
+    return {"documents": found, "uncovered": failures, "ok": not failures}
+
     import dataclasses
 
     from rag_sfar.ingestion.chunker import ChunkOptions
@@ -410,6 +452,7 @@ def run(index_dir: Path | None, options: str = "") -> dict:
         "raw_latex_mu": sum(len(_MICRO_RAW_RE.findall(c.text)) for c in chunks),
         "population_exclusion_contradictions": exclusion_contradictions(chunks),
     }
+    out["errata"] = erratum_check(docs)
     if chunks and hasattr(chunks[0], "populations"):
         pp = collections.Counter()
         for c in chunks:
@@ -439,6 +482,9 @@ def main() -> None:
     if a.json:
         a.json.write_text(txt, encoding="utf-8")
     print(txt[:6000])
+    if not out.get("errata", {}).get("ok", True):
+        print("ERRATUM CHECK FAILED: uncovered erratum sections in", out["errata"]["uncovered"], file=sys.stderr)
+        sys.exit(1)
 
 
 if __name__ == "__main__":

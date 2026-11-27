@@ -857,6 +857,8 @@ def _chunk_table_aware_sota(
     for c in chunks:
         if c.chunk_id in modified:
             _refresh_indexed_text(c, meta, opts)
+    if meta.applied_patches:
+        _record_patches(chunks, meta.applied_patches)
 
     # Link section-anchored allergy/footnote callouts to every chunk in that major section
     chunk_by_id = {c.chunk_id: c for c in chunks}
@@ -874,6 +876,21 @@ def _chunk_table_aware_sota(
     if opts.reco_units and reco_units:
         chunks.extend(_recommendation_unit_chunks(doc, chunks, reco_units, opts, start_index=idx))
     return chunks
+
+
+def _record_patches(chunks: list[Chunk], patch_ids: list[str]) -> None:
+    """Record in each chunk the corpus patches (official errata) whose marked text it carries."""
+    from rag_sfar.ingestion.loader import PATCH_NOTE, RENDERED_PATCHES
+
+    for c in chunks:
+        if PATCH_NOTE not in c.text:
+            continue
+        flat = re.sub(r"\s+", " ", c.text)
+        for pid in patch_ids:
+            marker = RENDERED_PATCHES.get(pid, "")
+            key = marker[marker.find("[") :] if "[" in marker else marker
+            if key and re.sub(r"\s+", " ", key) in flat:
+                c.corpus_patch_ids.append(pid)
 
 
 def _norm_words(text: str) -> str:

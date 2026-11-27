@@ -709,6 +709,78 @@ def _estimate_reference_ratio(text: str) -> float:
     return round(ref_chars / max(1, len(text)), 4)
 
 
+# ---------------------------------------------------------------- corpus patches (official errata)
+
+PATCH_FILE = "patches.json"
+PATCH_NOTE = "corrigé selon l'erratum officiel publié dans le même document ; texte initial"
+
+
+# patch id -> rendered replacement text (filled at load time, read by the chunker to record
+# which patch a chunk carries)
+RENDERED_PATCHES: dict[str, str] = {}
+
+
+class CorpusPatchError(RuntimeError):
+    """A corpus patch cannot be applied as written: ingestion must stop."""
+
+
+def render_patch(original: str, corrected: str) -> str:
+    """Corrected text that still shows the printed one: the changed words are followed by
+    « [corrigé selon l'erratum officiel publié dans le même document ; texte initial : « … »] ».
+    The changed span is widened to the number in front of a changed unit ("10 mg/kg")."""
+    a, b = original.split(" "), corrected.split(" ")
+    i = 0
+    while i < min(len(a), len(b)) and a[i] == b[i]:
+        i += 1
+    j = 0
+    while j < min(len(a), len(b)) - i and a[len(a) - 1 - j] == b[len(b) - 1 - j]:
+        j += 1
+    if i > 0 and re.fullmatch(r"[\d.,]+", a[i - 1]):
+        i -= 1
+    old_seg = " ".join(a[i : len(a) - j])
+    new_seg = " ".join(b[i : len(b) - j])
+    head = " ".join(b[:i])
+    tail = " ".join(b[len(b) - j :])
+    marked = f"{new_seg} [{PATCH_NOTE} : « {old_seg} »]"
+    return " ".join(x for x in (head, marked, tail) if x)
+
+
+def load_corpus_patches(updates_dir: Path | None) -> list[dict]:
+    if updates_dir is None or not (updates_dir / PATCH_FILE).exists():
+        return []
+    data = json.loads((updates_dir / PATCH_FILE).read_text(encoding="utf-8"))
+    return list(data.get("patches", []))
+
+
+def _patch_targets(patch: dict, md_path: Path, corpus_dir: Path) -> bool:
+    try:
+        rel = md_path.resolve().relative_to(corpus_dir.resolve()).as_posix()
+    except ValueError:
+        rel = md_path.as_posix()
+    return Path(patch["document"]).as_posix().endswith(rel)
+
+
+def apply_corpus_patches(raw_text: str, raw_bytes: bytes, patches: list[dict]) -> tuple[str, list[str]]:
+    """Apply exact, unique replacements to one source file; fail loudly when a patch no longer
+    matches (source SHA-256 changed, original string absent or not unique)."""
+    applied: list[str] = []
+    sha = hashlib.sha256(raw_bytes).hexdigest()
+    for p in patches:
+        pid = p.get("id", "?")
+        if p.get("document_sha256") and p["document_sha256"] != sha:
+            raise CorpusPatchError(
+                f"Patch {pid}: source file SHA-256 {sha} differs from {p['document_sha256']} ({p['document']})"
+            )
+        n = raw_text.count(p["original"])
+        if n != 1:
+            raise CorpusPatchError(f"Patch {pid}: original string found {n} times in {p['document']} (expected 1)")
+        rendered = render_patch(p["original"], p["corrected"])
+        raw_text = raw_text.replace(p["original"], rendered)
+        RENDERED_PATCHES[pid] = rendered
+        applied.append(pid)
+    return raw_text, applied
+
+
 def resolve_corpus_updates_dir(
     corpus_dir: Path, updates_dir: Path | None = None, use_corpus_updates: bool = True
 ) -> Path | None:
@@ -740,6 +812,11 @@ def corpus_updates_fingerprint(updates_dir: Path | None) -> dict | None:
         "manifest_sha256": hashlib.sha256(man_path.read_bytes()).hexdigest(),
         "files": files,
         "other_md_files": {n: hashlib.sha256((updates_dir / n).read_bytes()).hexdigest() for n in extra},
+        "patches_sha256": (
+            hashlib.sha256((updates_dir / PATCH_FILE).read_bytes()).hexdigest()
+            if (updates_dir / PATCH_FILE).exists()
+            else None
+        ),
     }
 
 
@@ -803,6 +880,8 @@ def load_sfar_corpus(
 
     loaded: list[LoadedDocument] = []
     seen_sha: dict[str, LoadedDocument] = {}
+    corpus_patches = load_corpus_patches(resolved_updates_dir)
+    patched_ids: set[str] = set()
 
     for entry in raw_docs:
         fn = entry.get("filename") or ""
@@ -816,7 +895,13 @@ def load_sfar_corpus(
         if md_path is None or not md_path.exists():
             continue
 
-        raw_text = md_path.read_text(encoding="utf-8", errors="ignore")
+        raw_bytes = md_path.read_bytes()
+        raw_text = raw_bytes.decode("utf-8", errors="ignore")
+        doc_patches = [p for p in corpus_patches if _patch_targets(p, md_path, corpus_dir)]
+        applied_patches: list[str] = []
+        if doc_patches:
+            raw_text, applied_patches = apply_corpus_patches(raw_text, raw_bytes, doc_patches)
+            patched_ids.update(applied_patches)
         cleaned_text = clean_chandra_markdown(raw_text)
 
         sha = entry.get("sha256") or hashlib.sha256(cleaned_text.encode("utf-8")).hexdigest()
@@ -886,6 +971,7 @@ def load_sfar_corpus(
             char_count=len(cleaned_text),
             table_count=table_count,
             reference_char_ratio=ref_ratio,
+            applied_patches=applied_patches,
         )
 
         # Deduplicate identical files by sha256 (prefer the copy with explicit raw_year)
@@ -901,6 +987,10 @@ def load_sfar_corpus(
         doc_obj = LoadedDocument(metadata=meta, text=cleaned_text)
         seen_sha[sha] = doc_obj
         loaded.append(doc_obj)
+
+    missing = [p.get("id", "?") for p in corpus_patches if p.get("id", "?") not in patched_ids]
+    if missing:
+        raise CorpusPatchError(f"Corpus patches whose source document was not loaded: {missing}")
 
     # Resolve longitudinal supersession across topic lineages
     _apply_temporal_supersession(loaded)

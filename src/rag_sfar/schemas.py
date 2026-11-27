@@ -76,6 +76,9 @@ class DocumentMetadata(BaseModel):
     superseded_by_year: int | None = None
     # Why this edition is considered superseded (rule and evidence), for review.
     supersession_evidence: str = ""
+    # Ids of the corpus patches (official errata, data/corpus_updates/patches.json) applied to
+    # this document's text at ingestion.
+    applied_patches: list[str] = Field(default_factory=list)
 
     # Clinical scope metadata
     population_scope: PopulationScope = "non_specifie"
@@ -146,6 +149,8 @@ class Chunk(BaseModel):
     reco_strength_raw: str = ""
     reco_agreement: str = ""
     reco_label: str = ""
+    # Corpus patches (official errata) whose corrected, visibly marked text is in this chunk.
+    corpus_patch_ids: list[str] = Field(default_factory=list)
 
 
 class QueryAnalysis(BaseModel):

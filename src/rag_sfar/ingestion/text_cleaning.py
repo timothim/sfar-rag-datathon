@@ -429,6 +429,13 @@ def convert_mermaid(text: str) -> str:
     return _MERMAID_BLOCK_RE.sub(lambda m: mermaid_block_to_text(m.group(1)) + "\n", text)
 
 
+# Strength glyph runs ("●●●", "◉◎◎", "●○○○") printed before a text grade: the OCR renders
+# them all the same whatever the grade, while the text label next to them is right. The glyphs
+# are dropped when a grade label follows, so the text never shows a glyph that contradicts it.
+_GRADE_GLYPHS_RE = re.compile(
+    r"[●◉◎○◯⬤]{2,5}[ \t]*(?=[\(\[]?[ \t]*(?:GRADE|Grade|Avis\s+d|AE\b|Accord|G[12][+\-−–]?\b))"
+)
+
 # "µ g/kg" (LaTeX "\\mu g") -> "µg/kg": the micro sign always belongs to the unit that follows.
 _MICRO_SPACE_RE = re.compile(r"µ[ \t]+(g|mg|mol|mmol|l|L|m|U|UI|s|V)\b")
 
@@ -446,6 +453,7 @@ def clean_chunk_text(text: str, nul_repairer: NulRepairer | None = None) -> str:
     text = collapse_list_markers(text)
     text = unicodedata.normalize("NFC", text)
     text = _MICRO_SPACE_RE.sub(r"µ\1", text)
+    text = _GRADE_GLYPHS_RE.sub("", text)
     text = re.sub(r"[ \t]{2,}", " ", text)
     text = re.sub(r" +\n", "\n", text)
     text = re.sub(r"\n{3,}", "\n\n", text)

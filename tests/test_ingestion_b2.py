@@ -287,3 +287,74 @@ def test_explicit_update_rule_ignores_bibliography_entries():
     )
     _apply_explicit_update_mentions([old, new])
     assert old.metadata.is_latest_edition is True
+
+
+# ---------------------------------------------------------------- corpus patches (official errata)
+
+
+def _write_patch_corpus(tmp_path, text: str, original: str, corrected: str, sha: str | None = None):
+    import hashlib
+    import json
+
+    corpus = tmp_path / "sfar" / "output"
+    md_dir = corpus / "chandra" / "2006" / "doc_alpha"
+    md_dir.mkdir(parents=True)
+    md = md_dir / "doc_alpha.md"
+    md.write_text(text, encoding="utf-8")
+    (corpus / "discovery.json").write_text(
+        json.dumps({"documents": [{"filename": "doc_alpha.pdf", "year": 2006, "title": "Document alpha", "sha256": "abc123"}]}),
+        encoding="utf-8",
+    )
+    upd = tmp_path / "updates"
+    upd.mkdir()
+    (upd / "updates_manifest.json").write_text(json.dumps({"documents": []}), encoding="utf-8")
+    patch = {
+        "id": "T-1",
+        "document": "x/chandra/2006/doc_alpha/doc_alpha.md",
+        "document_sha256": sha or hashlib.sha256(md.read_bytes()).hexdigest(),
+        "original": original,
+        "corrected": corrected,
+        "evidence": "erratum page 2",
+        "pdf_pages": [1, 2],
+    }
+    (upd / "patches.json").write_text(json.dumps({"patches": [patch]}), encoding="utf-8")
+    return corpus, upd
+
+
+def test_corpus_patch_is_applied_visibly_and_recorded(tmp_path):
+    from rag_sfar.ingestion.loader import PATCH_NOTE, load_sfar_corpus
+
+    text = "# Titre\n\nLa dose de la molécule A est de 10 mg/kg en intraveineux.\n"
+    corpus, upd = _write_patch_corpus(tmp_path, text, "est de 10 mg/kg en", "est de 10 µg/kg en")
+    docs = load_sfar_corpus(corpus, updates_dir=upd)
+    d = docs[0]
+    assert d.metadata.applied_patches == ["T-1"]
+    assert "10 µg/kg [" + PATCH_NOTE + " : « 10 mg/kg »] en intraveineux" in d.text
+    chunks = chunk_corpus(docs, options=ChunkOptions())
+    assert any(c.corpus_patch_ids == ["T-1"] for c in chunks)
+
+
+def test_corpus_patch_fails_loudly_on_sha_mismatch_or_non_unique_original(tmp_path):
+    import pytest
+
+    from rag_sfar.ingestion.loader import CorpusPatchError, load_sfar_corpus
+
+    corpus, upd = _write_patch_corpus(tmp_path, "A 10 mg. B.\n", "10 mg", "10 µg", sha="0" * 64)
+    with pytest.raises(CorpusPatchError):
+        load_sfar_corpus(corpus, updates_dir=upd)
+
+
+def test_corpus_patch_fails_when_original_is_not_unique(tmp_path):
+    import pytest
+
+    from rag_sfar.ingestion.loader import CorpusPatchError, load_sfar_corpus
+
+    corpus, upd = _write_patch_corpus(tmp_path, "A 10 mg. B 10 mg.\n", "10 mg", "10 µg")
+    with pytest.raises(CorpusPatchError):
+        load_sfar_corpus(corpus, updates_dir=upd)
+
+
+def test_strength_glyphs_dropped_before_a_grade_label_only():
+    out = clean_chunk_text("Molécule A | ●●● (GRADE 2) | [◉◎◎ (Avis d'experts)] | ○○ case vide | ○ Patients")
+    assert "●" not in out and "◉" not in out
+    assert "(GRADE 2)" in out and "(Avis d'experts)" in out and "○○ case vide" in out and "○ Patients" in out
