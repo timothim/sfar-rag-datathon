@@ -62,3 +62,4 @@ reports/masterclass_course.html
 eval/datasets/abpe171.jsonl
 eval/splits/abpe171/
 .gpu_lock/
+.gpu_queue/
