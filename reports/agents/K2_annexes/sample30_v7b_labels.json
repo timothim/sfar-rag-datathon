@@ -1,0 +1,9 @@
+{"seed": 27, "script": "sample_changed.py tas_v6 tas_v7b 30", "labels": {
+"1": "better", "2": "better", "3": "better", "4": "better", "5": "better (type); grade sign with en dash still lost",
+"6": "worse: method paragraph typed recommendation", "7": "better", "8": "worse: method paragraph typed recommendation",
+"9": "better", "10": "better", "11": "better", "12": "better", "13": "better", "14": "better (note -> recommendation)",
+"15": "better (grade now in chunk)", "16": "better (grade now in chunk)", "17": "worse: PICO text with 'no recommendation' typed recommendation, carries the next grade",
+"18": "worse: argument text typed recommendation", "19": "better", "20": "better", "21": "better", "22": "better", "23": "better",
+"24": "better", "25": "better", "26": "better", "27": "better (type); 'Grade AE' not read", "28": "better", "29": "better",
+"30": "worse: method paragraph (English) typed recommendation"},
+"summary": {"better": 25, "same": 0, "worse": 5}}

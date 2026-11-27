@@ -32,5 +32,22 @@
   "chunks_ge2_stmts": 324,
   "chunks_ge2_stmts_diff_grades": 115,
   "chunks_under_grade_heading": 34
+ },
+ "tas_v7b": {
+  "recommendation_box": 1466,
+  "grade_levels_nonempty": 5773,
+  "ref_flagged": 2736,
+  "unflagged_biblio_like": 1107,
+  "stmts": 1698,
+  "stmt_grade_same_chunk": 1409,
+  "stmt_typed_recommendation": 1432,
+  "stmt_typed_note": 3,
+  "G1:stmts": 1299,
+  "G1:stmt_grade_same_chunk": 1097,
+  "G1:stmt_typed_recommendation": 1131,
+  "G1:stmt_typed_note": 2,
+  "chunks_ge2_stmts": 324,
+  "chunks_ge2_stmts_diff_grades": 115,
+  "chunks_under_grade_heading": 34
  }
 }

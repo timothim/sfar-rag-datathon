@@ -1,0 +1,2132 @@
+{
+"total": {
+"identical": 36101,
+"retyped": 559,
+"removed": 212,
+"added": 177,
+"section_path_changed": 272,
+"is_ref_changed": 0
+},
+"per_doc": {
+"1996_2b_AFAR_Texte-Long_Intubation-difficile_850d77": {
+"identical": 478,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2000_2_SFAR_Corticotherapie-au-cours-du-choc-septique-et-du-SDRA_5a9d32": {
+"identical": 18,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2000_2_SFAR_Recommandations-pour-les-structures-et-le-materiel-de-lan_140c93": {
+"identical": 34,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2001_196-reco-anesth-chir-autres-2001_8a8dc3": {
+"identical": 86,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2001_2_AFAR_Les-blocs-peripheriques-des-membres-chez-l-adulte_9b260f": {
+"identical": 123,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2001_2_SFAR_Sevrage-de-la-ventilation-mecanique_edbac5": {
+"identical": 48,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2001_2a_SFAR-Francais_9076ff": {
+"identical": 40,
+"retyped": 2,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2001_2b_SFAR-Anglais_7075ff": {
+"identical": 57,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2001_Annales-de-Readaptation-et-de-Medecine-Physique_Les-traumatises-_15d654": {
+"identical": 53,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2001_Dossier-AnesthRea-SFAR_e8d945": {
+"identical": 387,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2001_art54_dossieraranncomplet_df1465": {
+"identical": 80,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2001_art54_dossieraranninform_da0124": {
+"identical": 99,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2001_art54_dossierarannperpost_d24207": {
+"identical": 78,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2001_art54_dossierarannpre_a530d4": {
+"identical": 97,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2001_cc_pancreatiteaigue20010_942691": {
+"identical": 51,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2002_1-s2_0-S1624069303000513-main_d3592a": {
+"identical": 47,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2002_200502-Recommandations_SFAR_SRLF-OrganisationDesUSC_67c880": {
+"identical": 9,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2002_2_AFAR_Thrombopenie-induite-par-lheparine_7850bd": {
+"identical": 68,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2002_86-civdccons_d0a5c8": {
+"identical": 22,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2002_REANIMATION_Prise-en-charge-des-crises-dasthme-aigues-graves-de-_4ff021": {
+"identical": 55,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2002_ReferentielcompetencesIDEReanimation_78b782": {
+"identical": 73,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2003_1-2a_SFAR_Texte-court-Controle-des-voies-aeriennes-en-anesthesie_e5475e": {
+"identical": 31,
+"retyped": 1,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2003_2_AFAR_Prise-en-charge-d-un-blesse-adulte-presentant-un-traumati_6eb395": {
+"identical": 150,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2003_2b_AFAR_Texte-Long__ff2a6f": {
+"identical": 130,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2003_MANIFESTEformationIDEReanimation_1052b2": {
+"identical": 16,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2003_Recommandations-concernant-la-mise-en-place-la-gestion-l-utilisa_91d9a1": {
+"identical": 35,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2004_2_AFAR_Antibiotherapie-probabiliste-des-etats-septiques-graves_40b8e3": {
+"identical": 52,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2004_2_AFAR_Pratique-des-anesthesies-locales-et-locoregionales-par-de_2ac61d": {
+"identical": 86,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2004_2_SFAR_Prise-en-charge-des-candidoses-et-aspergilloses-invasives_d7c8a9": {
+"identical": 52,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2004_2_SFAR_Traitement-des-urgences-transfusionnelles-obstetricales_8666e9": {
+"identical": 28,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2004_2a_SFAR_texte-court_Hemorragies-sous-arachnoidienne_c64687": {
+"identical": 70,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2004_2b_AFAR_texte-long_Hemorragies-sous-arachnoidienne_5ab378": {
+"identical": 515,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2005_122-recosfdv0606_ce421b": {
+"identical": 43,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2005_2_AFAR_Prise-en-charge-des-sujets-en-etat-de-mort-encephalique-d_c953e6": {
+"identical": 46,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2005_2a_SFAR_TEXTE-COURT_Anesthesie-pour-amygdalectomie-chez-lenfant_cf569a": {
+"identical": 37,
+"retyped": 1,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2005_2a_TEXTE-COURT_Prise-en-charge-hemodynamique-du-sepsis-grave_7be090": {
+"identical": 20,
+"retyped": 2,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2005_2b_AFAR_TEXTE-LONG_Anesthesie-pour-amygdalectomie-chez-lenfant_f868e3": {
+"identical": 253,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2005_2b_TEXTE-LONG_AFAR_Prise-en-charge-hemodynamique-du-sepsis-grave_0130f3": {
+"identical": 107,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2006_2C_SFAR_EPP_Ventilation-Non-Invasive-au-cours-del-insuffisance-r_c39419": {
+"identical": 57,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2006_2_AFAR_Blocs-perimedullaires-chez-ladulte_c289cc": {
+"identical": 251,
+"retyped": 14,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2006_2_AFAR_Gestion-du-traitement-anti-plaquettaire-_07c550": {
+"identical": 17,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2006_2_AFAR_Prise-en-charge-de-larret-cardiaque-1_c70196": {
+"identical": 69,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2006_2_AFAR_Prise-en-charge-initiale-des-etats-septiques-graves-de-la_78dfac": {
+"identical": 250,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2006_2_SFAR_texte-court_Monitorage-du-patient-traumatise-grave-en-pre_392959": {
+"identical": 57,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2006_2a_HAS_TEXTE-COURT_Prise-en-charge-de-linfarctus-du-myocarde_110064": {
+"identical": 93,
+"retyped": 1,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2006_2a_SFAR_texte-court_Ventilation-Non-Invasive-au-cours-del-insuff_79b8d5": {
+"identical": 42,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2006_2a_SFAR_texte_court_Intubation-difficile_168b4a": {
+"identical": 32,
+"retyped": 2,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2006_2b_HAS_TEXTE-LONG_Prise-en-charge-de-linfarctus-du-myocarde_ba86c1": {
+"identical": 227,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2006_2b_SFAR_texte-long_Ventilation-Non-Invasive-au-cours-del-insuffi_4c6fe6": {
+"identical": 25,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2006_preverreurmedic_recos_8e85cf": {
+"identical": 34,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2007_2_AFAR_Prise-en-charge-des-nausees-et-vomissements-postoperatoir_a6f4bb": {
+"identical": 107,
+"retyped": 5,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2007_2a_AFAR_Texte_court_Sedation-et-analgesie-en-reanimation_nouveau_d272be": {
+"identical": 33,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2007_2b_AFAR_aspet-pediatriques_d85e1f": {
+"identical": 122,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2007_2c_AFAR_Texte_long_Sedation-et-analgesie-en-reanimation_nouveau-_1eab5a": {
+"identical": 124,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2007_Organisation-et-Structuration-de-l-Hopital-en-cas-de-pandemie-de_23dabc": {
+"identical": 73,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2008_2_AFAR_Prevention-des-infections-nosocomiales-en-reanimation-tra_c75100": {
+"identical": 73,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2008_2_AFAR_Recommandations-sur-les-indications-de-lassistance-circul_dacd7e": {
+"identical": 27,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2008_2_HAS_Prise-en-charge-des-surdosages-en-antivitamines-K_277613": {
+"identical": 161,
+"retyped": 2,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2008_2a_AFAR_Prise-en-charge-de-la-douleur-postoperatoire-chez-ladult_b84fff": {
+"identical": 47,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2008_2a_AFAR_Texte_court_Securisation-des-procedures-a-risques-en-rea_632cc7": {
+"identical": 44,
+"retyped": 4,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2008_2b_AFAR_ANGLAISEExpert-panel-guidelines-2008_-Postoperative-pain_90ce22": {
+"identical": 42,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2008_2b_AFAR_texte-long_Securisation-des-procedures-a-risques-en-rean_ac3a62": {
+"identical": 409,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2008_3_REANIMATION_Prise-en-charge-en-situation-durgence-et-en-reanim_61409b": {
+"identical": 52,
+"retyped": 5,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2008_livretadaptationIDEReanimation_d1306f": {
+"identical": 233,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2009_2_AFAR_Gestion-perioperatoire-des-traitements-chroniques-et-disp_38a32f": {
+"identical": 281,
+"retyped": 29,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2009_2_AFAR_Mieux-vivre-la-reanimation_8ed1f4": {
+"identical": 83,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2009_2_AFAR_Prise-en-charge-anesthesique-des-patients-en-hospitalisat_038f21": {
+"identical": 38,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2009_2_HAS_Accident-vasculaire-cerebral-prise-en-charge-precoce_d95bcf": {
+"identical": 117,
+"retyped": 5,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2009_2_SFAR_Prise-en-charge-pre-et-interhospitaliere-des-formes-grave_70a9a3": {
+"identical": 60,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2009_2a_AFAR_UPDATE_Controle-de-la-glycemie-en-reanimation-et-en-anes_1966bb": {
+"identical": 8,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2009_2b_AFAR_Contrele-de-la-glycemie-en-reanimation-et-en-anesthesie__5f7048": {
+"identical": 38,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2010_2_AFAR_Nutrition-artificielle-perioperatoire-en-chirurgie-progra_5c9884": {
+"identical": 71,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2010_2_AFAR_Prise-en-charge-du-coronarien-qui-doit-etre-opere-en-chir_59da99": {
+"identical": 146,
+"retyped": 29,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2010_2_AFAR_Sedation-analgesie-en-structure-d-urgence_f6f9b2": {
+"identical": 73,
+"retyped": 10,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2010_2_AFAR_Urgences-Obstetricales-Extrahospitalieres_47ad85": {
+"identical": 99,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2010_2_ANAES_Prise-en-charge-de-l-interruption-volontaire-de-grossess_06d022": {
+"identical": 32,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2010_2_SFAR_Anesthesie-loco-regionale-en-pediatrie_626352": {
+"identical": 56,
+"retyped": 1,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2010_2_SFAR_Monitorage-de-ladequation-profondeur-de-lanesthesie-a-par_33e093": {
+"identical": 38,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2010_2a_HAS_texte-court_Delivrance-de-linformation-a-la-personne-sur-_a3d9aa": {
+"identical": 100,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2010_2b_HAS_Texte_Long-Delivrance-de-l-information-a-la-personne-sur-_7d3a7b": {
+"identical": 587,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2011_2_AFAR_Prevention-de-la-maladie-thromboembolique-veineuse-postop_da2bda": {
+"identical": 46,
+"retyped": 4,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2011_2_AFAR_Prevention-du-risque-allergique-peranesthesique_5c26e4": {
+"identical": 107,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2011_2_AFAR_Transport-intrahospitalier-des-patients-a-risque-vital_2f8adb": {
+"identical": 47,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2011_2_AFAR_echographie-en-anesthesie-locoregionale_c3717d": {
+"identical": 16,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2012_2_AFAR_COURT_Bris-dentaires-perianesthesiques-copie_e84cfe": {
+"identical": 22,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2012_2_HAS_Texte-court-ransfusion-de-plasma-therapeutique-Produits-in_d3f086": {
+"identical": 116,
+"retyped": 4,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2012_2a_AFAR_FRANCAIS_Strategie-du-remplissage-vasculaire-perioperato_28a916": {
+"identical": 64,
+"retyped": 9,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2012_2b_AFAR_ANGLAIS_Strategie-du-remplissage-vasculaire-perioperatoi_d314a2": {
+"identical": 69,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2012_3_AFAR_LONG_Bris-dentaires-perianesthesiques-copie_ba6aca": {
+"identical": 80,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2012_AFAR_Examens-preinterventionnels-systematiques_a99473": {
+"identical": 98,
+"retyped": 6,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2013_2013_20AFAR_20GIHP_c80a1a": {
+"identical": 73,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2013_2_PUROL_Recommandations-chirurgie-ambulatoire-en-urologie_e45cde": {
+"identical": 637,
+"retyped": 43,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2013_2_SFAR_HyperthermieMaligne_088c5f": {
+"identical": 29,
+"retyped": 1,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2013_2a_AFAR_Techniques-analgesiques-locoregionales-et-douleur-chroni_e21315": {
+"identical": 71,
+"retyped": 3,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2013_2b_Annexe_SFAR_TableauxRFEDCALR2_145d45": {
+"identical": 550,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2014_2_AFAR_Nutrition-artificielle-en-reanimation_19562a": {
+"identical": 101,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2014_2_AFAR_Recommandations-sur-la-reanimation-du-choc-hemorragique_a38f8d": {
+"identical": 74,
+"retyped": 14,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2014_2_AFAR_Rehabilitation-rapide-apres-une-chirurgie-colorectale-pro_84aad5": {
+"identical": 86,
+"retyped": 30,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2014_2_AFAR_Traumatisme-thoracique-_prise-en-charge-des-48-premieres-_628f20": {
+"identical": 75,
+"retyped": 28,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2014_2_HAS_transfusion_de_globules_rouges_homologues_-_produits_indic_57ad8e": {
+"identical": 456,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2014_2_REANIMATION_epuration-extrarenale-en-reanimation-adulte-et-ped_3d36e4": {
+"identical": 135,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2014_2_SPILF_Strategies-de-reduction-de-lutilisation-des-antibiotique_911598": {
+"identical": 139,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2014_RFE-Chest-trauma-First-48-hours-management_f0ae0c": {
+"identical": 57,
+"retyped": 18,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2014_Recommandation_Prise_en_charge_douleurs_induites_par_traitement__eb3eb3": {
+"identical": 154,
+"retyped": 22,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2014_Recommandation_antalgique_post_amygdalectomie_2014_TC2_9ae464": {
+"identical": 217,
+"retyped": 7,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2015_2_AFAR_Prise-en-charge-des-infections-intra-abdominales_b6b3b6": {
+"identical": 127,
+"retyped": 14,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2015_2_AFAR_utilisation-de-lechographie-lors-de-la-mise-en-place-des-_00a54f": {
+"identical": 28,
+"retyped": 11,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2015_ANREA_132_RFE-IRA-_52a541": {
+"identical": 125,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2015_BJA-2015-reco-ventilation-et-IOT1_3dc76f": {
+"identical": 125,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2015_RECOCHIRAMBUSNFCP-120315_de5fbe": {
+"identical": 17,
+"retyped": 13,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2015_RFE-Guidelines-for-management-of-intra-abdominal-infections_ad0c77": {
+"identical": 79,
+"retyped": 28,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2015_RFE-Guidelines-on-the-use-of-ultrasound-guidance-for-vascular-ac_c21a96": {
+"identical": 49,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2015_RFE-IRA-anglais_d71652": {
+"identical": 142,
+"retyped": 1,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2015_Reactualisation-GIHP_AOD_actes-programmes_Septembre-20151_33c9a7": {
+"identical": 35,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2016_2-SFAR-RFE-tabac_proposition-CRC_a9f16a": {
+"identical": 170,
+"retyped": 5,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2016_3-Tableaux-Reactualisation-de-la-recommandation-sur-la-douleur-p_7b4c8a": {
+"identical": 419,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2016_Anti-Tabac-Pour-un-parcours-patient-securise-1-Sans-fond_3ce364": {
+"identical": 2,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2016_Anti-Tabac-Pour-un-parcours-patient-securise-1_658edf": {
+"identical": 2,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2016_Anti-Tabac-Pour-un-parcours-patient-securise-2-Sans-fond_da62ae": {
+"identical": 2,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2016_Anti-Tabac-Pour-un-parcours-patient-securise-2_f264e3": {
+"identical": 2,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2016_Intubation-et-extubation-du-patient-en-reanimation-ANREA_58d44e": {
+"identical": 156,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2016_Protection-oculaire-en-Anesthesie-et-Reanimation-1_e0c352": {
+"identical": 61,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2016_RFE-ACCPM-Eye-protection-in-anaesthesia-and-intensive-care_fdf503": {
+"identical": 67,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2016_RFE-ANREA-Organisation-de-l-anesthesie-reanimation-obstetricale_5a9973": {
+"identical": 35,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2016_RFE-ANREA-Prise-en-charge-des-traumatises-craniens-graves-a-la-p_966f8c": {
+"identical": 137,
+"retyped": 1,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2016_RFE-ANREA-Reactualisation-de-la-recommandation-sur-la-douleur-po_c27829": {
+"identical": 55,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2016_RFE-Guidelines-on-smoking-management-during-the-perioperative-pe_2ae3ce": {
+"identical": 41,
+"retyped": 4,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2016_RFE-Intubation-and-extubation-of-the-ICU-patient_a16473": {
+"identical": 116,
+"retyped": 2,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2016_RFE-Management-of-severe-traumatic-brain-injury_1b54e3": {
+"identical": 111,
+"retyped": 1,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2016_RFE-Targeted-temperature-management-in-the-ICU-Guidelines-from-a_85b636": {
+"identical": 74,
+"retyped": 1,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2016_preparation-colique-anesthesie-generale_47550d": {
+"identical": 27,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2016_rfe-anesthesie-loco-regionale-perinerveuse_bd75e5": {
+"identical": 54,
+"retyped": 1,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2016_rfe-controle-cible-de-la-temperature-en-reanimation_a712c2": {
+"identical": 122,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2016_rfe-revision-of-expert-panel-guidelines-on-postoperative-pain-ma_8e6a11": {
+"identical": 47,
+"retyped": 5,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2016_texte-court-preco-erreurs-med-2016-SFAR-SFPC-version-finale-25-o_9787c5": {
+"identical": 32,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2016_texte-long-Preconisations-2016-erreurs-med-SFAR-SFPC-version-fin_32ecd9": {
+"identical": 213,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2017_2_RFE-EC-en-rea-version-15-12-16_cdc74d": {
+"identical": 73,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2017_Antibioprophylaxie-version-2017-CRC_CA_MODIF_ecc6c7": {
+"identical": 218,
+"retyped": 5,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2017_Pneumonies-associees-au-soins-de-reanimation-ANREA_c53a1e": {
+"identical": 154,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2017_RFE-ANREA-Intubation-difficile-et-extubation-en-anesthesie-chez-_71af0f": {
+"identical": 91,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2017_RFE-Hospital-acquired-pneumonia-in-ICU_e091db": {
+"identical": 156,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2017_Tracheotomie-en-reanimation-ANREA_404540": {
+"identical": 83,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2017_Tracheotomy-in-the-ICU-ACCPM_491ddc": {
+"identical": 77,
+"retyped": 1,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2017_rfe-anesthesie-du-sujet-age_57537e": {
+"identical": 109,
+"retyped": 1,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2017_rfe-antibioprophylaxie-in-surgery-and-interventional-medicine_643bc8": {
+"identical": 238,
+"retyped": 5,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2017_rfe-early-management-of-severe-pelvic-injury_9c8ee2": {
+"identical": 51,
+"retyped": 16,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2017_rfe-prise-en-charge-des-traumatises-pelviens-graves-a-la-phase-p_a08dc6": {
+"identical": 95,
+"retyped": 1,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2018_2_Gestion-des-agents-antiplaquettaires-pour-une-procedure-invasi_89e3af": {
+"identical": 101,
+"retyped": 2,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2018_2_RFE-CURARE-3_4eac96": {
+"identical": 158,
+"retyped": 0,
+"removed": 2,
+"added": 2,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2018_2_RFE-Hypothermie-Version-Finale-_-Validee-CRC120618_f30664": {
+"identical": 87,
+"retyped": 12,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2018_2_Recos-Org-Blocs-moteurs-SOFMER-SFAR_994996": {
+"identical": 183,
+"retyped": 1,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2018_2_Recos-SDRA_a93bac": {
+"identical": 74,
+"retyped": 2,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2018_ACCPM-335_e0976b": {
+"identical": 83,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2018_Antibioprophylaxie-RFE-mise-a-jour-2018_c6a5c4": {
+"identical": 232,
+"retyped": 5,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2018_EXTE-USC-CNP_7fb6b6": {
+"identical": 175,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2018_RFE-IH-soins-critiques_f67e16": {
+"identical": 185,
+"retyped": 3,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2018_RPP_beta-lactamines-en-soins-critiques_041018_logoSFPT_9e9437": {
+"identical": 192,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2018_management-of-antiplatelet-therapy-for-non-elective-invasive-pro_5c71cb": {
+"identical": 118,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2018_rfe-gestion-des-agents-antiplaquettaires_2e0942": {
+"identical": 141,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2018_rfe-gestion-des-voies-aeriennes-de-lenfant_3f7a1f": {
+"identical": 93,
+"retyped": 12,
+"removed": 1,
+"added": 1,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2019_Recommandations-incendies-France_e1db51": {
+"identical": 21,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2019_diagnostic-et-prise-ne-charge-dune-TIH_cde74d": {
+"identical": 206,
+"retyped": 3,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2019_fm_ponction_lombaire_ab6019": {
+"identical": 34,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2019_liste-des-centres-de-traitement-des-brules-francais-et-transfron_14b84c": {
+"identical": 29,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2019_propositions-tih-gihp-gfht-sfar_20_7a3660": {
+"identical": 206,
+"retyped": 3,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2019_rac-orthepedie-lourde_bc800f": {
+"identical": 153,
+"retyped": 11,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2019_rfe-anemie-arbre-diagnostic-anemie_664418": {
+"identical": 4,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2019_rfe-gestion-anemie-reanimation_03645b": {
+"identical": 89,
+"retyped": 1,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2019_rfe-interets-de-lapprentissage-par-simulation-en-soins-critiques_3d1b9f": {
+"identical": 132,
+"retyped": 4,
+"removed": 20,
+"added": 18,
+"section_path_changed": 7,
+"is_ref_changed": 0
+},
+"2019_rfe-rac-lobectomie-pulmonaire_ee63af": {
+"identical": 214,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2019_rfe-trauma-abdominal-fiche-synthese_4abf14": {
+"identical": 4,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2019_rfe-trauma-abdominale_656ac9": {
+"identical": 86,
+"retyped": 3,
+"removed": 5,
+"added": 5,
+"section_path_changed": 17,
+"is_ref_changed": 0
+},
+"2019_rfe-trauma-vertebro-medulaire_b7be1a": {
+"identical": 97,
+"retyped": 1,
+"removed": 1,
+"added": 1,
+"section_path_changed": 2,
+"is_ref_changed": 0
+},
+"2019_rfe-vertebro-medullaire-fiche-synthese_e042e3": {
+"identical": 5,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2019_rpp-hyperthermie-maligne_ca17f7": {
+"identical": 33,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2019_rpp-hyperthermie-malinge-fiches-synthese_183c2b": {
+"identical": 7,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2019_rpp-prise-en-charge-du-brule-grave_20_e49758": {
+"identical": 116,
+"retyped": 1,
+"removed": 9,
+"added": 6,
+"section_path_changed": 13,
+"is_ref_changed": 0
+},
+"2019_rpp-urgence-brule-fiches-synthese_7eb1e1": {
+"identical": 39,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2020_RFE-pre-eclampsie_Fiches-pratiques_2e9124": {
+"identical": 10,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2020_RFE_20pr_C3_A9-_C3_A9clampsie_finale_8989f8": {
+"identical": 142,
+"retyped": 1,
+"removed": 10,
+"added": 9,
+"section_path_changed": 3,
+"is_ref_changed": 0
+},
+"2020_RFE_TSM_2020_48fd8d": {
+"identical": 167,
+"retyped": 3,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2020_RFE_TSM_Fiches_pratiques_005553": {
+"identical": 34,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2020_RPP_PLYO_2020_a9118d": {
+"identical": 85,
+"retyped": 6,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2020_Traitement_20antidoagulants_20patients_20COVID-19_9400a4": {
+"identical": 27,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2020_covid-19-evaluation-du-risque-covid-19-et-impact-sur-la-prise-en_5e6bf6": {
+"identical": 45,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2020_covid-19-rfe-reanimation_2c7bbc": {
+"identical": 154,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2021_Document_20Patient_20pour_20CAMR_20mars_202021_c59241": {
+"identical": 5,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2021_Examen_20clinique_20Visio_20CAMR_20mars_202021_e65786": {
+"identical": 5,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2021_Facturation_20TLC_20CAMR_20mars_202021_29768e": {
+"identical": 4,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2021_GIHP_20thrombose_20post_20vaccination_20_940111": {
+"identical": 1,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2021_Gestion_20perioperatoire_20des_20patients_20sous_20AAP_20en_20ur_5a9220": {
+"identical": 139,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2021_Gestion_20perioperatoire_20des_20patients_20sous_20AOD_20en_20ur_30205c": {
+"identical": 74,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2021_Gestion_20perioperatoire_20des_20patients_20sous_20AOD_20pour_20_ecd95a": {
+"identical": 32,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2021_Prise_20en_20charge_20en_20urgence_20Thromboses_20post_20vaccina_7ec8dc": {
+"identical": 2,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2021_Proposition_20fiche_20TLC_20CAMR_20mars_202021_0ddb96": {
+"identical": 8,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2021_Propositions_20GIHP_20GFHT_202021-combin_C3_A9_d07531": {
+"identical": 54,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2021_RFE-SFAR-SFMU-Solute_CC_81s-de-remplissage_finale_220921_c91c4c": {
+"identical": 90,
+"retyped": 1,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2021_RFE_20SFAR-SF2H_20Tenue_20vestimentaire_20au_20bloc_finale_22092_6d5cef": {
+"identical": 82,
+"retyped": 0,
+"removed": 3,
+"added": 2,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2021_RFE_20SFAR-SFCTCV_20RAC_20chirurgie_20cardiaque_finale_220921_cd842e": {
+"identical": 255,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2021_RFE_20SFAR_20pancreatite_20aigue_finale_220921_b98663": {
+"identical": 161,
+"retyped": 1,
+"removed": 4,
+"added": 2,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2021_Tests_20viscoelastiques_202018_ba60e3": {
+"identical": 84,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2021_fonctionnalites_20des_20plateformes_20de_20TLC_20CAMR_20mars_202_29f680": {
+"identical": 2,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2021_preconisations-inssuffisance-d-analgesie-cesarienne-sous-anesthe_416887": {
+"identical": 42,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2022_RFE-Programme-doptimisation-perioperatoire_pour-mise-sur-site_26_6ede19": {
+"identical": 267,
+"retyped": 1,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2022_RPP-FHS_pour-mise-sur-site_014032": {
+"identical": 315,
+"retyped": 0,
+"removed": 6,
+"added": 4,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2022_RPP-SFAR-COVID_Version-Avril-2022_abrogee-010723_682252": {
+"identical": 307,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2022_RPP-Trauma-cranien-leger_pour-mise-sur-site_autorship-complet_9c1d68": {
+"identical": 95,
+"retyped": 0,
+"removed": 15,
+"added": 14,
+"section_path_changed": 29,
+"is_ref_changed": 0
+},
+"2022_RPP-reduction-impact-environnemental_pour-mise-sur-site_b22db8": {
+"identical": 145,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2022_RPP-thrombectomie-2022_version-definitive-octobre-2022_103478": {
+"identical": 124,
+"retyped": 0,
+"removed": 4,
+"added": 3,
+"section_path_changed": 9,
+"is_ref_changed": 0
+},
+"2022_RPP_20SFAR_20COVID_Version_20Avril_202022_finale_20sans_20marque_c5bf31": {
+"identical": 307,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2022_rpp-urgences-obstetricales-en-medecine-durgence_32dd15": {
+"identical": 87,
+"retyped": 0,
+"removed": 13,
+"added": 10,
+"section_path_changed": 3,
+"is_ref_changed": 0
+},
+"2023_RPP-Anestheesie-adulte-porteur-CC_fiches-pratiques_pour-mise-sur_66f943": {
+"identical": 67,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2023_RPP-Anesthesie-adulte-porteur-de-CC_pour-mise-sur-site_6601a6": {
+"identical": 169,
+"retyped": 0,
+"removed": 11,
+"added": 8,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2023_RPP-Organisation-Anesthesie-Pediatrique_-Version-pour-mise-sur-s_1a40f2": {
+"identical": 236,
+"retyped": 0,
+"removed": 4,
+"added": 4,
+"section_path_changed": 2,
+"is_ref_changed": 0
+},
+"2023_RPP-epanchement-pleural-2023_mise-sur-site-_e86215": {
+"identical": 146,
+"retyped": 0,
+"removed": 6,
+"added": 5,
+"section_path_changed": 23,
+"is_ref_changed": 0
+},
+"2024_2024_RFE-optimisation-hemodynamique-perioperatoire_adulte-dont-o_520b05": {
+"identical": 202,
+"retyped": 1,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2024_240516-Txt-definitif-_6379ef": {
+"identical": 370,
+"retyped": 1,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2024_Algorithmes_RFE-gestion-de-lanticoagulation-dans-un-contexte-dur_5ab803": {
+"identical": 35,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2024_PEDIA_RPP-Optimisation-Hemodynamique-Perioperatoire_Pediatrie_c6d39a": {
+"identical": 124,
+"retyped": 0,
+"removed": 2,
+"added": 1,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2024_RBP-deimarches-anticipeies_12_10_24_850fdd": {
+"identical": 87,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2024_RFE-gestion-de-lanticoagulation-dans-un-contexte-durgence_23_02__d0368c": {
+"identical": 299,
+"retyped": 0,
+"removed": 8,
+"added": 5,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2024_RPP-Prevention-des-erreurs-medicamenteuses_39d8ef": {
+"identical": 262,
+"retyped": 0,
+"removed": 15,
+"added": 15,
+"section_path_changed": 62,
+"is_ref_changed": 0
+},
+"2024_RPP-RH-AR-validee-CA-SFAR-191224-_994758": {
+"identical": 49,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2025_2025_RFE-Intubation-adulte-hors-bloc-hors-rea-_f68924": {
+"identical": 369,
+"retyped": 2,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2025_2025_SFAR-SFA_RFE-Diagnostic-et-prise-en-charge-des-reactions-dh_66bc8a": {
+"identical": 617,
+"retyped": 1,
+"removed": 5,
+"added": 5,
+"section_path_changed": 4,
+"is_ref_changed": 0
+},
+"2025_Fiches-simplifiees-19122025-_21fc82": {
+"identical": 81,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2025_Figure-1-Fiche-synthese-FR_95dfa6": {
+"identical": 17,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2025_RBP_-SFAR_AFEF_ACHBPT_RESECTION_-HEPATIQUE_-ARGUMENTAIRE_VF-1-AB_2e42b6": {
+"identical": 586,
+"retyped": 0,
+"removed": 2,
+"added": 1,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2025_RESECTION_-HEPATIQUE_-RECOMMANDATIONS_MEL_e8bdcf": {
+"identical": 333,
+"retyped": 0,
+"removed": 2,
+"added": 1,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2025_RFE-analgesie-obstetricale-texte-court_51af4c": {
+"identical": 243,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2025_RFE-analgesie-obstetricale-texte-long_172a5f": {
+"identical": 572,
+"retyped": 1,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2025_RPP-Trauma-cranio-encephaliques-V1-finalisee_ea8aab": {
+"identical": 171,
+"retyped": 30,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2025_argu_sepsis_a5219e": {
+"identical": 747,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2025_fiche_sepsis_amont_a60630": {
+"identical": 17,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2025_fiche_sepsis_aval_615ce6": {
+"identical": 9,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2025_reco_sepsis_367583": {
+"identical": 315,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2026_1_algorithme-difficultes_previsibles_gestion_voies_aeriennes_adu_8a521f": {
+"identical": 5,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2026_2_algorithme_gestion_des_voies_aeriennes_adulte___strategie_en_a_b9c001": {
+"identical": 2,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2026_3_aide_cognitive_realisation_intubation_tracheale_ventilation_sp_77fd53": {
+"identical": 9,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2026_4_cricothyroidotomie_par_technique_sms_82344e": {
+"identical": 13,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2026_5_aide_cognitive_a_la_realisation_dun_briefing_11fee7": {
+"identical": 7,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2026_6_aide_cognitive_a_la_realisation_dun_debriefing_2ddded": {
+"identical": 6,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2026_7_certificat_de_voies_aeriennes_difficiles_61e5a6": {
+"identical": 21,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2026_ACAR-Intubation-difficile-en-apnee-au-bloc_30f312": {
+"identical": 7,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2026_Aides-cognitives-Organisation-de-la-prise-en-charge-des-urgences_6b19cd": {
+"identical": 43,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2026_Aides-cognitives-Organisation-de-la-prise-en-charge-des-urgences_6c0d00": {
+"identical": 7,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2026_Figures-RFE-Nutrition_ed4149": {
+"identical": 18,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2026_RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-ARGUMENTAIRE_CD_2026_f46e3f": {
+"identical": 483,
+"retyped": 0,
+"removed": 2,
+"added": 1,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2026_RFE-20_4_2026-deifinitif-et-validei_1b550e": {
+"identical": 710,
+"retyped": 1,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2026_RFE-Infections-intra-abdominales-version-lecture-doc-finale-14-0_7f27c6": {
+"identical": 421,
+"retyped": 0,
+"removed": 2,
+"added": 2,
+"section_path_changed": 5,
+"is_ref_changed": 0
+},
+"2026_RFE-LAT-final-mai-2026-_a26946": {
+"identical": 237,
+"retyped": 0,
+"removed": 14,
+"added": 14,
+"section_path_changed": 42,
+"is_ref_changed": 0
+},
+"2026_RFE-antibioprophylaxie-2023_V3_0_pour-mise-sur-site-juin-2026_sa_9ff419": {
+"identical": 822,
+"retyped": 1,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1": {
+"identical": 824,
+"retyped": 1,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2026_RFE_sedationproceduraleUrgences_24juin2026_1f0c12": {
+"identical": 224,
+"retyped": 0,
+"removed": 28,
+"added": 28,
+"section_path_changed": 51,
+"is_ref_changed": 0
+},
+"2026_RecoCIAFU_ECBU_Note-de-cadrage_10_10_2024_d649f3": {
+"identical": 150,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc": {
+"identical": 1184,
+"retyped": 14,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972": {
+"identical": 232,
+"retyped": 11,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2026_TEXTE-RFE-ALR-PEDIA-VERSION-FINALE-010926_63f95f": {
+"identical": 234,
+"retyped": 0,
+"removed": 4,
+"added": 2,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2026_Tableau-de-synthese_04_03_2026_MEL_5e509f": {
+"identical": 43,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2026_Version-courte_3ae465": {
+"identical": 325,
+"retyped": 0,
+"removed": 5,
+"added": 3,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2026_Version-longue_8281a1": {
+"identical": 616,
+"retyped": 0,
+"removed": 5,
+"added": 3,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2026_algo_synthese_IIA_RFE_moderne-defitives-depot-site-SFAR_ed5281": {
+"identical": 9,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2026_gestion_voies_aeriennes_argumentaire_mel_vd_a9b593": {
+"identical": 375,
+"retyped": 0,
+"removed": 2,
+"added": 1,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"2026_gestion_voies_aeriennes_recommandations_mel_vd_19eb83": {
+"identical": 322,
+"retyped": 0,
+"removed": 2,
+"added": 1,
+"section_path_changed": 0,
+"is_ref_changed": 0
+},
+"unk_guide-mise-en-place-gestion-reanimation-ephemere_1a72c8": {
+"identical": 243,
+"retyped": 0,
+"removed": 0,
+"added": 0,
+"section_path_changed": 0,
+"is_ref_changed": 0
+}
+}
+}

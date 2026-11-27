@@ -5,14 +5,15 @@ Rows (ids + metrics, no question text) -> reports/agents/K2_annexes/retrieval_ro
     scripts/with_gpu_lock.sh K2 env HF_HUB_OFFLINE=1 .venv/bin/python reports/agents/K2_annexes/run_retrieval_v7.py
 """
 from __future__ import annotations
-import json, time
+import json, sys, time
 from pathlib import Path
 from rag_sfar.config import Settings
 from rag_sfar.evaluation import harness
 from rag_sfar.evaluation.datasets import read_jsonl, split_path
 
 ROOT = Path(__file__).resolve().parents[3]
-OUT = Path(__file__).resolve().parent / "retrieval_rows.jsonl"
+INDEXES = sys.argv[1:] or ["tas_v6", "tas_v7"]
+OUT = Path(__file__).resolve().parent / ("retrieval_rows.jsonl" if INDEXES == ["tas_v6", "tas_v7"] else f"retrieval_rows_{'_'.join(INDEXES)}.jsonl")
 K = 64
 SUITES = {"abpe171": "sufficiency", "abpvern": "sufficiency", "multirfe_synth": "passage_hit"}
 
@@ -23,7 +24,7 @@ def main() -> None:
     assert cfg.name == "C10_context_notes"
     sets = {suite: read_jsonl(split_path(suite, "dev")) for suite in SUITES}
     with OUT.open("w", encoding="utf-8") as out:
-        for index in ("tas_v6", "tas_v7"):
+        for index in INDEXES:
             r = harness.load_retrievers(ROOT / "index", [cfg.chunking_strategy], s.reranker_provider, s.reranker_model,
                                         index_map={cfg.chunking_strategy: index})[cfg.chunking_strategy]
             t0 = time.perf_counter()

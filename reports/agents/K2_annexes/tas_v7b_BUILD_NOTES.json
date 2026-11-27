@@ -1,0 +1,9 @@
+{
+  "built_by": "agent K2, 2026-11-27 12:17:39-12:22:17 (wall 277.9 s), full build, no embedding reuse",
+  "command": "scripts/with_gpu_lock.sh K2 reports/agents/K2_annexes/gpu_jobs_v7b.sh  (inside: unset RAG_SFAR_TABLE_ADJACENT_HEADERS RAG_SFAR_CHUNK_BIBLIO; HF_HUB_OFFLINE=1 RAG_SFAR_CHUNK_GRADE_HEADINGS=1 RAG_SFAR_CHUNK_GRADES=1 RAG_SFAR_CHUNK_REC_IDS=1 .venv/bin/rag-sfar-index --strategy table_aware_sota --output-dir index/tas_v7b)",
+  "k2_switches_on": {"RAG_SFAR_CHUNK_GRADE_HEADINGS": 1, "RAG_SFAR_CHUNK_GRADES": 1, "RAG_SFAR_CHUNK_REC_IDS": 1},
+  "k2_switches_off": {"RAG_SFAR_CHUNK_BIBLIO": "unset (not to be enabled: hides prose in mixed prose+citation chunks)"},
+  "k3_switch": {"RAG_SFAR_TABLE_ADJACENT_HEADERS": "unset (off); K3 parser change committed (261ffb2)"},
+  "code": "commit 65a72eb (K2) on top of 261ffb2 (K3)",
+  "switches_off_check": "all K2 and K3 switches off: chunker output byte-identical to the pre-K2 chunker on all 265 documents, tables included (tests/test_k2_graded_chunking.py, run after K3's commit)"
+}

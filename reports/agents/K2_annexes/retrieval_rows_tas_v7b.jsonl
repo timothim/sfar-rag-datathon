@@ -1,0 +1,298 @@
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q01", "n_chunks": 31, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q02", "n_chunks": 27, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q03", "n_chunks": 26, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q05", "n_chunks": 23, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q07", "n_chunks": 30, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q09", "n_chunks": 19, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q18", "n_chunks": 31, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q19", "n_chunks": 26, "n_ref_like": 0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q20", "n_chunks": 30, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q25", "n_chunks": 27, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q26", "n_chunks": 26, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q27", "n_chunks": 19, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q28", "n_chunks": 27, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q30", "n_chunks": 29, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q31", "n_chunks": 22, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q36", "n_chunks": 28, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q37", "n_chunks": 28, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q40", "n_chunks": 30, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q41", "n_chunks": 38, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q42", "n_chunks": 29, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q43", "n_chunks": 29, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q44", "n_chunks": 25, "n_ref_like": 0, "sufficiency": 0.0, "evidence_recall": 0.5, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q45", "n_chunks": 28, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q46", "n_chunks": 27, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q48", "n_chunks": 34, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q50", "n_chunks": 31, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q51", "n_chunks": 28, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q52", "n_chunks": 32, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q53", "n_chunks": 26, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q59", "n_chunks": 29, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q61", "n_chunks": 33, "n_ref_like": 0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q62", "n_chunks": 24, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q67", "n_chunks": 30, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q69", "n_chunks": 24, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q70", "n_chunks": 27, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q71", "n_chunks": 26, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q73", "n_chunks": 27, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q74", "n_chunks": 29, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q75", "n_chunks": 29, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q78", "n_chunks": 32, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q79", "n_chunks": 26, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q80", "n_chunks": 22, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q81", "n_chunks": 28, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q83", "n_chunks": 26, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q84", "n_chunks": 28, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q85", "n_chunks": 32, "n_ref_like": 0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q87", "n_chunks": 26, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q88", "n_chunks": 30, "n_ref_like": 0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q89", "n_chunks": 31, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q91", "n_chunks": 35, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q95", "n_chunks": 27, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q96", "n_chunks": 23, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q97", "n_chunks": 27, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q98", "n_chunks": 23, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q99", "n_chunks": 28, "n_ref_like": 0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q100", "n_chunks": 30, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q101", "n_chunks": 28, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q102", "n_chunks": 30, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q104", "n_chunks": 31, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q105", "n_chunks": 29, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q107", "n_chunks": 32, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q108", "n_chunks": 27, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q109", "n_chunks": 30, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q111", "n_chunks": 30, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q114", "n_chunks": 31, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q115", "n_chunks": 27, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q117", "n_chunks": 29, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q118", "n_chunks": 25, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q119", "n_chunks": 32, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q120", "n_chunks": 29, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q121", "n_chunks": 25, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q122", "n_chunks": 29, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q127", "n_chunks": 30, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q128", "n_chunks": 28, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q129", "n_chunks": 28, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q131", "n_chunks": 32, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q132", "n_chunks": 30, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q133", "n_chunks": 32, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q134", "n_chunks": 32, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q135", "n_chunks": 33, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q136", "n_chunks": 28, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q137", "n_chunks": 28, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q138", "n_chunks": 32, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q139", "n_chunks": 28, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q141", "n_chunks": 24, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q144", "n_chunks": 25, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q147", "n_chunks": 30, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q149", "n_chunks": 32, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q153", "n_chunks": 24, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q154", "n_chunks": 24, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q156", "n_chunks": 28, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q157", "n_chunks": 29, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q158", "n_chunks": 33, "n_ref_like": 0, "sufficiency": 0.0, "evidence_recall": 0.5, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q159", "n_chunks": 28, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q160", "n_chunks": 30, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q161", "n_chunks": 30, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q163", "n_chunks": 26, "n_ref_like": 0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q164", "n_chunks": 28, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q165", "n_chunks": 26, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q166", "n_chunks": 33, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q168", "n_chunks": 31, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpe171", "id": "Q171", "n_chunks": 25, "n_ref_like": 0, "sufficiency": 0.0, "evidence_recall": 0.5, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q01", "n_chunks": 27, "n_ref_like": 0, "sufficiency": 0.0, "evidence_recall": 0.0, "passage_hit": 0.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q02", "n_chunks": 27, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q03", "n_chunks": 27, "n_ref_like": 0, "sufficiency": 0.0, "evidence_recall": 0.5, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q05", "n_chunks": 23, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q07", "n_chunks": 30, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q09", "n_chunks": 23, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q18", "n_chunks": 33, "n_ref_like": 0, "sufficiency": 0.0, "evidence_recall": 0.5, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q19", "n_chunks": 26, "n_ref_like": 0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q20", "n_chunks": 35, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q25", "n_chunks": 28, "n_ref_like": 0, "sufficiency": 0.0, "evidence_recall": 0.0, "passage_hit": 0.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q26", "n_chunks": 26, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q27", "n_chunks": 31, "n_ref_like": 0, "sufficiency": 0.0, "evidence_recall": 0.6666666666666666, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q28", "n_chunks": 29, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q30", "n_chunks": 29, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q31", "n_chunks": 30, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q36", "n_chunks": 26, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q37", "n_chunks": 28, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q40", "n_chunks": 30, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q41", "n_chunks": 38, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q42", "n_chunks": 29, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q43", "n_chunks": 30, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q44", "n_chunks": 25, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q45", "n_chunks": 29, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q46", "n_chunks": 34, "n_ref_like": 0, "sufficiency": 0.0, "evidence_recall": 0.0, "passage_hit": 0.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q48", "n_chunks": 27, "n_ref_like": 0, "sufficiency": 0.0, "evidence_recall": 0.5, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q50", "n_chunks": 31, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q51", "n_chunks": 28, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q52", "n_chunks": 32, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q53", "n_chunks": 26, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q59", "n_chunks": 32, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q61", "n_chunks": 33, "n_ref_like": 0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q62", "n_chunks": 24, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q67", "n_chunks": 30, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q69", "n_chunks": 22, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q70", "n_chunks": 28, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q71", "n_chunks": 24, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q73", "n_chunks": 28, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q74", "n_chunks": 29, "n_ref_like": 0, "sufficiency": 0.0, "evidence_recall": 0.0, "passage_hit": 0.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q75", "n_chunks": 29, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q78", "n_chunks": 32, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q79", "n_chunks": 26, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q80", "n_chunks": 24, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q81", "n_chunks": 32, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q83", "n_chunks": 26, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q84", "n_chunks": 25, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q85", "n_chunks": 32, "n_ref_like": 0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q87", "n_chunks": 32, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q88", "n_chunks": 32, "n_ref_like": 0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q89", "n_chunks": 29, "n_ref_like": 0, "sufficiency": 0.0, "evidence_recall": 0.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q91", "n_chunks": 35, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q95", "n_chunks": 29, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q96", "n_chunks": 23, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q97", "n_chunks": 25, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q98", "n_chunks": 26, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q99", "n_chunks": 29, "n_ref_like": 0, "passage_hit": 0.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q100", "n_chunks": 29, "n_ref_like": 0, "sufficiency": 0.0, "evidence_recall": 0.0, "passage_hit": 0.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q101", "n_chunks": 27, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q102", "n_chunks": 33, "n_ref_like": 0, "sufficiency": 0.0, "evidence_recall": 0.0, "passage_hit": 0.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q104", "n_chunks": 30, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q105", "n_chunks": 29, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q107", "n_chunks": 32, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q108", "n_chunks": 27, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q109", "n_chunks": 30, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q111", "n_chunks": 30, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q114", "n_chunks": 31, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q115", "n_chunks": 32, "n_ref_like": 0, "sufficiency": 0.0, "evidence_recall": 0.0, "passage_hit": 0.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q117", "n_chunks": 29, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q118", "n_chunks": 27, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q119", "n_chunks": 31, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q120", "n_chunks": 32, "n_ref_like": 0, "sufficiency": 0.0, "evidence_recall": 0.0, "passage_hit": 0.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q121", "n_chunks": 25, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q122", "n_chunks": 31, "n_ref_like": 0, "sufficiency": 0.0, "evidence_recall": 0.5, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q127", "n_chunks": 30, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q128", "n_chunks": 29, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q129", "n_chunks": 28, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q131", "n_chunks": 31, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q132", "n_chunks": 29, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q133", "n_chunks": 32, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q134", "n_chunks": 32, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q135", "n_chunks": 33, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q136", "n_chunks": 28, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q137", "n_chunks": 28, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q138", "n_chunks": 32, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q139", "n_chunks": 31, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q141", "n_chunks": 28, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q144", "n_chunks": 25, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q147", "n_chunks": 30, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q149", "n_chunks": 31, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q153", "n_chunks": 32, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q154", "n_chunks": 27, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q156", "n_chunks": 28, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q157", "n_chunks": 29, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q158", "n_chunks": 33, "n_ref_like": 0, "sufficiency": 0.0, "evidence_recall": 0.5, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q159", "n_chunks": 27, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q160", "n_chunks": 30, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q161", "n_chunks": 30, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q163", "n_chunks": 26, "n_ref_like": 0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q164", "n_chunks": 28, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q165", "n_chunks": 26, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q166", "n_chunks": 33, "n_ref_like": 0, "sufficiency": 1.0, "evidence_recall": 1.0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q168", "n_chunks": 28, "n_ref_like": 0, "sufficiency": 0.0, "evidence_recall": 0.0, "passage_hit": 0.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "abpvern", "id": "Q171", "n_chunks": 25, "n_ref_like": 0, "sufficiency": 0.0, "evidence_recall": 0.5, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-g3b9708b3518cddf9bccf", "n_chunks": 26, "n_ref_like": 0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-gfff2848a70957ac0b7b5", "n_chunks": 28, "n_ref_like": 0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-g8f23afa63325b0d08bd8", "n_chunks": 25, "n_ref_like": 0, "passage_hit": 0.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-g8e54d9655989718c1639", "n_chunks": 27, "n_ref_like": 0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-gd1b252c6b18be4bca7b6", "n_chunks": 24, "n_ref_like": 0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-gd9a325c36650ee68a17f", "n_chunks": 24, "n_ref_like": 0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-ge6178ab7ed0b124f3edc", "n_chunks": 29, "n_ref_like": 0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-g2c188878f4fca6996f4b", "n_chunks": 23, "n_ref_like": 0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-gae3cda1acd4e903f01fd", "n_chunks": 23, "n_ref_like": 0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-geb9482ee3d54334a43fd", "n_chunks": 23, "n_ref_like": 0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-g9dbb7b8cb49592f9fa97", "n_chunks": 24, "n_ref_like": 0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-gbe3dad7d7f9b1ae34b88", "n_chunks": 31, "n_ref_like": 0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-gc1eeae015b45990b618e", "n_chunks": 29, "n_ref_like": 0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-g28ea0199f37013bf91f9", "n_chunks": 32, "n_ref_like": 0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-g6951bd8344b814c79f7e", "n_chunks": 21, "n_ref_like": 0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-g392fcc10d6909f623c73", "n_chunks": 26, "n_ref_like": 0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-g6d75a0524a3097e36863", "n_chunks": 26, "n_ref_like": 0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-g424483aecf041277fed5", "n_chunks": 26, "n_ref_like": 0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-ga86840965e184a4c0f3d", "n_chunks": 28, "n_ref_like": 0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-g26cc210b12a24bc1dcf5", "n_chunks": 31, "n_ref_like": 0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-gb9a942c3d4de87e96a69", "n_chunks": 24, "n_ref_like": 0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-g448aac5e0ca03eebb7fb", "n_chunks": 26, "n_ref_like": 0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-gace2db46f6d0fbc9a4b7", "n_chunks": 24, "n_ref_like": 0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-gfc720f85a7e4c8f6d739", "n_chunks": 23, "n_ref_like": 0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-g655c1a5b2a8ff63dc61f", "n_chunks": 27, "n_ref_like": 0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-g32226ce0e89926e25109", "n_chunks": 23, "n_ref_like": 0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-g9f4e50ab33c87f6858b4", "n_chunks": 27, "n_ref_like": 0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-gb3d45a182edaa9519369", "n_chunks": 29, "n_ref_like": 0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-g3bd1e3f5c8f306008b76", "n_chunks": 25, "n_ref_like": 0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-g83a9315591cd44551dbc", "n_chunks": 18, "n_ref_like": 0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-gbc67a0eb3b22c1690c0c", "n_chunks": 17, "n_ref_like": 0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-gff794cd57325dca363d6", "n_chunks": 27, "n_ref_like": 0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-gcb6edd578e226e2bf83b", "n_chunks": 24, "n_ref_like": 0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-g0979ab4dc4ec3f5dbd2f", "n_chunks": 28, "n_ref_like": 0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-gf761346ec9be5d6ba346", "n_chunks": 24, "n_ref_like": 0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-g0aba15fbdfface749f92", "n_chunks": 28, "n_ref_like": 0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-gfd6492bcff9d310fa822", "n_chunks": 20, "n_ref_like": 0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-g43a751763308810eda5b", "n_chunks": 28, "n_ref_like": 0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-ga82b7f724c31133396b0", "n_chunks": 26, "n_ref_like": 0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-g3940cdb7b78acbdfb13d", "n_chunks": 23, "n_ref_like": 0, "passage_hit": 0.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-g508df1f5f5c7dacd7171", "n_chunks": 27, "n_ref_like": 0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-gaaba8d034741e6533aee", "n_chunks": 32, "n_ref_like": 0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-g76063f88d9909f319d85", "n_chunks": 30, "n_ref_like": 0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-g293148d474c4b595ab24", "n_chunks": 29, "n_ref_like": 0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-gf79873a2c51a5380fe66", "n_chunks": 25, "n_ref_like": 0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-g55e468b6df0cb295c14b", "n_chunks": 24, "n_ref_like": 0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-g0c4e1de8af1e9b05f324", "n_chunks": 22, "n_ref_like": 0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-gb96b3d27c279158ad3ef", "n_chunks": 31, "n_ref_like": 0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-gc6eabc0b647f3aa1afca", "n_chunks": 30, "n_ref_like": 0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-g3e964e64a0ac6da585eb", "n_chunks": 28, "n_ref_like": 0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-g822a50690730ee2ef6bc", "n_chunks": 27, "n_ref_like": 0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-g2f51f3362361053361b7", "n_chunks": 30, "n_ref_like": 0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-gc03aaf37539dfd4b39a8", "n_chunks": 27, "n_ref_like": 0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-g7efa49eea406c3678a28", "n_chunks": 26, "n_ref_like": 0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-gb8871ff491d05e49db36", "n_chunks": 26, "n_ref_like": 0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-g571f916b70fb2a0586cb", "n_chunks": 32, "n_ref_like": 0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-gc6d6192f7b53462c02dd", "n_chunks": 27, "n_ref_like": 0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-g526e54165c42ca78bf63", "n_chunks": 28, "n_ref_like": 0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-g2b5dca4f8dcab2a9f869", "n_chunks": 30, "n_ref_like": 0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-ga7998a95924ce47cf4b2", "n_chunks": 27, "n_ref_like": 0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-gcb7201d68bfd3c66882d", "n_chunks": 32, "n_ref_like": 0, "passage_hit": 0.0, "doc_hit": 0.0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-gd56911820a0a15744c26", "n_chunks": 31, "n_ref_like": 0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-gb4774403759a289947d9", "n_chunks": 25, "n_ref_like": 0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-g659a6f7980ea5f93af09", "n_chunks": 28, "n_ref_like": 0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-ga95d75ad6fe8fb541a44", "n_chunks": 26, "n_ref_like": 0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-gcf5aefb7a5425d025d76", "n_chunks": 23, "n_ref_like": 0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-g394ecc098e4d21e40da0", "n_chunks": 27, "n_ref_like": 0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-gae027791784341a1d570", "n_chunks": 25, "n_ref_like": 0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-gcf361e9af2739ce43a9f", "n_chunks": 28, "n_ref_like": 0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-ge78b13400ed5e89af859", "n_chunks": 30, "n_ref_like": 0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-g1fa665d53b3782891db2", "n_chunks": 27, "n_ref_like": 0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-g42624ba80bc36c8e0925", "n_chunks": 26, "n_ref_like": 0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-g6d7e10b60e750f150a7a", "n_chunks": 29, "n_ref_like": 0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-g1b4ad3d31046fdbdd025", "n_chunks": 24, "n_ref_like": 0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-g518431a84972e17017d1", "n_chunks": 26, "n_ref_like": 0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-g78a74d874a76bbb543f1", "n_chunks": 25, "n_ref_like": 0, "passage_hit": 1.0, "doc_hit": 1.0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-abst000", "n_chunks": 28, "n_ref_like": 0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-abst001", "n_chunks": 30, "n_ref_like": 0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-abst002", "n_chunks": 29, "n_ref_like": 0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-abst004", "n_chunks": 26, "n_ref_like": 0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-abst005", "n_chunks": 33, "n_ref_like": 0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-abst007", "n_chunks": 27, "n_ref_like": 0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-abst009", "n_chunks": 27, "n_ref_like": 0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-abst013", "n_chunks": 31, "n_ref_like": 0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-abst015", "n_chunks": 28, "n_ref_like": 0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-abst016", "n_chunks": 31, "n_ref_like": 0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-abst017", "n_chunks": 32, "n_ref_like": 0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-abst020", "n_chunks": 30, "n_ref_like": 0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-abst022", "n_chunks": 19, "n_ref_like": 0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-abst026", "n_chunks": 24, "n_ref_like": 0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-abst031", "n_chunks": 31, "n_ref_like": 0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-abst036", "n_chunks": 28, "n_ref_like": 0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-abst037", "n_chunks": 29, "n_ref_like": 0}
+{"index": "tas_v7b", "suite": "multirfe_synth", "id": "MR-abst039", "n_chunks": 31, "n_ref_like": 0}
