@@ -263,7 +263,8 @@ LINEAGE_RULES: list[tuple[str, list[str], list[str]]] = [
         [
             r"gestion\s+des\s+anticoagulants\s+pour\s+une\s+proc[ée]dure\s+invasive\s+programm",
             r"gestion\s+p[ée]riop[ée]ratoire\s+des\s+patients\s+sous\s+aod\s+pour\s+un\s+acte\s+programm",
-            r"^recommandations\s+avk$",
+            # "Recommandations AVK" (HAS 2008, surdosage et hémorragie sous AVK) was removed from
+            # this lineage: different scope from a planned procedure; kept current until reviewed.
         ],
         [r"urgence", r"covid"],
     ),
@@ -904,6 +905,9 @@ def load_sfar_corpus(
 
     # Resolve longitudinal supersession across topic lineages
     _apply_temporal_supersession(loaded)
+    # Generic, evidence-based additions (see the functions' docstrings)
+    _apply_explicit_update_mentions(loaded)
+    _apply_abrogated_twins(loaded)
     return loaded
 
 
@@ -955,8 +959,115 @@ def _apply_temporal_supersession(docs: list[LoadedDocument]) -> None:
                 d.metadata.is_latest_edition = False
                 d.metadata.superseded_by = canonical.metadata.doc_id
                 d.metadata.superseded_by_year = max_year
+                d.metadata.supersession_evidence = (
+                    f"lignée curée « {lineage} » (règle sur le titre) : édition la plus récente {max_year}"
+                    + (f" {canonical.metadata.version_label}" if canonical.metadata.version_label else "")
+                )
             elif d.metadata.language == "en" and any(
                 x.metadata.effective_year == yr and x.metadata.language == "fr" for x in group
             ):
                 # Same-year English translation is kept active, but French edition is primary
                 d.metadata.is_latest_edition = True
+
+
+_STOP = {
+    "de", "des", "du", "la", "le", "les", "l", "d", "et", "en", "a", "au", "aux", "un", "une", "pour",
+    "par", "sur", "dans", "chez", "avec", "ou", "the", "of", "and", "in", "prise", "charge",
+    "recommandations", "recommandation", "formalisees", "experts", "rfe", "sfar", "gestion",
+}
+_UPDATE_RE = re.compile(
+    r"\b(?:mise\s+[àa]\s+jour|mettre\s+[àa]\s+jour|met\s+[àa]\s+jour|r[ée]?actualis\w*|actualis\w*|"
+    r"remplac\w*|r[ée]vis\w*|update[sd]?|updating)\b",
+    re.I,
+)
+
+
+def _content_words(text: str) -> set[str]:
+    return {w for w in re.findall(r"[a-z0-9]+", _fold_lower(text)) if len(w) > 2 and w not in _STOP}
+
+
+def _apply_explicit_update_mentions(docs: list[LoadedDocument], head_chars: int = 40000) -> None:
+    """Mark an older edition as superseded when a newer French document says so explicitly.
+
+    Rule (all conditions required, otherwise nothing is changed):
+    - a paragraph of the first `head_chars` characters of the newer document contains an update
+      word (mise à jour, actualisation, réactualisation, remplace, révision, update) and a year Y;
+    - an older, active, still-current French document has effective year Y and at least 3 title
+      content words, all of which occur in that paragraph;
+    - at least half of those title words also occur in the newer document's title (same subject:
+      a newer text that only cites a neighbouring guideline is not an update of it);
+    - both documents differ in family (landing page) and the newer one is a recommendation text
+      (not a translation, annex or figure file).
+    The whole edition of the older document (same family and year) is marked; the evidence
+    (paragraph excerpt) is stored in `supersession_evidence`."""
+    by_year: dict[int, list[LoadedDocument]] = collections.defaultdict(list)
+    for d in docs:
+        m = d.metadata
+        if m.effective_year and m.language != "en" and m.is_active and m.is_latest_edition:
+            by_year[m.effective_year].append(d)
+    for new in docs:
+        nm = new.metadata
+        if not nm.effective_year or nm.language == "en" or not nm.is_active:
+            continue
+        if nm.doc_role not in ("recommandation", "texte_court", "argumentaire"):
+            continue
+        for para in re.split(r"\n\s*\n", new.text[:head_chars]):
+            if not _UPDATE_RE.search(para):
+                continue
+            words = _content_words(para)
+            for y in {int(x) for x in re.findall(r"\b(19[89]\d|20[0-2]\d)\b", para)}:
+                if y >= nm.effective_year:
+                    continue
+                for old in by_year.get(y, []):
+                    om = old.metadata
+                    if om.reco_family_id == nm.reco_family_id or not om.is_latest_edition:
+                        continue
+                    tw = _content_words(om.title)
+                    if len(tw) < 3 or not tw <= words:
+                        continue
+                    # Same subject: at least half of the older title's words are in the newer title.
+                    if len(tw & _content_words(nm.title)) < 0.5 * len(tw):
+                        continue
+                    excerpt = re.sub(r"\s+", " ", para).strip()[:300]
+                    for twin in docs:
+                        tm = twin.metadata
+                        if tm.reco_family_id == om.reco_family_id and tm.effective_year == y and tm.is_latest_edition:
+                            tm.is_latest_edition = False
+                            tm.superseded_by = nm.doc_id
+                            tm.superseded_by_year = nm.effective_year
+                            tm.supersession_evidence = f"mention explicite dans {nm.doc_id} : « {excerpt} »"
+
+
+def _shingles(text: str, n: int = 5) -> set[int]:
+    toks = re.findall(r"\w+", _fold_lower(text))
+    return {hash(tuple(toks[i : i + n])) for i in range(max(0, len(toks) - n + 1))}
+
+
+def _apply_abrogated_twins(docs: list[LoadedDocument], threshold: float = 0.9) -> None:
+    """A document whose text is a near-copy (Jaccard of word 5-grams >= `threshold`) of an
+    abrogated document of the same or a later year is abrogated too: same text, same status
+    (e.g. a "final, unwatermarked" copy of a guideline that was later withdrawn)."""
+    abrogated = [d for d in docs if not d.metadata.is_active]
+    if not abrogated:
+        return
+    sh_ab = [(a, _shingles(a.text)) for a in abrogated]
+    for d in docs:
+        m = d.metadata
+        if not m.is_active:
+            continue
+        sd = None
+        for a, sa in sh_ab:
+            if a.metadata.effective_year and m.effective_year and m.effective_year > a.metadata.effective_year:
+                continue
+            if abs(len(d.text) - len(a.text)) > 0.3 * max(len(d.text), len(a.text)):
+                continue
+            sd = sd if sd is not None else _shingles(d.text)
+            j = len(sd & sa) / max(1, len(sd | sa))
+            if j >= threshold:
+                m.is_active = False
+                m.is_latest_edition = False
+                m.superseded_by = a.metadata.superseded_by
+                m.supersession_evidence = (
+                    f"quasi-copie (Jaccard 5-grammes {j:.2f}) du document abrogé {a.metadata.doc_id}"
+                )
+                break
