@@ -39,6 +39,12 @@ from rag_sfar.retrieval.crag import (
 )
 from rag_sfar.retrieval.embedder import BaseEmbedder
 from rag_sfar.retrieval.medical_lexicon import fold_accents
+from rag_sfar.retrieval.query_tools import (
+    negated_token_weights,
+    patient_negated_spans,
+    remove_spans,
+    split_mcq,
+)
 from rag_sfar.retrieval.reranker import BaseReranker
 from rag_sfar.retrieval.router import _AGE_CONTEXT, analyze_query
 from rag_sfar.retrieval.vector_store import LocalVectorStore
@@ -60,6 +66,24 @@ _OLDER_CHILD_QUERY_RE = re.compile(
 _NEONATAL_ONLY_SECTION_RE = re.compile(r"\bn[ée]onatal(?:e|ogique|ogie)\b", re.I)
 # An isolated footnote call (`*`, `**`, `***`, `#`, `†`, `‡`), not Markdown bold/italic markers.
 _FOOTNOTE_REF_RE = re.compile(r"(?<![\*\w.])\*{1,3}(?![\*\w])|(?<![\w#])#(?![\w#])|[†‡]")
+# A footnote paragraph printed under a table starts with its call mark ("* …", "\*\* …",
+# "# …", "† …"; Markdown escapes allowed), not with bold text ("**Céfazoline**").
+_NOTE_START_RE = re.compile(r"^\s*(?:(?:\\?\*){1,4}(?![\*\w])|\\?#(?![#\w])|[†‡])")
+
+
+def _chunk_population(chunk: Chunk) -> str:
+    """Population of a chunk: the structural labels written by ingestion when the index has
+    them (`populations`: adulte / pediatrie / neonatal / obstetrique), else `population_hint`."""
+    labels = set(getattr(chunk, "populations", None) or [])
+    if labels:
+        ped = bool(labels & {"pediatrie", "neonatal"})
+        adult = bool(labels & {"adulte", "obstetrique"})
+        if ped and not adult:
+            return "pediatrie"
+        if adult and not ped:
+            return "adulte"
+        return "mixte"
+    return chunk.population_hint
 
 
 def _query_subpopulation(query: str, population: str = "pediatrie") -> str | None:
@@ -152,6 +176,23 @@ class SfarRagRetriever:
                 expanded_query=exp,
                 acronyms_expanded=acr,
             )
+        # Negated background of the patient ("chez un adulte sans X ni Y"): lower weight in the
+        # lexical query and/or removal from the semantic (dense + cross-encoder) query.
+        # MCQ: the stem alone can carry the main query; options get their own retrieval (9b).
+        mcq_stem, mcq_options = split_mcq(raw_full_query) if cfg.mcq_option_quota > 0 else (raw_full_query, [])
+        orig = analysis.original_query
+        suffix = analysis.expanded_query[len(orig):] if analysis.expanded_query.startswith(orig) else ""
+        base_text = orig
+        if mcq_options and cfg.mcq_stem_only and len(mcq_stem) >= 12:
+            base_text = mcq_stem
+        lexical_query = semantic_query = base_text + suffix
+        lex_weights: dict[str, float] = {}
+        if cfg.negated_term_weight < 1.0 or cfg.negation_strip_semantic:
+            spans = patient_negated_spans(base_text)
+            if spans:
+                lex_weights = negated_token_weights(base_text, spans, cfg.negated_term_weight)
+                if cfg.negation_strip_semantic:
+                    semantic_query = remove_spans(base_text, spans) + suffix
         timings["query_analysis_ms"] = round((time.perf_counter() - t_q) * 1000, 2)
 
         # 2. Build hard safety filter mask
@@ -191,9 +232,10 @@ class SfarRagRetriever:
         if cfg.use_bm25:
             t_b = time.perf_counter()
             bm25_hits = self.store.bm25.search(
-                analysis.expanded_query,
+                lexical_query,
                 top_k=cfg.initial_candidates,
                 allowed_mask=mask,
+                term_weights=lex_weights or None,
             )
             timings["bm25_ms"] = round((time.perf_counter() - t_b) * 1000, 2)
 
@@ -201,7 +243,7 @@ class SfarRagRetriever:
         if cfg.use_subword and self.store.subword is not None:
             t_s = time.perf_counter()
             subword_hits = self.store.subword.search(
-                analysis.expanded_query,
+                lexical_query,
                 top_k=cfg.initial_candidates,
                 allowed_mask=mask,
             )
@@ -210,7 +252,7 @@ class SfarRagRetriever:
         dense_hits: list[tuple[int, float]] = []
         if cfg.use_dense and self.embedder is not None and self.store.embeddings is not None:
             t_d = time.perf_counter()
-            q_vec = self.embedder.embed_query(analysis.expanded_query)
+            q_vec = self.embedder.embed_query(semantic_query)
             dense_hits = self.store.dense_search(
                 q_vec,
                 top_k=cfg.initial_candidates,
@@ -376,7 +418,7 @@ class SfarRagRetriever:
         if cfg.use_reranker and self.reranker is not None and rerank_pool:
             t_r = time.perf_counter()
             ce_scores = self.reranker.score_pairs(
-                analysis.expanded_query,
+                semantic_query,
                 [r.chunk.indexed_text for r in rerank_pool],
             )
             max_fused = max((r.final_score for r in rerank_pool), default=1.0) or 1.0
@@ -399,6 +441,11 @@ class SfarRagRetriever:
                 r.final_score = round(blended, 6)
             rerank_pool.sort(key=lambda r: r.final_score, reverse=True)
             timings["rerank_ms"] = round((time.perf_counter() - t_r) * 1000, 2)
+
+        # Coverage signal (exposed, never used to filter): best cross-encoder score of the main
+        # query, plus the agreement between the lexical and dense channels.
+        self.last_coverage = self._coverage_signal(rerank_pool, bm25_hits, dense_hits, cfg)
+        timings.update(self.last_coverage)
 
         # 6. Deduplication & Diversity selection
         if analysis.temporal_mode == "all_versions":
@@ -491,7 +538,22 @@ class SfarRagRetriever:
         if analysis.temporal_mode != "all_versions":
             selected = sorted(selected, key=lambda r: r.final_score, reverse=True)
         selected = selected[: max(0, cfg.final_top_k)]
-        if cfg.context_window > 0 or cfg.expand_table_parent:
+
+        # 9b. Multi-query guarantees (B1): each MCQ option and each population compatible with
+        # the query keep a few passages of their own (added after the ranked results).
+        if analysis.temporal_mode != "all_versions" and (mcq_options or cfg.population_quota > 0):
+            t_m = time.perf_counter()
+            selected = selected + self._guaranteed_extras(
+                selected, analysis, cfg, mask, semantic_query, mcq_stem, mcq_options
+            )
+            timings["multi_query_ms"] = round((time.perf_counter() - t_m) * 1000, 2)
+
+        if (
+            cfg.context_window > 0
+            or cfg.expand_table_parent
+            or cfg.attach_table_notes
+            or cfg.context_order != "rank"
+        ):
             selected = self._window_expand(selected, cfg)
         timings["total_retrieval_ms"] = round((time.perf_counter() - t0) * 1000, 2)
 
@@ -510,10 +572,15 @@ class SfarRagRetriever:
         out: list[RetrievedChunk] = []
         for rank, item in enumerate(selected):
             out.append(item)
-            if rank >= cfg.context_window_top or budget <= 0:
+            guaranteed = (item.expansion_reason or "").startswith(("mcq_option", "population"))
+            if (rank >= cfg.context_window_top and not guaranteed) or budget <= 0:
                 continue
             extra: list = []
+            notes: list = []
             c = item.chunk
+            is_table = c.chunk_type in ("table_row_card", "table_markdown")
+            if cfg.attach_table_notes and is_table:
+                notes = self._table_notes(c, cfg.table_notes_max_chars)
             if cfg.expand_table_parent and c.chunk_type == "table_row_card":
                 cur = c
                 for _ in range(60):
@@ -527,7 +594,7 @@ class SfarRagRetriever:
                         break
                     if cur.chunk_type != "table_row_card":
                         break
-            if cfg.context_window > 0:
+            if cfg.context_window > 0 and (is_table or not cfg.context_window_tables_only):
                 for direction in ("prev_chunk_id", "next_chunk_id"):
                     cur = c
                     for _ in range(cfg.context_window):
@@ -538,15 +605,182 @@ class SfarRagRetriever:
                         if cur is None or cur.doc_id != c.doc_id or cur.is_reference_section:
                             break
                         extra.append(cur)
+            note_ids = {n.chunk_id for n in notes}
+            extra = [ch for ch in extra if ch.chunk_id not in note_ids] + notes
             extra.sort(key=lambda ch: ch.chunk_index)
             for ch in extra:
                 if ch.chunk_id in seen or len(ch.text) > budget:
                     continue
                 seen.add(ch.chunk_id)
                 budget -= len(ch.text)
+                reason = "table_note" if ch.chunk_id in note_ids else "context_window"
                 out.append(RetrievedChunk(chunk=ch, final_score=round(item.final_score * 0.9, 6),
-                                          is_expanded_context=True, expansion_reason="context_window"))
+                                          is_expanded_context=True, expansion_reason=reason))
+        if cfg.context_order == "document":
+            out = self._document_order(out)
         return out
+
+    @staticmethod
+    def _coverage_signal(
+        rerank_pool: list[RetrievedChunk],
+        bm25_hits: list[tuple[int, float]],
+        dense_hits: list[tuple[int, float]],
+        cfg: RetrievalConfig,
+    ) -> dict[str, float]:
+        """Does the corpus cover the query? `coverage_score` = best cross-encoder probability
+        over the reranked pool (-1 without reranker); `coverage_supported` = 1.0 when it reaches
+        `cfg.coverage_threshold` (calibrated on dev, see reports/agents/B1_retrieval.md);
+        `channel_agreement` = share of the BM25 top 10 also in the dense top 10."""
+        ce = [r.rerank_score for r in rerank_pool if r.rerank_score is not None]
+        top_b = {i for i, _ in bm25_hits[:10]}
+        top_d = {i for i, _ in dense_hits[:10]}
+        # -1.0 = not available (no reranker / channel disabled); keeps the dict JSON-safe.
+        score = round(max(ce), 5) if ce else -1.0
+        return {
+            "coverage_score": score,
+            "coverage_supported": (1.0 if score >= cfg.coverage_threshold else 0.0) if ce else -1.0,
+            "channel_agreement": len(top_b & top_d) / 10.0 if (top_b and top_d) else -1.0,
+            "dense_top_score": round(dense_hits[0][1], 5) if dense_hits else -1.0,
+        }
+
+    def _chunk_arrays(self) -> tuple[np.ndarray, np.ndarray, np.ndarray]:
+        """Cached per-chunk arrays: population hint, document id, is-table flag."""
+        if getattr(self, "_arrays", None) is None:
+            chunks = self.store.chunks
+            self._arrays = (
+                np.array([_chunk_population(c) for c in chunks]),
+                np.array([c.doc_id for c in chunks]),
+                np.array([c.chunk_type in ("table_row_card", "table_markdown") for c in chunks]),
+            )
+        return self._arrays
+
+    def _focused_search(
+        self, query: str, mask: np.ndarray, cfg: RetrievalConfig, top_n: int, pool: int = 16
+    ) -> list[RetrievedChunk]:
+        """Small hybrid search (BM25 + dense, RRF, cross-encoder) inside `mask`, used for
+        sub-queries. Returns the `top_n` best passages by the same blend as the main pass."""
+        if not mask.any():
+            return []
+        fused: dict[int, float] = collections.defaultdict(float)
+        if cfg.use_bm25:
+            for rank, (idx, _) in enumerate(self.store.bm25.search(query, top_k=cfg.initial_candidates, allowed_mask=mask), 1):
+                fused[idx] += cfg.bm25_weight / (cfg.rrf_k + rank)
+        if cfg.use_dense and self.embedder is not None and self.store.embeddings is not None:
+            q_vec = self.embedder.embed_query(query)
+            for rank, (idx, _) in enumerate(self.store.dense_search(q_vec, top_k=cfg.initial_candidates, allowed_mask=mask), 1):
+                fused[idx] += cfg.dense_weight / (cfg.rrf_k + rank)
+        cands = sorted(fused.items(), key=lambda kv: kv[1], reverse=True)[:pool]
+        if not cands:
+            return []
+        out = [RetrievedChunk(chunk=self.store.chunks[i], final_score=s, rrf_score=round(s, 6)) for i, s in cands]
+        if cfg.use_reranker and self.reranker is not None:
+            ce = self.reranker.score_pairs(query, [r.chunk.indexed_text for r in out])
+            top = max(r.final_score for r in out) or 1.0
+            for r, c in zip(out, ce):
+                r.rerank_score = round(c, 5)
+                r.final_score = round(0.68 * c + 0.32 * r.final_score / top, 6)
+            out.sort(key=lambda r: r.final_score, reverse=True)
+        return out[:top_n]
+
+    def _guaranteed_extras(
+        self,
+        selected: list[RetrievedChunk],
+        analysis: QueryAnalysis,
+        cfg: RetrievalConfig,
+        mask: np.ndarray,
+        semantic_query: str,
+        mcq_stem: str,
+        mcq_options: list[tuple[str, str]],
+    ) -> list[RetrievedChunk]:
+        """Passages guaranteed to each MCQ option (stem + option) and to each population that
+        the query does not exclude (adult / paediatric metadata, restricted to the documents of
+        the top results). Returned in addition to the ranked results, without duplicates."""
+        seen = {r.chunk.chunk_id for r in selected}
+        extras: list[RetrievedChunk] = []
+
+        def add(hits: list[RetrievedChunk], reason: str, n: int) -> None:
+            for h in hits:
+                if n <= 0:
+                    break
+                if h.chunk.chunk_id in seen:
+                    n -= 1  # already in context: counts toward the quota
+                    continue
+                seen.add(h.chunk.chunk_id)
+                h.expansion_reason = reason
+                extras.append(h)
+                n -= 1
+
+        if mcq_options and cfg.mcq_option_quota > 0:
+            for letter, text in mcq_options:
+                sub = f"{mcq_stem} {text}".strip() if cfg.mcq_option_with_stem else text
+                add(self._focused_search(sub, mask, cfg, cfg.mcq_option_quota), f"mcq_option:{letter}", cfg.mcq_option_quota)
+
+        if cfg.population_quota > 0 and selected:
+            pops = {"pediatrie": ["pediatrie"], "adulte": ["adulte"]}.get(analysis.population, ["adulte", "pediatrie"])
+            pop_arr, doc_arr, table_arr = self._chunk_arrays()
+            top_docs = list(dict.fromkeys(r.chunk.doc_id for r in selected[:3]))
+            in_docs = np.isin(doc_arr, top_docs)
+            context = selected + extras
+            for pop in pops:
+                restrict = mask & in_docs & (pop_arr == pop)
+                if cfg.population_tables_only:
+                    restrict &= table_arr
+                # The best `population_quota` passages of the restricted search must be in the
+                # context (those already there count toward the quota).
+                need = cfg.population_quota
+                if not restrict.any():
+                    continue
+                query = semantic_query
+                if cfg.population_counterpart:
+                    # Parallel adult / paediatric tables: the act label of the best table row of
+                    # the other population is added to the query to find its counterpart.
+                    anchor = next(
+                        (r.chunk for r in context
+                         if r.chunk.chunk_type == "table_row_card"
+                         and _chunk_population(r.chunk) not in (pop, "non_specifie", "mixte")),
+                        None,
+                    )
+                    if anchor is not None:
+                        query = f"{semantic_query} {anchor.text[:300]}"
+                add(self._focused_search(query, restrict, cfg, need), f"population:{pop}", need)
+        return extras
+
+    @staticmethod
+    def _document_order(items: list[RetrievedChunk]) -> list[RetrievedChunk]:
+        """Group the context by document (documents in order of their best-ranked passage) and
+        put each document's passages in reading order."""
+        doc_rank: dict[str, int] = {}
+        for i, r in enumerate(items):
+            doc_rank.setdefault(r.chunk.doc_id, i)
+        return sorted(items, key=lambda r: (doc_rank[r.chunk.doc_id], r.chunk.chunk_index))
+
+    def _table_notes(self, chunk: Chunk, max_chars: int) -> list[Chunk]:
+        """Notes that qualify a table chunk: footnote / scope-note callouts linked to it at
+        ingestion, and the footnote paragraphs printed right after its table (text starting
+        with a call mark), whatever their chunk type. Allergy callouts are not notes."""
+        out: dict[str, Chunk] = {}
+        for cid in chunk.linked_callout_ids:
+            c = self.store.get_chunk(cid)
+            if c is not None and c.chunk_type == "callout_footnote" and len(c.text) <= max_chars:
+                out[c.chunk_id] = c
+        cur: Chunk | None = chunk
+        for _ in range(200):  # walk to the end of the table
+            nxt = self.store.get_chunk(cur.next_chunk_id) if cur and cur.next_chunk_id else None
+            if nxt is None or nxt.doc_id != chunk.doc_id:
+                cur = None
+                break
+            cur = nxt
+            if cur.chunk_type not in ("table_row_card", "table_markdown"):
+                break
+        taken = 0
+        while cur is not None and cur.doc_id == chunk.doc_id and taken < 2:
+            if cur.is_reference_section or not _NOTE_START_RE.match(cur.text):
+                break
+            if len(cur.text) <= max_chars:
+                out[cur.chunk_id] = cur
+            taken += 1
+            cur = self.store.get_chunk(cur.next_chunk_id) if cur.next_chunk_id else None
+        return list(out.values())
 
     def _crag_rescue_missing_facets(
         self,

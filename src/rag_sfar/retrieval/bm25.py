@@ -71,8 +71,11 @@ class BM25Index:
         query: str,
         top_k: int = 40,
         allowed_mask: np.ndarray | None = None,
+        term_weights: dict[str, float] | None = None,
     ) -> list[tuple[int, float]]:
-        """Return top-k `(chunk_idx, score)` pairs sorted by descending BM25+ score."""
+        """Return top-k `(chunk_idx, score)` pairs sorted by descending BM25+ score.
+
+        `term_weights` optionally scales the contribution of some query tokens (default 1)."""
         if self.num_docs == 0:
             return []
         q_tokens = tokenize_medical_french(query)
@@ -88,8 +91,9 @@ class BM25Index:
         # Count query term weights slightly sublinearly to avoid over-weighting repeated expansions
         q_counts = collections.Counter(q_tokens)
         for term, q_tf in q_counts.items():
+            t_weight = term_weights.get(term, 1.0) if term_weights else 1.0
             posting = self.postings.get(term)
-            if posting is None:
+            if posting is None or t_weight <= 0.0:
                 continue
             d_ids, tfs = posting
             idf = self.idf[term]
@@ -97,7 +101,7 @@ class BM25Index:
             norm = 1.0 - b + b * (dl * inv_avg_dl)
             tf_comp = ((tfs * (k1 + 1.0)) / (tfs + k1 * norm)) + delta
             q_weight = 1.0 + 0.35 * math.log1p(q_tf - 1) if q_tf > 1 else 1.0
-            scores[d_ids] += (idf * q_weight) * tf_comp
+            scores[d_ids] += (idf * q_weight * t_weight) * tf_comp
 
         if allowed_mask is not None:
             scores = np.where(allowed_mask, scores, -1.0)
