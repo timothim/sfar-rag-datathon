@@ -5,8 +5,10 @@ from __future__ import annotations
 import re
 import unicodedata
 
-# High-value French anesthesia-reanimation & surgical acronyms/abbreviations
-MEDICAL_ACRONYMS: dict[str, str] = {
+from rag_sfar.retrieval.clinician_acronyms import CLINICIAN_ACRONYMS
+
+# High-value French anesthesia-reanimation & surgical acronyms/abbreviations (written by hand)
+HANDWRITTEN_ACRONYMS: dict[str, str] = {
     # Prothèses & Orthopédie / Neurochirurgie
     "PTH": "prothèse totale de hanche",
     "PTG": "prothèse totale de genou",
@@ -87,6 +89,11 @@ MEDICAL_ACRONYMS: dict[str, str] = {
     "IVL": "intraveineuse lente",
     "IMC": "indice de masse corporelle obésité",
 }
+
+# Lexicon used by `expand_medical_query`: the hand-written entries above, plus the clinicians'
+# abbreviation dictionary (plain long forms, see clinician_acronyms.py). A hand-written entry
+# takes precedence over a dictionary entry with the same abbreviation.
+MEDICAL_ACRONYMS: dict[str, str] = {**CLINICIAN_ACRONYMS, **HANDWRITTEN_ACRONYMS}
 
 CLINICAL_SYNONYMS: dict[str, str] = {
     "augmentin": "amoxicilline clavulanate",

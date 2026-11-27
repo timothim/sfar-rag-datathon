@@ -74,6 +74,24 @@ Valeur par défaut côté serveur : `RAG_SFAR_DEMO_ROBUSTNESS=none|lexical|norma
 - Le corpus se limite aux documents SFAR indexés. Une question hors corpus doit conduire à une abstention, mais ce comportement n'est pas garanti.
 - Les éditions antérieures peuvent apparaître dans les passages ; elles sont marquées « édition antérieure ».
 
+### Dictionnaire des cliniciens (ajouté le 27/11, après les mesures)
+
+Le choix « lexicale » développe désormais 461 sigles : les 60 sigles « purs » du lexique d'origine et 401 sigles d'un dictionnaire hospitalier fourni par l'équipe (`src/rag_sfar/retrieval/clinician_acronyms.py`, généré par `scripts/build_clinician_acronyms.py`). Chaque sigle est développé par sa seule forme longue : aucun nom de molécule ni autre terme n'est ajouté. 21 entrées du dictionnaire sont écartées par règle (mots grammaticaux en capitales comme PAS, ET, DE, LES ; sigles avec espace ou tiret ; deux sens dans la forme longue ; entrées identiques à leur forme longue), et 152 sont ajoutées mais signalées pour relecture (sigles de deux lettres, mots absents du corpus) dans `reports/lexique_cliniciens_a_verifier.csv`. **L'effet de cet ajout sur la recherche n'a pas été mesuré** ; la configuration évaluée (« aucune ») n'utilise pas le lexique et reste identique (vérifié sur 52 requêtes, mêmes passages et mêmes scores avant et après).
+
+### Essai de bout en bout avec un vrai modèle Qwen (27/11, local)
+
+Chaîne testée : page → API → point d'accès compatible OpenAI (`mlx_lm.server` avec Qwen3.5-9B 4 bits sur cette machine) ; réglages par variables d'environnement `RAG_SFAR_LLM_BASE_URL`, `RAG_SFAR_LLM_MODEL`, `RAG_SFAR_LLM_API_KEY` ; test de connexion réussi (liste des modèles) ; réponse reçue en flux. Une même question tapée en abrégé et sans accents (« ABP pour PTH chez un adulte sans allergie : quelle molecule et quand faire la reinjection ? ») sous les quatre choix :
+
+| Choix | Ce qui s'est passé |
+|---|---|
+| aucune (configuration évaluée) | le modèle s'abstient : les passages retrouvés ne traitent pas la question |
+| lexicale | sigles développés affichés (ABP, PTH) ; réponse citée [S5] tirée de la recommandation d'antibioprophylaxie |
+| normalisation par le modèle | le Qwen 9B répond « inchangée » : aucune normalisation, donc même abstention que « aucune » |
+| les deux | même résultat que « lexicale » |
+
+À retenir : c'est un exemple, pas une mesure. Il montre que le branchement et les quatre choix fonctionnent avec un modèle Qwen réel, et que **la normalisation dépend du modèle servi** : mesurée utile avec Claude Haiku, elle n'a rien fait ici avec un Qwen de 9 milliards de paramètres. À revérifier avec le modèle de LibreDataHub. Temps jusqu'au premier mot sur ce Mac avec le 9B : 20 à 45 secondes (contexte large) ; ce n'est pas une estimation pour le modèle cible. L'exactitude clinique de la réponse n'a pas été vérifiée.
+
+
 ## Déploiement sur LibreDataHub
 
 L'image Docker est écrite par ailleurs (agent M1) ; voici ce dont l'application a besoin pour servir aussi la page :
