@@ -143,7 +143,7 @@ def split_path(suite: str, split: str) -> Path:
 
 # Suites held out from tuning: run by name only, on frozen configurations (each run logged in
 # JOURNAL.md). They are never part of `--suite full`.
-HELD_OUT_SUITES = ("genprobe",)
+HELD_OUT_SUITES = ("genprobe", "genprobe2")
 
 
 def available_suites(include_held_out: bool = False) -> list[str]:
