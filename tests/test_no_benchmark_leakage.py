@@ -1,7 +1,8 @@
 """Anti-leakage guard (principle 3): no evaluation question or reference answer may be encoded
 in the system's code (lexicons, prompts, routing rules, few-shot examples).
 
-Scans every file under src/ except the evaluation package (which legitimately loads datasets)
+Scans every file under src/ except the evaluation package (which legitimately loads datasets),
+plus the judge rubric and instructions and the stand-in generator's instructions (EXTRA_SCANNED),
 for:
 - any 7-word sequence of a question (or MCQ choice) that is specific to that question
   (appears in at most 2 questions, so shared templates like "quelle est la recommandation
@@ -96,12 +97,25 @@ def _load_eval_texts() -> list[dict[str, object]]:
     return out
 
 
+# Files outside the system code that still shape what is evaluated (R3 review, m4): the judge's
+# rubric (prompt in judge.py, instructions and task for the judge agents, calibration notes) and
+# the instructions of the stand-in generator.
+EXTRA_SCANNED = [
+    SRC / "evaluation" / "judge.py",
+    *sorted((ROOT / "eval_internal" / "judge").glob("*.md")),
+    ROOT / "eval_internal" / "GENERATOR_INSTRUCTIONS.md",
+]
+
+
 def _src_blob() -> str:
     parts = []
     for p in sorted(SRC.rglob("*.py")):
         if any(ex in p.parents for ex in EXCLUDED_DIRS):
             continue
         parts.append(_fold(p.read_text(encoding="utf-8")))
+    for p in EXTRA_SCANNED:
+        if p.exists():
+            parts.append(_fold(p.read_text(encoding="utf-8")))
     return "\n".join(parts)
 
 

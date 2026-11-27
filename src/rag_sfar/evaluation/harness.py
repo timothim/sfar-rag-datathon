@@ -47,6 +47,60 @@ def bootstrap_ci(values: list[float], n_boot: int = 2000, alpha: float = 0.05, s
     return (means[int(alpha / 2 * n_boot)], means[int((1 - alpha / 2) * n_boot) - 1])
 
 
+def _binom_cdf(k: int, n: int, p: float) -> float:
+    """P(X <= k) for X ~ Binomial(n, p), summed in log space (no SciPy dependency)."""
+    if k < 0:
+        return 0.0
+    if k >= n:
+        return 1.0
+    if p <= 0.0:
+        return 1.0
+    if p >= 1.0:
+        return 0.0
+    lp, lq = math.log(p), math.log1p(-p)
+    lg = math.lgamma
+    terms = [lg(n + 1) - lg(i + 1) - lg(n - i + 1) + i * lp + (n - i) * lq for i in range(k + 1)]
+    m = max(terms)
+    return min(1.0, math.exp(m) * sum(math.exp(t - m) for t in terms))
+
+
+def clopper_pearson(k: int, n: int, alpha: float = 0.05) -> tuple[float, float]:
+    """Exact (Clopper-Pearson) two-sided CI of a binomial proportion k/n.
+
+    Unlike the percentile bootstrap, it does not collapse to [0; 0] when k = 0 (0/69 -> upper
+    bound ~5.2 %). Returns (nan, nan) when n = 0. Solved by bisection on the binomial CDF:
+    lower = p such that P(X >= k) = alpha/2, upper = p such that P(X <= k) = alpha/2."""
+    if n <= 0:
+        return (float("nan"), float("nan"))
+    if not 0 <= k <= n:
+        raise ValueError(f"k={k} outside [0, {n}]")
+
+    def solve(f, target: float) -> float:  # f decreasing in p on [0, 1]; returns p with f(p) = target
+        lo, hi = 0.0, 1.0
+        for _ in range(100):
+            mid = (lo + hi) / 2
+            if f(mid) > target:
+                lo = mid
+            else:
+                hi = mid
+        return (lo + hi) / 2
+
+    # P(X >= k) = 1 - cdf(k - 1) increases with p, i.e. cdf(k - 1) decreases: solve cdf(k-1) = 1 - alpha/2
+    lower = 0.0 if k == 0 else solve(lambda p: _binom_cdf(k - 1, n, p), 1 - alpha / 2)
+    upper = 1.0 if k == n else solve(lambda p: _binom_cdf(k, n, p), alpha / 2)
+    return (lower, upper)
+
+
+def aggregate_binary(values: list[float], alpha: float = 0.05) -> dict[str, Any] | None:
+    """Mean of 0/1 values with the exact Clopper-Pearson CI (for rare events and rates near 0/1)."""
+    vals = [v for v in values if v is not None]
+    if not vals:
+        return None
+    k = int(round(sum(vals)))
+    lo, hi = clopper_pearson(k, len(vals), alpha)
+    return {"mean": k / len(vals), "ci_low": lo, "ci_high": hi, "n": len(vals), "k": k, "ci_method": "clopper_pearson"}
+
+
 def paired_bootstrap_diff(a: list[float], b: list[float], n_boot: int = 2000, seed: int = 0) -> dict[str, float]:
     """Mean difference b - a over paired items, its 95 % CI and the share of resamples where b <= a."""
     pairs = [(x, y) for x, y in zip(a, b) if x is not None and y is not None]

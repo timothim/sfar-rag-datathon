@@ -110,6 +110,7 @@ def test_structured_row_metrics():
                     mandatory_claims=[{"claim_id": "C1", "text": "a"}, {"claim_id": "C2", "text": "b"}],
                     forbidden_claims=[{"claim_id": "F1", "text": "c"}], expected_behavior="clarification")
     m = structured_row_metrics(item, {"claims_satisfied": ["C1"], "forbidden_violated": ["F1"], "behavior": "answer"})
-    assert m == {"judge_claims_rate": 0.5, "judge_no_omission": 0.0, "judge_forbidden_violation": 1.0, "judge_behavior_ok": 0.0}
+    assert m == {"judge_claims_rate": 0.5, "judge_no_omission": 0.0, "judge_forbidden_violation": 1.0, "judge_behavior_ok": 0.0,
+                 "judge_behavior_ok_lenient": 0.0, "judge_behavior_ok_case_by_case": 0.0}
     # verdicts of older judge runs (no structured keys) add nothing
     assert structured_row_metrics(item, {"correctness": "correct"}) == {}

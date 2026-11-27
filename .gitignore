@@ -65,3 +65,8 @@ eval/splits/abpe171/
 .gpu_queue/
 # judge batches of the enriched benchmark contain its question text (local only)
 eval_internal/judge/runs/*abpe*/
+# blind judge runs mix suites (enriched benchmark included) and their keys stay local
+eval_internal/judge/runs/blind_*/
+eval_internal/judge/blind_keys/
+# merged reports of the enriched benchmark (answers, judge justifications)
+reports/eval/judge_v4/**/*abpe*
