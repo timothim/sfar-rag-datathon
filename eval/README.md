@@ -45,6 +45,23 @@ Seuls `id`, `suite`, `question`, `question_type` et `provenance` sont strictemen
 rag-sfar-eval --suite <nom> --split dev
 ```
 
+## Benchmark enrichi (`abpe171`, référence)
+
+Le benchmark des experts (`data/benchmark_enrichi_alparagsfar/benchmark_enrichi_phase1/questions_enriched_draft.jsonl`, mêmes 171 questions que `abp171`, validées par médecin, référence V3.1 provisoire) est converti par :
+
+```bash
+HF_HUB_OFFLINE=1 .venv/bin/python -m rag_sfar.evaluation.datasets convert-enriched        # -> eval/datasets/abpe171.jsonl + split
+HF_HUB_OFFLINE=1 .venv/bin/python -m rag_sfar.evaluation.datasets coverage --suite abpe171 # couverture du mapping (dev)
+```
+
+- Split : celui d'`abp171` repris par identifiant (102 dev / 69 test), test scellé dans `LOCKBOX.md`.
+- Champs optionnels ajoutés au format commun (absents des anciens fichiers) : `mandatory_claims`, `forbidden_claims` ({claim_id, text, …}), `expected_behavior` (`answer` | `clarification` | `abstention`), `acceptable_alternatives`, `required_missing_information`, `evidence` ({evidence_id, doc_id, page, fragments, other_fragments}), `evidence_sets` ({set_id, required_evidence_ids}).
+- `fragments` : fragments `pdftotext -layout` du benchmark normalisés (colonnes ré-assemblées et séparées par « ‖ », en-têtes de tableau retirés, une citation par ligne de tableau, lignes trop génériques écartées) ; `gold_passages` = ces fragments. `passage_match` compare une citation à colonnes cellule par cellule, sur les n-grammes porteurs d'un mot de contenu.
+- `gold_doc_ids` : édition en vigueur de la RFE antibioprophylaxie dans l'index (`topic_lineage='antibioprophylaxie'`, `is_latest_edition=1`).
+- `answer_key` : lettre seulement pour les QCM `single_supported` ; les questions ouvertes sont notées par le juge sur les faits obligatoires.
+- Métriques supplémentaires (sur tout le contexte retourné) : `evidence_hit`, `evidence_recall` (preuves requises dont un fragment est couvert), `sufficiency` (un ensemble de preuves entièrement couvert ; ET dans l'ensemble, OU entre ensembles), avec courbes @k. Tags : `cat:*`, `difficulty:*`, `population:*`, `pediatric`, `challenge:*`, `behavior:*`.
+- Juge : `judge_io export` transmet faits obligatoires / interdits / comportement attendu ; `merge` agrège taux de faits satisfaits, réponses sans omission, violations d'interdits et comportement respecté.
+
 ## Lancer l'évaluation
 
 ```bash

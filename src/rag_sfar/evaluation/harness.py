@@ -6,7 +6,9 @@ bootstrap confidence intervals, JSON + Markdown reports.
 
 Metric levels (see eval/README.md):
 - retrieval: doc hit@k / recall@k / MRR / nDCG@k against `gold_doc_ids`; passage hit@k / MRR
-  against `gold_passages` (chunking-independent quote matching); obsolete-edition intrusion;
+  against `gold_passages` (chunking-independent quote matching); for structured benchmarks
+  (`evidence` + `evidence_sets`): evidence_hit / evidence_recall / sufficiency over the whole
+  returned context, with curves at k = CURVE_KS; obsolete-edition intrusion;
   legacy answer-term presence (lenient, kept only for comparison with the original README).
 - generation: deterministic `answer_key` scoring (MCQ letter, all_of / any_of terms, label),
   abstention correctness, sourcing rate. LLM-judge metrics are added by `judge.py`.
@@ -74,10 +76,40 @@ def _shingles(toks: list[str], n: int = 3) -> set[tuple[str, ...]]:
     return {tuple(toks[i : i + n]) for i in range(len(toks) - n + 1)}
 
 
+COLUMN_SEP = "‖"
+
+
+def _column_shingles(quote: str) -> set[tuple[str, ...]]:
+    """Distinctive word n-grams of a layout fragment ("a ‖ b ‖ c"): trigrams inside each column
+    (a two-word cell gives its bigram), keeping only n-grams with at least one content word
+    (`datasets.is_content_token`). Single-word cells ("Céfazoline") and regimen/grading cells
+    ("2g IVL", "Avis d'experts") are shared by many rows and are ignored."""
+    from rag_sfar.evaluation.datasets import is_content_token
+
+    out: set[tuple[str, ...]] = set()
+    for part in quote.split(COLUMN_SEP):
+        toks = tokens(part)
+        if len(toks) < 2:
+            continue
+        out |= {g for g in _shingles(toks) if any(is_content_token(t) for t in g)}
+    return out
+
+
 def passage_match(quote: str, chunk_text: str, threshold: float = 0.5) -> bool:
     """True if at least `threshold` of the quote's word trigrams occur in the chunk.
 
-    Independent of chunk boundaries and robust to OCR whitespace / accents."""
+    Independent of chunk boundaries and robust to OCR whitespace / accents. A quote containing
+    the column separator "‖" (normalized PDF-layout table rows, benchmark-enrichi) is matched
+    column by column: n-grams never straddle two cells, two-word cells are compared as bigrams,
+    and only n-grams carrying a content word count (see `_column_shingles`). Quotes without "‖"
+    behave as before."""
+    if COLUMN_SEP in quote:
+        q = _column_shingles(quote)
+        if not q:
+            return False
+        ct = tokens(chunk_text)
+        c = _shingles(ct) | _shingles(ct, 2)
+        return len(q & c) / len(q) >= threshold
     q = _shingles(tokens(quote))
     if not q:
         return False
@@ -90,6 +122,50 @@ CURVE_KS = (1, 3, 5, 8, 12, 16, 20)
 
 def _first_rank(flags: list[bool]) -> int | None:
     return next((i + 1 for i, f in enumerate(flags) if f), None)
+
+
+def evidence_metrics(item: EvalItem, retrieved: list[RetrievedChunk]) -> dict[str, Any]:
+    """Evidence-level retrieval metrics over the whole returned context (benchmark-enrichi protocol).
+
+    An evidence is covered at rank r when one of its fragments `passage_match`es the r-th chunk.
+    - evidence_hit: at least one required evidence covered;
+    - evidence_recall: share of required evidence (union of the sets) covered;
+    - sufficiency: one evidence set entirely covered (AND inside a set, OR between sets);
+    - evidence_ranks / sufficiency_rank: first ranks, for curves at any cutoff.
+    Items without evidence sets (clarification cases) get no evidence metric."""
+    if not item.evidence_sets:
+        return {}
+    by_id = {e.evidence_id: e for e in item.evidence}
+    required = list(dict.fromkeys(i for s in item.evidence_sets for i in s.required_evidence_ids))
+    if not required:
+        return {}
+    def grams(text: str) -> set:
+        t = tokens(text)
+        return _shingles(t) | _shingles(t, 2)
+
+    chunk_sh = [grams(rc.chunk.text) for rc in retrieved]
+
+    def covers(frag: str, sh: set) -> bool:  # same rule as passage_match, chunk n-grams cached
+        q = _column_shingles(frag) if COLUMN_SEP in frag else _shingles(tokens(frag))
+        return bool(q) and len(q & sh) / len(q) >= 0.5
+
+    ranks: dict[str, int | None] = {}
+    for eid in required:
+        frags = by_id[eid].fragments if eid in by_id else []
+        ranks[eid] = next((i + 1 for i, sh in enumerate(chunk_sh) if any(covers(f, sh) for f in frags)), None)
+    set_ranks = []
+    for st in item.evidence_sets:
+        rs = [ranks.get(i) for i in st.required_evidence_ids]
+        set_ranks.append(None if (not rs or any(r is None for r in rs)) else max(rs))
+    covered = [r for r in ranks.values() if r is not None]
+    reachable = [r for r in set_ranks if r is not None]
+    return {
+        "evidence_hit": 1.0 if covered else 0.0,
+        "evidence_recall": len(covered) / len(required),
+        "sufficiency": 1.0 if reachable else 0.0,
+        "evidence_ranks": ranks,
+        "sufficiency_rank": min(reachable) if reachable else None,
+    }
 
 
 def retrieval_metrics(item: EvalItem, retrieved: list[RetrievedChunk], k: int = K_DEFAULT) -> dict[str, Any]:
@@ -129,6 +205,7 @@ def retrieval_metrics(item: EvalItem, retrieved: list[RetrievedChunk], k: int = 
     if terms:
         blob = fold(" ".join(rc.chunk.text for rc in top))
         out["answer_terms_in_context"] = 1.0 if all(fold(t) in blob for t in terms) else 0.0
+    out.update(evidence_metrics(item, retrieved))
     return out
 
 
@@ -277,6 +354,7 @@ def _aggregate(rows: list[dict[str, Any]], key: str) -> dict[str, Any] | None:
 METRIC_KEYS = [
     "doc_hit", "doc_mrr", "doc_recall", "doc_ndcg",
     "passage_hit", "passage_mrr", "passage_recall",
+    "evidence_hit", "evidence_recall", "sufficiency",
     "obsolete_intrusion", "answer_terms_in_context",
     "correct", "abstention_correct", "false_abstention", "sourced",
 ]
@@ -290,12 +368,26 @@ def recall_curve(rows: list[dict[str, Any]], key: str = "passage_rank", ks: tupl
     return {kk: sum(1 for r in rs if r[key] is not None and r[key] <= kk) / len(rs) for kk in ks}
 
 
+def evidence_recall_curve(rows: list[dict[str, Any]], ks: tuple[int, ...] = CURVE_KS) -> dict[int, float]:
+    """Mean share of required evidence covered within the first k results."""
+    rs = [r["evidence_ranks"] for r in rows if r.get("evidence_ranks")]
+    if not rs:
+        return {}
+    return {kk: sum(sum(1 for v in er.values() if v is not None and v <= kk) / len(er) for er in rs) / len(rs) for kk in ks}
+
+
 def summarize(rows: list[dict[str, Any]]) -> dict[str, Any]:
     summary: dict[str, Any] = {"n": len(rows)}
     for key in ("passage_rank", "doc_rank"):
         curve = recall_curve(rows, key)
         if curve:
             summary[f"{key.split('_')[0]}_hit_curve"] = curve
+    curve = recall_curve(rows, "sufficiency_rank")
+    if curve:
+        summary["sufficiency_curve"] = curve
+    curve = evidence_recall_curve(rows)
+    if curve:
+        summary["evidence_recall_curve"] = curve
     for k in METRIC_KEYS + ["latency_ms"]:
         agg = _aggregate(rows, k)
         if agg:
@@ -374,7 +466,9 @@ def to_markdown(report: dict[str, Any]) -> str:
     ]
     cols = [
         ("doc_hit", "Doc hit@k", True), ("doc_mrr", "Doc MRR", False), ("passage_hit", "Passage hit@k", True),
-        ("passage_mrr", "Passage MRR", False), ("obsolete_intrusion", "Intrusion obsolète", True),
+        ("passage_mrr", "Passage MRR", False), ("evidence_hit", "Preuve hit (ctx)", True),
+        ("evidence_recall", "Rappel preuves (ctx)", True), ("sufficiency", "Suffisance (ctx)", True),
+        ("obsolete_intrusion", "Intrusion obsolète", True),
         ("answer_terms_in_context", "Termes réponse (laxiste)", True), ("correct", "Exactitude", True),
         ("abstention_correct", "Abstention correcte", True), ("false_abstention", "Fausse abstention", True),
         ("sourced", "Sourcé", True), ("latency_ms", "Latence ms", None),
@@ -403,6 +497,16 @@ def to_markdown(report: dict[str, Any]) -> str:
                         + " | ".join(_fmt(aggs.get(c[0]), c[2]) for c in present if c[0] != "latency_ms")
                         + " |"
                     )
+    curve_names = [("passage_hit_curve", "Passage hit@k"), ("evidence_recall_curve", "Rappel preuves@k"),
+                   ("sufficiency_curve", "Suffisance@k"), ("doc_hit_curve", "Doc hit@k")]
+    curve_runs = [(run, name, label) for run in report["runs"] for name, label in curve_names if run["summary"].get(name)]
+    if curve_runs:
+        ks = sorted({int(kk) for run, name, _ in curve_runs for kk in run["summary"][name]})
+        lines += ["", "## Courbes (rang dans le contexte retourné)", "",
+                  "| Config | Courbe | " + " | ".join(f"k={kk}" for kk in ks) + " |", "|---|---|" + "---:|" * len(ks)]
+        for run, name, label in curve_runs:
+            cur = {int(kk): v for kk, v in run["summary"][name].items()}
+            lines.append(f"| `{run['config']}` | {label} | " + " | ".join(f"{cur[kk] * 100:.1f}" if kk in cur else "—" for kk in ks) + " |")
     if report.get("comparisons"):
         lines += ["", "## Comparaisons appariées (bootstrap)", "", "| Métrique | A | B | B − A | IC 95 % | P(B ≤ A) |", "|---|---|---|---:|---|---:|"]
         for c in report["comparisons"]:
@@ -441,7 +545,7 @@ def run_eval(
     if len(runs) >= 2:
         base = runs[0]
         for other in runs[1:]:
-            for metric in ("passage_hit", "doc_hit", "correct", "obsolete_intrusion"):
+            for metric in ("passage_hit", "doc_hit", "evidence_recall", "sufficiency", "correct", "obsolete_intrusion"):
                 a = {r["id"]: r.get(metric) for r in base["rows"]}
                 b = {r["id"]: r.get(metric) for r in other["rows"]}
                 ids = [i for i in a if a[i] is not None and b.get(i) is not None]

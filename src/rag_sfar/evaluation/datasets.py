@@ -3,6 +3,7 @@
 Format spec: eval/README.md. CLI:
     python -m rag_sfar.evaluation.datasets import --input F --suite S --provenance P [--map k=v ...]
     python -m rag_sfar.evaluation.datasets convert-abp
+    python -m rag_sfar.evaluation.datasets convert-enriched [--index index/table_aware_sota]
     python -m rag_sfar.evaluation.datasets split --suite S [--test-fraction 0.4] [--holdout-doc-fraction 0.2]
     python -m rag_sfar.evaluation.datasets lockbox
 """
@@ -36,6 +37,31 @@ class GoldPassage(BaseModel):
     quote: str
 
 
+class EvidencePassage(BaseModel):
+    """A reference passage of an expert benchmark, independent of chunking.
+
+    `fragments` are normalized quotes (layout columns re-joined, table headers removed, one per
+    table row, >= 6 words) matched against chunks with `harness.passage_match`; an evidence is
+    covered when one of its fragments is. When the annotation names the table row
+    (`table_coordinates.row`), only the rows that carry that label are kept in `fragments`; the
+    other rows of the same layout fragment go to `other_fragments` (context, no credit)."""
+
+    evidence_id: str
+    doc_id: str
+    page: int | None = None
+    fragments: list[str] = Field(default_factory=list)
+    other_fragments: list[str] = Field(default_factory=list)  # neighbouring rows, not used for credit
+    role: str = ""
+    verification_status: str = ""
+
+
+class EvidenceSet(BaseModel):
+    """Evidence that is jointly sufficient (AND inside a set, OR between sets)."""
+
+    set_id: str
+    required_evidence_ids: list[str] = Field(default_factory=list)
+
+
 class EvalItem(BaseModel):
     id: str
     suite: str
@@ -53,6 +79,15 @@ class EvalItem(BaseModel):
     group: str = ""
     tags: list[str] = Field(default_factory=list)
     meta: dict[str, Any] = Field(default_factory=dict)
+    # Optional fields of structured expert benchmarks (benchmark-enrichi). Absent from older
+    # files; `write_jsonl` omits them when empty so older suites are rewritten byte-identically.
+    mandatory_claims: list[dict[str, Any]] = Field(default_factory=list)  # {claim_id, text, criticality, evidence_ids}
+    forbidden_claims: list[dict[str, Any]] = Field(default_factory=list)  # {claim_id, text, severity}
+    expected_behavior: str = ""  # answer | clarification | abstention ("" = unspecified)
+    acceptable_alternatives: list[dict[str, Any]] = Field(default_factory=list)
+    required_missing_information: list[str] = Field(default_factory=list)
+    evidence: list[EvidencePassage] = Field(default_factory=list)
+    evidence_sets: list[EvidenceSet] = Field(default_factory=list)
 
     def formatted_query(self) -> str:
         if not self.choices:
@@ -72,11 +107,25 @@ def read_jsonl(path: Path) -> list[EvalItem]:
     return items
 
 
+OPTIONAL_STRUCTURED_FIELDS = (
+    "mandatory_claims", "forbidden_claims", "expected_behavior", "acceptable_alternatives",
+    "required_missing_information", "evidence", "evidence_sets",
+)
+
+
+def _dump(it: EvalItem) -> dict[str, Any]:
+    d = it.model_dump()
+    for k in OPTIONAL_STRUCTURED_FIELDS:
+        if not d.get(k):
+            d.pop(k, None)
+    return d
+
+
 def write_jsonl(items: Iterable[EvalItem], path: Path) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", encoding="utf-8") as f:
         for it in items:
-            f.write(json.dumps(it.model_dump(), ensure_ascii=False, sort_keys=True) + "\n")
+            f.write(json.dumps(_dump(it), ensure_ascii=False, sort_keys=True) + "\n")
 
 
 def suite_dataset_path(suite: str) -> Path:
@@ -214,6 +263,370 @@ def convert_abp_benchmark(path: Path = ABP_BENCHMARK, gold_doc_ids: list[str] | 
             )
         )
     return items
+
+
+# ---------------------------------------------------------------- structured expert benchmark (benchmark-enrichi)
+
+ENRICHED_BENCHMARK = Path(
+    "data/benchmark_enrichi_alparagsfar/benchmark_enrichi_phase1/questions_enriched_draft.jsonl"
+)
+DEFAULT_INDEX = Path("index/table_aware_sota")
+MIN_FRAGMENT_WORDS = 6
+# Separates the table columns of a normalized fragment; `harness.passage_match` builds word
+# n-grams inside each column only (no n-gram straddles two cells), see its docstring.
+COLUMN_SEP = " ‖ "
+
+# Column headers of the SFAR RFE tables ("Actes chirurgicaux ou interventionnels | Molécules |
+# Dose initiale | Réinjections et durée | Force de la recommandation", sometimes "Nomenclature").
+# A layout segment made only of these words is a repeated table header, not evidence.
+_TABLE_HEADER_WORDS = {
+    "actes", "chirurgicaux", "ou", "interventionnels", "nomenclature", "molecules", "dose", "initiale",
+    "reinjections", "et", "duree", "force", "de", "la", "recommandation",
+}
+# Words of the regimen / grading cells, shared by most rows. A row whose remaining words are fewer
+# than MIN_SPECIFIC_WORDS ("PAS D'ANTIBIOPROPHYLAXIE (Avis d'experts)", "Céfazoline 2g IVL ...")
+# would match many chunks and credit the wrong row: it is kept as context only.
+_CELL_BOILERPLATE = {
+    "pas", "d", "antibioprophylaxie", "avis", "experts", "grade", "dose", "unique", "ivl", "ivd", "g", "mg", "kg",
+    "si", "duree", "h", "puis", "toutes", "les", "jusqu", "a", "fin", "de", "chirurgie", "alternative", "au", "choix",
+    "ou", "et", "la", "le", "l", "en", "per", "os", "min", "max", "maximum", "reinjection", "reinjections",
+}
+MIN_SPECIFIC_WORDS = 3
+_BULLET_RE = re.compile(r"^(?:[§▪■•○◦\-]|o(?= ))\s*")  # list markers, absent or different in chunks
+_SEGMENT_RE = re.compile(r"\S+(?: \S+)*")  # runs separated by >= 2 spaces = layout columns
+
+
+def _layout_segments(line: str) -> list[tuple[int, str]]:
+    return [(m.start(), m.group(0)) for m in _SEGMENT_RE.finditer(line)]
+
+
+def _is_header_segment(seg: str) -> bool:
+    toks = tokens(seg)
+    return bool(toks) and all(t in _TABLE_HEADER_WORDS for t in toks)
+
+
+def _is_heading(text: str) -> bool:
+    """All-caps section titles ("CHIRURGIE HEPATO-BILIAIRE ...") locate a passage but carry no
+    clinical content; chunk texts keep them in `section_path`, not in the text."""
+    letters = [c for c in text if c.isalpha()]
+    return bool(letters) and sum(c.isupper() for c in letters) / len(letters) > 0.8
+
+
+def is_content_token(t: str) -> bool:
+    """False for regimen/grading vocabulary and quantities ("2g", "4h", "30", "mg")."""
+    return t not in _CELL_BOILERPLATE and not re.fullmatch(r"\d+[a-z]{0,2}", t)
+
+
+def _is_specific(text: str) -> bool:
+    return sum(1 for t in tokens(text) if is_content_token(t)) >= MIN_SPECIFIC_WORDS
+
+
+def normalize_layout_fragment(text: str, col_tol: int = 4) -> list[str]:
+    """Turn one `pdftotext -layout` fragment into chunking-independent quotes.
+
+    The layout text interleaves table columns line by line ("§ Prothèse de hanche ... Céfazoline
+    2g IVL ..."), which no chunk reproduces. Generic, structure-based steps:
+    1. split lines into column segments (runs separated by >= 2 spaces) and drop segments made
+       only of table-header words;
+    2. split into table rows: a blank line, a line starting with the RFE bullet "§" or a
+       first-column line starting with a capital (sub-category label) opens a row; list markers
+       ("§", "o", "▪") are removed;
+    3. inside a row, cluster segments by start column (±`col_tol`) and read column by column,
+       columns separated by COLUMN_SEP;
+    4. drop all-caps headings and rows with < MIN_FRAGMENT_WORDS words or < MIN_SPECIFIC_WORDS
+       words outside the regimen/grading vocabulary (they would match many rows); when no row is
+       left, the whole fragment is kept as one quote if it passes the same test.
+    """
+    blocks: list[list[list[tuple[int, str]]]] = []
+    cur: list[list[tuple[int, str]]] = []
+    for line in text.replace("\r", "").split("\n"):
+        if not line.strip():
+            if cur:
+                blocks.append(cur)
+                cur = []
+            continue
+        # A row starts with the RFE bullet "§" or, in the first column, with a capital letter
+        # (sub-category label); lower-case or "(" lines in the first column continue the act.
+        if re.match(r"^\s{0,3}(?:§|[A-ZÀ-Ý])", line) and cur:
+            blocks.append(cur)
+            cur = []
+        segs = [(st, _BULLET_RE.sub("", sg)) for st, sg in _layout_segments(line) if not _is_header_segment(sg)]
+        segs = [(st, sg) for st, sg in segs if sg]
+        if segs:
+            cur.append(segs)
+    if cur:
+        blocks.append(cur)
+    quotes: list[str] = []
+    for block in blocks:
+        cols: list[list[Any]] = []  # [first_start, last_start, [segments]]
+        for segs in block:
+            for st, sg in segs:
+                col = next((c for c in cols if abs(c[1] - st) <= col_tol or 0 <= st - c[0] <= col_tol), None)
+                if col is None:
+                    col = [st, st, []]
+                    cols.append(col)
+                col[1] = st
+                col[2].append(sg)
+        cols.sort(key=lambda c: c[0])
+        quote = COLUMN_SEP.join(" ".join(c[2]) for c in cols).strip()
+        if quote and not _is_heading(quote):
+            quotes.append(quote)
+    strong = [q for q in quotes if not _is_weak(q)]
+    if strong:
+        return strong
+    # Only short rows (a shared "PAS D'ANTIBIOPROPHYLAXIE" cell followed by bare act bullets):
+    # the fragment is kept whole.
+    whole = COLUMN_SEP.join(quotes)
+    return [whole] if not _is_weak(whole) else []
+
+
+def _is_weak(text: str) -> bool:
+    return len(tokens(text)) < MIN_FRAGMENT_WORDS or not _is_specific(text)
+
+
+def select_row_fragments(units: list[str], row_label: str, min_overlap: float = 0.6) -> tuple[list[str], list[str]]:
+    """Keep the table rows that carry the annotated row label (>= `min_overlap` of its words).
+
+    Layout fragments often span several rows; crediting any of them would reward a neighbouring
+    row. Without a label, or when no row carries it (free-text labels), every row is kept."""
+    label = set(tokens(row_label))
+    if len(label) < 1 or len(units) <= 1:
+        return list(units), []
+    key = [u for u in units if len(label & set(tokens(u))) / len(label) >= min_overlap]
+    if not key:
+        return list(units), []
+    return key, [u for u in units if u not in key]
+
+
+def current_edition_doc_ids(index_dir: Path = DEFAULT_INDEX, topic_lineage: str = "antibioprophylaxie") -> list[str]:
+    """`doc_id`s of the edition in force for a recommendation lineage, read from an index."""
+    import sqlite3
+
+    db = index_dir / "metadata.sqlite"
+    if not db.exists():
+        return []
+    con = sqlite3.connect(db)
+    try:
+        rows = con.execute(
+            "SELECT doc_id FROM documents WHERE topic_lineage = ? AND is_latest_edition = 1 ORDER BY doc_id",
+            (topic_lineage,),
+        ).fetchall()
+    finally:
+        con.close()
+    return [r[0] for r in rows]
+
+
+_EXPECTED_BEHAVIOR = {
+    "answer_with_evidence": "answer",
+    "conditional_answer": "answer",
+    "ask_clarification": "clarification",
+    "abstain": "abstention",
+    "abstention": "abstention",
+}
+
+
+def _slug(text: str) -> str:
+    return re.sub(r"[^a-z0-9]+", "_", fold(text)).strip("_")
+
+
+def convert_enriched_benchmark(
+    path: Path = ENRICHED_BENCHMARK,
+    gold_doc_ids: list[str] | None = None,
+    index_dir: Path = DEFAULT_INDEX,
+    suite: str = "abpe171",
+) -> list[EvalItem]:
+    """Convert the benchmark-enrichi consolidated JSONL (phase 1, V3.1 provisional reference).
+
+    - question / choices: `proposed` (the text given to the system), id = legacy id (Q01...).
+    - evidence: `evidence_current` (V3.1), fragments normalized by `normalize_layout_fragment`;
+      `gold_passages` = one passage per useful fragment; `evidence_sets` kept as is.
+    - gold_doc_ids: current edition of the antibioprophylaxis RFE in the index (or given).
+    - answer_key: MCQ letter only when `mcq_option_status == "single_supported"`; nothing else
+      (open answers are scored on claims by the judge).
+    - expected_behavior: answer | clarification | abstention; should_abstain only for abstention.
+    """
+    if gold_doc_ids is None:
+        gold_doc_ids = current_edition_doc_ids(index_dir)
+    gold = list(gold_doc_ids)
+    gold_doc = gold[0] if gold else ""
+    items = []
+    for line in path.read_text(encoding="utf-8").splitlines():
+        if not line.strip():
+            continue
+        r = json.loads(line)
+        prop = r.get("proposed") or {}
+        ref = r.get("reference_answer") or {}
+        cls = r.get("classification") or {}
+        fmt = prop.get("format") or r.get("legacy_format") or "open"
+        behavior = _EXPECTED_BEHAVIOR.get(prop.get("expected_behavior") or "", prop.get("expected_behavior") or "")
+        answerability = prop.get("answerability") or ""
+        should_abstain = behavior == "abstention" or answerability in ("unanswerable", "out_of_scope")
+        qtype = "mcq" if fmt == "mcq" else ("abstention" if should_abstain else "open")
+
+        key: dict[str, Any] = {}
+        if fmt == "mcq" and prop.get("mcq_option_status") == "single_supported" and isinstance(prop.get("mcq_correct_option"), str):
+            key = {"mcq": prop["mcq_correct_option"].strip().upper()}
+
+        evidence: list[EvidencePassage] = []
+        passages: list[GoldPassage] = []
+        for e in r.get("evidence_current") or []:
+            units: list[str] = []
+            for f in e.get("exact_fragments") or []:
+                for q in normalize_layout_fragment(f.get("text", "")):
+                    if q not in units:
+                        units.append(q)
+            frags, others = select_row_fragments(units, ((e.get("table_coordinates") or {}).get("row") or ""))
+            evidence.append(EvidencePassage(
+                evidence_id=e["evidence_id"], doc_id=gold_doc or e.get("doc_id", ""), page=e.get("pdf_page"),
+                fragments=frags, other_fragments=others, role=e.get("evidence_role") or "",
+                verification_status=e.get("verification_status") or "",
+            ))
+            for q in frags:
+                if all(gp.quote != q for gp in passages):
+                    passages.append(GoldPassage(doc_id=gold_doc, quote=q))
+        sets = [EvidenceSet(set_id=s.get("set_id", f"S{i + 1}"), required_evidence_ids=list(s.get("required_evidence_ids") or []))
+                for i, s in enumerate(r.get("evidence_sets") or [])]
+
+        mandatory = [{"claim_id": c.get("claim_id") or f"{r['legacy_id']}-C{i + 1}", "text": c.get("text_fr", ""),
+                      "criticality": c.get("criticality", ""), "evidence_ids": list(c.get("evidence_ids") or [])}
+                     for i, c in enumerate(ref.get("mandatory_claims") or [])]
+        forbidden = [{"claim_id": c.get("claim_id") or f"{r['legacy_id']}-F{i + 1}", "text": c.get("text_fr", ""),
+                      "severity": c.get("severity", "")}
+                     for i, c in enumerate(ref.get("forbidden_claims") or [])]
+        missing = [m if isinstance(m, str) else (m.get("text_fr") or m.get("variable") or json.dumps(m, ensure_ascii=False))
+                   for m in ref.get("required_missing_information") or []]
+
+        tags = []
+        if cls.get("primary_category"):
+            tags.append(f"cat:{cls['primary_category']}")
+        if cls.get("difficulty"):
+            tags.append(f"difficulty:{cls['difficulty']}")
+        if cls.get("adult_or_pediatric"):
+            tags.append(f"population:{cls['adult_or_pediatric']}")
+        if cls.get("adult_or_pediatric") in ("pediatric", "adult_and_pediatric"):
+            tags.append("pediatric")
+        tags += [f"challenge:{c}" for c in cls.get("retrieval_challenges") or []]
+        tags += [f"special:{_slug(p)}" for p in cls.get("special_population") or []]
+        if behavior and behavior != "answer":
+            tags.append(f"behavior:{behavior}")
+        if fmt == "mcq" and not key:
+            tags.append(f"mcq:{prop.get('mcq_option_status') or 'no_key'}")
+
+        items.append(EvalItem(
+            id=r["legacy_id"],
+            suite=suite,
+            question=prop.get("question") or (r.get("legacy") or {}).get("question", ""),
+            question_type=qtype,
+            provenance="physician_validated" if (r.get("review") or {}).get("decision") == "approved" else "external_benchmark",
+            choices=prop.get("choices") or {},
+            reference_answer=ref.get("short_answer") or ref.get("narrative_fr") or "",
+            answer_key=key,
+            should_abstain=should_abstain,
+            gold_doc_ids=gold,
+            gold_passages=passages,
+            current_edition_required=True,
+            source_doc_ids=gold,
+            tags=tags,
+            mandatory_claims=mandatory,
+            forbidden_claims=forbidden,
+            expected_behavior=behavior,
+            acceptable_alternatives=list(ref.get("acceptable_alternatives") or []),
+            required_missing_information=missing,
+            evidence=evidence,
+            evidence_sets=sets,
+            meta={
+                "question_id": r.get("question_id"),
+                "legacy_id": r.get("legacy_id"),
+                "narrative": ref.get("narrative_fr", ""),
+                "answerability": answerability,
+                "expected_behavior_raw": prop.get("expected_behavior"),
+                "mcq_option_status": prop.get("mcq_option_status"),
+                "mcq_correct_option": prop.get("mcq_correct_option"),
+                "question_edit_status": prop.get("question_edit_status"),
+                "primary_category": cls.get("primary_category"),
+                "secondary_categories": cls.get("secondary_categories") or [],
+                "template_family": cls.get("template_family"),
+                "reference_version": r.get("current_reference_version"),
+                "review_decision": (r.get("review") or {}).get("decision"),
+                "citation_verified": (r.get("review") or {}).get("citation_verified"),
+                "source": "benchmark_enrichi_phase1/questions_enriched_draft.jsonl",
+            },
+        ))
+    return items
+
+
+def split_like(items: list[EvalItem], reference_suite: str) -> tuple[list[EvalItem], list[EvalItem]]:
+    """Reuse another suite's dev/test assignment by id (same legacy identifiers).
+
+    Reads the reference test file only for its ids (no evaluation)."""
+    def ids(part: str) -> set[str]:
+        p = split_path(reference_suite, part)
+        return {json.loads(l)["id"] for l in p.read_text(encoding="utf-8").splitlines() if l.strip()}
+
+    dev_ids, test_ids = ids("dev"), ids("test")
+    unknown = [it.id for it in items if it.id not in dev_ids | test_ids]
+    if unknown or dev_ids & test_ids:
+        raise ValueError(f"cannot reuse split of {reference_suite}: unknown ids {unknown[:5]}, overlap {sorted(dev_ids & test_ids)[:5]}")
+    return [it for it in items if it.id in dev_ids], [it for it in items if it.id in test_ids]
+
+
+def mapping_coverage(items: list[EvalItem], index_dir: Path = DEFAULT_INDEX, doc_ids: list[str] | None = None) -> dict[str, Any]:
+    """Share of gold passages / evidence / sufficient sets that `passage_match` finds in at least
+    one chunk of an index (restricted to `doc_ids`, default: each item's gold documents).
+
+    This is the ceiling of the passage-level retrieval metrics for that index; the unmatched
+    fragments point at ingestion defects (OCR, split tables, missing headings)."""
+    import sqlite3
+
+    from rag_sfar.evaluation.harness import passage_match
+
+    wanted = set(doc_ids or {d for it in items for d in it.gold_doc_ids})
+    con = sqlite3.connect(index_dir / "metadata.sqlite")
+    try:
+        texts = [json.loads(p)["text"] for (d, p) in con.execute("SELECT doc_id, payload_json FROM chunks") if d in wanted]
+    finally:
+        con.close()
+    cache: dict[str, bool] = {}
+
+    def found(q: str) -> bool:
+        if q not in cache:
+            cache[q] = any(passage_match(q, t) for t in texts)
+        return cache[q]
+
+    n_pass = n_pass_ok = n_ev = n_ev_ok = n_ev_empty = n_sets_items = n_suff = 0
+    unmatched: list[dict[str, Any]] = []
+    per_item: dict[str, dict[str, Any]] = {}
+    for it in items:
+        for gp in it.gold_passages:
+            n_pass += 1
+            n_pass_ok += found(gp.quote)
+        ev_ok = {}
+        for e in it.evidence:
+            n_ev += 1
+            if not e.fragments:
+                n_ev_empty += 1
+                ev_ok[e.evidence_id] = False
+                unmatched.append({"id": it.id, "evidence_id": e.evidence_id, "page": e.page, "fragment": None})
+                continue
+            ok = any(found(q) for q in e.fragments)
+            ev_ok[e.evidence_id] = ok
+            n_ev_ok += ok
+            for q in e.fragments:
+                if not found(q):
+                    unmatched.append({"id": it.id, "evidence_id": e.evidence_id, "page": e.page, "fragment": q})
+        if it.evidence_sets:
+            n_sets_items += 1
+            suff = any(all(ev_ok.get(i, False) for i in s.required_evidence_ids) for s in it.evidence_sets)
+            n_suff += suff
+            per_item[it.id] = {"sufficient_mappable": suff,
+                               "missing": sorted({i for s in it.evidence_sets for i in s.required_evidence_ids if not ev_ok.get(i)})}
+    return {
+        "n_items": len(items), "n_chunks": len(texts),
+        "gold_passages": n_pass, "gold_passages_found": n_pass_ok,
+        "evidence": n_ev, "evidence_found": n_ev_ok, "evidence_without_useful_fragment": n_ev_empty,
+        "items_with_sets": n_sets_items, "items_sufficiency_mappable": n_suff,
+        "unmatched": unmatched, "per_item": per_item,
+    }
 
 
 # ---------------------------------------------------------------- split
@@ -410,6 +823,20 @@ def _cli() -> None:
     p_abp = sub.add_parser("convert-abp")
     p_abp.add_argument("--gold-doc-id", action="append", default=[])
 
+    p_enr = sub.add_parser("convert-enriched", help="benchmark-enrichi JSONL -> eval/datasets/abpe171.jsonl + split reused from abp171")
+    p_enr.add_argument("--input", type=Path, default=ENRICHED_BENCHMARK)
+    p_enr.add_argument("--suite", default="abpe171")
+    p_enr.add_argument("--index", type=Path, default=DEFAULT_INDEX, help="index whose metadata gives the current-edition doc_ids")
+    p_enr.add_argument("--gold-doc-id", action="append", default=[])
+    p_enr.add_argument("--split-like", default="abp171", help="suite whose dev/test assignment (by id) is reused; '' to skip")
+    p_enr.add_argument("--force", action="store_true", help="Overwrite a locked test split (needs user approval).")
+
+    p_cov = sub.add_parser("coverage", help="share of gold passages/evidence found in an index (dev only by default)")
+    p_cov.add_argument("--suite", default="abpe171")
+    p_cov.add_argument("--split", default="dev", choices=["dev"])
+    p_cov.add_argument("--index", type=Path, default=DEFAULT_INDEX)
+    p_cov.add_argument("--out", type=Path, default=None)
+
     p_split = sub.add_parser("split")
     p_split.add_argument("--suite", required=True)
     p_split.add_argument("--test-fraction", type=float, default=0.4)
@@ -431,6 +858,29 @@ def _cli() -> None:
         items = convert_abp_benchmark(gold_doc_ids=args.gold_doc_id)
         write_jsonl(items, DATASETS_DIR / "abp171.jsonl")
         print(f"{len(items)} questions -> {DATASETS_DIR / 'abp171.jsonl'}")
+    elif args.cmd == "convert-enriched":
+        items = convert_enriched_benchmark(args.input, args.gold_doc_id or None, args.index, args.suite)
+        out = DATASETS_DIR / f"{args.suite}.jsonl"
+        write_jsonl(items, out)
+        print(f"{len(items)} questions -> {out} (gold docs: {items[0].gold_doc_ids if items else []})")
+        if args.split_like:
+            test_p = split_path(args.suite, "test")
+            if test_p.exists() and test_p.as_posix() in read_lockbox() and not args.force:
+                print(f"{test_p} is locked: split files left untouched.")
+            else:
+                dev, test = split_like(items, args.split_like)
+                write_jsonl(dev, split_path(args.suite, "dev"))
+                write_jsonl(test, test_p)
+                info = {"split_like": args.split_like, "n_dev": len(dev), "n_test": len(test)}
+                (test_p.parent / "split_info.json").write_text(json.dumps(info, ensure_ascii=False, indent=2), encoding="utf-8")
+                print(json.dumps(info))
+    elif args.cmd == "coverage":
+        cov = mapping_coverage(read_jsonl(split_path(args.suite, args.split)), args.index)
+        brief = {k: v for k, v in cov.items() if k not in ("unmatched", "per_item")}
+        print(json.dumps(brief, ensure_ascii=False))
+        if args.out:
+            args.out.parent.mkdir(parents=True, exist_ok=True)
+            args.out.write_text(json.dumps(cov, ensure_ascii=False, indent=1), encoding="utf-8")
     elif args.cmd == "split":
         src = suite_dataset_path(args.suite)
         items = read_jsonl(src)
