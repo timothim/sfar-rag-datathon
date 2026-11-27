@@ -313,7 +313,9 @@ def erratum_check(docs) -> dict:
             failures.append(m.doc_id)
     return {"documents": found, "uncovered": failures, "ok": not failures}
 
-    import dataclasses
+
+def parse_options(spec: str):
+    import dataclasses  # noqa: F401
 
     from rag_sfar.ingestion.chunker import ChunkOptions
 

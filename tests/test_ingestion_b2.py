@@ -358,3 +358,8 @@ def test_strength_glyphs_dropped_before_a_grade_label_only():
     out = clean_chunk_text("Molécule A | ●●● (GRADE 2) | [◉◎◎ (Avis d'experts)] | ○○ case vide | ○ Patients")
     assert "●" not in out and "◉" not in out
     assert "(GRADE 2)" in out and "(Avis d'experts)" in out and "○○ case vide" in out and "○ Patients" in out
+
+
+def test_title_nouns_do_not_make_a_heading_sentence_like():
+    pops, src = infer_chunk_populations("CHAMP 2. Recommandations par disciplines adultes. > PARTIE 1 : Chirurgie alpha")
+    assert pops == ["adulte"] and src == "section"

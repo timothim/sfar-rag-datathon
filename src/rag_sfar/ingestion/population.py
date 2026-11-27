@@ -48,7 +48,9 @@ _PAREN_EXCLUSION_RE = re.compile(
 # Headings that cannot give a population: sentences (recommendation statements turned into
 # headings) and enumerations of several topics ("CHIRURGIE A, B, C ET D").
 _SENTENCE_HEADING_RE = re.compile(
-    r"\b(?:recommand\w*|sugg[eè]r\w*|propos\w*|il\s+faut|doit|doivent|peut|peuvent|faut-il|"
+    # verb forms only: "Recommandations ..." or "Propositions ..." in a title are nouns
+    r"\b(?:recommand(?:e|é|ée|és|ées|ons|ent)|sugg[eè]r(?:e|ent|ons|é|ée)|propos(?:e|ent|ons|é|ée|és)|"
+    r"il\s+faut|doit|doivent|peut|peuvent|faut-il|"
     r"we\s+(?:suggest|recommend)|should)\b",
     re.I,
 )
