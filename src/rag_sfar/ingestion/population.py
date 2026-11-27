@@ -7,7 +7,8 @@ Sources, by decreasing priority (the first one that yields a label wins):
 2. "section": the deepest heading of the section path that names a population
    ("CHAMP 3 ... pédiatriques et néonatales", "Chez l'adulte", "Femme enceinte");
 3. "document": the document title (and file name) when it names a population.
-Nothing is inferred from free prose: a passing mention of "enfant" in an argumentaire does not
+Headings that are sentences or enumerations of several topics are not used (when in doubt,
+no label). Nothing is inferred from free prose: a passing mention of "enfant" in an argumentaire does not
 make a chunk pediatric. Negated mentions ("hors néonatalogie", "sauf l'enfant", "à l'exclusion
 des femmes enceintes", "non obstétrical") are ignored.
 """
@@ -38,6 +39,33 @@ _NEGATION_BEFORE_RE = re.compile(
 )
 
 
+_NEGATION_AFTER_RE = re.compile(
+    r"^[\s)\]]*(?:,\s*)?(?:exclue?s?|exclus|non\s+concern[ée]e?s?|except[ée]e?s?|hors\s+champ)\b", re.I
+)
+_PAREN_EXCLUSION_RE = re.compile(
+    r"^\s*(?:except\w*|excluding|sauf|hors|à\s+l['’]exclusion|a\s+l['’]exclusion|exclu\w*|non\s+inclus)\b", re.I
+)
+# Headings that cannot give a population: sentences (recommendation statements turned into
+# headings) and enumerations of several topics ("CHIRURGIE A, B, C ET D").
+_SENTENCE_HEADING_RE = re.compile(
+    r"\b(?:recommand\w*|sugg[eè]r\w*|propos\w*|il\s+faut|doit|doivent|peut|peuvent|faut-il|"
+    r"we\s+(?:suggest|recommend)|should)\b",
+    re.I,
+)
+
+
+def heading_can_label(heading: str) -> bool:
+    """A heading gives a population only if it is a short title: at most 15 words, not a
+    sentence, not an enumeration of three topics or more."""
+    h = heading.strip()
+    if len(h.split()) > 15 or _SENTENCE_HEADING_RE.search(h) or h.rstrip().endswith("?"):
+        return False
+    body = re.sub(r"^\s*(?:partie|champ|chapitre)\s*\d+\s*[:.\-–]?\s*", "", h, flags=re.I)
+    if body.count(",") >= 2 or (body.count(",") >= 1 and re.search(r"\bet\b", body, re.I)):
+        return False
+    return True
+
+
 def _fold(text: str) -> str:
     return unicodedata.normalize("NFC", text or "")
 
@@ -53,6 +81,17 @@ def population_terms(text: str) -> set[str]:
                 continue
             # "-" glued forms like "non-obstétrical"
             if re.search(r"\bnon[- ]$", before, re.I):
+                continue
+            # Negation placed after the term: "(nouveau-né exclu)", "enfants exclus",
+            # "adulte non concerné"
+            if _NEGATION_AFTER_RE.match(t[m.end() : m.end() + 40]):
+                continue
+            # Inside a parenthesis that opens with an exclusion: "(except ... and neonate)",
+            # "(sauf X et enfants)", "(hors ...)"
+            open_par = t.rfind("(", 0, m.start())
+            if open_par != -1 and ")" not in t[open_par : m.start()] and _PAREN_EXCLUSION_RE.match(
+                t[open_par + 1 : m.start()]
+            ):
                 continue
             found.add(pop)
             break
@@ -79,7 +118,7 @@ def populations_from_section(section_path: str) -> set[str]:
     """Populations named along a section path, refined from the root to the deepest heading."""
     pops: set[str] = set()
     for heading in (p.strip() for p in (section_path or "").split(" > ")):
-        if heading:
+        if heading and heading_can_label(heading):
             pops = _refine(pops, population_terms(heading))
     return pops
 

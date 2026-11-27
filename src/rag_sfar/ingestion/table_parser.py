@@ -19,6 +19,8 @@ from dataclasses import dataclass, field
 
 from bs4 import BeautifulSoup, Tag
 
+from rag_sfar.ingestion.text_cleaning import latex_to_text
+
 
 @dataclass
 class TableRowGroup:
@@ -231,6 +233,8 @@ def _li_text(li: Tag) -> str:
         elif isinstance(child, Tag):
             if child.name == "br":
                 own.append(_BR)
+            elif child.name == "math":
+                own.append(latex_to_text(child.get_text()))
             else:
                 own.append(_node_text(child))
         else:
@@ -258,6 +262,9 @@ def _node_text(node: Tag) -> str:
                     parts.append(" " + t + " ;")
             elif child.name == "br":
                 parts.append(_BR)
+            elif child.name == "math":
+                # LaTeX rendered before extraction, so that "<math>\\mu</math>g" gives "µg"
+                parts.append(latex_to_text(child.get_text()))
             elif child.name in ("p", "div"):
                 t = _node_text(child)
                 if t.strip():
@@ -267,6 +274,10 @@ def _node_text(node: Tag) -> str:
         else:
             parts.append(str(child))
     return "".join(parts)
+
+
+# A line that starts with a unit continues the value above it ("≤ 5<br>µg/kg/min").
+_UNIT_START_RE = re.compile(r"^(?:µ|\\mu|mg|g/|g\b|kg|ml|mL|mmol|µmol|UI|U/|%|mmHg|h\b|min\b)")
 
 
 def _resolve_breaks(text: str) -> str:
@@ -282,7 +293,7 @@ def _resolve_breaks(text: str) -> str:
             continue
         if not out or out.endswith(" / "):
             out += p
-        elif re.match(r"^[a-zà-ÿ(]", p) or re.search(r"[,(\-–]$|\b(?:de|du|des|la|le|les|à|au|et|ou|en|par|pour|si|puis|jusqu'à)$", out):
+        elif _UNIT_START_RE.match(p) or re.match(r"^[a-zà-ÿ(]", p) or re.search(r"[,(\-–]$|\b(?:de|du|des|la|le|les|à|au|et|ou|en|par|pour|si|puis|jusqu'à)$", out):
             out += " " + p
         else:
             out += " / " + p
@@ -355,6 +366,19 @@ def full_width_row_kind(text: str, raw_tr: Tag) -> str:
     t = text.strip()
     if t.endswith("?"):
         return "label"  # a question heads the rows that answer it
+    # Short title-like rows are labels even when they end with "." or a call mark
+    # ("Candida sp.", "Chirurgie du tube digestif *", "Faible risque [0–8]"): at most 8 words,
+    # no conjugated verb, not opening with a note marker. The call mark stays in the label, so
+    # its footnote is linked to the rows that FOLLOW (the label heads them).
+    core = re.sub(r"[\s*†‡#§]+$", "", t)
+    if (
+        core
+        and len(core.split()) <= 8
+        and not _NOTE_VERB_RE.search(core)
+        and not re.match(r"^[\*†‡#§(\[]", t)
+        and not re.match(r"(?i)^(?:en\s+cas|si\b|nb\b|note\b|attention\b|remarque\b)", t)
+    ):
+        return "label"
     italic_only = bool(raw_tr.find(["i", "em"])) and not raw_tr.find(["b", "strong"])
     if italic_only or len(t) > 140 or _NOTE_START_RE.match(t):
         return "note"

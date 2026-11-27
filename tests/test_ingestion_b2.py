@@ -192,3 +192,98 @@ def test_near_copy_of_abrogated_document_is_abrogated():
     _apply_abrogated_twins([ab, twin, other])
     assert twin.metadata.is_active is False and "quasi-copie" in twin.metadata.supersession_evidence
     assert other.metadata.is_active is True
+
+
+# ---------------------------------------------------------------- fixes after review R1
+
+
+def test_markdown_table_rows_and_empty_cells_survive_cleanup():
+    md = "| Acte | Molécule | Dose |\n| --- | --- | --- |\n| A | Aucune |  |\n| B | Molécule Z | 2 g |"
+    out = clean_chunk_text(md)
+    lines = out.splitlines()
+    assert len(lines) == 4
+    assert [ln.count("|") for ln in lines] == [4, 4, 4, 4]
+    # orphan cell fragments outside a table are still joined
+    assert clean_chunk_text("<td>a</td><td>b</td>") == "| a | b |"
+
+
+def test_micro_units_never_become_mug():
+    from rag_sfar.ingestion.table_parser import parse_html_table
+
+    assert "µg/kg/min" in clean_chunk_text(r"<math>\leq 0,1 \mu\text{g/kg/min}</math>")
+    assert clean_chunk_text(r"$\mu g$ et \mu mol") == "µg et µmol"
+    t = parse_html_table("<table><tr><th>A</th></tr><tr><td>3 à 5 <math>\\mu</math>g/kg</td></tr></table>")
+    assert t.row_groups[0].rows[0][0] == "3 à 5 µg/kg"
+    assert "mug" not in clean_chunk_text(r"25 $\mu\text{g} L^{-1}$")
+
+
+def test_value_and_unit_split_by_line_break_stay_together():
+    from rag_sfar.ingestion.table_parser import parse_html_table
+
+    t = parse_html_table("<table><tr><th>A</th><th>B</th></tr><tr><td>x</td><td>Molécule ≤ 5<br>µg/kg/min</td></tr></table>")
+    assert t.row_groups[0].rows[0][1] == "Molécule ≤ 5 µg/kg/min"
+
+
+def test_mermaid_edge_labels_with_comparisons_bidirectional_and_nested_brackets():
+    block = (
+        "graph TD\n    A[Score] -- SCORE > 26\nOu AUTRE > 22 --> B[Traitement X]\n"
+        "    A -- SCORE < 8 --> C[Réduction Y]\n    C <--> D[Encadré 0,01 mg/kg]\n"
+        "    D --> E[Si [Molécule] > 50 ng/mL]\n"
+    )
+    out = mermaid_to_text(block)
+    for tok in ("26", "22", "Traitement X", "Réduction Y", "0,01 mg/kg", "[Molécule] > 50 ng/mL"):
+        assert tok in out
+
+
+def test_mermaid_fidelity_guard_keeps_raw_block_when_content_is_lost():
+    from rag_sfar.ingestion import text_cleaning as tc
+
+    block = "graph TD\n    A[Début] --> B[Dose 5 mg]\n"
+    original = tc.mermaid_to_text
+    try:
+        tc.mermaid_to_text = lambda b: "[Organigramme (converti depuis le schéma OCR)]\n- Début"
+        out = tc.mermaid_block_to_text(block)
+    finally:
+        tc.mermaid_to_text = original
+    assert "syntaxe d'origine conservée" in out and "Dose 5 mg" in out
+
+
+def test_population_negation_after_term_and_in_exclusion_parenthesis():
+    assert population_terms("Ventilation au cours de l'insuffisance aiguë (nouveau-né exclu)") == set()
+    assert population_terms("Prise en charge (except cross transmission and neonate)") == set()
+    assert population_terms("Enfants exclus de l'étude") == set()
+
+
+def test_population_not_taken_from_sentences_or_enumerations():
+    pops, _ = infer_chunk_populations("PARTIE 6 : CHIRURGIE ALPHA, BETA, OBSTETRIQUE ET GAMMA > Sous-groupe")
+    assert pops == []
+    pops, _ = infer_chunk_populations("Enfants – Les experts suggèrent d'utiliser la technique delta chez l'enfant")
+    assert pops == []
+
+
+def test_short_label_rows_ending_with_period_or_call_mark_are_labels():
+    html = (
+        "<table><tr><th>Germe</th><th>Traitement</th></tr>"
+        '<tr><td colspan="2"><i>Groupe alpha sp.</i></td></tr><tr><td>alpha 1</td><td>X</td></tr>'
+        '<tr><td colspan="2">Chirurgie du groupe beta *</td></tr><tr><td>beta 1</td><td>Y</td></tr>'
+        "</table>"
+    )
+    t = parse_html_table(html)
+    assert [g.sub_banner for g in t.row_groups] == ["Groupe alpha sp.", "Chirurgie du groupe beta *"]
+    assert all(not g.notes for g in t.row_groups)
+
+
+def test_nul_pair_is_not_guessed_without_vocabulary_evidence():
+    rep = NulRepairer(["La réserve est évaluée."])
+    assert rep("(\x00\x00 3 fois)") == "(� 3 fois)"
+    assert rep("Xy\x00\x00z") == "Xy�z"
+
+
+def test_explicit_update_rule_ignores_bibliography_entries():
+    old = LoadedDocument(_meta("old", "Prévention alpha beta gamma", effective_year=2011, reco_family_id="f1"), "x")
+    new = LoadedDocument(
+        _meta("new", "Prévention alpha beta gamma chez l'adulte", effective_year=2024, reco_family_id="f2"),
+        "Intro.\n\n[1] Auteur A. Prévention alpha beta gamma. Actualisation 2011. Revue 2011;1:1.\n",
+    )
+    _apply_explicit_update_mentions([old, new])
+    assert old.metadata.is_latest_edition is True

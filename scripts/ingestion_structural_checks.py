@@ -134,6 +134,142 @@ RESIDUES = {
 }
 
 
+# ---------------------------------------------------------------- fidelity checks (after R1 review)
+
+_COMPARE_RE = re.compile(r"[<>≤≥]\s*=?\s*\d+(?:[.,]\d+)?")
+_NUM_UNIT_RE = re.compile(
+    r"\d+(?:[.,]\d+)?\s*(?:mg/kg/j|mg/kg/h|mg/kg|µg/kg|mg|µg|g|ui|ml/kg|ml|mmol/l|mmol|kg|%|h|min|j|sa)?(?![a-z])",
+    re.I,
+)
+_DRUG_RE = re.compile(
+    r"\b[a-zà-ÿ]{3,}(?:ine|ines|ole|oles|ide|ides|one|ones|xime|cilline|mycine|azole|parine|sartan|pril|tamol|zépam|zolam)\b",
+    re.I,
+)
+
+
+def clinical_tokens(text: str) -> set[str]:
+    """Numbers (with their unit), comparisons and drug-like words of a cell or row, folded and
+    without spaces, so that "≥ 2 g" and "≥2g" are the same token."""
+    from rag_sfar.ingestion.text_cleaning import clean_chunk_text
+
+    t = clean_chunk_text(text)
+    toks = set()
+    for rx in (_COMPARE_RE, _NUM_UNIT_RE, _DRUG_RE):
+        for m in rx.finditer(t):
+            tok = re.sub(r"\s+", "", m.group(0).lower())
+            if tok:
+                toks.add(unicodedata.normalize("NFC", tok))
+    return toks
+
+
+def _compact(text: str) -> str:
+    from rag_sfar.ingestion.text_cleaning import clean_chunk_text
+
+    return unicodedata.normalize("NFC", re.sub(r"\s+", "", clean_chunk_text(text).lower()))
+
+
+def table_fidelity(docs, by_doc) -> dict:
+    """Every clinical token of every source table row must be found, all together, in one
+    "unit" of the chunks of that document: one line of a table chunk, or one row card."""
+    rows = rows_fail = toks = toks_missing = 0
+    examples = []
+    for d in docs:
+        if d.metadata.language == "en":
+            continue
+        units = []
+        blob = []
+        for c in by_doc.get(d.metadata.doc_id, []):
+            if c.chunk_type in ("table_markdown", "callout_allergy"):
+                units.extend(_compact(line) for line in c.text.splitlines() if line.strip())
+                blob.append(_compact(c.text))
+            elif c.chunk_type == "table_row_card":
+                units.append(_compact(c.text))
+                blob.append(_compact(c.text))
+        blob_s = "|".join(blob)
+        for tbl in re.findall(r"<table\b.*?</table>", d.text, flags=re.S | re.I):
+            for tr in BeautifulSoup(tbl, "html.parser").find_all("tr"):
+                rt = set()
+                for cell in tr.find_all(["td", "th"], recursive=False):
+                    rt |= clinical_tokens(cell.get_text(" "))
+                if not rt:
+                    continue
+                rows += 1
+                toks += len(rt)
+                miss = {t for t in rt if t not in blob_s}
+                toks_missing += len(miss)
+                if not any(all(t in u for t in rt) for u in units):
+                    rows_fail += 1
+                    if len(examples) < 15:
+                        examples.append((d.metadata.doc_id[:40], sorted(rt)[:8], sorted(miss)[:5]))
+    return {"rows_with_tokens": rows, "rows_not_in_one_unit": rows_fail, "tokens": toks,
+            "tokens_missing": toks_missing, "examples": examples}
+
+
+def flowchart_fidelity(docs, by_doc) -> dict:
+    from rag_sfar.ingestion.text_cleaning import _MERMAID_BLOCK_RE, _fold_tokens, mermaid_required_tokens
+
+    blocks = bad = 0
+    ex = []
+    for d in docs:
+        out_tokens = set()
+        for c in by_doc.get(d.metadata.doc_id, []):
+            out_tokens |= _fold_tokens(c.text)
+        for m in _MERMAID_BLOCK_RE.finditer(d.text):
+            blocks += 1
+            miss = mermaid_required_tokens(m.group(1)) - out_tokens
+            if miss:
+                bad += 1
+                if len(ex) < 10:
+                    ex.append((d.metadata.doc_id[:40], sorted(miss)[:8]))
+    return {"blocks": blocks, "blocks_losing_tokens": bad, "examples": ex}
+
+
+# Corrupted micro units ("\mug", "mug", "mumol"); raw "\mu" is unconverted LaTeX, counted apart.
+_MICRO_BAD_RE = re.compile(r"\\mug|\bmug\b|\bmumol\b|\bmuL\b")
+_MICRO_RAW_RE = re.compile(r"\\mu\b")
+
+
+def single_line_tables(chunks) -> int:
+    n = 0
+    for c in chunks:
+        if c.chunk_type != "table_markdown":
+            continue
+        lines = [ln for ln in c.text.splitlines() if "|" in ln]
+        # a header row glued to its separator and data rows (header-only tables are legitimate)
+        if len(lines) == 1 and "---" in lines[0]:
+            n += 1
+    return n
+
+
+def exclusion_contradictions(chunks) -> int:
+    """Chunks labelled with a population that their document title or section path explicitly
+    excludes ("(nouveau-né exclu)", "hors pédiatrie")."""
+    from rag_sfar.ingestion.population import _TERM_RE
+
+    n = 0
+    for c in chunks:
+        if not getattr(c, "populations", None):
+            continue
+        ctx = f"{c.doc_title} > {c.section_path}"
+        for pop, rx in _TERM_RE.items():
+            if pop not in c.populations:
+                continue
+            for m in rx.finditer(ctx):
+                after = ctx[m.end() : m.end() + 25]
+                before = ctx[max(0, m.start() - 12) : m.start()]
+                par = ctx[: m.start()].rfind("(")
+                in_excl = par != -1 and ")" not in ctx[par : m.start()] and re.match(
+                    r"\s*(?:except\w*|excluding|sauf|hors)\b", ctx[par + 1 : m.start()], re.I
+                )
+                if in_excl or re.match(r"^[\s)\]]*(?:exclue?s?|exclus)\b", after, re.I) or re.search(r"\b(?:hors|sauf)\s+(?:l['’]|la|le|les)?\s*$", before, re.I):
+                    n += 1
+                    break
+            else:
+                continue
+            break
+    return n
+
+
 def parse_options(spec: str):
     import dataclasses
 
@@ -265,6 +401,15 @@ def run(index_dir: Path | None, options: str = "") -> dict:
     for c in chunks:
         pops[getattr(c, "population_hint", "?")] += 1
     out["population_hint"] = dict(pops)
+    out["fidelity"] = {
+        "tables": table_fidelity(docs, by_doc),
+        "flowcharts": flowchart_fidelity(docs, by_doc),
+        "single_line_table_chunks": single_line_tables(chunks),
+        "table_markdown_chunks": sum(1 for c in chunks if c.chunk_type == "table_markdown"),
+        "micro_unit_corruptions": sum(len(_MICRO_BAD_RE.findall(c.text)) for c in chunks),
+        "raw_latex_mu": sum(len(_MICRO_RAW_RE.findall(c.text)) for c in chunks),
+        "population_exclusion_contradictions": exclusion_contradictions(chunks),
+    }
     if chunks and hasattr(chunks[0], "populations"):
         pp = collections.Counter()
         for c in chunks:

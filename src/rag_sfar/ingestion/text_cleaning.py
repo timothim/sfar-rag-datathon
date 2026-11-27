@@ -23,6 +23,7 @@ import re
 import unicodedata
 
 NUL_PAIR = "\x00\x00"
+UNREADABLE = "\ufffd"  # visible marker of a character lost by the OCR
 _NUL_CANDIDATES = "éèêàâîïôûùçëÉÈÊÀÂÎÔÛÇ"
 _WORD_RE = re.compile(r"[A-Za-zÀ-ÖØ-öø-ÿŒœ\x00]+")
 
@@ -38,36 +39,39 @@ class NulRepairer:
             self.vocab.update(w.lower() for w in _WORD_RE.findall(t))
 
     def _fix_word(self, word: str) -> str:
+        """Replace each lost character only when the vocabulary designates a single word (or one
+        word at least 10 times more frequent than the others); otherwise leave a visible marker
+        (U+FFFD) instead of guessing. A pair standing alone (no letter around it) is never
+        guessed: it may be a symbol (≥, à, …)."""
         n = word.count(NUL_PAIR)
         if n == 0:
             return word
-        if n == 1:
-            cands = []
-            for ch in _NUL_CANDIDATES:
-                w = word.replace(NUL_PAIR, ch)
-                if self.vocab.get(w.lower(), 0) > 0:
-                    cands.append((self.vocab[w.lower()], w))
-            if cands:
-                return max(cands)[1]
-        # Several lost characters, or no candidate: most frequent French accent by case.
-        out = []
+        if word.replace(NUL_PAIR, "") == "" or n > 3:
+            return word.replace(NUL_PAIR, UNREADABLE)
+        import itertools
+
         parts = word.split(NUL_PAIR)
-        for i, p in enumerate(parts):
-            out.append(p)
-            if i < len(parts) - 1:
-                nxt = parts[i + 1][:1]
-                prev = p[-1:]
-                upper = (prev.isupper() or (not prev and nxt.isupper())) and (not nxt or nxt.isupper())
-                out.append("É" if upper else "é")
-        return "".join(out)
+        # Case of the lost letters follows the word (all-caps word -> capital accented letters).
+        letters = word.replace(NUL_PAIR, "")
+        pool = [c for c in _NUL_CANDIDATES if c.isupper() == (letters.isupper() and len(letters) > 1)]
+        cands = []
+        for combo in itertools.product(pool, repeat=n):
+            w = "".join(p + (combo[k] if k < n else "") for k, p in enumerate(parts))
+            c = self.vocab.get(w.lower(), 0)
+            if c > 0:
+                cands.append((c, w))
+        cands.sort(reverse=True)
+        if len(cands) == 1 or (len(cands) > 1 and cands[0][0] >= 10 * cands[1][0]):
+            return cands[0][1]
+        return word.replace(NUL_PAIR, UNREADABLE)
 
     def __call__(self, text: str) -> str:
         if "\x00" not in text:
             return text
         text = _WORD_RE.sub(lambda m: self._fix_word(m.group(0)) if NUL_PAIR in m.group(0) else m.group(0), text)
-        # A pair left alone between spaces stood for a symbol (most often "≥" in "(≥ 3 fois").
-        text = text.replace(NUL_PAIR, "≥")
-        return text.replace("\x00", "")
+        # Any pair left (between non-letters) is not guessed either.
+        text = text.replace(NUL_PAIR, UNREADABLE)
+        return text.replace("\x00", UNREADABLE)
 
 
 _SUPERSCRIPT = str.maketrans("0123456789+-−", "⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻⁻")
@@ -83,8 +87,16 @@ _LATEX_SYMBOLS = {
     r"\&": "&", r"\_": "_", r"\{": "{", r"\}": "}", r"\ldots": "…", r"\dots": "…", r"\cdots": "…",
     r"\prime": "′", r"\textless": "<", r"\textgreater": ">", r"\lt": "<", r"\gt": ">",
 }
+# Symbols that are written glued to a unit letter in the corpus ("\\mu g", "\\mu\\text{g}" -> "µg",
+# "\\Omega" in "kΩ", "\\circ C"): matched even when a letter follows. Every other command must end
+# at a word boundary ("\\le" must not eat "\\left").
+_UNIT_SYMBOLS = {r"\mu", r"\Omega", r"\circ", r"\degree"}
+_LATEX_SYMBOLS[r"\Omega"] = "Ω"
 _LATEX_SYMBOL_RE = re.compile(
-    "|".join(re.escape(k) + (r"(?![A-Za-z])" if k[-1].isalpha() else "") for k in sorted(_LATEX_SYMBOLS, key=len, reverse=True))
+    "|".join(
+        re.escape(k) + (r"(?![A-Za-z])" if k[-1].isalpha() and k not in _UNIT_SYMBOLS else "")
+        for k in sorted(_LATEX_SYMBOLS, key=len, reverse=True)
+    )
 )
 _LATEX_TEXT_CMD_RE = re.compile(r"\\(?:text|mathrm|textrm|mathit|textit|textbf|mathbf|operatorname|mbox|mathsf|rm)\s*\{([^{}]*)\}")
 _LATEX_FRAC_RE = re.compile(r"\\[dt]?frac\s*\{([^{}]*)\}\s*\{([^{}]*)\}")
@@ -96,7 +108,7 @@ _LATEX_LEFTRIGHT_RE = re.compile(r"\\(?:left|right|big|Big|bigg|Bigg)\s*([()\[\]
 
 def latex_to_text(expr: str) -> str:
     """Unicode rendering of a simple LaTeX expression (no layout, no arrays)."""
-    s = expr
+    s = _LATEX_SYMBOL_RE.sub(lambda m: _LATEX_SYMBOLS[m.group(0)], expr)
     for _ in range(3):
         s2 = _LATEX_TEXT_CMD_RE.sub(r"\1", s)
         s2 = _LATEX_FRAC_RE.sub(r"\1/\2", s2)
@@ -182,9 +194,11 @@ def strip_inline_tags(text: str) -> str:
     text = re.sub(r'<input\b[^>]*type="checkbox"[^>]*checked[^>]*>', "☒ ", text, flags=re.I)
     text = re.sub(r"<input\b[^>]*>", "☐ ", text, flags=re.I)
     # Table fragments outside a complete <table> (OCR page cuts): cells -> " | ", rows -> newline
+    # Only the separators produced here are collapsed: Markdown tables (rows, empty cells) are
+    # never touched.
     text = _ORPHAN_ROW_RE.sub("\n", text)
-    text = _ORPHAN_CELL_RE.sub(" | ", text)
-    text = re.sub(r"(?:\s*\|\s*){2,}", " | ", text)
+    text = _ORPHAN_CELL_RE.sub("\u241f", text)
+    text = re.sub(r"(?:[ \t]*\u241f[ \t]*)+", " | ", text)
     return _INLINE_TAG_RE.sub("", text)
 
 
@@ -230,9 +244,11 @@ def rewrite_images(text: str) -> str:
 _MERMAID_BLOCK_RE = re.compile(r"```[ \t]*(?:mermaid)?\s*\n\s*((?:graph|flowchart)\s+[A-Z]{2}\b.*?)```", re.S | re.I)
 _SHAPES = [("([", "])"), ("[[", "]]"), ("[(", ")]"), ("((", "))"), ("{{", "}}"), ("[/", "/]"), ("[\\", "\\]"),
            ("[", "]"), ("(", ")"), ("{", "}"), (">", "]")]
+# Edges: labelled forms first ("-- label -->", "-. label .->", "== label ==>"; a label may contain
+# ">" or "<"), then bidirectional and plain arrows, each with an optional "|label|".
 _EDGE_AT_RE = re.compile(
-    r"\s*(?:--\s*([^->|;\n][^>;\n]*?)\s*-->|-->\s*\|([^|]*)\||==\s*([^=>;\n]+?)\s*==>|-\.\s*([^.;\n]+?)\s*\.->|"
-    r"-->|---|-\.->|==>|-\.-|--o|--x)(?:\s*\|([^|]*)\|)?\s*"
+    r"\s*(?:--\s*([^\s>\-;][^;\n]*?)\s*-->|==\s*([^\s=>;][^;\n]*?)\s*==>|-\.\s*([^\s.;][^;\n]*?)\s*\.->|"
+    r"<-->|<-\.->|<==>|-->|---|-\.->|==>|-\.-|--o|--x)(?:\s*\|([^|]*)\|)?\s*"
 )
 _ID_RE = re.compile(r"\s*([A-Za-z0-9_\u00C0-\u017F]+)")
 
@@ -252,16 +268,26 @@ def _read_node(stmt: str, pos: int, labels: dict[str, str]) -> tuple[str | None,
         if stmt.startswith(op, pos):
             j = pos + len(op)
             in_q = False
+            depth = 0
             k = j
             while k < len(stmt):
-                if stmt[k] == '"':
+                ch = stmt[k]
+                if ch == '"':
                     in_q = not in_q
+                elif not in_q and len(op) == 1 and ch == op and op in "[({":
+                    depth += 1  # nested bracket inside the label ("[AOD]")
                 elif not in_q and stmt.startswith(cl, k):
-                    break
+                    if depth == 0:
+                        break
+                    depth -= 1
                 k += 1
             lab = _mermaid_label(stmt[j:k])
             if lab:
-                labels.setdefault(nid, lab)
+                old = labels.get(nid)
+                if old is None or old in lab:
+                    labels[nid] = lab
+                elif lab not in old:
+                    labels[nid] = f"{old} / {lab}"  # node redefined with another label
             return nid, min(len(stmt), k + len(cl))
     return nid, pos
 
@@ -276,7 +302,12 @@ def _split_statements(body: str) -> list[str]:
         elif not in_q and ch in "])}" and depth > 0:
             depth -= 1
         if not in_q and depth == 0 and ch in ";\n":
-            out.append("".join(buf))
+            cur = "".join(buf)
+            # A newline inside an open edge label ("-- COMFORT > 26\nOu ... -->") does not end it
+            if ch == "\n" and re.search(r"(?<![-<])--\s+(?!.*-->)[^;]*$", cur):
+                buf.append(" ")
+                continue
+            out.append(cur)
             buf = []
             continue
         buf.append(" " if ch == "\n" else ch)
@@ -291,7 +322,7 @@ def mermaid_to_text(block: str) -> str:
     chains: list[list[tuple[str, str]]] = []
     for stmt in _split_statements(body):
         low = stmt.lower()
-        if low.startswith(("%%", "style ", "classdef ", "class ", "linkstyle ", "click ")) or low == "end":
+        if low.startswith(("%%", "style ", "classdef ", "class ", "linkstyle ", "click ", "direction ")) or low == "end":
             continue
         if low.startswith("subgraph"):
             t = _mermaid_label(stmt[len("subgraph"):])
@@ -350,8 +381,56 @@ def mermaid_to_text(block: str) -> str:
     return "[Organigramme (converti depuis le schéma OCR)]\n" + "\n".join(f"- {ln}" for ln in lines)
 
 
+_MERMAID_KEYWORDS = {
+    "graph", "flowchart", "subgraph", "end", "style", "classdef", "class", "linkstyle", "click",
+    "fill", "stroke", "none", "width", "color",
+}
+_MERMAID_ID_RE = re.compile(
+    r"(?:\b(\w+)\s*(?=\(\[|\[\[|\[\(|\(\(|\{\{|\[|\(|\{))"
+    r"|(?:(?:^|[;\n&]|-->|---|==>|\.->|-\.-|<-->|\|)\s*(\w+)\s*(?=$|[;\n&]|-->|---|==>|-\.|--|<--|\||:::))",
+    re.M,
+)
+
+
+def _fold_tokens(text: str) -> set[str]:
+    t = unicodedata.normalize("NFKD", text.lower())
+    t = "".join(c for c in t if not unicodedata.combining(c))
+    out: set[str] = set()
+    for tok in re.findall(r"[a-z0-9_]+(?:[.,]\d+)?", t):
+        if tok.isalpha():
+            if len(tok) >= 4:
+                out.add(tok)
+        elif tok[0].isdigit():  # "2", "0,5", "50ng" -> its leading number
+            out.add(re.match(r"\d+(?:[.,]\d+)?", tok).group(0))
+        # tokens starting with a letter and containing digits/underscores are identifiers
+    return out
+
+
+def mermaid_required_tokens(block: str) -> set[str]:
+    """Numbers and words (>= 4 letters) of the labels of a Mermaid block: every token of the
+    source except node identifiers and Mermaid keywords."""
+    stmts = [x for x in _split_statements(block.split(None, 2)[2] if len(block.split(None, 2)) > 2 else "")]
+    stmts = [x for x in stmts if not re.match(r"(?i)(?:%%|style|classdef|class|linkstyle|click|direction)\b", x)]
+    body = "\n".join(stmts)
+    ids = {(a or b).lower() for a, b in _MERMAID_ID_RE.findall(body)}
+    return {t for t in _fold_tokens(body) if t not in ids and t not in _MERMAID_KEYWORDS}
+
+
+def mermaid_block_to_text(block: str) -> str:
+    """Rewritten flowchart, or the raw block (marked) when the rewrite would lose a number or a
+    word of the source labels (fidelity guard)."""
+    out = mermaid_to_text(block)
+    if mermaid_required_tokens(block) - _fold_tokens(out):
+        return "[Organigramme (syntaxe d'origine conservée)]\n" + block.strip()
+    return out
+
+
 def convert_mermaid(text: str) -> str:
-    return _MERMAID_BLOCK_RE.sub(lambda m: mermaid_to_text(m.group(1)) + "\n", text)
+    return _MERMAID_BLOCK_RE.sub(lambda m: mermaid_block_to_text(m.group(1)) + "\n", text)
+
+
+# "µ g/kg" (LaTeX "\\mu g") -> "µg/kg": the micro sign always belongs to the unit that follows.
+_MICRO_SPACE_RE = re.compile(r"µ[ \t]+(g|mg|mol|mmol|l|L|m|U|UI|s|V)\b")
 
 
 def clean_chunk_text(text: str, nul_repairer: NulRepairer | None = None) -> str:
@@ -366,6 +445,7 @@ def clean_chunk_text(text: str, nul_repairer: NulRepairer | None = None) -> str:
     text = rewrite_images(text)
     text = collapse_list_markers(text)
     text = unicodedata.normalize("NFC", text)
+    text = _MICRO_SPACE_RE.sub(r"µ\1", text)
     text = re.sub(r"[ \t]{2,}", " ", text)
     text = re.sub(r" +\n", "\n", text)
     text = re.sub(r"\n{3,}", "\n\n", text)

@@ -263,8 +263,7 @@ LINEAGE_RULES: list[tuple[str, list[str], list[str]]] = [
         [
             r"gestion\s+des\s+anticoagulants\s+pour\s+une\s+proc[ée]dure\s+invasive\s+programm",
             r"gestion\s+p[ée]riop[ée]ratoire\s+des\s+patients\s+sous\s+aod\s+pour\s+un\s+acte\s+programm",
-            # "Recommandations AVK" (HAS 2008, surdosage et hémorragie sous AVK) was removed from
-            # this lineage: different scope from a planned procedure; kept current until reviewed.
+            r"^recommandations\s+avk$",
         ],
         [r"urgence", r"covid"],
     ),
@@ -908,6 +907,7 @@ def load_sfar_corpus(
     # Generic, evidence-based additions (see the functions' docstrings)
     _apply_explicit_update_mentions(loaded)
     _apply_abrogated_twins(loaded)
+    _apply_review_notes(loaded)
     return loaded
 
 
@@ -919,6 +919,36 @@ def _parse_semver(version_label: str | None) -> tuple[int, int]:
     if not m:
         return (0, 0)
     return (int(m.group(1)), int(m.group(2)))
+
+
+# Supersessions that are only partly documented by the newer text: the note is appended to the
+# evidence and the document stays on the list for clinical review (reports/agents/B2_ingestion.md).
+SUPERSESSION_REVIEW_NOTES: list[tuple[str, str]] = [
+    (
+        r"^recommandations\s+avk$",
+        "remplacement à valider par un médecin : chapitre 4 (relais pour chirurgie ou acte invasif "
+        "programmé) couvert par la RFE 2026 « Gestion des anticoagulants pour une procédure invasive "
+        "programmée », chapitre 3 (hémorragies sous AVK) par la RFE 2024 « Gestion de "
+        "l'anticoagulation dans un contexte d'urgence » ; chapitre 2 (surdosage asymptomatique) "
+        "peut-être sans équivalent plus récent dans le corpus",
+    ),
+    (
+        r"urgences\s+obst[ée]tricales\s+extrahospitali",
+        "remplacement partiel à valider par un médecin : la RPP 2022 ne reprend pas les hémorragies "
+        "des 2e et 3e trimestres, les transferts in utero ni le recours au SAMU (chapitres 1, 3 et 8 "
+        "de 2010)",
+    ),
+]
+
+
+def _apply_review_notes(docs: list[LoadedDocument]) -> None:
+    for d in docs:
+        m = d.metadata
+        if m.is_latest_edition and m.is_active:
+            continue
+        for pat, note in SUPERSESSION_REVIEW_NOTES:
+            if re.search(pat, clean_title(m.title).lower()) and note not in m.supersession_evidence:
+                m.supersession_evidence = f"{m.supersession_evidence} ; {note}".strip(" ;")
 
 
 def _apply_temporal_supersession(docs: list[LoadedDocument]) -> None:
@@ -982,6 +1012,10 @@ _UPDATE_RE = re.compile(
 )
 
 
+# Bibliography entries and source lines are not statements about this edition
+_BIBLIO_PARA_RE = re.compile(r"^\s*(?:-\s*)?(?:\[\d+\]|\d+\.\s+[A-Z][a-z]+\s+[A-Z]{1,3}\b|\(?source\s*:)", re.I)
+
+
 def _content_words(text: str) -> set[str]:
     return {w for w in re.findall(r"[a-z0-9]+", _fold_lower(text)) if len(w) > 2 and w not in _STOP}
 
@@ -997,7 +1031,9 @@ def _apply_explicit_update_mentions(docs: list[LoadedDocument], head_chars: int 
     - at least half of those title words also occur in the newer document's title (same subject:
       a newer text that only cites a neighbouring guideline is not an update of it);
     - both documents differ in family (landing page) and the newer one is a recommendation text
-      (not a translation, annex or figure file).
+      (not a translation, annex or figure file);
+    - the paragraph is not a bibliography entry ("[12] Auteur ... Actualisation 2011") or a
+      "(Source : ...)" line.
     The whole edition of the older document (same family and year) is marked; the evidence
     (paragraph excerpt) is stored in `supersession_evidence`."""
     by_year: dict[int, list[LoadedDocument]] = collections.defaultdict(list)
@@ -1012,7 +1048,7 @@ def _apply_explicit_update_mentions(docs: list[LoadedDocument], head_chars: int 
         if nm.doc_role not in ("recommandation", "texte_court", "argumentaire"):
             continue
         for para in re.split(r"\n\s*\n", new.text[:head_chars]):
-            if not _UPDATE_RE.search(para):
+            if not _UPDATE_RE.search(para) or _BIBLIO_PARA_RE.match(para):
                 continue
             words = _content_words(para)
             for y in {int(x) for x in re.findall(r"\b(19[89]\d|20[0-2]\d)\b", para)}:
