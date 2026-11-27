@@ -788,6 +788,10 @@ def read_lockbox() -> dict[str, str]:
     return out
 
 
+# Suites whose files are git-ignored (third-party benchmark, redistribution rights unconfirmed).
+LOCAL_ONLY_SUITES = ("abpe171",)
+
+
 def verify_lockbox(raise_on_error: bool = False) -> list[str]:
     """Return a list of problems (missing, modified or unregistered test files)."""
     registered = read_lockbox()
@@ -795,6 +799,10 @@ def verify_lockbox(raise_on_error: bool = False) -> list[str]:
     for rel, digest in registered.items():
         p = Path(rel)
         if not p.exists():
+            # Suites built from third-party data that we do not redistribute are regenerated
+            # locally; their hash is still registered so a regenerated file is checked.
+            if any(f"/{s}/" in f"/{rel}" for s in LOCAL_ONLY_SUITES):
+                continue
             problems.append(f"missing: {rel}")
         elif sha256_file(p) != digest:
             problems.append(f"modified: {rel}")

@@ -56,3 +56,8 @@ reports/masterclass_course.html
 
 # Judge verdicts are small JSON evidence files: keep them
 !eval_internal/judge/runs/
+
+# Enriched benchmark (third-party, redistribution rights not confirmed): local only.
+# Regenerate with: python -m rag_sfar.evaluation.datasets convert-enriched
+eval/datasets/abpe171.jsonl
+eval/splits/abpe171/
