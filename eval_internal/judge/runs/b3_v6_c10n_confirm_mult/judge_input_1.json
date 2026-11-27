@@ -1,0 +1,134 @@
+[
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-g0979ab4dc4ec3f5dbd2f",
+  "question": "Chez un nourrisson en postopératoire de chirurgie cardiaque nécessitant une déplétion hydrique, peut-on recourir à la dialyse péritonéale ?",
+  "reference": "Oui, la dialyse péritonéale est possible dans cette indication du fait de sa facilité d'utilisation (accord faible).",
+  "answer": "Oui : en pédiatrie et chez le nouveau-né, il est possible de faire de la dialyse péritonéale, en particulier en période postopératoire de chirurgie cardiaque à but de déplétion, en raison de sa facilité d'utilisation (accord faible) [S1][S2]. Le choix de cette technique exige des équipes une connaissance parfaite des procédures, des complications et des moyens de surveillance, et les délais d'obtention d'une épuration efficace ne permettent pas de l'utiliser dans une indication urgente [S2].\nSource : Epuration extrarénale continue en réanimation (à l'exclusion de la dialyse péritonéale), RFE SFAR 2014 (recommandation 3.2.1 : accord faible)."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-g0aba15fbdfface749f92",
+  "question": "Après une décision de limitation ou d'arrêt des thérapeutiques en soins critiques, quelle démarche adopter envers les proches et avec quel niveau de recommandation ?",
+  "reference": "Utiliser une stratégie d'accompagnement structurée (interactions proactives avec l'équipe et/ou supports de communication), GRADE 1.",
+  "answer": "Il est recommandé d'utiliser une stratégie d'accompagnement structurée des proches après une décision d'arrêt et/ou de limitation de traitements, incluant des interactions proactives avec l'équipe soignante et/ou des supports de communication, pour améliorer la qualité des soins (GRADE 1) [S4]. Il faut informer la famille et les proches de la décision et de sa justification ; en cas d'opposition, solliciter une structure d'éthique clinique (avis d'experts) [S6][S4].\nSource : Décisions de limitation et d'arrêt de traitements (LAT) en soins critiques de l'adulte, RFE SFAR 2026 (R 3.1 : GRADE 1 ; R 3.3.1 : avis d'experts)."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-g43a751763308810eda5b",
+  "question": "En réanimation, quel type de protocole d'insulinothérapie doit être abandonné ?",
+  "reference": "Les protocoles statiques qui fixent le débit d'insuline sur la seule dernière glycémie (NGP modéré, accord fort).",
+  "answer": "Il faut abandonner les protocoles de contrôle glycémique statiques, c'est-à-dire ceux qui déterminent le débit d'insuline uniquement à partir de la glycémie la plus récente [S1].\nSource : Contrôle de la glycémie en réanimation et en anesthésie, RFE SFAR 2009 (NGP modéré, accord fort)."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-ga82b7f724c31133396b0",
+  "question": "Après une colectomie programmée dans un programme de réhabilitation, faut-il maintenir une aspiration gastrique par sonde en postopératoire ?",
+  "reference": "Non, il n'est pas recommandé de laisser une sonde nasogastrique (GRADE 1–, accord fort).",
+  "answer": "Non : il n'est pas recommandé de laisser une sonde nasogastrique après une chirurgie colorectale [S1], et elle doit être enlevée systématiquement en fin d'intervention [S7].\nSource : Réhabilitation rapide après une chirurgie colorectale programmée, RFE SFAR 2014 (GRADE 1–, accord fort)."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-g3940cdb7b78acbdfb13d",
+  "question": "Pour l'analgésie après chirurgie colorectale laparoscopique en réhabilitation améliorée, quelle technique privilégier et laquelle éviter ?",
+  "reference": "Privilégier la lidocaïne intraveineuse continue ; ne pas utiliser la péridurale thoracique.",
+  "answer": "Après chirurgie colorectale par laparoscopie, l'administration intraveineuse continue de lidocaïne est recommandée, son effet étant particulièrement intéressant après une procédure par laparoscopie [S1]. À l'inverse, l'analgésie péridurale thoracique n'est probablement pas recommandée après une chirurgie par laparoscopie [S1].\nSource : Réhabilitation rapide après une chirurgie colorectale programmée, RFE SFAR 2014 (lidocaïne IV : GRADE 1+, accord fort ; péridurale thoracique après laparoscopie : GRADE 2–, accord faible)."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-g508df1f5f5c7dacd7171",
+  "question": "Lors d'une épreuve de sevrage de la ventilation mécanique réalisée en aide inspiratoire, quel niveau d'aide faut-il régler ?",
+  "reference": "Un faible niveau d'aide inspiratoire, de l'ordre de 7 cmH2O.",
+  "answer": "L'épreuve de sevrage en aide inspiratoire doit être réalisée à un niveau minimal de 7 cmH2O, avec ou sans PEP externe (≤ 5 cmH2O), pour une durée minimale de 30 min [S3]. Ce faible niveau d'aide, de l'ordre de 7 cmH2O, sert à supprimer la charge de travail respiratoire liée au circuit du respirateur et à la sonde d'intubation [S1][S4]. En cas d'utilisation d'un filtre échangeur de chaleur et d'humidité, le niveau d'aide peut devoir être augmenté, jusqu'à 10–15 cmH2O chez les patients potentiellement difficiles à sevrer [S4].\nSource : Sécurisation des procédures à risques en réanimation : risque infectieux exclu, RFE SFAR 2008 (accord fort) ; Sevrage de la ventilation mécanique, RFE SFAR 2001."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-gaaba8d034741e6533aee",
+  "question": "Un patient ventilé après une chirurgie abdominale majeure devient candidat au sevrage. Quelles particularités prendre en compte ?",
+  "reference": "Une dysfonction diaphragmatique postopératoire transitoire et la douleur, qui doit être traitée ; ces patients ont le plus faible taux d'échec d'extubation.",
+  "answer": "Les patients chirurgicaux sont assimilés à la population générale pour le sevrage, hormis l'existence, en chirurgie thoracique et abdominale, d'une dysfonction diaphragmatique postopératoire transitoire et de la douleur, qui doit être traitée [S1]. Ces patients ont le taux d'échec d'extubation le plus faible [S1].\nSource : Sevrage de la ventilation mécanique (à l'exclusion du nouveau-né et du réveil d'anesthésie), RFE SFAR 2001."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-g76063f88d9909f319d85",
+  "question": "En chirurgie ambulatoire, peut-on prescrire une prémédication avant l'intervention ?",
+  "reference": "Oui, une prémédication anxiolytique et/ou analgésique peut être prescrite.",
+  "answer": "Oui, en chirurgie ambulatoire il est possible de prescrire une prémédication anxiolytique et/ou analgésique [S5]. Elle ne doit toutefois pas être systématique, car elle peut être source d'effets iatrogènes et majorer le risque d'hospitalisation, et il est recommandé d'éviter les benzodiazépines en préopératoire [S11].\nSource : Prise en charge anesthésique des patients en hospitalisation ambulatoire, RFE SFAR 2009 ; Recommandations AFU/SFAR/AFCA/ANAP sur la Chirurgie Ambulatoire en Urologie, RFE SFAR 2013."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-g293148d474c4b595ab24",
+  "question": "Chez une personne âgée opérée en ambulatoire, quelle classe médicamenteuse faut-il éviter en prémédication et pour quelle raison ?",
+  "reference": "Les benzodiazépines, car elles augmentent les troubles du comportement postopératoires.",
+  "answer": "Il faut éviter les benzodiazépines en préopératoire chez la personne âgée opérée en ambulatoire, car elles augmentent l'incidence des troubles du comportement postopératoire [S5][S3]. La prémédication doit être adaptée en évitant la prise de benzodiazépines [S1].\nSource : Prise en charge anesthésique des patients en hospitalisation ambulatoire, RFE SFAR 2009 ; Recommandations AFU/SFAR/AFCA/ANAP sur la Chirurgie Ambulatoire en Urologie, RFE SFAR 2013."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-gf79873a2c51a5380fe66",
+  "question": "Après une césarienne sous anesthésie périmédullaire compliquée de douleurs peropératoires, quel suivi psychologique proposer à la mère ?",
+  "reference": "Repérer la sidération et assurer un soin psychique d'urgence (defusing) en post-partum, puis dépister à distance un ESPT et orienter vers des spécialistes (avis d'experts).",
+  "answer": "Les experts suggèrent de tracer l'insuffisance d'analgésie, d'accompagner la naissance puis de débriefer l'expérience douloureuse avec l'équipe, en particulier les soignants impliqués [S2]. Ils suggèrent aussi d'identifier la sidération et d'assurer un soin psychique d'urgence (defusing) en postpartum [S2]. À distance, il faut diagnostiquer l'état de stress post-traumatique en explorant le bien-être maternel et la relation mère-enfant, puis confier la patiente à des spécialistes de l'ESPT pour une psychothérapie adaptée [S2].\nSource : Insuffisance d'analgésie au cours de la césarienne sous anesthésie périmédullaire, préconisation SFAR 2021 (suggestions des experts, préconisations P4.2 et P4.3)."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-g0c4e1de8af1e9b05f324",
+  "question": "Une césarienne code rouge est décidée pour suspicion d'acidose fœtale chez une parturiente sous péridurale ; à l'incision, l'anesthésie est manifestement insuffisante. Quelle conduite tenir ?",
+  "reference": "Réaliser une anesthésie générale.",
+  "answer": "Les experts suggèrent de réaliser une anesthésie générale en cas d'échec constaté de l'anesthésie périmédullaire juste avant ou dès l'incision pour une césarienne code rouge [S2]. Le délai décision-extraction de 15 à 30 minutes restreint le choix de la technique : la césarienne doit être réalisée au plus vite et l'anesthésie générale s'impose si la patiente présente des douleurs dès l'incision témoignant d'une inefficacité complète de l'anesthésie périmédullaire [S2].\nSource : Insuffisance d'analgésie au cours de la césarienne sous anesthésie périmédullaire, préconisation SFAR 2021 (avis d'experts, préconisation P3.2)."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-gb96b3d27c279158ad3ef",
+  "question": "Lors d'une IVG par méthode chirurgicale, quelle mesure de prévention infectieuse est préconisée chez une femme aux antécédents connus de salpingite ou d'infection génitale haute ?",
+  "reference": "Une antibiothérapie est recommandée en cas d'antécédent connu d'infection génitale haute.",
+  "answer": "En cas d'IVG chirurgicale chez une femme ayant un antécédent connu d'infection génitale haute, il est recommandé de prévenir les complications infectieuses par une antibiothérapie [S1]. L'antibioprophylaxie n'est pas systématique pour l'évacuation d'un utérus gravide au 1er trimestre [S4], mais elle peut être considérée pour les manœuvres intra-utérines simples en cas d'antécédent d'infection génitale haute [S2].\nSource : Prise en charge de l'interruption volontaire de grossesse jusqu'à 14 semaines, RFE SFAR 2010 ; Antibioprophylaxie en chirurgie et médecine interventionnelle, RFE SFAR 2026, V3.1 (GRADE 2 pour l'absence d'antibioprophylaxie en évacuation du 1er trimestre ; avis d'experts pour les manœuvres intra-utérines simples)."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-gc6eabc0b647f3aa1afca",
+  "question": "Chez une parturiente présentant une pathologie obstétricale sévère surveillée en maternité, dans quelles circonstances faut-il l'orienter vers une réanimation adulte, et avec quel niveau d'accord ?",
+  "reference": "En cas de défaillance d'organe persistante nécessitant une suppléance, de défaillance multiviscérale ou de pronostic vital engagé, selon la convention maternité-réanimation (accord fort).",
+  "answer": "Il est recommandé d'orienter la patiente vers une unité de réanimation en cas de persistance d'une défaillance d'organe nécessitant une suppléance, d'apparition d'une défaillance multiviscérale ou de mise en jeu du pronostic vital, selon la convention établie entre chaque unité d'obstétrique et une unité de réanimation adulte [S1]. Il est aussi recommandé d'anticiper et d'organiser en amont la surveillance continue des patientes présentant ou susceptibles de présenter une défaillance d'organe [S1].\nSource : Organisation de l'Anesthésie-Réanimation Obstétricale, RFE SFAR 2016, RP 3.13 (accord fort)."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-g3e964e64a0ac6da585eb",
+  "question": "Dans une maternité, où doit se situer le bloc dédié aux interventions obstétricales urgentes (césarienne en urgence) par rapport aux salles d'accouchement ?",
+  "reference": "Un accès permanent à au moins une salle dédiée, contigüe au secteur de naissance (au même niveau pour toute nouvelle structure) est recommandé (accord fort).",
+  "answer": "Chaque établissement habilité à exercer l'obstétrique doit disposer d'un accès permanent à au moins une salle d'intervention dédiée à la chirurgie obstétricale d'urgence, qui doit être contiguë au secteur de naissance, et au même niveau en cas de création de nouvelle structure [S1].\nSource : Organisation de l'Anesthésie-Réanimation Obstétricale, RFE SFAR 2016, RP 1 (accord fort et disposition légale)."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-g822a50690730ee2ef6bc",
+  "question": "En réanimation, quels types de mesures faut-il retenir prioritairement dans une stratégie multimodale de prévention des pneumonies acquises sous ventilation ?",
+  "reference": "Il faut privilégier l'association de mesures ayant un effet sur la morbidité : durée de ventilation mécanique, durée de séjour en réanimation et consommation d'antibiotiques.",
+  "answer": "Il faut probablement associer, dans une prévention multimodale standardisée, certaines des méthodes suivantes : favoriser la ventilation non invasive pour éviter l'intubation, limiter les doses et durées des sédatifs et analgésiques, initier précocement une nutrition entérale, contrôler régulièrement la pression du ballonnet, réaliser une aspiration sous-glottique (toutes les 6-8 heures) et préférer la voie orotrachéale [S2]. Il faut privilégier l'association de mesures ayant un effet sur la morbidité (durées de ventilation mécanique et d'hospitalisation en réanimation, consommation d'antibiotiques) [S2]. Dans les unités où la prévalence des bactéries multirésistantes est faible (< 20 %), une décontamination digestive sélective pour une durée inférieure à 5 jours peut s'y ajouter [S1].\n\nSource : Pneumonies associées aux soins de réanimation, RFE SFAR 2017 (R1.1 GRADE 1+, R1.2 et R1.3 GRADE 2+, accord fort)."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-g2f51f3362361053361b7",
+  "question": "Un patient de réanimation sans cardiopathie ni pathologie pulmonaire sous-jacente présente un nouveau foyer sur une seule radiographie thoracique. Quels seuils de température et de leucocytes retenir comme critères de pneumonie ?",
+  "reference": "Température > 38,3 °C sans autre cause, ou leucocytes < 4000/mm3 ou ≥ 12 000/mm3.",
+  "answer": "En l'absence d'antécédents de cardiopathie ou de maladie pulmonaire sous-jacentes, un seul examen radiologique suffit, et il faut retenir au moins un des signes suivants : une température corporelle > 38,3 °C sans autre cause, ou des leucocytes < 4000/mm³ ou ≥ 12 000/mm³ [S1]. Il faut y associer au moins deux des signes suivants : sécrétions purulentes, toux ou dyspnée, désaturation ou besoin accru en oxygène ou nécessité d'assistance ventilatoire [S1].\n\nSource : Pneumonies associées aux soins de réanimation, RFE SFAR 2017 (tableau I des critères de définition d'une pneumonie)."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-gc03aaf37539dfd4b39a8",
+  "question": "Chez l'adulte opéré d'une hépatectomie, quelle dose de dexaméthasone injecter en bolus peropératoire pour limiter les complications après l'intervention, et avec quelle force ?",
+  "reference": "Un bolus peropératoire de 8-10 mg de dexaméthasone (recommandation faible).",
+  "answer": "Chez l'adulte opéré d'une résection hépatique, il est recommandé d'administrer en peropératoire un bolus de 8-10 mg de dexaméthasone pour réduire la morbidité postopératoire, avec une recommandation faible [S1][S4].\n\nSource : Prise en charge péri-opératoire du patient adulte lors d'une résection hépatique, RFE SFAR 2025 (R 2.2.1, recommandation faible)."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-g7efa49eea406c3678a28",
+  "question": "Chez un traumatisé thoracique hospitalisé qui devient hypoxémique, quelle modalité de ventilation non invasive utiliser, après quels préalables, et avec quel grade ?",
+  "reference": "Une VSAI-PEP après tomodensitométrie et drainage d'un éventuel pneumothorax, sans contre-indication à la VNI et sous surveillance continue (G1+).",
+  "answer": "En milieu intrahospitalier, face à une hypoxémie, les experts recommandent une ventilation non invasive de type ventilation spontanée avec aide inspiratoire et pression expiratoire positive (VSAI-PEP), avec un grade G1+ [S1]. Elle se délivre après réalisation d'une tomodensitométrie et drainage d'un pneumothorax lorsqu'il est indiqué, en l'absence de contre-indication à la VNI et dans un environnement disposant d'une surveillance continue [S1].\n\nSource : Traumatisme thoracique : prise en charge des 48 premières heures, RFE SFAR 2014 (proposition 3.A.1, G1+)."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-gb8871ff491d05e49db36",
+  "question": "Un patient ayant présenté une embolie pulmonaire il y a deux mois doit subir un geste invasif programmé après lequel l'anticoagulation curative ne pourra pas être reprise avant plusieurs jours. Quelle option préventive discuter ?",
+  "reference": "Discuter la pose pré-procédurale d'un filtre cave optionnel si l'anticoagulation curative ne peut être reprise dans les 72 h post-procédurales.",
+  "answer": "Il faut discuter la mise en place pré-procédurale d'un filtre cave optionnel (retirable), car la procédure a lieu 1 à 3 mois après l'embolie pulmonaire et la reprise de l'anticoagulation à dose curative ne peut pas être envisagée dans les 72 h postopératoires [S1][S10]. Le filtre doit être retiré quand le traitement anticoagulant curatif a pu être repris sans complication et qu'un nouvel arrêt n'est pas prévu à court terme [S1].\n\nSource : Gestion des anticoagulants pour une procédure invasive programmée, RFE SFAR 2026 (avis d'experts) ; Gestion de l'anticoagulation dans un contexte d'urgence, RFE SFAR 2024 (R4.8.2, avis d'experts, accord fort ; R4.8.3, GRADE 1+, accord fort)."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-g571f916b70fb2a0586cb",
+  "question": "Pour la gestion des anticoagulants avant un geste ORL programmé, dans quelle catégorie de risque de saignement se classe l'exérèse d'un angiofibrome du nasopharynx ?",
+  "reference": "Elle est classée à risque hémorragique élevé.",
+  "answer": "L'exérèse d'un angiofibrome du nasopharynx (ORL pédiatrique) est classée en risque hémorragique élevé, avec la mention d'une situation particulière à très haut risque [S3]. Cette situation particulière nécessite soit une reprise retardée (à 72 h), soit l'utilisation d'un anticoagulant à durée de vie courte/antagonisable en relais de l'anticoagulation habituelle [S3].\n\nSource : Gestion des anticoagulants pour une procédure invasive programmée, RFE SFAR 2026 (classement des gestes de chirurgie ORL selon leur risque hémorragique ; classement reposant sur des avis d'experts)."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-g526e54165c42ca78bf63",
+  "question": "Un nouveau-né traité par photothérapie pour une hyperbilirubinémie doit recevoir du plasma traité par amotosalen (PFC-IA). Quelle précaution prendre concernant l'appareil de photothérapie ?",
+  "reference": "Utiliser des dispositifs de photothérapie n'émettant pas de rayonnement de longueur d'onde inférieure à 425 nm.",
+  "answer": "Il faut prendre en charge le nouveau-né avec un dispositif de photothérapie n'émettant pas de rayonnements d'une longueur d'onde inférieure à 425 nm, afin d'éviter la potentialisation théorique d'une interaction entre la lumière UVA et l'amotosalen, pouvant conduire à un érythème [S1]. Le choix du plasma frais doit tenir compte des longueurs d'onde du matériel utilisé en photothérapie (interaction entre l'amotosalen et les rayonnements de longueur d'onde < 425 nm) [S2].\n\nSource : Transfusion de plasma thérapeutique : produits, indications, RFE SFAR 2012 ; Transfusion de globules rouges homologues : produits, indications alternatives, RFE SFAR 2014 (modalités de l'exsanguino-transfusion)."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-gd56911820a0a15744c26",
+  "question": "La simulation est-elle conseillée pour améliorer la communication entre soignants en soins critiques, auprès de quels publics et avec quel niveau d'accord ?",
+  "reference": "Oui, les experts suggèrent de l'utiliser en formation initiale et continue, médicale et paramédicale (accord fort).",
+  "answer": "Oui : les experts suggèrent d'utiliser la simulation pour améliorer les compétences en communication entre professionnels en soins critiques, en formation initiale et continue, médicale et paramédicale, avec un accord fort [S1].\n\nSource : Intérêts de l'apprentissage par simulation en soins critiques, RFE SFAR 2019 (R2.4, suggestion des experts, accord fort)."
+ }
+]

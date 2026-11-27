@@ -1,0 +1,134 @@
+[
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-g3b9708b3518cddf9bccf",
+  "question": "Un adulte sous anticoagulant consulte aux urgences pour un traumatisme crânien léger et son scanner cérébral est normal : peut-il rentrer chez lui, et sur quels critères cliniques ?",
+  "reference": "Oui, le retour à domicile est possible après un scanner normal, en l'absence d'intoxication, de vomissements itératifs, de céphalées importantes persistantes, de déficit neurologique et d'autre motif d'hospitalisation, avec un Glasgow à 15 (avis d'experts, accord fort).",
+  "answer": "Oui : les experts proposent d'autoriser le retour à domicile depuis les urgences même sous anticoagulant ou antiagrégant plaquettaire, si au moins un des éléments suivants est présent, dont une TDM initiale sans saignement, ce qui est le cas ici [S1]. Les critères cliniques permettant ce retour sont : l'absence d'intoxication associée, l'absence de vomissements itératifs, l'absence de céphalées importantes persistantes, un score de Glasgow à 15, l'absence de déficit neurologique et l'absence d'autres motifs pouvant justifier une hospitalisation [S1].\nSource : Prise en charge des patients présentant un traumatisme crânien léger de l'adulte, RPP SFAR 2022 (R2.8), avis d'experts (accord fort)."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-g8e54d9655989718c1639",
+  "question": "Un patient comateux atteint d'une méningite bactérienne, sans hypertension intracrânienne, est admis en réanimation : faut-il le refroidir pour améliorer son pronostic neurologique ?",
+  "reference": "Non, il ne faut probablement pas pratiquer d'hypothermie par rapport à la normothermie (avis d'experts).",
+  "answer": "Non : chez un patient comateux avec une méningite bactérienne et en l'absence d'HTIC, il ne faut probablement pas pratiquer d'hypothermie, en comparaison avec une normothermie, dans le but d'améliorer la survie avec bon pronostic neurologique [S1]. Les extraits notent qu'une seule étude concerne ces patients et qu'elle suggérait un effet délétère potentiel de l'hypothermie, avec toutefois des biais méthodologiques [S1].\nSource : Contrôle cible de la température en réanimation (hors nouveau-nés), RFE SFAR 2016 (R4.3), avis d'experts."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-gd9a325c36650ee68a17f",
+  "question": "Pour un enfant en état de mal épileptique, les données adultes sur le contrôle ciblé de la température visant la normothermie sont-elles transposables ?",
+  "reference": "Oui, selon les experts pédiatres, les données adultes de CCT visant la normothermie au cours de l'EME peuvent s'appliquer à l'enfant (avis d'experts).",
+  "answer": "Oui : selon les experts pédiatres, les données rapportées chez l'adulte concernant le CCT visant la normothermie au cours de l'état de mal épileptique peuvent s'appliquer à l'enfant [S2]. Chez l'enfant présentant un état de mal épileptique, il faut probablement réaliser un CCT (normothermie) à visée neuroprotectrice, la littérature pédiatrique étant très pauvre (quelques cas cliniques, pas de recommandation possible sur l'hypothermie) [S2].\nSource : Contrôle cible de la température en réanimation (hors nouveau-nés), RFE SFAR 2016 (R4.1 pédiatrique), avis d'experts."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-ge6178ab7ed0b124f3edc",
+  "question": "Avant une chirurgie non cardiothoracique chez un patient âgé sans pathologie cardiopulmonaire aiguë ni évolutive, faut-il demander une radiographie thoracique préopératoire systématique ?",
+  "reference": "Non, il est recommandé de ne pas la prescrire systématiquement, quel que soit l'âge (GRADE I–).",
+  "answer": "Non : il est recommandé de ne pas prescrire de manière systématique une radiographie de thorax préinterventionnelle en chirurgie non cardiothoracique, quel que soit l'âge du patient, sauf en cas de pathologie cardiopulmonaire évolutive ou aiguë (GRADE I–) [S1]. Les extraits n'identifient pas d'âge seuil justifiant de la réaliser, et ce examen n'apporte que peu d'informations susceptibles de changer la prise en charge périopératoire [S1].\nSource : Examens pré-interventionnels systématiques, RFE SFAR 2012 (recommandation 2), GRADE I–."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-gae3cda1acd4e903f01fd",
+  "question": "Un patient asymptomatique doit être opéré d'une chirurgie non cardiothoracique et l'interne propose une radiographie thoracique pour prédire les complications respiratoires postopératoires. Cet examen est-il contributif ?",
+  "reference": "Non : sa valeur prédictive positive est médiocre (5 %), elle ne prédit pas les complications ventilatoires et n'apporte aucun gain informatif.",
+  "answer": "Non : en chirurgie non cardiothoracique, il est recommandé de ne pas prescrire de manière systématique une radiographie de thorax préinterventionnelle, sauf en cas de pathologie cardiopulmonaire évolutive ou aiguë (GRADE I–) [S5]. La radiographie ne permet pas de prédire la survenue de complications ventilatoires postopératoires et n'apporte aucun gain informatif, qu'elle soit positive ou négative [S8, S5].\nSource : Examens pré-interventionnels systématiques, RFE SFAR 2012 (recommandation 2), GRADE I–."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-geb9482ee3d54334a43fd",
+  "question": "Pour un enfant de 5 ans sans comorbidité opéré d'une amygdalectomie en ambulatoire, quand programmer l'intervention et quelle durée de surveillance avant la sortie ?",
+  "reference": "Opérer le plus tôt possible dans la matinée pour permettre une sortie après six heures de surveillance postopératoire (accord fort).",
+  "answer": "L'intervention doit être réalisée le plus tôt possible dans la matinée (le matin), pour permettre une surveillance postopératoire continue de six heures avant la sortie [S1, S3]. La sortie est autorisée après la sixième heure postopératoire (surveillance de six heures au minimum), si les critères sont réunis : absence de saignement des loges amygdaliennes confirmée par le chirurgien, absence de douleur, absence de NVPO et accord signé du chirurgien et de l'anesthésiste [S1, S3]. Un suivi téléphonique à la 24e heure est souhaitable [S1].\nSource : Anesthésie pour amygdalectomie chez l'enfant, RFE SFAR 2005, accord fort."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-g9dbb7b8cb49592f9fa97",
+  "question": "Un enfant de 2 ans est programmé pour une amygdalectomie ; l'interrogatoire familial est peu informatif. Faut-il réaliser un bilan d'hémostase ?",
+  "reference": "Oui, une étude de l'hémostase (TCA et numération plaquettaire) doit être réalisée car l'évaluation clinique n'est pas fiable avant trois ans.",
+  "answer": "Oui : chez l'enfant de moins de trois ans, l'interrogatoire n'est pas fiable, et lorsque l'évaluation préopératoire ne peut être considérée comme fiable, notamment avant trois ans, une étude de l'hémostase doit être réalisée [S3, S1]. Si des examens d'hémostase sont prescrits, le temps de céphaline avec activateur (TCA) et la numération plaquettaire sont les tests les plus utiles ; le temps de saignement ne doit plus faire partie du bilan initial [S3, S7]. Si les résultats restent anormaux après contrôle, ils doivent être discutés avec un spécialiste de l'hémostase [S3].\nSource : Anesthésie pour amygdalectomie chez l'enfant, RFE SFAR 2005, accord fort."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-gbe3dad7d7f9b1ae34b88",
+  "question": "Quels effets indésirables principaux faut-il surveiller chez un patient traité par amphotéricine B désoxycholate intraveineuse ?",
+  "reference": "Hypokaliémie, hypomagnésémie, insuffisance rénale, fièvre et frissons à l'injection, cytopénie.",
+  "answer": "Pour l'amphotéricine B désoxycholate (Fungizone®, voie IV), les principaux effets indésirables à surveiller sont : hypokaliémie, hypomagnésémie, insuffisance rénale, fièvre et frissons lors de l'injection, et cytopénie [S1]. L'amphotéricine figure aussi parmi les agents néphrotoxiques responsables d'IRA en réanimation et en période périopératoire, ce qui justifie, dans les situations à risque, une surveillance de la diurèse et de la créatinine plasmatique [S5].\nSource : Prise en charge des candidoses et aspergilloses invasives de l'adulte, RFE SFAR 2004 ; Insuffisance rénale aiguë en périopératoire et en réanimation, RFE SFAR 2015 (R3.2, avis d'expert, accord fort)."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-gc1eeae015b45990b618e",
+  "question": "Chez un patient ventilé en réanimation, le lavage broncho-alvéolaire isole Candida sp. Quelle valeur diagnostique accorder à ce résultat ?",
+  "reference": "Aucune : la présence de Candida dans les sécrétions des voies aériennes inférieures, LBA compris, n'a pas de valeur diagnostique (B3).",
+  "answer": "La présence de Candida sp. dans les sécrétions provenant des voies aériennes inférieures, y compris le lavage broncho-alvéolaire, n'a pas de valeur diagnostique (B3) [S1].\nSource : Prise en charge des candidoses et aspergilloses invasives de l'adulte, RFE SFAR 2004 (niveau B3)."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-g28ea0199f37013bf91f9",
+  "question": "Lorsqu'un avis cardiologique préopératoire a été demandé par le chirurgien, qui porte la responsabilité de la décision finale sur l'indication et les modalités de l'anesthésie ?",
+  "reference": "Le médecin anesthésiste-réanimateur.",
+  "answer": "La décision finale de l'indication d'anesthésie et de ses modalités relève de la responsabilité du médecin anesthésiste-réanimateur, quel que soit le demandeur de la consultation cardiologique (opérateur, anesthésiste-réanimateur ou les deux) [S1]. Cela n'exclut pas une concertation réelle et sérieuse en cas de désaccord entre intervenants, chacun assumant ses responsabilités dans son domaine de compétence [S1].\nSource : Recommandations concernant les relations entre anesthésistes-réanimateurs et chirurgiens, autres spécialistes ou professionnels de santé, RFE SFAR 2001 (principe 3 de la consultation de cardiologie)."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-g392fcc10d6909f623c73",
+  "question": "Un patient obèse est hospitalisé pour une forme sévère de COVID-19. Quelle classe d'anticoagulant privilégier en prévention thromboembolique et que penser des posologies habituelles ?",
+  "reference": "Une HBPM est l'option de choix, mais les posologies validées en médecine sont probablement souvent insuffisantes dans les formes sévères et en cas d'obésité.",
+  "answer": "Privilégier une héparine de bas poids moléculaire (HBPM), qui est l'option de choix de la prévention de la maladie thromboembolique chez le patient hospitalisé avec COVID-19, en sachant que les posologies validées en médecine sont vraisemblablement fréquemment insuffisantes, notamment dans les formes sévères et en cas d'obésité [S1]. Les experts suggèrent d'ajuster l'anticoagulation au poids ou à l'IMC et, pour une forme sévère (oxygénothérapie à plus de 6 L/min ou ventilation mécanique), de donner au moins une anticoagulation prophylactique à dose intermédiaire [S2, S3]. Le tableau de 2020 propose, pour un IMC ≥ 30 kg/m² sans facteur de risque, enoxaparine 4000 UI/12h SC (6000 UI/12h SC si poids > 120 kg), avec surveillance de l'activité anti-Xa (éviter un surdosage > 1,2 UI/ml pour l'enoxaparine) [S5].\nSource : Prévention du risque thromboembolique veineux et surveillance de l'hémostase chez les patients hospitalisés pour COVID-19, propositions réactualisées (avril 2021), RFE SFAR 2021 (suggestions, synthèse d'opinions, non des recommandations formelles) ; Traitement anticoagulants patients COVID-19, RFE SFAR 2020."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-g6d75a0524a3097e36863",
+  "question": "Devant un traumatisme pelvien grave ouvert, quels sont les deux objectifs prioritaires de la prise en charge initiale ?",
+  "reference": "Contrôler l'hémorragie et la contamination périnéale (GRADE 1+, accord fort).",
+  "answer": "Les deux objectifs initiaux de la prise en charge d'un traumatisme pelvien grave ouvert sont le contrôle de l'hémorragie et le contrôle de la contamination périnéale [S1]. Ces patients doivent probablement être pris en charge dans des centres de référence [S1].\nSource : Prise en charge des traumatisés pelviens graves à la phase précoce (24 premières heures), RFE SFAR 2017 (R2.17, GRADE 1+, accord fort ; R2.16, GRADE 2+, accord fort)."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-g424483aecf041277fed5",
+  "question": "Après une lobectomie pulmonaire, quelle stratégie postopératoire globale adopter pour réduire les complications et la durée de séjour ?",
+  "reference": "Un programme de réhabilitation améliorée incluant la mobilisation précoce est recommandé (GRADE 1+, accord fort).",
+  "answer": "Il est recommandé d'utiliser un programme de réhabilitation amélioré après chirurgie, incluant la mobilisation précoce postopératoire, pour diminuer l'incidence de complications postopératoires et la durée d'hospitalisation [S2]. L'utilisation préventive de la VNI en postopératoire de lobectomie n'est probablement pas recommandée pour réduire les complications ou la durée de séjour [S1].\nSource : Réhabilitation améliorée après lobectomie pulmonaire, RFE SFAR 2019 (R5.4 : GRADE 1+, accord FORT ; VNI préventive : texte d'argumentaire)."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-g26cc210b12a24bc1dcf5",
+  "question": "Un homme intubé pour SDRA doit avoir son volume courant réglé sur le poids idéal. Comment calculer ce poids théorique ?",
+  "reference": "Poids théorique (kg) = 50 + 0,91 × [taille (cm) − 152,4].",
+  "answer": "Chez l'homme intubé pour SDRA, le poids théorique se calcule ainsi : poids théorique (kg) = 50 + 0,91 × [taille (cm) − 152,4] [S1]. Le volume courant initial est ensuite réglé à 6 mL/kg de poids théorique, avec une pression de plateau < 30 cmH2O [S1].\nSource : Recommandations pour la prise en charge du SDRA, RFE SFAR 2018 (R1 : GRADE 1+)."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-gb9a942c3d4de87e96a69",
+  "question": "Chez un adulte ventilé pour un SDRA modéré à sévère, faut-il préférer un niveau de PEP haut ou bas ?",
+  "reference": "Il est probablement recommandé d'utiliser une PEP élevée plutôt qu'une PEP basse (GRADE 2+).",
+  "answer": "Chez l'adulte atteint de SDRA modéré à sévère, il est probablement recommandé de privilégier une PEP élevée plutôt qu'une PEP basse [S3]. Chez le patient septique, la même suggestion s'applique après avoir éliminé une défaillance cardiaque droite [S1][S2] ; chez un patient dont la pression de plateau est ≥ 30 cmH2O, la balance bénéfices-risques d'une augmentation de la PEP doit être attentivement pesée [S3].\nSource : Recommandations pour la prise en charge du SDRA, RFE SFAR 2018 (R4 : GRADE 2+, recommandation faible) ; Prise en charge du sepsis, HAS/SFAR 2025 (recommandation conditionnelle, faible niveau de certitude)."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-g448aac5e0ca03eebb7fb",
+  "question": "En insuffisance respiratoire aiguë de l'adulte, dans quelles situations la ventilation non invasive n'a pas fait la preuve d'un bénéfice et ne devrait probablement pas être tentée ?",
+  "reference": "Pneumopathie hypoxémiante, SDRA, IRA post-extubation et maladies neuromusculaires aiguës réversibles.",
+  "answer": "Aucun avantage de la VNI n'est démontré et il ne faut probablement pas la tenter dans la pneumopathie hypoxémiante, le SDRA, le traitement de l'IRA post-extubation et les maladies neuromusculaires aiguës réversibles (G2-) [S2][S1][S4]. Pour l'asthme aigu grave et le syndrome d'obésité-hypoventilation, aucune cotation n'a été possible [S2][S1].\nSource : Ventilation Non Invasive au cours de l'insuffisance respiratoire aiguë (nouveau-né exclu), RFE SFAR 2006 (G2-, il ne faut probablement pas faire)."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-g655c1a5b2a8ff63dc61f",
+  "question": "Lors de l'intubation d'un enfant, une dent de lait est totalement expulsée de son alvéole. Faut-il la remettre en place ?",
+  "reference": "Non, une dent temporaire complètement luxée ne doit pas être réimplantée chez l'enfant.",
+  "answer": "Non : chez l'enfant, il ne faut pas réimplanter une dent temporaire en cas de luxation complète, au risque d'induire une altération du bourgeon dentaire de la dent définitive [S1][S2]. La dent temporaire luxée sera remise aux parents [S1] ; il faut en outre prendre en charge une éventuelle inhalation ou ingestion (radiographie thoracique éventuelle) [S2][S1], proposer un avis spécialisé avec panoramique dentaire, établir un constat factuel dans le dossier et informer rapidement le patient [S2][S1].\nSource : Bris dentaires périanesthésiques, RFE SFAR 2012 (proposition enfant ; points 26-27 de la recommandation)."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-g32226ce0e89926e25109",
+  "question": "Chez un patient diabétique programmé pour une chirurgie, quelle attitude adopter si l'HbA1c atteint 10 % ?",
+  "reference": "Il faut différer l'intervention.",
+  "answer": "Avec une HbA1c à 10 %, la conduite à tenir est de différer la chirurgie (différer si HbA1c > 9 %) [S2][S4]. En chirurgie cardiaque, pour une valeur > 8 %, il est de même probablement recommandé de prendre un avis diabétologique pour améliorer le contrôle glycémique le plus en amont possible, et au besoin de reporter la chirurgie selon le degré d'urgence [S1].\nSource : Prise en charge du patient diabétique en péri opératoire, Préconisation SFAR 2025 ; pour la chirurgie cardiaque : Réhabilitation améliorée après chirurgie cardiaque adulte, RFE SFAR 2021 (R2.3 : GRADE 2+, accord FORT)."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-gb3d45a182edaa9519369",
+  "question": "En réanimation, une décision d'arrêt des traitements vient d'être prise pour un patient inconscient. Que faut-il consigner dans le dossier médical et quelle est la portée de cette traçabilité ?",
+  "reference": "Doivent être inscrits l'argumentaire médical, les examens réalisés pour fixer le pronostic, la synthèse des entretiens, les étapes de la procédure, la nature de la décision, le nom et l'avis motivé des consultants, la date, les motifs et le nom du décideur ; c'est une obligation réglementaire et une condition indispensable à l'exonération de responsabilité pénale.",
+  "answer": "Il faut consigner dans le dossier médical la décision motivée, avec mention des participants à la délibération collégiale et des arguments discutés [S6][S5]. Cette inscription comporte l'argumentaire médical de la décision, la nature, la date et le résultat des examens complémentaires réalisés pour fixer le pronostic, la synthèse des entretiens au sein de l'équipe et avec l'entourage, les étapes de la procédure, la nature de la décision, le nom du ou des consultants avec leur avis motivé, ainsi que la date, les motifs et le nom du praticien décisionnaire [S10]. Cette traçabilité est une obligation réglementaire et une condition indispensable à l'exonération de responsabilité pénale [S10].\nSource : Décisions de limitation et d'arrêt de traitements (LAT) en soins critiques de l'adulte, RFE SFAR 2026 ; Recommandations de bonnes pratiques cliniques concernant l'application de la loi n° 2005-370 du 22 avril 2005, RFE SFAR 2005 (texte, sans gradation mentionnée)."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-g3bd1e3f5c8f306008b76",
+  "question": "Un traumatisé crânien présente un hématome extradural de source veineuse avec des signes de gravité au scanner. L'évacuation chirurgicale est-elle systématique ?",
+  "reference": "Non, les experts suggèrent de discuter au cas par cas un traitement conservateur, même en présence de signes de gravité (avis d'experts, accord fort).",
+  "answer": "Non, pas systématiquement : pour un hématome extradural d'origine veineuse, les experts suggèrent d'évaluer la balance bénéfice-risque d'une prise en charge conservatrice au cas par cas, y compris en présence de signes de gravité clinique ou radiologique, compte tenu des difficultés de la chirurgie (plaie de sinus dural par exemple) [S1]. Ces hématomes d'origine veineuse sont habituellement traités de manière conservatrice sauf en cas de volume important ou de signes neurologiques (troubles de vigilance, signes de focalisation) [S1].\nSource : Prise en charge neurochirurgicale des traumatismes cranio-encéphaliques de l'adulte et de l'enfant à la phase initiale, RPP SFAR 2025 (R 6.3 : avis d'experts, accord FORT)."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-gbc67a0eb3b22c1690c0c",
+  "question": "Quelle valeur d'index bispectral attend-on chez un patient anesthésié au sévoflurane à 0,5 CAM ?",
+  "reference": "Environ 45.",
+  "answer": "Au sévoflurane à 0,5 CAM, l'index bispectral attendu est d'environ 45 (courbe dose-réponse : 100 à 0 CAM) [S1]. La relation entre concentration d'halogéné et index n'est pas linéaire sur toute la plage des concentrations utilisées en anesthésie [S1].\nSource : Monitorage de l'adéquation / profondeur de l'anesthésie à partir de l'analyse de l'EEG cortical, RFE SFAR 2010 (texte et tableau, sans gradation mentionnée)."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-gcb6edd578e226e2bf83b",
+  "question": "En hémodiafiltration continue en post-dilution, quelle fraction de filtration ne faut-il pas dépasser et sur quel paramètre agir ?",
+  "reference": "Ajuster le débit sanguin pour maintenir une fraction de filtration inférieure à 25 % (avis d'experts, accord fort).",
+  "answer": "En hémodiafiltration réalisée en post-dilution, il faut garder une fraction de filtration inférieure à 25 %, en ajustant le débit sanguin [S1][S2].\nSource : Epuration extrarénale continue en réanimation (à l'exclusion de la dialyse péritonéale), RFE SFAR 2014 (recommandation 3.4.3 : avis d'experts, accord FORT)."
+ }
+]

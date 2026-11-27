@@ -1,0 +1,122 @@
+[
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-gb4774403759a289947d9",
+  "question": "Chez l'enfant opéré, à quel moment faut-il commencer le réchauffement actif pour prévenir l'hypothermie, et jusqu'à quand le maintenir ?",
+  "reference": "Débuter le réchauffement actif avant l'induction et le poursuivre en continu en peropératoire et en postopératoire (avis d'experts, accord fort).",
+  "answer": "Les experts suggèrent de débuter le réchauffement actif avant l'induction, avec un dispositif adapté et un contrôle de la température de la salle, de le poursuivre en continu pendant l'intervention puis en post-opératoire (lit réchauffé ou couveuse maintenue à la température adéquate) [S1]. Il faut aussi prévenir l'hypothermie pendant le transport vers le bloc opératoire [S1].\n\nSource : Organisation de l'anesthésie pédiatrique, RPP SFAR 2023 (R2.6.2, avis d'experts, accord fort)."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-g659a6f7980ea5f93af09",
+  "question": "Avant la pose d'une voie veineuse chez un nourrisson de 3 semaines, peut-on utiliser une chlorhexidine alcoolique à 0,5 % (Hibitane) pour l'antisepsie cutanée ?",
+  "reference": "Non, elle est contre-indiquée avant 1 mois (et chez le prématuré) ; elle n'est autorisée qu'à partir de 1 mois.",
+  "answer": "Non : la chlorhexidine 0,5 % alcoolique à 70 % (Hibitane) est contre-indiquée chez le nourrisson de moins de 1 mois, et n'est autorisée qu'à partir de 1 mois [S1]. À cet âge, le tableau autorise la chlorhexidine 0,25 % alcoolique à 4 % (Biseptine) et la chlorée (Amukine) [S1].\n\nSource : Organisation de l'anesthésie pédiatrique, RPP SFAR 2023 (annexe 2, tableau 2 : antiseptiques autorisés en fonction de l'âge chez le nourrisson)."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-ga95d75ad6fe8fb541a44",
+  "question": "Un nourrisson de 10 mois qui ne marche pas encore, sans antécédent hémorragique personnel ni familial, est programmé pour une intervention chirurgicale. Faut-il prescrire un bilan d'hémostase préopératoire ?",
+  "reference": "Oui : l'absence d'acquisition de la marche est la seule indication d'un bilan d'hémostase systématique chez l'enfant.",
+  "answer": "Oui : chez l'enfant qui n'a pas acquis la marche, il faut probablement prescrire un TCA et une numération des plaquettes afin d'éliminer certaines pathologies constitutionnelles de l'hémostase (par exemple l'hémophilie), même sans antécédent hémorragique [S2]. L'absence d'acquisition de la marche est la seule indication d'un bilan d'hémostase systématique avant un acte invasif chez l'enfant [S10].\n\nSource : Examens pré-interventionnels systématiques, RFE SFAR 2012 (GRADE 2+) ; Organisation de l'anesthésie pédiatrique, RPP SFAR 2023."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-gcf5aefb7a5425d025d76",
+  "question": "En soins critiques, chez un patient atteint de pancréatite aiguë grave, quels examens associer à la clinique et à la CRP pour affirmer l'infection de la nécrose, et avec quel grade ?",
+  "reference": "Le dosage de la procalcitonine et la tomodensitométrie abdominale (GRADE 2+).",
+  "answer": "Il est probablement recommandé de ne pas se limiter à l'examen clinique et à la mesure de la CRP, et d'utiliser le dosage de la procalcitonine et la tomodensitométrie abdominale pour établir le diagnostic d'infection de nécrose pancréatique, avec un grade GRADE 2+ (accord fort) [S1].\n\nSource : Pancréatite aigüe du patient adulte en soins critiques, RFE SFAR 2021 (R3.2, GRADE 2+, accord fort)."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-gae027791784341a1d570",
+  "question": "Un patient en soins critiques pour une pancréatite aiguë sévère secondaire à une hypertriglycéridémie très sévère persistante présente une acidose lactique et une défaillance d'organe. Quelle place pour les échanges plasmatiques ?",
+  "reference": "Les échanges plasmatiques peuvent être proposés d'emblée dans cette situation (ou après échec du traitement médical).",
+  "answer": "Les échanges plasmatiques sont suggérés par les experts en cas d'échec du traitement médical chez les patients admis en soins critiques pour pancréatite aigüe grave d'origine hypertriglycéridémique, et ils peuvent être proposés d'emblée en cas d'hypertriglycéridémie persistante sévère ou très sévère associée à une acidose hyperlactatémique et/ou à une ou plusieurs défaillances d'organes, ce qui correspond à la situation décrite [S1]. L'objectif est de ramener la triglycéridémie sous 5,7 mmol/L, l'anticoagulation du circuit par le citrate étant potentiellement à privilégier [S1].\nSource : Pancréatite aigüe du patient adulte en soins critiques — RFE SFAR 2021, R2.11, avis d'experts (accord FORT)."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-gcf361e9af2739ce43a9f",
+  "question": "Parmi les antiplaquettaires inhibiteurs du récepteur P2Y12, lequel a une action réversible ?",
+  "reference": "Le ticagrelor est un inhibiteur réversible du P2Y12.",
+  "answer": "Le ticagrelor est l'inhibiteur du récepteur P2Y12 dont l'action est réversible, alors que le clopidogrel et le prasugrel (thiénopyridines) ont une action irréversible [S1][S3].\nSource : Gestion des agents antiplaquettaires en cas de procédure invasive non programmée ou d'hémorragie — RFE SFAR 2018 (propriétés pharmacologiques des AAP oraux et préambule)."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-ge78b13400ed5e89af859",
+  "question": "Un patient traité par ticagrelor doit être opéré en urgence avec un risque hémorragique important. Peut-on compter sur la desmopressine pour antagoniser l'effet antiplaquettaire ?",
+  "reference": "Non, la desmopressine est décevante avec les AAP récents : sous ticagrelor, elle ne réduit pas le temps de saignement et ne corrige pas les fonctions plaquettaires.",
+  "answer": "Non : il est proposé de ne pas utiliser de desmopressine pour neutraliser les AAP [S5], son efficacité n'étant pas établie et, chez 21 volontaires sains ayant reçu du ticagrelor, elle ne réduit pas le temps de saignement et ne corrige pas les fonctions plaquettaires [S1].\nSource : Gestion perioperatoire des patients sous AAP en urgence — Préconisation SFAR 2021, accord fort."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-g42624ba80bc36c8e0925",
+  "question": "Après une intubation difficile compliquée d'une désaturation sévère au bloc, l'équipe d'anesthésie organise une revue de morbi-mortalité. Quelles caractéristiques doit-elle respecter pour être de qualité ?",
+  "reference": "Sélection rigoureuse des cas, collecte structurée, présentation synthétique pluridisciplinaire, participative et non culpabilisante, et suivi formalisé des actions correctrices.",
+  "answer": "Une revue de mortalité et de morbidité de qualité associe une sélection rigoureuse des cas, une collecte structurée des données, une présentation synthétique dans un cadre pluridisciplinaire, participatif et non culpabilisant, et un suivi formalisé des actions correctrices décidées [S2]. L'association d'un médecin référent dédié aux voies aériennes apparaît par ailleurs pertinente pour apporter une expertise sur les matériels, les techniques et les recommandations les plus récentes [S2].\nSource : Prise en charge des voies aériennes de l'adulte au bloc opératoire — RFE SFAR 2026, R3.7 (les experts suggèrent une revue de mortalité et de morbidité), avis d'experts (AE)."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-abst001",
+  "question": "Lors d'une chirurgie laser des cordes vocales, quelle FiO2 maximale est conseillée pour limiter le risque d'incendie des voies aériennes ?",
+  "reference": "(La question n'est pas couverte par les recommandations SFAR : la bonne réponse est de s'abstenir.)",
+  "answer": "Les recommandations SFAR fournies ne traitent pas cette question."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-abst002",
+  "question": "En chirurgie endoscopique des sinus, une anesthésie intraveineuse totale propofol-rémifentanil réduit-elle le saignement peropératoire par rapport aux halogénés ?",
+  "reference": "(La question n'est pas couverte par les recommandations SFAR : la bonne réponse est de s'abstenir.)",
+  "answer": "Les recommandations SFAR fournies ne traitent pas cette question."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-abst004",
+  "question": "Après une vitrectomie avec injection de gaz SF6 ou C3F8, combien de temps faut-il proscrire le protoxyde d'azote lors d'une anesthésie ultérieure ?",
+  "reference": "(La question n'est pas couverte par les recommandations SFAR : la bonne réponse est de s'abstenir.)",
+  "answer": "Les recommandations SFAR fournies ne traitent pas cette question."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-abst005",
+  "question": "Pour une chirurgie du strabisme chez l'enfant, faut-il administrer de l'atropine en prophylaxie du réflexe oculocardiaque, et à quelle dose ?",
+  "reference": "(La question n'est pas couverte par les recommandations SFAR : la bonne réponse est de s'abstenir.)",
+  "answer": "Les recommandations SFAR fournies ne traitent pas cette question."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-abst007",
+  "question": "Avant une chirurgie de la fosse postérieure en position assise, faut-il rechercher systématiquement un foramen ovale perméable par échographie transœsophagienne ?",
+  "reference": "(La question n'est pas couverte par les recommandations SFAR : la bonne réponse est de s'abstenir.)",
+  "answer": "Les recommandations SFAR fournies ne traitent pas cette question."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-abst009",
+  "question": "Chez un patient porteur d'une assistance ventriculaire gauche à flux continu opéré d'une cholécystectomie, quelle pression artérielle moyenne cibler et comment la mesurer ?",
+  "reference": "(La question n'est pas couverte par les recommandations SFAR : la bonne réponse est de s'abstenir.)",
+  "answer": "Les recommandations SFAR fournies ne traitent pas cette question."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-abst013",
+  "question": "Chez un nourrisson avec sténose du pylore, quels seuils de chlorémie et de bicarbonates faut-il atteindre avant la pylorotomie ?",
+  "reference": "(La question n'est pas couverte par les recommandations SFAR : la bonne réponse est de s'abstenir.)",
+  "answer": "Les recommandations SFAR fournies ne traitent pas cette question."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-abst017",
+  "question": "Pour une appendicectomie cœlioscopique au deuxième trimestre de grossesse, quelle pression de pneumopéritoine et quelle surveillance fœtale recommander ?",
+  "reference": "(La question n'est pas couverte par les recommandations SFAR : la bonne réponse est de s'abstenir.)",
+  "answer": "Les recommandations SFAR fournies ne traitent pas cette question."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-abst020",
+  "question": "Pour un TAVI par voie fémorale chez un patient de 88 ans, la sédation consciente est-elle préférable à l'anesthésie générale ?",
+  "reference": "(La question n'est pas couverte par les recommandations SFAR : la bonne réponse est de s'abstenir.)",
+  "answer": "Les recommandations SFAR fournies ne traitent pas cette question."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-abst022",
+  "question": "Après une décurarisation par sugammadex chez une patiente sous contraception orale, combien de jours de contraception complémentaire faut-il conseiller ?",
+  "reference": "(La question n'est pas couverte par les recommandations SFAR : la bonne réponse est de s'abstenir.)",
+  "answer": "Les recommandations SFAR fournies ne traitent pas cette question."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-abst036",
+  "question": "Avant une surrénalectomie pour phéochromocytome, combien de temps dure la préparation par alpha-bloquant et quels objectifs tensionnels viser ?",
+  "reference": "(La question n'est pas couverte par les recommandations SFAR : la bonne réponse est de s'abstenir.)",
+  "answer": "Les recommandations SFAR fournies ne traitent pas cette question."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-abst039",
+  "question": "Lors d'une ventilation unipulmonaire avec hypoxémie, quelle séquence de mesures appliquer, notamment la CPAP sur le poumon non ventilé ?",
+  "reference": "(La question n'est pas couverte par les recommandations SFAR : la bonne réponse est de s'abstenir.)",
+  "answer": "Les recommandations SFAR fournies ne traitent pas cette question."
+ }
+]

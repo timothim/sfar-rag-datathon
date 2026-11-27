@@ -1,0 +1,178 @@
+[
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-g0979ab4dc4ec3f5dbd2f",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Oui et indication conformes à la référence (accord faible) ; précisions sur les délais non contradictoires."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-g0aba15fbdfface749f92",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Accompagnement structuré des proches avec GRADE 1, conforme à la référence."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-g43a751763308810eda5b",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Protocoles statiques fondés sur la seule dernière glycémie désignés à abandonner, conforme."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-ga82b7f724c31133396b0",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Absence de sonde nasogastrique recommandée, conforme à la référence."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-g3940cdb7b78acbdfb13d",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Lidocaïne IV continue privilégiée et péridurale thoracique déconseillée (formulée comme probable), conforme."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-g508df1f5f5c7dacd7171",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Aide inspiratoire faible d'environ 7 cmH2O, conforme ; augmentation conditionnelle au filtre non contradictoire."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-gaaba8d034741e6533aee",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Dysfonction diaphragmatique transitoire et douleur à traiter, et plus faible taux d'échec d'extubation, conformes."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-g76063f88d9909f319d85",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Prémédication possible, non systématique, conforme ; recommandation d'éviter les benzodiazépines non contradictoire."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-g293148d474c4b595ab24",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Benzodiazépines à éviter pour limiter les troubles du comportement postopératoires, conforme."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-gf79873a2c51a5380fe66",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Sidération, defusing, dépistage de l'ESPT et orientation vers des spécialistes, conformes."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-g0c4e1de8af1e9b05f324",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Anesthésie générale en cas d'échec de la rachianesthésie/péridurale pour césarienne code rouge, conforme."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-gb96b3d27c279158ad3ef",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Antibiothérapie recommandée en cas d'antécédent d'infection génitale haute, conforme."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-gc6eabc0b647f3aa1afca",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Critères d'orientation en réanimation et accord fort, conformes à la convention."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-g3e964e64a0ac6da585eb",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Bloc obstétrical d'urgence accessible en permanence, contigu au secteur de naissance, accord fort, conforme."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-g822a50690730ee2ef6bc",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Priorité aux mesures d'effet sur la morbidité (VM, séjour, antibiotiques) énoncée ; liste additionnelle non contradictoire."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-g2f51f3362361053361b7",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Seuils de température et de leucocytes conformes à la référence."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-gc03aaf37539dfd4b39a8",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Bolus de 8-10 mg de dexaméthasone avec recommandation faible, conforme."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-g7efa49eea406c3678a28",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "VSAI-PEP après TDM et drainage, sans CI à la VNI, sous surveillance continue, G1+, conforme."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-gb8871ff491d05e49db36",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Discussion de filtre cave optionnel pré-procédural si reprise de l'anticoagulation impossible à 72 h, conforme."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-g571f916b70fb2a0586cb",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Risque hémorragique élevé énoncé, conforme ; mention d'une situation particulière non contradictoire."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-g526e54165c42ca78bf63",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Photothérapie sans émission sous 425 nm, conforme ; remarque sur le choix du plasma non contradictoire."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-gd56911820a0a15744c26",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Simulation suggérée en formation initiale et continue, médicale et paramédicale, accord fort, conforme."
+ }
+]

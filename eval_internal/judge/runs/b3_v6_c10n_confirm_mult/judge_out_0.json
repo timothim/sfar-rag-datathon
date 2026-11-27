@@ -1,0 +1,178 @@
+[
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-g3b9708b3518cddf9bccf",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Retour à domicile possible après scanner normal avec les mêmes critères que la référence (intoxication, vomissements, céphalées, déficit, GCS 15, autre motif)."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-g8e54d9655989718c1639",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Non à l'hypothermie par rapport à la normothermie, conforme à la référence ; le commentaire sur l'étude unique est un détail supplémentaire."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-gd9a325c36650ee68a17f",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Oui, les données adultes s'appliquent à l'enfant selon les experts pédiatres ; la recommandation de CCT en normothermie est un ajout non contradictoire."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-ge6178ab7ed0b124f3edc",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Non à la radiographie systématique quel que soit l'âge, conforme à la référence (GRADE I-)."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-gae3cda1acd4e903f01fd",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Non, conforme à la référence ; la réponse ne cite pas la VPP à 5 % mais affirme l'absence de prédiction et de gain informatif."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-geb9482ee3d54334a43fd",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Programmation le matin et surveillance de six heures, conformes à la référence ; les critères de sortie supplémentaires ne la contredisent pas."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-g9dbb7b8cb49592f9fa97",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Oui, bilan d'hémostase (TCA et numération plaquettaire) avant trois ans, conforme à la référence."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-gbe3dad7d7f9b1ae34b88",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Les cinq effets indésirables de la référence sont tous cités, sans contresens."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-gc1eeae015b45990b618e",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Absence de valeur diagnostique de Candida dans les prélèvements bas, LBA compris, conforme à la référence."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-g28ea0199f37013bf91f9",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Responsabilité de l'anesthésiste-réanimateur, conforme à la référence."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-g392fcc10d6909f623c73",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "HBPM option de choix et posologies probablement insuffisantes en forme sévère et obésité, conformes à la référence ; les posologies détaillées (enoxaparine) ne figurent pas dans la référence et ne sont pas vérifiables ici."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-g6d75a0524a3097e36863",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Contrôle de l'hémorragie et de la contamination périnéale, conforme à la référence ; l'orientation vers des centres de référence est un ajout non contradictoire."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-g424483aecf041277fed5",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Réhabilitation améliorée avec mobilisation précoce, conforme à la référence ; le point sur la VNI préventive est un ajout non contradictoire."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-g26cc210b12a24bc1dcf5",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Formule du poids théorique exacte, conforme à la référence."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-gb9a942c3d4de87e96a69",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "PEP élevée plutôt que basse, conforme à la référence ; les précisions sur le sepsis et la pression de plateau sont des ajouts non contradictoires."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-g448aac5e0ca03eebb7fb",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Les quatre situations de la référence (pneumopathie hypoxémiante, SDRA, IRA post-extubation, maladies neuromusculaires) sont citées sans contresens."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-g655c1a5b2a8ff63dc61f",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Ne pas réimplanter une dent temporaire complètement luxée, conforme à la référence."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-g32226ce0e89926e25109",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Différer la chirurgie à HbA1c 10 %, conforme à la référence."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-gb3d45a182edaa9519369",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Contenu de la traçabilité et portée réglementaire (condition de l'exonération pénale) conformes à la référence."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-g3bd1e3f5c8f306008b76",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Pas de traitement chirurgical systématique, évaluation au cas par cas même avec signes de gravité, conforme à la référence."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-gbc67a0eb3b22c1690c0c",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Index bispectral d'environ 45 à 0,5 CAM, conforme à la référence."
+ },
+ {
+  "case_id": "c10notes_v6|wide|claude-sonnet-5-5::MR-gcb6edd578e226e2bf83b",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Fraction de filtration inférieure à 25 % en ajustant le débit sanguin, conforme à la référence."
+ }
+]
