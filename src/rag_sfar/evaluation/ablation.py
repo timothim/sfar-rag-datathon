@@ -251,7 +251,7 @@ def build_standard_ablation_configs() -> list[RetrievalConfig]:
         # (counterpart search through the act label of the other population's row), and for
         # MCQs two passages per option (stem + option sub-query).
         # Tested and not kept: negation handling (no gain on top of this configuration),
-        # larger candidate pools, edition filter off, smaller/larger budgets (see the report).
+        # larger candidate pools, bge-reranker-v2-m3, edition filter off, other budgets (see the report).
         RetrievalConfig(
             name="C10_context_population",
             chunking_strategy="table_aware_sota",

@@ -193,3 +193,21 @@ def test_coverage_signal_is_exposed_without_filtering():
     assert timings["coverage_score"] == -1.0  # no reranker: not available
     assert timings["coverage_supported"] == -1.0
     assert r.last_coverage["coverage_score"] == -1.0
+
+
+def test_population_quota_only_adds_and_survives_wrong_labels():
+    """A population label (missing or wrong) can only add candidates: the ranked results of the
+    run without quota are kept, in the same order, at the head of the context."""
+    chunks = _chain([
+        ("ad", "table_row_card", "Acte : arthroplastie du coude | Molécule : moléculine 2 g", {"population_hint": "pediatrie"}),  # wrong label
+        ("x1", "prose", "Texte général sur l'arthroplastie du coude.", {}),
+        ("ped", "table_row_card", "Acte : arthroplastie du coude | Molécule : moléculine 30 mg/kg", {}),  # missing label
+        ("ad2", "table_row_card", "Acte : arthroplastie de l'épaule | Molécule : moléculine 2 g", {"population_hint": "adulte"}),
+    ])
+    r = SfarRagRetriever(_store(chunks))
+    for q in ("arthroplastie du coude : quelle molécule ?", "Enfant de 6 ans, arthroplastie du coude ?",
+              "Adulte, arthroplastie du coude ?"):
+        base = dataclasses.replace(_BASE, final_top_k=2)
+        plain = [x.chunk.chunk_id for x in r.retrieve(q, config=base)[0]]
+        quota = [x.chunk.chunk_id for x in r.retrieve(q, config=dataclasses.replace(base, population_quota=1, population_counterpart=True))[0]]
+        assert quota[: len(plain)] == plain, (q, plain, quota)
