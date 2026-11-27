@@ -1,0 +1,538 @@
+{
+ "num_documents": 265,
+ "num_chunks": 33406,
+ "chunk_types": {
+  "prose": 20566,
+  "table_markdown": 2589,
+  "table_row_card": 6110,
+  "callout_footnote": 491,
+  "references": 2741,
+  "recommendation_box": 851,
+  "callout_allergy": 58
+ },
+ "text_len": {
+  "median": 675,
+  "p99": 1984,
+  "max": 21454,
+  "gt_4000": 4,
+  "gt_2500": 50
+ },
+ "indexed_len_max": 21644,
+ "largest": [
+  [
+   "unk_guide-mise-en-place-gestion-reanimation-epheme",
+   "prose",
+   21454
+  ],
+  [
+   "2001_art54_dossieraranncomplet_df1465",
+   "table_markdown",
+   8725
+  ],
+  [
+   "2010_2a_HAS_texte-court_Delivrance-de-linformation",
+   "prose",
+   7756
+  ],
+  [
+   "2010_2b_HAS_Texte_Long-Delivrance-de-l-information",
+   "prose",
+   7752
+  ],
+  [
+   "2013_2_PUROL_Recommandations-chirurgie-ambulatoire",
+   "table_row_card",
+   3506
+  ]
+ ],
+ "cards_with_generic_headers": 1897,
+ "table_md_with_generic_headers": 1326,
+ "uncovered": {
+  "units": 216,
+  "units_total": 62145,
+  "chars": 72749,
+  "chars_total": 12931233,
+  "share_chars_pct": 0.56,
+  "by_kind": {
+   "cell": 213,
+   "line": 3
+  },
+  "examples": [
+   [
+    "2026_RECO_641-_URGENCE-VITALE_INTRAHOSPI",
+    "cell",
+    "Aiguille jaune (45 mm) : obèse, humérale chez l'adulte"
+   ],
+   [
+    "2026_RECO_641-_URGENCE-VITALE_INTRAHOSPI",
+    "cell",
+    "L'équipe UVIH est-elle la même que l'équipe de prise en charge des ACR intrahospitaliers ? Oui Non"
+   ],
+   [
+    "2026_Version-longue_8281a1",
+    "cell",
+    "Champ 1 – Nutrition clinique en contexte périopératoire"
+   ],
+   [
+    "2026_Version-longue_8281a1",
+    "cell",
+    "Champ 1 - Nutrition clinique en contexte périopératoire"
+   ],
+   [
+    "2026_Version-longue_8281a1",
+    "cell",
+    "Champ 1 – Nutrition clinique en contexte périopératoire"
+   ],
+   [
+    "2026_Version-longue_8281a1",
+    "cell",
+    "Champ 1 - Nutrition clinique en contexte périopératoire"
+   ],
+   [
+    "2026_Version-longue_8281a1",
+    "cell",
+    "Champ 2 – Nutrition clinique en soins critiques"
+   ],
+   [
+    "2026_Version-longue_8281a1",
+    "cell",
+    "Champ 2 - Nutrition clinique en soins critiques (suite)"
+   ],
+   [
+    "2026_Version-longue_8281a1",
+    "cell",
+    "Champ 2 - Nutrition clinique en soins critiques (suite)"
+   ],
+   [
+    "2026_Version-longue_8281a1",
+    "cell",
+    "Champ 2 - Nutrition clinique en soins critiques (suite)"
+   ],
+   [
+    "2026_Version-longue_8281a1",
+    "cell",
+    "Champ 2 – Nutrition clinique en soins critiques (suite)"
+   ],
+   [
+    "2026_Version-longue_8281a1",
+    "cell",
+    "Champ 2 – Nutrition clinique en soins critiques (suite)"
+   ],
+   [
+    "2026_Version-longue_8281a1",
+    "cell",
+    "Champ 2 – Nutrition clinique en soins critiques (suite)"
+   ],
+   [
+    "2026_Version-longue_8281a1",
+    "cell",
+    "Champ 2 – Nutrition clinique en soins critiques (suite)"
+   ],
+   [
+    "2026_Version-longue_8281a1",
+    "cell",
+    "Champ 2 – Nutrition clinique en soins critiques (suite)"
+   ],
+   [
+    "2026_Version-longue_8281a1",
+    "cell",
+    "CHAMP 1 – NUTRITION CLINIQUE EN CONTEXTE PERIOPERATOIRE"
+   ],
+   [
+    "2026_Version-longue_8281a1",
+    "cell",
+    "CHAMP 2 – NUTRITION CLINIQUE EN SOINS CRITIQUES"
+   ],
+   [
+    "2026_Version-courte_3ae465",
+    "cell",
+    "Champ 1 - Nutrition clinique en contexte périopératoire"
+   ],
+   [
+    "2026_Version-courte_3ae465",
+    "cell",
+    "Champ 1 - Nutrition clinique en contexte périopératoire (suite)"
+   ],
+   [
+    "2026_TEXTE-RFE-ALR-PEDIA-VERSION-FINALE-",
+    "cell",
+    "Critères de restriction de la recherche bibliographique"
+   ],
+   [
+    "2026_TEXTE-RFE-ALR-PEDIA-VERSION-FINALE-",
+    "cell",
+    "Années de publication comprise entre 2010 et 2025"
+   ],
+   [
+    "2026_TEXTE-RFE-ALR-PEDIA-VERSION-FINALE-",
+    "cell",
+    "Argumentaire : Les fentes labiales et/ou palatines représentent l'une des malformations crâniofaciales congénitales les plus courantes et nécessitent une correc"
+   ],
+   [
+    "2026_RFE-Infections-intra-abdominales-ve",
+    "cell",
+    "O du PICO : Outcomes / Critères de jugement"
+   ],
+   [
+    "2026_RFE-Infections-intra-abdominales-ve",
+    "cell",
+    "Critères de restriction de la recherche bibliographique"
+   ],
+   [
+    "2026_RFE-Infections-intra-abdominales-ve",
+    "cell",
+    "RCT ; méta-analyses ; études observationnelles avec critère de qualité effectif > 100."
+   ],
+   [
+    "2026_RFE-Infections-intra-abdominales-ve",
+    "cell",
+    "Années de la recherche bibliographique: 2012 à 2024"
+   ],
+   [
+    "2026_RFE-Infections-intra-abdominales-ve",
+    "cell",
+    "Langues : Français et Anglais"
+   ],
+   [
+    "2026_RFE-Infections-intra-abdominales-ve",
+    "cell",
+    "DDC de 2 g IV en 30 min dose entretien de 3 g à 4 g/j en perfusion continue (monitorage des concentrations sériques recommandées entre la 24 e et la 36 e heures"
+   ],
+   [
+    "2026_RFE-Infections-intra-abdominales-ve",
+    "cell",
+    "DDC de 2 g IV en 30 min dose entretien de 6 g/j en perfusion continue (monitorage des concentrations sériques recommandées entre la 24 e et la 36 e heures après"
+   ],
+   [
+    "2026_RFE-Infections-intra-abdominales-ve",
+    "cell",
+    "• DDC de 150 mg à J1, • dose entretien de 100 mg/j IV en perfusion 30 min • dose entretien de 150 mg si patient obèse (Sous-exposition fréquente en réanimation,"
+   ],
+   [
+    "2026_RFE_sedationproceduraleUrgences_24j",
+    "cell",
+    "O du PICO : Outcomes / Critères de jugement"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_M",
+    "cell",
+    "Type d'étude (randomisée , prospective comparative ou non, multicentriq ue ou non, rétrospectiv e,...)"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_M",
+    "cell",
+    "L'objec tif de l'étude est explicit e"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_M",
+    "cell",
+    "Les patients ont été correcteme nt sélectionné s ; l'échantillo n est représentat if et non biaisé"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_M",
+    "cell",
+    "Si étude rétrospective, les données ont-elles été collectées prospectiveme nt ?"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_M",
+    "cell",
+    "Date de recruteme nt des patients"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_M",
+    "cell",
+    "La cohorte est-elle indépendan te des autres cohortes"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_M",
+    "cell",
+    "Le recruteme nt s'appuie sur quels critères ?"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_M",
+    "cell",
+    "Les critères de jugement ont été mesurés en aveugle (reviewer indépendan t, sans connaissance des données cliniques)"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_M",
+    "cell",
+    "Les facteurs de confusi on potentie ls sont identifié s et pris en compte dans l'analys e."
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_M",
+    "cell",
+    "Les conflits d'intérêts potentiels des auteurs sont documenté s. Si oui, conflits majeurs ?"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_M",
+    "cell",
+    "L'objectif de l'étude a une utilité clinique ?"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_M",
+    "cell",
+    "Les patients sont représentatifs de ceux vus en pratique médicale courante ?"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_M",
+    "cell",
+    "Les critères d'inclusion et exclusion de la population sont-ils pertinents ? La définition de la population de patients est-elle pertinente ?"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_M",
+    "cell",
+    "La période d'inclusion est-elle pertinente cliniquement ?"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_M",
+    "cell",
+    "La méthode de mesure est-elle pertinente ?"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_M",
+    "cell",
+    "Tous les paramètres pertinents ont-ils été considérés dans l'analyse multivariée ?"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_M",
+    "cell",
+    "Critères de jugement et leur définition pertinents cliniquement ?"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_M",
+    "cell",
+    "Niveau 3 • Études cas-témoins."
+   ],
+   [
+    "2026_RFE-20_4_2026-deifinitif-et-validei",
+    "line",
+    "Adapt[Adapter les modalités de prise en charge. Discuter l'hospitalisation]"
+   ],
+   [
+    "2025_RESECTION_-HEPATIQUE_-RECOMMANDATIO",
+    "cell",
+    "Objectif : réduction saignement → maintien d'une précharge dépendance : - 12\\% < VVE < 20\\% - PVC < 5\\text{mmHg} (si disponible) → maintien d'une PAM > 65\\text{"
+   ],
+   [
+    "2025_RESECTION_-HEPATIQUE_-RECOMMANDATIO",
+    "cell",
+    "SURVEILLANCE des signes d'hypoperfusion tissulaire, discuter expansion volémique si : - lactates > 3\\text{ mmol/L} - augmentation significative des vasopresseur"
+   ],
+   [
+    "2025_RESECTION_-HEPATIQUE_-RECOMMANDATIO",
+    "cell",
+    "PICO : Outcomes/critères de jugement"
+   ],
+   [
+    "2025_RESECTION_-HEPATIQUE_-RECOMMANDATIO",
+    "cell",
+    "Critères de jugement secondaires (importance de 4 et en dessous)"
+   ],
+   [
+    "2025_RBP_-SFAR_AFEF_ACHBPT_RESECTION_-HE",
+    "cell",
+    "Objectif : réduction saignement → maintien d'une précharge dépendance : - 12\\% < VVE < 20\\% - PVC < 5\\text{mmHg} (si disponible) → maintien d'une PAM > 65\\text{"
+   ],
+   [
+    "2025_RBP_-SFAR_AFEF_ACHBPT_RESECTION_-HE",
+    "cell",
+    "SURVEILLANCE des signes d'hypoperfusion tissulaire , discuter expansion volémique si : - lactates > 3\\text{ mmol/L} - augmentation significative des vasopresseu"
+   ],
+   [
+    "2025_RBP_-SFAR_AFEF_ACHBPT_RESECTION_-HE",
+    "cell",
+    "PICO : Outcomes/critères de jugement"
+   ],
+   [
+    "2026_RFE-LAT-final-mai-2026-_a26946",
+    "cell",
+    "Patient, proches et équipe soignante"
+   ],
+   [
+    "2026_RFE-LAT-final-mai-2026-_a26946",
+    "cell",
+    "Années de publication comprise entre 2000 et 2025"
+   ],
+   [
+    "2025_RFE-analgesie-obstetricale-texte-lo",
+    "cell",
+    "Surveillance pour limiter l'insuffisance ou l'échec de l'analgésie périnéale"
+   ],
+   [
+    "2025_RFE-analgesie-obstetricale-texte-co",
+    "cell",
+    "Chez une femme traitée par HBPM en cours de grossesse, les experts suggèrent de vérifier avant la pose d'une analgésie périmédullaire ou l'ablation du cathéter "
+   ],
+   [
+    "2025_2025_SFAR-SFA_RFE-Diagnostic-et-pri",
+    "cell",
+    "Quels sont les patients concernés ? (si ce sont toujours les mêmes)"
+   ],
+   [
+    "2025_2025_SFAR-SFA_RFE-Diagnostic-et-pri",
+    "cell",
+    "O du PICO : Outcomes / Critères de jugement"
+   ],
+   [
+    "2025_2025_SFAR-SFA_RFE-Diagnostic-et-pri",
+    "cell",
+    "TRANSMISSIONS Adressage vers un CENTRE EXPERT EN ALLERGO-ANESTHESIE Cf Annexe 8 : check list adressage"
+   ],
+   [
+    "2025_2025_SFAR-SFA_RFE-Diagnostic-et-pri",
+    "cell",
+    "Hors situation d'urgence : Réalisation des TESTS CUTANÉS Prick tests + IDR"
+   ],
+   [
+    "2025_2025_SFAR-SFA_RFE-Diagnostic-et-pri",
+    "cell",
+    "TESTS FONCTIONNELS IN VITRO"
+   ],
+   [
+    "2025_2025_SFAR-SFA_RFE-Diagnostic-et-pri",
+    "cell",
+    "TESTS D'ACTIVATION DES BASOPHILES, .... Sur avis d'expert, selon disponibilité"
+   ],
+   [
+    "2025_2025_RFE-Intubation-adulte-hors-blo",
+    "cell",
+    "Tous les patients adultes devant bénéficier d'une intubation trachéale hors contexte de bloc opératoire ou de soins critiques"
+   ],
+   [
+    "2025_2025_RFE-Intubation-adulte-hors-blo",
+    "cell",
+    "O du PICO : Outcomes / Critères de jugement"
+   ],
+   [
+    "2025_2025_RFE-Intubation-adulte-hors-blo",
+    "cell",
+    "Heterogeneity: \\text{Chi}^2 = 16.31 , \\text{df} = 9 ( P = 0.06 ); I^2 = 45\\%"
+   ],
+   [
+    "2025_2025_RFE-Intubation-adulte-hors-blo",
+    "cell",
+    "Test for overall effect: Z = 1.09 ( P = 0.27 )"
+   ],
+   [
+    "2025_2025_RFE-Intubation-adulte-hors-blo",
+    "cell",
+    "Heterogeneity: \\text{Chi}^2 = 15.42 , \\text{df} = 10 ( P = 0.12 ); I^2 = 35\\%"
+   ],
+   [
+    "2025_2025_RFE-Intubation-adulte-hors-blo",
+    "cell",
+    "Test for overall effect: Z = 4.49 ( P < 0.00001 )"
+   ],
+   [
+    "2025_2025_RFE-Intubation-adulte-hors-blo",
+    "cell",
+    "Heterogeneity: Chi 2 = 1.38, df = 2 (P = 0.50); I 2 = 0%"
+   ],
+   [
+    "2025_2025_RFE-Intubation-adulte-hors-blo",
+    "cell",
+    "Test for overall effect: Z = 0.34 (P = 0.74)"
+   ],
+   [
+    "2024_2024_RFE-optimisation-hemodynamique",
+    "cell",
+    "O du PICO : Outcomes / Critères de jugement"
+   ],
+   [
+    "2024_2024_RFE-optimisation-hemodynamique",
+    "cell",
+    "O du PICO : Outcomes / Critères de jugement"
+   ],
+   [
+    "2024_RFE-gestion-de-lanticoagulation-dan",
+    "cell",
+    "Dans tous les cas surveillance clinique* et recherche de l'étiologie †"
+   ],
+   [
+    "2024_Algorithmes_RFE-gestion-de-lanticoa",
+    "cell",
+    "Dans tous les cas surveillance clinique* et recherche de l'étiologie †"
+   ],
+   [
+    "2024_RPP-Prevention-des-erreurs-medicame",
+    "cell",
+    "O du PICO : Outcomes / Critères de jugement"
+   ]
+  ]
+ },
+ "full_width_rows": {
+  "total": 780,
+  "lost": 104,
+  "examples": [
+   [
+    "2026_RECO_641-_URGENCE-VITALE_INTRAHOSPI",
+    "L'équipe UVIH est-elle la même que l'équipe de prise en charge des ACR intrahospitaliers ? Oui Non"
+   ],
+   [
+    "2026_Version-longue_8281a1",
+    "Champ 1 – Nutrition clinique en contexte périopératoire"
+   ],
+   [
+    "2026_Version-longue_8281a1",
+    "Champ 1 - Nutrition clinique en contexte périopératoire"
+   ],
+   [
+    "2026_Version-longue_8281a1",
+    "Champ 1 – Nutrition clinique en contexte périopératoire"
+   ],
+   [
+    "2026_Version-longue_8281a1",
+    "Champ 1 - Nutrition clinique en contexte périopératoire"
+   ],
+   [
+    "2026_Version-longue_8281a1",
+    "Champ 2 – Nutrition clinique en soins critiques"
+   ],
+   [
+    "2026_Version-longue_8281a1",
+    "Champ 2 - Nutrition clinique en soins critiques (suite)"
+   ],
+   [
+    "2026_Version-longue_8281a1",
+    "Champ 2 - Nutrition clinique en soins critiques (suite)"
+   ],
+   [
+    "2026_Version-longue_8281a1",
+    "Champ 2 - Nutrition clinique en soins critiques (suite)"
+   ],
+   [
+    "2026_Version-longue_8281a1",
+    "Champ 2 – Nutrition clinique en soins critiques (suite)"
+   ]
+  ]
+ },
+ "residues_in_text": {
+  "html_entity": 0,
+  "latex_dollar": 4149,
+  "latex_cmd": 3612,
+  "math_tag": 0,
+  "nul": 328,
+  "english_figure": 575,
+  "image_md": 63,
+  "mermaid": 160,
+  "glued_heading": 0,
+  "html_tag": 13410
+ },
+ "residues_in_indexed_text": {
+  "html_entity": 0,
+  "latex_cmd": 3818,
+  "math_tag": 0,
+  "nul": 408,
+  "english_figure": 575,
+  "mermaid": 160
+ },
+ "population_hint": {
+  "adulte": 8909,
+  "non_specifie": 18640,
+  "pediatrie": 4622,
+  "mixte": 1235
+ },
+ "populations": {
+  "(vide)": 33406
+ }
+}
