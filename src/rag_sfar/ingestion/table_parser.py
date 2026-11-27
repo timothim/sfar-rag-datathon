@@ -27,6 +27,8 @@ class TableRowGroup:
     rows: list[list[str]]
     sub_banner: str = ""
     raw_text: str = ""
+    # Full-width note rows ("En cas de ... considérer ...") that follow this group's rows.
+    notes: list[str] = field(default_factory=list)
 
 
 @dataclass
@@ -39,72 +41,142 @@ class ParsedTable:
     row_groups: list[TableRowGroup] = field(default_factory=list)
     num_cols: int = 0
     num_rows: int = 0
+    # Full-width note rows placed before any data row: they apply to the whole table.
+    table_notes: list[str] = field(default_factory=list)
+    # Column 0 value carried over from the previous fragment of a page-split table.
+    carried_first_cell: str = ""
+
+    @property
+    def has_headers(self) -> bool:
+        return any(h.strip() for h in self.headers) and (self.has_explicit_headers or self.inherited_headers)
 
     def to_markdown_chunks(
         self,
         header_context: str = "",
         max_chars: int = 1800,
     ) -> list[str]:
-        """Serialize table into Markdown chunks, NEVER splitting a rowspan group and
-        ALWAYS repeating the column header row on every chunk."""
-        if not self.row_groups:
+        """Serialize table into Markdown chunks, never splitting a rowspan group (unless the group
+        alone exceeds 1.5 x `max_chars`) and always repeating the column header row.
+
+        A table without a recognised header row is rendered as plain rows ("a | b | c"), without
+        an invented "Col 1 | Col 2" header. Full-width note rows are kept after their group."""
+        if not self.row_groups and not self.table_notes:
+            if self.has_headers and any(h.strip() and not re.fullmatch(r"Col \d+", h) for h in self.headers):
+                # Header-only table (empty form or grid): keep its column titles.
+                return [(f"{header_context}\n" if header_context else "") + "| " + " | ".join(_escape_md_cell(h) for h in self.headers) + " |"]
             return []
 
-        cols = self.headers if self.headers else [f"Col {i+1}" for i in range(max(1, self.num_cols))]
-        header_line = "| " + " | ".join(_escape_md_cell(c) for c in cols) + " |"
-        sep_line = "| " + " | ".join("---" for _ in cols) + " |"
-        table_head = f"{header_line}\n{sep_line}"
+        ncols = max(1, self.num_cols)
+        if self.has_headers:
+            cols = self.headers
+            header_line = "| " + " | ".join(_escape_md_cell(c) for c in cols) + " |"
+            sep_line = "| " + " | ".join("---" for _ in cols) + " |"
+            table_head = f"{header_line}\n{sep_line}"
+        else:
+            cols = [""] * ncols
+            table_head = ""
+
+        def _row_line(cells: list[str]) -> str:
+            if table_head:
+                return "| " + " | ".join(_escape_md_cell(c) for c in cells) + " |"
+            vals = [_escape_md_cell(c) for c in cells if c.strip()]
+            return " | ".join(vals)
+
+        def _banner_line(text: str) -> str:
+            return _row_line([f"**{text}**"] + [""] * (len(cols) - 1))
 
         chunks: list[str] = []
         current_lines: list[str] = []
         current_len = len(table_head) + len(header_context) + 10
         last_banner = ""
 
+        def _flush() -> None:
+            nonlocal current_lines, current_len
+            if current_lines:
+                prefix = f"{header_context}\n" if header_context else ""
+                head = f"{table_head}\n" if table_head else ""
+                chunks.append(f"{prefix}{head}" + "\n".join(current_lines))
+            current_lines = []
+            current_len = len(table_head) + len(header_context) + 10
+
+        for note in self.table_notes:
+            current_lines.append(_row_line([f"Note : {note}"] + [""] * (len(cols) - 1)))
+            current_len += len(current_lines[-1]) + 1
+
         for grp in self.row_groups:
             grp_lines: list[str] = []
             if grp.sub_banner and grp.sub_banner != last_banner:
-                banner_cells = [f"**{grp.sub_banner}**"] + [""] * (len(cols) - 1)
-                grp_lines.append("| " + " | ".join(_escape_md_cell(c) for c in banner_cells) + " |")
+                grp_lines.append(_banner_line(grp.sub_banner))
                 last_banner = grp.sub_banner
             for row in grp.rows:
-                padded = _pad_row(row, len(cols))
-                grp_lines.append("| " + " | ".join(_escape_md_cell(c) for c in padded) + " |")
+                grp_lines.append(_row_line(_pad_row(row, len(cols))))
+            for note in grp.notes:
+                grp_lines.append(_row_line([f"Note : {note}"] + [""] * (len(cols) - 1)))
 
-            grp_len = sum(len(l) + 1 for l in grp_lines)
+            grp_len = sum(len(line) + 1 for line in grp_lines)
             if current_lines and current_len + grp_len > max_chars:
-                prefix = f"{header_context}\n" if header_context else ""
-                chunks.append(f"{prefix}{table_head}\n" + "\n".join(current_lines))
-                current_lines = []
-                current_len = len(table_head) + len(header_context) + 10
-                if grp.sub_banner:
-                    banner_cells = [f"**{grp.sub_banner}**"] + [""] * (len(cols) - 1)
-                    banner_md = "| " + " | ".join(_escape_md_cell(c) for c in banner_cells) + " |"
-                    if not grp_lines or grp_lines[0] != banner_md:
-                        current_lines.append(banner_md)
-                        current_len += len(banner_md) + 1
-
+                _flush()
+                if grp.sub_banner and (not grp_lines or grp_lines[0] != _banner_line(grp.sub_banner)):
+                    current_lines.append(_banner_line(grp.sub_banner))
+                    current_len += len(current_lines[-1]) + 1
+            if grp_len > 1.5 * max_chars:
+                # Oversized group: split it row by row, repeating its banner.
+                for line in grp_lines:
+                    if current_lines and current_len + len(line) + 1 > max_chars:
+                        _flush()
+                        if grp.sub_banner:
+                            current_lines.append(_banner_line(grp.sub_banner))
+                            current_len += len(current_lines[-1]) + 1
+                    current_lines.append(line)
+                    current_len += len(line) + 1
+                continue
             current_lines.extend(grp_lines)
             current_len += grp_len
 
-        if current_lines:
-            prefix = f"{header_context}\n" if header_context else ""
-            chunks.append(f"{prefix}{table_head}\n" + "\n".join(current_lines))
+        _flush()
         return chunks
 
-    def to_row_cards(self, min_cols: int = 2) -> list[str]:
-        """Generate self-contained clinical Row-Group Cards for structured lookup tables.
+    def to_row_cards(
+        self,
+        min_cols: int = 2,
+        title: str = "",
+        section: str = "",
+        context_lines: list[str] | None = None,
+        require_headers: bool = True,
+    ) -> list[str]:
+        """Self-contained row-group cards: one card per row group, which repeats the table
+        title, the section, the sub-category banner and the column headers, so that the card can
+        be read (and retrieved) on its own.
 
-        Example output for an Antibioprophylaxie rowspan group:
-          Actes chirurgicaux ou interventionnels : Chirurgie rhinologique avec greffon ; Chirurgie sinusienne tumorale
-          - Option 1 : Molécules = Céfazoline | Dose initiale = 2g IVL | Réinjections et durée = 1g si durée > 4h... | Force = GRADE 2
-          - Option 2 : Molécules = Alternative : Amoxicilline/Clavulanate | Dose initiale = 2g IVL | ...
+        Without recognised headers (`require_headers=False`), cells are joined with " — ".
+
+        Example (rowspan group of a dosing table):
+          Section : Chirurgie rhinologique
+          Actes chirurgicaux ou interventionnels : Chirurgie rhinologique avec greffon
+          • Schéma 1 : Molécules = Céfazoline | Dose initiale = 2g IVL | ...
+          • Schéma 2 : Molécules = Alternative : Amoxicilline/Clavulanate | ...
         """
         if self.num_cols < min_cols or not self.row_groups:
             return []
+        has_hdr = self.has_headers
+        if require_headers and not has_hdr:
+            return []
 
-        cols = self.headers if self.headers else [f"Colonne {i+1}" for i in range(self.num_cols)]
+        cols = self.headers if has_hdr else [""] * self.num_cols
         cards: list[str] = []
+        prefix: list[str] = []
+        if title:
+            prefix.append(f"Tableau : {title}")
+        if section:
+            prefix.append(f"Section : {section}")
+        prefix.extend(context_lines or [])
+        for note in self.table_notes:
+            prefix.append(f"Note du tableau : {note}")
 
+        def _pair(i: int, v: str, sep: str) -> str:
+            return f"{cols[i]}{sep}{v}" if cols[i] else v
+
+        joiner = " | " if has_hdr else " — "
         for grp in self.row_groups:
             if not grp.rows:
                 continue
@@ -114,14 +186,10 @@ class ParsedTable:
 
             if len(grp.rows) == 1:
                 row = _pad_row(grp.rows[0], len(cols))
-                pairs = [
-                    f"{cols[i]} : {row[i]}"
-                    for i in range(len(cols))
-                    if row[i].strip()
-                ]
+                pairs = [_pair(i, row[i], " : ") for i in range(len(cols)) if row[i].strip()]
                 if not pairs:
                     continue
-                lines.append(" | ".join(pairs))
+                lines.append(joiner.join(pairs))
             else:
                 # Multi-row rowspan group: factor out the shared key column(s)
                 first = _pad_row(grp.rows[0], len(cols))
@@ -132,49 +200,106 @@ class ParsedTable:
                     and all(_pad_row(r, len(cols))[i] == first[i] for r in grp.rows[1:])
                 ]
                 if shared_cols:
-                    shared_parts = [f"{cols[i]} : {first[i]}" for i in shared_cols]
-                    lines.append(" | ".join(shared_parts))
+                    lines.append(joiner.join(_pair(i, first[i], " : ") for i in shared_cols))
                 for r_idx, raw_r in enumerate(grp.rows, start=1):
                     r = _pad_row(raw_r, len(cols))
-                    rem = [
-                        f"{cols[i]} = {r[i]}"
-                        for i in range(len(cols))
-                        if i not in shared_cols and r[i].strip()
-                    ]
+                    rem = [_pair(i, r[i], " = ") for i in range(len(cols)) if i not in shared_cols and r[i].strip()]
                     if rem:
-                        lines.append(f"• Schéma {r_idx} : " + " | ".join(rem))
+                        lines.append(f"• Schéma {r_idx} : " + joiner.join(rem))
+            for note in grp.notes:
+                lines.append(f"Note : {note}")
 
-            card_text = "\n".join(lines).strip()
+            body = "\n".join(lines).strip()
             # Skip ultra-short trivial rows (e.g. blank spacers)
-            if len(card_text) >= 25:
-                cards.append(card_text)
+            if len(body) >= 25:
+                cards.append("\n".join(prefix + [body]).strip())
 
         return cards
 
 
-def _clean_cell_text(cell: Tag) -> str:
-    """Convert an HTML <td>/<th> cell into clean readable inline text."""
-    # Preserve list items clearly with semicolons/bullets
-    lis = cell.find_all("li")
-    if lis:
-        parts = []
-        for li in lis:
-            t = _normalize_ws(li.get_text(" ", strip=True))
-            t = re.sub(r"^[▪•\-–—\*]+\s*", "", t)
-            if t:
-                parts.append(t)
-        # Check if there is non-li text too
-        if parts:
-            return " ; ".join(parts)
+_BR = "\u2028"  # line break inside a cell, resolved by _resolve_breaks
+_BULLET_PREFIX_RE = re.compile(r"^[▪•\-–—■○◦]+\s*")
 
-    # Replace <br> with spaces or separators
-    for br in cell.find_all("br"):
-        br.replace_with(" / ")
-    text = cell.get_text(" ", strip=True)
-    text = _normalize_ws(text)
+
+def _li_text(li: Tag) -> str:
+    """Text of one list item; a nested list becomes "parent : child ; child"."""
+    own: list[str] = []
+    nested: list[str] = []
+    for child in li.children:
+        if isinstance(child, Tag) and child.name in ("ul", "ol"):
+            nested.extend(t for t in (_li_text(x) for x in child.find_all("li", recursive=False)) if t)
+        elif isinstance(child, Tag):
+            if child.name == "br":
+                own.append(_BR)
+            else:
+                own.append(_node_text(child))
+        else:
+            own.append(str(child))
+    head = _BULLET_PREFIX_RE.sub("", _resolve_breaks("".join(own)))
+    if nested:
+        return f"{head} : {' ; '.join(nested)}" if head else " ; ".join(nested)
+    return head
+
+
+def _node_text(node: Tag) -> str:
+    """Readable text of a cell sub-tree: every text node kept once, lists as "a ; b",
+    line breaks as " / "."""
+    parts: list[str] = []
+    for child in node.children:
+        if isinstance(child, Tag):
+            if child.name in ("ul", "ol"):
+                items = [t for t in (_li_text(li) for li in child.find_all("li", recursive=False)) if t]
+                if items:
+                    parts.append(" " + " ; ".join(items) + " ")
+            elif child.name == "li":
+                t = _li_text(child)
+                if t:
+                    parts.append(" " + t + " ;")
+            elif child.name == "br":
+                parts.append(_BR)
+            elif child.name in ("p", "div"):
+                t = _node_text(child)
+                if t.strip():
+                    parts.append(" / " + t + " / ")
+            else:
+                parts.append(_node_text(child))
+        else:
+            parts.append(str(child))
+    return "".join(parts)
+
+
+def _resolve_breaks(text: str) -> str:
+    """A line break inside a cell continues the sentence when the next line starts in lower
+    case or the previous one ends with a comma / an opening word ("1g si durée > 4h,<br>puis
+    toutes les 4h<br>jusqu'à fin de chirurgie"); otherwise it separates two items (" / ")."""
+    parts = [p.strip() for p in text.split(_BR)]
+    out = ""
+    for p in parts:
+        if not p:
+            if out and not out.endswith(" / "):
+                out += " / "
+            continue
+        if not out or out.endswith(" / "):
+            out += p
+        elif re.match(r"^[a-zà-ÿ(]", p) or re.search(r"[,(\-–]$|\b(?:de|du|des|la|le|les|à|au|et|ou|en|par|pour|si|puis|jusqu'à)$", out):
+            out += " " + p
+        else:
+            out += " / " + p
+    return _normalize_ws(out)
+
+
+def _clean_cell_text(cell: Tag) -> str:
+    """Convert an HTML <td>/<th> cell into clean readable inline text.
+
+    All text is kept, including text outside list items ("Si allergie : <ul>…</ul>"); nested
+    list items are written once ("Acte : sous-cas 1 ; sous-cas 2")."""
+    text = _resolve_breaks(_node_text(cell))
     text = re.sub(r"(?:\s*/\s*){2,}", " / ", text)
-    text = text.strip(" /")
-    return text
+    text = re.sub(r"\s*;\s*(?:;\s*)+", " ; ", text)
+    text = re.sub(r"\s+([;,.])", r"\1", text)
+    text = re.sub(r":\s*/\s*", ": ", text)
+    text = re.sub(r"(?:^|(?<=\s))[▪■•○◦]\s*", "", text)
+    return text.strip(" /;")
 
 
 def _normalize_ws(text: str) -> str:
@@ -192,20 +317,58 @@ def _pad_row(row: list[str], target_len: int) -> list[str]:
 
 
 def _is_banner_row(row_cells: list[str], raw_tr: Tag, total_cols: int) -> str | None:
-    """Detect an intra-table sub-header banner (e.g. `<b>Patients traités par un AVK</b>`)."""
+    """Text of a single-cell full-width row (bold or spanning the table), else None."""
     non_empty = [c for c in row_cells if c.strip()]
     if len(non_empty) != 1 or total_cols < 2:
         return None
     text = non_empty[0].strip()
-    if len(text) > 160 or len(text) < 3:
+    if len(text) < 3:
         return None
     # Check if bold or spanning multiple columns
     tds = raw_tr.find_all(["td", "th"], recursive=False)
     has_bold = bool(raw_tr.find(["b", "strong"]))
-    has_colspan = any(int(td.get("colspan", 1) or 1) >= max(2, total_cols - 1) for td in tds)
-    if has_bold or has_colspan:
+    has_colspan = any(_int_attr(td, "colspan") >= max(2, total_cols - 1) for td in tds)
+    if has_colspan or (has_bold and len(tds) == 1):
+        return text
+    if has_bold and len(text) <= 160:
         return text
     return None
+
+
+_NOTE_START_RE = re.compile(
+    r"^(?:[\*†‡#§¶(\[]|en\s+cas\b|si\b|nb\b|n\.b\.|note\b|attention\b|remarque\b|à\s+noter\b|a\s+noter\b|"
+    r"cf\.?\b|voir\b|il\s+(?:est|faut|convient)\b|pas\s+d.\s*indication\b|une?\s+\w+\s+(?:est|peut)\b)",
+    re.I,
+)
+_NOTE_VERB_RE = re.compile(
+    r"\b(?:est|sont|doit|doivent|peut|peuvent|faut|convient|considérer|considérée?s?|recommand\w*|"
+    r"propos\w*|sugg[eè]r\w*|administrer|réaliser|poursuivi\w*|adapt\w+|discut\w+|privilégi\w+)\b",
+    re.I,
+)
+
+
+def full_width_row_kind(text: str, raw_tr: Tag) -> str:
+    """"label" for a sub-category title row ("Chirurgie des gonades", "Patients sous AVK"),
+    "note" for a full-width sentence that qualifies the rows around it ("En cas de ...,
+    considérer ...", "* posologie ...")."""
+    t = text.strip()
+    if t.endswith("?"):
+        return "label"  # a question heads the rows that answer it
+    italic_only = bool(raw_tr.find(["i", "em"])) and not raw_tr.find(["b", "strong"])
+    if italic_only or len(t) > 140 or _NOTE_START_RE.match(t):
+        return "note"
+    if re.search(r"[.;*†‡]\s*$", t) or t.count(",") >= 2:
+        return "note"
+    if _NOTE_VERB_RE.search(t) and len(t.split()) > 6:
+        return "note"
+    return "label"
+
+
+def _int_attr(cell: Tag, name: str) -> int:
+    try:
+        return max(1, int(str(cell.get(name, "1")).strip()))
+    except ValueError:
+        return 1
 
 
 def _looks_like_header_row(row: list[str]) -> bool:
@@ -253,11 +416,15 @@ def parse_html_table(
     table_html: str,
     previous_headers: list[str] | None = None,
     previous_is_contiguous: bool = True,
+    carry_first_cell: str | None = None,
 ) -> ParsedTable:
     """Parse an HTML <table> with full rowspan/colspan expansion and continuation support.
 
     `previous_is_contiguous` tells whether the previous table ends right before this one (no
-    text in between); a banner-only first header row inherits `previous_headers` only then."""
+    text in between); a banner-only first header row inherits `previous_headers` only then.
+    `carry_first_cell` is the first-column value of the last row of the previous fragment of a
+    page-split table (same width, contiguous): leading rows of this fragment whose first cell is
+    empty (the rowspan cut by the page break) take it back."""
     soup = BeautifulSoup(table_html, "html.parser")
     table = soup.find("table")
     if table is None:
@@ -409,10 +576,10 @@ def parse_html_table(
                 val = hr[col_i].strip()
                 if val and val not in parts:
                     parts.append(val)
-            headers.append(" / ".join(parts) if parts else f"Col {col_i + 1}")
+            headers.append(" / ".join(parts))
     elif _looks_like_header_row(grid[0]):
         has_explicit_headers = True
-        headers = [c.strip() or f"Col {i + 1}" for i, c in enumerate(grid[0])]
+        headers = [c.strip() for c in grid[0]]
         data_start = 1
     elif previous_headers:
         # Cross-page continuation table! Inherit headers when column count matches
@@ -427,11 +594,27 @@ def parse_html_table(
             headers = ["Catégorie"] + list(previous_headers)
             inherited_headers = True
 
-    # Group data rows by rowspan anchor & detect sub-header banners
+    # Page-split rowspan: leading data rows with an empty first cell continue the previous
+    # fragment's last row key.
+    carried = ""
+    if carry_first_cell and max_cols >= 2:
+        for idx in range(data_start, len(grid)):
+            row = grid[idx]
+            if not any(c.strip() for c in row):
+                continue
+            if row[0].strip() or not any(c.strip() for c in row[1:]):
+                break
+            row[0] = carry_first_cell
+            row_group_anchor[idx] = -1  # same group as the other carried rows
+            carried = carry_first_cell
+
+    # Group data rows by rowspan anchor & detect sub-header banners / full-width notes
     row_groups: list[TableRowGroup] = []
+    table_notes: list[str] = []
     current_banner = ""
     pending_group: TableRowGroup | None = None
     pending_anchor: int | None = None
+    pending_label = False  # a label row seen, not yet followed by a data row
 
     for idx in range(data_start, len(grid)):
         row = grid[idx]
@@ -439,11 +622,23 @@ def parse_html_table(
             continue
         banner = _is_banner_row(row, tr_tags[idx], max_cols)
         if banner is not None:
+            if full_width_row_kind(banner, tr_tags[idx]) == "note":
+                if pending_group is not None:
+                    pending_group.notes.append(banner)
+                elif row_groups:
+                    row_groups[-1].notes.append(banner)
+                else:
+                    table_notes.append(banner)
+                continue
             if pending_group is not None:
                 row_groups.append(pending_group)
                 pending_group = None
                 pending_anchor = None
+            if pending_label and current_banner:
+                # Two labels in a row: the first one heads nothing, keep it as its own row.
+                row_groups.append(TableRowGroup(rows=[[current_banner] + [""] * (max_cols - 1)]))
             current_banner = banner
+            pending_label = True
             continue
 
         anchor = row_group_anchor[idx]
@@ -454,9 +649,13 @@ def parse_html_table(
                 row_groups.append(pending_group)
             pending_group = TableRowGroup(rows=[row], sub_banner=current_banner)
             pending_anchor = anchor
+        pending_label = False
 
     if pending_group is not None:
         row_groups.append(pending_group)
+    if pending_label and current_banner:
+        # A trailing label row (nothing below it in this fragment) is kept as a row.
+        row_groups.append(TableRowGroup(rows=[[current_banner] + [""] * (max_cols - 1)]))
 
     return ParsedTable(
         headers=headers,
@@ -465,4 +664,6 @@ def parse_html_table(
         row_groups=row_groups,
         num_cols=max_cols,
         num_rows=sum(len(g.rows) for g in row_groups),
+        table_notes=table_notes,
+        carried_first_cell=carried,
     )

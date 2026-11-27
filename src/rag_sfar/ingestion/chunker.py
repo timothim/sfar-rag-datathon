@@ -16,15 +16,25 @@ Supports three cleanly separated strategies for rigorous scientific ablation:
 
 from __future__ import annotations
 
+import collections
 import hashlib
 import re
+import unicodedata
 from typing import Literal
 
+from dataclasses import dataclass
+
 from rag_sfar.ingestion.loader import LoadedDocument
+from rag_sfar.ingestion.population import infer_chunk_populations, legacy_hint_from_populations
 from rag_sfar.ingestion.table_parser import ParsedTable, parse_html_table
+from rag_sfar.ingestion.text_cleaning import NulRepairer, clean_chunk_text
 from rag_sfar.schemas import Chunk, ChunkType, DocumentMetadata, PopulationScope
 
 ChunkingStrategy = Literal["naive_fixed", "hierarchical_markdown", "table_aware_sota"]
+
+# Corpus-level table counters filled by the table_aware_sota chunker (diagnostics only:
+# read by scripts/ingestion_structural_checks.py, never by retrieval).
+TABLE_STATS: collections.Counter = collections.Counter()
 
 # Patterns for clinical annotations
 GRADE_RE = re.compile(
@@ -126,14 +136,57 @@ def _infer_chunk_population(
     return doc_pop
 
 
-def _build_context_header(meta: DocumentMetadata, section_path: str, chunk_type: ChunkType) -> str:
+@dataclass
+class ChunkOptions:
+    """Options of the table_aware_sota chunker (defaults = recommended configuration).
+
+    - clean_ocr: deterministic OCR clean-up of chunk text (text_cleaning.clean_chunk_text);
+    - hard_max_chars: hard cap of a prose piece (0 = no cap): a sentence or list longer than the
+      prose budget is cut on line, then word boundaries;
+    - header_domains: "all" (legacy: every imputed domain), "declared" (only the source
+      sub-domain) or "none" in the indexed context header;
+    - header_status: always state the edition status in the header ("en vigueur" /
+      "remplacée par l'édition AAAA" / "abrogée"), not only for superseded editions;
+    - population_hint: "legacy" (section path, then document scope, then the first 800
+      characters of text) or "structural" (from ingestion/population.py);
+    - reco_units: add one `recommendation_unit` chunk per primary graded recommendation;
+    - table_cards_min_cols: minimum width of a table that gets row cards (legacy: 3)."""
+
+    clean_ocr: bool = True
+    hard_max_chars: int = 2400
+    header_domains: str = "none"
+    header_status: bool = True
+    population_hint: str = "legacy"
+    reco_units: bool = False
+    table_cards_min_cols: int = 2
+
+
+LEGACY_HEADER = ChunkOptions(header_domains="all", header_status=False)
+
+
+def _build_context_header(
+    meta: DocumentMetadata, section_path: str, chunk_type: ChunkType, opts: ChunkOptions | None = None
+) -> str:
+    opts = opts or LEGACY_HEADER
     yr = str(meta.effective_year) if meta.effective_year else "Date non précisée"
     ver = f" {meta.version_label}" if meta.version_label else ""
-    doms = ", ".join(meta.domains[:3])
-    status = "" if meta.is_latest_edition else f" [ÉDITION ANTÉRIEURE — REMPLACÉE EN {meta.superseded_by_year}]"
+    if not meta.is_active:
+        status = " [ABROGÉE]"
+    elif not meta.is_latest_edition:
+        status = f" [ÉDITION ANTÉRIEURE — REMPLACÉE EN {meta.superseded_by_year}]"
+    else:
+        status = " [en vigueur]" if opts.header_status else ""
+    if opts.header_domains == "all":
+        doms = f" | Domaines : {', '.join(meta.domains[:3])}"
+    elif opts.header_domains == "declared" and meta.raw_subdomain:
+        doms = f" | Domaines : {meta.raw_subdomain}"
+    else:
+        doms = ""
     sec = f" | Section : {section_path}" if section_path else ""
     kind = " | Tableau structuré" if chunk_type in ("table_markdown", "table_row_card") else ""
-    return f"[{meta.doc_type} SFAR {yr}{ver}{status} | {meta.title} | Domaines : {doms}{sec}{kind}]"
+    if chunk_type == "recommendation_unit":
+        kind = " | Recommandation cotée"
+    return f"[{meta.doc_type} SFAR {yr}{ver}{status} | {meta.title}{doms}{sec}{kind}]"
 
 
 def _make_chunk(
@@ -145,15 +198,26 @@ def _make_chunk(
     chunk_type: ChunkType,
     is_ref: bool = False,
     prepend_context: bool = True,
+    opts: ChunkOptions | None = None,
+    table_scope: str = "",
+    nul_repairer: NulRepairer | None = None,
 ) -> Chunk:
+    """Build one chunk. Without `opts` (naive / hierarchical strategies) the legacy behaviour
+    is kept: no OCR clean-up, legacy header and legacy population hint."""
     clean_text = text.strip()
-    header = _build_context_header(meta, section_path, chunk_type) if prepend_context else ""
+    if opts is not None and opts.clean_ocr:
+        clean_text = clean_chunk_text(clean_text, nul_repairer)
+    header = _build_context_header(meta, section_path, chunk_type, opts) if prepend_context else ""
     indexed_text = f"{header}\n{clean_text}" if header else clean_text
 
     cid_hash = hashlib.md5(f"{meta.doc_id}:{chunk_index}:{clean_text[:80]}".encode("utf-8")).hexdigest()[:8]
     chunk_id = f"{meta.doc_id}__c{chunk_index:04d}_{cid_hash}"
 
-    pop_hint = _infer_chunk_population(section_path, clean_text, meta.population_scope)
+    pops, pop_src = infer_chunk_populations(section_path, table_scope, meta.title)
+    if opts is not None and opts.population_hint == "structural":
+        pop_hint = legacy_hint_from_populations(pops)
+    else:
+        pop_hint = _infer_chunk_population(section_path, clean_text, meta.population_scope)
     return Chunk(
         chunk_id=chunk_id,
         doc_id=meta.doc_id,
@@ -166,6 +230,8 @@ def _make_chunk(
         grade_levels=_extract_grades(clean_text),
         recommendation_ids=_extract_rec_ids(clean_text),
         population_hint=pop_hint,
+        populations=pops,
+        population_source=pop_src,
         is_reference_section=is_ref,
         has_allergy_info=bool(re.search(r"allerg", clean_text, re.I)),
         has_dosage_info=bool(DOSAGE_RE.search(clean_text)),
@@ -186,6 +252,13 @@ def _make_chunk(
         landing_url=meta.landing_url,
         filename=meta.filename,
     )
+
+
+def _refresh_indexed_text(c: Chunk, meta: DocumentMetadata, opts: ChunkOptions | None) -> None:
+    header = _build_context_header(meta, c.section_path, c.chunk_type, opts)
+    c.indexed_text = f"{header}\n{c.text}"
+    c.has_dosage_info = bool(DOSAGE_RE.search(c.text))
+    c.grade_levels = _extract_grades(c.text)
 
 
 def _link_neighbors(chunks: list[Chunk]) -> None:
@@ -271,7 +344,48 @@ def _clean_heading_text(raw_heading: str) -> tuple[int, str]:
     return level, title
 
 
-def _split_prose_paragraphs(text: str, max_chars: int = 1200, overlap_chars: int = 180) -> list[str]:
+def _hard_split(text: str, max_chars: int) -> list[str]:
+    """Cut a piece longer than `max_chars` on line boundaries, then on word boundaries."""
+    if len(text) <= max_chars:
+        return [text]
+    out: list[str] = []
+    buf = ""
+    for line in text.split("\n"):
+        while len(line) > max_chars:
+            cut = line.rfind(" ", 0, max_chars)
+            cut = cut if cut > max_chars // 2 else max_chars
+            head, line = line[:cut].rstrip(), line[cut:].lstrip()
+            if buf:
+                out.append(buf)
+                buf = ""
+            out.append(head)
+        if buf and len(buf) + len(line) + 1 > max_chars:
+            out.append(buf)
+            buf = line
+        else:
+            buf = f"{buf}\n{line}" if buf else line
+    if buf.strip():
+        out.append(buf)
+    return [x for x in out if x.strip()]
+
+
+def _split_prose_paragraphs(
+    text: str, max_chars: int = 1200, overlap_chars: int = 180, hard_max_chars: int = 0
+) -> list[str]:
+    """Split prose cleanly along paragraph / sentence boundaries with gentle overlap.
+
+    With `hard_max_chars` > 0, any piece still longer (a sentence without punctuation, a long
+    list, a flowchart) is cut on line, then word boundaries."""
+    pieces = _split_prose_paragraphs_soft(text, max_chars, overlap_chars)
+    if hard_max_chars <= 0:
+        return pieces
+    out: list[str] = []
+    for p in pieces:
+        out.extend(_hard_split(p, hard_max_chars))
+    return [x for x in out if len(x.strip()) >= 35]
+
+
+def _split_prose_paragraphs_soft(text: str, max_chars: int = 1200, overlap_chars: int = 180) -> list[str]:
     """Split prose cleanly along paragraph / sentence boundaries with gentle overlap."""
     # Remove markdown image links to logos/decorative figures while keeping alt text if informative
     text = re.sub(r"!\[(?:SFAR logo|SPILF logo|logo[^\]]*)\]\([^\)]+\)", "", text, flags=re.I)
@@ -382,32 +496,90 @@ def _chunk_hierarchical_markdown(doc: LoadedDocument, max_chars: int = 1200) -> 
     return chunks
 
 
+_TABLE_TITLE_RE = re.compile(r"^\s*(?:\*\*)?\s*(?:Tableau|Table|Tab\.)\s*[\dIVXLC]+[a-z]?\b", re.I)
+_BOLD_LINE_RE = re.compile(r"^\s*\*\*([^*]{3,200})\*\*\s*:?\s*$")
+# Footnote call marks at the start of a note paragraph: "*", "**", "\\*\\*", "**\\*\\***", "†", "#".
+# An unescaped run of "*" counts only when followed by a space ("* posologie ..."): "**Question"
+# is Markdown bold, not a call mark. Escaped runs ("\\*\\*") may be wrapped in bold ("**\\*\\***").
+_NOTE_MARK_RE = re.compile(
+    r"^\s*(?:\*\*(?=\\\*))?(?:(?P<esc>(?:\\\*){1,5})(?:\*\*)?|(?P<mark>\*{1,5}(?=\s)|†{1,3}|‡{1,3}|§|#(?=\s)|¶))\s*"
+)
+
+
+def _table_title(prose_tail: str) -> str:
+    """Caption of a table: the last non-empty line of the text right before it, when that line
+    is a "Tableau N" caption or a short bold line."""
+    line = prose_tail.strip().splitlines()[-1].strip() if prose_tail.strip() else ""
+    if not line or line.startswith("#") or len(line) > 220:
+        return ""
+    if _TABLE_TITLE_RE.match(line):
+        return re.sub(r"[\*_]+", "", line).strip()
+    m = _BOLD_LINE_RE.match(line)
+    if m:
+        return m.group(1).strip()
+    return ""
+
+
+def _scope_note_text(piece: str, max_chars: int = 400) -> str:
+    """Scope note of the following table(s): the paragraph that says "... de ce tableau ...",
+    plus the short paragraphs right after it (e.g. a maximal dose), up to `max_chars`."""
+    paras = [re.sub(r"\s+", " ", p).strip() for p in re.split(r"\n\s*\n", piece) if p.strip()]
+    if not paras or len(paras[0]) > max_chars:
+        return ""
+    out = [paras[0]]
+    for p in paras[1:3]:
+        if p.startswith(("**", "#", "|")) or len(p) > 300 or len(" ".join(out)) + len(p) > max_chars:
+            break
+        out.append(p)
+    return " ".join(out)
+
+
+def _note_mark(paragraph: str) -> str | None:
+    """Normalized call mark of a footnote paragraph ("*", "**", "†"...), else None."""
+    m = _NOTE_MARK_RE.match(paragraph)
+    if not m:
+        return None
+    mark = "*" * m.group("esc").count("*") if m.group("esc") else m.group("mark")
+    rest = paragraph[m.end():].strip()
+    if not rest or rest[:1] in "*":
+        return None
+    return mark
+
+
+def _has_call(text: str, mark: str) -> bool:
+    text = re.sub(r"\*\*[^*\n|]{2,200}?\*\*", " ", text)  # Markdown bold spans are not calls
+    if set(mark) == {"*"}:
+        return bool(re.search(rf"(?<![\*\w]){re.escape(mark)}(?![\*\w])|(?<=\w){re.escape(mark)}(?![\*\w])", text))
+    return mark in text
+
+
 def _chunk_table_aware_sota(
     doc: LoadedDocument,
     max_prose_chars: int = 1200,
     max_table_chars: int = 1800,
     emit_row_cards: bool = True,
+    options: ChunkOptions | None = None,
+    nul_repairer: NulRepairer | None = None,
+    reco_units: list | None = None,
 ) -> list[Chunk]:
     """SOTA Clinical Chunker for SFAR guidelines.
 
-    Key innovations:
     1. Isolates prose vs HTML <table> blocks inside each true section.
-    2. Reconstructs EVERY HTML <table> (rowspan/colspan + headerless cross-page continuation
-       header propagation + sub-header banners).
-    3. Emits BOTH Markdown table chunks AND atomic Row-Group Cards for multi-column clinical
-       tables (so lookup questions & rowspan allergy alternatives hit near-100% recall).
-    4. Tracks specialty/parent section scope (e.g. `PARTIE 7 : CHIRURGIE ORTHOPÉDIQUE`) and
-       automatically links any Allergy/Alternative callout box in that section to EVERY table
-       chunk in that specialty (solving the Specialty Allergy-Box Split-Chunk Problem!).
+    2. Reconstructs every HTML <table> (rowspan/colspan, page-split continuations, sub-category
+       banners, full-width note rows) and emits Markdown table chunks plus self-contained row
+       cards (title, section, scope note, sub-category, column headers, linked footnotes).
+    3. Tracks the major section (CHAMP / PARTIE) to link callouts (allergy boxes, notes) to the
+       chunks of that section.
+    4. Optionally cleans OCR residues, caps prose pieces and adds graded recommendation units.
     """
+    opts = options or ChunkOptions()
     meta = doc.metadata
     text = doc.text
+    if opts.clean_ocr and "\x00" in text:
+        text = (nul_repairer or NulRepairer())(text)
 
-    # Step 1: Parse document into structural sections while preserving HTML tables intact.
-    # First tokenize into HTML tables vs non-table text so headings inside tables never break state.
     tokens = re.split(r"(<table\b.*?</table>)", text, flags=re.S | re.I)
 
-    # Walk tokens, tracking heading stack and specialty/major section anchor
     heading_stack: list[tuple[int, str]] = []
     current_major_section = "root"
     section_counter = 0
@@ -420,9 +592,6 @@ def _chunk_table_aware_sota(
 
     def _update_major_section(lvl: int, htext: str) -> None:
         nonlocal current_major_section, section_counter
-        # Major clinical specialty divisions (CHAMP = 1, PARTIE = 2, or explicit ANTIBIOPROPHYLAXIE EN ...).
-        # NEVER reset major section on lvl>=3 subheadings like "### Chirurgie carcinologique" inside a PARTIE,
-        # otherwise child surgical tables lose their link to the parent specialty allergy box!
         if lvl <= 2 or re.match(r"^(?:PARTIE|CHAMP|ANTIBIOPROPHYLAXIE\s+EN)\b", htext, re.I):
             section_counter += 1
             current_major_section = f"{meta.doc_id}__maj{section_counter:03d}"
@@ -431,9 +600,19 @@ def _chunk_table_aware_sota(
     idx = 0
     last_table_headers: list[str] | None = None
     last_table_major_section: str = ""
-    # Map major_section_id -> list of callout chunk indices (allergy boxes, key footnotes)
     major_section_callouts: dict[str, list[str]] = {}
     major_section_chunks: dict[str, list[Chunk]] = {}
+    # Table context carried between tokens
+    prose_tail = ""  # text of the prose right before the current table (caption detection)
+    last_table: ParsedTable | None = None
+    last_table_section = ""
+    # Scope note ("Les posologies de ce tableau concernent ...") and the heading path under
+    # which it appeared: it applies to the following tables while that path stays open.
+    scope_note: tuple[tuple[str, ...], str] | None = None
+    note_targets: list[Chunk] = []  # table chunks waiting for their footnotes
+    notes_seen_since_table = False
+    modified: set[str] = set()
+    table_counter = 0
 
     def _register_chunk(c: Chunk, major_sec: str, is_callout: bool = False) -> None:
         chunks.append(c)
@@ -441,46 +620,71 @@ def _chunk_table_aware_sota(
         if is_callout:
             major_section_callouts.setdefault(major_sec, []).append(c.chunk_id)
 
-    # True while nothing but whitespace separates the current token from the previous table.
+    def _mk(text_: str, sec_path: str, ctype: ChunkType, is_ref: bool = False, table_scope: str = "") -> Chunk:
+        nonlocal idx
+        c = _make_chunk(
+            meta=meta, chunk_index=idx, text=text_, section_path=sec_path,
+            section_id=current_major_section, chunk_type=ctype, is_ref=is_ref,
+            prepend_context=True, opts=opts, table_scope=table_scope, nul_repairer=nul_repairer,
+        )
+        idx += 1
+        return c
+
     prev_table_contiguous = False
     for tok in tokens:
         if not tok or not tok.strip():
             continue
-        if not tok.lstrip().lower().startswith("<table"):
+        is_table = tok.lstrip().lower().startswith("<table")
+        if not is_table:
             prev_table_contiguous = False
 
-        if tok.lstrip().lower().startswith("<table"):
-            # A real clinical HTML table never lives inside a bibliography; pop stale Références!
+        if is_table:
             while heading_stack and REF_HEADING_RE.search(heading_stack[-1][1]):
                 heading_stack.pop()
             sec_path = _current_sec_path()
-            is_ref = _is_ref_sec()
-            if is_ref:
-                continue
+            if _is_ref_sec():
+                # A table is never bibliography: keep it, without the "Références" level.
+                sec_path = re.sub(r"\s*>\s*(?:R[ée]f[ée]rences?|Bibliographie)\b.*$", "", sec_path, flags=re.I)
+                TABLE_STATS["tables_under_reference_heading"] += 1
 
-            # Only inherit previous table headers within the same major section
-            prev_hdrs = (
-                last_table_headers
-                if last_table_major_section == current_major_section
-                else None
-            )
+            prev_hdrs = last_table_headers if last_table_major_section == current_major_section else None
+            carry = None
+            if (
+                prev_table_contiguous
+                and last_table is not None
+                and last_table.row_groups
+                and last_table_section == sec_path
+            ):
+                last_row = last_table.row_groups[-1].rows[-1]
+                carry = last_row[0] if last_row and last_row[0].strip() else None
             parsed: ParsedTable = parse_html_table(
-                tok, previous_headers=prev_hdrs, previous_is_contiguous=prev_table_contiguous
+                tok,
+                previous_headers=prev_hdrs,
+                previous_is_contiguous=prev_table_contiguous,
+                carry_first_cell=carry,
             )
+            if parsed.num_cols and carry and len(last_table.headers or []) not in (0, parsed.num_cols) and last_table.num_cols != parsed.num_cols:
+                # Different width: not the same table, undo the carry.
+                parsed = parse_html_table(tok, previous_headers=prev_hdrs, previous_is_contiguous=prev_table_contiguous)
+            is_continuation = prev_table_contiguous
             prev_table_contiguous = True
             if parsed.has_explicit_headers and parsed.headers:
                 last_table_headers = parsed.headers
                 last_table_major_section = current_major_section
+            last_table = parsed
+            last_table_section = sec_path
+            if notes_seen_since_table:
+                note_targets = []
+                notes_seen_since_table = False
+            if not is_continuation:
+                table_counter += 1
+            table_id = f"{meta.doc_id}__t{table_counter:03d}"
 
-            # Detect if this table IS specifically a compact specialty allergy box
-            # (NEVER classify a full surgical procedure table as an allergy callout!)
             hdr_blob = " ".join(parsed.headers).lower()
             is_procedure_table = any(
                 k in hdr_blob for k in ("actes chirurgicaux", "interventionnels", "nomenclature", "procédure")
             )
-            raw_table_plain = " ".join(
-                " ".join(row) for g in parsed.row_groups for row in g.rows
-            )
+            raw_table_plain = " ".join(" ".join(row) for g in parsed.row_groups for row in g.rows)
             prev_is_allergy_intro = (
                 len(chunks) > 0
                 and chunks[-1].parent_section_id == current_major_section
@@ -489,118 +693,98 @@ def _chunk_table_aware_sota(
             )
             is_allergy_table = (not is_procedure_table) and (
                 (prev_is_allergy_intro and parsed.num_rows <= 8)
-                or (
-                    parsed.num_rows <= 6
-                    and bool(ALLERGY_BOX_RE.search(raw_table_plain[:500]))
-                )
+                or (parsed.num_rows <= 6 and bool(ALLERGY_BOX_RE.search(raw_table_plain[:500])))
             )
 
-            # Emit clean Markdown table chunk(s)
+            title = _table_title(prose_tail) if not is_continuation else ""
+            cur_path = tuple(h for _, h in heading_stack)
+            scope = scope_note[1] if scope_note and cur_path[: len(scope_note[0])] == scope_note[0] else ""
+            banners = " ".join(dict.fromkeys(g.sub_banner for g in parsed.row_groups if g.sub_banner))
             md_chunks = parsed.to_markdown_chunks(max_chars=max_table_chars)
+            md_prefix = "".join(
+                f"{lab} : {val}\n" for lab, val in (("Tableau", title), ("Périmètre", scope)) if val
+            )
+            if md_prefix:
+                md_chunks = [f"{md_prefix}{m}" for m in md_chunks]
             for md_t in md_chunks:
                 ctype: ChunkType = "callout_allergy" if is_allergy_table else "table_markdown"
-                c = _make_chunk(
-                    meta=meta,
-                    chunk_index=idx,
-                    text=md_t,
-                    section_path=sec_path,
-                    section_id=current_major_section,
-                    chunk_type=ctype,
-                    is_ref=False,
-                    prepend_context=True,
-                )
+                c = _mk(md_t, sec_path, ctype, table_scope=" ".join(x for x in (scope, title) if x))
+                c.table_id = table_id
                 _register_chunk(c, current_major_section, is_callout=is_allergy_table)
-                idx += 1
+                note_targets.append(c)
 
-            # Emit self-contained Row-Group Clinical Cards for dense clinical lookup tables!
-            if (
-                emit_row_cards
-                and not is_allergy_table
-                and parsed.num_cols >= 3
-                and len(parsed.row_groups) >= 1
-                and (parsed.has_explicit_headers or parsed.inherited_headers)
-            ):
-                cards = parsed.to_row_cards(min_cols=3)
-                for card in cards:
-                    c = _make_chunk(
-                        meta=meta,
-                        chunk_index=idx,
-                        text=card,
-                        section_path=sec_path,
-                        section_id=current_major_section,
-                        chunk_type="table_row_card",
-                        is_ref=False,
-                        prepend_context=True,
-                    )
+            n_before_cards = len(chunks)
+            if emit_row_cards and not is_allergy_table and parsed.row_groups:
+                section_tail = " > ".join(h for _, h in heading_stack[-2:])
+                ctx_lines = [f"Périmètre : {scope}"] if scope else []
+                cards = parsed.to_row_cards(
+                    min_cols=opts.table_cards_min_cols,
+                    title=title,
+                    section=section_tail,
+                    context_lines=ctx_lines,
+                    require_headers=False,
+                )
+                for card, grp in zip(cards, [g for g in parsed.row_groups if g.rows]):
+                    c = _mk(card, sec_path, "table_row_card", table_scope=" ".join(x for x in (scope, title, grp.sub_banner) if x))
+                    c.table_id = table_id
                     _register_chunk(c, current_major_section, is_callout=False)
-                    idx += 1
+                    note_targets.append(c)
+            n_cards = len(chunks) - n_before_cards
+            TABLE_STATS["tables"] += 1
+            TABLE_STATS["tables_ge2cols"] += parsed.num_cols >= 2
+            TABLE_STATS["explicit_headers"] += parsed.has_explicit_headers
+            TABLE_STATS["inherited_headers"] += parsed.inherited_headers
+            TABLE_STATS["row_cards"] += n_cards
+            TABLE_STATS["carried_first_cell"] += bool(parsed.carried_first_cell)
+            TABLE_STATS["full_width_notes"] += len(parsed.table_notes) + sum(len(g.notes) for g in parsed.row_groups)
+            TABLE_STATS["titled"] += bool(title)
+            TABLE_STATS["with_scope_note"] += bool(scope)
+            if parsed.num_cols >= 2 and n_cards == 0 and not is_allergy_table:
+                TABLE_STATS["ge2cols_without_cards"] += 1
+                if not parsed.has_headers:
+                    TABLE_STATS["ge2cols_headerless_without_cards"] += 1
+            prose_tail = ""
             continue
 
         # Prose token: walk line by line to update headings and emit prose chunks
+        prose_tail = tok
         lines = tok.splitlines()
         buf_lines: list[str] = []
 
         def _flush_prose() -> None:
-            nonlocal idx
+            nonlocal notes_seen_since_table, scope_note
             body = "\n".join(buf_lines).strip()
             if not body:
                 return
+            if opts.clean_ocr:
+                body = clean_chunk_text(body, nul_repairer)
             sec_path = _current_sec_path()
             is_ref = _is_ref_sec()
             if is_ref:
-                # Split paragraphs and verify each piece is genuinely bibliographic (never swallow R1.2.1 / R1.6!)
-                for piece in _split_prose_paragraphs(body, max_chars=2000):
-                    truly_ref = _is_truly_reference_text(piece)
-                    if truly_ref:
-                        c = _make_chunk(
-                            meta=meta,
-                            chunk_index=idx,
-                            text=piece,
-                            section_path=sec_path,
-                            section_id=current_major_section,
-                            chunk_type="references",
-                            is_ref=True,
-                            prepend_context=True,
-                        )
-                        chunks.append(c)
-                        idx += 1
+                for piece in _split_prose_paragraphs(body, max_chars=2000, hard_max_chars=opts.hard_max_chars):
+                    if _is_truly_reference_text(piece):
+                        chunks.append(_mk(piece, sec_path, "references", is_ref=True))
                     else:
                         is_rec_box = bool(REC_ID_RE.search(piece) and GRADE_RE.search(piece))
-                        c = _make_chunk(
-                            meta=meta,
-                            chunk_index=idx,
-                            text=piece,
-                            section_path=re.sub(r"\s*>\s*R[ée]f[ée]rences.*$", "", sec_path, flags=re.I),
-                            section_id=current_major_section,
-                            chunk_type="recommendation_box" if is_rec_box else "prose",
-                            is_ref=False,
-                            prepend_context=True,
+                        c = _mk(
+                            piece,
+                            re.sub(r"\s*>\s*R[ée]f[ée]rences.*$", "", sec_path, flags=re.I),
+                            "recommendation_box" if is_rec_box else "prose",
                         )
                         _register_chunk(c, current_major_section, is_callout=False)
-                        idx += 1
                 return
 
-            # Keep version-history changelogs intact (up to 3500 chars) so minor-version diffs
-            # (e.g. V3.0 -> V3.1) stay in the same retrievable chunk as the preceding version.
             eff_max_chars = 3500 if "historique des versions" in sec_path.lower() else max_prose_chars
-            for piece in _split_prose_paragraphs(body, max_chars=eff_max_chars):
-                # If a specialty allergy box ("En cas d'allergie aux bêtalactamines...") starts
-                # mid-paragraph after unrelated prose (e.g. IMC>=50 or intro text), split it out
-                # as its own atomic, high-signal `callout_allergy` chunk!
+            hard = max(opts.hard_max_chars, eff_max_chars + 500) if opts.hard_max_chars else 0
+            for piece in _split_prose_paragraphs(body, max_chars=eff_max_chars, hard_max_chars=hard):
                 allergy_m = ALLERGY_BOX_RE.search(piece)
-                sub_pieces: list[str]
                 if allergy_m and allergy_m.start() > 60:
-                    before = piece[: allergy_m.start()].strip()
-                    after = piece[allergy_m.start() :].strip()
-                    sub_pieces = [p for p in (before, after) if p]
+                    sub_pieces = [p for p in (piece[: allergy_m.start()].strip(), piece[allergy_m.start():].strip()) if p]
                 else:
                     sub_pieces = [piece]
-
                 for sub in sub_pieces:
                     is_allergy_box = bool(ALLERGY_BOX_RE.search(sub))
                     is_rec_box = bool(REC_ID_RE.search(sub) and GRADE_RE.search(sub))
-                    # A recommendation box is never a footnote, whatever its first character
-                    # (Markdown bold "**R1.1 ..." starts with "*").
                     is_footnote = (
                         not is_rec_box
                         and not is_allergy_box
@@ -615,22 +799,31 @@ def _chunk_table_aware_sota(
                         ctype = "callout_footnote"
                     else:
                         ctype = "prose"
-                    c = _make_chunk(
-                        meta=meta,
-                        chunk_index=idx,
-                        text=sub,
-                        section_path=sec_path,
-                        section_id=current_major_section,
-                        chunk_type=ctype,
-                        is_ref=False,
-                        prepend_context=True,
-                    )
-                    _register_chunk(
-                        c,
-                        current_major_section,
-                        is_callout=(is_allergy_box or is_footnote),
-                    )
-                    idx += 1
+                    # Scope note of the following tables ("Les posologies de ce tableau ...")
+                    scope_txt = ""
+                    if not is_allergy_box and TABLE_NOTE_RE.match(sub) and not FOOTNOTE_START_RE.match(sub):
+                        scope_txt = _scope_note_text(sub)
+                        if scope_txt:
+                            scope_note = (tuple(h for _, h in heading_stack), scope_txt)
+                    c = _mk(sub, sec_path, ctype, table_scope=scope_txt)
+                    _register_chunk(c, current_major_section, is_callout=(is_allergy_box or is_footnote))
+                    # Footnotes of the preceding table(s): append to the chunks that call them.
+                    for para in re.split(r"\n\s*\n|\n(?=\s*(?:\\?\*|†|‡|#\s))", sub):
+                        mark = _note_mark(para)
+                        if not mark or not note_targets:
+                            continue
+                        note_txt = re.sub(r"\s+", " ", _NOTE_MARK_RE.sub("", para, count=1)).strip()
+                        note_txt = re.sub(r"\*\*$", "", note_txt).strip()
+                        if len(note_txt) < 8:
+                            continue
+                        if len(note_txt) > 500:
+                            note_txt = note_txt[:500].rsplit(" ", 1)[0] + " […]"
+                        for t in note_targets:
+                            if _has_call(t.text.split("\nNote (")[0], mark) and f"Note ({mark})" not in t.text:
+                                t.text = f"{t.text}\nNote ({mark}) : {note_txt}"
+                                modified.add(t.chunk_id)
+                        notes_seen_since_table = True
+                        TABLE_STATS["footnotes_linked"] += 1
 
         for line in lines:
             if _is_ref_sec() and EXIT_REF_LINE_RE.match(line):
@@ -643,28 +836,30 @@ def _chunk_table_aware_sota(
                 if _is_valid_heading(lvl, htext):
                     _flush_prose()
                     buf_lines = []
-                    has_cp = any(
-                        re.match(r"^(?:CHAMP|PARTIE)\s+\d+", h.upper())
-                        for _, h in heading_stack
-                    )
+                    has_cp = any(re.match(r"^(?:CHAMP|PARTIE)\s+\d+", h.upper()) for _, h in heading_stack)
                     sem_lvl = _semantic_heading_level(lvl, htext, has_champ_or_partie=has_cp)
                     while heading_stack and heading_stack[-1][0] >= sem_lvl:
                         heading_stack.pop()
                     heading_stack.append((sem_lvl, htext))
+                    prev_major = current_major_section
                     _update_major_section(sem_lvl, htext)
-                    # Reset table header inheritance when entering a brand-new major section
                     if current_major_section != last_table_major_section:
                         last_table_headers = None
+                    if current_major_section != prev_major:
+                        note_targets = []
                     continue
             buf_lines.append(line)
         _flush_prose()
 
-    # Step 2: Link section-anchored allergy/footnote callouts to every chunk in that major section!
+    for c in chunks:
+        if c.chunk_id in modified:
+            _refresh_indexed_text(c, meta, opts)
+
+    # Link section-anchored allergy/footnote callouts to every chunk in that major section
     chunk_by_id = {c.chunk_id: c for c in chunks}
     for major_sec, callout_ids in major_section_callouts.items():
         if not callout_ids:
             continue
-        # Always prioritize true specialty allergy boxes before footnotes!
         allergy_cids = [cid for cid in callout_ids if chunk_by_id[cid].chunk_type == "callout_allergy"]
         other_cids = [cid for cid in callout_ids if chunk_by_id[cid].chunk_type != "callout_allergy"]
         linked = allergy_cids[:2] + other_cids[:2]
@@ -673,7 +868,74 @@ def _chunk_table_aware_sota(
                 c.linked_callout_ids = list(linked)
 
     _link_neighbors(chunks)
+    if opts.reco_units and reco_units:
+        chunks.extend(_recommendation_unit_chunks(doc, chunks, reco_units, opts, start_index=idx))
     return chunks
+
+
+def _norm_words(text: str) -> str:
+    t = unicodedata.normalize("NFKD", text.lower())
+    t = "".join(ch for ch in t if not unicodedata.combining(ch))
+    return " ".join(re.findall(r"[a-z0-9]+", t))
+
+
+def _recommendation_unit_chunks(
+    doc: LoadedDocument, chunks: list[Chunk], units: list, opts: ChunkOptions, start_index: int
+) -> list[Chunk]:
+    """One `recommendation_unit` chunk per primary graded recommendation of the document.
+
+    Text = section context (champ, question, heading) + label + statement + rating. The unit is
+    placed outside the reading-order chain: its `prev_chunk_id` is the chunk that contains the
+    statement in the flow (so a ±1 context window brings back the surrounding text) and its
+    `next_chunk_id` is that chunk's successor."""
+    meta = doc.metadata
+    flow = [c for c in chunks if not c.is_reference_section]
+    flow_norm = [(c, _norm_words(c.text)) for c in flow]
+    out: list[Chunk] = []
+    idx = start_index
+    for u in units:
+        stmt = (u.statement or "").strip()
+        if len(stmt) < 25:
+            continue
+        key = _norm_words(stmt)[:120]
+        src = next((c for c, n in flow_norm if key and key in n), None)
+        if src is None:
+            key2 = _norm_words(stmt)[:60]
+            src = next((c for c, n in flow_norm if key2 and key2 in n), None)
+        ctx = [x for x in (u.field, u.section, u.heading) if x]
+        lines = []
+        if ctx:
+            lines.append("Contexte : " + " > ".join(dict.fromkeys(ctx)))
+        label = f"{u.reco_label} – " if u.reco_label else ""
+        lines.append(f"Recommandation : {label}{stmt}")
+        rating = []
+        if u.strength_raw:
+            rating.append(u.strength_raw.strip())
+        elif u.strength and u.strength != "unknown":
+            rating.append(u.strength)
+        if u.agreement_raw and (not u.strength_raw or u.agreement_raw.lower() not in u.strength_raw.lower()):
+            rating.append(u.agreement_raw.strip())
+        if rating:
+            lines.append("Cotation : " + " ; ".join(rating))
+        sec_path = src.section_path if src is not None else " > ".join(x for x in (u.field, u.heading) if x)
+        c = _make_chunk(
+            meta=meta, chunk_index=idx, text="\n".join(lines), section_path=sec_path,
+            section_id=src.section_id if src is not None else f"{meta.doc_id}__reco",
+            chunk_type="recommendation_unit", prepend_context=True, opts=opts,
+        )
+        idx += 1
+        c.source_chunk_id = src.chunk_id if src is not None else None
+        c.prev_chunk_id = src.chunk_id if src is not None else None
+        c.next_chunk_id = src.next_chunk_id if src is not None else None
+        if src is not None:
+            c.populations, c.population_source = list(src.populations), src.population_source
+            c.population_hint = src.population_hint
+        c.reco_strength = u.strength or ""
+        c.reco_strength_raw = u.strength_raw or ""
+        c.reco_agreement = u.agreement or ""
+        c.reco_label = u.reco_label or ""
+        out.append(c)
+    return out
 
 
 def chunk_document(
@@ -694,10 +956,49 @@ def chunk_document(
 def chunk_corpus(
     docs: list[LoadedDocument],
     strategy: ChunkingStrategy = "table_aware_sota",
+    options: ChunkOptions | None = None,
     **kwargs,
 ) -> list[Chunk]:
-    """Chunk all documents in a loaded SFAR corpus."""
+    """Chunk all documents in a loaded SFAR corpus.
+
+    For `table_aware_sota`, `options` (ChunkOptions) selects the clean-up, header and unit
+    behaviour; graded recommendation units are extracted here for the whole corpus so that
+    duplicates across the parts of one edition (short / long text) are indexed once."""
     all_chunks: list[Chunk] = []
+    if strategy != "table_aware_sota":
+        for d in docs:
+            all_chunks.extend(chunk_document(d, strategy=strategy, **kwargs))
+        return all_chunks
+    opts = options or ChunkOptions()
+    repairer = NulRepairer([d.text for d in docs]) if opts.clean_ocr else None
+    units_by_doc: dict[str, list] = {}
+    if opts.reco_units:
+        units_by_doc = _extract_units_by_doc(docs)
     for d in docs:
-        all_chunks.extend(chunk_document(d, strategy=strategy, **kwargs))
+        all_chunks.extend(
+            _chunk_table_aware_sota(
+                d, options=opts, nul_repairer=repairer, reco_units=units_by_doc.get(d.metadata.doc_id), **kwargs
+            )
+        )
     return all_chunks
+
+
+def _extract_units_by_doc(docs: list[LoadedDocument]) -> dict[str, list]:
+    """Primary graded recommendation units (reco_extractor) of the French documents."""
+    from rag_sfar.ingestion import reco_extractor as rx
+
+    units: list = []
+    by_id: dict[str, dict] = {}
+    for d in docs:
+        m = d.metadata
+        if m.language not in ("fr", "bilingual") or m.doc_role == "traduction_en":
+            continue
+        dd = m.model_dump()
+        by_id[m.doc_id] = dd
+        units.extend(rx.extract_recommendations(d.text, dd))
+    rx.mark_cross_document_duplicates(units, by_id)
+    out: dict[str, list] = collections.defaultdict(list)
+    for u in units:
+        if u.duplicate_of is None:
+            out[u.doc_id].append(u)
+    return out

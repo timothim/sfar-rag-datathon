@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import argparse
 import collections
+import dataclasses
 import json
 import time
 from pathlib import Path
@@ -21,7 +22,7 @@ from rag_sfar.evaluation.benchmarks import (
     load_antibioprophylaxie_benchmark,
     load_multi_rfe_stress_benchmark,
 )
-from rag_sfar.ingestion.chunker import ChunkingStrategy, chunk_corpus
+from rag_sfar.ingestion.chunker import ChunkingStrategy, ChunkOptions, chunk_corpus
 from rag_sfar.ingestion.loader import (
     corpus_updates_fingerprint,
     load_sfar_corpus,
@@ -47,6 +48,7 @@ def build_and_save_index(
     batch_size: int = 32,
     corpus_updates_dir: Path | None = None,
     use_corpus_updates: bool = True,
+    chunk_options: ChunkOptions | None = None,
 ) -> LocalVectorStore:
     """Ingest corpus, chunk with chosen strategy, build BM25+ & dense index, and save to disk."""
     t0 = time.perf_counter()
@@ -57,7 +59,12 @@ def build_and_save_index(
     console.print(f"  Loaded [green]{len(docs)}[/green] enriched unique SFAR documents.")
 
     t_c = time.perf_counter()
-    chunks = chunk_corpus(docs, strategy=strategy)
+    opts = chunk_options or ChunkOptions()
+    if strategy == "table_aware_sota":
+        console.print(f"  Chunker options: {opts}")
+        chunks = chunk_corpus(docs, strategy=strategy, options=opts)
+    else:
+        chunks = chunk_corpus(docs, strategy=strategy)
     chunk_types = collections.Counter(c.chunk_type for c in chunks)
     console.print(
         f"  Chunked ([bold]{strategy}[/bold]): [green]{len(chunks):,}[/green] chunks "
@@ -110,6 +117,7 @@ def build_and_save_index(
         "embedding_dim": int(embeddings.shape[1]) if embeddings is not None else 0,
         "build_seconds": round(time.perf_counter() - t0, 2),
         "corpus_updates": corpus_updates_fingerprint(updates_dir),
+        "chunker_options": dataclasses.asdict(opts) if strategy == "table_aware_sota" else None,
     }
 
     store = LocalVectorStore(
@@ -222,6 +230,13 @@ def index_cmd() -> None:
         help="Overlay of newer editions (default: <corpus-dir>/../../corpus_updates if present).",
     )
     parser.add_argument("--no-corpus-updates", action="store_true", help="Ignore any overlay.")
+    parser.add_argument(
+        "--chunker-options",
+        default="",
+        help="table_aware_sota options as key=value pairs separated by commas "
+        "(see ChunkOptions: clean_ocr, hard_max_chars, header_domains, header_status, "
+        "population_hint, reco_units, table_cards_min_cols).",
+    )
     args = parser.parse_args()
 
     build_and_save_index(
@@ -234,7 +249,30 @@ def index_cmd() -> None:
         batch_size=args.batch_size,
         corpus_updates_dir=args.corpus_updates_dir,
         use_corpus_updates=not args.no_corpus_updates,
+        chunk_options=parse_chunker_options(args.chunker_options),
     )
+
+
+def parse_chunker_options(spec: str) -> ChunkOptions:
+    """ChunkOptions from "key=value,key=value" (booleans: 1/0/true/false)."""
+    opts = ChunkOptions()
+    fields = {f.name: f for f in dataclasses.fields(ChunkOptions)}
+    for kv in (spec or "").split(","):
+        if not kv.strip():
+            continue
+        key, _, raw = kv.partition("=")
+        key = key.strip()
+        if key not in fields:
+            raise SystemExit(f"Unknown chunker option: {key} (known: {', '.join(fields)})")
+        default = getattr(opts, key)
+        if isinstance(default, bool):
+            val: object = raw.strip().lower() in ("1", "true", "yes", "on")
+        elif isinstance(default, int):
+            val = int(raw)
+        else:
+            val = raw.strip()
+        setattr(opts, key, val)
+    return opts
 
 
 def _run_unified_eval(args: argparse.Namespace) -> None:
