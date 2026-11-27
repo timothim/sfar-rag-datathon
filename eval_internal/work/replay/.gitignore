@@ -1,0 +1,3 @@
+# Replay caches and captured prompts contain question texts (abpe171 must stay local) and corpus excerpts.
+*
+!.gitignore

@@ -301,7 +301,11 @@ def _run_unified_eval(args: argparse.Namespace) -> None:
     label = ""
     if not args.retrieval_only:
         from rag_sfar.generation.client import LocalMlxLLM, OpenAICompatibleLLM, SfarRagEngine
+        from rag_sfar.generation.settings import resolve_generation_config
 
+        gen_config = (
+            resolve_generation_config(args.gen_preset or "legacy", args.gen) if (args.gen_preset or args.gen) else None
+        )
         if args.backend == "mlx":
             llm = LocalMlxLLM(
                 model_path=args.mlx_model_path or args.model, model_label=args.model,
@@ -315,7 +319,7 @@ def _run_unified_eval(args: argparse.Namespace) -> None:
         label = f"{args.backend}:{args.model}"
 
         def factory(retriever):
-            engine = SfarRagEngine(retriever=retriever, llm=llm)
+            engine = SfarRagEngine(retriever=retriever, llm=llm, gen_config=gen_config)
 
             def answer_fn(item, cfg):
                 # MCQ always use the letter-answer format; other questions use the requested mode.
@@ -333,6 +337,8 @@ def _run_unified_eval(args: argparse.Namespace) -> None:
         generator_label=label, limit=args.limit, progress=lambda m: console.print(f"[dim]{m}[/dim]"),
     )
     report["index_map"] = index_map
+    if not args.retrieval_only and (args.gen_preset or args.gen):
+        report["gen_config"] = resolve_generation_config(args.gen_preset or "legacy", args.gen).to_dict()
     report["reranker_model"] = reranker_model
     jp, mp = harness.save_report(report, tag=args.tag)
     console.print(harness.to_markdown(report))
@@ -361,6 +367,8 @@ def eval_cmd() -> None:
     parser.add_argument("--api-key", default=s.llm_api_key)
     parser.add_argument("--max-tokens", type=int, default=512)
     parser.add_argument("--gen-mode", default="auto", help="Prompt mode; 'auto' = benchmark_mcq for MCQ else clinical_detailed.")
+    parser.add_argument("--gen-preset", default="", help="Generation settings preset (legacy, small, wide; see generation/settings.py). Empty = historical behaviour.")
+    parser.add_argument("--gen", default="", help="GenerationConfig overrides 'field=value+field=value', e.g. enable_thinking=false+max_context_chars=20000.")
     parser.add_argument("--tag", default="")
     parser.add_argument("--allow-test", action="store_true", help="Required to evaluate the locked test split.")
     parser.add_argument("--baseline", choices=["constant"], default=None, help="Score a corpus-free baseline instead of configs.")

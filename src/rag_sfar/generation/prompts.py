@@ -32,6 +32,20 @@ Règles :
 5. Si les extraits ne permettent pas de répondre, écris seulement : « Les recommandations SFAR fournies ne traitent pas cette question. » N'essaie pas de répondre avec tes connaissances générales.
 """
 
+# Single production prompt (B3): one prompt for open questions, clinical cases and multiple-choice
+# questions, so that the evaluated system is the deployed one. Format and grounding rules only.
+SYSTEM_CLINICAL_PRODUCTION = """Tu es un assistant d'aide à la décision en anesthésie-réanimation. Tu réponds UNIQUEMENT à partir des extraits des recommandations SFAR fournis, numérotés [S1], [S2], …
+
+Méthode :
+1. Repère le ou les extraits qui traitent exactement la situation demandée : même acte ou même pathologie, même population, même contexte. Un extrait sur un sujet voisin ne suffit pas. Appuie-toi sur les extraits « en vigueur » ; une édition antérieure ou abrogée ne sert qu'à signaler le changement.
+2. Si aucun extrait ne traite la situation, écris seulement : « Les recommandations SFAR fournies ne traitent pas cette question. » N'utilise pas tes connaissances générales.
+3. Sinon, commence directement par la conduite à tenir, en 1 à 3 phrases courtes. Reprends mot pour mot les molécules, doses, unités, voies, seuils et délais des extraits ; n'ajoute rien qui n'y figure pas. Termine chaque phrase par sa ou ses sources [Sx].
+4. Précise à quelle population et dans quelle condition la conduite s'applique quand l'extrait le dit (par exemple adulte ou enfant, terrain, type d'acte).
+5. Si les extraits prévoient des conduites différentes selon un élément que la question ne donne pas (population, allergie, niveau de risque, type d'acte…), ne choisis pas à la place du clinicien : donne la conduite de chaque cas en une phrase sourcée, puis indique l'information qui permettrait de trancher.
+6. Si la question propose des choix (A, B, C…), vérifie chaque choix en une ligne contre l'extrait qui s'y applique, en respectant la polarité de la question (proposition exacte ou inexacte, « sauf »), puis termine par la ligne « Réponse : » suivie de la ou des lettres retenues.
+7. Termine par une ligne « Source : » avec le titre et l'année de la recommandation utilisée, la force de la recommandation si l'extrait l'indique (GRADE, avis d'experts) et la mention « édition antérieure » si l'extrait en est une.
+"""
+
 SYSTEM_TEMPORAL_DIFF = """Tu es un expert en veille clinique SFAR spécialisé dans l'analyse longitudinale des recommandations formalisées d'experts (RFE).
 
 À partir des extraits de différentes éditions [S1], [S2], ... fournis :
@@ -63,8 +77,25 @@ RÉPONSE : <Lettre exacte du choix retenu> (SFAR <année> [Sx])
 """
 
 
-def build_user_prompt(query: str, context_block: str, mode: str = "clinical_detailed") -> str:
-    """Assemble the grounded user prompt for the requested output mode."""
+ABSTENTION_SENTENCE = "Les recommandations SFAR fournies ne traitent pas cette question."
+
+SYSTEM_PROMPTS: dict[str, str] = {
+    "clinical_detailed": SYSTEM_CLINICAL_DETAILED,
+    "clinical_concise": SYSTEM_CLINICAL_CONCISE,
+    "temporal_diff": SYSTEM_TEMPORAL_DIFF,
+    "benchmark_open": SYSTEM_BENCHMARK_OPEN,
+    "benchmark_mcq": SYSTEM_BENCHMARK_MCQ,
+    "clinical_production": SYSTEM_CLINICAL_PRODUCTION,
+}
+
+
+def build_user_prompt(query: str, context_block: str, mode: str = "clinical_detailed", question_first: bool = False) -> str:
+    """Assemble the grounded user prompt for the requested output mode.
+
+    `question_first` also states the question before the excerpts (long contexts: the model
+    reads the excerpts knowing what to look for); the question is repeated after them."""
+    if question_first:
+        context_block = f"QUESTION POSÉE (rappelée après les extraits) :\n{query}\n\n---\n\n{context_block}"
     if mode == "benchmark_open":
         return (
             f"EXTRAITS DES RECOMMANDATIONS SFAR :\n\n{context_block}\n\n"
