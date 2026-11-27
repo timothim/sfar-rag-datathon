@@ -1,0 +1,66 @@
+[
+ {
+  "id": "gp-mcq-03",
+  "correction": "Option C (manœuvres de recrutement) remplacée : une RFE en vigueur plus récente (sepsis 2025, R31) recommande de ne pas les utiliser, ce qui rendait C aussi défendable et cliniquement trompeur."
+ },
+ {
+  "id": "gp-mcq-10",
+  "correction": "Question reformulée : « selon le protocole proposé » supposait un document connu."
+ },
+ {
+  "id": "gp-mcq-11",
+  "correction": "Énoncé complété (pneumonie non nécrosante) : R3.5 exclut aussi les pneumonies nécrosantes."
+ },
+ {
+  "id": "gp-tab-10",
+  "correction": "Note anti-Xa remplacée par R2.6.9 (seuil strict < 0,2 UI/mL, toutes hémorragies) ; la mention « et fonction rénale » venait de la branche « autre hémorragie grave » et ne s'appliquait pas à l'hémorragie intracrânienne."
+ },
+ {
+  "id": "gp-tab-12",
+  "correction": "Référence corrigée : l'agent de courte durée ne classe pas à lui seul le patient à risque faible (autres facteurs du tableau) ; ajout de la contre-indication de la lidocaïne (citation supplémentaire, non requise pour la suffisance)."
+ },
+ {
+  "id": "gp-tab-04",
+  "correction": "Ajout d'une citation de champ plus explicite (exclusion de la chirurgie à risque faible), en alternative dans la preuve e3."
+ },
+ {
+  "id": "gp-tab-06",
+  "correction": "Aucune correction factuelle ; limite notée (dépendance faible à l'en-tête)."
+ },
+ {
+  "id": "gp-pop-03",
+  "correction": "Ajout des citations H8-H24 (adulte) et règle des « 4-2-1 » (enfant), qui portent des éléments de la référence (non requises pour la suffisance)."
+ },
+ {
+  "id": "gp-pop-04",
+  "correction": "Note ajoutée sur la formulation plus prudente de la fiche de synthèse."
+ },
+ {
+  "id": "gp-pop-07",
+  "correction": "Référence réécrite d'après la RPP 2022 (déplacement manuel continu de l'utérus, césarienne à 4 min au-delà de 20 SA) : la réponse 2006 (inclinaison de 15°, extraction après 25 SA) est dépassée. Ajout d'une affirmation interdite et du tag outdated_trap."
+ },
+ {
+  "id": "gp-pop-08",
+  "correction": "Tag two_documents retiré (le texte court suffit) ; ajout de la phrase pédiatrique du texte court comme second ensemble de preuves suffisant."
+ },
+ {
+  "id": "gp-pop-09",
+  "correction": "Partie enfant complétée (CCT visant la normothermie, R12.5 de la RFE traumatisés crâniens graves 2016) ; citation et second ensemble de preuves ajoutés."
+ },
+ {
+  "id": "gp-pop-10",
+  "correction": "Patiente précisée non hypertendue (la RFE 2024 donne une autre cible chez l'hypertendu chronique) ; ajout de la cible générale 2024 (PAM ≥ 60-70 mmHg) comme complément non requis."
+ },
+ {
+  "id": "gp-two-07",
+  "correction": "Question précisée (choc hémorragique) : pour une autre hémorragie grave la protamine se discute au cas par cas ; référence complétée."
+ },
+ {
+  "id": "gp-two-10",
+  "correction": "Ajout d'une citation qui nomme le méthotrexate (en alternative dans la preuve e2)."
+ },
+ {
+  "id": "gp-two-11",
+  "correction": "Ajout d'une preuve requise qui nomme l'aspirine (la citation des conditions ne la nommait pas)."
+ }
+]
