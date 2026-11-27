@@ -2,6 +2,31 @@
 
 > Datathon SFAR × InterHop 2026, projet [`rag-sfar`](https://datathon.sfar.org/projets/rag-sfar). Prototype de recherche, **non validé pour l'usage clinique**. Toujours relire le passage cité.
 
+## Schéma du pipeline
+
+```mermaid
+flowchart TD
+    subgraph HL["Hors ligne : construction de l'index"]
+        A["265 recommandations SFAR en Markdown<br/>+ antibioprophylaxie V3.1 et ses errata"] --> B["Ingestion<br/>éditions remplacées repérées<br/>tableaux découpés ligne par ligne<br/>notes de tableau rattachées à leurs lignes"]
+        B --> C["Index tas_v6 : 36 872 passages<br/>mots (BM25) et vecteurs (e5-small)"]
+    end
+    Q["Question"] --> O["Options de robustesse, éteintes par défaut<br/>sigles et n-grammes de caractères<br/>normalisation de la question par le modèle"]
+    O --> P["Analyse de la question<br/>éditions en vigueur seulement"]
+    P --> S1["Recherche par mots<br/>BM25"]
+    P --> S2["Recherche par sens<br/>embeddings e5-small"]
+    C -.-> S1
+    C -.-> S2
+    S1 --> F["Fusion des deux listes (RRF)"]
+    S2 --> F
+    F --> R["Reclassement<br/>cross-encoder"]
+    R --> X["Contexte, 30 000 caractères au plus<br/>16 passages, passage voisin, tableau parent, notes de tableau<br/>titre, année, édition, section, population, grade"]
+    X --> L["Modèle de langage compatible OpenAI<br/>réponse courte citée, ou abstention"]
+    L --> V["Contrôle automatique<br/>dose, molécule ou citation absente des passages : avertissement"]
+    X --> M["Serveur MCP et mode « passages seuls »<br/>passages cités, sans modèle de langage"]
+```
+
+Ce schéma décrit la configuration évaluée (`C10_context_notes`). Les composants décrits dans d'anciennes versions de ce dépôt (fusion DBSF, boosts de métadonnées, module correctif « CRAG », ordre en U du contexte) n'en font pas partie : mesurés sans effet, ils sont désactivés.
+
 ## Ce que c'est
 
 Un système RAG (« génération augmentée par recherche ») sur les recommandations de la SFAR :
