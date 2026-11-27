@@ -75,8 +75,17 @@ def _norm_dose(num: str, unit: str) -> str:
     return f"{n} {u}"
 
 
+def _pre(text: str) -> str:
+    """Typographic normalisation of units: HTML sub/superscripts (cmH<sub>2</sub>O,
+    g l<sup>-1</sup>), "x l-1" -> "x/l", "Gauge" -> "G"."""
+    t = re.sub(r"</?su[bp]>", "", text, flags=re.I)
+    t = re.sub(r"(?i)\b([a-zµμ]{1,4})\s*(?:\.|\s)\s*([a-z]{1,3})\s*-1\b", r"\1/\2", t)
+    t = re.sub(r"(?i)\bgauges?\b", "G", t)
+    return t
+
+
 def doses(text: str) -> set[str]:
-    return {_norm_dose(m.group(1), m.group(2)) for m in _NUM_UNIT.finditer(text)}
+    return {_norm_dose(m.group(1), m.group(2)) for m in _NUM_UNIT.finditer(_pre(text))}
 
 
 def drugs(text: str) -> set[str]:
