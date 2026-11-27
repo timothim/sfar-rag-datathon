@@ -1,0 +1,242 @@
+[
+ {
+  "case_id": "c9wide|wide|claude-sonnet-5-5::MR-gfff2848a70957ac0b7b5",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Scanner cérébral avec injection devant suspicion de dissection carotidienne, comme la référence."
+ },
+ {
+  "case_id": "c9wide|wide|claude-sonnet-5-5::MR-g8f23afa63325b0d08bd8",
+  "correctness": "partial",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Traitement opératoire précoce bien donné, mais le scanner secondaire prévu par la référence est omis."
+ },
+ {
+  "case_id": "c9wide|wide|claude-sonnet-5-5::MR-gd1b252c6b18be4bca7b6",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Non à l'abaissement sous 34 °C, sans bénéfice sur la PIC, conforme à la référence."
+ },
+ {
+  "case_id": "c9wide|wide|claude-sonnet-5-5::MR-g2c188878f4fca6996f4b",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Risque intermédiaire (1 à 5 %), conforme à la référence."
+ },
+ {
+  "case_id": "c9wide|wide|claude-sonnet-5-5::MR-g6951bd8344b814c79f7e",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Absence de réponse après 2 jours d'arrêt des diurétiques et albumine 1 g/kg, conforme."
+ },
+ {
+  "case_id": "c9wide|wide|claude-sonnet-5-5::MR-ga86840965e184a4c0f3d",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Support vidéo réduisant l'anxiété, conforme à la référence."
+ },
+ {
+  "case_id": "c9wide|wide|claude-sonnet-5-5::MR-gace2db46f6d0fbc9a4b7",
+  "correctness": "partial",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "VNI de rattrapage déconseillée comme dans la référence, mais l'exigence de ne pas retarder la réintubation est omise et une exception (BPCO, OAP) est ajoutée."
+ },
+ {
+  "case_id": "c9wide|wide|claude-sonnet-5-5::MR-gfc720f85a7e4c8f6d739",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Gouttière sur mesure avec traçabilité, conforme à la référence."
+ },
+ {
+  "case_id": "c9wide|wide|claude-sonnet-5-5::MR-g9f4e50ab33c87f6858b4",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Consultant sans lien hiérarchique avec le médecin en charge, conforme à la référence."
+ },
+ {
+  "case_id": "c9wide|wide|claude-sonnet-5-5::MR-g83a9315591cd44551dbc",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Monitorage EEG pouvant détecter sous- ou surdosage quand les curares masquent les signes, conforme."
+ },
+ {
+  "case_id": "c9wide|wide|claude-sonnet-5-5::MR-gff794cd57325dca363d6",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Moniteur utile pour affiner le raisonnement et détecter sous- ou surdosage, conforme."
+ },
+ {
+  "case_id": "c9wide|wide|claude-sonnet-5-5::MR-gf761346ec9be5d6ba346",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Formation de l'équipe à la communication, conforme à la référence."
+ },
+ {
+  "case_id": "c9wide|wide|claude-sonnet-5-5::MR-gfd6492bcff9d310fa822",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Glycémie peropératoire en intervention à risque et en SSPI, conforme à la référence."
+ },
+ {
+  "case_id": "c9wide|wide|claude-sonnet-5-5::MR-g55e468b6df0cb295c14b",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Entretien par perfusion continue retenu comme facteur de risque d'échec, conforme."
+ },
+ {
+  "case_id": "c9wide|wide|claude-sonnet-5-5::MR-gc6d6192f7b53462c02dd",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Plasma thérapeutique à 10 à 15 mL/kg, conforme à la référence."
+ },
+ {
+  "case_id": "c9wide|wide|claude-sonnet-5-5::MR-g2b5dca4f8dcab2a9f869",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Bloc échoguidé possible sous AG après discussion, avec sécurité accrue, conforme à la référence."
+ },
+ {
+  "case_id": "c9wide|wide|claude-sonnet-5-5::MR-ga7998a95924ce47cf4b2",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Avis neurochirurgical rapide en cas de déficit complet et EMG, conforme."
+ },
+ {
+  "case_id": "c9wide|wide|claude-sonnet-5-5::MR-gcb7201d68bfd3c66882d",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Prise en compte des fluoroquinolones des 6 derniers mois, accord fort, conforme."
+ },
+ {
+  "case_id": "c9wide|wide|claude-sonnet-5-5::MR-g394ecc098e4d21e40da0",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "PaO2/FiO2 de 250 correspond à un score respiratoire de 2, conforme."
+ },
+ {
+  "case_id": "c9wide|wide|claude-sonnet-5-5::MR-g1fa665d53b3782891db2",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "ONHD pendant l'apnée, conforme à la référence (formulation « recommandé » plus forte que « suggèrent »)."
+ },
+ {
+  "case_id": "c9wide|wide|claude-sonnet-5-5::MR-g6d7e10b60e750f150a7a",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Ventilation au masque dès SpO2 < 95 %, FiO2 ≥ 0,8, pressions < 15 cmH2O, conforme."
+ },
+ {
+  "case_id": "c9wide|wide|claude-sonnet-5-5::MR-g1b4ad3d31046fdbdd025",
+  "correctness": "partial",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Changement principal 2016 correctement décrit, mais la position de 2001 sur le bloc sous AG (signes d'alerte perdus) n'est pas énoncée."
+ },
+ {
+  "case_id": "c9wide|wide|claude-sonnet-5-5::MR-g518431a84972e17017d1",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Gamme 26 G à 16 G en 2023 contre 24 G à 14 G en 2000, conforme."
+ },
+ {
+  "case_id": "c9wide|wide|claude-sonnet-5-5::MR-g78a74d874a76bbb543f1",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Seuil de relais passé de 100 G/L (2002) à 150 G/L (2019), conforme."
+ },
+ {
+  "case_id": "c9wide|wide|claude-sonnet-5-5::MR-abst000",
+  "correctness": "correct",
+  "abstained": true,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Abstention attendue et donnée (question non couverte)."
+ },
+ {
+  "case_id": "c9wide|wide|claude-sonnet-5-5::MR-abst015",
+  "correctness": "correct",
+  "abstained": true,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Abstention attendue et donnée (question non couverte)."
+ },
+ {
+  "case_id": "c9wide|wide|claude-sonnet-5-5::MR-abst016",
+  "correctness": "correct",
+  "abstained": true,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Abstention attendue et donnée (question non couverte)."
+ },
+ {
+  "case_id": "c9wide|wide|claude-sonnet-5-5::MR-abst026",
+  "correctness": "correct",
+  "abstained": true,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Abstention attendue et donnée (question non couverte)."
+ },
+ {
+  "case_id": "c9wide|wide|claude-sonnet-5-5::MR-abst031",
+  "correctness": "correct",
+  "abstained": true,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Abstention attendue et donnée (question non couverte)."
+ },
+ {
+  "case_id": "c9wide|wide|claude-sonnet-5-5::MR-abst037",
+  "correctness": "correct",
+  "abstained": true,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Abstention attendue et donnée (question non couverte)."
+ }
+]
