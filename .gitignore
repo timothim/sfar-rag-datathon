@@ -103,3 +103,6 @@ scripts/queue_h_ab.sh
 eval/datasets/anticoag2026.jsonl
 eval/splits/anticoag2026/
 reports/eval/*anticoag2026*
+# AC1: generated answers and judge outputs on the anticoagulant benchmark (answers, judge justifications): local only
+reports/eval/**/*anticoag2026*
+reports/eval/judge_v4/*anticoag2026*/
