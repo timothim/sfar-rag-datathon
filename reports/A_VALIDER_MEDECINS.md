@@ -7,7 +7,7 @@ Ce document rassemble tous les points que les rapports des agents ont laissés �
 Abréviations :
 - « l. » : ligne du Markdown `data/sfar_recommendations/output/chandra/<année>/<nom>/<nom>.md` ;
 - « p. » : page du PDF source ;
-- « en vigueur » : `is_latest_edition = 1` dans l'index `tas_v5`.
+- « en vigueur » : `is_latest_edition = 1` dans l'index `tas_v6` (index gelé de l'évaluation ; aucun changement de statut entre `tas_v5` et `tas_v6`).
 
 ---
 
