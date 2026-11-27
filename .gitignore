@@ -80,3 +80,12 @@ eval_internal/robustness/logs/
 eval_internal/work/x2/
 eval_internal/work/q2/
 eval_internal/work/genprobe2/
+
+# V1: experts' validated release (sfar-abp-v31.x), converted suites stay local
+eval/datasets/abpv*.jsonl
+eval/splits/abpv*/
+# merged judge reports under the validated grids (answers, judge justifications)
+reports/eval/judge_v4/**/*abpv*
+
+# extra GPU lock slots
+.gpu_lock_*/
