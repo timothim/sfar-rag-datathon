@@ -1,0 +1,36 @@
+4024,4025d4023
+< <br/>
+< <li>○ Patients à faible risque : aucun des critères ci-dessus</li>
+4042,4043c4040
+<           ●●● (Avis d'experts)<br/><br/>
+<           ●●● (GRADE 2)
+---
+>           ●●● (Avis d'experts)
+4048a4046,4058
+> <li>▪ Cholécystectomie élective par laparoscopie
+>               <ul style="list-style-type: none; padding-left: 20px;">
+> <li>○ Patients à faible risque : aucun des critères ci-dessus</li>
+> </ul>
+> </li>
+> </ul>
+> </td>
+> <td colspan="3">PAS D'ANTIBIOPROPHYLAXIE</td>
+> <td>◉◉◎ (GRADE 2)</td>
+> </tr>
+> <tr>
+> <td>
+> <ul style="list-style-type: none; padding-left: 0;">
+4372c4382
+< Si céfotaxime : **gentamicine 6 à 7 mg/kg IVL + métronidazole 1g IVL**
+---
+> Si céfoxitine : **gentamicine 6 à 7 mg/kg IVL + métronidazole 1g IVL**
+6328d6337
+< <li>○ Patients à faible risque : <i>aucun des critères ci-dessus</i></li>
+6337c6346,6350
+< <td></td>
+---
+> <td>▪ Cholécystectomie élective par laparoscopie
+> <ul>
+> <li>○ Patients à faible risque : <i>aucun des critères ci-dessus</i></li>
+> </ul>
+> </td>
