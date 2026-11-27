@@ -22,7 +22,11 @@ from rag_sfar.evaluation.benchmarks import (
     load_multi_rfe_stress_benchmark,
 )
 from rag_sfar.ingestion.chunker import ChunkingStrategy, chunk_corpus
-from rag_sfar.ingestion.loader import load_sfar_corpus
+from rag_sfar.ingestion.loader import (
+    corpus_updates_fingerprint,
+    load_sfar_corpus,
+    resolve_corpus_updates_dir,
+)
 from rag_sfar.retrieval.bm25 import BM25Index
 from rag_sfar.retrieval.embedder import build_embedder
 from rag_sfar.retrieval.pipeline import SfarRagRetriever
@@ -41,11 +45,15 @@ def build_and_save_index(
     embedding_model: str = "intfloat/multilingual-e5-small",
     skip_embeddings: bool = False,
     batch_size: int = 32,
+    corpus_updates_dir: Path | None = None,
+    use_corpus_updates: bool = True,
 ) -> LocalVectorStore:
     """Ingest corpus, chunk with chosen strategy, build BM25+ & dense index, and save to disk."""
     t0 = time.perf_counter()
     console.print(f"[bold cyan]Loading SFAR corpus from {corpus_dir}...[/bold cyan]")
-    docs = load_sfar_corpus(corpus_dir)
+    updates_dir = resolve_corpus_updates_dir(corpus_dir, corpus_updates_dir, use_corpus_updates)
+    console.print(f"  Corpus updates overlay: [bold]{updates_dir or 'none'}[/bold]")
+    docs = load_sfar_corpus(corpus_dir, updates_dir=updates_dir, use_corpus_updates=updates_dir is not None)
     console.print(f"  Loaded [green]{len(docs)}[/green] enriched unique SFAR documents.")
 
     t_c = time.perf_counter()
@@ -101,6 +109,7 @@ def build_and_save_index(
         "embedding_model": embedder.model_name if embedder else "none",
         "embedding_dim": int(embeddings.shape[1]) if embeddings is not None else 0,
         "build_seconds": round(time.perf_counter() - t0, 2),
+        "corpus_updates": corpus_updates_fingerprint(updates_dir),
     }
 
     store = LocalVectorStore(
@@ -206,6 +215,13 @@ def index_cmd() -> None:
     parser.add_argument("--embedding-model", default=s.embedding_model)
     parser.add_argument("--skip-embeddings", action="store_true")
     parser.add_argument("--batch-size", type=int, default=s.embedding_batch_size)
+    parser.add_argument(
+        "--corpus-updates-dir",
+        type=Path,
+        default=None,
+        help="Overlay of newer editions (default: <corpus-dir>/../../corpus_updates if present).",
+    )
+    parser.add_argument("--no-corpus-updates", action="store_true", help="Ignore any overlay.")
     args = parser.parse_args()
 
     build_and_save_index(
@@ -216,6 +232,8 @@ def index_cmd() -> None:
         embedding_model=args.embedding_model,
         skip_embeddings=args.skip_embeddings,
         batch_size=args.batch_size,
+        corpus_updates_dir=args.corpus_updates_dir,
+        use_corpus_updates=not args.no_corpus_updates,
     )
 
 

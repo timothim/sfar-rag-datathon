@@ -252,8 +252,12 @@ def _looks_like_header_row(row: list[str]) -> bool:
 def parse_html_table(
     table_html: str,
     previous_headers: list[str] | None = None,
+    previous_is_contiguous: bool = True,
 ) -> ParsedTable:
-    """Parse an HTML <table> with full rowspan/colspan expansion and continuation support."""
+    """Parse an HTML <table> with full rowspan/colspan expansion and continuation support.
+
+    `previous_is_contiguous` tells whether the previous table ends right before this one (no
+    text in between); a banner-only first header row inherits `previous_headers` only then."""
     soup = BeautifulSoup(table_html, "html.parser")
     table = soup.find("table")
     if table is None:
@@ -375,7 +379,23 @@ def parse_html_table(
     has_explicit_headers = False
     inherited_headers = False
 
-    if is_th_row[0]:
+    # A continuation table whose first <thead>/<th> row is a single full-width sub-category banner
+    # (e.g. `<th colspan="5">Chirurgie des gonades</th>`) inherits the previous table's column
+    # headers, but only when it is a true continuation: the previous table is contiguous (no text
+    # in between; the caller also requires the same section), has the same number of columns, and
+    # the banner is not followed by this table's own header row (`<th>` row).
+    first_non_empty = sum(1 for c in grid[0] if c.strip())
+    is_banner_th_row0 = (
+        is_th_row[0]
+        and max_cols >= 3
+        and first_non_empty == 1
+        and bool(previous_headers)
+        and previous_is_contiguous
+        and len(previous_headers or []) == max_cols
+        and not (len(is_th_row) > 1 and is_th_row[1])
+    )
+
+    if is_th_row[0] and not is_banner_th_row0:
         has_explicit_headers = True
         header_rows: list[list[str]] = []
         while data_start < len(grid) and is_th_row[data_start]:

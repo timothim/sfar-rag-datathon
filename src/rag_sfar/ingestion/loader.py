@@ -505,11 +505,17 @@ def infer_effective_year_and_version(
     fn_low = fn_decoded.lower()
     version_label: str | None = None
 
-    # Check explicit version pattern (e.g. V3.0 du 04/05/2026)
-    ver_match = re.search(r"\b(V\d+\.\d+)\s+du\s+(\d{2}/\d{2}/(\d{4}))", text_head[:4000])
-    if ver_match:
-        version_label = f"{ver_match.group(1)} ({ver_match.group(2)})"
-        ver_year = int(ver_match.group(3))
+    # Check explicit version patterns (e.g. V3.0 du 04/05/2026, V3.1 du 10/07/2026).
+    # Scan up to 30,000 chars (covers cover page + author list + HISTORIQUE DES VERSIONS)
+    # and keep the highest semantic (major, minor) version — handles minor revisions whose
+    # cover page was not bumped (e.g. SFAR ABP V3.1 du 10/07/2026 with V3.0 on the cover).
+    ver_matches = list(
+        re.finditer(r"\bV(\d+)\.(\d+)\s+du\s+(\d{2}/\d{2}/(\d{4}))", text_head[:30000])
+    )
+    if ver_matches:
+        best_m = max(ver_matches, key=lambda m: (int(m.group(4)), int(m.group(1)), int(m.group(2))))
+        version_label = f"V{best_m.group(1)}.{best_m.group(2)} ({best_m.group(3)})"
+        ver_year = int(best_m.group(4))
         if raw_year is None or ver_year > raw_year:
             return ver_year, version_label, (raw_year is None)
 
@@ -703,10 +709,46 @@ def _estimate_reference_ratio(text: str) -> float:
     return round(ref_chars / max(1, len(text)), 4)
 
 
+def resolve_corpus_updates_dir(
+    corpus_dir: Path, updates_dir: Path | None = None, use_corpus_updates: bool = True
+) -> Path | None:
+    """Overlay directory that will be applied on top of the corpus, or None."""
+    if not use_corpus_updates:
+        return None
+    candidate = updates_dir if updates_dir is not None else corpus_dir.parent.parent / "corpus_updates"
+    return candidate if (candidate / "updates_manifest.json").exists() else None
+
+
+def corpus_updates_fingerprint(updates_dir: Path | None) -> dict | None:
+    """Traceability record of an overlay: path and SHA-256 of the manifest and of each file."""
+    if updates_dir is None:
+        return None
+    import hashlib
+
+    man_path = updates_dir / "updates_manifest.json"
+    files = {}
+    for entry in json.loads(man_path.read_text(encoding="utf-8")).get("documents", []):
+        md = entry.get("md_file")
+        if md and (updates_dir / md).exists():
+            files[md] = {
+                "sha256": hashlib.sha256((updates_dir / md).read_bytes()).hexdigest(),
+                "source_pdf_sha256": entry.get("sha256"),
+            }
+    extra = sorted(p.name for p in updates_dir.iterdir() if p.suffix == ".md" and p.name not in files)
+    return {
+        "dir": str(updates_dir),
+        "manifest_sha256": hashlib.sha256(man_path.read_bytes()).hexdigest(),
+        "files": files,
+        "other_md_files": {n: hashlib.sha256((updates_dir / n).read_bytes()).hexdigest() for n in extra},
+    }
+
+
 def load_sfar_corpus(
     corpus_dir: Path,
     include_english: bool = True,
     deduplicate_sha256: bool = True,
+    updates_dir: Path | None = None,
+    use_corpus_updates: bool = True,
 ) -> list[LoadedDocument]:
     """Load and enrich all available SFAR Chandra-converted Markdown documents.
 
@@ -720,6 +762,12 @@ def load_sfar_corpus(
     deduplicate_sha256 : bool
         Remove exact duplicate files (e.g., `2_AFAR_echographie-en-anesthesie-locoregionale`
         present in both `2011/` and `unknown/`), keeping the dated copy.
+    updates_dir : Path | None
+        Optional overlay directory with `updates_manifest.json` + Markdown files for newer
+        SFAR editions published after the upstream Chandra snapshot (default location
+        `<corpus_dir>/../../corpus_updates` when omitted).
+    use_corpus_updates : bool
+        False ignores any overlay (reproduces an index of the upstream snapshot only).
     """
     discovery_path = corpus_dir / "discovery.json"
     chandra_dir = corpus_dir / "chandra"
@@ -727,7 +775,23 @@ def load_sfar_corpus(
         raise FileNotFoundError(f"discovery.json not found at {discovery_path}")
 
     discovery = json.loads(discovery_path.read_text(encoding="utf-8"))
-    raw_docs = discovery.get("documents", [])
+    raw_docs = list(discovery.get("documents", []))
+
+    # Optional corpus updates overlay (keeps the upstream git repo untouched). Resolved
+    # explicitly by `resolve_corpus_updates_dir`; index builds record it in their manifest.
+    resolved_updates_dir = resolve_corpus_updates_dir(corpus_dir, updates_dir, use_corpus_updates)
+
+    update_md_by_stem: dict[str, Path] = {}
+    if resolved_updates_dir is not None and (resolved_updates_dir / "updates_manifest.json").exists():
+        upd_data = json.loads(
+            (resolved_updates_dir / "updates_manifest.json").read_text(encoding="utf-8")
+        )
+        for u_entry in upd_data.get("documents", []):
+            md_file = u_entry.get("md_file")
+            fn = u_entry.get("filename") or ""
+            if md_file and fn and (resolved_updates_dir / md_file).exists():
+                update_md_by_stem[Path(fn).stem] = resolved_updates_dir / md_file
+                raw_docs.append(u_entry)
 
     # Build fast lookup maps for Chandra outputs
     md_by_yr_stem: dict[tuple[str, str], Path] = {}
@@ -746,7 +810,7 @@ def load_sfar_corpus(
             continue
         stem = Path(fn).stem
         yr_str = str(entry.get("year") or "unknown")
-        md_path = md_by_yr_stem.get((yr_str, stem))
+        md_path = update_md_by_stem.get(stem) or md_by_yr_stem.get((yr_str, stem))
         if md_path is None and stem in md_by_stem:
             md_path = md_by_stem[stem][0]
         if md_path is None or not md_path.exists():
@@ -762,7 +826,7 @@ def load_sfar_corpus(
             continue
 
         eff_year, ver_label, yr_imputed = infer_effective_year_and_version(
-            entry.get("year"), fn, title, cleaned_text[:5000]
+            entry.get("year"), fn, title, cleaned_text[:30000]
         )
         disciplines = normalize_disciplines(entry.get("discipline"))
         domains, sub_imputed = normalize_and_impute_domains(
@@ -775,8 +839,8 @@ def load_sfar_corpus(
 
         # Read Chandra sidecar _metadata.json for page count
         meta_path = md_path.with_name(f"{md_path.stem}_metadata.json")
-        num_pages: int | None = None
-        if meta_path.exists():
+        num_pages: int | None = entry.get("num_pages")
+        if num_pages is None and meta_path.exists():
             try:
                 cmeta = json.loads(meta_path.read_text(encoding="utf-8"))
                 num_pages = cmeta.get("num_pages")
@@ -843,6 +907,16 @@ def load_sfar_corpus(
     return loaded
 
 
+def _parse_semver(version_label: str | None) -> tuple[int, int]:
+    """Extract numeric (major, minor) tuple from version_label like 'V3.1 (10/07/2026)'."""
+    if not version_label:
+        return (0, 0)
+    m = re.search(r"\bV(\d+)\.(\d+)\b", version_label, re.I)
+    if not m:
+        return (0, 0)
+    return (int(m.group(1)), int(m.group(2)))
+
+
 def _apply_temporal_supersession(docs: list[LoadedDocument]) -> None:
     """Flag superseded historical editions within each clinical topic lineage."""
     by_lineage: dict[str, list[LoadedDocument]] = collections.defaultdict(list)
@@ -851,7 +925,7 @@ def _apply_temporal_supersession(docs: list[LoadedDocument]) -> None:
             by_lineage[d.metadata.topic_lineage].append(d)
 
     for lineage, group in by_lineage.items():
-        # Consider French active editions to determine the latest authoritative year
+        # Consider French active editions to determine the latest authoritative year + minor version
         fr_dated = [
             d
             for d in group
@@ -860,7 +934,11 @@ def _apply_temporal_supersession(docs: list[LoadedDocument]) -> None:
         if not fr_dated:
             continue
         max_year = max(d.metadata.effective_year for d in fr_dated if d.metadata.effective_year)
-        latest_docs = [d for d in fr_dated if d.metadata.effective_year == max_year]
+        latest_year_docs = [d for d in fr_dated if d.metadata.effective_year == max_year]
+        max_semver = max(_parse_semver(d.metadata.version_label) for d in latest_year_docs)
+        latest_docs = [
+            d for d in latest_year_docs if _parse_semver(d.metadata.version_label) == max_semver
+        ]
         # Prefer primary recommendation doc as canonical superseding reference
         canonical = sorted(
             latest_docs,
@@ -869,8 +947,11 @@ def _apply_temporal_supersession(docs: list[LoadedDocument]) -> None:
 
         for d in group:
             yr = d.metadata.effective_year
-            # Mark strictly older editions (or undated duplicates in same lineage) as superseded
-            if yr is None or yr < max_year:
+            sv = _parse_semver(d.metadata.version_label)
+            # Mark strictly older editions (or older minor version in same year, e.g. V3.0 < V3.1)
+            if yr is None or yr < max_year or (
+                yr == max_year and max_semver > (0, 0) and sv > (0, 0) and sv < max_semver
+            ):
                 d.metadata.is_latest_edition = False
                 d.metadata.superseded_by = canonical.metadata.doc_id
                 d.metadata.superseded_by_year = max_year

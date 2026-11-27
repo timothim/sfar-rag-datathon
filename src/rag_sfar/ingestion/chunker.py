@@ -33,6 +33,12 @@ GRADE_RE = re.compile(
     re.I,
 )
 REC_ID_RE = re.compile(r"\bR\d+(?:\.\d+){1,2}\b")
+# A table/footnote note: starts with a note call (`*`, `**`, `***` followed by a space or text,
+# `#`, `†`, `‡`, optionally Markdown-escaped) or "Note :" / "NB :". Markdown bold ("**R1.1",
+# "**Céfazoline**") is not a note call: a run of two or more stars glued to a word is excluded.
+FOOTNOTE_START_RE = re.compile(r"^\s*(?:\\?\*(?:\\?\*){0,2}\s|\\?\*(?![\*\s])|\\?[#†‡]|Note\s*:|NB\s*:)", re.I)
+# A short paragraph that comments on the adjacent table ("Les posologies de ce tableau ...").
+TABLE_NOTE_RE = re.compile(r"^.{0,160}\b(?:de|dans|du)\s+ce\s+tableau\b", re.I | re.S)
 REF_HEADING_RE = re.compile(r"\b(r[eé]f[eé]rences?|bibliographie)\b", re.I)
 ALLERGY_BOX_RE = re.compile(
     r"(?:en\s+cas\s+d['’]allergie\s+aux\s+b[êe]talactamines,\s*si\s+antibioprophylaxie\s+indiqu[ée]e|"
@@ -244,6 +250,10 @@ def _semantic_heading_level(
     up = htext.strip().upper()
     if re.match(r"^CHAMP\s+\d+", up):
         return 1
+    if re.match(r"^HISTORIQUE\s+DES\s+VERSIONS", up):
+        return 1
+    if re.match(r"^INTRODUCTION\b", up) and raw_level <= 2:
+        return 1
     if re.match(r"^PARTIE\s+\d+", up):
         return 2
     if has_champ_or_partie:
@@ -431,9 +441,13 @@ def _chunk_table_aware_sota(
         if is_callout:
             major_section_callouts.setdefault(major_sec, []).append(c.chunk_id)
 
+    # True while nothing but whitespace separates the current token from the previous table.
+    prev_table_contiguous = False
     for tok in tokens:
         if not tok or not tok.strip():
             continue
+        if not tok.lstrip().lower().startswith("<table"):
+            prev_table_contiguous = False
 
         if tok.lstrip().lower().startswith("<table"):
             # A real clinical HTML table never lives inside a bibliography; pop stale Références!
@@ -450,7 +464,10 @@ def _chunk_table_aware_sota(
                 if last_table_major_section == current_major_section
                 else None
             )
-            parsed: ParsedTable = parse_html_table(tok, previous_headers=prev_hdrs)
+            parsed: ParsedTable = parse_html_table(
+                tok, previous_headers=prev_hdrs, previous_is_contiguous=prev_table_contiguous
+            )
+            prev_table_contiguous = True
             if parsed.has_explicit_headers and parsed.headers:
                 last_table_headers = parsed.headers
                 last_table_major_section = current_major_section
@@ -563,7 +580,10 @@ def _chunk_table_aware_sota(
                         idx += 1
                 return
 
-            for piece in _split_prose_paragraphs(body, max_chars=max_prose_chars):
+            # Keep version-history changelogs intact (up to 3500 chars) so minor-version diffs
+            # (e.g. V3.0 -> V3.1) stay in the same retrievable chunk as the preceding version.
+            eff_max_chars = 3500 if "historique des versions" in sec_path.lower() else max_prose_chars
+            for piece in _split_prose_paragraphs(body, max_chars=eff_max_chars):
                 # If a specialty allergy box ("En cas d'allergie aux bêtalactamines...") starts
                 # mid-paragraph after unrelated prose (e.g. IMC>=50 or intro text), split it out
                 # as its own atomic, high-signal `callout_allergy` chunk!
@@ -578,14 +598,21 @@ def _chunk_table_aware_sota(
 
                 for sub in sub_pieces:
                     is_allergy_box = bool(ALLERGY_BOX_RE.search(sub))
-                    is_footnote = bool(re.match(r"^\s*(?:[\*#†‡]|Note\s*:|NB\s*:)", sub)) and len(sub) < 900
                     is_rec_box = bool(REC_ID_RE.search(sub) and GRADE_RE.search(sub))
+                    # A recommendation box is never a footnote, whatever its first character
+                    # (Markdown bold "**R1.1 ..." starts with "*").
+                    is_footnote = (
+                        not is_rec_box
+                        and not is_allergy_box
+                        and len(sub) < 900
+                        and bool(FOOTNOTE_START_RE.match(sub) or TABLE_NOTE_RE.match(sub))
+                    )
                     if is_allergy_box:
                         ctype: ChunkType = "callout_allergy"
-                    elif is_footnote:
-                        ctype = "callout_footnote"
                     elif is_rec_box:
                         ctype = "recommendation_box"
+                    elif is_footnote:
+                        ctype = "callout_footnote"
                     else:
                         ctype = "prose"
                     c = _make_chunk(

@@ -710,6 +710,68 @@ def test_footnote_call_regex_ignores_markdown_emphasis():
         assert _FOOTNOTE_REF_RE.search(text), text
 
 
+def test_recommendation_box_is_never_classified_as_a_footnote():
+    from rag_sfar.ingestion.chunker import chunk_document
+
+    meta = DocumentMetadata(doc_id="doc_synth", title="Titre", filename="t.pdf", md_path="t.md")
+    tbl = "<table><tr><th>Acte</th><th>Molécule</th><th>Dose</th></tr><tr><td>A</td><td>M</td><td>1 g</td></tr></table>\n\n"
+    doc = LoadedDocument(metadata=meta, text=(
+        "# Titre\n\n## Partie 1\n\n"
+        "**R1.1 – Il est recommandé d'administrer la molécule X avant l'incision (GRADE 1+).**\n\n"
+        + tbl
+        + "* Patients à haut risque définis dans le texte.\n\n"
+        + tbl
+        + "Les posologies de ce tableau concernent les patients de moins de 40 kg.\n\n"
+        + tbl
+        + "**Céfazoline** est le choix habituel dans cette indication décrite ici en prose."
+    ))
+    by_start = {c.text[:12]: c.chunk_type for c in chunk_document(doc, strategy="table_aware_sota")}
+    assert any(v == "recommendation_box" for k, v in by_start.items() if k.startswith("**R1.1")), by_start
+    assert any(v == "callout_footnote" for k, v in by_start.items() if k.startswith("* Patients")), by_start
+    assert any(v == "callout_footnote" for k, v in by_start.items() if k.startswith("Les posologi")), by_start
+    assert any(v == "prose" for k, v in by_start.items() if k.startswith("**Céfazolin")), by_start
+
+
+def test_banner_header_inheritance_only_for_contiguous_same_width_tables():
+    banner_html = """
+    <table>
+      <thead><tr><th colspan="4"><b>Sous-groupe B</b></th></tr></thead>
+      <tbody><tr><td>Geste B1</td><td>Molécule M</td><td>1 g</td><td>Avis d'experts</td></tr></tbody>
+    </table>
+    """
+    prev = ["Acte", "Molécule", "Dose", "Force"]
+    pt = parse_html_table(banner_html, previous_headers=prev)
+    assert pt.inherited_headers is True and pt.headers == prev
+    cards = pt.to_row_cards()
+    assert "Sous-catégorie : Sous-groupe B" in cards[0] and "Acte : Geste B1" in cards[0]
+    # Not contiguous with the previous table: no inheritance.
+    pt = parse_html_table(banner_html, previous_headers=prev, previous_is_contiguous=False)
+    assert pt.inherited_headers is False
+    # Different number of columns: no inheritance.
+    pt = parse_html_table(banner_html, previous_headers=["A", "B", "C"])
+    assert pt.inherited_headers is False
+    # A titled new table (banner followed by its own header row) keeps its own headers.
+    titled = """
+    <table>
+      <thead><tr><th colspan="3">Tableau 2. Autre sujet</th></tr>
+      <tr><th>Situation</th><th>Délai</th><th>Commentaire</th></tr></thead>
+      <tbody><tr><td>S1</td><td>24 h</td><td>RAS</td></tr></tbody>
+    </table>
+    """
+    pt = parse_html_table(titled, previous_headers=["X", "Y", "Z"])
+    assert pt.inherited_headers is False
+    assert pt.headers[1] == "Délai" and pt.has_explicit_headers
+
+
+def test_highest_version_is_kept_when_cover_lags_the_history():
+    from rag_sfar.ingestion.loader import infer_effective_year_and_version
+
+    sample_head = "V2.0 du 01/02/2024\n" + ("x " * 4000) + "\n- V2.1 du 03/04/2024 : correction d'un tableau."
+    yr, ver, _ = infer_effective_year_and_version(2022, "reco.pdf", "Titre", sample_head)
+    assert yr == 2024
+    assert ver == "V2.1 (03/04/2024)"
+
+
 
 
 
