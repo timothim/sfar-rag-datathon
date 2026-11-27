@@ -242,6 +242,45 @@ def build_standard_ablation_configs() -> list[RetrievalConfig]:
             use_context_pruning=True,
             final_top_k=8,
         ),
+        # C10 (B1, 2026-11-27): C9 + context built for a ~30B generator, each element kept after a
+        # one-at-a-time ablation on the three dev sets (reports/agents/B1_retrieval.md):
+        # 16 ranked results with +-1 neighbour and the parent table of table rows (windows),
+        # notes of retrieved tables (scope notes, footnotes), no per-document cap below the
+        # final budget (a single guideline usually holds all the evidence), one adult and one
+        # paediatric table passage when the query does not exclude that population
+        # (counterpart search through the act label of the other population's row), and for
+        # MCQs two passages per option (stem + option sub-query).
+        # Tested and not kept: negation handling (no gain on top of this configuration),
+        # larger candidate pools, edition filter off, smaller/larger budgets (see the report).
+        RetrievalConfig(
+            name="C10_context_population",
+            chunking_strategy="table_aware_sota",
+            use_bm25=True,
+            use_subword=False,
+            use_dense=True,
+            use_dbsf_fusion=False,
+            use_crag_multihop=False,
+            use_medical_lexicon=False,
+            use_query_router=True,
+            exclude_references=True,
+            prefer_french=True,
+            latest_edition_only=True,
+            exclude_abrogated=True,
+            use_soft_metadata_boost=False,
+            use_reranker=True,
+            expand_neighbors=False,
+            expand_section_callouts=False,
+            use_u_shape_ordering=True,
+            use_context_pruning=True,
+            final_top_k=16,
+            max_chunks_per_doc=16,
+            context_window=1,
+            expand_table_parent=True,
+            attach_table_notes=True,
+            population_quota=1,
+            population_counterpart=True,
+            mcq_option_quota=2,
+        ),
     ]
 
 
