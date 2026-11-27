@@ -1,0 +1,242 @@
+[
+ {
+  "case_id": "C9_simple_hybrid_rerank|small|clinical_concise::MR-gfff2848a70957ac0b7b5",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Scanner cérébral avec injection, conforme à la référence devant Horner et fracture cervicale."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank|small|clinical_concise::MR-g8f23afa63325b0d08bd8",
+  "correctness": "partial",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Laparotomie précoce conforme, mais le scanner secondaire de la référence n'est pas mentionné."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank|small|clinical_concise::MR-gd1b252c6b18be4bca7b6",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Non à 31 °C, sans bénéfice sur la PIC : conforme à la référence."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank|small|clinical_concise::MR-g2c188878f4fca6996f4b",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Risque intermédiaire de 1 à 5 % : conforme."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank|small|clinical_concise::MR-g6951bd8344b814c79f7e",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Syndrome hépatorénal retenu après échec de l'arrêt des diurétiques et de l'albumine à 1 g/kg pendant 2 jours : conforme."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank|small|clinical_concise::MR-ga86840965e184a4c0f3d",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Le support vidéo réduit l'anxiété : conforme ; la satisfaction de la référence n'est pas citée."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank|small|clinical_concise::MR-gace2db46f6d0fbc9a4b7",
+  "correctness": "incorrect",
+  "abstained": false,
+  "serious_error": "wrong_conduct",
+  "faithful": null,
+  "justification": "Recommande une VNI curative alors que la référence dit de ne pas la faire en rattrapage et de ne pas retarder la réintubation : conduite opposée."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank|small|clinical_concise::MR-gfc720f85a7e4c8f6d739",
+  "correctness": "partial",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Gouttière sur mesure, conforme ; l'obligation de tracer l'information dans le dossier n'est pas mentionnée."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank|small|clinical_concise::MR-g9f4e50ab33c87f6858b4",
+  "correctness": "incorrect",
+  "abstained": true,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Abstention à tort : la référence donne une conduite (médecin consultant sans lien hiérarchique). Erreur non grave."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank|small|clinical_concise::MR-g83a9315591cd44551dbc",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Moniteur EEG pour détecter le sous- et le surdosage chez le patient curarisé : conforme."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank|small|clinical_concise::MR-gff794cd57325dca363d6",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Monitorage pour affiner le raisonnement et détecter sous- et surdosage : conforme."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank|small|clinical_concise::MR-gf761346ec9be5d6ba346",
+  "correctness": "partial",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Mesures de communication proches du thème, mais la formation de l'équipe à la communication n'est pas proposée."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank|small|clinical_concise::MR-gfd6492bcff9d310fa822",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Glycémie peropératoire en intervention à risque et mesure en SSPI : conforme."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank|small|clinical_concise::MR-g55e468b6df0cb295c14b",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Entretien par perfusion continue associé à l'échec de l'extension : conforme."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank|small|clinical_concise::MR-gc6d6192f7b53462c02dd",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Plasma thérapeutique à 10 à 15 mL/kg : conforme."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank|small|clinical_concise::MR-g2b5dca4f8dcab2a9f869",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Bloc échoguidé possible sous AG : conforme ; les conditions ajoutées ne contredisent pas la référence."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank|small|clinical_concise::MR-ga7998a95924ce47cf4b2",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Avis neurochirurgical rapide et EMG : conforme."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank|small|clinical_concise::MR-gcb7201d68bfd3c66882d",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Six mois de FQ antérieures, accord fort : conforme."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank|small|clinical_concise::MR-g394ecc098e4d21e40da0",
+  "correctness": "incorrect",
+  "abstained": true,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Abstention à tort : la référence donne un score de 2 pour un PaO2/FiO2 entre 201 et 300. Erreur non grave."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank|small|clinical_concise::MR-g1fa665d53b3782891db2",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Oxygénation nasale à haut débit pendant l'apnée : conforme ; « il est recommandé » surévalue la force (référence : suggestion d'experts)."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank|small|clinical_concise::MR-g6d7e10b60e750f150a7a",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "SpO2 inférieure à 95 %, FiO2 au moins 0,8, pression inférieure à 15 cmH2O : conforme."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank|small|clinical_concise::MR-g1b4ad3d31046fdbdd025",
+  "correctness": "partial",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Décrit bien l'édition 2001 ; le changement de 2016 (bloc possible sous AG après discussion) n'est pas énoncé dans la réponse visible, qui est tronquée."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank|small|clinical_concise::MR-g518431a84972e17017d1",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "2000 : du 24G au 14G ; 2023 : du 26G au 16G : conforme."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank|small|clinical_concise::MR-g78a74d874a76bbb543f1",
+  "correctness": "partial",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Seuil 2002 (100 G/L) correct ; le seuil 2019 (150 G/L) n'apparaît pas dans la réponse visible, qui est tronquée."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank|small|clinical_concise::MR-abst000",
+  "correctness": "correct",
+  "abstained": true,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Abstention attendue, conforme à la référence."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank|small|clinical_concise::MR-abst015",
+  "correctness": "correct",
+  "abstained": true,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Abstention attendue, conforme à la référence."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank|small|clinical_concise::MR-abst016",
+  "correctness": "correct",
+  "abstained": true,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Abstention attendue, conforme à la référence."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank|small|clinical_concise::MR-abst026",
+  "correctness": "correct",
+  "abstained": true,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Abstention attendue, conforme à la référence."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank|small|clinical_concise::MR-abst031",
+  "correctness": "correct",
+  "abstained": true,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Abstention attendue, conforme à la référence."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank|small|clinical_concise::MR-abst037",
+  "correctness": "correct",
+  "abstained": true,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Abstention attendue, conforme à la référence."
+ }
+]

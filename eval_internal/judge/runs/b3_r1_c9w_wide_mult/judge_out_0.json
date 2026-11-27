@@ -1,0 +1,242 @@
+[
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|wide|clinical_concise::MR-gfff2848a70957ac0b7b5",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Scanner avec injection vise par la reference ; l'angio-TDM supra-aortique et intracranien propose la couvre, le scanner sans injection en plus n'est pas contradictoire."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|wide|clinical_concise::MR-g8f23afa63325b0d08bd8",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Laparotomie precoce, conduite de la reference."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|wide|clinical_concise::MR-gd1b252c6b18be4bca7b6",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Non a l'abaissement a 31 C, sans benefice sur la PIC, comme la reference."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|wide|clinical_concise::MR-g2c188878f4fca6996f4b",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Risque intermediaire 1 a 5 %, comme la reference ; les editions anciennes sont citees comme anterieures."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|wide|clinical_concise::MR-g6951bd8344b814c79f7e",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Epreuve correcte : absence de reponse apres 2 jours d'arret des diuretiques et albumine 1 g/kg."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|wide|clinical_concise::MR-ga86840965e184a4c0f3d",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Support video reduisant l'anxiete et ameliorant la satisfaction, conforme a la reference."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|wide|clinical_concise::MR-gace2db46f6d0fbc9a4b7",
+  "correctness": "partial",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Non-indication de la VNI de rattrapage donnee, mais motivation (mortalite, retard de reintubation) absente et exceptions BPCO/OAP absentes de la reference."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|wide|clinical_concise::MR-gfc720f85a7e4c8f6d739",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Gouttiere sur mesure preferee a la gouttiere standard, comme la reference."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|wide|clinical_concise::MR-g9f4e50ab33c87f6858b4",
+  "correctness": "partial",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Absence de lien hierarchique enoncee, mais la preference de non-implication dans les soins est omise et l'examen physique ajoute n'est pas dans la reference."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|wide|clinical_concise::MR-g83a9315591cd44551dbc",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Detection des sous- et surdosages chez le patient curarise, conforme."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|wide|clinical_concise::MR-gff794cd57325dca363d6",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Detection facilitee du sous- et surdosage et affinement du raisonnement, conforme."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|wide|clinical_concise::MR-gf761346ec9be5d6ba346",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Formation de l'equipe a la communication, conforme."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|wide|clinical_concise::MR-gfd6492bcff9d310fa822",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Glycemie peroperatoire en interventions a risque et en SSPI, conforme."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|wide|clinical_concise::MR-g55e468b6df0cb295c14b",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Perfusion continue associee au risque d'echec de conversion, comparee au bolus programme (equivalent PIEB), conforme."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|wide|clinical_concise::MR-gc6d6192f7b53462c02dd",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Plasma therapeutique 10 a 15 mL/kg, conforme."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|wide|clinical_concise::MR-g2b5dca4f8dcab2a9f869",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Bloc possible sous AG avec echoguidage, eveille en premiere intention, coherent avec la reference."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|wide|clinical_concise::MR-ga7998a95924ce47cf4b2",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Avis neurochirurgical pour deficit complet et EMG, conformes ; l'avis neurologue ajoute pour deficit incomplet n'est pas contradictoire."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|wide|clinical_concise::MR-gcb7201d68bfd3c66882d",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Periode de 6 mois et accord fort, conformes."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|wide|clinical_concise::MR-g394ecc098e4d21e40da0",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Score 2 pour PaO2/FiO2 entre 201 et 300, conforme."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|wide|clinical_concise::MR-g1fa665d53b3782891db2",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "ONHD pendant l'apnee, conforme."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|wide|clinical_concise::MR-g6d7e10b60e750f150a7a",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Ventilation au masque des que SpO2 < 95 %, FiO2 >= 0,8 et pressions < 15 cmH2O, conforme."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|wide|clinical_concise::MR-g1b4ad3d31046fdbdd025",
+  "correctness": "partial",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Reponse tronquee avant la conclusion sur la realisation du bloc sous AG en 2016 ; la partie 2001 est coherente, sans contresens releve."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|wide|clinical_concise::MR-g518431a84972e17017d1",
+  "correctness": "correct",
+  "abstained": false,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Gamme 24G-14G en 2000 et 26G-16G en 2023, conforme."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|wide|clinical_concise::MR-g78a74d874a76bbb543f1",
+  "correctness": "incorrect",
+  "abstained": false,
+  "serious_error": "wrong_conduct",
+  "faithful": null,
+  "justification": "Seuils 100 et 150 G/L justes, mais le changement est presente comme une baisse du seuil alors qu'il passe de 100 a 150 G/L : sens inverse de la reference."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|wide|clinical_concise::MR-abst000",
+  "correctness": "correct",
+  "abstained": true,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Abstention, comme attendu par la reference."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|wide|clinical_concise::MR-abst015",
+  "correctness": "incorrect",
+  "abstained": false,
+  "serious_error": "missing_abstention",
+  "faithful": null,
+  "justification": "Question non couverte, mais la reponse donne une conduite (pas de transfusion preoperatoire, seuils) au lieu de s'abstenir."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|wide|clinical_concise::MR-abst016",
+  "correctness": "correct",
+  "abstained": true,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Abstention, comme attendu par la reference."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|wide|clinical_concise::MR-abst026",
+  "correctness": "correct",
+  "abstained": true,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Abstention, comme attendu par la reference."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|wide|clinical_concise::MR-abst031",
+  "correctness": "correct",
+  "abstained": true,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Abstention, comme attendu par la reference."
+ },
+ {
+  "case_id": "C9_simple_hybrid_rerank-final_top_k=16+context_window=1+expand_table_parent=true+use_context_pruning=false+max_context_chars=30000|wide|clinical_concise::MR-abst037",
+  "correctness": "correct",
+  "abstained": true,
+  "serious_error": "none",
+  "faithful": null,
+  "justification": "Abstention, comme attendu par la reference."
+ }
+]
