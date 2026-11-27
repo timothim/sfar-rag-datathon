@@ -3,7 +3,7 @@
 The judge scores one answer against the reference answer (and, when given, the cited sources):
   correctness      : correct | partial | incorrect
   abstained        : the answer declines to answer / says the corpus does not cover it
-  serious_error    : none | wrong_drug | wrong_dose | obsolete_as_current | unsupported_claim |
+  serious_error    : none | wrong_drug | wrong_dose | wrong_conduct | obsolete_as_current | unsupported_claim |
                      missing_abstention | other   (principle 7, counted apart)
   faithful         : every clinical claim is supported by the provided sources (None if no sources)
   justification    : one short sentence
@@ -31,7 +31,7 @@ JUDGE_SYSTEM = """Tu es un évaluateur clinique rigoureux (anesthésie-réanimat
 Grille :
 - correctness : "correct" si la réponse donne la même conduite que la référence (synonymes, formulations et détails supplémentaires exacts acceptés) ; "partial" si elle est incomplète mais sans contresens ; "incorrect" si elle contredit la référence, propose une autre molécule/dose/conduite, ou répond à côté. Une réponse qui propose plusieurs options dont une seule correcte sans trancher est "partial".
 - abstained : true si la réponse refuse de répondre ou dit que les documents ne couvrent pas la question.
-- serious_error : l'erreur la plus grave, parmi : none, wrong_drug (mauvaise molécule), wrong_dose (dose, unité, fréquence ou seuil faux), obsolete_as_current (recommandation périmée présentée comme en vigueur), unsupported_claim (affirmation clinique importante absente des sources fournies), missing_abstention (répond alors que la référence indique que la question n'est pas couverte), other.
+- serious_error : l'erreur la plus grave, parmi : none, wrong_drug (mauvaise molécule), wrong_dose (dose, unité, fréquence ou seuil faux), wrong_conduct (conduite opposée à la référence sans erreur de molécule ni de dose : indication inversée, faire au lieu de ne pas faire ou l'inverse, sens d'une règle inversé), obsolete_as_current (recommandation périmée présentée comme en vigueur), unsupported_claim (affirmation clinique importante absente des sources fournies), missing_abstention (répond alors que la référence indique que la question n'est pas couverte), other. Une abstention à tort (la réponse refuse alors que la référence donne une conduite) n'est pas une erreur grave : correctness = "incorrect", abstained = true, serious_error = "none". Trancher sans demander une précision que la référence exige se note par forbidden_violated et behavior, pas par serious_error, sauf si la conduite donnée est elle-même fausse. "other" est réservé à une erreur dangereuse qui n'entre dans aucune autre catégorie.
 - faithful : si des sources sont fournies, true si chaque affirmation clinique de la réponse est soutenue par elles ; sinon null.
 - justification : une phrase courte.
 
@@ -48,7 +48,7 @@ JUDGE_SCHEMA = {
     "properties": {
         "correctness": {"type": "string", "enum": ["correct", "partial", "incorrect"]},
         "abstained": {"type": "boolean"},
-        "serious_error": {"type": "string", "enum": ["none", "wrong_drug", "wrong_dose", "obsolete_as_current", "unsupported_claim", "missing_abstention", "other"]},
+        "serious_error": {"type": "string", "enum": ["none", "wrong_drug", "wrong_dose", "wrong_conduct", "obsolete_as_current", "unsupported_claim", "missing_abstention", "other"]},
         "faithful": {"type": ["boolean", "null"]},
         "justification": {"type": "string"},
         "claims_satisfied": {"type": "array", "items": {"type": "string"}},

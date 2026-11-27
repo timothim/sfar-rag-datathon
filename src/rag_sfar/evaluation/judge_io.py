@@ -23,7 +23,8 @@ from rag_sfar.evaluation.datasets import load_suite
 from rag_sfar.evaluation.harness import _aggregate, to_markdown
 from rag_sfar.evaluation.judge import cohen_kappa
 
-SERIOUS = ("wrong_drug", "wrong_dose", "obsolete_as_current", "unsupported_claim", "missing_abstention")
+# "wrong_conduct" added 2026-11-27 (rubric v2): reports judged before that date coded opposite conducts as "other".
+SERIOUS = ("wrong_drug", "wrong_dose", "wrong_conduct", "obsolete_as_current", "unsupported_claim", "missing_abstention")
 
 
 def _reference(item) -> str:

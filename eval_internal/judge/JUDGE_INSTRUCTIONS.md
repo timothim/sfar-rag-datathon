@@ -5,7 +5,7 @@ Tu es un évaluateur clinique rigoureux (anesthésie-réanimation). Tu compares 
 Grille :
 - correctness : "correct" si la réponse donne la même conduite que la référence (synonymes, formulations et détails supplémentaires exacts acceptés) ; "partial" si elle est incomplète mais sans contresens ; "incorrect" si elle contredit la référence, propose une autre molécule/dose/conduite, ou répond à côté. Une réponse qui propose plusieurs options dont une seule correcte sans trancher est "partial".
 - abstained : true si la réponse refuse de répondre ou dit que les documents ne couvrent pas la question.
-- serious_error : l'erreur la plus grave, parmi : none, wrong_drug (mauvaise molécule), wrong_dose (dose, unité, fréquence ou seuil faux), obsolete_as_current (recommandation périmée présentée comme en vigueur), unsupported_claim (affirmation clinique importante absente des sources fournies), missing_abstention (répond alors que la référence indique que la question n'est pas couverte), other.
+- serious_error : l'erreur la plus grave, parmi : none, wrong_drug (mauvaise molécule), wrong_dose (dose, unité, fréquence ou seuil faux), wrong_conduct (conduite opposée à la référence sans erreur de molécule ni de dose : indication inversée, faire au lieu de ne pas faire ou l'inverse, sens d'une règle inversé), obsolete_as_current (recommandation périmée présentée comme en vigueur), unsupported_claim (affirmation clinique importante absente des sources fournies), missing_abstention (répond alors que la référence indique que la question n'est pas couverte), other. Une abstention à tort (la réponse refuse alors que la référence donne une conduite) n'est pas une erreur grave : correctness = "incorrect", abstained = true, serious_error = "none". Trancher sans demander une précision que la référence exige se note par forbidden_violated et behavior, pas par serious_error, sauf si la conduite donnée est elle-même fausse. "other" est réservé à une erreur dangereuse qui n'entre dans aucune autre catégorie.
 - faithful : si des sources sont fournies, true si chaque affirmation clinique de la réponse est soutenue par elles ; sinon null.
 - justification : une phrase courte.
 
@@ -22,7 +22,7 @@ Un fichier JSON : liste de cas {case_id, question, reference, answer}, avec, qua
 
 ## Format de sortie
 Une liste JSON, un objet par cas, dans le même ordre :
-{"case_id": "...", "correctness": "correct"|"partial"|"incorrect", "abstained": true|false, "serious_error": "none"|"wrong_drug"|"wrong_dose"|"obsolete_as_current"|"unsupported_claim"|"missing_abstention"|"other", "faithful": null, "justification": "une phrase"}
+{"case_id": "...", "correctness": "correct"|"partial"|"incorrect", "abstained": true|false, "serious_error": "none"|"wrong_drug"|"wrong_dose"|"wrong_conduct"|"obsolete_as_current"|"unsupported_claim"|"missing_abstention"|"other", "faithful": null, "justification": "une phrase"}
 
 Pour un cas portant des faits obligatoires, des affirmations interdites ou un comportement attendu, ajouter :
 `"claims_satisfied": ["Q01-C1", ...], "forbidden_violated": [], "behavior": "answer"|"clarification"|"abstention"`.
