@@ -6,26 +6,40 @@
 
 ```mermaid
 flowchart TD
-    subgraph HL["Hors ligne : construction de l'index"]
-        A["265 recommandations SFAR en Markdown<br/>+ antibioprophylaxie V3.1 et ses errata"] --> B["Ingestion<br/>éditions remplacées repérées<br/>tableaux découpés ligne par ligne<br/>notes de tableau rattachées à leurs lignes"]
-        B --> C["Index tas_v6 : 36 872 passages<br/>mots (BM25) et vecteurs (e5-small)"]
+    subgraph PREP["Étape 1 : préparation, une seule fois"]
+        direction LR
+        A["265 recommandations SFAR<br/>en Markdown"] --> B["Découpage en passages<br/>une fiche par ligne de tableau<br/>notes rattachées à leur ligne"]
+        B --> C[("Index<br/>36 872 passages")]
     end
-    Q["Question"] --> O["Options de robustesse, éteintes par défaut<br/>sigles et n-grammes de caractères<br/>normalisation de la question par le modèle"]
-    O --> P["Analyse de la question<br/>éditions en vigueur seulement"]
-    P --> S1["Recherche par mots<br/>BM25"]
-    P --> S2["Recherche par sens<br/>embeddings e5-small"]
+    subgraph RECH["Étape 2 : recherche, à chaque question (environ 0,2 s)"]
+        Q(["Question du clinicien"]) --> S1["Recherche par mots<br/>BM25"]
+        Q --> S2["Recherche par sens<br/>embeddings"]
+        S1 --> F["Fusion des deux listes<br/>éditions en vigueur seulement"]
+        S2 --> F
+        F --> R["Reclassement<br/>un modèle relit la question<br/>avec chaque passage"]
+        R --> X["Contexte<br/>16 passages, leurs voisins,<br/>le tableau parent et ses notes<br/>avec titre, année, édition, section, grade"]
+    end
+    subgraph REP["Étape 3 : réponse"]
+        L["Modèle de langage<br/>répond en citant ses sources<br/>ou s'abstient"] --> V["Contrôle automatique<br/>avertit si une dose ou une molécule<br/>n'est pas dans les passages"]
+    end
     C -.-> S1
     C -.-> S2
-    S1 --> F["Fusion des deux listes (RRF)"]
-    S2 --> F
-    F --> R["Reclassement<br/>cross-encoder"]
-    R --> X["Contexte, 30 000 caractères au plus<br/>16 passages, passage voisin, tableau parent, notes de tableau<br/>titre, année, édition, section, population, grade"]
-    X --> L["Modèle de langage compatible OpenAI<br/>réponse courte citée, ou abstention"]
-    L --> V["Contrôle automatique<br/>dose, molécule ou citation absente des passages : avertissement"]
-    X --> M["Serveur MCP et mode « passages seuls »<br/>passages cités, sans modèle de langage"]
+    X --> L
+    X --> M["Sans modèle de langage<br/>passages cités seuls<br/>(mode « passages seuls », serveur MCP)"]
 ```
 
-Ce schéma décrit la configuration évaluée (`C10_context_notes`). Les composants décrits dans d'anciennes versions de ce dépôt (fusion DBSF, boosts de métadonnées, module correctif « CRAG », ordre en U du contexte) n'en font pas partie : mesurés sans effet, ils sont désactivés.
+| Étape | Ce qu'elle fait | Pourquoi |
+|---|---|---|
+| Découpage | Chaque recommandation est coupée en passages ; dans un tableau, chaque ligne devient une fiche qui garde ses en-têtes et ses notes | Une dose n'a de sens qu'avec son acte, sa population et sa note |
+| Recherche par mots | Retrouve les passages qui contiennent les termes de la question | Fiable pour les noms de molécules, d'actes et les numéros de recommandation |
+| Recherche par sens | Retrouve les passages proches par le sens, même sans mot commun | Rattrape les paraphrases et une partie des fautes de frappe |
+| Fusion | Réunit les deux listes et écarte les éditions remplacées | Une recommandation périmée ne doit pas être servie comme en vigueur |
+| Reclassement | Un second modèle relit la question avec chaque passage candidat et les reclasse | Plus précis que les deux recherches, mais trop lent pour tout le corpus |
+| Contexte | Garde les 16 meilleurs passages, ajoute le passage voisin, le tableau parent et les notes de tableau, en 30 000 caractères au plus | Le modèle de langage doit voir la ligne entière et ses conditions |
+| Réponse | Le modèle de langage répond en une à trois phrases citées, ou s'abstient | Chaque affirmation doit pouvoir être relue dans le passage cité |
+| Contrôle | Signale une dose, une molécule ou une citation absente des passages | Avertissement pour le lecteur, sans modifier la réponse |
+
+Ce schéma décrit la configuration évaluée (`C10_context_notes`). Deux options de robustesse aux sigles et aux fautes de frappe existent, éteintes par défaut (voir « Limites »). Les composants décrits dans d'anciennes versions de ce dépôt (fusion DBSF, boosts de métadonnées, module correctif « CRAG », ordre en U du contexte) n'en font pas partie : mesurés sans effet, ils sont désactivés.
 
 ## Ce que c'est
 
@@ -133,6 +147,7 @@ Cinq outils en lecture seule (`sfar_search`, `search_sfar_recommendations`, `com
 |---|---|
 | `reports/FINAL_REPORT.md` | rapport final : résultats, erreurs graves, faiblesses, résultats négatifs, écarts au protocole |
 | `reports/COMPARAISON_SOLUTIONS.md` | comparaison des stratégies mesurées et de ce qui n'a pas été mesuré |
+| `reports/README.md` | index de tous les rapports |
 | `reports/A_VALIDER_MEDECINS.md` | points de sécurité clinique à faire relire |
 | `reports/agents/` | rapports détaillés de chaque chantier (retrieval, ingestion, génération, juge, robustesse, revues indépendantes) |
 | `eval_internal/README.md` | jeux internes : synthétiques, non validés médicalement, outils de développement seulement |

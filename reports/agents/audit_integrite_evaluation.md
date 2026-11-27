@@ -9,7 +9,7 @@
 ### CRITIQUE : les chiffres phares ne peuvent pas être présentés comme une mesure de généralisation
 
 1. **Le « 100 % (50/50) » est un score sur un jeu de développement.** Le jeu « stratifié 50 » (`run_e2e_eval.py:311-325`, toujours le même tirage déterministe) a servi à itérer : premiers runs 3B à 01:10, modifications de `prompts.py`, `client.py`, `crag.py`, `pipeline.py` et `context_optimizer.py` entre 06:36 et 07:08, puis le run « 100 % » à 07:27. La masterclass le reconnaît elle-même (`scripts/build_masterclass_pdf.py:495-501`) : les corrections visent nommément Q04, Q16, Q28, Q143 et Q167 (*« la suppression des distracteurs QCM + garde-fou (hors main) propulse les QCM de 70 % → 100 % (stratifié) »*). **13 des 50 questions stratifiées** sont ciblées directement par une règle, un exemple de prompt ou un docstring écrits à partir de ces questions. C'est le cas de **seulement 2 questions du jeu « inédites »**.
-2. **Les « 50 inédites, jamais observées » ne sont pas tenues à l'écart.** (a) Les 171 questions, ces 50 comprises, ont servi à régler le retrieval : les ablations C0→C8 tournent sur les 171, et `reports/ablation_results.json` liste en `sample_failures` six questions dites « inédites » (Q14, Q34, Q40, Q44, Q111, Q140), corrigées avant le gel du code (Q40 échoue en C6 et réussit en C7/C8). (b) Leur liste n'existait pas dans le code au moment du run : `--ids-file` a été ajouté aujourd'hui, et `reports/repro/*_ids.json` date de 12:55. (c) Le dépôt n'a qu'un commit, donc aucun hash ne prouve l'ordre « gel puis test ». Seul élément favorable : d'après les dates de modification, le run « inédites » (07:37) est postérieur à la dernière modification de `src/` (07:08).
+2. **Les « 50 inédites, jamais observées » ne sont pas tenues à l'écart.** (a) Les 171 questions, ces 50 comprises, ont servi à régler le retrieval : les ablations C0→C8 tournent sur les 171, et `reports/legacy/ablation_results.json` liste en `sample_failures` six questions dites « inédites » (Q14, Q34, Q40, Q44, Q111, Q140), corrigées avant le gel du code (Q40 échoue en C6 et réussit en C7/C8). (b) Leur liste n'existait pas dans le code au moment du run : `--ids-file` a été ajouté aujourd'hui, et `reports/repro/*_ids.json` date de 12:55. (c) Le dépôt n'a qu'un commit, donc aucun hash ne prouve l'ordre « gel puis test ». Seul élément favorable : d'après les dates de modification, le run « inédites » (07:37) est postérieur à la dernière modification de `src/` (07:08).
 3. **Fuite benchmark → système, mesurée.** Le scan automatique (`leak_scan.py`) trouve **20 lignes de code système** qui partagent un 4-gramme non générique avec **22 questions** du benchmark. Parmi elles, **11 lignes** contiennent des formulations **absentes de la RFE V3.0**, donc copiées du benchmark et non du corpus (14 questions). Le tri manuel (§1) ajoute des fuites sémantiques que le scan ne voit pas :
    - la liste d'exemples de réponse du prompt (`prompts.py:35`) est **exactement l'ensemble des réponses des questions « allergie »** (Clindamycine, Vancomycine, Triméthoprime/Sulfaméthoxazole, Clindamycine + Gentamicine) ;
    - les docstrings CRAG recopient Q16 et Q146 mot pour mot (`crag.py:149`, `crag.py:204-205`) ;
@@ -71,7 +71,7 @@
 | Réponses de référence exactes (associations) présentes dans le prompt système | 3 (`Amoxicilline/Clavulanate`, `Clindamycine + Gentamicine`, `Triméthoprime/Sulfaméthoxazole`) + noms simples `Clindamycine`, `Vancomycine` | `leak_scan.py`, `prompts.py:35` |
 | Questions du stratifié-50 ciblées par une règle/exemple dédiés | 13/50 (Q03, Q04, Q09, Q12, Q16, Q27, Q28, Q43, Q139, Q141, Q143, Q146, Q167) | tri manuel + `rule_coverage.py` |
 | Questions des « inédites-50 » ciblées | 2/50 (Q140, Q153) | idem |
-| Questions « inédites » visibles dans les listes d'échecs des ablations | 6 (Q14, Q34, Q40, Q44, Q111, Q140) | `reports/ablation_results.json` |
+| Questions « inédites » visibles dans les listes d'échecs des ablations | 6 (Q14, Q34, Q40, Q44, Q111, Q140) | `reports/legacy/ablation_results.json` |
 | Evidence recall, 8 chunks ABP V3.0 au hasard | **80,7 %** (C0 naïf : 92,0 % ; C8 : 99,3 %) | `metric_triviality.py` |
 | Effectif « Allergie Recall » (retrieval) | 6 questions (ABP), 4 (stress) | idem |
 | Baseline constante « Pas d'ABP » + QCM « C » | 46,8 % (171) / 36 % (stratifié) / **58 % (inédites)** | idem |
@@ -144,7 +144,7 @@ Le code d'évaluation et de présentation (`benchmarks.py`, `build_masterclass_p
 
 ## 4. Jeux « 50 inédites » et `multi_rfe_stress_30`
 
-**« 50 inédites » (`reports/e2e_heldout_unseen_50_7b.json`)**
+**« 50 inédites » (`reports/legacy/e2e_heldout_unseen_50_7b.json`)**
 - **Construction.** Il s'agit d'un échantillonnage systématique décalé d'un cran par rapport au stratifié pour les questions ouvertes (Q02, Q07…), plus les QCM Q140-Q157 non retenus. La règle n'est pas dans le code de l'époque : la liste d'identifiants n'existe que depuis le 26/11 à 12:55.
 - **Fuite.** Toutes ces questions ont servi au réglage du retrieval (ablations sur les 171, échecs visibles pour 6 d'entre elles). Elles sont donc « inédites » seulement pour le prompt et la génération.
 - **Composition.** Aucune question allergie. Le jeu est plus facile pour une réponse constante (58 % contre 36 % sur le stratifié), donc les deux jeux ne sont pas comparables.

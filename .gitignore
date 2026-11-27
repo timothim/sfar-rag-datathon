@@ -94,3 +94,7 @@ reports/eval/judge_v4/**/*abpv*
 scripts/build_masterclass_pdf.py
 reports/archive/
 eval_internal/work/frontier/
+
+# session-specific job queues
+scripts/queue_dev_generation.sh
+scripts/queue_h_ab.sh

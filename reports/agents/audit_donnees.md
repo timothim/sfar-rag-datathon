@@ -257,7 +257,7 @@ Commandes : `PYTHONPATH=src .venv/bin/python reports/agents/data_audit_scripts/0
 
 ### 3.1 Ce que le loader calcule (vérifié)
 
-264 documents, 26 lignées (94 documents) et **44 documents marqués « remplacés »**, conformément à `reports/corpus_audit.md`. Les lignées sont **définies à la main par des expressions régulières sur les titres** (`LINEAGE_RULES`). Ce n'est pas une méthode générique : un nouveau titre ou une nouvelle formulation échappe aux règles.
+264 documents, 26 lignées (94 documents) et **44 documents marqués « remplacés »**, conformément à `reports/legacy/corpus_audit.md`. Les lignées sont **définies à la main par des expressions régulières sur les titres** (`LINEAGE_RULES`). Ce n'est pas une méthode générique : un nouveau titre ou une nouvelle formulation échappe aux règles.
 
 ### 3.2 Exactitude sur les 44 supersessions (sortie « Supersessions du loader »)
 
@@ -481,7 +481,7 @@ Problèmes à traiter :
 
 ---
 
-## 7. Écarts avec `reports/corpus_audit.md` et le README
+## 7. Écarts avec `reports/legacy/corpus_audit.md` et le README
 
 | Affirmation | Mesuré | Verdict |
 |---|---|---|
