@@ -135,7 +135,17 @@ def replace_math(text: str) -> str:
             return m.group(0)
         return latex_to_text(inner)
 
+    text = re.sub(r"\$\$(.{1,600}?)\$\$", lambda m: latex_to_text(m.group(1)), text, flags=re.S)
     text = _DOLLAR_LOOSE_RE.sub(_rep, text)
+    # Bare LaTeX left without delimiters (e.g. inside table cells once <math> tags are dropped)
+    if "\\" in text:
+        text = _LATEX_SYMBOL_RE.sub(lambda m: _LATEX_SYMBOLS[m.group(0)], text)
+        for _ in range(2):
+            text = _LATEX_TEXT_CMD_RE.sub(r"\1", text)
+            text = _LATEX_FRAC_RE.sub(r"\1/\2", text)
+        text = _LATEX_LEFTRIGHT_RE.sub(lambda m: "" if m.group(1) == "." else m.group(1), text)
+        text = _LATEX_SYMBOL_RE.sub(lambda m: _LATEX_SYMBOLS[m.group(0)], text)
+    text = re.sub(r"(?<=[A-Za-z])\^\{?([0-9])\}?(?![0-9])", lambda m: m.group(1).translate(_SUPERSCRIPT), text)
     return text
 
 
@@ -157,6 +167,10 @@ _INLINE_TAG_RE = re.compile(
 )
 
 
+_ORPHAN_CELL_RE = re.compile(r"</?(?:td|th)\b[^<>]{0,300}>", re.I)
+_ORPHAN_ROW_RE = re.compile(r"</?(?:tr|tbody|thead|table)\b[^<>]{0,300}>", re.I)
+
+
 def strip_inline_tags(text: str) -> str:
     def _sup(m: re.Match) -> str:
         v = m.group(1)
@@ -167,6 +181,10 @@ def strip_inline_tags(text: str) -> str:
     text = _BR_RE.sub("\n", text)
     text = re.sub(r'<input\b[^>]*type="checkbox"[^>]*checked[^>]*>', "☒ ", text, flags=re.I)
     text = re.sub(r"<input\b[^>]*>", "☐ ", text, flags=re.I)
+    # Table fragments outside a complete <table> (OCR page cuts): cells -> " | ", rows -> newline
+    text = _ORPHAN_ROW_RE.sub("\n", text)
+    text = _ORPHAN_CELL_RE.sub(" | ", text)
+    text = re.sub(r"(?:\s*\|\s*){2,}", " | ", text)
     return _INLINE_TAG_RE.sub("", text)
 
 
