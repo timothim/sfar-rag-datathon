@@ -63,3 +63,5 @@ eval/datasets/abpe171.jsonl
 eval/splits/abpe171/
 .gpu_lock/
 .gpu_queue/
+# judge batches of the enriched benchmark contain its question text (local only)
+eval_internal/judge/runs/*abpe*/
