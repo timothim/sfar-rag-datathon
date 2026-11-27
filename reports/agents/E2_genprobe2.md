@@ -112,7 +112,7 @@ L'évaluation finale a épuisé les jeux tenus à l'écart et a montré trois fa
 - `eval_internal/splits/genprobe2/SEALED.md` (hash).
 - `eval_internal/genprobe2_a_valider_medecins.csv`.
 - `eval_internal/build_genprobe2_checks.py`.
-- `eval_internal/work/genprobe2/` :
+- `eval_internal/work/genprobe2/` (local, ignoré par `.gitignore`) :
   - consigne des auteurs ;
   - catalogue des documents en vigueur ;
   - brouillons par famille, après relecture ;
