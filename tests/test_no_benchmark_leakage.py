@@ -31,7 +31,16 @@ NGRAM = 7
 # Expert benchmark (benchmark-enrichi, phase 1): proposed questions, choices, short answers and
 # the texts of mandatory / forbidden claims. Checked by its own test (see below).
 ENRICHED_SOURCE = ROOT / "data/benchmark_enrichi_alparagsfar/benchmark_enrichi_phase1/questions_enriched_draft.jsonl"
-ENRICHED_DATASETS = {"abpe171.jsonl"}
+# Validated release of the same benchmark (2026-11-27, sfar-abp-v31.x): revised grids, vernacular
+# wordings and the 29 released reformulations (suites abpv171 / abpvern).
+_VALIDATED = ROOT / "data/benchmark_alparagsfar_20261127/benchmark_enrichi_phase1"
+ENRICHED_SOURCES = [
+    ENRICHED_SOURCE,
+    _VALIDATED / "questions_validated.jsonl",
+    _VALIDATED / "revision_v31/data/standard.jsonl",
+    _VALIDATED / "revision_v31/data/vernaculaire.jsonl",
+]
+ENRICHED_DATASETS = {"abpe171.jsonl", "abpv171.jsonl", "abpvern.jsonl"}
 
 EVAL_SOURCES = [
     ROOT / "data/antibioprophylaxie_benchmark/datasets/sfar_antibioprophylaxie/benchmark.json",
@@ -52,22 +61,32 @@ def _load_enriched_texts() -> list[dict[str, object]]:
     Claims are long clinical sentences: they go through the n-gram rule (with the choices), not
     the verbatim-answer rule."""
     out = []
-    if not ENRICHED_SOURCE.exists():
-        return out
-    for line in ENRICHED_SOURCE.read_text(encoding="utf-8").splitlines():
-        if not line.strip():
+    seen: set[str] = set()
+    for source in ENRICHED_SOURCES:
+        if not source.exists():
             continue
-        r = json.loads(line)
-        prop = r.get("proposed") or {}
-        ref = r.get("reference_answer") or {}
-        claims = [c.get("text_fr", "") for key in ("mandatory_claims", "forbidden_claims") for c in ref.get(key) or []]
-        out.append({
-            "src": f"{ENRICHED_SOURCE.name}:{r.get('legacy_id') or r.get('question_id')}",
-            "question": prop.get("question") or "",
-            "choices": list((prop.get("choices") or {}).values()) + claims,
-            "answer": ref.get("short_answer") or "",
-        })
+        for line in source.read_text(encoding="utf-8").splitlines():
+            if not line.strip():
+                continue
+            r = json.loads(line)
+            prop = r.get("proposed") or {}
+            ref = r.get("reference_answer") or {}
+            claims = [c.get("text_fr", "") for key in ("mandatory_claims", "forbidden_claims") for c in ref.get(key) or []]
+            key = json.dumps([prop.get("question"), prop.get("choices"), ref.get("short_answer"), claims], ensure_ascii=False)
+            if key in seen:  # the same row in several files counts once (n-gram document frequency)
+                continue
+            seen.add(key)
+            out.append(_enriched_row(source, r, prop, ref, claims))
     return out
+
+
+def _enriched_row(source: Path, r: dict, prop: dict, ref: dict, claims: list[str]) -> dict[str, object]:
+    return {
+        "src": f"{source.name}:{r.get('question_id') or r.get('legacy_id')}",
+        "question": prop.get("question") or "",
+        "choices": list((prop.get("choices") or {}).values()) + claims,
+        "answer": ref.get("short_answer") or "",
+    }
 
 
 def _load_eval_texts() -> list[dict[str, object]]:

@@ -1,0 +1,54 @@
+{
+ "abpv171/dev": {
+  "n_items": 102,
+  "n_chunks": 825,
+  "gold_passages": 348,
+  "gold_passages_found": 347,
+  "evidence": 222,
+  "evidence_found": 221,
+  "evidence_without_useful_fragment": 0,
+  "items_with_sets": 96,
+  "items_sufficiency_mappable": 96
+ },
+ "abpv171/test_posthoc": {
+  "n_items": 69,
+  "n_chunks": 825,
+  "gold_passages": 325,
+  "gold_passages_found": 325,
+  "evidence": 175,
+  "evidence_found": 174,
+  "evidence_without_useful_fragment": 1,
+  "items_with_sets": 64,
+  "items_sufficiency_mappable": 64
+ },
+ "abpvern/dev": {
+  "n_items": 102,
+  "n_chunks": 825,
+  "gold_passages": 348,
+  "gold_passages_found": 347,
+  "evidence": 222,
+  "evidence_found": 221,
+  "evidence_without_useful_fragment": 0,
+  "items_with_sets": 96,
+  "items_sufficiency_mappable": 96
+ },
+ "abpvern/test_posthoc": {
+  "n_items": 69,
+  "n_chunks": 825,
+  "gold_passages": 325,
+  "gold_passages_found": 325,
+  "evidence": 175,
+  "evidence_found": 174,
+  "evidence_without_useful_fragment": 1,
+  "items_with_sets": 64,
+  "items_sufficiency_mappable": 64
+ },
+ "abpv171_vs_abpe171": {
+  "same_evidence_and_sets": 171,
+  "same_query": 171
+ },
+ "abpvern_vs_abpv171": {
+  "same_query": 83,
+  "same_evidence": 171
+ }
+}

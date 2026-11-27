@@ -441,6 +441,8 @@ def convert_enriched_benchmark(
     gold_doc_ids: list[str] | None = None,
     index_dir: Path = DEFAULT_INDEX,
     suite: str = "abpe171",
+    source: str = "benchmark_enrichi_phase1/questions_enriched_draft.jsonl",
+    skip_reformulations: bool = False,
 ) -> list[EvalItem]:
     """Convert the benchmark-enrichi consolidated JSONL (phase 1, V3.1 provisional reference).
 
@@ -461,6 +463,8 @@ def convert_enriched_benchmark(
         if not line.strip():
             continue
         r = json.loads(line)
+        if skip_reformulations and r.get("parent_question_id"):
+            continue  # validated release (v31.2): approved reformulations (ids "-V") are a separate variant
         prop = r.get("proposed") or {}
         ref = r.get("reference_answer") or {}
         cls = r.get("classification") or {}
@@ -556,7 +560,14 @@ def convert_enriched_benchmark(
                 "reference_version": r.get("current_reference_version"),
                 "review_decision": (r.get("review") or {}).get("decision"),
                 "citation_verified": (r.get("review") or {}).get("citation_verified"),
-                "source": "benchmark_enrichi_phase1/questions_enriched_draft.jsonl",
+                "source": source,
+                # validated release (sfar-abp-v31.1-valide, revised grids): absent from the draft
+                "benchmark_release": r.get("benchmark_release"),
+                "acceptable_behaviors": list(prop.get("acceptable_behaviors") or []),
+                "mcq_policy": prop.get("mcq_policy"),
+                "optional_claims": [c.get("text_fr", "") for c in ref.get("optional_claims") or []],
+                "individualization_information": list(ref.get("individualization_information") or []),
+                "clarification_scoring": ref.get("clarification_scoring_fr"),
             },
         ))
     return items
@@ -796,7 +807,7 @@ def read_lockbox() -> dict[str, str]:
 
 
 # Suites whose files are git-ignored (third-party benchmark, redistribution rights unconfirmed).
-LOCAL_ONLY_SUITES = ("abpe171",)
+LOCAL_ONLY_SUITES = ("abpe171", "abpv171", "abpvern")
 
 
 def verify_lockbox(raise_on_error: bool = False) -> list[str]:
