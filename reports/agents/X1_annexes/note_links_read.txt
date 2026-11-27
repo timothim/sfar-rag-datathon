@@ -1,0 +1,30 @@
+[1] ['*']  2026_RFE-20_4_2026-deifinitif-et-validei
+  S: ban, dabigatran) et programmé pour une procédure à risque hémorragique très élevé comme la neurochirurgie intracrânienne ou les procédures neuraxiales, les experts suggèrent d'arrêter les AOD avec une dernière prise à J-5 *. | Avis d'experts | Fort |
+  N: *\*en cas d'insuffisance rénale (DFG estimé < 50 ml/min/1.73 m²), se référer au chapitre dédié (question 10)*
+[2] ['*']  2026_RFE-20_4_2026-deifinitif-et-validei
+  S: rivaroxaban, dabigatran) et programmé pour une procédure à risque hémorragique élevé, il est proposé d'arrêter les AOD avec une dernière prise à J-3 (J0 étant le jour de la procédure) en l'absence d'insuffisance rénale *. | Grade : 2+ | Accord : Fort
+  N: *\*en cas d'insuffisance rénale (DFG estimé < 50 ml/min/1.73 m²), se référer au chapitre dédié (question 10)*
+[3] ['*']  2026_RFE-20_4_2026-deifinitif-et-validei
+  S: ) et programmé pour une procédure à risque hémorragique très élevé comme la neurochirurgie intracrânienne ou les procédures neuraxiales, les experts suggèrent d'arrêter les AOD avec une dernière prise à J-5 *. | Grade : Avis d'experts | Accord : Fort
+  N: *\*en cas d'insuffisance rénale (DFG estimé < 50 ml/min/1.73 m²), se référer au chapitre dédié (question 10)*
+[4] ['*']  2026_RFE-20_4_2026-deifinitif-et-validei
+  S: ité par AVK pour de la FA, avec ou sans antécédent d'AVC, il est recommandé de reprendre les AVK dans les 24 premières heures après la procédure à la posologie habituelle, sans dose de charge, et sans relais héparinique à dose curative. | 1+ | Fort |
+  N: *\*en cas d'insuffisance rénale (DFG estimé < 50 ml/min/1.73 m²), se référer au chapitre dédié*
+[5] ['*']  2026_RFE-20_4_2026-deifinitif-et-validei
+  S: océdural des AVK par une HBPM à dose curative, avec une première injection le soir de J-3 et une dernière injection au plus tard le matin de J-1, sans contrôle systématique de l'activité anti-Xa le matin de la procédure.* | Grade : 2+ | Accord : Fort
+  N: *\*en cas d'insuffisance rénale (DFG estimé < 50 ml/min/1.73 m²), se référer au chapitre dédié*
+[6] ['*']  2026_RFE-20_4_2026-deifinitif-et-validei
+  S: , il est proposé de réaliser un relais post-procédural par héparines à dose curative (HBPM en deux injections par jour de préférence à l'HNF), débuté idéalement entre 48 et 72 heures après la procédure et arrêté dès le premier INR ≥ 2.* | 2+ | Fort |
+  N: *\*en cas d'insuffisance rénale (DFG estimé < 50 ml/min/1.73 m² ), se référer au chapitre dédié*
+[7] ['*']  2026_RFE-20_4_2026-deifinitif-et-validei
+  S: ural des AVK par une HBPM à dose curative en deux injections par jour, avec une première injection le soir de J-3 et une dernière injection le matin de J-1, sans contrôle de l'activité anti-Xa le matin de l'intervention.* | Grade : 2+ | Accord : Fort
+  N: *\*en cas d'insuffisance rénale (DFG estimé < 50 ml/min/1.73 m² ), se référer au chapitre dédié*
+[8] ['*']  2026_RFE-20_4_2026-deifinitif-et-validei
+  S: é de réaliser un relais post-procédural par héparines à dose curative (HBPM en deux injections par jour de préférence à l'HNF), débuté idéalement entre 48 et 72 heures après la procédure et arrêté dès le premier INR ≥ 2.* | Grade : 2+ | Accord : Fort
+  N: *\*en cas d'insuffisance rénale (DFG estimé < 50 ml/min/1.73 m² ), se référer au chapitre dédié*
+[9] ['*']  2026_RFE-20_4_2026-deifinitif-et-validei
+  S: e injection au plus tard le matin de J-1, sans contrôle de l'activité anti-Xa le matin de l'intervention, et de reprendre les AVK dans les 24 premières heures après la procédure, sans relais héparinique post-procédural à dose curative.* | 2+ | Fort |
+  N: *\*en cas d'insuffisance rénale (DFG estimé < 50 ml/min/1.73 m²), se référer au chapitre dédié*
+[10] ['*']  2026_RFE-20_4_2026-deifinitif-et-validei
+  S: plus tard le matin de J-1, sans contrôle de l'activité anti-Xa le matin de l'intervention, et de reprendre les AVK dans les 24 premières heures après la procédure, sans relais héparinique post-procédural à dose curative.* | Accord : 2+ | Grade : Fort
+  N: *\*en cas d'insuffisance rénale (DFG estimé < 50 ml/min/1.73 m²), se référer au chapitre dédié*

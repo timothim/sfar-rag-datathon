@@ -1,0 +1,1118 @@
+{
+ "abpe171": {
+  "sufficiency": {
+   "base": 95.8,
+   "new": 95.8,
+   "diff": 0.0,
+   "ci": [
+    0.0,
+    0.0
+   ],
+   "changed": [],
+   "pediatric_tag": {
+    "n": 34,
+    "base": 94.1,
+    "new": 94.1,
+    "diff": 0.0,
+    "ci": [
+     0.0,
+     0.0
+    ]
+   },
+   "not_pediatric_tag": {
+    "n": 62,
+    "base": 96.8,
+    "new": 96.8,
+    "diff": 0.0,
+    "ci": [
+     0.0,
+     0.0
+    ]
+   },
+   "query_pop_non_specifie": {
+    "n": 84,
+    "base": 96.4,
+    "new": 96.4,
+    "diff": 0.0,
+    "ci": [
+     0.0,
+     0.0
+    ]
+   },
+   "query_pop_named": {
+    "n": 12,
+    "base": 91.7,
+    "new": 91.7,
+    "diff": 0.0,
+    "ci": [
+     0.0,
+     0.0
+    ]
+   }
+  },
+  "evidence_recall": {
+   "base": 98.2,
+   "new": 98.2,
+   "diff": 0.0,
+   "ci": [
+    0.0,
+    0.0
+   ],
+   "changed": [],
+   "pediatric_tag": {
+    "n": 34,
+    "base": 97.8,
+    "new": 97.8,
+    "diff": 0.0,
+    "ci": [
+     0.0,
+     0.0
+    ]
+   },
+   "not_pediatric_tag": {
+    "n": 62,
+    "base": 98.4,
+    "new": 98.4,
+    "diff": 0.0,
+    "ci": [
+     0.0,
+     0.0
+    ]
+   },
+   "query_pop_non_specifie": {
+    "n": 84,
+    "base": 98.5,
+    "new": 98.5,
+    "diff": 0.0,
+    "ci": [
+     0.0,
+     0.0
+    ]
+   },
+   "query_pop_named": {
+    "n": 12,
+    "base": 95.8,
+    "new": 95.8,
+    "diff": 0.0,
+    "ci": [
+     0.0,
+     0.0
+    ]
+   }
+  },
+  "fired_questions": 36,
+  "n": 102,
+  "counterparts_added": 0,
+  "notes_added": 52,
+  "chars_added_mean_all": 246,
+  "chars_added_mean_fired": 697,
+  "context_chars_mean": [
+   20342,
+   20588
+  ],
+  "additions": [
+   {
+    "id": "Q05",
+    "pop": "non_specifie",
+    "tags": [
+     "population:adult_and_pediatric",
+     "pediatric"
+    ],
+    "sufficiency": [
+     1.0,
+     1.0
+    ],
+    "evidence_recall": [
+     1.0,
+     1.0
+    ],
+    "cp": [],
+    "notes": [
+     {
+      "anchor": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0727_f222efd7",
+      "note": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0713_4d0ce032",
+      "chars": 762
+     }
+    ]
+   },
+   {
+    "id": "Q09",
+    "pop": "non_specifie",
+    "tags": [
+     "population:adult"
+    ],
+    "sufficiency": [
+     1.0,
+     1.0
+    ],
+    "evidence_recall": [
+     1.0,
+     1.0
+    ],
+    "cp": [],
+    "notes": [
+     {
+      "anchor": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0434_7d130ec5",
+      "note": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0438_f4803017",
+      "chars": 430
+     }
+    ]
+   },
+   {
+    "id": "Q37",
+    "pop": "pediatrie",
+    "tags": [
+     "population:pediatric",
+     "pediatric"
+    ],
+    "sufficiency": [
+     1.0,
+     1.0
+    ],
+    "evidence_recall": [
+     1.0,
+     1.0
+    ],
+    "cp": [],
+    "notes": [
+     {
+      "anchor": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0477_7ba4267d",
+      "note": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0480_5ddd734c",
+      "chars": 855
+     },
+     {
+      "anchor": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0477_7ba4267d",
+      "note": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0481_f17014a5",
+      "chars": 1086
+     }
+    ]
+   },
+   {
+    "id": "Q40",
+    "pop": "non_specifie",
+    "tags": [
+     "population:not_specified"
+    ],
+    "sufficiency": [
+     1.0,
+     1.0
+    ],
+    "evidence_recall": [
+     1.0,
+     1.0
+    ],
+    "cp": [],
+    "notes": [
+     {
+      "anchor": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0779_95fbcf72",
+      "note": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0736_f1a5a20e",
+      "chars": 606
+     },
+     {
+      "anchor": "2026_RFE-20_4_2026-deifinitif-et-validei_1b550e__c0537_479f4ead",
+      "note": "2026_RFE-20_4_2026-deifinitif-et-validei_1b550e__c0545_7b575612",
+      "chars": 641
+     }
+    ]
+   },
+   {
+    "id": "Q41",
+    "pop": "pediatrie",
+    "tags": [
+     "population:pediatric",
+     "pediatric"
+    ],
+    "sufficiency": [
+     1.0,
+     1.0
+    ],
+    "evidence_recall": [
+     1.0,
+     1.0
+    ],
+    "cp": [],
+    "notes": [
+     {
+      "anchor": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0193_ff57c101",
+      "note": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0181_60e747a7",
+      "chars": 377
+     },
+     {
+      "anchor": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0193_ff57c101",
+      "note": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0194_abdfa703",
+      "chars": 376
+     }
+    ]
+   },
+   {
+    "id": "Q42",
+    "pop": "pediatrie",
+    "tags": [
+     "population:pediatric",
+     "pediatric"
+    ],
+    "sufficiency": [
+     1.0,
+     1.0
+    ],
+    "evidence_recall": [
+     1.0,
+     1.0
+    ],
+    "cp": [],
+    "notes": [
+     {
+      "anchor": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0310_41b4d0cb",
+      "note": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0325_6bbe0d0b",
+      "chars": 859
+     }
+    ]
+   },
+   {
+    "id": "Q43",
+    "pop": "non_specifie",
+    "tags": [
+     "population:not_specified"
+    ],
+    "sufficiency": [
+     1.0,
+     1.0
+    ],
+    "evidence_recall": [
+     1.0,
+     1.0
+    ],
+    "cp": [],
+    "notes": [
+     {
+      "anchor": "2026_RFE-20_4_2026-deifinitif-et-validei_1b550e__c0577_b9ac60d0",
+      "note": "2026_RFE-20_4_2026-deifinitif-et-validei_1b550e__c0582_9b7e0b99",
+      "chars": 335
+     }
+    ]
+   },
+   {
+    "id": "Q45",
+    "pop": "non_specifie",
+    "tags": [
+     "population:not_specified"
+    ],
+    "sufficiency": [
+     1.0,
+     1.0
+    ],
+    "evidence_recall": [
+     1.0,
+     1.0
+    ],
+    "cp": [],
+    "notes": [
+     {
+      "anchor": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0512_ed67a7f5",
+      "note": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0518_b3cf2213",
+      "chars": 467
+     },
+     {
+      "anchor": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0786_6feeebda",
+      "note": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0736_f1a5a20e",
+      "chars": 606
+     },
+     {
+      "anchor": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0243_a7262d02",
+      "note": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0245_00952699",
+      "chars": 525
+     }
+    ]
+   },
+   {
+    "id": "Q46",
+    "pop": "non_specifie",
+    "tags": [
+     "population:adult_and_pediatric",
+     "pediatric"
+    ],
+    "sufficiency": [
+     1.0,
+     1.0
+    ],
+    "evidence_recall": [
+     1.0,
+     1.0
+    ],
+    "cp": [],
+    "notes": [
+     {
+      "anchor": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0588_7706769a",
+      "note": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0573_60019308",
+      "chars": 299
+     }
+    ]
+   },
+   {
+    "id": "Q51",
+    "pop": "non_specifie",
+    "tags": [
+     "population:adult"
+    ],
+    "sufficiency": [
+     1.0,
+     1.0
+    ],
+    "evidence_recall": [
+     1.0,
+     1.0
+    ],
+    "cp": [],
+    "notes": [
+     {
+      "anchor": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0512_ed67a7f5",
+      "note": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0518_b3cf2213",
+      "chars": 467
+     },
+     {
+      "anchor": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0784_90aa35b6",
+      "note": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0736_f1a5a20e",
+      "chars": 606
+     }
+    ]
+   },
+   {
+    "id": "Q67",
+    "pop": "non_specifie",
+    "tags": [
+     "population:adult"
+    ],
+    "sufficiency": [
+     1.0,
+     1.0
+    ],
+    "evidence_recall": [
+     1.0,
+     1.0
+    ],
+    "cp": [],
+    "notes": [
+     {
+      "anchor": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0765_7a4784ad",
+      "note": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0736_f1a5a20e",
+      "chars": 606
+     },
+     {
+      "anchor": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0808_25ad0f58",
+      "note": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0824_396aac36",
+      "chars": 388
+     }
+    ]
+   },
+   {
+    "id": "Q70",
+    "pop": "non_specifie",
+    "tags": [
+     "population:adult"
+    ],
+    "sufficiency": [
+     1.0,
+     1.0
+    ],
+    "evidence_recall": [
+     1.0,
+     1.0
+    ],
+    "cp": [],
+    "notes": [
+     {
+      "anchor": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0744_8582fcbe",
+      "note": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0736_f1a5a20e",
+      "chars": 606
+     }
+    ]
+   },
+   {
+    "id": "Q74",
+    "pop": "non_specifie",
+    "tags": [
+     "population:adult"
+    ],
+    "sufficiency": [
+     1.0,
+     1.0
+    ],
+    "evidence_recall": [
+     1.0,
+     1.0
+    ],
+    "cp": [],
+    "notes": [
+     {
+      "anchor": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0431_ad48cd64",
+      "note": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0438_f4803017",
+      "chars": 430
+     }
+    ]
+   },
+   {
+    "id": "Q75",
+    "pop": "non_specifie",
+    "tags": [
+     "population:adult"
+    ],
+    "sufficiency": [
+     1.0,
+     1.0
+    ],
+    "evidence_recall": [
+     1.0,
+     1.0
+    ],
+    "cp": [],
+    "notes": [
+     {
+      "anchor": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0580_92fdaf28",
+      "note": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0573_60019308",
+      "chars": 299
+     }
+    ]
+   },
+   {
+    "id": "Q89",
+    "pop": "non_specifie",
+    "tags": [
+     "population:adult"
+    ],
+    "sufficiency": [
+     1.0,
+     1.0
+    ],
+    "evidence_recall": [
+     1.0,
+     1.0
+    ],
+    "cp": [],
+    "notes": [
+     {
+      "anchor": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0476_8fc50c86",
+      "note": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0480_5ddd734c",
+      "chars": 855
+     }
+    ]
+   },
+   {
+    "id": "Q91",
+    "pop": "non_specifie",
+    "tags": [
+     "population:adult_and_pediatric",
+     "pediatric"
+    ],
+    "sufficiency": [
+     1.0,
+     1.0
+    ],
+    "evidence_recall": [
+     1.0,
+     1.0
+    ],
+    "cp": [],
+    "notes": [
+     {
+      "anchor": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0434_7d130ec5",
+      "note": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0438_f4803017",
+      "chars": 430
+     }
+    ]
+   },
+   {
+    "id": "Q96",
+    "pop": "non_specifie",
+    "tags": [
+     "population:adult_and_pediatric",
+     "pediatric"
+    ],
+    "sufficiency": [
+     1.0,
+     1.0
+    ],
+    "evidence_recall": [
+     1.0,
+     1.0
+    ],
+    "cp": [],
+    "notes": [
+     {
+      "anchor": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0761_4f0ae7b0",
+      "note": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0736_f1a5a20e",
+      "chars": 606
+     }
+    ]
+   },
+   {
+    "id": "Q97",
+    "pop": "adulte",
+    "tags": [
+     "population:adult"
+    ],
+    "sufficiency": [
+     1.0,
+     1.0
+    ],
+    "evidence_recall": [
+     1.0,
+     1.0
+    ],
+    "cp": [],
+    "notes": [
+     {
+      "anchor": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0763_65f6b1c2",
+      "note": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0736_f1a5a20e",
+      "chars": 606
+     }
+    ]
+   },
+   {
+    "id": "Q98",
+    "pop": "non_specifie",
+    "tags": [
+     "population:adult"
+    ],
+    "sufficiency": [
+     1.0,
+     1.0
+    ],
+    "evidence_recall": [
+     1.0,
+     1.0
+    ],
+    "cp": [],
+    "notes": [
+     {
+      "anchor": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0777_555389e0",
+      "note": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0736_f1a5a20e",
+      "chars": 606
+     }
+    ]
+   },
+   {
+    "id": "Q100",
+    "pop": "non_specifie",
+    "tags": [
+     "population:adult"
+    ],
+    "sufficiency": [
+     1.0,
+     1.0
+    ],
+    "evidence_recall": [
+     1.0,
+     1.0
+    ],
+    "cp": [],
+    "notes": [
+     {
+      "anchor": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0809_9de20170",
+      "note": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0824_396aac36",
+      "chars": 388
+     }
+    ]
+   },
+   {
+    "id": "Q101",
+    "pop": "non_specifie",
+    "tags": [
+     "population:adult_and_pediatric",
+     "pediatric"
+    ],
+    "sufficiency": [
+     1.0,
+     1.0
+    ],
+    "evidence_recall": [
+     1.0,
+     1.0
+    ],
+    "cp": [],
+    "notes": [
+     {
+      "anchor": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0809_9de20170",
+      "note": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0824_396aac36",
+      "chars": 388
+     }
+    ]
+   },
+   {
+    "id": "Q121",
+    "pop": "non_specifie",
+    "tags": [
+     "population:adult_and_pediatric",
+     "pediatric"
+    ],
+    "sufficiency": [
+     1.0,
+     1.0
+    ],
+    "evidence_recall": [
+     1.0,
+     1.0
+    ],
+    "cp": [],
+    "notes": [
+     {
+      "anchor": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0801_59776231",
+      "note": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0806_c57bce5e",
+      "chars": 128
+     },
+     {
+      "anchor": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0427_aa5855dc",
+      "note": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0438_f4803017",
+      "chars": 430
+     }
+    ]
+   },
+   {
+    "id": "Q122",
+    "pop": "non_specifie",
+    "tags": [
+     "population:adult_and_pediatric",
+     "pediatric"
+    ],
+    "sufficiency": [
+     1.0,
+     1.0
+    ],
+    "evidence_recall": [
+     1.0,
+     1.0
+    ],
+    "cp": [],
+    "notes": [
+     {
+      "anchor": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0670_dc9923b9",
+      "note": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0664_be6f077b",
+      "chars": 311
+     }
+    ]
+   },
+   {
+    "id": "Q129",
+    "pop": "non_specifie",
+    "tags": [
+     "population:adult"
+    ],
+    "sufficiency": [
+     1.0,
+     1.0
+    ],
+    "evidence_recall": [
+     1.0,
+     1.0
+    ],
+    "cp": [],
+    "notes": [
+     {
+      "anchor": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0512_ed67a7f5",
+      "note": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0518_b3cf2213",
+      "chars": 467
+     },
+     {
+      "anchor": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0784_90aa35b6",
+      "note": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0736_f1a5a20e",
+      "chars": 606
+     }
+    ]
+   },
+   {
+    "id": "Q133",
+    "pop": "non_specifie",
+    "tags": [
+     "population:adult"
+    ],
+    "sufficiency": [
+     1.0,
+     1.0
+    ],
+    "evidence_recall": [
+     1.0,
+     1.0
+    ],
+    "cp": [],
+    "notes": [
+     {
+      "anchor": "2026_RFE-20_4_2026-deifinitif-et-validei_1b550e__c0337_3da63548",
+      "note": "2026_RFE-20_4_2026-deifinitif-et-validei_1b550e__c0338_bc56def2",
+      "chars": 280
+     }
+    ]
+   },
+   {
+    "id": "Q138",
+    "pop": "non_specifie",
+    "tags": [
+     "population:adult_and_pediatric",
+     "pediatric"
+    ],
+    "sufficiency": [
+     1.0,
+     1.0
+    ],
+    "evidence_recall": [
+     1.0,
+     1.0
+    ],
+    "cp": [],
+    "notes": [
+     {
+      "anchor": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0583_6bd51758",
+      "note": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0573_60019308",
+      "chars": 299
+     }
+    ]
+   },
+   {
+    "id": "Q139",
+    "pop": "non_specifie",
+    "tags": [
+     "population:adult"
+    ],
+    "sufficiency": [
+     1.0,
+     1.0
+    ],
+    "evidence_recall": [
+     1.0,
+     1.0
+    ],
+    "cp": [],
+    "notes": [
+     {
+      "anchor": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0166_8ff9b8ee",
+      "note": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0181_60e747a7",
+      "chars": 377
+     },
+     {
+      "anchor": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0166_8ff9b8ee",
+      "note": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0194_abdfa703",
+      "chars": 376
+     }
+    ]
+   },
+   {
+    "id": "Q144",
+    "pop": "adulte",
+    "tags": [
+     "population:adult"
+    ],
+    "sufficiency": [
+     1.0,
+     1.0
+    ],
+    "evidence_recall": [
+     1.0,
+     1.0
+    ],
+    "cp": [],
+    "notes": [
+     {
+      "anchor": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0575_e7e59eb8",
+      "note": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0573_60019308",
+      "chars": 299
+     }
+    ]
+   },
+   {
+    "id": "Q147",
+    "pop": "non_specifie",
+    "tags": [
+     "population:adult_and_pediatric",
+     "pediatric"
+    ],
+    "sufficiency": [
+     1.0,
+     1.0
+    ],
+    "evidence_recall": [
+     1.0,
+     1.0
+    ],
+    "cp": [],
+    "notes": [
+     {
+      "anchor": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0648_f8a64025",
+      "note": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0653_5cab8281",
+      "chars": 283
+     },
+     {
+      "anchor": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0548_71cd10ca",
+      "note": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0553_0901ff78",
+      "chars": 330
+     }
+    ]
+   },
+   {
+    "id": "Q154",
+    "pop": "non_specifie",
+    "tags": [
+     "population:adult"
+    ],
+    "sufficiency": [
+     1.0,
+     1.0
+    ],
+    "evidence_recall": [
+     1.0,
+     1.0
+    ],
+    "cp": [],
+    "notes": [
+     {
+      "anchor": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0363_0db25103",
+      "note": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0371_1b4e872a",
+      "chars": 476
+     },
+     {
+      "anchor": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0363_0db25103",
+      "note": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0416_52cd6cf5",
+      "chars": 412
+     }
+    ]
+   },
+   {
+    "id": "Q157",
+    "pop": "non_specifie",
+    "tags": [
+     "population:adult"
+    ],
+    "sufficiency": [
+     1.0,
+     1.0
+    ],
+    "evidence_recall": [
+     1.0,
+     1.0
+    ],
+    "cp": [],
+    "notes": [
+     {
+      "anchor": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0470_561be074",
+      "note": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0518_b3cf2213",
+      "chars": 467
+     },
+     {
+      "anchor": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0470_561be074",
+      "note": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0480_5ddd734c",
+      "chars": 855
+     }
+    ]
+   },
+   {
+    "id": "Q158",
+    "pop": "pediatrie",
+    "tags": [
+     "population:pediatric",
+     "pediatric"
+    ],
+    "sufficiency": [
+     0.0,
+     0.0
+    ],
+    "evidence_recall": [
+     0.5,
+     0.5
+    ],
+    "cp": [],
+    "notes": [
+     {
+      "anchor": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0332_a18e61a2",
+      "note": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0340_2fe575f5",
+      "chars": 251
+     }
+    ]
+   },
+   {
+    "id": "Q164",
+    "pop": "non_specifie",
+    "tags": [
+     "population:not_specified"
+    ],
+    "sufficiency": [
+     1.0,
+     1.0
+    ],
+    "evidence_recall": [
+     1.0,
+     1.0
+    ],
+    "cp": [],
+    "notes": [
+     {
+      "anchor": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0284_c5c880cc",
+      "note": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0325_6bbe0d0b",
+      "chars": 859
+     },
+     {
+      "anchor": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0258_262c1068",
+      "note": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0278_ce99224d",
+      "chars": 211
+     },
+     {
+      "anchor": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0432_9891fb72",
+      "note": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0438_f4803017",
+      "chars": 430
+     }
+    ]
+   },
+   {
+    "id": "Q166",
+    "pop": "non_specifie",
+    "tags": [
+     "population:adult"
+    ],
+    "sufficiency": [
+     1.0,
+     1.0
+    ],
+    "evidence_recall": [
+     1.0,
+     1.0
+    ],
+    "cp": [],
+    "notes": [
+     {
+      "anchor": "2013_2_PUROL_Recommandations-chirurgie-ambulatoire-en-urologie_e45cde__c0458_b5978ac9",
+      "note": "2013_2_PUROL_Recommandations-chirurgie-ambulatoire-en-urologie_e45cde__c0462_9210586b",
+      "chars": 74
+     }
+    ]
+   },
+   {
+    "id": "Q168",
+    "pop": "non_specifie",
+    "tags": [
+     "population:adult"
+    ],
+    "sufficiency": [
+     1.0,
+     1.0
+    ],
+    "evidence_recall": [
+     1.0,
+     1.0
+    ],
+    "cp": [],
+    "notes": [
+     {
+      "anchor": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0765_7a4784ad",
+      "note": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0736_f1a5a20e",
+      "chars": 606
+     }
+    ]
+   },
+   {
+    "id": "Q171",
+    "pop": "non_specifie",
+    "tags": [
+     "population:not_specified"
+    ],
+    "sufficiency": [
+     0.0,
+     0.0
+    ],
+    "evidence_recall": [
+     0.5,
+     0.5
+    ],
+    "cp": [],
+    "notes": [
+     {
+      "anchor": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0166_8ff9b8ee",
+      "note": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0181_60e747a7",
+      "chars": 377
+     },
+     {
+      "anchor": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0166_8ff9b8ee",
+      "note": "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0194_abdfa703",
+      "chars": 376
+     }
+    ]
+   }
+  ]
+ },
+ "multirfe_synth": {
+  "passage_hit": {
+   "base": 96.1,
+   "new": 96.1,
+   "diff": 0.0,
+   "ci": [
+    0.0,
+    0.0
+   ],
+   "changed": [],
+   "pediatric_tag": {
+    "n": 10,
+    "base": 100.0,
+    "new": 100.0,
+    "diff": 0.0,
+    "ci": [
+     0.0,
+     0.0
+    ]
+   },
+   "not_pediatric_tag": {
+    "n": 66,
+    "base": 95.5,
+    "new": 95.5,
+    "diff": 0.0,
+    "ci": [
+     0.0,
+     0.0
+    ]
+   },
+   "query_pop_non_specifie": {
+    "n": 56,
+    "base": 96.4,
+    "new": 96.4,
+    "diff": 0.0,
+    "ci": [
+     0.0,
+     0.0
+    ]
+   },
+   "query_pop_named": {
+    "n": 20,
+    "base": 95.0,
+    "new": 95.0,
+    "diff": 0.0,
+    "ci": [
+     0.0,
+     0.0
+    ]
+   }
+  },
+  "fired_questions": 1,
+  "n": 94,
+  "counterparts_added": 0,
+  "notes_added": 1,
+  "chars_added_mean_all": 1,
+  "chars_added_mean_fired": 64,
+  "context_chars_mean": [
+   20549,
+   20550
+  ],
+  "additions": [
+   {
+    "id": "MR-gb8871ff491d05e49db36",
+    "pop": "non_specifie",
+    "tags": [],
+    "passage_hit": [
+     1.0,
+     1.0
+    ],
+    "cp": [],
+    "notes": [
+     {
+      "anchor": "2026_RFE-20_4_2026-deifinitif-et-validei_1b550e__c0629_75108cfe",
+      "note": "2026_RFE-20_4_2026-deifinitif-et-validei_1b550e__c0631_873e1f45",
+      "chars": 64
+     }
+    ]
+   }
+  ]
+ }
+}

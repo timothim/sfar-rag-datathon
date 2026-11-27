@@ -1,0 +1,103 @@
+[L1] adulte->pediatrie  shared=1 src_items=1 tgt_items=1
+  S: Actes chirurgicaux ou interventionnels : Chirurgie des glandes salivaires avec accès par la cavité bucco-pharyngée | Molécules : Amoxicilline/Clavulanate | Dose initiale : 2g IVL | Force de la recommandation : (Avis d'ex
+  T: Actes chirurgicaux ou interventionnels : Chirurgie des glandes salivaires avec accès par la cavité bucco-pharyngée | Molécules : Amoxicilline/clavulanate | Dose initiale : 50 mg/kg IVL | Réinjections et durée : 50 mg/kg 
+[L2] adulte->pediatrie  shared=1 src_items=1 tgt_items=1
+  S: Actes chirurgicaux ou interventionnels : Chirurgie orthognatique | Molécules : Céfazoline / Alternative : Amoxicilline/Clavulanate | Dose initiale : 2g IVL / 2g IVL | Réinjections et durée : 1g si durée > 4h, puis toutes
+  T: Actes chirurgicaux ou interventionnels : Chirurgie orthognatique | Molécules : Amoxicilline/clavulanate | Dose initiale : 50 mg/kg IVL | Réinjections et durée : 50 mg/kg si durée > 2h puis toutes les 2h jusqu'à fin de ch
+[L3] adulte->pediatrie  shared=3 src_items=4 tgt_items=4
+  S: Actes chirurgicaux ou interventionnels : Chirurgie du médiastin; Chirurgie du pneumothorax; Chirurgie de la plèvre (patient non infecté); Chirurgie de paroi thoracique (avec ou sans pose de matériel) | Force de la recomm
+  T: Actes chirurgicaux ou interventionnels : Chirurgie du médiastin; Chirurgie du pneumothorax; Chirurgie de la plèvre (patient non infecté); Chirurgie de la paroi thoracique | Molécules : Céfazoline / Alternative : Céfuroxi
+[L4] adulte->pediatrie  shared=1 src_items=10 tgt_items=1
+  S: Actes chirurgicaux ou interventionnels : Trachéotomie chirurgicale; Suture ou résection-anastomose de bronche, par cervicotomie, cervico- et/ou thoracotomie; Plastie ou fermeture d'orifice de trachéostomie ou de trachéot
+  T: Actes chirurgicaux ou interventionnels : Trachéotomie chirurgicale | Molécules : Céfazoline | Dose initiale : 30 mg/kg IVL | Réinjections et durée : 30 mg/kg si durée > 4h puis toutes les 4h jusqu'à fin de chirurgie | Fo
+[L5] adulte->pediatrie  shared=9 src_items=10 tgt_items=10
+  S: Actes chirurgicaux ou interventionnels : Trachéotomie chirurgicale; Suture ou résection-anastomose de bronche, par cervicotomie, cervico- et/ou thoracotomie; Plastie ou fermeture d'orifice de trachéostomie ou de trachéot
+  T: Actes chirurgicaux ou interventionnels : Trachéotomie chirurgicale *; Suture ou résection-anastomose de bronche, par cervicotomie, cervico-thoracotomie ou thoracotomie; Plastie ou fermeture d'orifice de trachéostomie ou 
+[L6] adulte->pediatrie  shared=2 src_items=5 tgt_items=2
+  S: Actes chirurgicaux ou interventionnels : Chirurgie de réduction mammaire; Exérèse de gynécomastie; Mastopexie pour ptose simple; Tumorectomie mammaire* sans curage; Tumorectomie mammaire* avec ganglion sentinelle | Moléc
+  T: Actes chirurgicaux ou interventionnels : Chirurgie de réduction mammaire; Exérèse de gynécomastie | Molécules : PAS D'ANTIBIOPROPHYLAXIE | Force de la recommandation : (Avis d'experts)
+[L7] adulte->pediatrie  shared=1 src_items=1 tgt_items=1
+  S: Actes chirurgicaux ou interventionnels : Chirurgie orthognatique | Molécules : Amoxicilline/Clavulanate | Dose initiale : 2g IVL | Réinjections et durée : 1g si durée > 2h, puis toutes les 2h jusqu'à fin de chirurgie** p
+  T: Actes chirurgicaux ou interventionnels : Chirurgie orthognatique | Molécules : Amoxicilline/clavulanate | Dose initiale : 50 mg/kg IVL | Réinjections et durée : 50 mg/kg si durée > 2h puis toutes les 2h jusqu'à fin de ch
+[L8] adulte->pediatrie  shared=1 src_items=4 tgt_items=1
+  S: Actes chirurgicaux ou interventionnels : Plastie(s) cutanée(s); Tumorectomie cutanée; Chirurgie de ganglion sentinelle; Curage ganglionnaire axillaire ou inguinal seul | Molécules : PAS D'ANTIBIOPROPHYLAXIE | Force de la
+  T: Actes chirurgicaux ou interventionnels : Tumorectomie cutanée | Molécules : PAS D'ANTIBIOPROPHYLAXIE | Force de la recommandation : (Avis d'experts)
+[L9] adulte->pediatrie  shared=1 src_items=5 tgt_items=8
+  S: Actes chirurgicaux ou interventionnels : Plastie ligamentaire (retente, suture, etc.) sans utilisation de matériel; Arthroscopie diagnostique ou thérapeutique sans mise en place de matériel; Ablation de matériel d'ostéos
+  T: Actes chirurgicaux ou interventionnels : Chirurgie des parties molles sans implant; Ténotomie, aponévrotomie (même multiples); Exostose; Ablation de matériel d'ostéosynthèse; Injection de toxine botulique; Ponction artic
+[L10] adulte->pediatrie  shared=1 src_items=4 tgt_items=8
+  S: Actes chirurgicaux ou interventionnels : Arthroscopie diagnostique ou thérapeutique sans mise en place de matériel; Ablation de matériel d'ostéosynthèse**; Gestes osseux sans mise en place de matériel (résection); Chirur
+  T: Actes chirurgicaux ou interventionnels : Chirurgie des parties molles sans implant; Ténotomie, aponévrotomie (même multiples); Exostose; Ablation de matériel d'ostéosynthèse; Injection de toxine botulique; Ponction artic
+[L11] adulte->pediatrie  shared=1 src_items=3 tgt_items=1
+  S: Actes chirurgicaux ou interventionnels : Hémorroïdes; Kyste pilonidal; Fistule anale | Molécules : Métronidazole | Dose initiale : 1g IVL | Réinjections et durée : Dose unique | Force de la recommandation : (Avis d'exper
+  T: Actes chirurgicaux ou interventionnels : Hémorroïdes | Molécules : Métronidazole | Dose initiale : 15 mg/kg IVL | Réinjections et durée : Dose unique | Force de la recommandation : (Avis d'experts)
+[L12] adulte->pediatrie  shared=1 src_items=4 tgt_items=2
+  S: Actes chirurgicaux ou interventionnels : Cholécystectomie, par laparotomie; Cholécystectomie avec ablation transcystique de calcul de la voie biliaire principale; Cholécystectomie avec ablation de calcul de la voie bilia
+  T: Actes chirurgicaux ou interventionnels / Chirurgie de la vésicule biliaire et des voies biliaires : Cholécystectomie par laparotomie; Chirurgie des voies biliaires sans anastomose bilio-digestive (hors patients porteurs 
+[L13] adulte->pediatrie  shared=2 src_items=4 tgt_items=2
+  S: Actes chirurgicaux ou interventionnels : Transplantation de foie total; Transplantation de foie réduit; Transplantation du pancréas; Transplantation du pancréas et du rein | Molécules : Céfoxitine | Dose initiale : 2g IV
+  T: Actes chirurgicaux ou interventionnels / Chirurgie de la vésicule biliaire et des voies biliaires : Transplantation de foie total; Transplantation de foie réduit | Molécules : Compte tenu des spécificités de la patientèl
+[L14] adulte->pediatrie  shared=3 src_items=4 tgt_items=4
+  S: Actes chirurgicaux ou interventionnels : Cholangiographie; Pancréatographie; Dilatation et pose de prothèses biliaires ou pancréatiques avec drainage complet satisfaisant; Extraction de calculs biliaires ou pancréatiques
+  T: Actes chirurgicaux ou interventionnels : Cholangiographie; Pancréatographie; Dilatation et pose de prothèses biliaires ou pancréatiques avec drainage complet satisfaisant; Extraction de calculs biliaires ou pancréatiques
+[L15] adulte->pediatrie  shared=1 src_items=3 tgt_items=3
+  S: Actes chirurgicaux ou interventionnels : Cholangioscopie ou pancréatoscopie, avec ou sans lithotritie; Dilatation et pose de prothèses biliaires ou pancréatiques avec drainage biliaire incomplet*; Extraction de calculs b
+  T: Actes chirurgicaux ou interventionnels : Lithotritie mécanique biliaire ou pancréatique; Cholangioscopie avec ou sans lithotritie; Dilatation et pose de prothèses biliaires ou pancréatiques avec drainage biliaire incompl
+[L16] adulte->pediatrie  shared=1 src_items=6 tgt_items=1
+  S: Actes chirurgicaux ou interventionnels : Ponction de lésion kystique pancréatique sans facteur de risque d'infection; Ponction de lésion kystique pancréatique avec facteur(s) de risque d'infection liés au geste endoscopi
+  T: Actes chirurgicaux ou interventionnels : Ponction de lésion kystique pancréatique sans facteur de risque d'infection | Molécules : PAS D'ANTIBIOPROPHYLAXIE | Force de la recommandation : (Avis d'experts)
+[L17] adulte->pediatrie  shared=1 src_items=6 tgt_items=1
+  S: Actes chirurgicaux ou interventionnels : Ponction de lésion kystique pancréatique sans facteur de risque d'infection; Ponction de lésion kystique pancréatique avec facteur(s) de risque d'infection liés au geste endoscopi
+  T: Actes chirurgicaux ou interventionnels : Ponction de lésion kystique pancréatique avec facteur(s) de risque d'infection liés au geste endoscopique (saignement intra-kystique, absence de vidange complète de la lésion kyst
+[L18] pediatrie->neonatal  shared=1 src_items=2 tgt_items=2
+  S: Actes chirurgicaux ou interventionnels : Dérivation ventriculaire interne; Dérivation ventriculo-péritonéale | Molécules : Céfazoline | Dose initiale : 30 mg/kg IVL | Réinjections et durée : 30 mg/kg si durée > 4h puis t
+  T: Actes chirurgicaux ou interventionnels : Dérivation ventriculaire externe; Dérivation ventriculaire interne | Molécules : Céfazoline | Dose initiale : 30 mg/kg IVL | Réinjections et durée : 30 mg/kg si durée > 4h puis to
+[L19] pediatrie->neonatal  shared=1 src_items=2 tgt_items=2
+  S: Actes chirurgicaux ou interventionnels : Dérivation ventriculaire externe; Dérivation lombaire externe | Molécules : PAS D'ANTIBIOPROPHYLAXIE | Force de la recommandation : (Avis d'experts)
+  T: Actes chirurgicaux ou interventionnels : Dérivation ventriculaire externe; Dérivation ventriculaire interne | Molécules : Céfazoline | Dose initiale : 30 mg/kg IVL | Réinjections et durée : 30 mg/kg si durée > 4h puis to
+[L20] pediatrie->adulte  shared=1 src_items=1 tgt_items=1
+  S: Actes chirurgicaux ou interventionnels : Chirurgie des glandes salivaires avec accès par la cavité bucco-pharyngée | Molécules : Amoxicilline/clavulanate | Dose initiale : 50 mg/kg IVL | Réinjections et durée : 50 mg/kg 
+  T: Actes chirurgicaux ou interventionnels : Chirurgie des glandes salivaires avec accès par la cavité bucco-pharyngée | Molécules : Amoxicilline/Clavulanate | Dose initiale : 2g IVL | Force de la recommandation : (Avis d'ex
+[L21] pediatrie->adulte  shared=3 src_items=4 tgt_items=4
+  S: Actes chirurgicaux ou interventionnels : Chirurgie du médiastin; Chirurgie du pneumothorax; Chirurgie de la plèvre (patient non infecté); Chirurgie de la paroi thoracique | Molécules : Céfazoline / Alternative : Céfuroxi
+  T: Actes chirurgicaux ou interventionnels : Chirurgie du médiastin; Chirurgie du pneumothorax; Chirurgie de la plèvre (patient non infecté); Chirurgie de paroi thoracique (avec ou sans pose de matériel) | Force de la recomm
+[L22] pediatrie->adulte  shared=1 src_items=10 tgt_items=1
+  S: Actes chirurgicaux ou interventionnels : Trachéotomie chirurgicale *; Suture ou résection-anastomose de bronche, par cervicotomie, cervico-thoracotomie ou thoracotomie; Plastie ou fermeture d'orifice de trachéostomie ou 
+  T: Actes chirurgicaux ou interventionnels : Trachéotomie chirurgicale | Molécules : Céfazoline | Dose initiale : 2g IVL | Réinjections et durée : 1g si durée > 4h, puis toutes les 4h jusqu'à fin de chirurgie | Force de la r
+[L23] pediatrie->adulte  shared=9 src_items=10 tgt_items=10
+  S: Actes chirurgicaux ou interventionnels : Trachéotomie chirurgicale *; Suture ou résection-anastomose de bronche, par cervicotomie, cervico-thoracotomie ou thoracotomie; Plastie ou fermeture d'orifice de trachéostomie ou 
+  T: Actes chirurgicaux ou interventionnels : Trachéotomie chirurgicale; Suture ou résection-anastomose de bronche, par cervicotomie, cervico- et/ou thoracotomie; Plastie ou fermeture d'orifice de trachéostomie ou de trachéot
+[L24] pediatrie->adulte  shared=1 src_items=1 tgt_items=1
+  S: Actes chirurgicaux ou interventionnels : Chirurgie orthognatique | Molécules : Amoxicilline/clavulanate | Dose initiale : 50 mg/kg IVL | Réinjections et durée : 50 mg/kg si durée > 2h puis toutes les 2h jusqu'à fin de ch
+  T: Actes chirurgicaux ou interventionnels : Chirurgie orthognatique | Molécules : Céfazoline / Alternative : Amoxicilline/Clavulanate | Dose initiale : 2g IVL / 2g IVL | Réinjections et durée : 1g si durée > 4h, puis toutes
+[L25] pediatrie->adulte  shared=1 src_items=1 tgt_items=1
+  S: Actes chirurgicaux ou interventionnels : Chirurgie orthognatique | Molécules : Amoxicilline/clavulanate | Dose initiale : 50 mg/kg IVL | Réinjections et durée : 50 mg/kg si durée > 2h puis toutes les 2h jusqu'à fin de ch
+  T: Actes chirurgicaux ou interventionnels : Chirurgie orthognatique | Molécules : Amoxicilline/Clavulanate | Dose initiale : 2g IVL | Réinjections et durée : 1g si durée > 2h, puis toutes les 2h jusqu'à fin de chirurgie** p
+[L26] pediatrie->adulte  shared=1 src_items=8 tgt_items=5
+  S: Actes chirurgicaux ou interventionnels : Chirurgie des parties molles sans implant; Ténotomie, aponévrotomie (même multiples); Exostose; Ablation de matériel d'ostéosynthèse; Injection de toxine botulique; Ponction artic
+  T: Actes chirurgicaux ou interventionnels : Plastie ligamentaire (retente, suture, etc.) sans utilisation de matériel; Arthroscopie diagnostique ou thérapeutique sans mise en place de matériel; Ablation de matériel d'ostéos
+[L27] pediatrie->adulte  shared=1 src_items=8 tgt_items=4
+  S: Actes chirurgicaux ou interventionnels : Chirurgie des parties molles sans implant; Ténotomie, aponévrotomie (même multiples); Exostose; Ablation de matériel d'ostéosynthèse; Injection de toxine botulique; Ponction artic
+  T: Actes chirurgicaux ou interventionnels : Arthroscopie diagnostique ou thérapeutique sans mise en place de matériel; Ablation de matériel d'ostéosynthèse**; Gestes osseux sans mise en place de matériel (résection); Chirur
+[L28] pediatrie->adulte  shared=1 src_items=3 tgt_items=1
+  S: Actes chirurgicaux ou interventionnels : Ostéosynthèse de fracture fermée, par abord chirurgical ou percutané (en dehors de la fracture de la palette humérale); Plaie articulaire (quel que soit le degré de contamination)
+  T: Actes chirurgicaux ou interventionnels : Plaie articulaire (quel que soit le degré de contamination) | Molécules : Céfazoline | Dose initiale : 2g IVL | Réinjections et durée : 1g si durée > 4h, puis toutes les 4h jusqu'
+[L29] pediatrie->adulte  shared=1 src_items=3 tgt_items=1
+  S: Actes chirurgicaux ou interventionnels : Fracture ouverte stade 2 ou 3 de Gustilo-Anderson**; Plaie des parties molles contuses ou susceptible d'être contaminée par des germes d'origine tellurique et/ou fécale; Morsure**
+  T: Actes chirurgicaux ou interventionnels : Morsure ** | Molécules : Amoxicilline/Clavulanate | Dose initiale : 2g IVL | Réinjections et durée : 1g si durée > 2h, puis toutes les 2h jusqu'à fin de chirurgie ** | Force de la
+[L30] pediatrie->adulte  shared=1 src_items=2 tgt_items=4
+  S: Actes chirurgicaux ou interventionnels / Chirurgie de la vésicule biliaire et des voies biliaires : Cholécystectomie par laparotomie; Chirurgie des voies biliaires sans anastomose bilio-digestive (hors patients porteurs 
+  T: Actes chirurgicaux ou interventionnels : Cholécystectomie, par laparotomie; Cholécystectomie avec ablation transcystique de calcul de la voie biliaire principale; Cholécystectomie avec ablation de calcul de la voie bilia
+[L31] pediatrie->adulte  shared=3 src_items=4 tgt_items=4
+  S: Actes chirurgicaux ou interventionnels : Cholangiographie; Pancréatographie; Dilatation et pose de prothèses biliaires ou pancréatiques avec drainage complet satisfaisant; Extraction de calculs biliaires ou pancréatiques
+  T: Actes chirurgicaux ou interventionnels : Cholangiographie; Pancréatographie; Dilatation et pose de prothèses biliaires ou pancréatiques avec drainage complet satisfaisant; Extraction de calculs biliaires ou pancréatiques
+[L32] pediatrie->adulte  shared=1 src_items=3 tgt_items=3
+  S: Actes chirurgicaux ou interventionnels : Lithotritie mécanique biliaire ou pancréatique; Cholangioscopie avec ou sans lithotritie; Dilatation et pose de prothèses biliaires ou pancréatiques avec drainage biliaire incompl
+  T: Actes chirurgicaux ou interventionnels : Cholangioscopie ou pancréatoscopie, avec ou sans lithotritie; Dilatation et pose de prothèses biliaires ou pancréatiques avec drainage biliaire incomplet*; Extraction de calculs b
+[L33] neonatal->pediatrie  shared=1 src_items=2 tgt_items=2
+  S: Actes chirurgicaux ou interventionnels : Dérivation ventriculaire externe; Dérivation ventriculaire interne | Molécules : Céfazoline | Dose initiale : 30 mg/kg IVL | Réinjections et durée : 30 mg/kg si durée > 4h puis to
+  T: Actes chirurgicaux ou interventionnels : Dérivation ventriculaire interne; Dérivation ventriculo-péritonéale | Molécules : Céfazoline | Dose initiale : 30 mg/kg IVL | Réinjections et durée : 30 mg/kg si durée > 4h puis t
+[L34] neonatal->pediatrie  shared=1 src_items=2 tgt_items=2
+  S: Actes chirurgicaux ou interventionnels : Dérivation ventriculaire externe; Dérivation ventriculaire interne | Molécules : Céfazoline | Dose initiale : 30 mg/kg IVL | Réinjections et durée : 30 mg/kg si durée > 4h puis to
+  T: Actes chirurgicaux ou interventionnels : Dérivation ventriculaire externe; Dérivation lombaire externe | Molécules : PAS D'ANTIBIOPROPHYLAXIE | Force de la recommandation : (Avis d'experts)
+loose-only links 34 sources 28 sources with strict 39 linkable single-pop rows in docs with >=2 classes 371
