@@ -1,6 +1,6 @@
-# RAG-SFAR — Rapport final (brouillon du 2026-11-27)
+# RAG-SFAR — Rapport final (2026-11-27)
 
-> Brouillon rédigé à partir de `JOURNAL.md`, `eval/FINAL_EVAL_PROTOCOL.md`, `reports/eval/judge_v4/blind_final/summary.md`, `reports/eval/judge_v4/blind_v31grid2/combined_validated_grid.md` et des rapports d'agents (`reports/agents/*.md`, `reports/MCP_DEPLOIEMENT.md`, `reports/DEMO.md`). Aucun chiffre n'a été recalculé pour ce document. La seule ligne « À COMPLÉTER » restante signale une mesure en cours.
+> Rédigé à partir de `JOURNAL.md`, `eval/FINAL_EVAL_PROTOCOL.md`, `reports/eval/judge_v4/blind_final/summary.md`, `reports/eval/judge_v4/blind_v31grid2/combined_validated_grid.md` et des rapports d'agents (`reports/agents/*.md`, `reports/MCP_DEPLOIEMENT.md`, `reports/DEMO.md`). Aucun chiffre n'a été recalculé pour ce document.
 
 ## 0. À lire d'abord
 
@@ -10,7 +10,7 @@
 - **Le modèle qui serait déployé (un modèle ouvert d'environ 30 milliards de paramètres) n'a jamais été mesuré.** Le juge n'a pas été validé par un médecin.
 - **Le dev était optimiste.** Le retrieval atteint 95,7 % de suffisance des preuves sur le dev et 82,8 % sur le test ; les réponses correctes passent de 73,6 % à 53,6 % (grilles du brouillon) ou de 77,8 % à 62,3 % (grilles validées). Les correctifs du retrieval avaient été conçus en lisant les échecs du dev et n'ont pas transféré au test.
 - **Erreurs graves sur le test** : 4 sur 69 sous les grilles du brouillon, 2 sur 69 (2,9 % [0–10]) sous les grilles validées, toutes du même type : une conduite unique imposée alors que la population ou la situation n'était pas précisée. Aucune mauvaise molécule, mauvaise dose, conduite opposée ou édition périmée n'a été relevée (0 sur 69, borne haute de l'intervalle exact 5,2 %).
-- **Avec les formulations des cliniciens** (variante en langage courant publiée par les experts), la suffisance du retrieval gelé est de 81,2 % sur le dev comme sur le test. Les options lexicales (n-grammes, lexique) n'y montrent pas de gain démontré ; la normalisation par le modèle y est en cours de mesure.
+- **Avec les formulations des cliniciens** (variante en langage courant publiée par les experts), la suffisance du retrieval gelé est de 81,2 % sur le dev comme sur le test. Les options lexicales (n-grammes, lexique) n'y montrent pas de gain démontré ; la normalisation de la question par le modèle y gagne 6,2 points côté dev (voir la décision ci-dessous et la section 5.5).
 - **Décision** : la configuration évaluée et gelée est la solution. Les options explorées le 27/11 existent comme interrupteurs, désactivés par défaut ; aucune n'a montré d'effet sur la sonde tenue à l'écart. Une seule montre un effet sur des formulations réelles de cliniciens : la normalisation de la question par le modèle, en mode ajout (+6,2 points de suffisance [+2,1 ; +11,5] côté dev de la variante en langage courant, aucune question perdue ; +1,6 [0 ; +4,7] côté test, post hoc ; section 5.5). Elle est l'option recommandée à activer en premier, après vérification de sa fidélité avec le modèle réellement servi.
 - **Rien n'est validé cliniquement.** Les questions du benchmark ont été validées par des médecins ; nos jeux internes sont synthétiques ; aucun médecin n'a relu nos réponses (section 12).
 
@@ -403,7 +403,7 @@ En mode ajout, le contexte gelé est conservé tel quel et la réécriture ne re
 | Option | État | Ce qu'elle a montré | Ce qu'elle n'a pas montré |
 |---|---|---|---|
 | **Configuration gelée `C10_context_notes`** | **solution retenue, active par défaut** | évaluée selon le protocole pré-enregistré (section 3) | — |
-| Option lexicale (n-grammes + lexique) | interrupteur, désactivé par défaut (démo : « lexicale ») | gains sur dev sous fautes et sigles synthétiques (+4,2 et +10,4 points) | aucun gain démontré sur `genprobe2` ni sur les formulations des cliniciens ; lexique à relire par des médecins (13 entrées enrichies) |
+| Option lexicale (n-grammes + lexique) | interrupteur, désactivé par défaut. Les mesures ont été faites avec le lexique complet ; la démo (« lexicale ») sert les n-grammes et le lexique réduit aux 60 sigles de simple développement, sans ajout de molécules, mesuré équivalent sur dev seulement | gains sur dev sous fautes et sigles synthétiques (+4,2 et +10,4 points) | aucun gain démontré sur `genprobe2` ni sur les formulations des cliniciens ; lexique à relire par des médecins (13 entrées enrichies) |
 | Normalisation par le modèle, mode ajout | interrupteur, désactivé par défaut (démo : « normalisation ») | +8,1 [+4,1 ; +12,2] sur dev avec 3 fautes ; **sur les formulations de cliniciens : +6,2 [+2,1 ; +11,5] côté dev, 0 question perdue** ; aucune perte possible par construction ; fidèle à la lecture avec Haiku (0 altération sur 30 réécritures relues) | effet sur `genprobe2` non démontré (+1,7 [0 ; +5,0]) ; côté test des formulations de cliniciens, intervalle touchant 0 (+1,6 [0 ; +4,7], post hoc) ; fidélité non mesurée avec le modèle servi ; un appel LLM de plus par question |
 | Décomposition par LLM | interrupteur (`RAG_SFAR_MULTI_QUERY=decompose`), désactivé, non branché à l'API ni à la démo | +12,5 [0 ; +31,2] sur 16 questions de développement | aucun effet sur les questions à deux sources de `genprobe2` |
 | Reformulation libre, passage hypothétique | rejetés | — | changent le sens des questions (section 8.3) |
