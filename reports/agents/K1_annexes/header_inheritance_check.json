@@ -1,0 +1,147 @@
+{
+ "parse_calls": 2237,
+ "inherited": 488,
+ "inherited_non_contiguous": 183,
+ "docs_with_non_contiguous_inheritance": 20,
+ "by_class": {
+  "T_tableaux_dominants": 34,
+  "G2_gradee_sans_numero": 34,
+  "G1_gradee_numerotee": 7,
+  "0_ABP": 96,
+  "X_recente_non_gradee": 2,
+  "O_ancienne_non_gradee": 10
+ },
+ "examples": [
+  [
+   "2026_gestion_voies_aeriennes_recommandations_mel_vd_19eb83",
+   4,
+   [
+    "RECOMMANDATION",
+    "",
+    "Niveau de preuve"
+   ]
+  ],
+  [
+   "2026_gestion_voies_aeriennes_recommandations_mel_vd_19eb83",
+   4,
+   [
+    "Importance",
+    ""
+   ]
+  ],
+  [
+   "2026_gestion_voies_aeriennes_recommandations_mel_vd_19eb83",
+   3,
+   [
+    "Importance",
+    ""
+   ]
+  ],
+  [
+   "2026_gestion_voies_aeriennes_argumentaire_mel_vd_a9b593",
+   4,
+   [
+    "Catégorie",
+    "Importance"
+   ]
+  ],
+  [
+   "2026_gestion_voies_aeriennes_argumentaire_mel_vd_a9b593",
+   3,
+   [
+    "Catégorie",
+    "Importance"
+   ]
+  ],
+  [
+   "2026_Version-longue_8281a1",
+   2,
+   [
+    "ÉTAT DE CHOC / DÉFAILLANCE MULTIVISCÉRALE",
+    "STABILISATION",
+    "RÉHABILITATION"
+   ]
+  ],
+  [
+   "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc",
+   6,
+   [
+    "Type d'étude",
+    "Retrouvées sur les sites des SS ou La Cochrane",
+    "Retenues par l'algorithme « global » sur PubMed9"
+   ]
+  ],
+  [
+   "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc",
+   9,
+   [
+    "Actes chirurgicaux ou interventionnels",
+    "Molécules",
+    "Dose initiale"
+   ]
+  ],
+  [
+   "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc",
+   2,
+   [
+    "Étude / Niveau de preuve (NP)",
+    "N patients",
+    "Bactériurie traitée ?"
+   ]
+  ],
+  [
+   "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc",
+   15,
+   [
+    "Acte interventionnel ou chirurgical",
+    "Indication d'un ECBU préopératoire / Références (niveau de preuve) (grade de la recommandation)"
+   ]
+  ],
+  [
+   "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc",
+   10,
+   [
+    "Uréthroplastie, Uréthrotomie / R5. Il est recommandé de réaliser un ECBU préopératoire et de traiter une éventuelle colonisation urinaire avant toute uréthroplastie par voie ouverte (Grade C).",
+    "9",
+    "[6-9]"
+   ]
+  ],
+  [
+   "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc",
+   10,
+   [
+    "Uréthroplastie, Uréthrotomie / R5. Il est recommandé de réaliser un ECBU préopératoire et de traiter une éventuelle colonisation urinaire avant toute uréthroplastie par voie ouverte (Grade C).",
+    "9",
+    "[6-9]"
+   ]
+  ],
+  [
+   "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc",
+   1,
+   [
+    "Uréthroplastie, Uréthrotomie / R5. Il est recommandé de réaliser un ECBU préopératoire et de traiter une éventuelle colonisation urinaire avant toute uréthroplastie par voie ouverte (Grade C).",
+    "9",
+    "[6-9]"
+   ]
+  ],
+  [
+   "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc",
+   10,
+   [
+    "Evaluation de la recommandation _ Chapitre 1",
+    "Médiane",
+    "Distribution"
+   ]
+  ],
+  [
+   "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc",
+   8,
+   [
+    "Lecteur",
+    "Commentaire",
+    "Recommandation concernée et réponse du groupe de travail"
+   ]
+  ]
+ ],
+ "note": "parse calls include the occasional re-parse of a table (carry undo), so counts are upper bounds"
+}

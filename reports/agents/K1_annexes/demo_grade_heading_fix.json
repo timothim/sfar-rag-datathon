@@ -1,0 +1,422 @@
+{
+ "documents": 32,
+ "before": {
+  "chunks_under_grade_heading": 516,
+  "stmts": 472,
+  "stmt_grade_same_chunk": 347,
+  "stmt_in_rec_box": 338
+ },
+ "after": {
+  "stmts": 472,
+  "stmt_grade_same_chunk": 410,
+  "stmt_in_rec_box": 402
+ },
+ "per_doc": [
+  [
+   "2026_gestion_voies_aeriennes_recommandations_mel_vd_19eb83",
+   {
+    "chunks_under_grade_heading": 1
+   },
+   {}
+  ],
+  [
+   "2026_gestion_voies_aeriennes_argumentaire_mel_vd_a9b593",
+   {
+    "chunks_under_grade_heading": 1
+   },
+   {}
+  ],
+  [
+   "2026_RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-ARGUMENTAIRE_CD_2026_f46e3f",
+   {
+    "chunks_under_grade_heading": 1
+   },
+   {}
+  ],
+  [
+   "2026_Version-longue_8281a1",
+   {
+    "chunks_under_grade_heading": 5
+   },
+   {}
+  ],
+  [
+   "2026_Version-courte_3ae465",
+   {
+    "chunks_under_grade_heading": 5,
+    "stmts": 1,
+    "stmt_grade_same_chunk": 0,
+    "stmt_in_rec_box": 0
+   },
+   {
+    "stmts": 1,
+    "stmt_grade_same_chunk": 0,
+    "stmt_in_rec_box": 0
+   }
+  ],
+  [
+   "2026_TEXTE-RFE-ALR-PEDIA-VERSION-FINALE-010926_63f95f",
+   {
+    "chunks_under_grade_heading": 8,
+    "stmts": 11,
+    "stmt_grade_same_chunk": 9,
+    "stmt_in_rec_box": 9
+   },
+   {
+    "stmts": 11,
+    "stmt_grade_same_chunk": 11,
+    "stmt_in_rec_box": 11
+   }
+  ],
+  [
+   "2026_RFE-Infections-intra-abdominales-version-lecture-doc-finale-14-0_7f27c6",
+   {
+    "chunks_under_grade_heading": 4,
+    "stmts": 20,
+    "stmt_grade_same_chunk": 16,
+    "stmt_in_rec_box": 18
+   },
+   {
+    "stmts": 20,
+    "stmt_grade_same_chunk": 18,
+    "stmt_in_rec_box": 18
+   }
+  ],
+  [
+   "2026_RFE_sedationproceduraleUrgences_24juin2026_1f0c12",
+   {
+    "chunks_under_grade_heading": 71,
+    "stmts": 22,
+    "stmt_grade_same_chunk": 19,
+    "stmt_in_rec_box": 19
+   },
+   {
+    "stmts": 22,
+    "stmt_grade_same_chunk": 22,
+    "stmt_in_rec_box": 22
+   }
+  ],
+  [
+   "2025_RESECTION_-HEPATIQUE_-RECOMMANDATIONS_MEL_e8bdcf",
+   {
+    "chunks_under_grade_heading": 1
+   },
+   {}
+  ],
+  [
+   "2025_RBP_-SFAR_AFEF_ACHBPT_RESECTION_-HEPATIQUE_-ARGUMENTAIRE_VF-1-AB_2e42b6",
+   {
+    "chunks_under_grade_heading": 1
+   },
+   {}
+  ],
+  [
+   "2026_RFE-LAT-final-mai-2026-_a26946",
+   {
+    "chunks_under_grade_heading": 46,
+    "stmts": 9,
+    "stmt_grade_same_chunk": 7,
+    "stmt_in_rec_box": 7
+   },
+   {
+    "stmts": 9,
+    "stmt_grade_same_chunk": 9,
+    "stmt_in_rec_box": 9
+   }
+  ],
+  [
+   "2025_2025_SFAR-SFA_RFE-Diagnostic-et-prise-en-charge-des-reactions-dh_66bc8a",
+   {
+    "chunks_under_grade_heading": 8,
+    "stmts": 65,
+    "stmt_grade_same_chunk": 61,
+    "stmt_in_rec_box": 60
+   },
+   {
+    "stmts": 65,
+    "stmt_grade_same_chunk": 62,
+    "stmt_in_rec_box": 61
+   }
+  ],
+  [
+   "2024_RFE-gestion-de-lanticoagulation-dans-un-contexte-durgence_23_02__d0368c",
+   {
+    "chunks_under_grade_heading": 19,
+    "stmts": 40,
+    "stmt_grade_same_chunk": 28,
+    "stmt_in_rec_box": 32
+   },
+   {
+    "stmts": 40,
+    "stmt_grade_same_chunk": 29,
+    "stmt_in_rec_box": 33
+   }
+  ],
+  [
+   "2024_PEDIA_RPP-Optimisation-Hemodynamique-Perioperatoire_Pediatrie_c6d39a",
+   {
+    "chunks_under_grade_heading": 5,
+    "stmts": 8,
+    "stmt_grade_same_chunk": 5,
+    "stmt_in_rec_box": 5
+   },
+   {
+    "stmts": 8,
+    "stmt_grade_same_chunk": 6,
+    "stmt_in_rec_box": 8
+   }
+  ],
+  [
+   "2023_RPP-Anesthesie-adulte-porteur-de-CC_pour-mise-sur-site_6601a6",
+   {
+    "chunks_under_grade_heading": 31,
+    "stmts": 21,
+    "stmt_grade_same_chunk": 4,
+    "stmt_in_rec_box": 4
+   },
+   {
+    "stmts": 21,
+    "stmt_grade_same_chunk": 8,
+    "stmt_in_rec_box": 9
+   }
+  ],
+  [
+   "2023_RPP-Organisation-Anesthesie-Pediatrique_-Version-pour-mise-sur-s_1a40f2",
+   {
+    "chunks_under_grade_heading": 5,
+    "stmts": 21,
+    "stmt_grade_same_chunk": 17,
+    "stmt_in_rec_box": 17
+   },
+   {
+    "stmts": 21,
+    "stmt_grade_same_chunk": 18,
+    "stmt_in_rec_box": 18
+   }
+  ],
+  [
+   "2023_RPP-epanchement-pleural-2023_mise-sur-site-_e86215",
+   {
+    "chunks_under_grade_heading": 24,
+    "stmts": 11,
+    "stmt_grade_same_chunk": 8,
+    "stmt_in_rec_box": 8
+   },
+   {
+    "stmts": 11,
+    "stmt_grade_same_chunk": 11,
+    "stmt_in_rec_box": 11
+   }
+  ],
+  [
+   "2022_RPP-FHS_pour-mise-sur-site_014032",
+   {
+    "chunks_under_grade_heading": 14,
+    "stmts": 16,
+    "stmt_grade_same_chunk": 12,
+    "stmt_in_rec_box": 12
+   },
+   {
+    "stmts": 16,
+    "stmt_grade_same_chunk": 15,
+    "stmt_in_rec_box": 15
+   }
+  ],
+  [
+   "2022_RPP-thrombectomie-2022_version-definitive-octobre-2022_103478",
+   {
+    "chunks_under_grade_heading": 16,
+    "stmts": 15,
+    "stmt_grade_same_chunk": 12,
+    "stmt_in_rec_box": 12
+   },
+   {
+    "stmts": 15,
+    "stmt_grade_same_chunk": 14,
+    "stmt_in_rec_box": 14
+   }
+  ],
+  [
+   "2022_RPP-Trauma-cranien-leger_pour-mise-sur-site_autorship-complet_9c1d68",
+   {
+    "chunks_under_grade_heading": 47,
+    "stmts": 15,
+    "stmt_grade_same_chunk": 4,
+    "stmt_in_rec_box": 5
+   },
+   {
+    "stmts": 15,
+    "stmt_grade_same_chunk": 9,
+    "stmt_in_rec_box": 10
+   }
+  ],
+  [
+   "2022_rpp-urgences-obstetricales-en-medecine-durgence_32dd15",
+   {
+    "chunks_under_grade_heading": 20,
+    "stmts": 13,
+    "stmt_grade_same_chunk": 7,
+    "stmt_in_rec_box": 7
+   },
+   {
+    "stmts": 13,
+    "stmt_grade_same_chunk": 12,
+    "stmt_in_rec_box": 13
+   }
+  ],
+  [
+   "2021_RFE_20SFAR-SF2H_20Tenue_20vestimentaire_20au_20bloc_finale_22092_6d5cef",
+   {
+    "chunks_under_grade_heading": 7,
+    "stmts": 15,
+    "stmt_grade_same_chunk": 12,
+    "stmt_in_rec_box": 13
+   },
+   {
+    "stmts": 15,
+    "stmt_grade_same_chunk": 14,
+    "stmt_in_rec_box": 15
+   }
+  ],
+  [
+   "2021_RFE_20SFAR_20pancreatite_20aigue_finale_220921_b98663",
+   {
+    "chunks_under_grade_heading": 5,
+    "stmts": 21,
+    "stmt_grade_same_chunk": 18,
+    "stmt_in_rec_box": 18
+   },
+   {
+    "stmts": 21,
+    "stmt_grade_same_chunk": 20,
+    "stmt_in_rec_box": 20
+   }
+  ],
+  [
+   "2019_rpp-prise-en-charge-du-brule-grave_20_e49758",
+   {
+    "chunks_under_grade_heading": 25,
+    "stmts": 17,
+    "stmt_grade_same_chunk": 10,
+    "stmt_in_rec_box": 11
+   },
+   {
+    "stmts": 17,
+    "stmt_grade_same_chunk": 16,
+    "stmt_in_rec_box": 17
+   }
+  ],
+  [
+   "2020_RFE_20pr_C3_A9-_C3_A9clampsie_finale_8989f8",
+   {
+    "chunks_under_grade_heading": 26,
+    "stmts": 25,
+    "stmt_grade_same_chunk": 18,
+    "stmt_in_rec_box": 18
+   },
+   {
+    "stmts": 25,
+    "stmt_grade_same_chunk": 23,
+    "stmt_in_rec_box": 23
+   }
+  ],
+  [
+   "2018_2_RFE-CURARE-3_4eac96",
+   {
+    "chunks_under_grade_heading": 1,
+    "stmts": 16,
+    "stmt_grade_same_chunk": 14,
+    "stmt_in_rec_box": 14
+   },
+   {
+    "stmts": 16,
+    "stmt_grade_same_chunk": 15,
+    "stmt_in_rec_box": 15
+   }
+  ],
+  [
+   "2019_rfe-trauma-abdominale_656ac9",
+   {
+    "chunks_under_grade_heading": 20,
+    "stmts": 14,
+    "stmt_grade_same_chunk": 11,
+    "stmt_in_rec_box": 9
+   },
+   {
+    "stmts": 14,
+    "stmt_grade_same_chunk": 14,
+    "stmt_in_rec_box": 11
+   }
+  ],
+  [
+   "2019_rfe-trauma-vertebro-medulaire_b7be1a",
+   {
+    "chunks_under_grade_heading": 2,
+    "stmts": 21,
+    "stmt_grade_same_chunk": 18,
+    "stmt_in_rec_box": 18
+   },
+   {
+    "stmts": 21,
+    "stmt_grade_same_chunk": 19,
+    "stmt_in_rec_box": 19
+   }
+  ],
+  [
+   "2019_rfe-interets-de-lapprentissage-par-simulation-en-soins-critiques_3d1b9f",
+   {
+    "chunks_under_grade_heading": 62,
+    "stmts": 22,
+    "stmt_grade_same_chunk": 19,
+    "stmt_in_rec_box": 15
+   },
+   {
+    "stmts": 22,
+    "stmt_grade_same_chunk": 22,
+    "stmt_in_rec_box": 17
+   }
+  ],
+  [
+   "2018_rfe-gestion-des-voies-aeriennes-de-lenfant_3f7a1f",
+   {
+    "chunks_under_grade_heading": 1,
+    "stmts": 12,
+    "stmt_grade_same_chunk": 12,
+    "stmt_in_rec_box": 0
+   },
+   {
+    "stmts": 12,
+    "stmt_grade_same_chunk": 12,
+    "stmt_in_rec_box": 0
+   }
+  ],
+  [
+   "2017_RFE-Hospital-acquired-pneumonia-in-ICU_e091db",
+   {
+    "chunks_under_grade_heading": 21,
+    "stmts": 9,
+    "stmt_grade_same_chunk": 4,
+    "stmt_in_rec_box": 4
+   },
+   {
+    "stmts": 9,
+    "stmt_grade_same_chunk": 8,
+    "stmt_in_rec_box": 8
+   }
+  ],
+  [
+   "2016_RFE-ACCPM-Eye-protection-in-anaesthesia-and-intensive-care_fdf503",
+   {
+    "chunks_under_grade_heading": 13,
+    "stmts": 12,
+    "stmt_grade_same_chunk": 2,
+    "stmt_in_rec_box": 3
+   },
+   {
+    "stmts": 12,
+    "stmt_grade_same_chunk": 3,
+    "stmt_in_rec_box": 5
+   }
+  ]
+ ]
+}

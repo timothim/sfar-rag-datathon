@@ -1,0 +1,6520 @@
+{
+ "T_tableaux_dominants": {
+  "grade_on_non_statement": [
+   [
+    "2026_gestion_voies_aeriennes_recommandations_mel_vd_19eb83__c0271_95fc59f0",
+    "Champ 3. Facteurs humains – Dimensions organisationnelles > Formulation des reco",
+    [
+     "accord faible",
+     "accord fort",
+     "avis d'experts"
+    ]
+   ],
+   [
+    "2026_gestion_voies_aeriennes_recommandations_mel_vd_19eb83__c0277_d2a02e30",
+    "Champ 3. Facteurs humains – Dimensions organisationnelles > Synthèse des résulta",
+    [
+     "accord fort",
+     "GRADE 1",
+     "GRADE 2",
+     "avis d'experts"
+    ]
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0170_61ff8db2",
+    "1 Introduction > ► Construction de l'argumentaire",
+    [
+     "avis d'experts"
+    ]
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0173_27523f11",
+    "1 Introduction > ECBU avant une prise en charge urologique interventionnelle ou ",
+    [
+     "avis d'experts"
+    ]
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0622_ea1c7c90",
+    "1 Introduction > ECBU avant une prise en charge urologique interventionnelle ou ",
+    [
+     "accord fort"
+    ]
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0623_a0551951",
+    "1 Introduction > ECBU avant une prise en charge urologique interventionnelle ou ",
+    [
+     "accord fort"
+    ]
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0686_3d2909eb",
+    "1 Introduction > ECBU avant une prise en charge urologique interventionnelle ou ",
+    [
+     "accord fort"
+    ]
+   ],
+   [
+    "2016_2-SFAR-RFE-tabac_proposition-CRC_a9f16a__c0015_e31c5b92",
+    "INTRODUCTION > Préambule : > a. Présentation de la problématique de la recommand",
+    [
+     "Grade 1"
+    ]
+   ],
+   [
+    "2016_Protection-oculaire-en-Anesthesie-et-Reanimation-1_e0c352__c0012_007c9d95",
+    "Protection oculaire en anesthésie et réanimation<sup>☆</sup> > Méthodologie",
+    [
+     "recommandation forte"
+    ]
+   ],
+   [
+    "2016_Protection-oculaire-en-Anesthesie-et-Reanimation-1_e0c352__c0013_3e3b004f",
+    "Protection oculaire en anesthésie et réanimation<sup>☆</sup> > Méthodologie",
+    [
+     "Grade 1",
+     "Grade 2",
+     "avis d'experts",
+     "avis d'expert",
+     "accord fort"
+    ]
+   ],
+   [
+    "2016_Protection-oculaire-en-Anesthesie-et-Reanimation-1_e0c352__c0014_ce1c4ba5",
+    "Prévention des lésions cornéennes en anesthésie > R1.1 Pour prévenir les lésions",
+    [
+     "GRADE 1",
+     "Accord FORT"
+    ]
+   ],
+   [
+    "2016_Protection-oculaire-en-Anesthesie-et-Reanimation-1_e0c352__c0017_c648c12a",
+    "Prévention des lésions cornéennes en anesthésie > R1.5 Pour les chirurgies à ris",
+    [
+     "Avis d'experts"
+    ]
+   ],
+   [
+    "2016_Protection-oculaire-en-Anesthesie-et-Reanimation-1_e0c352__c0018_551413f9",
+    "Prévention des lésions cornéennes en anesthésie > R1.6 La mise en place au sein ",
+    [
+     "GRADE 2",
+     "Accord FORT"
+    ]
+   ],
+   [
+    "2016_Protection-oculaire-en-Anesthesie-et-Reanimation-1_e0c352__c0019_baf5c2bc",
+    "Prévention des lésions cornéennes en réanimation > R2.1 Chez les patients à risq",
+    [
+     "Avis d'experts"
+    ]
+   ],
+   [
+    "2016_Protection-oculaire-en-Anesthesie-et-Reanimation-1_e0c352__c0021_0b91eeaf",
+    "Prévention des lésions cornéennes en réanimation > R2.2 Chez les patients de réa",
+    [
+     "GRADE 2",
+     "Accord FORT"
+    ]
+   ]
+  ],
+  "sibling_stacked": [
+   [
+    "2026_gestion_voies_aeriennes_recommandations_mel_vd_19eb83__c0283_2d22cf44",
+    "Introduction > Patient 3 > Patient 4"
+   ],
+   [
+    "2026_gestion_voies_aeriennes_recommandations_mel_vd_19eb83__c0284_cdb06459",
+    "Introduction > Patient 3 > Patient 5"
+   ],
+   [
+    "2026_gestion_voies_aeriennes_recommandations_mel_vd_19eb83__c0285_9394b711",
+    "Introduction > Patient 3 > Patient 6"
+   ],
+   [
+    "2026_gestion_voies_aeriennes_recommandations_mel_vd_19eb83__c0286_e0e5d221",
+    "Introduction > Patient 3 > Patient 6"
+   ],
+   [
+    "2026_gestion_voies_aeriennes_recommandations_mel_vd_19eb83__c0287_13e40983",
+    "Introduction > Patient 3 > Patient 6"
+   ],
+   [
+    "2026_gestion_voies_aeriennes_recommandations_mel_vd_19eb83__c0288_d01d5772",
+    "Introduction > Patient 3 > Patient 6"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c1150_deaea802",
+    "1 Introduction > Annexe 2 : Recherche bibliographique (cf. Excel « sélection bibliographique -> 6 onglets : 1 onglet / t"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c1151_4e87ff20",
+    "1 Introduction > Annexe 2 : Recherche bibliographique (cf. Excel « sélection bibliographique -> 6 onglets : 1 onglet / t"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c1152_9b1f0e04",
+    "1 Introduction > Annexe 2 : Recherche bibliographique (cf. Excel « sélection bibliographique -> 6 onglets : 1 onglet / t"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c1153_9aa886a0",
+    "1 Introduction > Annexe 2 : Recherche bibliographique (cf. Excel « sélection bibliographique -> 6 onglets : 1 onglet / t"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c1154_0bb7876d",
+    "1 Introduction > Annexe 2 : Recherche bibliographique (cf. Excel « sélection bibliographique -> 6 onglets : 1 onglet / t"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c1155_10498774",
+    "1 Introduction > Annexe 2 : Recherche bibliographique (cf. Excel « sélection bibliographique -> 6 onglets : 1 onglet / t"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c1156_b86ce507",
+    "1 Introduction > Annexe 2 : Recherche bibliographique (cf. Excel « sélection bibliographique -> 6 onglets : 1 onglet / t"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c1157_f70a8b17",
+    "1 Introduction > Annexe 2 : Recherche bibliographique (cf. Excel « sélection bibliographique -> 6 onglets : 1 onglet / t"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c1158_7eaf1f80",
+    "1 Introduction > Annexe 2 : Recherche bibliographique (cf. Excel « sélection bibliographique -> 6 onglets : 1 onglet / t"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c1159_2cd1c7bb",
+    "1 Introduction > Annexe 2 : Recherche bibliographique (cf. Excel « sélection bibliographique -> 6 onglets : 1 onglet / t"
+   ],
+   [
+    "2016_2-SFAR-RFE-tabac_proposition-CRC_a9f16a__c0024_94627da9",
+    "INTRODUCTION > 2. Délai minimal efficace pour l'arrêt préopératoire du tabac > 3. Rôle en consultation du chirurgien, de"
+   ],
+   [
+    "2016_2-SFAR-RFE-tabac_proposition-CRC_a9f16a__c0025_e90e2e71",
+    "INTRODUCTION > 2. Délai minimal efficace pour l'arrêt préopératoire du tabac > 3. Rôle en consultation du chirurgien, de"
+   ],
+   [
+    "2016_2-SFAR-RFE-tabac_proposition-CRC_a9f16a__c0026_1f7fa4c0",
+    "INTRODUCTION > 2. Délai minimal efficace pour l'arrêt préopératoire du tabac > 3. Rôle en consultation du chirurgien, de"
+   ],
+   [
+    "2014_2_HAS_transfusion_de_globules_rouges_homologues_-_produits_indic_57ad8e__c0100_43fe34fe",
+    "Sommaire > PARTIE 1 : PRODUITS ET EXAMENS IMMUNO-HÉMATOLOGIQUES > 1. Différents types de concentrés de globules rouges ("
+   ],
+   [
+    "2014_2_HAS_transfusion_de_globules_rouges_homologues_-_produits_indic_57ad8e__c0101_20e04eef",
+    "Sommaire > PARTIE 1 : PRODUITS ET EXAMENS IMMUNO-HÉMATOLOGIQUES > 1. Différents types de concentrés de globules rouges ("
+   ],
+   [
+    "2014_2_HAS_transfusion_de_globules_rouges_homologues_-_produits_indic_57ad8e__c0139_ed2287b4",
+    "Sommaire > PARTIE 1 : PRODUITS ET EXAMENS IMMUNO-HÉMATOLOGIQUES > 3. Qualifications applicables aux produits érythrocyta"
+   ],
+   [
+    "2014_2_HAS_transfusion_de_globules_rouges_homologues_-_produits_indic_57ad8e__c0140_a17ed572",
+    "Sommaire > PARTIE 1 : PRODUITS ET EXAMENS IMMUNO-HÉMATOLOGIQUES > 3. Qualifications applicables aux produits érythrocyta"
+   ],
+   [
+    "2014_2_HAS_transfusion_de_globules_rouges_homologues_-_produits_indic_57ad8e__c0141_864949cb",
+    "Sommaire > PARTIE 1 : PRODUITS ET EXAMENS IMMUNO-HÉMATOLOGIQUES > 3. Qualifications applicables aux produits érythrocyta"
+   ],
+   [
+    "2014_2_HAS_transfusion_de_globules_rouges_homologues_-_produits_indic_57ad8e__c0142_d8934895",
+    "Sommaire > PARTIE 1 : PRODUITS ET EXAMENS IMMUNO-HÉMATOLOGIQUES > 3. Qualifications applicables aux produits érythrocyta"
+   ]
+  ],
+  "footnote_reco": [
+   [
+    "2026_gestion_voies_aeriennes_recommandations_mel_vd_19eb83__c0285_9394b711",
+    "Introduction > Patient 3 > Patient 6"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0229_be3479c8",
+    "1 Introduction > ► Synthèse des recommandations existantes >"
+   ]
+  ],
+  "id_not_captured": [
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0432_4de41bd6",
+    "R1",
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0433_5a041dd9",
+    "R2",
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0434_1a786f60",
+    "R3",
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0435_f5410cef",
+    "R4",
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0437_4d5eaa8b",
+    "R6",
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0438_3a2f39b7",
+    "R7",
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0439_16dec7ea",
+    "R8",
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0440_fef24d55",
+    "R9",
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0441_c4c8aa0d",
+    "R10",
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0442_3d39bf95",
+    "R11",
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0443_be3e6da0",
+    "R12",
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0444_b6cd8513",
+    "R13",
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0445_46af4e8e",
+    "R14",
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0447_c2eef287",
+    "R16",
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0448_cb28b075",
+    "R17",
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0492_effe04c8",
+    "R1",
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0492_effe04c8",
+    "R2",
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0493_90a3a443",
+    "R2",
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0493_90a3a443",
+    "R3",
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0493_90a3a443",
+    "R4",
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0493_90a3a443",
+    "R5",
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0493_90a3a443",
+    "R6",
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0494_67436f0c",
+    "R7",
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0494_67436f0c",
+    "R8",
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0527_60455875",
+    "R1",
+    "prose"
+   ]
+  ],
+  "stmt_not_box": [
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0432_4de41bd6",
+    [
+     "R1"
+    ],
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0433_5a041dd9",
+    [
+     "R2"
+    ],
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0434_1a786f60",
+    [
+     "R3"
+    ],
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0435_f5410cef",
+    [
+     "R4"
+    ],
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0436_e4c034cb",
+    [
+     "R5.1",
+     "R5.2",
+     "R5.3"
+    ],
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0437_4d5eaa8b",
+    [
+     "R6"
+    ],
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0438_3a2f39b7",
+    [
+     "R7"
+    ],
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0439_16dec7ea",
+    [
+     "R8"
+    ],
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0440_fef24d55",
+    [
+     "R9"
+    ],
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0441_c4c8aa0d",
+    [
+     "R10"
+    ],
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0442_3d39bf95",
+    [
+     "R11"
+    ],
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0443_be3e6da0",
+    [
+     "R12"
+    ],
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0444_b6cd8513",
+    [
+     "R13"
+    ],
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0445_46af4e8e",
+    [
+     "R14"
+    ],
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0446_4fd24234",
+    [
+     "R15.1",
+     "R15.2",
+     "R15.3"
+    ],
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0447_c2eef287",
+    [
+     "R16"
+    ],
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0448_cb28b075",
+    [
+     "R17"
+    ],
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0492_effe04c8",
+    [
+     "R1",
+     "R2"
+    ],
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0493_90a3a443",
+    [
+     "R2",
+     "R3",
+     "R4"
+    ],
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0494_67436f0c",
+    [
+     "R7",
+     "R8"
+    ],
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0527_60455875",
+    [
+     "R1",
+     "R2",
+     "R3"
+    ],
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0528_b4d2be11",
+    [
+     "R4"
+    ],
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0529_18a4f495",
+    [
+     "R4",
+     "R5",
+     "R6"
+    ],
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c1079_16d1b415",
+    [
+     "R4",
+     "R5"
+    ],
+    "prose"
+   ],
+   [
+    "2016_2-SFAR-RFE-tabac_proposition-CRC_a9f16a__c0018_facf3aa9",
+    [
+     "R1"
+    ],
+    "prose"
+   ]
+  ],
+  "grade_not_captured": [
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0432_4de41bd6",
+    "R1",
+    "AE"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0432_4de41bd6",
+    "R1",
+    "AE"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0433_5a041dd9",
+    "R2",
+    "Grade C"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0434_1a786f60",
+    "R3",
+    "Grade B"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0435_f5410cef",
+    "R4",
+    "AE"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0436_e4c034cb",
+    "R5.1",
+    "AE"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0436_e4c034cb",
+    "R5.2",
+    "AE"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0436_e4c034cb",
+    "R5.3",
+    "AE"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0437_4d5eaa8b",
+    "R6",
+    "Grade C"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0438_3a2f39b7",
+    "R7",
+    "Grade B"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0439_16dec7ea",
+    "R8",
+    "Grade A"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0440_fef24d55",
+    "R9",
+    "AE"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0441_c4c8aa0d",
+    "R10",
+    "Grade B"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0442_3d39bf95",
+    "R11",
+    "Grade C"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0443_be3e6da0",
+    "R12",
+    "AE"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0444_b6cd8513",
+    "R13",
+    "AE"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0444_b6cd8513",
+    "R13",
+    "AE"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0445_46af4e8e",
+    "R14",
+    "Grade C"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0446_4fd24234",
+    "R15.1",
+    "Grade C"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0446_4fd24234",
+    "R15.2",
+    "Grade C"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0446_4fd24234",
+    "R15.3",
+    "AE"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0447_c2eef287",
+    "R16",
+    "AE"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0448_cb28b075",
+    "R17",
+    "AE"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0492_effe04c8",
+    "R1",
+    "Grade A"
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0492_effe04c8",
+    "R2",
+    "Grade B"
+   ]
+  ],
+  "no_grade": [
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0494_67436f0c",
+    "R8"
+   ]
+  ],
+  "unflagged_biblio": [
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0121_48d43ee7",
+    "1 Introduction > 1.3 Présentation du thème > ► Contexte épid",
+    3
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0122_8f09180b",
+    "1 Introduction > 1.3 Présentation du thème > ► Contexte épid",
+    4
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0123_f6db0faf",
+    "1 Introduction > 1.3 Présentation du thème > ► Contexte épid",
+    3
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0126_a94e1628",
+    "1 Introduction > ECBU avant une prise en charge urologique i",
+    4
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0128_01e93053",
+    "1 Introduction > ECBU avant une prise en charge urologique i",
+    6
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0184_82f82afe",
+    "1 Introduction > 2 Argumentaire > 2.1 Q1. Quelle est la plac",
+    4
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0186_b29553ec",
+    "1 Introduction > 2 Argumentaire > 2.1 Q1. Quelle est la plac",
+    3
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0187_c002e9ca",
+    "1 Introduction > 2 Argumentaire > 2.1 Q1. Quelle est la plac",
+    3
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0341_1f06fa63",
+    "1 Introduction > ECBU avant une prise en charge urologique i",
+    3
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0343_bb7e079b",
+    "1 Introduction > ECBU avant une prise en charge urologique i",
+    3
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0400_fe2b357d",
+    "1 Introduction > ECBU avant une prise en charge urologique i",
+    3
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0415_43e79159",
+    "1 Introduction > ECBU avant une prise en charge urologique i",
+    8
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0417_01f0e3a4",
+    "1 Introduction > ECBU avant une prise en charge urologique i",
+    3
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0421_47ba4d21",
+    "1 Introduction > ECBU avant une prise en charge urologique i",
+    7
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0425_c0cb9da5",
+    "1 Introduction > ECBU avant une prise en charge urologique i",
+    3
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0426_b1905660",
+    "1 Introduction > ECBU avant une prise en charge urologique i",
+    3
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0427_8ff96aca",
+    "1 Introduction > ECBU avant une prise en charge urologique i",
+    6
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0428_3ce3c04b",
+    "1 Introduction > ECBU avant une prise en charge urologique i",
+    6
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0429_461b0016",
+    "1 Introduction > ECBU avant une prise en charge urologique i",
+    5
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0490_5fbc9e84",
+    "1 Introduction > ECBU avant une prise en charge urologique i",
+    5
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0491_b6aabbcc",
+    "1 Introduction > ECBU avant une prise en charge urologique i",
+    4
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0517_f9ca5cc1",
+    "1 Introduction > NLPC > Lythotripsie extra-corporelle (LEC)",
+    3
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c0521_7a8b1f58",
+    "1 Introduction > ECBU avant une prise en charge urologique i",
+    3
+   ],
+   [
+    "2026_Reco_ECBU_Argumentaire_04_03_2026_MEL_901bcc__c1196_28bd114e",
+    "1 Introduction",
+    4
+   ],
+   [
+    "2016_2-SFAR-RFE-tabac_proposition-CRC_a9f16a__c0019_998aa9f6",
+    "INTRODUCTION > 1. Intérêt d'une prise en charge spécifique d",
+    3
+   ]
+  ],
+  "table_as_image": [
+   [
+    "2016_2-SFAR-RFE-tabac_proposition-CRC_a9f16a__c0132_776b6489",
+    "Forest plot showing Risk Ratio for respiratory complications across various studies. The p"
+   ]
+  ],
+  "box_with_argument": [
+   [
+    "2016_Protection-oculaire-en-Anesthesie-et-Reanimation-1_e0c352__c0025_961fd45a",
+    [
+     "R3.3",
+     "R3.4"
+    ],
+    852
+   ]
+  ]
+ },
+ "G2_gradee_sans_numero": {
+  "grade_on_non_statement": [
+   [
+    "2026_gestion_voies_aeriennes_argumentaire_mel_vd_a9b593__c0071_d6e1ca34",
+    "Champ 1. Prise en charge des voies aériennes sans difficulté prévisible > Questi",
+    [
+     "GRADE 1"
+    ]
+   ],
+   [
+    "2026_gestion_voies_aeriennes_argumentaire_mel_vd_a9b593__c0096_2645ce39",
+    "Champ 1. Prise en charge des voies aériennes sans difficulté prévisible > Estima",
+    [
+     "Grade 1",
+     "Grade 2",
+     "grade 2"
+    ]
+   ],
+   [
+    "2026_gestion_voies_aeriennes_argumentaire_mel_vd_a9b593__c0323_69302545",
+    "Champ 3. Facteurs humains – Dimensions organisationnelles > Formulation des reco",
+    [
+     "accord faible",
+     "accord fort",
+     "avis d'experts"
+    ]
+   ],
+   [
+    "2026_gestion_voies_aeriennes_argumentaire_mel_vd_a9b593__c0329_da7b9069",
+    "Champ 3. Facteurs humains – Dimensions organisationnelles > Synthèse des résulta",
+    [
+     "accord fort",
+     "GRADE 1",
+     "GRADE 2",
+     "avis d'experts"
+    ]
+   ],
+   [
+    "2026_RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-ARGUMENTAIRE_CD_2026_f46e3f__c0427_1bb21be5",
+    "Champ 4. Spécificités organisationnelles > PICO : Outcomes/critères de jugement ",
+    [
+     "accord faible",
+     "accord fort",
+     "avis d'experts"
+    ]
+   ],
+   [
+    "2026_RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-ARGUMENTAIRE_CD_2026_f46e3f__c0430_42afe0d4",
+    "Champ 4. Spécificités organisationnelles > Synthèse des résultats",
+    [
+     "accord fort",
+     "GRADE 2",
+     "avis d'experts"
+    ]
+   ],
+   [
+    "2026_Version-longue_8281a1__c0475_205513ad",
+    "Champ 2. Nutrition clinique en soins critiques > Avis d'experts (AE)",
+    [
+     "accord faible",
+     "accord fort",
+     "avis d'experts"
+    ]
+   ],
+   [
+    "2026_Version-longue_8281a1__c0501_4cd9e126",
+    "Champ 2. Nutrition clinique en soins critiques",
+    [
+     "accord fort",
+     "GRADE 1",
+     "GRADE 2",
+     "avis d'experts"
+    ]
+   ],
+   [
+    "2026_Version-courte_3ae465__c0218_a217c7d3",
+    "Méthode > Formulation des recommandations > Avis d'experts (AE)",
+    [
+     "accord faible",
+     "accord fort",
+     "avis d'experts"
+    ]
+   ],
+   [
+    "2026_Version-courte_3ae465__c0245_5ff08e86",
+    "Champ 2. Nutrition clinique en soins critiques",
+    [
+     "accord fort",
+     "GRADE 1",
+     "GRADE 2",
+     "avis d'experts"
+    ]
+   ],
+   [
+    "2026_RFE-20_4_2026-deifinitif-et-validei_1b550e__c0075_ccf89670",
+    "Introduction",
+    [
+     "accord fort"
+    ]
+   ],
+   [
+    "2026_RFE-20_4_2026-deifinitif-et-validei_1b550e__c0288_8f5af4f7",
+    "Introduction",
+    [
+     "Accord Fort"
+    ]
+   ],
+   [
+    "2026_RFE-20_4_2026-deifinitif-et-validei_1b550e__c0387_b13b9356",
+    "les AVK se prescrivent chez les patients de poids extrêmes selon les mêmes modal",
+    [
+     "avis d'experts"
+    ]
+   ],
+   [
+    "2026_RFE-20_4_2026-deifinitif-et-validei_1b550e__c0408_7165572e",
+    "les AVK se prescrivent chez les patients de poids extrêmes selon les mêmes modal",
+    [
+     "avis d'experts"
+    ]
+   ],
+   [
+    "2026_RFE-20_4_2026-deifinitif-et-validei_1b550e__c0502_3014a773",
+    "les AVK se prescrivent chez les patients de poids extrêmes selon les mêmes modal",
+    [
+     "avis d'experts"
+    ]
+   ],
+   [
+    "2026_RFE-20_4_2026-deifinitif-et-validei_1b550e__c0523_6ebc8e6e",
+    "les AVK se prescrivent chez les patients de poids extrêmes selon les mêmes modal",
+    [
+     "avis d'experts"
+    ]
+   ],
+   [
+    "2026_RFE-20_4_2026-deifinitif-et-validei_1b550e__c0525_3ef14242",
+    "les AVK se prescrivent chez les patients de poids extrêmes selon les mêmes modal",
+    [
+     "avis d'experts"
+    ]
+   ],
+   [
+    "2025_RESECTION_-HEPATIQUE_-RECOMMANDATIONS_MEL_e8bdcf__c0175_765706b9",
+    "Champ 3. Stratégie d'optimisation postopératoire > Formulation des recommandatio",
+    [
+     "accord faible",
+     "accord fort",
+     "avis d'experts"
+    ]
+   ],
+   [
+    "2025_RESECTION_-HEPATIQUE_-RECOMMANDATIONS_MEL_e8bdcf__c0181_2aa8f6d5",
+    "Champ 3 – : Stratégie d'optimisation postopératoire > Synthèse des résultats",
+    [
+     "accord fort",
+     "GRADE 1",
+     "GRADE 2",
+     "avis d'experts"
+    ]
+   ],
+   [
+    "2025_RBP_-SFAR_AFEF_ACHBPT_RESECTION_-HEPATIQUE_-ARGUMENTAIRE_VF-1-AB_2e42b6__c0106_5e7ee2af",
+    "Champ 1. Stratégie d'évaluation et d'optimisation préopératoire",
+    [
+     "grade 2",
+     "grade 1"
+    ]
+   ],
+   [
+    "2025_RBP_-SFAR_AFEF_ACHBPT_RESECTION_-HEPATIQUE_-ARGUMENTAIRE_VF-1-AB_2e42b6__c0430_19950ea3",
+    "Champ 3. Stratégie d'optimisation postopératoire > Formulation des recommandatio",
+    [
+     "accord faible",
+     "accord fort",
+     "avis d'experts"
+    ]
+   ],
+   [
+    "2025_RBP_-SFAR_AFEF_ACHBPT_RESECTION_-HEPATIQUE_-ARGUMENTAIRE_VF-1-AB_2e42b6__c0452_889e864e",
+    "Champ 3. Stratégie d'optimisation postopératoire > Synthèse des résultats",
+    [
+     "accord fort",
+     "GRADE 1",
+     "GRADE 2",
+     "avis d'experts"
+    ]
+   ],
+   [
+    "2024_RBP-deimarches-anticipeies_12_10_24_850fdd__c0014_8cf6e7c3",
+    "Introduction > Situation de la problématique",
+    [
+     "avis d'experts"
+    ]
+   ],
+   [
+    "2024_RBP-deimarches-anticipeies_12_10_24_850fdd__c0021_3ab877d0",
+    "RECOMMANDATIONS > I - Prérequis à la mise en place d'une démarche anticipée",
+    [
+     "accord fort"
+    ]
+   ],
+   [
+    "2024_RBP-deimarches-anticipeies_12_10_24_850fdd__c0022_6201b0ce",
+    "RECOMMANDATIONS > I - Prérequis à la mise en place d'une démarche anticipée",
+    [
+     "accord fort"
+    ]
+   ]
+  ],
+  "sibling_stacked": [
+   [
+    "2026_gestion_voies_aeriennes_argumentaire_mel_vd_a9b593__c0335_325307ce",
+    "Introduction > Patient 3 > Patient 4"
+   ],
+   [
+    "2026_gestion_voies_aeriennes_argumentaire_mel_vd_a9b593__c0336_360dfa98",
+    "Introduction > Patient 3 > Patient 5"
+   ],
+   [
+    "2026_gestion_voies_aeriennes_argumentaire_mel_vd_a9b593__c0337_cfc224ef",
+    "Introduction > Patient 3 > Patient 6"
+   ],
+   [
+    "2026_gestion_voies_aeriennes_argumentaire_mel_vd_a9b593__c0338_09c14b05",
+    "Introduction > Patient 3 > Patient 6"
+   ],
+   [
+    "2026_gestion_voies_aeriennes_argumentaire_mel_vd_a9b593__c0339_f79cbc98",
+    "Introduction > Patient 3 > Patient 6"
+   ],
+   [
+    "2026_gestion_voies_aeriennes_argumentaire_mel_vd_a9b593__c0340_9bd1e41e",
+    "Introduction > Patient 3 > Patient 6"
+   ],
+   [
+    "2026_Version-longue_8281a1__c0249_9c003523",
+    "Champ 2. Nutrition clinique en soins critiques > Argumentaire R2.4.3 > Argumentaire R2.4.4"
+   ],
+   [
+    "2026_Version-longue_8281a1__c0250_d38b5759",
+    "Champ 2. Nutrition clinique en soins critiques > Argumentaire R2.4.3 > Argumentaire R2.4.4"
+   ],
+   [
+    "2026_Version-longue_8281a1__c0251_30d18d97",
+    "Champ 2. Nutrition clinique en soins critiques > Argumentaire R2.4.3 > Argumentaire R2.4.4"
+   ],
+   [
+    "2026_Version-longue_8281a1__c0252_0e76d472",
+    "Champ 2. Nutrition clinique en soins critiques > Argumentaire R2.4.3 > Argumentaire R2.4.4"
+   ],
+   [
+    "2026_Version-longue_8281a1__c0253_ca1db299",
+    "Champ 2. Nutrition clinique en soins critiques > Argumentaire R2.4.3 > Argumentaire R2.4.4"
+   ],
+   [
+    "2026_Version-longue_8281a1__c0254_c285d050",
+    "Champ 2. Nutrition clinique en soins critiques > Argumentaire R2.4.3 > Argumentaire R2.4.4"
+   ],
+   [
+    "2026_Version-longue_8281a1__c0255_fc963670",
+    "Champ 2. Nutrition clinique en soins critiques > Argumentaire R2.4.3 > Argumentaire R2.4.4"
+   ],
+   [
+    "2026_Version-longue_8281a1__c0256_16cd9af7",
+    "Champ 2. Nutrition clinique en soins critiques > Argumentaire R2.4.3 > Argumentaire R2.4.4"
+   ],
+   [
+    "2026_Version-longue_8281a1__c0257_be1b6179",
+    "Champ 2. Nutrition clinique en soins critiques > Argumentaire R2.4.3 > Argumentaire R2.4.4"
+   ],
+   [
+    "2026_Version-longue_8281a1__c0258_95fb8dd7",
+    "Champ 2. Nutrition clinique en soins critiques > Argumentaire R2.4.3 > Argumentaire R2.4.4"
+   ],
+   [
+    "2026_Version-longue_8281a1__c0259_39a74a0b",
+    "Champ 2. Nutrition clinique en soins critiques > Argumentaire R2.4.3 > Argumentaire R2.4.4"
+   ],
+   [
+    "2026_Version-longue_8281a1__c0260_0f9ee2ad",
+    "Champ 2. Nutrition clinique en soins critiques > Argumentaire R2.4.3 > Argumentaire R2.4.4"
+   ],
+   [
+    "2026_Version-longue_8281a1__c0261_2f71c224",
+    "Champ 2. Nutrition clinique en soins critiques > Argumentaire R2.4.3 > Argumentaire R2.4.4"
+   ],
+   [
+    "2026_Version-longue_8281a1__c0262_80956d2b",
+    "Champ 2. Nutrition clinique en soins critiques > Argumentaire R2.4.3 > Argumentaire R2.4.4"
+   ],
+   [
+    "2026_Version-longue_8281a1__c0263_cae4fbf9",
+    "Champ 2. Nutrition clinique en soins critiques > Argumentaire R2.4.3 > Argumentaire R2.4.4"
+   ],
+   [
+    "2026_Version-longue_8281a1__c0264_9d1fb418",
+    "Champ 2. Nutrition clinique en soins critiques > Argumentaire R2.4.3 > Argumentaire R2.4.4"
+   ],
+   [
+    "2026_Version-longue_8281a1__c0265_00d5fd69",
+    "Champ 2. Nutrition clinique en soins critiques > Argumentaire R2.4.3 > Argumentaire R2.4.4"
+   ],
+   [
+    "2026_Version-longue_8281a1__c0266_f211c28a",
+    "Champ 2. Nutrition clinique en soins critiques > Argumentaire R2.4.3 > Argumentaire R2.4.4"
+   ],
+   [
+    "2026_Version-longue_8281a1__c0267_57cc44eb",
+    "Champ 2. Nutrition clinique en soins critiques > Argumentaire R2.4.3 > Argumentaire R2.4.4"
+   ]
+  ],
+  "footnote_reco": [
+   [
+    "2026_gestion_voies_aeriennes_argumentaire_mel_vd_a9b593__c0337_cfc224ef",
+    "Introduction > Patient 3 > Patient 6"
+   ],
+   [
+    "2026_RFE-20_4_2026-deifinitif-et-validei_1b550e__c0310_075f4fa9",
+    "Introduction > AOD"
+   ],
+   [
+    "2026_RFE-20_4_2026-deifinitif-et-validei_1b550e__c0694_cff657df",
+    "la reprise post-procédurale est le plus souvent réalisée par"
+   ],
+   [
+    "2014_2_REANIMATION_epuration-extrarenale-en-reanimation-adulte-et-ped_3d36e4__c0061_0fc8ae40",
+    "Champ 3 : Aspects pratiques > 3.3.2 En épuration extrarénale"
+   ],
+   [
+    "2013_2a_AFAR_Techniques-analgesiques-locoregionales-et-douleur-chroni_e21315__c0050_c5ba696b",
+    "Techniques analgésiques locorégionales et douleur chronique "
+   ],
+   [
+    "2010_2_AFAR_Prise-en-charge-du-coronarien-qui-doit-etre-opere-en-chir_59da99__c0045_8e596356",
+    "INTRODUCTION > QUESTION 2.- LES EXAMENS COMPLÉMENTAIRES > Pr"
+   ],
+   [
+    "2010_2_AFAR_Prise-en-charge-du-coronarien-qui-doit-etre-opere-en-chir_59da99__c0108_5834f718",
+    "INTRODUCTION > Statines et hypolipémiants > Rationnel d'util"
+   ],
+   [
+    "2010_2_AFAR_Prise-en-charge-du-coronarien-qui-doit-etre-opere-en-chir_59da99__c0125_d4157354",
+    "INTRODUCTION > Agents antiplaquelettaires (AAP) > Gestion du"
+   ],
+   [
+    "2010_2_AFAR_Prise-en-charge-du-coronarien-qui-doit-etre-opere-en-chir_59da99__c0127_5342da3b",
+    "INTRODUCTION > Agents antiplaquelettaires (AAP) > Gestion du"
+   ],
+   [
+    "2009_2_AFAR_Gestion-perioperatoire-des-traitements-chroniques-et-disp_38a32f__c0025_9b791cd9",
+    "Perioperative management of chronic treatment and medical de"
+   ],
+   [
+    "2009_2_AFAR_Gestion-perioperatoire-des-traitements-chroniques-et-disp_38a32f__c0034_6785f269",
+    "Perioperative management of chronic treatment and medical de"
+   ],
+   [
+    "2009_2_AFAR_Gestion-perioperatoire-des-traitements-chroniques-et-disp_38a32f__c0040_381307a4",
+    "Perioperative management of chronic treatment and medical de"
+   ],
+   [
+    "2009_2_AFAR_Gestion-perioperatoire-des-traitements-chroniques-et-disp_38a32f__c0046_34a051db",
+    "Perioperative management of chronic treatment and medical de"
+   ],
+   [
+    "2009_2_AFAR_Gestion-perioperatoire-des-traitements-chroniques-et-disp_38a32f__c0053_06f459c2",
+    "Perioperative management of chronic treatment and medical de"
+   ],
+   [
+    "2009_2_AFAR_Gestion-perioperatoire-des-traitements-chroniques-et-disp_38a32f__c0059_042986b6",
+    "Perioperative management of chronic treatment and medical de"
+   ],
+   [
+    "2009_2_AFAR_Gestion-perioperatoire-des-traitements-chroniques-et-disp_38a32f__c0079_d7722495",
+    "Perioperative management of chronic treatment and medical de"
+   ],
+   [
+    "2009_2_AFAR_Gestion-perioperatoire-des-traitements-chroniques-et-disp_38a32f__c0085_6f131ac0",
+    "Perioperative management of chronic treatment and medical de"
+   ],
+   [
+    "2009_2_AFAR_Gestion-perioperatoire-des-traitements-chroniques-et-disp_38a32f__c0277_c4f52434",
+    "Perioperative management of chronic treatment and medical de"
+   ],
+   [
+    "2009_2_AFAR_Gestion-perioperatoire-des-traitements-chroniques-et-disp_38a32f__c0289_73848a44",
+    "Perioperative management of chronic treatment and medical de"
+   ],
+   [
+    "2006_2_AFAR_Blocs-perimedullaires-chez-ladulte_c289cc__c0076_531cf250",
+    "Les blocs périmédullaires chez l'adulte > QUESTION 2 > QUEST"
+   ],
+   [
+    "2006_2_AFAR_Blocs-perimedullaires-chez-ladulte_c289cc__c0079_96bc6fc7",
+    "Les blocs périmédullaires chez l'adulte > QUESTION 2 > QUEST"
+   ],
+   [
+    "2006_2_AFAR_Blocs-perimedullaires-chez-ladulte_c289cc__c0080_13c39be1",
+    "Les blocs périmédullaires chez l'adulte > QUESTION 2 > QUEST"
+   ],
+   [
+    "2006_2_AFAR_Blocs-perimedullaires-chez-ladulte_c289cc__c0085_5950abed",
+    "Les blocs périmédullaires chez l'adulte > QUESTION 4 > QUELL"
+   ],
+   [
+    "2006_2_AFAR_Blocs-perimedullaires-chez-ladulte_c289cc__c0153_28c532b2",
+    "Les blocs périmédullaires chez l'adulte > QUESTION 6 > ANALG"
+   ],
+   [
+    "2006_2_AFAR_Blocs-perimedullaires-chez-ladulte_c289cc__c0154_ff4d0120",
+    "Les blocs périmédullaires chez l'adulte > QUESTION 6 > ANALG"
+   ]
+  ],
+  "unflagged_biblio": [
+   [
+    "2026_gestion_voies_aeriennes_argumentaire_mel_vd_a9b593__c0087_444aa8b8",
+    "Champ 1. Prise en charge des voies aériennes sans difficulté",
+    4
+   ],
+   [
+    "2026_gestion_voies_aeriennes_argumentaire_mel_vd_a9b593__c0098_7bf36143",
+    "Champ 1. Prise en charge des voies aériennes sans difficulté",
+    3
+   ],
+   [
+    "2026_RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-ARGUMENTAIRE_CD_2026_f46e3f__c0058_81f69665",
+    "Champ 1. Mise en place et procédure de déclenchement de la f",
+    3
+   ],
+   [
+    "2026_RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-ARGUMENTAIRE_CD_2026_f46e3f__c0431_33b3c15d",
+    "Champ 1 : Mise en place et procédure de déclenchement de la ",
+    11
+   ],
+   [
+    "2026_RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-ARGUMENTAIRE_CD_2026_f46e3f__c0432_a71a6384",
+    "Champ 1 : Mise en place et procédure de déclenchement de la ",
+    10
+   ],
+   [
+    "2026_RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-ARGUMENTAIRE_CD_2026_f46e3f__c0433_ab5797a5",
+    "Champ 1 : Mise en place et procédure de déclenchement de la ",
+    10
+   ],
+   [
+    "2026_RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-ARGUMENTAIRE_CD_2026_f46e3f__c0434_272a8eee",
+    "Champ 1 : Mise en place et procédure de déclenchement de la ",
+    7
+   ],
+   [
+    "2026_RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-ARGUMENTAIRE_CD_2026_f46e3f__c0435_b6ccab8f",
+    "Champ 1 : Mise en place et procédure de déclenchement de la ",
+    8
+   ],
+   [
+    "2026_RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-ARGUMENTAIRE_CD_2026_f46e3f__c0436_4010a3bf",
+    "Champ 1 : Mise en place et procédure de déclenchement de la ",
+    8
+   ],
+   [
+    "2026_RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-ARGUMENTAIRE_CD_2026_f46e3f__c0437_a83ba6be",
+    "Champ 1 : Mise en place et procédure de déclenchement de la ",
+    10
+   ],
+   [
+    "2026_RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-ARGUMENTAIRE_CD_2026_f46e3f__c0438_d6fd9102",
+    "Champ 1 : Mise en place et procédure de déclenchement de la ",
+    11
+   ],
+   [
+    "2026_RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-ARGUMENTAIRE_CD_2026_f46e3f__c0439_a8203456",
+    "Champ 1 : Mise en place et procédure de déclenchement de la ",
+    8
+   ],
+   [
+    "2026_RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-ARGUMENTAIRE_CD_2026_f46e3f__c0440_abc20ed2",
+    "Champ 1 : Mise en place et procédure de déclenchement de la ",
+    6
+   ],
+   [
+    "2026_RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-ARGUMENTAIRE_CD_2026_f46e3f__c0441_9ff3490f",
+    "Champ 1 : Mise en place et procédure de déclenchement de la ",
+    5
+   ],
+   [
+    "2026_RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-ARGUMENTAIRE_CD_2026_f46e3f__c0442_e02daba9",
+    "Champ 1 : Mise en place et procédure de déclenchement de la ",
+    7
+   ],
+   [
+    "2026_RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-ARGUMENTAIRE_CD_2026_f46e3f__c0443_1d202b5a",
+    "Champ 1 : Mise en place et procédure de déclenchement de la ",
+    7
+   ],
+   [
+    "2026_RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-ARGUMENTAIRE_CD_2026_f46e3f__c0444_b3e08d0e",
+    "Champ 1 : Mise en place et procédure de déclenchement de la ",
+    7
+   ],
+   [
+    "2026_RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-ARGUMENTAIRE_CD_2026_f46e3f__c0445_31305615",
+    "Champ 1 : Mise en place et procédure de déclenchement de la ",
+    11
+   ],
+   [
+    "2026_RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-ARGUMENTAIRE_CD_2026_f46e3f__c0446_3122c2e7",
+    "Champ 1 : Mise en place et procédure de déclenchement de la ",
+    4
+   ],
+   [
+    "2026_RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-ARGUMENTAIRE_CD_2026_f46e3f__c0447_649d3c37",
+    "Champ 2 : Conditions matérielles et ressources humaines > Qu",
+    9
+   ],
+   [
+    "2026_RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-ARGUMENTAIRE_CD_2026_f46e3f__c0448_bea9f56c",
+    "Champ 2 : Conditions matérielles et ressources humaines > Qu",
+    8
+   ],
+   [
+    "2026_RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-ARGUMENTAIRE_CD_2026_f46e3f__c0449_cc7073f3",
+    "Champ 2 : Conditions matérielles et ressources humaines > Qu",
+    8
+   ],
+   [
+    "2026_RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-ARGUMENTAIRE_CD_2026_f46e3f__c0450_34c0b58f",
+    "Champ 2 : Conditions matérielles et ressources humaines > Qu",
+    8
+   ],
+   [
+    "2026_RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-ARGUMENTAIRE_CD_2026_f46e3f__c0451_c71e31a8",
+    "Champ 2 : Conditions matérielles et ressources humaines > Qu",
+    9
+   ],
+   [
+    "2026_RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-ARGUMENTAIRE_CD_2026_f46e3f__c0452_1fa5d02b",
+    "Champ 2 : Conditions matérielles et ressources humaines > Qu",
+    3
+   ]
+  ],
+  "table_as_image": [
+   [
+    "2026_RECO_641-_URGENCE-VITALE_INTRAHOSPITALIERE_-ARGUMENTAIRE_CD_2026_f46e3f__c0155_9dac8d84",
+    "Infographic showing two rows of medical equipment. Row 1: ÉQUIPE OBSTÉTRICALE (Obstetric T"
+   ]
+  ],
+  "stmt_not_box": [
+   [
+    "2026_Version-courte_3ae465__c0120_d0f9ef97",
+    [
+     "R2.1.1"
+    ],
+    "prose"
+   ],
+   [
+    "2025_argu_sepsis_a5219e__c0355_d82e2c4b",
+    [
+     "Recommandation 58"
+    ],
+    "prose"
+   ],
+   [
+    "2018_2_Recos-SDRA_a93bac__c0009_ab75485e",
+    [
+     "R1"
+    ],
+    "prose"
+   ],
+   [
+    "2018_2_Recos-SDRA_a93bac__c0034_493c4b63",
+    [
+     "R4"
+    ],
+    "prose"
+   ],
+   [
+    "2014_Recommandation_antalgique_post_amygdalectomie_2014_TC2_9ae464__c0124_2b59c97e",
+    [
+     "Recommandation 6"
+    ],
+    "prose"
+   ]
+  ],
+  "no_grade": [
+   [
+    "2026_Version-courte_3ae465__c0120_d0f9ef97",
+    "R2.1.1"
+   ],
+   [
+    "2025_argu_sepsis_a5219e__c0355_d82e2c4b",
+    "Recommandation 58"
+   ]
+  ],
+  "id_not_captured": [
+   [
+    "2025_argu_sepsis_a5219e__c0355_d82e2c4b",
+    "Recommandation 58",
+    "prose"
+   ],
+   [
+    "2018_2_Recos-SDRA_a93bac__c0009_ab75485e",
+    "R1",
+    "prose"
+   ],
+   [
+    "2018_2_Recos-SDRA_a93bac__c0034_493c4b63",
+    "R4",
+    "prose"
+   ],
+   [
+    "2014_Recommandation_antalgique_post_amygdalectomie_2014_TC2_9ae464__c0124_2b59c97e",
+    "Recommandation 6",
+    "prose"
+   ]
+  ],
+  "grade_not_captured": [
+   [
+    "2014_Recommandation_antalgique_post_amygdalectomie_2014_TC2_9ae464__c0124_2b59c97e",
+    "Recommandation 6",
+    "accord professionnel"
+   ]
+  ]
+ },
+ "F_fiche_algo_annexe": {
+  "grade_on_non_statement": [
+   [
+    "2026_algo_synthese_IIA_RFE_moderne-defitives-depot-site-SFAR_ed5281__c0000_cbdf3ddb",
+    "IIA COMMUNAUTAIRE",
+    [
+     "AVIS D'EXPERTS",
+     "GRADE 2"
+    ]
+   ],
+   [
+    "2026_algo_synthese_IIA_RFE_moderne-defitives-depot-site-SFAR_ed5281__c0003_dbcedadd",
+    "IIA ASSOCIÉE AUX SOINS",
+    [
+     "Grade 1",
+     "Grade 2"
+    ]
+   ],
+   [
+    "2026_algo_synthese_IIA_RFE_moderne-defitives-depot-site-SFAR_ed5281__c0005_1962ed0e",
+    "IIA ASSOCIÉE AUX SOINS > FdR d'entérocoque AmpiR",
+    [
+     "AVIS D'EXPERTS",
+     "GRADE 1",
+     "GRADE 2"
+    ]
+   ],
+   [
+    "2026_RecoCIAFU_ECBU_Note-de-cadrage_10_10_2024_d649f3__c0117_f2267e06",
+    "7.4 Construction de l'argumentaire",
+    [
+     "avis d'experts"
+    ]
+   ],
+   [
+    "2026_RecoCIAFU_ECBU_Note-de-cadrage_10_10_2024_d649f3__c0119_b02d2046",
+    "7.6 Relecture nationale",
+    [
+     "avis d'experts"
+    ]
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0059_eb196151",
+    "1 Introduction > 1.6 Méthode de mise en œuvre > ► Relecture nationale",
+    [
+     "avis d'experts"
+    ]
+   ],
+   [
+    "2025_Figure-1-Fiche-synthese-FR_95dfa6__c0008_2044193f",
+    "",
+    [
+     "grade 2",
+     "avis d'experts"
+    ]
+   ],
+   [
+    "2025_Figure-1-Fiche-synthese-FR_95dfa6__c0009_3fd19935",
+    "",
+    [
+     "grade 2",
+     "avis d'experts"
+    ]
+   ],
+   [
+    "2025_fiche_sepsis_aval_615ce6__c0002_7958f3db",
+    "Prise en charge du sepsis du nouveau-né, de l'enfant et de l'adulte de la périod",
+    [
+     "recommandation forte"
+    ]
+   ],
+   [
+    "2025_fiche_sepsis_aval_615ce6__c0003_024a0044",
+    "Prise en charge du sepsis du nouveau-né, de l'enfant et de l'adulte de la périod",
+    [
+     "recommandation forte"
+    ]
+   ],
+   [
+    "2025_fiche_sepsis_aval_615ce6__c0004_c18fa679",
+    "Prise en charge du sepsis du nouveau-né, de l'enfant et de l'adulte de la périod",
+    [
+     "recommandation forte"
+    ]
+   ],
+   [
+    "2025_fiche_sepsis_aval_615ce6__c0005_5dec2f6e",
+    "Prise en charge du sepsis du nouveau-né, de l'enfant et de l'adulte de la périod",
+    [
+     "recommandation forte"
+    ]
+   ],
+   [
+    "2025_fiche_sepsis_aval_615ce6__c0006_93048fac",
+    "Prise en charge du sepsis du nouveau-né, de l'enfant et de l'adulte de la périod",
+    [
+     "recommandation forte"
+    ]
+   ],
+   [
+    "2025_fiche_sepsis_aval_615ce6__c0007_9faec0aa",
+    "Prise en charge du sepsis du nouveau-né, de l'enfant et de l'adulte de la périod",
+    [
+     "recommandation forte"
+    ]
+   ],
+   [
+    "2025_fiche_sepsis_aval_615ce6__c0008_24849df1",
+    "Prise en charge du sepsis du nouveau-né, de l'enfant et de l'adulte de la périod",
+    [
+     "recommandation forte"
+    ]
+   ],
+   [
+    "2025_fiche_sepsis_amont_a60630__c0005_64c73066",
+    "Prise en charge du sepsis du nouveau-né, de l'enfant et de l'adulte en amont des",
+    [
+     "recommandation forte"
+    ]
+   ],
+   [
+    "2025_fiche_sepsis_amont_a60630__c0013_e8ff982c",
+    "Prise en charge du sepsis du nouveau-né, de l'enfant et de l'adulte en amont des",
+    [
+     "recommandation forte"
+    ]
+   ],
+   [
+    "2025_fiche_sepsis_amont_a60630__c0016_a99a33fd",
+    "Prise en charge du sepsis du nouveau-né, de l'enfant et de l'adulte en amont des",
+    [
+     "recommandation forte"
+    ]
+   ],
+   [
+    "2024_Algorithmes_RFE-gestion-de-lanticoagulation-dans-un-contexte-dur_5ab803__c0007_02dc5056",
+    "Algorithme RFE anticoagulation dans un contexte d'urgence",
+    [
+     "GRADE 2",
+     "AVIS D'EXPERTS"
+    ]
+   ],
+   [
+    "2024_Algorithmes_RFE-gestion-de-lanticoagulation-dans-un-contexte-dur_5ab803__c0009_b5e6f3d2",
+    "Algorithme RFE anticoagulation dans un contexte d'urgence",
+    [
+     "AVIS D'EXPERTS",
+     "GRADE 2"
+    ]
+   ],
+   [
+    "2024_Algorithmes_RFE-gestion-de-lanticoagulation-dans-un-contexte-dur_5ab803__c0010_bfb7a20e",
+    "Algorithme RFE anticoagulation dans un contexte d'urgence",
+    [
+     "GRADE 2",
+     "AVIS D'EXPERTS"
+    ]
+   ],
+   [
+    "2024_Algorithmes_RFE-gestion-de-lanticoagulation-dans-un-contexte-dur_5ab803__c0026_428dbc5f",
+    "Posologie du sulfate de protamine > Figure 6. Surdosage asymptomatique en AVK",
+    [
+     "GRADE 2",
+     "GRADE 1"
+    ]
+   ],
+   [
+    "2024_Algorithmes_RFE-gestion-de-lanticoagulation-dans-un-contexte-dur_5ab803__c0029_1d780a86",
+    "Les CCP sont dosés en unités de facteur IX.",
+    [
+     "GRADE 2",
+     "GRADE 1",
+     "grade 2"
+    ]
+   ],
+   [
+    "2024_Algorithmes_RFE-gestion-de-lanticoagulation-dans-un-contexte-dur_5ab803__c0031_8dfe0756",
+    "Les CCP sont dosés en unités de facteur IX.",
+    [
+     "GRADE 2",
+     "AVIS D'EXPERTS",
+     "GRADE 1"
+    ]
+   ],
+   [
+    "2024_Algorithmes_RFE-gestion-de-lanticoagulation-dans-un-contexte-dur_5ab803__c0033_aff44733",
+    "Les CCP sont dosés en unités de facteur IX.",
+    [
+     "GRADE 1",
+     "AVIS d'EXPERTS"
+    ]
+   ]
+  ],
+  "id_not_captured": [
+   [
+    "2026_algo_synthese_IIA_RFE_moderne-defitives-depot-site-SFAR_ed5281__c0006_9014ef4b",
+    "R21",
+    "prose"
+   ],
+   [
+    "2026_algo_synthese_IIA_RFE_moderne-defitives-depot-site-SFAR_ed5281__c0006_9014ef4b",
+    "R41",
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0090_3e83453b",
+    "R1",
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0091_d636ce0d",
+    "R2",
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0092_62cf1cc2",
+    "R3",
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0093_fe552461",
+    "R4",
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0095_b34ff83c",
+    "R6",
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0096_6416f4b2",
+    "R7",
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0097_955fc659",
+    "R8",
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0098_4b23b6fb",
+    "R9",
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0099_3d410ad0",
+    "R10",
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0100_e9c5f739",
+    "R11",
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0101_de1bccfa",
+    "R12",
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0102_f6cf2781",
+    "R13",
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0102_f6cf2781",
+    "R14",
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0103_7720f0c2",
+    "R16",
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0104_4148892b",
+    "R17",
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0114_5ddc38c7",
+    "R1",
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0114_5ddc38c7",
+    "R2",
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0114_5ddc38c7",
+    "R3",
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0114_5ddc38c7",
+    "R4",
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0114_5ddc38c7",
+    "R5",
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0114_5ddc38c7",
+    "R6",
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0115_0deceefb",
+    "R7",
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0115_0deceefb",
+    "R8",
+    "prose"
+   ]
+  ],
+  "stmt_not_box": [
+   [
+    "2026_algo_synthese_IIA_RFE_moderne-defitives-depot-site-SFAR_ed5281__c0006_9014ef4b",
+    [
+     "R21",
+     "R41"
+    ],
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0090_3e83453b",
+    [
+     "R1"
+    ],
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0091_d636ce0d",
+    [
+     "R2"
+    ],
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0092_62cf1cc2",
+    [
+     "R3"
+    ],
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0093_fe552461",
+    [
+     "R4"
+    ],
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0094_ef0a6341",
+    [
+     "R5.1",
+     "R5.3"
+    ],
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0095_b34ff83c",
+    [
+     "R6"
+    ],
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0096_6416f4b2",
+    [
+     "R7"
+    ],
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0097_955fc659",
+    [
+     "R8"
+    ],
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0098_4b23b6fb",
+    [
+     "R9"
+    ],
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0099_3d410ad0",
+    [
+     "R10"
+    ],
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0100_e9c5f739",
+    [
+     "R11"
+    ],
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0101_de1bccfa",
+    [
+     "R12"
+    ],
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0102_f6cf2781",
+    [
+     "R13",
+     "R14.1",
+     "R14"
+    ],
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0103_7720f0c2",
+    [
+     "R15.1",
+     "R15.2",
+     "R15.3"
+    ],
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0104_4148892b",
+    [
+     "R17"
+    ],
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0114_5ddc38c7",
+    [
+     "R1",
+     "R2",
+     "R3"
+    ],
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0115_0deceefb",
+    [
+     "R7",
+     "R8"
+    ],
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0128_4b68f5ee",
+    [
+     "R1"
+    ],
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0129_a1b9e153",
+    [
+     "R2"
+    ],
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0130_201e0db5",
+    [
+     "R4"
+    ],
+    "prose"
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0131_6ec3cb5f",
+    [
+     "R5",
+     "R6"
+    ],
+    "prose"
+   ]
+  ],
+  "no_grade": [
+   [
+    "2026_algo_synthese_IIA_RFE_moderne-defitives-depot-site-SFAR_ed5281__c0006_9014ef4b",
+    "R21"
+   ],
+   [
+    "2026_algo_synthese_IIA_RFE_moderne-defitives-depot-site-SFAR_ed5281__c0006_9014ef4b",
+    "R41"
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0115_0deceefb",
+    "R8"
+   ]
+  ],
+  "sibling_stacked": [
+   [
+    "2026_RecoCIAFU_ECBU_Note-de-cadrage_10_10_2024_d649f3__c0081_d87a5d3a",
+    "6.2 Procédures urologiques considérées > 1. Prostate"
+   ],
+   [
+    "2026_RecoCIAFU_ECBU_Note-de-cadrage_10_10_2024_d649f3__c0082_092abdc8",
+    "6.2 Procédures urologiques considérées > 2. Vessie"
+   ],
+   [
+    "2026_RecoCIAFU_ECBU_Note-de-cadrage_10_10_2024_d649f3__c0083_7d301ec2",
+    "6.2 Procédures urologiques considérées > 3. Rein"
+   ],
+   [
+    "2026_RecoCIAFU_ECBU_Note-de-cadrage_10_10_2024_d649f3__c0084_719a64bf",
+    "6.2 Procédures urologiques considérées > 4. Organes génitaux de l'homme"
+   ],
+   [
+    "2026_RecoCIAFU_ECBU_Note-de-cadrage_10_10_2024_d649f3__c0085_1737c4b3",
+    "6.2 Procédures urologiques considérées > 5. Chirurgie endo-urologique du tractus urinaire1. 1. Urétéroscopie diagnostiqu"
+   ],
+   [
+    "2026_RecoCIAFU_ECBU_Note-de-cadrage_10_10_2024_d649f3__c0086_4fcf3a7c",
+    "6.2 Procédures urologiques considérées > 6.3 Questions non retenues"
+   ],
+   [
+    "2026_RecoCIAFU_ECBU_Note-de-cadrage_10_10_2024_d649f3__c0112_05c80c9d",
+    "7.2 Recherche bibliographique > 7.3 Sélection bibliographique"
+   ],
+   [
+    "2026_RecoCIAFU_ECBU_Note-de-cadrage_10_10_2024_d649f3__c0113_8e682c50",
+    "7.2 Recherche bibliographique > 7.3 Sélection bibliographique"
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0041_ce697639",
+    "1 Introduction > 1.2 Justification du projet > 1.3 Enjeux"
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0042_5bc43fb5",
+    "1 Introduction > 1.2 Justification du projet > 1.4 Objectifs"
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0043_9ed49690",
+    "1 Introduction > 1.2 Justification du projet > 1.4 Objectifs"
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0044_c2ef1376",
+    "1 Introduction > 1.2 Justification du projet > 1.4 Objectifs"
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0045_323856e6",
+    "1 Introduction > 1.2 Justification du projet > 1.4 Objectifs"
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0046_43d0f68e",
+    "1 Introduction > 1.2 Justification du projet > 1.4 Objectifs"
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0047_1713c729",
+    "1 Introduction > 1.2 Justification du projet > 1.4 Objectifs"
+   ],
+   [
+    "2016_3-Tableaux-Reactualisation-de-la-recommandation-sur-la-douleur-p_7b4c8a__c0239_a8945fa9",
+    "Tableaux 2 : Gabapentine DPO > Tableaux 3 : Prégabaline DPO > Efficacité"
+   ],
+   [
+    "2016_3-Tableaux-Reactualisation-de-la-recommandation-sur-la-douleur-p_7b4c8a__c0240_0bd3d6c6",
+    "Tableaux 2 : Gabapentine DPO > Tableaux 3 : Prégabaline DPO > Efficacité"
+   ],
+   [
+    "2016_3-Tableaux-Reactualisation-de-la-recommandation-sur-la-douleur-p_7b4c8a__c0241_81977971",
+    "Tableaux 2 : Gabapentine DPO > Tableaux 3 : Prégabaline DPO > Efficacité"
+   ],
+   [
+    "2016_3-Tableaux-Reactualisation-de-la-recommandation-sur-la-douleur-p_7b4c8a__c0242_b98347ee",
+    "Tableaux 2 : Gabapentine DPO > Tableaux 3 : Prégabaline DPO > Efficacité"
+   ],
+   [
+    "2016_3-Tableaux-Reactualisation-de-la-recommandation-sur-la-douleur-p_7b4c8a__c0243_431331a2",
+    "Tableaux 2 : Gabapentine DPO > Tableaux 3 : Prégabaline DPO > Efficacité"
+   ],
+   [
+    "2016_3-Tableaux-Reactualisation-de-la-recommandation-sur-la-douleur-p_7b4c8a__c0244_f198c5a8",
+    "Tableaux 2 : Gabapentine DPO > Tableaux 3 : Prégabaline DPO > Efficacité"
+   ],
+   [
+    "2016_3-Tableaux-Reactualisation-de-la-recommandation-sur-la-douleur-p_7b4c8a__c0245_606c4265",
+    "Tableaux 2 : Gabapentine DPO > Tableaux 3 : Prégabaline DPO > Efficacité"
+   ],
+   [
+    "2016_3-Tableaux-Reactualisation-de-la-recommandation-sur-la-douleur-p_7b4c8a__c0246_39eb471f",
+    "Tableaux 2 : Gabapentine DPO > Tableaux 3 : Prégabaline DPO > Efficacité"
+   ],
+   [
+    "2016_3-Tableaux-Reactualisation-de-la-recommandation-sur-la-douleur-p_7b4c8a__c0247_9f4b9777",
+    "Tableaux 2 : Gabapentine DPO > Tableaux 3 : Prégabaline DPO > Efficacité"
+   ],
+   [
+    "2016_3-Tableaux-Reactualisation-de-la-recommandation-sur-la-douleur-p_7b4c8a__c0248_fb186b09",
+    "Tableaux 2 : Gabapentine DPO > Tableaux 3 : Prégabaline DPO > Efficacité"
+   ]
+  ],
+  "unflagged_biblio": [
+   [
+    "2026_RecoCIAFU_ECBU_Note-de-cadrage_10_10_2024_d649f3__c0060_83d7cf77",
+    "3 Présentation du thème > 3.2 Contexte épidémiologique",
+    3
+   ],
+   [
+    "2026_RecoCIAFU_ECBU_Note-de-cadrage_10_10_2024_d649f3__c0061_0f662173",
+    "3 Présentation du thème > 3.2 Contexte épidémiologique",
+    4
+   ],
+   [
+    "2026_RecoCIAFU_ECBU_Note-de-cadrage_10_10_2024_d649f3__c0062_c70a1949",
+    "3 Présentation du thème > 3.2 Contexte épidémiologique",
+    3
+   ],
+   [
+    "2026_RecoCIAFU_ECBU_Note-de-cadrage_10_10_2024_d649f3__c0068_50c2188d",
+    "3 Présentation du thème > ► Antibioprophylaxie",
+    6
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0033_4c176533",
+    "1 Introduction > 1.1 Contexte du thème",
+    3
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0034_c9028e5c",
+    "1 Introduction > 1.1 Contexte du thème",
+    4
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0039_b278c1be",
+    "1 Introduction > 1.2 Justification du projet",
+    3
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0040_9c41b0f1",
+    "1 Introduction > 1.2 Justification du projet",
+    4
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0072_f485d344",
+    "1 Introduction > 2 Résultats > 2.1 Q1. Quelle est la place d",
+    9
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0074_a270895f",
+    "1 Introduction > 2 Résultats > Chirurgie endoscopique ou min",
+    3
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0077_c07fc171",
+    "1 Introduction > 2 Résultats > RTUV",
+    5
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0078_5473c94b",
+    "1 Introduction > 2 Résultats > Pose de sphincter urinaire ar",
+    3
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0082_0dba4f28",
+    "1 Introduction > 2 Résultats > Transplantation rénale",
+    3
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0083_653bb32c",
+    "1 Introduction > 2 Résultats > Urétéroscopie",
+    3
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0084_9cc81a32",
+    "1 Introduction > 2 Résultats > Urétéroscopie",
+    6
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0085_d0cd0e3d",
+    "1 Introduction > 2 Résultats > NLPC",
+    6
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0086_d06bce1c",
+    "1 Introduction > 2 Résultats > NLPC",
+    5
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0112_d30ff175",
+    "1 Introduction > 2 Résultats > ► Conclusions du groupe de tr",
+    6
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0124_6b520c07",
+    "1 Introduction > 2.3 Q3. Quelle prise en charge du patient, ",
+    3
+   ]
+  ],
+  "grade_not_captured": [
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0090_3e83453b",
+    "R1",
+    "AE"
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0090_3e83453b",
+    "R1",
+    "AE"
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0091_d636ce0d",
+    "R2",
+    "Grade C"
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0092_62cf1cc2",
+    "R3",
+    "Grade B"
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0093_fe552461",
+    "R4",
+    "AE"
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0094_ef0a6341",
+    "R5.1",
+    "AE"
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0094_ef0a6341",
+    "R5.3",
+    "AE"
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0095_b34ff83c",
+    "R6",
+    "Grade C"
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0096_6416f4b2",
+    "R7",
+    "Grade B"
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0097_955fc659",
+    "R8",
+    "Grade A"
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0098_4b23b6fb",
+    "R9",
+    "AE"
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0099_3d410ad0",
+    "R10",
+    "Grade B"
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0100_e9c5f739",
+    "R11",
+    "Grade C"
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0101_de1bccfa",
+    "R12",
+    "AE"
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0102_f6cf2781",
+    "R13",
+    "AE"
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0102_f6cf2781",
+    "R13",
+    "AE"
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0102_f6cf2781",
+    "R14.1",
+    "AE"
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0102_f6cf2781",
+    "R14",
+    "Grade C"
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0103_7720f0c2",
+    "R15.1",
+    "Grade C"
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0103_7720f0c2",
+    "R15.2",
+    "Grade C"
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0103_7720f0c2",
+    "R15.3",
+    "AE"
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0103_7720f0c2",
+    "R16",
+    "AE"
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0104_4148892b",
+    "R17",
+    "AE"
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0114_5ddc38c7",
+    "R1",
+    "Grade A"
+   ],
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0114_5ddc38c7",
+    "R2",
+    "Grade B"
+   ]
+  ],
+  "biblio_glued": [
+   [
+    "2026_Reco_ECBU_Synthese_04_03_2026_MEL_964972__c0128_4b68f5ee",
+    [
+     "R1"
+    ]
+   ]
+  ],
+  "footnote_reco": [
+   [
+    "2025_Figure-1-Fiche-synthese-FR_95dfa6__c0016_7a3e3639",
+    "Spécificités pédiatriques > PEC médicale > FRACTURE PING-PON"
+   ],
+   [
+    "2002_86-civdccons_d0a5c8__c0015_f53e2fd4",
+    "Coagulations Intra-Vasculaires Disséminées (CIVD) en réanima"
+   ]
+  ]
+ },
+ "G1_gradee_numerotee": {
+  "grade_on_non_statement": [
+   [
+    "2026_TEXTE-RFE-ALR-PEDIA-VERSION-FINALE-010926_63f95f__c0007_6ce0b240",
+    "Anesthésie locorégionale en chirurgie pédiatrique > RÉSUMÉ",
+    [
+     "accord fort",
+     "GRADE 1",
+     "GRADE 2",
+     "avis d'experts"
+    ]
+   ],
+   [
+    "2026_TEXTE-RFE-ALR-PEDIA-VERSION-FINALE-010926_63f95f__c0010_ca328404",
+    "Anesthésie locorégionale en chirurgie pédiatrique > ABSTRACT",
+    [
+     "GRADE 1",
+     "GRADE 2"
+    ]
+   ],
+   [
+    "2026_TEXTE-RFE-ALR-PEDIA-VERSION-FINALE-010926_63f95f__c0022_7de8e392",
+    "INTRODUCTION > Portée et perspectives",
+    [
+     "avis d'expert"
+    ]
+   ],
+   [
+    "2026_TEXTE-RFE-ALR-PEDIA-VERSION-FINALE-010926_63f95f__c0035_63f05f55",
+    "INTRODUCTION > MÉTHODE > Champ des recommandations",
+    [
+     "accord fort",
+     "accord faible",
+     "avis d'experts"
+    ]
+   ],
+   [
+    "2026_TEXTE-RFE-ALR-PEDIA-VERSION-FINALE-010926_63f95f__c0041_56460d4a",
+    "INTRODUCTION > RÉSULTATS > Synthèse des résultats",
+    [
+     "accord fort",
+     "GRADE 1",
+     "GRADE 2",
+     "avis d'experts"
+    ]
+   ],
+   [
+    "2026_TEXTE-RFE-ALR-PEDIA-VERSION-FINALE-010926_63f95f__c0120_715d9da1",
+    "Champ 3 : Indications d'anesthésie locorégionale pour les chirurgies du thorax e",
+    [
+     "AVIS D'EXPERTS"
+    ]
+   ],
+   [
+    "2026_TEXTE-RFE-ALR-PEDIA-VERSION-FINALE-010926_63f95f__c0189_c14676bb",
+    "Champ 5 : Indications d'anesthésie locorégionale pour les chirurgies de la hanch",
+    [
+     "Avis d'expert"
+    ]
+   ],
+   [
+    "2026_RFE-Infections-intra-abdominales-version-lecture-doc-finale-14-0_7f27c6__c0009_f3dd8700",
+    "Prise en charge thérapeutique des Infections intra-abdominales de l'adulte > RÉS",
+    [
+     "accord fort",
+     "GRADE 1",
+     "GRADE 2",
+     "avis d'experts"
+    ]
+   ],
+   [
+    "2026_RFE-Infections-intra-abdominales-version-lecture-doc-finale-14-0_7f27c6__c0011_edbd87ab",
+    "Prise en charge thérapeutique des Infections intra-abdominales de l'adulte > RÉS",
+    [
+     "GRADE 1",
+     "GRADE 2"
+    ]
+   ],
+   [
+    "2026_RFE-Infections-intra-abdominales-version-lecture-doc-finale-14-0_7f27c6__c0033_0836cff2",
+    "INTRODUCTION > MÉTHODE > Champ des recommandations",
+    [
+     "accord fort",
+     "avis d'experts"
+    ]
+   ],
+   [
+    "2026_RFE-Infections-intra-abdominales-version-lecture-doc-finale-14-0_7f27c6__c0038_bbbf270d",
+    "Champ 3 : Prise en charge des complications survenant après la prise en charge i",
+    [
+     "accord fort",
+     "GRADE 1",
+     "GRADE 2",
+     "avis d'experts"
+    ]
+   ],
+   [
+    "2026_RFE-Infections-intra-abdominales-version-lecture-doc-finale-14-0_7f27c6__c0063_4b925e25",
+    "CHAMP 1 : Prise en charge initiale des infections intra-abdominales",
+    [
+     "GRADE 1",
+     "Recommandation forte"
+    ]
+   ],
+   [
+    "2026_RFE-Infections-intra-abdominales-version-lecture-doc-finale-14-0_7f27c6__c0088_85ab011b",
+    "CHAMP 1 : Prise en charge initiale des infections intra-abdominales",
+    [
+     "AVIS D'EXPERTS",
+     "GRADE 2"
+    ]
+   ],
+   [
+    "2026_RFE-Infections-intra-abdominales-version-lecture-doc-finale-14-0_7f27c6__c0106_4b49f04e",
+    "CHAMP 1 : Prise en charge initiale des infections intra-abdominales",
+    [
+     "Grade 1",
+     "Grade 2"
+    ]
+   ],
+   [
+    "2026_RFE-Infections-intra-abdominales-version-lecture-doc-finale-14-0_7f27c6__c0159_88af6ead",
+    "CHAMP 2 : Surveillance clinique et thérapeutique des infections intra-abdominale",
+    [
+     "GRADE 2",
+     "Recommandation faible"
+    ]
+   ],
+   [
+    "2026_RFE-Infections-intra-abdominales-version-lecture-doc-finale-14-0_7f27c6__c0209_4619b3ed",
+    "CHAMP 2 : Surveillance clinique et thérapeutique des infections intra-abdominale",
+    [
+     "AVIS D'EXPERTS"
+    ]
+   ],
+   [
+    "2026_RFE-Infections-intra-abdominales-version-lecture-doc-finale-14-0_7f27c6__c0238_3d0a4c85",
+    "CHAMP 3 : Prise en charge des complications évolutives des infections intra-abdo",
+    [
+     "AVIS D'EXPERTS"
+    ]
+   ],
+   [
+    "2026_RFE_sedationproceduraleUrgences_24juin2026_1f0c12__c0008_e60ca76e",
+    "Sédation procédurale en structure de Médecine d'Urgence > RÉSUMÉ",
+    [
+     "accord fort",
+     "GRADE 1",
+     "GRADE 2",
+     "avis d'experts"
+    ]
+   ],
+   [
+    "2026_RFE_sedationproceduraleUrgences_24juin2026_1f0c12__c0011_4668141e",
+    "Sédation procédurale en structure de Médecine d'Urgence > ABSTRACT",
+    [
+     "GRADE 1",
+     "GRADE 2"
+    ]
+   ],
+   [
+    "2026_RFE_sedationproceduraleUrgences_24juin2026_1f0c12__c0032_7ed5266f",
+    "INTRODUCTION > Champ des recommandations",
+    [
+     "accord faible",
+     "accord fort",
+     "avis d'experts"
+    ]
+   ],
+   [
+    "2026_RFE_sedationproceduraleUrgences_24juin2026_1f0c12__c0035_d203c958",
+    "INTRODUCTION > RESULTATS > Synthèse des résultats",
+    [
+     "accord fort",
+     "GRADE 1",
+     "GRADE 2",
+     "avis d'experts"
+    ]
+   ],
+   [
+    "2026_RFE_sedationproceduraleUrgences_24juin2026_1f0c12__c0084_6a807cee",
+    "Champ 2 : Patients à risque et condition de réalisation : quand faire ou ne pas ",
+    [
+     "AVIS D'EXPERT",
+     "Accord fort"
+    ]
+   ],
+   [
+    "2026_RFE_sedationproceduraleUrgences_24juin2026_1f0c12__c0156_62748350",
+    "Champ 4 : Modalités de réalisation",
+    [
+     "AVIS D'EXPERT",
+     "accord fort"
+    ]
+   ],
+   [
+    "2026_RFE_sedationproceduraleUrgences_24juin2026_1f0c12__c0175_24ea7a97",
+    "Champ 4 : Modalités de réalisation > Argumentaire",
+    [
+     "grade 2"
+    ]
+   ],
+   [
+    "2026_RFE_sedationproceduraleUrgences_24juin2026_1f0c12__c0228_fd45ed43",
+    "Champ 4 : Modalités de réalisation > Annexe 1. Détails de la méthode Delphi mené",
+    [
+     "accord fort"
+    ]
+   ]
+  ],
+  "stmt_not_box": [
+   [
+    "2026_TEXTE-RFE-ALR-PEDIA-VERSION-FINALE-010926_63f95f__c0054_9cb303dc",
+    [
+     "R1.1.1"
+    ],
+    "prose"
+   ],
+   [
+    "2026_TEXTE-RFE-ALR-PEDIA-VERSION-FINALE-010926_63f95f__c0125_2661701f",
+    [
+     "R3.3.3"
+    ],
+    "prose"
+   ],
+   [
+    "2026_RFE-Infections-intra-abdominales-version-lecture-doc-finale-14-0_7f27c6__c0136_ad487b45",
+    [
+     "R 1.2.13"
+    ],
+    "prose"
+   ],
+   [
+    "2026_RFE-Infections-intra-abdominales-version-lecture-doc-finale-14-0_7f27c6__c0168_edde8928",
+    [
+     "R2.2.1"
+    ],
+    "prose"
+   ],
+   [
+    "2026_RFE_sedationproceduraleUrgences_24juin2026_1f0c12__c0060_d6650481",
+    [
+     "R2.1.1"
+    ],
+    "callout_footnote"
+   ],
+   [
+    "2026_RFE_sedationproceduraleUrgences_24juin2026_1f0c12__c0073_eceb6bb6",
+    [
+     "R2.2.1"
+    ],
+    "prose"
+   ],
+   [
+    "2026_RFE_sedationproceduraleUrgences_24juin2026_1f0c12__c0074_1f78c515",
+    [
+     "R2.2.2"
+    ],
+    "prose"
+   ],
+   [
+    "2025_RPP-Trauma-cranio-encephaliques-V1-finalisee_ea8aab__c0022_943d1278",
+    [
+     "R 1.1"
+    ],
+    "prose"
+   ],
+   [
+    "2025_RPP-Trauma-cranio-encephaliques-V1-finalisee_ea8aab__c0023_4b4f074b",
+    [
+     "R 1.2"
+    ],
+    "prose"
+   ],
+   [
+    "2025_RPP-Trauma-cranio-encephaliques-V1-finalisee_ea8aab__c0029_092f51b8",
+    [
+     "R 2.1",
+     "R 2.2"
+    ],
+    "prose"
+   ],
+   [
+    "2025_RPP-Trauma-cranio-encephaliques-V1-finalisee_ea8aab__c0032_5addd8f8",
+    [
+     "R 3"
+    ],
+    "prose"
+   ],
+   [
+    "2025_RPP-Trauma-cranio-encephaliques-V1-finalisee_ea8aab__c0036_2276e569",
+    [
+     "R 4"
+    ],
+    "prose"
+   ],
+   [
+    "2025_RPP-Trauma-cranio-encephaliques-V1-finalisee_ea8aab__c0038_29ec103b",
+    [
+     "R 5.1",
+     "R 5.2"
+    ],
+    "prose"
+   ],
+   [
+    "2025_RPP-Trauma-cranio-encephaliques-V1-finalisee_ea8aab__c0044_7acfb404",
+    [
+     "R 6.1",
+     "R 6.2"
+    ],
+    "prose"
+   ],
+   [
+    "2025_RPP-Trauma-cranio-encephaliques-V1-finalisee_ea8aab__c0045_ea43e779",
+    [
+     "R 6.3",
+     "R 6.4"
+    ],
+    "prose"
+   ],
+   [
+    "2025_RPP-Trauma-cranio-encephaliques-V1-finalisee_ea8aab__c0046_34134e67",
+    [
+     "R 6.5"
+    ],
+    "prose"
+   ],
+   [
+    "2025_RPP-Trauma-cranio-encephaliques-V1-finalisee_ea8aab__c0052_db62392d",
+    [
+     "R 7.1"
+    ],
+    "prose"
+   ],
+   [
+    "2025_RPP-Trauma-cranio-encephaliques-V1-finalisee_ea8aab__c0053_29e51acc",
+    [
+     "R 7.2",
+     "R 7.3"
+    ],
+    "prose"
+   ],
+   [
+    "2025_RPP-Trauma-cranio-encephaliques-V1-finalisee_ea8aab__c0058_27ebf570",
+    [
+     "R 8.1"
+    ],
+    "prose"
+   ],
+   [
+    "2025_RPP-Trauma-cranio-encephaliques-V1-finalisee_ea8aab__c0059_dc02b0dc",
+    [
+     "R 8.2",
+     "R 8.3"
+    ],
+    "prose"
+   ],
+   [
+    "2025_RPP-Trauma-cranio-encephaliques-V1-finalisee_ea8aab__c0064_83c065a0",
+    [
+     "R 9.1",
+     "R 9.2"
+    ],
+    "prose"
+   ],
+   [
+    "2025_RPP-Trauma-cranio-encephaliques-V1-finalisee_ea8aab__c0065_ba1434fd",
+    [
+     "R 9.3",
+     "R 9.4"
+    ],
+    "prose"
+   ],
+   [
+    "2025_RPP-Trauma-cranio-encephaliques-V1-finalisee_ea8aab__c0066_e934ea86",
+    [
+     "R 9.5"
+    ],
+    "prose"
+   ],
+   [
+    "2025_RPP-Trauma-cranio-encephaliques-V1-finalisee_ea8aab__c0072_4b4dd9d8",
+    [
+     "R 10.1",
+     "R 10.2"
+    ],
+    "prose"
+   ],
+   [
+    "2025_RPP-Trauma-cranio-encephaliques-V1-finalisee_ea8aab__c0073_b5438b1a",
+    [
+     "R 10.3",
+     "R 10.4",
+     "R 10.5"
+    ],
+    "prose"
+   ]
+  ],
+  "no_grade": [
+   [
+    "2026_TEXTE-RFE-ALR-PEDIA-VERSION-FINALE-010926_63f95f__c0054_9cb303dc",
+    "R1.1.1"
+   ],
+   [
+    "2026_TEXTE-RFE-ALR-PEDIA-VERSION-FINALE-010926_63f95f__c0125_2661701f",
+    "R3.3.3"
+   ],
+   [
+    "2026_RFE-Infections-intra-abdominales-version-lecture-doc-finale-14-0_7f27c6__c0136_ad487b45",
+    "R 1.2.13"
+   ],
+   [
+    "2026_RFE-Infections-intra-abdominales-version-lecture-doc-finale-14-0_7f27c6__c0168_edde8928",
+    "R2.2.1"
+   ],
+   [
+    "2026_RFE-Infections-intra-abdominales-version-lecture-doc-finale-14-0_7f27c6__c0226_a5b1a796",
+    "R3.1.2"
+   ],
+   [
+    "2026_RFE_sedationproceduraleUrgences_24juin2026_1f0c12__c0060_d6650481",
+    "R2.1.1"
+   ],
+   [
+    "2026_RFE_sedationproceduraleUrgences_24juin2026_1f0c12__c0073_eceb6bb6",
+    "R2.2.1"
+   ],
+   [
+    "2026_RFE_sedationproceduraleUrgences_24juin2026_1f0c12__c0074_1f78c515",
+    "R2.2.2"
+   ],
+   [
+    "2025_RPP-Trauma-cranio-encephaliques-V1-finalisee_ea8aab__c0073_b5438b1a",
+    "R 10.5"
+   ],
+   [
+    "2025_RPP-Trauma-cranio-encephaliques-V1-finalisee_ea8aab__c0082_d09b5c14",
+    "R 11.2"
+   ],
+   [
+    "2026_RFE-LAT-final-mai-2026-_a26946__c0077_da7c06b9",
+    "R1.1"
+   ],
+   [
+    "2026_RFE-LAT-final-mai-2026-_a26946__c0156_5fe77ac4",
+    "R2.1"
+   ],
+   [
+    "2025_2025_SFAR-SFA_RFE-Diagnostic-et-prise-en-charge-des-reactions-dh_66bc8a__c0197_84db64b0",
+    "R2.1"
+   ],
+   [
+    "2025_2025_SFAR-SFA_RFE-Diagnostic-et-prise-en-charge-des-reactions-dh_66bc8a__c0304_33cd028c",
+    "R4.1"
+   ],
+   [
+    "2024_RPP-RH-AR-validee-CA-SFAR-191224-_994758__c0012_b0b88a7c",
+    "R1.1"
+   ],
+   [
+    "2024_RPP-RH-AR-validee-CA-SFAR-191224-_994758__c0012_b0b88a7c",
+    "R1.2"
+   ],
+   [
+    "2024_RPP-RH-AR-validee-CA-SFAR-191224-_994758__c0012_b0b88a7c",
+    "R1.3"
+   ],
+   [
+    "2024_RPP-RH-AR-validee-CA-SFAR-191224-_994758__c0012_b0b88a7c",
+    "R1.4"
+   ],
+   [
+    "2024_RPP-RH-AR-validee-CA-SFAR-191224-_994758__c0028_c195b7b4",
+    "R2.1"
+   ],
+   [
+    "2024_RPP-RH-AR-validee-CA-SFAR-191224-_994758__c0028_c195b7b4",
+    "R 2.2"
+   ],
+   [
+    "2024_RPP-RH-AR-validee-CA-SFAR-191224-_994758__c0028_c195b7b4",
+    "R2.3"
+   ],
+   [
+    "2024_RPP-RH-AR-validee-CA-SFAR-191224-_994758__c0028_c195b7b4",
+    "R2.4"
+   ],
+   [
+    "2024_RFE-gestion-de-lanticoagulation-dans-un-contexte-durgence_23_02__d0368c__c0078_12414790",
+    "R2.4.1"
+   ],
+   [
+    "2024_RFE-gestion-de-lanticoagulation-dans-un-contexte-durgence_23_02__d0368c__c0108_0f41e986",
+    "R2.6.3"
+   ],
+   [
+    "2024_RFE-gestion-de-lanticoagulation-dans-un-contexte-durgence_23_02__d0368c__c0159_dbf8a5dc",
+    "R3.1.4"
+   ]
+  ],
+  "biblio_glued": [
+   [
+    "2026_TEXTE-RFE-ALR-PEDIA-VERSION-FINALE-010926_63f95f__c0068_ef73327f",
+    [
+     "R1.2.1"
+    ]
+   ],
+   [
+    "2026_TEXTE-RFE-ALR-PEDIA-VERSION-FINALE-010926_63f95f__c0119_8acae44b",
+    [
+     "R3.3.1",
+     "R3.3.2"
+    ]
+   ],
+   [
+    "2026_RFE_sedationproceduraleUrgences_24juin2026_1f0c12__c0073_eceb6bb6",
+    [
+     "R2.2.1"
+    ]
+   ],
+   [
+    "2026_RFE-LAT-final-mai-2026-_a26946__c0225_88934360",
+    [
+     "R3.3.1"
+    ]
+   ],
+   [
+    "2025_2025_SFAR-SFA_RFE-Diagnostic-et-prise-en-charge-des-reactions-dh_66bc8a__c0345_dbbe7df5",
+    [
+     "R 4.4.1"
+    ]
+   ],
+   [
+    "2025_2025_SFAR-SFA_RFE-Diagnostic-et-prise-en-charge-des-reactions-dh_66bc8a__c0382_6653f88e",
+    [
+     "R4.6.1"
+    ]
+   ],
+   [
+    "2025_2025_RFE-Intubation-adulte-hors-bloc-hors-rea-_f68924__c0103_b1ea1dcd",
+    [
+     "R2.3.1"
+    ]
+   ],
+   [
+    "2024_RFE-gestion-de-lanticoagulation-dans-un-contexte-durgence_23_02__d0368c__c0256_eefcf655",
+    [
+     "R4.5.1"
+    ]
+   ],
+   [
+    "2024_RPP-Prevention-des-erreurs-medicamenteuses_39d8ef__c0144_40d7dea4",
+    [
+     "R1.8"
+    ]
+   ],
+   [
+    "2024_RPP-Prevention-des-erreurs-medicamenteuses_39d8ef__c0164_1a99ca05",
+    [
+     "R1.11.1"
+    ]
+   ],
+   [
+    "2024_RPP-Prevention-des-erreurs-medicamenteuses_39d8ef__c0200_f9447c23",
+    [
+     "R2.4"
+    ]
+   ],
+   [
+    "2023_RPP-Anesthesie-adulte-porteur-de-CC_pour-mise-sur-site_6601a6__c0161_e9b417ec",
+    [
+     "R4.3"
+    ]
+   ],
+   [
+    "2023_RPP-Organisation-Anesthesie-Pediatrique_-Version-pour-mise-sur-s_1a40f2__c0033_add5f560",
+    [
+     "R1.2"
+    ]
+   ],
+   [
+    "2023_RPP-epanchement-pleural-2023_mise-sur-site-_e86215__c0087_68b90249",
+    [
+     "R2.6.1"
+    ]
+   ],
+   [
+    "2022_RFE-Programme-doptimisation-perioperatoire_pour-mise-sur-site_26_6ede19__c0058_d08157fa",
+    [
+     "R2.3"
+    ]
+   ],
+   [
+    "2022_RFE-Programme-doptimisation-perioperatoire_pour-mise-sur-site_26_6ede19__c0094_f4443828",
+    [
+     "R3.2"
+    ]
+   ],
+   [
+    "2022_RFE-Programme-doptimisation-perioperatoire_pour-mise-sur-site_26_6ede19__c0175_80561a09",
+    [
+     "R3.15"
+    ]
+   ],
+   [
+    "2022_RPP-FHS_pour-mise-sur-site_014032__c0250_67b770d2",
+    [
+     "R3.4"
+    ]
+   ],
+   [
+    "2022_RPP-thrombectomie-2022_version-definitive-octobre-2022_103478__c0123_15f3c755",
+    [
+     "R4.3"
+    ]
+   ],
+   [
+    "2022_RPP-SFAR-COVID_Version-Avril-2022_abrogee-010723_682252__c0056_434be990",
+    [
+     "R1.9",
+     "R1.10"
+    ]
+   ],
+   [
+    "2022_RPP-SFAR-COVID_Version-Avril-2022_abrogee-010723_682252__c0107_1e801478",
+    [
+     "R3.2"
+    ]
+   ],
+   [
+    "2022_RPP-SFAR-COVID_Version-Avril-2022_abrogee-010723_682252__c0236_5dcd6195",
+    [
+     "R5.6"
+    ]
+   ],
+   [
+    "2022_RPP-SFAR-COVID_Version-Avril-2022_abrogee-010723_682252__c0274_560c62b4",
+    [
+     "R6.7"
+    ]
+   ],
+   [
+    "2022_RPP_20SFAR_20COVID_Version_20Avril_202022_finale_20sans_20marque_c5bf31__c0055_ed43a87c",
+    [
+     "R1.9",
+     "R1.10"
+    ]
+   ],
+   [
+    "2022_RPP_20SFAR_20COVID_Version_20Avril_202022_finale_20sans_20marque_c5bf31__c0106_0f8a04bd",
+    [
+     "R3.2"
+    ]
+   ]
+  ],
+  "mixed_grades": [
+   [
+    "2026_TEXTE-RFE-ALR-PEDIA-VERSION-FINALE-010926_63f95f__c0076_bd72028e",
+    [
+     "R1.2.2",
+     "R1.2.3"
+    ],
+    [
+     "GRADE 2",
+     "recommandation faible",
+     "AVIS D’EXPERTS"
+    ]
+   ],
+   [
+    "2026_TEXTE-RFE-ALR-PEDIA-VERSION-FINALE-010926_63f95f__c0114_8a2a8228",
+    [
+     "R3.2.1",
+     "R3.2.2"
+    ],
+    [
+     "GRADE 1",
+     "recommandation forte",
+     "AVIS D'EXPERTS"
+    ]
+   ],
+   [
+    "2026_RFE-Infections-intra-abdominales-version-lecture-doc-finale-14-0_7f27c6__c0076_cc2ab53b",
+    [
+     "R1.2.3",
+     "R1.2.4",
+     "R1.2.5"
+    ],
+    [
+     "GRADE 2",
+     "Recommandation faible",
+     "AVIS D'EXPERTS"
+    ]
+   ],
+   [
+    "2026_RFE-Infections-intra-abdominales-version-lecture-doc-finale-14-0_7f27c6__c0185_2d52a40d",
+    [
+     "R2.2.4",
+     "R2.2.5"
+    ],
+    [
+     "AVIS D'EXPERTS",
+     "GRADE 2",
+     "Recommandation faible"
+    ]
+   ],
+   [
+    "2026_RFE-Infections-intra-abdominales-version-lecture-doc-finale-14-0_7f27c6__c0208_e617f1c8",
+    [
+     "R2.4.1",
+     "R2.4.2"
+    ],
+    [
+     "GRADE 2",
+     "Recommandation faible"
+    ]
+   ],
+   [
+    "2026_RFE-Infections-intra-abdominales-version-lecture-doc-finale-14-0_7f27c6__c0226_a5b1a796",
+    [
+     "R3.1.1",
+     "R3.1.2"
+    ],
+    [
+     "GRADE 2",
+     "Recommandation faible"
+    ]
+   ],
+   [
+    "2026_RFE-Infections-intra-abdominales-version-lecture-doc-finale-14-0_7f27c6__c0236_d393b8a3",
+    [
+     "R3.3.2",
+     "R3.3.3"
+    ],
+    [
+     "GRADE 2",
+     "Recommandation faible",
+     "AVIS D'EXPERTS"
+    ]
+   ],
+   [
+    "2026_RFE_sedationproceduraleUrgences_24juin2026_1f0c12__c0049_77a384e4",
+    [
+     "R1.1.1",
+     "R1.1.2"
+    ],
+    [
+     "AVIS D'EXPERTS",
+     "accord fort"
+    ]
+   ],
+   [
+    "2026_RFE_sedationproceduraleUrgences_24juin2026_1f0c12__c0099_1f312563",
+    [
+     "R2.4.1",
+     "R2.4.2"
+    ],
+    [
+     "AVIS D'EXPERT",
+     "accord fort"
+    ]
+   ],
+   [
+    "2026_RFE_sedationproceduraleUrgences_24juin2026_1f0c12__c0114_70ca7fe7",
+    [
+     "R2.7.1",
+     "R2.7.2"
+    ],
+    [
+     "AVIS D'EXPERT",
+     "accord fort"
+    ]
+   ],
+   [
+    "2026_RFE_sedationproceduraleUrgences_24juin2026_1f0c12__c0155_8743ea28",
+    [
+     "R4.1.1",
+     "R4.1.2"
+    ],
+    [
+     "AVIS D'EXPERT",
+     "accord fort"
+    ]
+   ],
+   [
+    "2026_RFE_sedationproceduraleUrgences_24juin2026_1f0c12__c0166_ad3c684f",
+    [
+     "R4.2.2",
+     "R4.2.3"
+    ],
+    [
+     "GRADE 1",
+     "recommandation forte",
+     "accord fort",
+     "GRADE 2"
+    ]
+   ],
+   [
+    "2026_RFE_sedationproceduraleUrgences_24juin2026_1f0c12__c0167_dc3358bc",
+    [
+     "R4.2.4",
+     "R4.2.5"
+    ],
+    [
+     "AVIS D'EXPERT",
+     "accord fort"
+    ]
+   ],
+   [
+    "2026_RFE_sedationproceduraleUrgences_24juin2026_1f0c12__c0182_0b817bc1",
+    [
+     "R4.3.2",
+     "R4.3.3"
+    ],
+    [
+     "AVIS D'EXPERTS",
+     "accord fort"
+    ]
+   ],
+   [
+    "2025_2025_SFAR-SFA_RFE-Diagnostic-et-prise-en-charge-des-reactions-dh_66bc8a__c0102_8f29bfe7",
+    [
+     "R1.3.1",
+     "R1.3.2",
+     "R1.3.3"
+    ],
+    [
+     "GRADE 1",
+     "accord fort",
+     "GRADE 2",
+     "AVIS D'EXPERTS"
+    ]
+   ],
+   [
+    "2025_2025_SFAR-SFA_RFE-Diagnostic-et-prise-en-charge-des-reactions-dh_66bc8a__c0125_b53c8433",
+    [
+     "R1.6.1",
+     "R1.6.2"
+    ],
+    [
+     "GRADE 2",
+     "accord fort",
+     "AVIS D'EXPERTS",
+     "accord FORT"
+    ]
+   ],
+   [
+    "2025_2025_SFAR-SFA_RFE-Diagnostic-et-prise-en-charge-des-reactions-dh_66bc8a__c0140_5cfe95af",
+    [
+     "R1.7.1",
+     "R1.7.2"
+    ],
+    [
+     "AVIS D'EXPERTS",
+     "accord fort",
+     "accord FORT"
+    ]
+   ],
+   [
+    "2025_2025_SFAR-SFA_RFE-Diagnostic-et-prise-en-charge-des-reactions-dh_66bc8a__c0155_decde790",
+    [
+     "R1.9.1",
+     "R1.9.2",
+     "R1.9.3",
+     "R1.9.4"
+    ],
+    [
+     "GRADE 1",
+     "accord fort",
+     "GRADE 2",
+     "AVIS D'EXPERTS"
+    ]
+   ],
+   [
+    "2025_2025_SFAR-SFA_RFE-Diagnostic-et-prise-en-charge-des-reactions-dh_66bc8a__c0168_29a1ea7f",
+    [
+     "R1.10.1",
+     "R1.10.2"
+    ],
+    [
+     "AVIS D'EXPERTS",
+     "Accord fort"
+    ]
+   ],
+   [
+    "2025_2025_SFAR-SFA_RFE-Diagnostic-et-prise-en-charge-des-reactions-dh_66bc8a__c0177_2e96d141",
+    [
+     "R1.11.1",
+     "R1.11.2"
+    ],
+    [
+     "AVIS D'EXPERTS",
+     "Accord fort"
+    ]
+   ],
+   [
+    "2025_2025_SFAR-SFA_RFE-Diagnostic-et-prise-en-charge-des-reactions-dh_66bc8a__c0188_0d49150d",
+    [
+     "R1.12.1",
+     "R1.12.2",
+     "R1.12.3"
+    ],
+    [
+     "GRADE 2",
+     "accord fort",
+     "AVIS D'EXPERT"
+    ]
+   ],
+   [
+    "2025_2025_SFAR-SFA_RFE-Diagnostic-et-prise-en-charge-des-reactions-dh_66bc8a__c0215_981f8e30",
+    [
+     "R2.3.1",
+     "R2.3.2",
+     "R2.3.3"
+    ],
+    [
+     "AVIS D'EXPERTS",
+     "Accord fort"
+    ]
+   ],
+   [
+    "2025_2025_SFAR-SFA_RFE-Diagnostic-et-prise-en-charge-des-reactions-dh_66bc8a__c0241_ce45b071",
+    [
+     "R2.6.1",
+     "R2.6.2"
+    ],
+    [
+     "AVIS D'EXPERTS",
+     "Accord fort"
+    ]
+   ],
+   [
+    "2025_2025_SFAR-SFA_RFE-Diagnostic-et-prise-en-charge-des-reactions-dh_66bc8a__c0253_e7939ed8",
+    [
+     "R3.1.1",
+     "R3.1.2"
+    ],
+    [
+     "Avis d'expert",
+     "accord fort",
+     "Avis d'experts"
+    ]
+   ],
+   [
+    "2025_2025_SFAR-SFA_RFE-Diagnostic-et-prise-en-charge-des-reactions-dh_66bc8a__c0254_80dad75e",
+    [
+     "R3.1.3",
+     "R 3.1.4",
+     "R3.1.5"
+    ],
+    [
+     "Avis d'experts",
+     "accord fort",
+     "Avis d'expert"
+    ]
+   ]
+  ],
+  "box_with_argument": [
+   [
+    "2026_TEXTE-RFE-ALR-PEDIA-VERSION-FINALE-010926_63f95f__c0150_d2314f85",
+    [
+     "R4.2.2"
+    ],
+    803
+   ],
+   [
+    "2026_RFE-LAT-final-mai-2026-_a26946__c0087_21841d66",
+    [
+     "R1.2"
+    ],
+    578
+   ],
+   [
+    "2026_RFE-LAT-final-mai-2026-_a26946__c0126_e618f47b",
+    [
+     "R1.4"
+    ],
+    708
+   ],
+   [
+    "2025_2025_SFAR-SFA_RFE-Diagnostic-et-prise-en-charge-des-reactions-dh_66bc8a__c0111_3071e790",
+    [
+     "R1.4"
+    ],
+    337
+   ],
+   [
+    "2025_2025_SFAR-SFA_RFE-Diagnostic-et-prise-en-charge-des-reactions-dh_66bc8a__c0148_2a2423bf",
+    [
+     "R1.8"
+    ],
+    724
+   ],
+   [
+    "2025_2025_SFAR-SFA_RFE-Diagnostic-et-prise-en-charge-des-reactions-dh_66bc8a__c0169_d43b3c5a",
+    [
+     "R1.10.3"
+    ],
+    443
+   ],
+   [
+    "2025_2025_RFE-Intubation-adulte-hors-bloc-hors-rea-_f68924__c0104_7e6d34e1",
+    [
+     "R2.3.2"
+    ],
+    314
+   ],
+   [
+    "2025_2025_RFE-Intubation-adulte-hors-bloc-hors-rea-_f68924__c0164_735c9748",
+    [
+     "R4.1"
+    ],
+    495
+   ],
+   [
+    "2024_2024_RFE-optimisation-hemodynamique-perioperatoire_adulte-dont-o_520b05__c0144_b2b0a3f7",
+    [
+     "R4.3.1",
+     "R4.3.2"
+    ],
+    389
+   ],
+   [
+    "2024_RFE-gestion-de-lanticoagulation-dans-un-contexte-durgence_23_02__d0368c__c0062_78d818de",
+    [
+     "R2.2.1"
+    ],
+    737
+   ],
+   [
+    "2024_RPP-Prevention-des-erreurs-medicamenteuses_39d8ef__c0076_5a4d5163",
+    [
+     "R1.3"
+    ],
+    573
+   ],
+   [
+    "2024_RPP-Prevention-des-erreurs-medicamenteuses_39d8ef__c0089_fa5b35d1",
+    [
+     "R1.4.1",
+     "R1.4.2"
+    ],
+    326
+   ],
+   [
+    "2024_PEDIA_RPP-Optimisation-Hemodynamique-Perioperatoire_Pediatrie_c6d39a__c0049_20dae0e0",
+    [
+     "R2.1"
+    ],
+    647
+   ],
+   [
+    "2023_RPP-Organisation-Anesthesie-Pediatrique_-Version-pour-mise-sur-s_1a40f2__c0073_2a6c90ee",
+    [
+     "R2.4"
+    ],
+    651
+   ],
+   [
+    "2023_RPP-Organisation-Anesthesie-Pediatrique_-Version-pour-mise-sur-s_1a40f2__c0094_85d89e12",
+    [
+     "R2.7"
+    ],
+    385
+   ],
+   [
+    "2023_RPP-Organisation-Anesthesie-Pediatrique_-Version-pour-mise-sur-s_1a40f2__c0124_4aa267bc",
+    [
+     "R4.2.2"
+    ],
+    741
+   ],
+   [
+    "2022_RPP-reduction-impact-environnemental_pour-mise-sur-site_b22db8__c0063_a0f14409",
+    [
+     "R1.4"
+    ],
+    367
+   ],
+   [
+    "2022_RPP-reduction-impact-environnemental_pour-mise-sur-site_b22db8__c0102_781b394c",
+    [
+     "R3.1.3",
+     "R3.1.4"
+    ],
+    378
+   ],
+   [
+    "2022_RPP-reduction-impact-environnemental_pour-mise-sur-site_b22db8__c0116_db1d9051",
+    [
+     "R3.2.1"
+    ],
+    633
+   ],
+   [
+    "2023_RPP-epanchement-pleural-2023_mise-sur-site-_e86215__c0095_e09a5b04",
+    [
+     "R2.6.4"
+    ],
+    320
+   ],
+   [
+    "2023_RPP-epanchement-pleural-2023_mise-sur-site-_e86215__c0108_16491f3e",
+    [
+     "R3.2"
+    ],
+    321
+   ],
+   [
+    "2022_RFE-Programme-doptimisation-perioperatoire_pour-mise-sur-site_26_6ede19__c0098_6249a938",
+    [
+     "R3.3"
+    ],
+    455
+   ],
+   [
+    "2022_RFE-Programme-doptimisation-perioperatoire_pour-mise-sur-site_26_6ede19__c0158_069572cf",
+    [
+     "R3.12"
+    ],
+    728
+   ],
+   [
+    "2022_RFE-Programme-doptimisation-perioperatoire_pour-mise-sur-site_26_6ede19__c0174_529e081f",
+    [
+     "R3.14"
+    ],
+    835
+   ],
+   [
+    "2022_RFE-Programme-doptimisation-perioperatoire_pour-mise-sur-site_26_6ede19__c0191_9ea15c62",
+    [
+     "R4.3"
+    ],
+    421
+   ]
+  ],
+  "unflagged_biblio": [
+   [
+    "2026_TEXTE-RFE-ALR-PEDIA-VERSION-FINALE-010926_63f95f__c0064_0f1e7fdd",
+    "Champ 1 : Méthodes de localisation et médicaments utilisés",
+    3
+   ],
+   [
+    "2026_TEXTE-RFE-ALR-PEDIA-VERSION-FINALE-010926_63f95f__c0065_488f6833",
+    "Champ 1 : Méthodes de localisation et médicaments utilisés",
+    8
+   ],
+   [
+    "2026_TEXTE-RFE-ALR-PEDIA-VERSION-FINALE-010926_63f95f__c0066_7ecc887e",
+    "Champ 1 : Méthodes de localisation et médicaments utilisés",
+    11
+   ],
+   [
+    "2026_TEXTE-RFE-ALR-PEDIA-VERSION-FINALE-010926_63f95f__c0067_cbfe3ee6",
+    "Champ 1 : Méthodes de localisation et médicaments utilisés",
+    12
+   ],
+   [
+    "2026_TEXTE-RFE-ALR-PEDIA-VERSION-FINALE-010926_63f95f__c0110_4526c859",
+    "Champ 3 : Indications d'anesthésie locorégionale pour les ch",
+    3
+   ],
+   [
+    "2026_TEXTE-RFE-ALR-PEDIA-VERSION-FINALE-010926_63f95f__c0112_f6ce780d",
+    "Champ 3 : Indications d'anesthésie locorégionale pour les ch",
+    5
+   ],
+   [
+    "2026_TEXTE-RFE-ALR-PEDIA-VERSION-FINALE-010926_63f95f__c0117_6d4f473d",
+    "Champ 3 : Indications d'anesthésie locorégionale pour les ch",
+    3
+   ],
+   [
+    "2026_TEXTE-RFE-ALR-PEDIA-VERSION-FINALE-010926_63f95f__c0118_49f2694c",
+    "Champ 3 : Indications d'anesthésie locorégionale pour les ch",
+    4
+   ],
+   [
+    "2026_TEXTE-RFE-ALR-PEDIA-VERSION-FINALE-010926_63f95f__c0146_00d47c6e",
+    "Champ 4 : Indications d'anesthésie locorégionale pour les ch",
+    9
+   ],
+   [
+    "2026_TEXTE-RFE-ALR-PEDIA-VERSION-FINALE-010926_63f95f__c0148_216df664",
+    "Champ 4 : Indications d'anesthésie locorégionale pour les ch",
+    8
+   ],
+   [
+    "2026_TEXTE-RFE-ALR-PEDIA-VERSION-FINALE-010926_63f95f__c0149_86cca73f",
+    "Champ 4 : Indications d'anesthésie locorégionale pour les ch",
+    8
+   ],
+   [
+    "2026_TEXTE-RFE-ALR-PEDIA-VERSION-FINALE-010926_63f95f__c0160_31f59e7f",
+    "Champ 4 : Indications d'anesthésie locorégionale pour les ch",
+    4
+   ],
+   [
+    "2026_TEXTE-RFE-ALR-PEDIA-VERSION-FINALE-010926_63f95f__c0169_657f1102",
+    "Champ 5 : Indications d'anesthésie locorégionale pour les ch",
+    3
+   ],
+   [
+    "2026_RFE-Infections-intra-abdominales-version-lecture-doc-finale-14-0_7f27c6__c0085_cb20d09b",
+    "CHAMP 1 : Prise en charge initiale des infections intra-abdo",
+    5
+   ],
+   [
+    "2026_RFE-Infections-intra-abdominales-version-lecture-doc-finale-14-0_7f27c6__c0086_1886770f",
+    "CHAMP 1 : Prise en charge initiale des infections intra-abdo",
+    10
+   ],
+   [
+    "2026_RFE-Infections-intra-abdominales-version-lecture-doc-finale-14-0_7f27c6__c0087_4dbf571d",
+    "CHAMP 1 : Prise en charge initiale des infections intra-abdo",
+    8
+   ],
+   [
+    "2026_RFE-Infections-intra-abdominales-version-lecture-doc-finale-14-0_7f27c6__c0135_76a3eab0",
+    "CHAMP 1 : Prise en charge initiale des infections intra-abdo",
+    10
+   ],
+   [
+    "2026_RFE-Infections-intra-abdominales-version-lecture-doc-finale-14-0_7f27c6__c0144_a4213216",
+    "CHAMP 1 : Prise en charge initiale des infections intra-abdo",
+    3
+   ],
+   [
+    "2026_RFE-Infections-intra-abdominales-version-lecture-doc-finale-14-0_7f27c6__c0230_c8a0c497",
+    "CHAMP 3 : Prise en charge des complications évolutives des i",
+    4
+   ],
+   [
+    "2026_RFE-Infections-intra-abdominales-version-lecture-doc-finale-14-0_7f27c6__c0340_95cbd60d",
+    "CHAMP 3 : Prise en charge des complications évolutives des i",
+    3
+   ],
+   [
+    "2026_RFE_sedationproceduraleUrgences_24juin2026_1f0c12__c0046_964ed5e2",
+    "INTRODUCTION > RESULTATS > Synthèse des résultats",
+    9
+   ],
+   [
+    "2026_RFE_sedationproceduraleUrgences_24juin2026_1f0c12__c0047_0cf3d85d",
+    "INTRODUCTION > RESULTATS > Synthèse des résultats",
+    7
+   ],
+   [
+    "2026_RFE_sedationproceduraleUrgences_24juin2026_1f0c12__c0048_c56bb0ac",
+    "INTRODUCTION > RESULTATS > Synthèse des résultats",
+    5
+   ],
+   [
+    "2026_RFE_sedationproceduraleUrgences_24juin2026_1f0c12__c0071_8324723c",
+    "Champ 2 : Patients à risque et condition de réalisation : qu",
+    16
+   ],
+   [
+    "2026_RFE_sedationproceduraleUrgences_24juin2026_1f0c12__c0072_e8b25660",
+    "Champ 2 : Patients à risque et condition de réalisation : qu",
+    11
+   ]
+  ],
+  "id_not_captured": [
+   [
+    "2026_RFE-Infections-intra-abdominales-version-lecture-doc-finale-14-0_7f27c6__c0107_4268969b",
+    "R 1.2.12",
+    "recommendation_box"
+   ],
+   [
+    "2026_RFE-Infections-intra-abdominales-version-lecture-doc-finale-14-0_7f27c6__c0136_ad487b45",
+    "R 1.2.13",
+    "prose"
+   ],
+   [
+    "2025_RPP-Trauma-cranio-encephaliques-V1-finalisee_ea8aab__c0022_943d1278",
+    "R 1.1",
+    "prose"
+   ],
+   [
+    "2025_RPP-Trauma-cranio-encephaliques-V1-finalisee_ea8aab__c0023_4b4f074b",
+    "R 1.2",
+    "prose"
+   ],
+   [
+    "2025_RPP-Trauma-cranio-encephaliques-V1-finalisee_ea8aab__c0029_092f51b8",
+    "R 2.1",
+    "prose"
+   ],
+   [
+    "2025_RPP-Trauma-cranio-encephaliques-V1-finalisee_ea8aab__c0029_092f51b8",
+    "R 2.2",
+    "prose"
+   ],
+   [
+    "2025_RPP-Trauma-cranio-encephaliques-V1-finalisee_ea8aab__c0032_5addd8f8",
+    "R 3",
+    "prose"
+   ],
+   [
+    "2025_RPP-Trauma-cranio-encephaliques-V1-finalisee_ea8aab__c0036_2276e569",
+    "R 4",
+    "prose"
+   ],
+   [
+    "2025_RPP-Trauma-cranio-encephaliques-V1-finalisee_ea8aab__c0038_29ec103b",
+    "R 5.1",
+    "prose"
+   ],
+   [
+    "2025_RPP-Trauma-cranio-encephaliques-V1-finalisee_ea8aab__c0038_29ec103b",
+    "R 5.2",
+    "prose"
+   ],
+   [
+    "2025_RPP-Trauma-cranio-encephaliques-V1-finalisee_ea8aab__c0044_7acfb404",
+    "R 6.1",
+    "prose"
+   ],
+   [
+    "2025_RPP-Trauma-cranio-encephaliques-V1-finalisee_ea8aab__c0044_7acfb404",
+    "R 6.2",
+    "prose"
+   ],
+   [
+    "2025_RPP-Trauma-cranio-encephaliques-V1-finalisee_ea8aab__c0045_ea43e779",
+    "R 6.3",
+    "prose"
+   ],
+   [
+    "2025_RPP-Trauma-cranio-encephaliques-V1-finalisee_ea8aab__c0045_ea43e779",
+    "R 6.4",
+    "prose"
+   ],
+   [
+    "2025_RPP-Trauma-cranio-encephaliques-V1-finalisee_ea8aab__c0046_34134e67",
+    "R 6.5",
+    "prose"
+   ],
+   [
+    "2025_RPP-Trauma-cranio-encephaliques-V1-finalisee_ea8aab__c0052_db62392d",
+    "R 7.1",
+    "prose"
+   ],
+   [
+    "2025_RPP-Trauma-cranio-encephaliques-V1-finalisee_ea8aab__c0053_29e51acc",
+    "R 7.2",
+    "prose"
+   ],
+   [
+    "2025_RPP-Trauma-cranio-encephaliques-V1-finalisee_ea8aab__c0053_29e51acc",
+    "R 7.3",
+    "prose"
+   ],
+   [
+    "2025_RPP-Trauma-cranio-encephaliques-V1-finalisee_ea8aab__c0058_27ebf570",
+    "R 8.1",
+    "prose"
+   ],
+   [
+    "2025_RPP-Trauma-cranio-encephaliques-V1-finalisee_ea8aab__c0059_dc02b0dc",
+    "R 8.2",
+    "prose"
+   ],
+   [
+    "2025_RPP-Trauma-cranio-encephaliques-V1-finalisee_ea8aab__c0059_dc02b0dc",
+    "R 8.3",
+    "prose"
+   ],
+   [
+    "2025_RPP-Trauma-cranio-encephaliques-V1-finalisee_ea8aab__c0064_83c065a0",
+    "R 9.1",
+    "prose"
+   ],
+   [
+    "2025_RPP-Trauma-cranio-encephaliques-V1-finalisee_ea8aab__c0064_83c065a0",
+    "R 9.2",
+    "prose"
+   ],
+   [
+    "2025_RPP-Trauma-cranio-encephaliques-V1-finalisee_ea8aab__c0065_ba1434fd",
+    "R 9.3",
+    "prose"
+   ],
+   [
+    "2025_RPP-Trauma-cranio-encephaliques-V1-finalisee_ea8aab__c0065_ba1434fd",
+    "R 9.4",
+    "prose"
+   ]
+  ],
+  "grade_split": [
+   [
+    "2026_RFE-Infections-intra-abdominales-version-lecture-doc-finale-14-0_7f27c6__c0208_e617f1c8",
+    "R2.4.2"
+   ],
+   [
+    "2025_2025_SFAR-SFA_RFE-Diagnostic-et-prise-en-charge-des-reactions-dh_66bc8a__c0346_0adc99c7",
+    "R4.4.4"
+   ],
+   [
+    "2025_2025_SFAR-SFA_RFE-Diagnostic-et-prise-en-charge-des-reactions-dh_66bc8a__c0356_566e6305",
+    "R4.5.3"
+   ],
+   [
+    "2025_2025_RFE-Intubation-adulte-hors-bloc-hors-rea-_f68924__c0101_efc98311",
+    "R 2.2.1"
+   ],
+   [
+    "2024_RFE-gestion-de-lanticoagulation-dans-un-contexte-durgence_23_02__d0368c__c0036_7f3d574f",
+    "R1.1.2"
+   ],
+   [
+    "2024_RFE-gestion-de-lanticoagulation-dans-un-contexte-durgence_23_02__d0368c__c0069_7e18a1b2",
+    "R2.3.1"
+   ],
+   [
+    "2024_RFE-gestion-de-lanticoagulation-dans-un-contexte-durgence_23_02__d0368c__c0098_54d13712",
+    "R2.6.1"
+   ],
+   [
+    "2024_RFE-gestion-de-lanticoagulation-dans-un-contexte-durgence_23_02__d0368c__c0154_7cff200b",
+    "R3.1.1"
+   ],
+   [
+    "2024_RFE-gestion-de-lanticoagulation-dans-un-contexte-durgence_23_02__d0368c__c0283_678fa6dc",
+    "R5.1.1"
+   ],
+   [
+    "2022_RPP-thrombectomie-2022_version-definitive-octobre-2022_103478__c0123_15f3c755",
+    "R4.3"
+   ],
+   [
+    "2022_RPP-SFAR-COVID_Version-Avril-2022_abrogee-010723_682252__c0050_8a334062",
+    "R1.6"
+   ],
+   [
+    "2022_RPP-SFAR-COVID_Version-Avril-2022_abrogee-010723_682252__c0061_d21f9ede",
+    "R1.13.1"
+   ],
+   [
+    "2022_RPP-SFAR-COVID_Version-Avril-2022_abrogee-010723_682252__c0150_b8a80c31",
+    "R3.5"
+   ],
+   [
+    "2022_RPP_20SFAR_20COVID_Version_20Avril_202022_finale_20sans_20marque_c5bf31__c0049_0f1aa046",
+    "R1.6"
+   ],
+   [
+    "2022_RPP_20SFAR_20COVID_Version_20Avril_202022_finale_20sans_20marque_c5bf31__c0060_03863ecd",
+    "R1.13.1"
+   ],
+   [
+    "2022_RPP_20SFAR_20COVID_Version_20Avril_202022_finale_20sans_20marque_c5bf31__c0149_2ab6b4c2",
+    "R3.5"
+   ],
+   [
+    "2021_RFE_20SFAR_20pancreatite_20aigue_finale_220921_b98663__c0088_af935642",
+    "R2.10"
+   ],
+   [
+    "2019_rpp-prise-en-charge-du-brule-grave_20_e49758__c0063_db051248",
+    "R3.3.2"
+   ],
+   [
+    "2019_rac-orthepedie-lourde_bc800f__c0140_3cfad1bc",
+    "R11.3"
+   ],
+   [
+    "2018_RPP_beta-lactamines-en-soins-critiques_041018_logoSFPT_9e9437__c0187_b18a678c",
+    "R4.8.3"
+   ],
+   [
+    "2016_rfe-anesthesie-loco-regionale-perinerveuse_bd75e5__c0030_da418da1",
+    "R2.2"
+   ],
+   [
+    "2014_2_AFAR_Recommandations-sur-la-reanimation-du-choc-hemorragique_a38f8d__c0024_6f109ce9",
+    "Recommandation 2"
+   ],
+   [
+    "2014_2_AFAR_Recommandations-sur-la-reanimation-du-choc-hemorragique_a38f8d__c0026_4e510775",
+    "Recommandation 4"
+   ],
+   [
+    "2016_rfe-controle-cible-de-la-temperature-en-reanimation_a712c2__c0059_1fbae859",
+    "R4.1"
+   ],
+   [
+    "2015_2_AFAR_utilisation-de-lechographie-lors-de-la-mise-en-place-des-_00a54f__c0025_61b9c1e3",
+    "Recommandation 6"
+   ]
+  ],
+  "footnote_reco": [
+   [
+    "2026_RFE_sedationproceduraleUrgences_24juin2026_1f0c12__c0060_d6650481",
+    "Champ 2 : Patients à risque et condition de réalisation : qu"
+   ],
+   [
+    "2024_RFE-gestion-de-lanticoagulation-dans-un-contexte-durgence_23_02__d0368c__c0154_7cff200b",
+    "CHAMP 3 : Gestion des surdosages asymptomatiques"
+   ],
+   [
+    "2023_RPP-Anesthesie-adulte-porteur-de-CC_pour-mise-sur-site_6601a6__c0006_56b48d17",
+    "Anesthésie pour chirurgie non cardiaque des patients adultes"
+   ],
+   [
+    "2022_RPP-reduction-impact-environnemental_pour-mise-sur-site_b22db8__c0007_3030966e",
+    "REDUCTION DE L'IMPACT ENVIRONNEMENTAL DE L'ANESTHESIE GENERA"
+   ],
+   [
+    "2022_RPP-FHS_pour-mise-sur-site_014032__c0008_c0cca7e0",
+    "RÉSUMÉ"
+   ],
+   [
+    "2022_RPP-FHS_pour-mise-sur-site_014032__c0082_eb7b9340",
+    "CHAMP 1 : COMMUNICATION"
+   ],
+   [
+    "2022_RPP-thrombectomie-2022_version-definitive-octobre-2022_103478__c0080_f44e0e7f",
+    "CHAMP 3. Gestion des anticoagulants et antiagrégants plaquet"
+   ],
+   [
+    "2021_RFE-SFAR-SFMU-Solute_CC_81s-de-remplissage_finale_220921_c91c4c__c0010_c73c9fe2",
+    "RESUME"
+   ],
+   [
+    "2021_RFE_20SFAR-SF2H_20Tenue_20vestimentaire_20au_20bloc_finale_22092_6d5cef__c0005_20460a80",
+    "Recommandations de Pratiques Professionnelles > RESUME"
+   ],
+   [
+    "2021_RFE_20SFAR-SFCTCV_20RAC_20chirurgie_20cardiaque_finale_220921_cd842e__c0147_3de3c058",
+    "CHAMP 4. STRATEGIE CHIRURGICALE ET GESTION DE LA CIRCULATION"
+   ],
+   [
+    "2021_RFE_20SFAR_20pancreatite_20aigue_finale_220921_b98663__c0008_b3f74315",
+    "ABSTRACT"
+   ],
+   [
+    "2020_RPP_PLYO_2020_a9118d__c0048_3c775d1c",
+    "Introduction > Synthèse des résultats"
+   ],
+   [
+    "2020_RPP_PLYO_2020_a9118d__c0055_cd9c925d",
+    "Introduction > Synthèse des résultats"
+   ],
+   [
+    "2019_rac-orthepedie-lourde_bc800f__c0010_a4ee42e7",
+    "Réhabilitation améliorée après chirurgie orthopédique lourde"
+   ],
+   [
+    "2019_rac-orthepedie-lourde_bc800f__c0013_ed8aaf70",
+    "Réhabilitation améliorée après chirurgie orthopédique lourde"
+   ],
+   [
+    "2019_rac-orthepedie-lourde_bc800f__c0030_1da7b918",
+    "INTRODUCTION > 2.1 Champs des recommandations"
+   ],
+   [
+    "2020_RFE_20pr_C3_A9-_C3_A9clampsie_finale_8989f8__c0004_665886a6",
+    "Prise en charge de la patiente avec une pré-éclampsie sévère"
+   ],
+   [
+    "2019_rfe-trauma-abdominale_656ac9__c0052_62e3cd72",
+    "CHAMP 2 : Stratégie thérapeutique > Avis d'experts"
+   ],
+   [
+    "2018_RFE-IH-soins-critiques_f67e16__c0012_81db812c",
+    "INSUFFISANCE HEPATIQUE EN SOINS CRITIQUES"
+   ],
+   [
+    "2018_RFE-IH-soins-critiques_f67e16__c0016_920d3464",
+    "Abstract"
+   ],
+   [
+    "2018_RFE-IH-soins-critiques_f67e16__c0141_8b920e69",
+    "Champ 2. Insuffisance hépatique aiguë sur cirrhose"
+   ],
+   [
+    "2015_2_AFAR_Prise-en-charge-des-infections-intra-abdominales_b6b3b6__c0053_027a26ad",
+    "Comment cibler l'antibiothérapie probabiliste ?"
+   ],
+   [
+    "2015_2_AFAR_Prise-en-charge-des-infections-intra-abdominales_b6b3b6__c0112_ed0e6f1b",
+    "Quand et comment faire les prélèvements microbiologiques ? >"
+   ],
+   [
+    "2014_2_AFAR_Rehabilitation-rapide-apres-une-chirurgie-colorectale-pro_84aad5__c0033_23a9bf1a",
+    "3. PÉRIODE PRÉOPÉRATOIRE > 3.1. Est-ce que l'information et "
+   ],
+   [
+    "2014_2_AFAR_Rehabilitation-rapide-apres-une-chirurgie-colorectale-pro_84aad5__c0035_f7cdc665",
+    "3. PÉRIODE PRÉOPÉRATOIRE > 3.2. Est-ce qu'une préparation co"
+   ]
+  ],
+  "sibling_stacked": [
+   [
+    "2026_RFE_sedationproceduraleUrgences_24juin2026_1f0c12__c0074_1f78c515",
+    "Champ 2 : Patients à risque et condition de réalisation : quand faire ou ne pas faire ? > AVIS D'EXPERT (Accord fort) > "
+   ],
+   [
+    "2026_RFE_sedationproceduraleUrgences_24juin2026_1f0c12__c0075_df96f7be",
+    "Champ 2 : Patients à risque et condition de réalisation : quand faire ou ne pas faire ? > AVIS D'EXPERT (Accord fort) > "
+   ],
+   [
+    "2026_RFE_sedationproceduraleUrgences_24juin2026_1f0c12__c0076_a9c6c22c",
+    "Champ 2 : Patients à risque et condition de réalisation : quand faire ou ne pas faire ? > AVIS D'EXPERT (Accord fort) > "
+   ],
+   [
+    "2026_RFE_sedationproceduraleUrgences_24juin2026_1f0c12__c0077_95b34e66",
+    "Champ 2 : Patients à risque et condition de réalisation : quand faire ou ne pas faire ? > AVIS D'EXPERT (Accord fort) > "
+   ],
+   [
+    "2026_RFE_sedationproceduraleUrgences_24juin2026_1f0c12__c0078_6e4f026b",
+    "Champ 2 : Patients à risque et condition de réalisation : quand faire ou ne pas faire ? > AVIS D'EXPERT (Accord fort) > "
+   ],
+   [
+    "2026_RFE_sedationproceduraleUrgences_24juin2026_1f0c12__c0079_be41716f",
+    "Champ 2 : Patients à risque et condition de réalisation : quand faire ou ne pas faire ? > AVIS D'EXPERT (Accord fort) > "
+   ],
+   [
+    "2026_RFE_sedationproceduraleUrgences_24juin2026_1f0c12__c0080_dbac5ce8",
+    "Champ 2 : Patients à risque et condition de réalisation : quand faire ou ne pas faire ? > AVIS D'EXPERT (Accord fort) > "
+   ],
+   [
+    "2023_RPP-Anesthesie-adulte-porteur-de-CC_pour-mise-sur-site_6601a6__c0012_f009d907",
+    "Anesthésie pour chirurgie non cardiaque des patients adultes porteurs de cardiopathie congénitale > 1. INTRODUCTION > 1."
+   ],
+   [
+    "2023_RPP-Anesthesie-adulte-porteur-de-CC_pour-mise-sur-site_6601a6__c0013_243ca26e",
+    "Anesthésie pour chirurgie non cardiaque des patients adultes porteurs de cardiopathie congénitale > 1. INTRODUCTION > 1."
+   ],
+   [
+    "2023_RPP-Anesthesie-adulte-porteur-de-CC_pour-mise-sur-site_6601a6__c0014_adafccff",
+    "Anesthésie pour chirurgie non cardiaque des patients adultes porteurs de cardiopathie congénitale > 1. INTRODUCTION > 1."
+   ],
+   [
+    "2023_RPP-Anesthesie-adulte-porteur-de-CC_pour-mise-sur-site_6601a6__c0015_5ffdbeee",
+    "Anesthésie pour chirurgie non cardiaque des patients adultes porteurs de cardiopathie congénitale > 1. INTRODUCTION > 1."
+   ],
+   [
+    "2023_RPP-Anesthesie-adulte-porteur-de-CC_pour-mise-sur-site_6601a6__c0016_fbbf36d6",
+    "Anesthésie pour chirurgie non cardiaque des patients adultes porteurs de cardiopathie congénitale > 1. INTRODUCTION > 1."
+   ],
+   [
+    "2023_RPP-Anesthesie-adulte-porteur-de-CC_pour-mise-sur-site_6601a6__c0017_daa371b3",
+    "Anesthésie pour chirurgie non cardiaque des patients adultes porteurs de cardiopathie congénitale > 1. INTRODUCTION > 1."
+   ],
+   [
+    "2023_RPP-Anesthesie-adulte-porteur-de-CC_pour-mise-sur-site_6601a6__c0018_f6723a45",
+    "Anesthésie pour chirurgie non cardiaque des patients adultes porteurs de cardiopathie congénitale > 1. INTRODUCTION > 1."
+   ],
+   [
+    "2023_RPP-Anesthesie-adulte-porteur-de-CC_pour-mise-sur-site_6601a6__c0019_648131ef",
+    "Anesthésie pour chirurgie non cardiaque des patients adultes porteurs de cardiopathie congénitale > 1. INTRODUCTION > 1."
+   ],
+   [
+    "2023_RPP-Anesthesie-adulte-porteur-de-CC_pour-mise-sur-site_6601a6__c0020_b40c7b01",
+    "Anesthésie pour chirurgie non cardiaque des patients adultes porteurs de cardiopathie congénitale > 1. INTRODUCTION > 1."
+   ],
+   [
+    "2023_RPP-Anesthesie-adulte-porteur-de-CC_pour-mise-sur-site_6601a6__c0021_a749c791",
+    "Anesthésie pour chirurgie non cardiaque des patients adultes porteurs de cardiopathie congénitale > 1.4.1 Les shunts > 1"
+   ],
+   [
+    "2023_RPP-Anesthesie-adulte-porteur-de-CC_pour-mise-sur-site_6601a6__c0022_ce4acd31",
+    "Anesthésie pour chirurgie non cardiaque des patients adultes porteurs de cardiopathie congénitale > 1.4.1 Les shunts > 1"
+   ],
+   [
+    "2023_RPP-Anesthesie-adulte-porteur-de-CC_pour-mise-sur-site_6601a6__c0023_60a51a05",
+    "Anesthésie pour chirurgie non cardiaque des patients adultes porteurs de cardiopathie congénitale > 1.4.1 Les shunts > 1"
+   ],
+   [
+    "2023_RPP-Anesthesie-adulte-porteur-de-CC_pour-mise-sur-site_6601a6__c0024_8bbe5424",
+    "Anesthésie pour chirurgie non cardiaque des patients adultes porteurs de cardiopathie congénitale > 1.4.1 Les shunts > 1"
+   ],
+   [
+    "2023_RPP-Anesthesie-adulte-porteur-de-CC_pour-mise-sur-site_6601a6__c0025_5b14d198",
+    "Anesthésie pour chirurgie non cardiaque des patients adultes porteurs de cardiopathie congénitale > 1.4.1 Les shunts > 1"
+   ],
+   [
+    "2023_RPP-Anesthesie-adulte-porteur-de-CC_pour-mise-sur-site_6601a6__c0026_824310c9",
+    "Anesthésie pour chirurgie non cardiaque des patients adultes porteurs de cardiopathie congénitale > 1.4.1 Les shunts > 1"
+   ],
+   [
+    "2023_RPP-Anesthesie-adulte-porteur-de-CC_pour-mise-sur-site_6601a6__c0027_270b77f9",
+    "Anesthésie pour chirurgie non cardiaque des patients adultes porteurs de cardiopathie congénitale > 1.4.1 Les shunts > 1"
+   ],
+   [
+    "2023_RPP-Anesthesie-adulte-porteur-de-CC_pour-mise-sur-site_6601a6__c0028_c5c6377b",
+    "Anesthésie pour chirurgie non cardiaque des patients adultes porteurs de cardiopathie congénitale > 1.4.1 Les shunts > 1"
+   ],
+   [
+    "2023_RPP-Anesthesie-adulte-porteur-de-CC_pour-mise-sur-site_6601a6__c0029_c3d5e1df",
+    "Anesthésie pour chirurgie non cardiaque des patients adultes porteurs de cardiopathie congénitale > 1.4.1 Les shunts > 1"
+   ]
+  ],
+  "table_as_image": [
+   [
+    "2024_RPP-Prevention-des-erreurs-medicamenteuses_39d8ef__c0156_e1747adc",
+    "Diagram illustrating the components of a syringe and needle assembly. The top row shows a "
+   ]
+  ]
+ },
+ "X_recente_non_gradee": {
+  "grade_on_non_statement": [
+   [
+    "2021_preconisations-inssuffisance-d-analgesie-cesarienne-sous-anesthe_416887__c0011_2f8f57e6",
+    "INTRODUCTION > MÉTHODOLOGIE",
+    [
+     "avis d'experts"
+    ]
+   ],
+   [
+    "2013_2013_20AFAR_20GIHP_c80a1a__c0016_cf889833",
+    "2. Argumentaire > 2.1. Données concernant les règles de prise en charge des pati",
+    [
+     "avis d'experts"
+    ]
+   ],
+   [
+    "2012_3_AFAR_LONG_Bris-dentaires-perianesthesiques-copie_ba6aca__c0004_aad2d7ce",
+    "Bris dentaires périanesthésiques : texte long<sup>☆</sup> > French clinical guid",
+    [
+     "avis d'experts"
+    ]
+   ],
+   [
+    "2012_3_AFAR_LONG_Bris-dentaires-perianesthesiques-copie_ba6aca__c0047_5f035846",
+    "3. Conduite à tenir au bloc opératoire > 3.2.2. LMA-Fastrach<sup>TM</sup>",
+    [
+     "recommandation forte"
+    ]
+   ],
+   [
+    "2020_covid-19-rfe-reanimation_2c7bbc__c0006_a500d792",
+    "Introduction",
+    [
+     "avis d'expert"
+    ]
+   ]
+  ],
+  "footnote_reco": [
+   [
+    "2021_preconisations-inssuffisance-d-analgesie-cesarienne-sous-anesthe_416887__c0027_92602115",
+    "INTRODUCTION > Préconisations thème par thème > 3. Reconnaît"
+   ],
+   [
+    "2012_2_AFAR_COURT_Bris-dentaires-perianesthesiques-copie_e84cfe__c0003_4a9aef95",
+    ""
+   ],
+   [
+    "2020_covid-19-rfe-reanimation_2c7bbc__c0032_5dcc6c95",
+    "Introduction > 1/ Isolement > Recommandations spécifiques à "
+   ]
+  ],
+  "sibling_stacked": [
+   [
+    "2021_preconisations-inssuffisance-d-analgesie-cesarienne-sous-anesthe_416887__c0040_15909273",
+    "INTRODUCTION > Insuffisance d'analgésie au cours de la césarienne sous anesthésie péri-médullaire > Insuffisance d'analg"
+   ],
+   [
+    "2021_Gestion_20perioperatoire_20des_20patients_20sous_20AOD_20pour_20_ecd95a__c0009_f3765b3a",
+    "Pour la gestion périopératoire des patients sous AOD pour un acte programmé > 2.1 Le risque hémorragique faible > 3. Ges"
+   ],
+   [
+    "2021_Gestion_20perioperatoire_20des_20patients_20sous_20AOD_20pour_20_ecd95a__c0010_317fad83",
+    "Pour la gestion périopératoire des patients sous AOD pour un acte programmé > 2.1 Le risque hémorragique faible > 3. Ges"
+   ],
+   [
+    "2021_Gestion_20perioperatoire_20des_20patients_20sous_20AOD_20en_20ur_30205c__c0045_81b90604",
+    "Introduction > II. Hémorragie grave > III. Hémorragie non grave"
+   ],
+   [
+    "2021_Gestion_20perioperatoire_20des_20patients_20sous_20AOD_20en_20ur_30205c__c0046_9073ab21",
+    "Introduction > II. Hémorragie grave > III. Hémorragie non grave"
+   ],
+   [
+    "2021_Gestion_20perioperatoire_20des_20patients_20sous_20AOD_20en_20ur_30205c__c0047_1b7e72d7",
+    "Introduction > II. Hémorragie grave > III. Hémorragie non grave"
+   ],
+   [
+    "2021_Gestion_20perioperatoire_20des_20patients_20sous_20AOD_20en_20ur_30205c__c0048_52913b0b",
+    "Introduction > II. Hémorragie grave > III. Hémorragie non grave"
+   ],
+   [
+    "2021_Gestion_20perioperatoire_20des_20patients_20sous_20AOD_20en_20ur_30205c__c0049_9801f11d",
+    "Introduction > II. Hémorragie grave > III. Hémorragie non grave"
+   ],
+   [
+    "2013_2013_20AFAR_20GIHP_c80a1a__c0014_0221c6fd",
+    "2. Argumentaire > 2.1. Données concernant les règles de prise en charge des patients traités par de nouveaux anticoagula"
+   ],
+   [
+    "2013_2013_20AFAR_20GIHP_c80a1a__c0015_dcee3cf0",
+    "2. Argumentaire > 2.1. Données concernant les règles de prise en charge des patients traités par de nouveaux anticoagula"
+   ],
+   [
+    "2013_2013_20AFAR_20GIHP_c80a1a__c0016_cf889833",
+    "2. Argumentaire > 2.1. Données concernant les règles de prise en charge des patients traités par de nouveaux anticoagula"
+   ],
+   [
+    "2013_2013_20AFAR_20GIHP_c80a1a__c0017_9890b501",
+    "2. Argumentaire > 2.2. Le traitement par anticoagulants oraux directs à dose curative est associé à un risque hémorragiq"
+   ],
+   [
+    "2013_2013_20AFAR_20GIHP_c80a1a__c0018_4f2315b0",
+    "2. Argumentaire > 2.3. Les nouveaux anticoagulants oraux n'ont pas d'antidote spécifique validé"
+   ],
+   [
+    "2013_2013_20AFAR_20GIHP_c80a1a__c0019_822be04e",
+    "2. Argumentaire > 2.4. Bénéfice-risque des médicaments procoagulants incertain"
+   ],
+   [
+    "2013_2013_20AFAR_20GIHP_c80a1a__c0020_1e66ac86",
+    "2. Argumentaire > 2.4. Bénéfice-risque des médicaments procoagulants incertain"
+   ],
+   [
+    "2013_2013_20AFAR_20GIHP_c80a1a__c0021_30ce485c",
+    "2. Argumentaire > 2.4. Bénéfice-risque des médicaments procoagulants incertain"
+   ],
+   [
+    "2013_2013_20AFAR_20GIHP_c80a1a__c0022_b40d136b",
+    "2. Argumentaire > 2.5. Tests d'hémostase simples permettant de mesurer en urgence la concentration plasmatique des nouve"
+   ],
+   [
+    "2013_2013_20AFAR_20GIHP_c80a1a__c0023_47d1de2e",
+    "2. Argumentaire > 2.6. Il est possible d'extrapoler des essais cliniques un seuil de sécurité hémostatique correspondant"
+   ],
+   [
+    "2013_2013_20AFAR_20GIHP_c80a1a__c0024_756c4f4c",
+    "2. Argumentaire > 2.6. Il est possible d'extrapoler des essais cliniques un seuil de sécurité hémostatique correspondant"
+   ],
+   [
+    "2013_2013_20AFAR_20GIHP_c80a1a__c0025_b8fca14c",
+    "2. Argumentaire > 2.6. Il est possible d'extrapoler des essais cliniques un seuil de sécurité hémostatique correspondant"
+   ],
+   [
+    "2013_2013_20AFAR_20GIHP_c80a1a__c0026_cfc30a5d",
+    "2. Argumentaire > 2.7. Si l'on ne dispose pas de la mesure des taux de médicament, les tests d'hémostase usuels (TP, TCA"
+   ],
+   [
+    "2013_2013_20AFAR_20GIHP_c80a1a__c0027_0bec753b",
+    "2. Argumentaire > 2.7. Si l'on ne dispose pas de la mesure des taux de médicament, les tests d'hémostase usuels (TP, TCA"
+   ],
+   [
+    "2013_2013_20AFAR_20GIHP_c80a1a__c0028_74c5147a",
+    "2. Argumentaire > 2.7. Si l'on ne dispose pas de la mesure des taux de médicament, les tests d'hémostase usuels (TP, TCA"
+   ],
+   [
+    "2013_2013_20AFAR_20GIHP_c80a1a__c0029_53823eb9",
+    "2. Argumentaire > 2.7. Si l'on ne dispose pas de la mesure des taux de médicament, les tests d'hémostase usuels (TP, TCA"
+   ],
+   [
+    "2013_2013_20AFAR_20GIHP_c80a1a__c0030_2a1b128d",
+    "2. Argumentaire > 2.7. Si l'on ne dispose pas de la mesure des taux de médicament, les tests d'hémostase usuels (TP, TCA"
+   ]
+  ],
+  "unflagged_biblio": [
+   [
+    "2021_Gestion_20perioperatoire_20des_20patients_20sous_20AOD_20pour_20_ecd95a__c0026_19aee72f",
+    "Pour la gestion périopératoire des patients sous AOD pour un",
+    3
+   ],
+   [
+    "2021_Gestion_20perioperatoire_20des_20patients_20sous_20AOD_20pour_20_ecd95a__c0027_a1d33195",
+    "Pour la gestion périopératoire des patients sous AOD pour un",
+    5
+   ],
+   [
+    "2021_Gestion_20perioperatoire_20des_20patients_20sous_20AOD_20pour_20_ecd95a__c0028_1ae95f13",
+    "Pour la gestion périopératoire des patients sous AOD pour un",
+    5
+   ],
+   [
+    "2021_Gestion_20perioperatoire_20des_20patients_20sous_20AOD_20pour_20_ecd95a__c0029_ab1a9400",
+    "Pour la gestion périopératoire des patients sous AOD pour un",
+    5
+   ]
+  ],
+  "table_as_image": [
+   [
+    "2016_texte-long-Preconisations-2016-erreurs-med-SFAR-SFPC-version-fin_32ecd9__c0125_a4f75b65",
+    "A diagram showing six syringe labels arranged in two rows of three. Each label has a blue "
+   ]
+  ]
+ },
+ "0_ABP": {
+  "grade_on_non_statement": [
+   [
+    "2026_RFE-antibioprophylaxie-2023_V3_0_pour-mise-sur-site-juin-2026_sa_9ff419__c0025_60a72e10",
+    "INTRODUCTION",
+    [
+     "GRADE 1"
+    ]
+   ],
+   [
+    "2026_RFE-antibioprophylaxie-2023_V3_0_pour-mise-sur-site-juin-2026_sa_9ff419__c0035_f31dd53b",
+    "INTRODUCTION > Champ des recommandations",
+    [
+     "accord faible",
+     "accord fort"
+    ]
+   ],
+   [
+    "2026_RFE-antibioprophylaxie-2023_V3_0_pour-mise-sur-site-juin-2026_sa_9ff419__c0036_fbc2f7dd",
+    "INTRODUCTION > Champ des recommandations",
+    [
+     "avis d'experts",
+     "accord fort"
+    ]
+   ],
+   [
+    "2026_RFE-antibioprophylaxie-2023_V3_0_pour-mise-sur-site-juin-2026_sa_9ff419__c0041_0d966e24",
+    "Champ 3 : Recommandations par disciplines chirurgicales et de médecine intervent",
+    [
+     "accord fort",
+     "avis d'experts",
+     "GRADE 2",
+     "GRADE 1"
+    ]
+   ],
+   [
+    "2026_RFE-antibioprophylaxie-2023_V3_0_pour-mise-sur-site-juin-2026_sa_9ff419__c0045_92034e58",
+    "CHAMP 1. Recommandations générales sur l'antibioprophylaxie en chirurgie et méde",
+    [
+     "GRADE 1",
+     "accord FORT"
+    ]
+   ],
+   [
+    "2026_RFE-antibioprophylaxie-2023_V3_0_pour-mise-sur-site-juin-2026_sa_9ff419__c0064_8acb4945",
+    "CHAMP 1. Recommandations générales sur l'antibioprophylaxie en chirurgie et méde",
+    [
+     "GRADE 2",
+     "accord FORT"
+    ]
+   ],
+   [
+    "2026_RFE-antibioprophylaxie-2023_V3_0_pour-mise-sur-site-juin-2026_sa_9ff419__c0072_56ecdd54",
+    "CHAMP 1. Recommandations générales sur l'antibioprophylaxie en chirurgie et méde",
+    [
+     "GRADE 1",
+     "accord FORT"
+    ]
+   ],
+   [
+    "2026_RFE-antibioprophylaxie-2023_V3_0_pour-mise-sur-site-juin-2026_sa_9ff419__c0084_9b949aec",
+    "CHAMP 1. Recommandations générales sur l'antibioprophylaxie en chirurgie et méde",
+    [
+     "Avis d'experts",
+     "accord FORT"
+    ]
+   ],
+   [
+    "2026_RFE-antibioprophylaxie-2023_V3_0_pour-mise-sur-site-juin-2026_sa_9ff419__c0118_3c871e8d",
+    "CHAMP 1. Recommandations générales sur l'antibioprophylaxie en chirurgie et méde",
+    [
+     "Avis d'experts",
+     "accord FORT"
+    ]
+   ],
+   [
+    "2026_RFE-antibioprophylaxie-2023_V3_0_pour-mise-sur-site-juin-2026_sa_9ff419__c0231_a1c59901",
+    "CHAMP 2. Recommandations sur l'antibioprophylaxie en chirurgie et médecine inter",
+    [
+     "Avis d'experts"
+    ]
+   ],
+   [
+    "2026_RFE-antibioprophylaxie-2023_V3_0_pour-mise-sur-site-juin-2026_sa_9ff419__c0247_d7390cff",
+    "CHAMP 2. Recommandations sur l'antibioprophylaxie en chirurgie et médecine inter",
+    [
+     "GRADE 1"
+    ]
+   ],
+   [
+    "2026_RFE-antibioprophylaxie-2023_V3_0_pour-mise-sur-site-juin-2026_sa_9ff419__c0252_79370376",
+    "CHAMP 2. Recommandations sur l'antibioprophylaxie en chirurgie et médecine inter",
+    [
+     "Avis d'experts"
+    ]
+   ],
+   [
+    "2026_RFE-antibioprophylaxie-2023_V3_0_pour-mise-sur-site-juin-2026_sa_9ff419__c0283_335c1588",
+    "CHAMP 2. Recommandations sur l'antibioprophylaxie en chirurgie et médecine inter",
+    [
+     "Avis d'experts"
+    ]
+   ],
+   [
+    "2026_RFE-antibioprophylaxie-2023_V3_0_pour-mise-sur-site-juin-2026_sa_9ff419__c0343_09dbe2b4",
+    "CHAMP 2. Recommandations sur l'antibioprophylaxie en chirurgie et médecine inter",
+    [
+     "avis d'experts"
+    ]
+   ],
+   [
+    "2026_RFE-antibioprophylaxie-2023_V3_0_pour-mise-sur-site-juin-2026_sa_9ff419__c0344_be25948b",
+    "CHAMP 2. Recommandations sur l'antibioprophylaxie en chirurgie et médecine inter",
+    [
+     "avis d'experts"
+    ]
+   ],
+   [
+    "2026_RFE-antibioprophylaxie-2023_V3_0_pour-mise-sur-site-juin-2026_sa_9ff419__c0483_73dca4f2",
+    "CHAMP 2. Recommandations sur l'antibioprophylaxie en chirurgie et médecine inter",
+    [
+     "Avis d'experts"
+    ]
+   ],
+   [
+    "2026_RFE-antibioprophylaxie-2023_V3_0_pour-mise-sur-site-juin-2026_sa_9ff419__c0524_8d5d0cae",
+    "CHAMP 2. Recommandations sur l'antibioprophylaxie en chirurgie et médecine inter",
+    [
+     "Avis d'experts"
+    ]
+   ],
+   [
+    "2026_RFE-antibioprophylaxie-2023_V3_0_pour-mise-sur-site-juin-2026_sa_9ff419__c0621_d949fa12",
+    "CHAMP 3. Recommandations sur l'antibioprophylaxie en chirurgie et médecine inter",
+    [
+     "Avis d'experts"
+    ]
+   ],
+   [
+    "2026_RFE-antibioprophylaxie-2023_V3_0_pour-mise-sur-site-juin-2026_sa_9ff419__c0655_168bbc39",
+    "CHAMP 3. Recommandations sur l'antibioprophylaxie en chirurgie et médecine inter",
+    [
+     "Avis d'experts"
+    ]
+   ],
+   [
+    "2026_RFE-antibioprophylaxie-2023_V3_0_pour-mise-sur-site-juin-2026_sa_9ff419__c0714_f5f22286",
+    "CHAMP 3. Recommandations sur l'antibioprophylaxie en chirurgie et médecine inter",
+    [
+     "Avis d'experts"
+    ]
+   ],
+   [
+    "2018_Antibioprophylaxie-RFE-mise-a-jour-2018_c6a5c4__c0011_922efc29",
+    "Recommandations Formalisées d'Experts > 1. Méthodologie > Introduction générale ",
+    [
+     "recommandation forte",
+     "avis d'experts"
+    ]
+   ],
+   [
+    "2018_Antibioprophylaxie-RFE-mise-a-jour-2018_c6a5c4__c0052_91444cdd",
+    "Recommandations Formalisées d'Experts > Antibioprophylaxie en neurochirurgie",
+    [
+     "avis d'experts"
+    ]
+   ],
+   [
+    "2018_Antibioprophylaxie-RFE-mise-a-jour-2018_c6a5c4__c0062_56f012af",
+    "Recommandations Formalisées d'Experts > Antibioprophylaxie en chirurgie ophtalmo",
+    [
+     "avis d'experts"
+    ]
+   ],
+   [
+    "2018_Antibioprophylaxie-RFE-mise-a-jour-2018_c6a5c4__c0074_8804c61b",
+    "Recommandations Formalisées d'Experts > Antibioprophylaxie en chirurgie cardiaqu",
+    [
+     "avis d'experts"
+    ]
+   ],
+   [
+    "2018_Antibioprophylaxie-RFE-mise-a-jour-2018_c6a5c4__c0083_98ba7b02",
+    "Recommandations Formalisées d'Experts > Antibioprophylaxie en chirurgie vasculai",
+    [
+     "avis d'experts"
+    ]
+   ]
+  ],
+  "box_with_argument": [
+   [
+    "2026_RFE-antibioprophylaxie-2023_V3_0_pour-mise-sur-site-juin-2026_sa_9ff419__c0055_29593bea",
+    [
+     "R1.2"
+    ],
+    696
+   ],
+   [
+    "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0055_f7fed946",
+    [
+     "R1.2"
+    ],
+    696
+   ]
+  ],
+  "mixed_grades": [
+   [
+    "2026_RFE-antibioprophylaxie-2023_V3_0_pour-mise-sur-site-juin-2026_sa_9ff419__c0083_bda1aa18",
+    [
+     "R1.5.1",
+     "R1.5.2"
+    ],
+    [
+     "GRADE 2",
+     "accord FORT",
+     "Avis d'experts"
+    ]
+   ],
+   [
+    "2026_RFE-antibioprophylaxie-2023_V3_0_pour-mise-sur-site-juin-2026_sa_9ff419__c0116_31fe2750",
+    [
+     "R1.7.1",
+     "R1.7.2"
+    ],
+    [
+     "Avis d’experts",
+     "accord FORT"
+    ]
+   ],
+   [
+    "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0083_14de6681",
+    [
+     "R1.5.1",
+     "R1.5.2"
+    ],
+    [
+     "GRADE 2",
+     "accord FORT",
+     "Avis d'experts"
+    ]
+   ],
+   [
+    "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0116_fe32cd50",
+    [
+     "R1.7.1",
+     "R1.7.2"
+    ],
+    [
+     "Avis d’experts",
+     "accord FORT"
+    ]
+   ]
+  ],
+  "grade_split": [
+   [
+    "2026_RFE-antibioprophylaxie-2023_V3_0_pour-mise-sur-site-juin-2026_sa_9ff419__c0116_31fe2750",
+    "R1.7.2"
+   ],
+   [
+    "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0116_fe32cd50",
+    "R1.7.2"
+   ]
+  ],
+  "footnote_reco": [
+   [
+    "2026_RFE-antibioprophylaxie-2023_V3_0_pour-mise-sur-site-juin-2026_sa_9ff419__c0340_5d46f2ca",
+    "CHAMP 2. Recommandations sur l'antibioprophylaxie en chirurg"
+   ],
+   [
+    "2026_RFE-antibioprophylaxie-2023_V3_0_pour-mise-sur-site-juin-2026_sa_9ff419__c0438_5d7aabec",
+    "CHAMP 2. Recommandations sur l'antibioprophylaxie en chirurg"
+   ],
+   [
+    "2026_RFE-antibioprophylaxie-2023_V3_0_pour-mise-sur-site-juin-2026_sa_9ff419__c0552_533c7f2b",
+    "CHAMP 2. Recommandations sur l'antibioprophylaxie en chirurg"
+   ],
+   [
+    "2026_RFE-antibioprophylaxie-2023_V3_0_pour-mise-sur-site-juin-2026_sa_9ff419__c0652_4fd19a76",
+    "CHAMP 3. Recommandations sur l'antibioprophylaxie en chirurg"
+   ],
+   [
+    "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0340_2fe575f5",
+    "CHAMP 2. Recommandations sur l'antibioprophylaxie en chirurg"
+   ],
+   [
+    "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0438_f4803017",
+    "CHAMP 2. Recommandations sur l'antibioprophylaxie en chirurg"
+   ],
+   [
+    "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0553_0901ff78",
+    "CHAMP 2. Recommandations sur l'antibioprophylaxie en chirurg"
+   ],
+   [
+    "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0653_5cab8281",
+    "CHAMP 3. Recommandations sur l'antibioprophylaxie en chirurg"
+   ]
+  ],
+  "unflagged_biblio": [
+   [
+    "2026_RFE-antibioprophylaxie-2023_V3_0_pour-mise-sur-site-juin-2026_sa_9ff419__c0046_9c5c748b",
+    "CHAMP 1. Recommandations générales sur l'antibioprophylaxie ",
+    4
+   ],
+   [
+    "2026_RFE-antibioprophylaxie-2023_V3_0_pour-mise-sur-site-juin-2026_sa_9ff419__c0047_a4b081b7",
+    "CHAMP 1. Recommandations générales sur l'antibioprophylaxie ",
+    3
+   ],
+   [
+    "2026_RFE-antibioprophylaxie-2023_V3_0_pour-mise-sur-site-juin-2026_sa_9ff419__c0049_29223dc7",
+    "CHAMP 1. Recommandations générales sur l'antibioprophylaxie ",
+    3
+   ],
+   [
+    "2026_RFE-antibioprophylaxie-2023_V3_0_pour-mise-sur-site-juin-2026_sa_9ff419__c0056_0ecd9cab",
+    "CHAMP 1. Recommandations générales sur l'antibioprophylaxie ",
+    3
+   ],
+   [
+    "2026_RFE-antibioprophylaxie-2023_V3_0_pour-mise-sur-site-juin-2026_sa_9ff419__c0058_b96ea9b0",
+    "CHAMP 1. Recommandations générales sur l'antibioprophylaxie ",
+    5
+   ],
+   [
+    "2026_RFE-antibioprophylaxie-2023_V3_0_pour-mise-sur-site-juin-2026_sa_9ff419__c0092_959c657b",
+    "CHAMP 1. Recommandations générales sur l'antibioprophylaxie ",
+    5
+   ],
+   [
+    "2026_RFE-antibioprophylaxie-2023_V3_0_pour-mise-sur-site-juin-2026_sa_9ff419__c0093_6a456e62",
+    "CHAMP 1. Recommandations générales sur l'antibioprophylaxie ",
+    3
+   ],
+   [
+    "2018_Antibioprophylaxie-RFE-mise-a-jour-2018_c6a5c4__c0025_fe5bd990",
+    "Recommandations Formalisées d'Experts > Q2: Quels sont les p",
+    13
+   ],
+   [
+    "2018_Antibioprophylaxie-RFE-mise-a-jour-2018_c6a5c4__c0026_83407ee6",
+    "Recommandations Formalisées d'Experts > Q2: Quels sont les p",
+    6
+   ],
+   [
+    "2018_Antibioprophylaxie-RFE-mise-a-jour-2018_c6a5c4__c0028_df21859c",
+    "Recommandations Formalisées d'Experts > Q2: Quels sont les p",
+    10
+   ],
+   [
+    "2018_Antibioprophylaxie-RFE-mise-a-jour-2018_c6a5c4__c0029_6ed07d14",
+    "Recommandations Formalisées d'Experts > Q2: Quels sont les p",
+    4
+   ],
+   [
+    "2018_Antibioprophylaxie-RFE-mise-a-jour-2018_c6a5c4__c0033_b8acdfdc",
+    "Recommandations Formalisées d'Experts > Q2: Quels sont les p",
+    3
+   ],
+   [
+    "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0046_023937a7",
+    "CHAMP 1. Recommandations générales sur l'antibioprophylaxie ",
+    4
+   ],
+   [
+    "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0047_77487839",
+    "CHAMP 1. Recommandations générales sur l'antibioprophylaxie ",
+    3
+   ],
+   [
+    "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0049_14df57c5",
+    "CHAMP 1. Recommandations générales sur l'antibioprophylaxie ",
+    3
+   ],
+   [
+    "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0056_9ef71b27",
+    "CHAMP 1. Recommandations générales sur l'antibioprophylaxie ",
+    3
+   ],
+   [
+    "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0058_e2d2fb7b",
+    "CHAMP 1. Recommandations générales sur l'antibioprophylaxie ",
+    5
+   ],
+   [
+    "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0092_36c11eb8",
+    "CHAMP 1. Recommandations générales sur l'antibioprophylaxie ",
+    5
+   ],
+   [
+    "2026_RFE-antibioprophylaxie-2023_V3_1_pour-mise-sur-site-juillet-2026_642ad1__c0093_3632bd59",
+    "CHAMP 1. Recommandations générales sur l'antibioprophylaxie ",
+    3
+   ]
+  ],
+  "id_not_captured": [
+   [
+    "2018_Antibioprophylaxie-RFE-mise-a-jour-2018_c6a5c4__c0014_5202c6bb",
+    "R1",
+    "prose"
+   ],
+   [
+    "2018_Antibioprophylaxie-RFE-mise-a-jour-2018_c6a5c4__c0016_526fecb0",
+    "R2",
+    "prose"
+   ],
+   [
+    "2018_Antibioprophylaxie-RFE-mise-a-jour-2018_c6a5c4__c0027_ad24fd4e",
+    "R3",
+    "prose"
+   ],
+   [
+    "2018_Antibioprophylaxie-RFE-mise-a-jour-2018_c6a5c4__c0034_5a660fb0",
+    "R4",
+    "prose"
+   ],
+   [
+    "2017_rfe-antibioprophylaxie-in-surgery-and-interventional-medicine_643bc8__c0013_37373f3a",
+    "R1",
+    "prose"
+   ],
+   [
+    "2017_rfe-antibioprophylaxie-in-surgery-and-interventional-medicine_643bc8__c0015_18c876ae",
+    "R2",
+    "prose"
+   ],
+   [
+    "2017_rfe-antibioprophylaxie-in-surgery-and-interventional-medicine_643bc8__c0022_089f3354",
+    "R3",
+    "prose"
+   ],
+   [
+    "2017_rfe-antibioprophylaxie-in-surgery-and-interventional-medicine_643bc8__c0024_0090f636",
+    "R4",
+    "prose"
+   ],
+   [
+    "2017_rfe-antibioprophylaxie-in-surgery-and-interventional-medicine_643bc8__c0075_37c02737",
+    "R6",
+    "prose"
+   ],
+   [
+    "2017_rfe-antibioprophylaxie-in-surgery-and-interventional-medicine_643bc8__c0091_3fae71da",
+    "R7",
+    "prose"
+   ],
+   [
+    "2017_rfe-antibioprophylaxie-in-surgery-and-interventional-medicine_643bc8__c0092_dd1420ab",
+    "R8",
+    "prose"
+   ],
+   [
+    "2017_rfe-antibioprophylaxie-in-surgery-and-interventional-medicine_643bc8__c0093_39081965",
+    "R9",
+    "prose"
+   ],
+   [
+    "2017_rfe-antibioprophylaxie-in-surgery-and-interventional-medicine_643bc8__c0144_61788211",
+    "R10",
+    "prose"
+   ],
+   [
+    "2017_rfe-antibioprophylaxie-in-surgery-and-interventional-medicine_643bc8__c0145_f6aa9470",
+    "R11",
+    "prose"
+   ],
+   [
+    "2017_rfe-antibioprophylaxie-in-surgery-and-interventional-medicine_643bc8__c0146_1be1c30f",
+    "R12",
+    "prose"
+   ],
+   [
+    "2017_rfe-antibioprophylaxie-in-surgery-and-interventional-medicine_643bc8__c0166_3f76a31f",
+    "R13",
+    "prose"
+   ],
+   [
+    "2017_rfe-antibioprophylaxie-in-surgery-and-interventional-medicine_643bc8__c0167_35133cc5",
+    "R14",
+    "prose"
+   ],
+   [
+    "2017_rfe-antibioprophylaxie-in-surgery-and-interventional-medicine_643bc8__c0226_491b1497",
+    "R15",
+    "prose"
+   ],
+   [
+    "2017_rfe-antibioprophylaxie-in-surgery-and-interventional-medicine_643bc8__c0226_491b1497",
+    "R16",
+    "prose"
+   ],
+   [
+    "2017_rfe-antibioprophylaxie-in-surgery-and-interventional-medicine_643bc8__c0227_b55ef619",
+    "R17",
+    "prose"
+   ],
+   [
+    "2017_rfe-antibioprophylaxie-in-surgery-and-interventional-medicine_643bc8__c0228_5b392149",
+    "R19",
+    "prose"
+   ],
+   [
+    "2017_Antibioprophylaxie-version-2017-CRC_CA_MODIF_ecc6c7__c0009_4d9c4785",
+    "R1",
+    "prose"
+   ],
+   [
+    "2017_Antibioprophylaxie-version-2017-CRC_CA_MODIF_ecc6c7__c0011_120116be",
+    "R2",
+    "prose"
+   ],
+   [
+    "2017_Antibioprophylaxie-version-2017-CRC_CA_MODIF_ecc6c7__c0022_380a38c0",
+    "R3",
+    "prose"
+   ],
+   [
+    "2017_Antibioprophylaxie-version-2017-CRC_CA_MODIF_ecc6c7__c0027_fbd966bf",
+    "R4",
+    "prose"
+   ]
+  ],
+  "stmt_not_box": [
+   [
+    "2018_Antibioprophylaxie-RFE-mise-a-jour-2018_c6a5c4__c0014_5202c6bb",
+    [
+     "R1"
+    ],
+    "prose"
+   ],
+   [
+    "2018_Antibioprophylaxie-RFE-mise-a-jour-2018_c6a5c4__c0016_526fecb0",
+    [
+     "R2"
+    ],
+    "prose"
+   ],
+   [
+    "2018_Antibioprophylaxie-RFE-mise-a-jour-2018_c6a5c4__c0027_ad24fd4e",
+    [
+     "R3"
+    ],
+    "prose"
+   ],
+   [
+    "2018_Antibioprophylaxie-RFE-mise-a-jour-2018_c6a5c4__c0034_5a660fb0",
+    [
+     "R4"
+    ],
+    "prose"
+   ],
+   [
+    "2017_rfe-antibioprophylaxie-in-surgery-and-interventional-medicine_643bc8__c0013_37373f3a",
+    [
+     "R1"
+    ],
+    "prose"
+   ],
+   [
+    "2017_rfe-antibioprophylaxie-in-surgery-and-interventional-medicine_643bc8__c0015_18c876ae",
+    [
+     "R2"
+    ],
+    "prose"
+   ],
+   [
+    "2017_rfe-antibioprophylaxie-in-surgery-and-interventional-medicine_643bc8__c0022_089f3354",
+    [
+     "R3"
+    ],
+    "prose"
+   ],
+   [
+    "2017_rfe-antibioprophylaxie-in-surgery-and-interventional-medicine_643bc8__c0024_0090f636",
+    [
+     "R4"
+    ],
+    "prose"
+   ],
+   [
+    "2017_rfe-antibioprophylaxie-in-surgery-and-interventional-medicine_643bc8__c0075_37c02737",
+    [
+     "R6"
+    ],
+    "prose"
+   ],
+   [
+    "2017_rfe-antibioprophylaxie-in-surgery-and-interventional-medicine_643bc8__c0091_3fae71da",
+    [
+     "R7"
+    ],
+    "prose"
+   ],
+   [
+    "2017_rfe-antibioprophylaxie-in-surgery-and-interventional-medicine_643bc8__c0092_dd1420ab",
+    [
+     "R8"
+    ],
+    "prose"
+   ],
+   [
+    "2017_rfe-antibioprophylaxie-in-surgery-and-interventional-medicine_643bc8__c0093_39081965",
+    [
+     "R9"
+    ],
+    "prose"
+   ],
+   [
+    "2017_rfe-antibioprophylaxie-in-surgery-and-interventional-medicine_643bc8__c0144_61788211",
+    [
+     "R10"
+    ],
+    "prose"
+   ],
+   [
+    "2017_rfe-antibioprophylaxie-in-surgery-and-interventional-medicine_643bc8__c0145_f6aa9470",
+    [
+     "R11"
+    ],
+    "prose"
+   ],
+   [
+    "2017_rfe-antibioprophylaxie-in-surgery-and-interventional-medicine_643bc8__c0146_1be1c30f",
+    [
+     "R12"
+    ],
+    "prose"
+   ],
+   [
+    "2017_rfe-antibioprophylaxie-in-surgery-and-interventional-medicine_643bc8__c0166_3f76a31f",
+    [
+     "R13"
+    ],
+    "prose"
+   ],
+   [
+    "2017_rfe-antibioprophylaxie-in-surgery-and-interventional-medicine_643bc8__c0167_35133cc5",
+    [
+     "R14"
+    ],
+    "prose"
+   ],
+   [
+    "2017_rfe-antibioprophylaxie-in-surgery-and-interventional-medicine_643bc8__c0226_491b1497",
+    [
+     "R15",
+     "R16"
+    ],
+    "prose"
+   ],
+   [
+    "2017_rfe-antibioprophylaxie-in-surgery-and-interventional-medicine_643bc8__c0227_b55ef619",
+    [
+     "R17"
+    ],
+    "prose"
+   ],
+   [
+    "2017_rfe-antibioprophylaxie-in-surgery-and-interventional-medicine_643bc8__c0228_5b392149",
+    [
+     "R19"
+    ],
+    "prose"
+   ],
+   [
+    "2017_Antibioprophylaxie-version-2017-CRC_CA_MODIF_ecc6c7__c0009_4d9c4785",
+    [
+     "R1"
+    ],
+    "prose"
+   ],
+   [
+    "2017_Antibioprophylaxie-version-2017-CRC_CA_MODIF_ecc6c7__c0011_120116be",
+    [
+     "R2"
+    ],
+    "prose"
+   ],
+   [
+    "2017_Antibioprophylaxie-version-2017-CRC_CA_MODIF_ecc6c7__c0022_380a38c0",
+    [
+     "R3"
+    ],
+    "prose"
+   ],
+   [
+    "2017_Antibioprophylaxie-version-2017-CRC_CA_MODIF_ecc6c7__c0027_fbd966bf",
+    [
+     "R4"
+    ],
+    "prose"
+   ]
+  ],
+  "no_grade": [
+   [
+    "2017_rfe-antibioprophylaxie-in-surgery-and-interventional-medicine_643bc8__c0075_37c02737",
+    "R6"
+   ],
+   [
+    "2017_rfe-antibioprophylaxie-in-surgery-and-interventional-medicine_643bc8__c0091_3fae71da",
+    "R7"
+   ],
+   [
+    "2017_rfe-antibioprophylaxie-in-surgery-and-interventional-medicine_643bc8__c0092_dd1420ab",
+    "R8"
+   ],
+   [
+    "2017_rfe-antibioprophylaxie-in-surgery-and-interventional-medicine_643bc8__c0093_39081965",
+    "R9"
+   ],
+   [
+    "2017_rfe-antibioprophylaxie-in-surgery-and-interventional-medicine_643bc8__c0144_61788211",
+    "R10"
+   ],
+   [
+    "2017_rfe-antibioprophylaxie-in-surgery-and-interventional-medicine_643bc8__c0145_f6aa9470",
+    "R11"
+   ],
+   [
+    "2017_rfe-antibioprophylaxie-in-surgery-and-interventional-medicine_643bc8__c0146_1be1c30f",
+    "R12"
+   ],
+   [
+    "2017_rfe-antibioprophylaxie-in-surgery-and-interventional-medicine_643bc8__c0166_3f76a31f",
+    "R13"
+   ],
+   [
+    "2017_rfe-antibioprophylaxie-in-surgery-and-interventional-medicine_643bc8__c0167_35133cc5",
+    "R14"
+   ],
+   [
+    "2017_rfe-antibioprophylaxie-in-surgery-and-interventional-medicine_643bc8__c0226_491b1497",
+    "R15"
+   ],
+   [
+    "2017_rfe-antibioprophylaxie-in-surgery-and-interventional-medicine_643bc8__c0226_491b1497",
+    "R16"
+   ],
+   [
+    "2017_rfe-antibioprophylaxie-in-surgery-and-interventional-medicine_643bc8__c0227_b55ef619",
+    "R17"
+   ],
+   [
+    "2017_rfe-antibioprophylaxie-in-surgery-and-interventional-medicine_643bc8__c0228_5b392149",
+    "R19"
+   ]
+  ],
+  "sibling_stacked": [
+   [
+    "2017_rfe-antibioprophylaxie-in-surgery-and-interventional-medicine_643bc8__c0009_2971ed2d",
+    "2. Methodology > 2.1. General introduction to the GRADE method"
+   ],
+   [
+    "2017_rfe-antibioprophylaxie-in-surgery-and-interventional-medicine_643bc8__c0010_62cdd340",
+    "2. Methodology > 2.1. General introduction to the GRADE method"
+   ],
+   [
+    "2017_rfe-antibioprophylaxie-in-surgery-and-interventional-medicine_643bc8__c0011_ada16e88",
+    "2. Methodology > 2.1. General introduction to the GRADE method"
+   ],
+   [
+    "2017_rfe-antibioprophylaxie-in-surgery-and-interventional-medicine_643bc8__c0013_37373f3a",
+    "3. Recommendations fields > 4. Question 1: Which Altemeier classes of surgeries must have an antibiotic prophylaxis?"
+   ],
+   [
+    "2017_rfe-antibioprophylaxie-in-surgery-and-interventional-medicine_643bc8__c0014_f45b9ccb",
+    "3. Recommendations fields > 4. Question 1: Which Altemeier classes of surgeries must have an antibiotic prophylaxis? > 4"
+   ],
+   [
+    "2017_rfe-antibioprophylaxie-in-surgery-and-interventional-medicine_643bc8__c0015_18c876ae",
+    "3. Recommendations fields > 5. Question 2: What are the principles of choice of antibiotics used?"
+   ],
+   [
+    "2017_rfe-antibioprophylaxie-in-surgery-and-interventional-medicine_643bc8__c0016_4632490c",
+    "3. Recommendations fields > 5. Question 2: What are the principles of choice of antibiotics used? > 5.1. Rationale"
+   ],
+   [
+    "2017_rfe-antibioprophylaxie-in-surgery-and-interventional-medicine_643bc8__c0017_43d1010f",
+    "3. Recommendations fields > 5. Question 2: What are the principles of choice of antibiotics used? > 5.1. Rationale"
+   ],
+   [
+    "2017_rfe-antibioprophylaxie-in-surgery-and-interventional-medicine_643bc8__c0018_8338a707",
+    "3. Recommendations fields > 5. Question 2: What are the principles of choice of antibiotics used? > 5.1. Rationale"
+   ],
+   [
+    "2017_rfe-antibioprophylaxie-in-surgery-and-interventional-medicine_643bc8__c0019_e01e141b",
+    "3. Recommendations fields > 5. Question 2: What are the principles of choice of antibiotics used? > 5.1. Rationale"
+   ],
+   [
+    "2017_rfe-antibioprophylaxie-in-surgery-and-interventional-medicine_643bc8__c0020_e804539f",
+    "3. Recommendations fields > 5. Question 2: What are the principles of choice of antibiotics used? > 5.1. Rationale"
+   ],
+   [
+    "2017_rfe-antibioprophylaxie-in-surgery-and-interventional-medicine_643bc8__c0021_ba9ef226",
+    "3. Recommendations fields > 5. Question 2: What are the principles of choice of antibiotics used? > 5.1. Rationale"
+   ],
+   [
+    "2017_rfe-antibioprophylaxie-in-surgery-and-interventional-medicine_643bc8__c0023_8959a72c",
+    "6. Question 3: What is the time of prescribing? > 6.1. Rationale"
+   ],
+   [
+    "2017_rfe-antibioprophylaxie-in-surgery-and-interventional-medicine_643bc8__c0025_dec64b27",
+    "7. Question 4: What is the duration of the prescription? > 7.1. Rationale"
+   ],
+   [
+    "2017_rfe-antibioprophylaxie-in-surgery-and-interventional-medicine_643bc8__c0026_2dd0c0f8",
+    "7. Question 4: What is the duration of the prescription? > 7.1. Rationale > Not to be forgotten"
+   ],
+   [
+    "2017_rfe-antibioprophylaxie-in-surgery-and-interventional-medicine_643bc8__c0027_1b1f78b9",
+    "7. Question 4: What is the duration of the prescription? > 7.1. Rationale > Not to be forgotten"
+   ],
+   [
+    "2017_rfe-antibioprophylaxie-in-surgery-and-interventional-medicine_643bc8__c0028_c4131095",
+    "7. Question 4: What is the duration of the prescription? > 7.1. Rationale > Important note for prescribers"
+   ],
+   [
+    "2017_rfe-antibioprophylaxie-in-surgery-and-interventional-medicine_643bc8__c0029_556facd7",
+    "7. Question 4: What is the duration of the prescription? > 7.2. Rationale"
+   ],
+   [
+    "2017_rfe-antibioprophylaxie-in-surgery-and-interventional-medicine_643bc8__c0030_67288c5e",
+    "7. Question 4: What is the duration of the prescription? > 7.2. Rationale"
+   ],
+   [
+    "2017_rfe-antibioprophylaxie-in-surgery-and-interventional-medicine_643bc8__c0031_0643c53e",
+    "7. Question 4: What is the duration of the prescription? > 7.2. Rationale"
+   ],
+   [
+    "2017_rfe-antibioprophylaxie-in-surgery-and-interventional-medicine_643bc8__c0032_ace71959",
+    "7. Question 4: What is the duration of the prescription? > 7.2. Rationale"
+   ],
+   [
+    "2017_rfe-antibioprophylaxie-in-surgery-and-interventional-medicine_643bc8__c0033_dab97cbe",
+    "7. Question 4: What is the duration of the prescription? > 7.2. Rationale"
+   ],
+   [
+    "2017_rfe-antibioprophylaxie-in-surgery-and-interventional-medicine_643bc8__c0034_f00b9b8c",
+    "7. Question 4: What is the duration of the prescription? > 7.2. Rationale"
+   ],
+   [
+    "2017_rfe-antibioprophylaxie-in-surgery-and-interventional-medicine_643bc8__c0035_82aec0f9",
+    "7. Question 4: What is the duration of the prescription? > 7.2. Rationale"
+   ],
+   [
+    "2017_rfe-antibioprophylaxie-in-surgery-and-interventional-medicine_643bc8__c0036_b2bf7730",
+    "7. Question 4: What is the duration of the prescription? > 7.2. Rationale"
+   ]
+  ]
+ },
+ "E_anglais": {
+  "sibling_stacked": [
+   [
+    "2021_Tests_20viscoelastiques_202018_ba60e3__c0010_32725369",
+    "3. Principles of viscoelastic tests and analytical performances > 3.1. Main principles"
+   ],
+   [
+    "2021_Tests_20viscoelastiques_202018_ba60e3__c0011_d81a3304",
+    "3. Principles of viscoelastic tests and analytical performances > 3.1. Main principles"
+   ],
+   [
+    "2021_Tests_20viscoelastiques_202018_ba60e3__c0012_515fce1b",
+    "3. Principles of viscoelastic tests and analytical performances > 3.1. Main principles"
+   ],
+   [
+    "2021_Tests_20viscoelastiques_202018_ba60e3__c0013_07d0d595",
+    "3. Principles of viscoelastic tests and analytical performances > 3.1. Main principles"
+   ],
+   [
+    "2021_Tests_20viscoelastiques_202018_ba60e3__c0014_531e499a",
+    "3. Principles of viscoelastic tests and analytical performances > 3.2. Thromboelastography (TEG<sup>®</sup>)"
+   ],
+   [
+    "2021_Tests_20viscoelastiques_202018_ba60e3__c0015_4cf0fa4a",
+    "3. Principles of viscoelastic tests and analytical performances > 3.2. Thromboelastography (TEG<sup>®</sup>)"
+   ],
+   [
+    "2021_Tests_20viscoelastiques_202018_ba60e3__c0016_652cec89",
+    "3. Principles of viscoelastic tests and analytical performances > 3.2. Thromboelastography (TEG<sup>®</sup>)"
+   ],
+   [
+    "2021_Tests_20viscoelastiques_202018_ba60e3__c0017_4c65f2e1",
+    "3. Principles of viscoelastic tests and analytical performances > 3.2. Thromboelastography (TEG<sup>®</sup>)"
+   ],
+   [
+    "2021_Tests_20viscoelastiques_202018_ba60e3__c0018_eed7348d",
+    "3. Principles of viscoelastic tests and analytical performances > 3.3. Thromboelastometry (ROTEM<sup>®</sup>)"
+   ],
+   [
+    "2021_Tests_20viscoelastiques_202018_ba60e3__c0019_a4982691",
+    "3. Principles of viscoelastic tests and analytical performances > 3.3. Thromboelastometry (ROTEM<sup>®</sup>)"
+   ],
+   [
+    "2021_Tests_20viscoelastiques_202018_ba60e3__c0020_f36ab347",
+    "3. Principles of viscoelastic tests and analytical performances > 3.4. Comparison between the two techniques and routine"
+   ],
+   [
+    "2021_Tests_20viscoelastiques_202018_ba60e3__c0021_992f1b61",
+    "3. Principles of viscoelastic tests and analytical performances > 3.4. Comparison between the two techniques and routine"
+   ],
+   [
+    "2021_Tests_20viscoelastiques_202018_ba60e3__c0022_f96b7a16",
+    "3. Principles of viscoelastic tests and analytical performances > 3.4. Comparison between the two techniques and routine"
+   ],
+   [
+    "2021_Tests_20viscoelastiques_202018_ba60e3__c0023_4cfa9f37",
+    "3. Principles of viscoelastic tests and analytical performances > 3.5. Technical variability"
+   ],
+   [
+    "2021_Tests_20viscoelastiques_202018_ba60e3__c0024_5dc48c69",
+    "3. Principles of viscoelastic tests and analytical performances > 3.5. Technical variability"
+   ],
+   [
+    "2018_ACCPM-335_e0976b__c0023_fee440f9",
+    "3. Duration of APA discontinuation and substitutes > 3.1. Aspirin"
+   ],
+   [
+    "2018_ACCPM-335_e0976b__c0024_f5a48527",
+    "3. Duration of APA discontinuation and substitutes > 3.1. Aspirin"
+   ],
+   [
+    "2018_ACCPM-335_e0976b__c0025_dedcdf91",
+    "3. Duration of APA discontinuation and substitutes > 3.1. Aspirin"
+   ],
+   [
+    "2018_ACCPM-335_e0976b__c0026_c8ab8acd",
+    "3. Duration of APA discontinuation and substitutes > 3.1. Aspirin"
+   ],
+   [
+    "2018_ACCPM-335_e0976b__c0027_79cc8cfe",
+    "3. Duration of APA discontinuation and substitutes > 3.2. P2Y<sub>12</sub> inhibitors"
+   ],
+   [
+    "2018_ACCPM-335_e0976b__c0028_547fd24a",
+    "3. Duration of APA discontinuation and substitutes > 3.3. Usefulness of platelet functional tests to adjust the duration"
+   ],
+   [
+    "2018_ACCPM-335_e0976b__c0029_87a2b19e",
+    "3. Duration of APA discontinuation and substitutes > 3.3. Usefulness of platelet functional tests to adjust the duration"
+   ],
+   [
+    "2018_ACCPM-335_e0976b__c0030_80d0856d",
+    "3. Duration of APA discontinuation and substitutes > 3.3. Usefulness of platelet functional tests to adjust the duration"
+   ],
+   [
+    "2018_ACCPM-335_e0976b__c0031_511564f5",
+    "3. Duration of APA discontinuation and substitutes > 3.3. Usefulness of platelet functional tests to adjust the duration"
+   ],
+   [
+    "2018_ACCPM-335_e0976b__c0032_1d78cfa3",
+    "3. Duration of APA discontinuation and substitutes > 3.3. Usefulness of platelet functional tests to adjust the duration"
+   ]
+  ],
+  "grade_on_non_statement": [
+   [
+    "2019_rfe-vertebro-medullaire-fiche-synthese_e042e3__c0002_667e4015",
+    "",
+    [
+     "Avis d'experts"
+    ]
+   ],
+   [
+    "2019_rfe-vertebro-medullaire-fiche-synthese_e042e3__c0004_6d579853",
+    "",
+    [
+     "Avis d'Experts"
+    ]
+   ],
+   [
+    "2017_RFE-Hospital-acquired-pneumonia-in-ICU_e091db__c0035_e566939e",
+    "5. Method > 5.3. Synthesis of results",
+    [
+     "GRADE 1",
+     "GRADE 2"
+    ]
+   ],
+   [
+    "2017_RFE-Hospital-acquired-pneumonia-in-ICU_e091db__c0041_8635449a",
+    "5. Method > 5.3. Synthesis of results > R1.3 – Within a standardised multimodal ",
+    [
+     "GRADE 2"
+    ]
+   ],
+   [
+    "2017_RFE-Hospital-acquired-pneumonia-in-ICU_e091db__c0074_b5ee8640",
+    "Second area, DIAGNOSIS: > R3.4 – We suggest reducing the spectrum and preferring",
+    [
+     "GRADE 2"
+    ]
+   ],
+   [
+    "2017_rfe-early-management-of-severe-pelvic-injury_9c8ee2__c0006_56009716",
+    "",
+    [
+     "Grade 1",
+     "Grade 2"
+    ]
+   ],
+   [
+    "2017_rfe-early-management-of-severe-pelvic-injury_9c8ee2__c0013_95dee884",
+    "2. Material and methods",
+    [
+     "Grade 1",
+     "Grade 2",
+     "GRADE1"
+    ]
+   ],
+   [
+    "2017_rfe-early-management-of-severe-pelvic-injury_9c8ee2__c0047_91e9ee5d",
+    "2. Material and methods > 3. Prehospital management > 4.9. Should surgical pelvi",
+    [
+     "Grade 2"
+    ]
+   ],
+   [
+    "2016_RFE-Management-of-severe-traumatic-brain-injury_1b54e3__c0020_2ec86252",
+    "7. Methodology",
+    [
+     "Grade 1",
+     "Grade 2"
+    ]
+   ],
+   [
+    "2016_RFE-Management-of-severe-traumatic-brain-injury_1b54e3__c0033_14b05087",
+    "9. What are the modalities of prehospital management for severe TBI patients?",
+    [
+     "Grade 1"
+    ]
+   ],
+   [
+    "2016_RFE-Management-of-severe-traumatic-brain-injury_1b54e3__c0051_82b76394",
+    "11. Indications for neurosurgical interventions (cerebral monitoring excluded) >",
+    [
+     "Grade 2"
+    ]
+   ],
+   [
+    "2016_RFE-Management-of-severe-traumatic-brain-injury_1b54e3__c0071_5b72da83",
+    "17. Biological homeostasis (osmolarity, serum glucose, adrenal axis)",
+    [
+     "Grade 2"
+    ]
+   ],
+   [
+    "2017_Tracheotomy-in-the-ICU-ACCPM_491ddc__c0006_fc1e4340",
+    "",
+    [
+     "Grade 1",
+     "Grade 2"
+    ]
+   ],
+   [
+    "2017_Tracheotomy-in-the-ICU-ACCPM_491ddc__c0012_59e3f58f",
+    "2. Methods",
+    [
+     "GRADE 1"
+    ]
+   ],
+   [
+    "2017_Tracheotomy-in-the-ICU-ACCPM_491ddc__c0015_295de08b",
+    "2. Methods > 3. Topics of the guidelines: summary of the results",
+    [
+     "Grade 1",
+     "Grade 2"
+    ]
+   ],
+   [
+    "2017_Tracheotomy-in-the-ICU-ACCPM_491ddc__c0033_d81ea8d8",
+    "6. Conditions necessary for tracheotomy in intensive care",
+    [
+     "GRADE 2"
+    ]
+   ],
+   [
+    "2017_Tracheotomy-in-the-ICU-ACCPM_491ddc__c0060_68f43e29",
+    "8. Tracheotomy decannulation",
+    [
+     "GRADE 2"
+    ]
+   ],
+   [
+    "2016_RFE-Guidelines-on-smoking-management-during-the-perioperative-pe_2ae3ce__c0015_e89f9e24",
+    "3. Preamble > 3.2. GRADE<sup>®</sup> methodology",
+    [
+     "GRADE 1",
+     "GRADE 2"
+    ]
+   ],
+   [
+    "2015_RFE-IRA-anglais_d71652__c0026_5ce1e842",
+    "2. Methodology",
+    [
+     "Grade 1",
+     "Grade 2"
+    ]
+   ],
+   [
+    "2016_RFE-Intubation-and-extubation-of-the-ICU-patient_a16473__c0014_b6845cef",
+    "2. Material and methods",
+    [
+     "Grade 1",
+     "Grade 2"
+    ]
+   ],
+   [
+    "2016_RFE-Intubation-and-extubation-of-the-ICU-patient_a16473__c0015_dc725503",
+    "2. Material and methods",
+    [
+     "Grade 1",
+     "Grade 2"
+    ]
+   ],
+   [
+    "2016_RFE-Targeted-temperature-management-in-the-ICU-Guidelines-from-a_85b636__c0007_5dc13885",
+    "Targeted temperature management in the ICU: Guidelines from a French expert pane",
+    [
+     "Grade 1",
+     "Grade 2"
+    ]
+   ],
+   [
+    "2016_RFE-Targeted-temperature-management-in-the-ICU-Guidelines-from-a_85b636__c0016_3d97cffb",
+    "2. Methods > 3. Results > 3.1. Areas of recommendations",
+    [
+     "Grade 1",
+     "Grade 2"
+    ]
+   ],
+   [
+    "2016_RFE-ACCPM-Eye-protection-in-anaesthesia-and-intensive-care_fdf503__c0015_9d793d7f",
+    "2. Working group",
+    [
+     "GRADE 1",
+     "GRADE 2"
+    ]
+   ],
+   [
+    "2016_RFE-ACCPM-Eye-protection-in-anaesthesia-and-intensive-care_fdf503__c0017_535fe530",
+    "2. Working group",
+    [
+     "Grade 1",
+     "Grade 2"
+    ]
+   ]
+  ],
+  "footnote_reco": [
+   [
+    "2018_management-of-antiplatelet-therapy-for-non-elective-invasive-pro_5c71cb__c0037_c2eec2a6",
+    "Introduction > Role of platelet function tests"
+   ],
+   [
+    "2017_RFE-Hospital-acquired-pneumonia-in-ICU_e091db__c0070_38e579df",
+    "Second area, DIAGNOSIS: > R3.4 – We suggest reducing the spe"
+   ]
+  ],
+  "stmt_not_box": [
+   [
+    "2017_RFE-Hospital-acquired-pneumonia-in-ICU_e091db__c0037_394dc57d",
+    [
+     "R1.2"
+    ],
+    "prose"
+   ],
+   [
+    "2017_RFE-Hospital-acquired-pneumonia-in-ICU_e091db__c0042_cba76ec4",
+    [
+     "R1.4"
+    ],
+    "prose"
+   ],
+   [
+    "2017_RFE-Hospital-acquired-pneumonia-in-ICU_e091db__c0058_364e82e3",
+    [
+     "R3.1"
+    ],
+    "prose"
+   ],
+   [
+    "2017_RFE-Hospital-acquired-pneumonia-in-ICU_e091db__c0060_82c6e97c",
+    [
+     "R3.2"
+    ],
+    "prose"
+   ],
+   [
+    "2017_RFE-Hospital-acquired-pneumonia-in-ICU_e091db__c0070_38e579df",
+    [
+     "R3.5"
+    ],
+    "callout_footnote"
+   ],
+   [
+    "2017_rfe-early-management-of-severe-pelvic-injury_9c8ee2__c0014_11bee54a",
+    [
+     "R1"
+    ],
+    "prose"
+   ],
+   [
+    "2017_rfe-early-management-of-severe-pelvic-injury_9c8ee2__c0015_41556bd7",
+    [
+     "R2"
+    ],
+    "prose"
+   ],
+   [
+    "2017_rfe-early-management-of-severe-pelvic-injury_9c8ee2__c0017_c2586726",
+    [
+     "R3"
+    ],
+    "prose"
+   ],
+   [
+    "2017_rfe-early-management-of-severe-pelvic-injury_9c8ee2__c0019_a09e9d7e",
+    [
+     "R4"
+    ],
+    "prose"
+   ],
+   [
+    "2017_rfe-early-management-of-severe-pelvic-injury_9c8ee2__c0022_14fdf793",
+    [
+     "R5"
+    ],
+    "prose"
+   ],
+   [
+    "2017_rfe-early-management-of-severe-pelvic-injury_9c8ee2__c0027_e71e3a0e",
+    [
+     "R6"
+    ],
+    "prose"
+   ],
+   [
+    "2017_rfe-early-management-of-severe-pelvic-injury_9c8ee2__c0030_c6924532",
+    [
+     "R7"
+    ],
+    "prose"
+   ],
+   [
+    "2017_rfe-early-management-of-severe-pelvic-injury_9c8ee2__c0032_45466cc3",
+    [
+     "R8"
+    ],
+    "prose"
+   ],
+   [
+    "2017_rfe-early-management-of-severe-pelvic-injury_9c8ee2__c0037_741db748",
+    [
+     "R9"
+    ],
+    "prose"
+   ],
+   [
+    "2017_rfe-early-management-of-severe-pelvic-injury_9c8ee2__c0038_c7370ffc",
+    [
+     "R10"
+    ],
+    "prose"
+   ],
+   [
+    "2017_rfe-early-management-of-severe-pelvic-injury_9c8ee2__c0040_490ad91b",
+    [
+     "R11"
+    ],
+    "prose"
+   ],
+   [
+    "2017_rfe-early-management-of-severe-pelvic-injury_9c8ee2__c0044_b2ee8b79",
+    [
+     "R12"
+    ],
+    "prose"
+   ],
+   [
+    "2017_rfe-early-management-of-severe-pelvic-injury_9c8ee2__c0046_5582f71f",
+    [
+     "R13"
+    ],
+    "prose"
+   ],
+   [
+    "2017_rfe-early-management-of-severe-pelvic-injury_9c8ee2__c0048_ebc3339a",
+    [
+     "R14"
+    ],
+    "prose"
+   ],
+   [
+    "2017_rfe-early-management-of-severe-pelvic-injury_9c8ee2__c0051_b9732de8",
+    [
+     "R15"
+    ],
+    "prose"
+   ],
+   [
+    "2016_RFE-Management-of-severe-traumatic-brain-injury_1b54e3__c0044_397e88df",
+    [
+     "R5.1"
+    ],
+    "prose"
+   ],
+   [
+    "2016_RFE-Management-of-severe-traumatic-brain-injury_1b54e3__c0059_50451d61",
+    [
+     "R8.2"
+    ],
+    "prose"
+   ],
+   [
+    "2017_Tracheotomy-in-the-ICU-ACCPM_491ddc__c0016_6a84e909",
+    [
+     "R1.1"
+    ],
+    "prose"
+   ],
+   [
+    "2017_Tracheotomy-in-the-ICU-ACCPM_491ddc__c0017_353712b9",
+    [
+     "R1.2"
+    ],
+    "prose"
+   ],
+   [
+    "2017_Tracheotomy-in-the-ICU-ACCPM_491ddc__c0025_94b5ba89",
+    [
+     "R2.2"
+    ],
+    "prose"
+   ]
+  ],
+  "no_grade": [
+   [
+    "2017_RFE-Hospital-acquired-pneumonia-in-ICU_e091db__c0037_394dc57d",
+    "R1.2"
+   ],
+   [
+    "2017_RFE-Hospital-acquired-pneumonia-in-ICU_e091db__c0042_cba76ec4",
+    "R1.4"
+   ],
+   [
+    "2017_RFE-Hospital-acquired-pneumonia-in-ICU_e091db__c0058_364e82e3",
+    "R3.1"
+   ],
+   [
+    "2017_RFE-Hospital-acquired-pneumonia-in-ICU_e091db__c0060_82c6e97c",
+    "R3.2"
+   ],
+   [
+    "2017_RFE-Hospital-acquired-pneumonia-in-ICU_e091db__c0070_38e579df",
+    "R3.5"
+   ],
+   [
+    "2016_RFE-Management-of-severe-traumatic-brain-injury_1b54e3__c0044_397e88df",
+    "R5.1"
+   ],
+   [
+    "2016_RFE-Management-of-severe-traumatic-brain-injury_1b54e3__c0047_8b84895e",
+    "R6.4"
+   ],
+   [
+    "2016_RFE-Management-of-severe-traumatic-brain-injury_1b54e3__c0059_50451d61",
+    "R8.2"
+   ],
+   [
+    "2016_RFE-Management-of-severe-traumatic-brain-injury_1b54e3__c0073_64a347f9",
+    "R11.3"
+   ],
+   [
+    "2017_Tracheotomy-in-the-ICU-ACCPM_491ddc__c0016_6a84e909",
+    "R1.1"
+   ],
+   [
+    "2017_Tracheotomy-in-the-ICU-ACCPM_491ddc__c0017_353712b9",
+    "R1.2"
+   ],
+   [
+    "2017_Tracheotomy-in-the-ICU-ACCPM_491ddc__c0022_3efaa73c",
+    "R1.4"
+   ],
+   [
+    "2017_Tracheotomy-in-the-ICU-ACCPM_491ddc__c0025_94b5ba89",
+    "R2.2"
+   ],
+   [
+    "2017_Tracheotomy-in-the-ICU-ACCPM_491ddc__c0038_c2061fb6",
+    "R3.4"
+   ],
+   [
+    "2017_Tracheotomy-in-the-ICU-ACCPM_491ddc__c0040_09fd86d8",
+    "R3.5"
+   ],
+   [
+    "2017_Tracheotomy-in-the-ICU-ACCPM_491ddc__c0041_19d8e63e",
+    "R4.1"
+   ],
+   [
+    "2017_Tracheotomy-in-the-ICU-ACCPM_491ddc__c0057_a9b5e5b7",
+    "R5.1"
+   ],
+   [
+    "2015_RFE-IRA-anglais_d71652__c0027_4e3828f6",
+    "R1.1"
+   ],
+   [
+    "2015_RFE-IRA-anglais_d71652__c0035_168bd186",
+    "R1.1"
+   ],
+   [
+    "2015_RFE-IRA-anglais_d71652__c0036_49dbabe3",
+    "R1.2"
+   ],
+   [
+    "2015_RFE-IRA-anglais_d71652__c0073_e55a154b",
+    "R3.1"
+   ],
+   [
+    "2015_RFE-IRA-anglais_d71652__c0078_77e7131b",
+    "R3.2"
+   ],
+   [
+    "2015_RFE-IRA-anglais_d71652__c0093_3464f1d5",
+    "R4.10"
+   ],
+   [
+    "2015_RFE-IRA-anglais_d71652__c0098_156d83eb",
+    "R5.4"
+   ],
+   [
+    "2016_RFE-Intubation-and-extubation-of-the-ICU-patient_a16473__c0043_473ebdf0",
+    "R4.2"
+   ]
+  ],
+  "unflagged_biblio": [
+   [
+    "2017_RFE-Hospital-acquired-pneumonia-in-ICU_e091db__c0052_1247b846",
+    "Second area, DIAGNOSIS: > What methods to diagnose HAP shoul",
+    4
+   ],
+   [
+    "2017_RFE-Hospital-acquired-pneumonia-in-ICU_e091db__c0119_cbe89f66",
+    "Second area, DIAGNOSIS: > Protocol 3: suggested diagnostic p",
+    7
+   ],
+   [
+    "2017_RFE-Hospital-acquired-pneumonia-in-ICU_e091db__c0120_3ad8a59e",
+    "Second area, DIAGNOSIS: > Protocol 3: suggested diagnostic p",
+    9
+   ],
+   [
+    "2017_RFE-Hospital-acquired-pneumonia-in-ICU_e091db__c0121_aeee0747",
+    "Second area, DIAGNOSIS: > Protocol 3: suggested diagnostic p",
+    12
+   ],
+   [
+    "2017_RFE-Hospital-acquired-pneumonia-in-ICU_e091db__c0122_63eab86f",
+    "Second area, DIAGNOSIS: > Protocol 3: suggested diagnostic p",
+    13
+   ],
+   [
+    "2017_RFE-Hospital-acquired-pneumonia-in-ICU_e091db__c0123_e16b2694",
+    "Second area, DIAGNOSIS: > Protocol 3: suggested diagnostic p",
+    9
+   ],
+   [
+    "2017_RFE-Hospital-acquired-pneumonia-in-ICU_e091db__c0124_838a55c6",
+    "Second area, DIAGNOSIS: > Protocol 3: suggested diagnostic p",
+    12
+   ],
+   [
+    "2017_RFE-Hospital-acquired-pneumonia-in-ICU_e091db__c0125_0e3bb368",
+    "Second area, DIAGNOSIS: > Protocol 3: suggested diagnostic p",
+    9
+   ],
+   [
+    "2017_RFE-Hospital-acquired-pneumonia-in-ICU_e091db__c0126_2afa5dd2",
+    "Second area, DIAGNOSIS: > Protocol 3: suggested diagnostic p",
+    13
+   ],
+   [
+    "2017_RFE-Hospital-acquired-pneumonia-in-ICU_e091db__c0127_7ab10ef1",
+    "Second area, DIAGNOSIS: > Protocol 3: suggested diagnostic p",
+    12
+   ],
+   [
+    "2017_RFE-Hospital-acquired-pneumonia-in-ICU_e091db__c0128_afe41dd6",
+    "Second area, DIAGNOSIS: > Protocol 3: suggested diagnostic p",
+    6
+   ],
+   [
+    "2017_RFE-Hospital-acquired-pneumonia-in-ICU_e091db__c0129_d2cbc899",
+    "Second area, DIAGNOSIS: > Protocol 3: suggested diagnostic p",
+    8
+   ],
+   [
+    "2017_RFE-Hospital-acquired-pneumonia-in-ICU_e091db__c0130_52f4a280",
+    "Second area, DIAGNOSIS: > Protocol 3: suggested diagnostic p",
+    7
+   ],
+   [
+    "2017_RFE-Hospital-acquired-pneumonia-in-ICU_e091db__c0131_e80ee4ed",
+    "Second area, DIAGNOSIS: > Protocol 3: suggested diagnostic p",
+    8
+   ],
+   [
+    "2017_RFE-Hospital-acquired-pneumonia-in-ICU_e091db__c0132_f7b68610",
+    "Second area, DIAGNOSIS: > Protocol 3: suggested diagnostic p",
+    11
+   ],
+   [
+    "2017_RFE-Hospital-acquired-pneumonia-in-ICU_e091db__c0133_c6a67375",
+    "Second area, DIAGNOSIS: > Protocol 3: suggested diagnostic p",
+    12
+   ],
+   [
+    "2017_RFE-Hospital-acquired-pneumonia-in-ICU_e091db__c0134_ab28fb59",
+    "Second area, DIAGNOSIS: > Protocol 3: suggested diagnostic p",
+    9
+   ],
+   [
+    "2017_RFE-Hospital-acquired-pneumonia-in-ICU_e091db__c0135_b80200d9",
+    "Second area, DIAGNOSIS: > Protocol 3: suggested diagnostic p",
+    11
+   ],
+   [
+    "2017_RFE-Hospital-acquired-pneumonia-in-ICU_e091db__c0136_9dff9afd",
+    "Second area, DIAGNOSIS: > Protocol 3: suggested diagnostic p",
+    11
+   ],
+   [
+    "2017_RFE-Hospital-acquired-pneumonia-in-ICU_e091db__c0137_2347bac7",
+    "Second area, DIAGNOSIS: > Protocol 3: suggested diagnostic p",
+    14
+   ],
+   [
+    "2017_RFE-Hospital-acquired-pneumonia-in-ICU_e091db__c0138_e02da4d8",
+    "Second area, DIAGNOSIS: > Protocol 3: suggested diagnostic p",
+    12
+   ],
+   [
+    "2017_RFE-Hospital-acquired-pneumonia-in-ICU_e091db__c0139_fd68c030",
+    "Second area, DIAGNOSIS: > Protocol 3: suggested diagnostic p",
+    10
+   ],
+   [
+    "2017_RFE-Hospital-acquired-pneumonia-in-ICU_e091db__c0140_a826e0a3",
+    "Second area, DIAGNOSIS: > Protocol 3: suggested diagnostic p",
+    11
+   ],
+   [
+    "2017_RFE-Hospital-acquired-pneumonia-in-ICU_e091db__c0141_ebad62da",
+    "Second area, DIAGNOSIS: > Protocol 3: suggested diagnostic p",
+    9
+   ],
+   [
+    "2017_RFE-Hospital-acquired-pneumonia-in-ICU_e091db__c0142_35175b71",
+    "Second area, DIAGNOSIS: > Protocol 3: suggested diagnostic p",
+    9
+   ]
+  ],
+  "id_not_captured": [
+   [
+    "2017_rfe-early-management-of-severe-pelvic-injury_9c8ee2__c0014_11bee54a",
+    "R1",
+    "prose"
+   ],
+   [
+    "2017_rfe-early-management-of-severe-pelvic-injury_9c8ee2__c0015_41556bd7",
+    "R2",
+    "prose"
+   ],
+   [
+    "2017_rfe-early-management-of-severe-pelvic-injury_9c8ee2__c0017_c2586726",
+    "R3",
+    "prose"
+   ],
+   [
+    "2017_rfe-early-management-of-severe-pelvic-injury_9c8ee2__c0019_a09e9d7e",
+    "R4",
+    "prose"
+   ],
+   [
+    "2017_rfe-early-management-of-severe-pelvic-injury_9c8ee2__c0022_14fdf793",
+    "R5",
+    "prose"
+   ],
+   [
+    "2017_rfe-early-management-of-severe-pelvic-injury_9c8ee2__c0027_e71e3a0e",
+    "R6",
+    "prose"
+   ],
+   [
+    "2017_rfe-early-management-of-severe-pelvic-injury_9c8ee2__c0030_c6924532",
+    "R7",
+    "prose"
+   ],
+   [
+    "2017_rfe-early-management-of-severe-pelvic-injury_9c8ee2__c0032_45466cc3",
+    "R8",
+    "prose"
+   ],
+   [
+    "2017_rfe-early-management-of-severe-pelvic-injury_9c8ee2__c0037_741db748",
+    "R9",
+    "prose"
+   ],
+   [
+    "2017_rfe-early-management-of-severe-pelvic-injury_9c8ee2__c0038_c7370ffc",
+    "R10",
+    "prose"
+   ],
+   [
+    "2017_rfe-early-management-of-severe-pelvic-injury_9c8ee2__c0040_490ad91b",
+    "R11",
+    "prose"
+   ],
+   [
+    "2017_rfe-early-management-of-severe-pelvic-injury_9c8ee2__c0044_b2ee8b79",
+    "R12",
+    "prose"
+   ],
+   [
+    "2017_rfe-early-management-of-severe-pelvic-injury_9c8ee2__c0046_5582f71f",
+    "R13",
+    "prose"
+   ],
+   [
+    "2017_rfe-early-management-of-severe-pelvic-injury_9c8ee2__c0048_ebc3339a",
+    "R14",
+    "prose"
+   ],
+   [
+    "2017_rfe-early-management-of-severe-pelvic-injury_9c8ee2__c0051_b9732de8",
+    "R15",
+    "prose"
+   ],
+   [
+    "2016_RFE-Intubation-and-extubation-of-the-ICU-patient_a16473__c0025_cebe2816",
+    "R 2.1",
+    "prose"
+   ],
+   [
+    "2016_RFE-Intubation-and-extubation-of-the-ICU-patient_a16473__c0025_cebe2816",
+    "R 2.2",
+    "prose"
+   ],
+   [
+    "2016_RFE-Intubation-and-extubation-of-the-ICU-patient_a16473__c0038_05170bd0",
+    "R 3.1",
+    "recommendation_box"
+   ],
+   [
+    "2016_RFE-Intubation-and-extubation-of-the-ICU-patient_a16473__c0085_03c83399",
+    "R 3.1",
+    "recommendation_box"
+   ],
+   [
+    "2016_RFE-Intubation-and-extubation-of-the-ICU-patient_a16473__c0094_be0abd1e",
+    "R7",
+    "prose"
+   ],
+   [
+    "2015_RFE-Guidelines-for-management-of-intra-abdominal-infections_ad0c77__c0030_4f7b27ba",
+    "R1",
+    "prose"
+   ],
+   [
+    "2015_RFE-Guidelines-for-management-of-intra-abdominal-infections_ad0c77__c0032_8fd9c262",
+    "R2",
+    "prose"
+   ],
+   [
+    "2015_RFE-Guidelines-for-management-of-intra-abdominal-infections_ad0c77__c0033_6e877d3d",
+    "R3",
+    "prose"
+   ],
+   [
+    "2015_RFE-Guidelines-for-management-of-intra-abdominal-infections_ad0c77__c0034_bf438ad8",
+    "R4",
+    "prose"
+   ],
+   [
+    "2015_RFE-Guidelines-for-management-of-intra-abdominal-infections_ad0c77__c0034_bf438ad8",
+    "R5",
+    "prose"
+   ]
+  ],
+  "mixed_grades": [
+   [
+    "2016_RFE-Management-of-severe-traumatic-brain-injury_1b54e3__c0034_52cfd795",
+    [
+     "R3.1",
+     "R3.2"
+    ],
+    [
+     "Grade 1",
+     "Grade 2"
+    ]
+   ],
+   [
+    "2015_RFE-IRA-anglais_d71652__c0079_037f31e9",
+    [
+     "R4.1",
+     "R4.2"
+    ],
+    [
+     "Grade 1",
+     "Grade 2"
+    ]
+   ],
+   [
+    "2015_RFE-IRA-anglais_d71652__c0087_6e8df529",
+    [
+     "R4.4",
+     "R4.5"
+    ],
+    [
+     "Grade 1",
+     "Grade 2"
+    ]
+   ],
+   [
+    "2015_RFE-IRA-anglais_d71652__c0090_c4c36df7",
+    [
+     "R4.7",
+     "R4.8"
+    ],
+    [
+     "Grade 1",
+     "Grade 2"
+    ]
+   ],
+   [
+    "2015_RFE-IRA-anglais_d71652__c0102_8e98cc02",
+    [
+     "R6.1",
+     "R6.2"
+    ],
+    [
+     "Grade 1",
+     "Grade 2"
+    ]
+   ],
+   [
+    "2015_RFE-IRA-anglais_d71652__c0111_a2d6d45d",
+    [
+     "R7.1",
+     "R7.2"
+    ],
+    [
+     "Grade 2",
+     "Grade 1"
+    ]
+   ],
+   [
+    "2015_RFE-IRA-anglais_d71652__c0115_730f0150",
+    [
+     "R8.1",
+     "R8.2",
+     "R8.3"
+    ],
+    [
+     "Grade 1",
+     "Grade 2"
+    ]
+   ],
+   [
+    "2016_RFE-Intubation-and-extubation-of-the-ICU-patient_a16473__c0038_05170bd0",
+    [
+     "R 3.1",
+     "R3.2",
+     "R3.3"
+    ],
+    [
+     "Grade 2",
+     "Grade 1"
+    ]
+   ],
+   [
+    "2016_RFE-Intubation-and-extubation-of-the-ICU-patient_a16473__c0048_cf4606d0",
+    [
+     "R5.1",
+     "R5.2"
+    ],
+    [
+     "Grade 1",
+     "Grade 2"
+    ]
+   ],
+   [
+    "2016_RFE-Intubation-and-extubation-of-the-ICU-patient_a16473__c0052_964b1de9",
+    [
+     "R6.1",
+     "R6.2",
+     "R6.3",
+     "R6.4"
+    ],
+    [
+     "Grade 2",
+     "Grade 1"
+    ]
+   ],
+   [
+    "2016_RFE-Intubation-and-extubation-of-the-ICU-patient_a16473__c0085_03c83399",
+    [
+     "R 3.1",
+     "R3.3"
+    ],
+    [
+     "Grade 2",
+     "Grade 1"
+    ]
+   ]
+  ],
+  "biblio_glued": [
+   [
+    "2016_RFE-Management-of-severe-traumatic-brain-injury_1b54e3__c0050_c26fd44c",
+    [
+     "R7.1"
+    ]
+   ],
+   [
+    "2017_Tracheotomy-in-the-ICU-ACCPM_491ddc__c0059_f0015f80",
+    [
+     "R5.3"
+    ]
+   ],
+   [
+    "2015_RFE-IRA-anglais_d71652__c0086_640db192",
+    [
+     "R4.4"
+    ]
+   ],
+   [
+    "2016_RFE-Targeted-temperature-management-in-the-ICU-Guidelines-from-a_85b636__c0033_7f92a9bc",
+    [
+     "R3.2"
+    ]
+   ],
+   [
+    "2015_RFE-Guidelines-for-management-of-intra-abdominal-infections_ad0c77__c0063_bae751bb",
+    [
+     "R29"
+    ]
+   ],
+   [
+    "2015_RFE-Guidelines-for-management-of-intra-abdominal-infections_ad0c77__c0064_58d5ad56",
+    [
+     "R30"
+    ]
+   ]
+  ],
+  "box_with_argument": [
+   [
+    "2017_Tracheotomy-in-the-ICU-ACCPM_491ddc__c0022_3efaa73c",
+    [
+     "R1.4",
+     "R2.1"
+    ],
+    883
+   ],
+   [
+    "2017_Tracheotomy-in-the-ICU-ACCPM_491ddc__c0057_a9b5e5b7",
+    [
+     "R5.1",
+     "R5.2"
+    ],
+    872
+   ],
+   [
+    "2015_RFE-IRA-anglais_d71652__c0044_e21c40aa",
+    [
+     "R2.1"
+    ],
+    1040
+   ],
+   [
+    "2015_RFE-IRA-anglais_d71652__c0052_ba85533c",
+    [
+     "R2.2"
+    ],
+    573
+   ],
+   [
+    "2015_RFE-IRA-anglais_d71652__c0091_1791b5ff",
+    [
+     "R4.8"
+    ],
+    645
+   ],
+   [
+    "2015_RFE-IRA-anglais_d71652__c0093_3464f1d5",
+    [
+     "R4.9",
+     "R4.10"
+    ],
+    828
+   ],
+   [
+    "2015_RFE-IRA-anglais_d71652__c0095_78690afa",
+    [
+     "R5.2"
+    ],
+    826
+   ],
+   [
+    "2015_RFE-IRA-anglais_d71652__c0102_8e98cc02",
+    [
+     "R6.1",
+     "R6.2"
+    ],
+    687
+   ],
+   [
+    "2015_RFE-IRA-anglais_d71652__c0103_259bbc5e",
+    [
+     "R6.2"
+    ],
+    775
+   ],
+   [
+    "2015_RFE-IRA-anglais_d71652__c0105_0a72089c",
+    [
+     "R6.3"
+    ],
+    878
+   ],
+   [
+    "2015_RFE-IRA-anglais_d71652__c0115_730f0150",
+    [
+     "R8.1",
+     "R8.2"
+    ],
+    582
+   ],
+   [
+    "2016_RFE-Targeted-temperature-management-in-the-ICU-Guidelines-from-a_85b636__c0017_55d76494",
+    [
+     "R1.1"
+    ],
+    574
+   ],
+   [
+    "2016_RFE-Targeted-temperature-management-in-the-ICU-Guidelines-from-a_85b636__c0023_db0f81aa",
+    [
+     "R1.5",
+     "R1.1"
+    ],
+    983
+   ],
+   [
+    "2016_RFE-Targeted-temperature-management-in-the-ICU-Guidelines-from-a_85b636__c0024_ca91fe06",
+    [
+     "R1.2"
+    ],
+    905
+   ],
+   [
+    "2016_RFE-Targeted-temperature-management-in-the-ICU-Guidelines-from-a_85b636__c0025_59c356d6",
+    [
+     "R2.1",
+     "R2.2"
+    ],
+    756
+   ],
+   [
+    "2016_RFE-Targeted-temperature-management-in-the-ICU-Guidelines-from-a_85b636__c0026_84027ef1",
+    [
+     "R2.2"
+    ],
+    719
+   ],
+   [
+    "2016_RFE-Targeted-temperature-management-in-the-ICU-Guidelines-from-a_85b636__c0031_572ed714",
+    [
+     "R2.2"
+    ],
+    785
+   ],
+   [
+    "2016_RFE-Targeted-temperature-management-in-the-ICU-Guidelines-from-a_85b636__c0041_af9c98a4",
+    [
+     "R5.1",
+     "R5.2"
+    ],
+    531
+   ],
+   [
+    "2016_RFE-Targeted-temperature-management-in-the-ICU-Guidelines-from-a_85b636__c0042_4daf7285",
+    [
+     "R5.3"
+    ],
+    1102
+   ],
+   [
+    "2016_RFE-Targeted-temperature-management-in-the-ICU-Guidelines-from-a_85b636__c0043_d283c596",
+    [
+     "R6.1",
+     "R6.2"
+    ],
+    1048
+   ],
+   [
+    "2016_RFE-Targeted-temperature-management-in-the-ICU-Guidelines-from-a_85b636__c0044_7b8d5d81",
+    [
+     "R6.2",
+     "R6.3"
+    ],
+    984
+   ],
+   [
+    "2016_RFE-Targeted-temperature-management-in-the-ICU-Guidelines-from-a_85b636__c0045_2869b800",
+    [
+     "R6.3",
+     "R6.4"
+    ],
+    718
+   ],
+   [
+    "2016_RFE-Targeted-temperature-management-in-the-ICU-Guidelines-from-a_85b636__c0046_3767b785",
+    [
+     "R6.4",
+     "R6.1"
+    ],
+    838
+   ],
+   [
+    "2016_RFE-Targeted-temperature-management-in-the-ICU-Guidelines-from-a_85b636__c0047_92ac3395",
+    [
+     "R6.1",
+     "R6.2"
+    ],
+    1032
+   ],
+   [
+    "2016_RFE-Targeted-temperature-management-in-the-ICU-Guidelines-from-a_85b636__c0048_b6f345e6",
+    [
+     "R6.2"
+    ],
+    482
+   ]
+  ],
+  "grade_split": [
+   [
+    "2015_RFE-IRA-anglais_d71652__c0027_4e3828f6",
+    "R1.2"
+   ]
+  ],
+  "grade_not_captured": [
+   [
+    "2016_rfe-revision-of-expert-panel-guidelines-on-postoperative-pain-ma_8e6a11__c0020_534b7c60",
+    "R6.3",
+    "G2-"
+   ],
+   [
+    "2016_rfe-revision-of-expert-panel-guidelines-on-postoperative-pain-ma_8e6a11__c0021_bcf0f8d6",
+    "R6.4",
+    "G1-"
+   ],
+   [
+    "2016_rfe-revision-of-expert-panel-guidelines-on-postoperative-pain-ma_8e6a11__c0035_4595672b",
+    "R14.2",
+    "G2+"
+   ],
+   [
+    "2016_rfe-revision-of-expert-panel-guidelines-on-postoperative-pain-ma_8e6a11__c0035_4595672b",
+    "R14.3",
+    "G1-"
+   ]
+  ]
+ },
+ "O_ancienne_non_gradee": {
+  "grade_on_non_statement": [
+   [
+    "2010_2_SFAR_Monitorage-de-ladequation-profondeur-de-lanesthesie-a-par_33e093__c0028_82187aaa",
+    "Module B > Réponses pour la question 2",
+    [
+     "avis d'experts"
+    ]
+   ],
+   [
+    "2010_2_AFAR_Urgences-Obstetricales-Extrahospitalieres_47ad85__c0007_2a73dfc8",
+    "MÉTHODOLOGIE",
+    [
+     "accord fort"
+    ]
+   ],
+   [
+    "2007_2b_AFAR_aspet-pediatriques_d85e1f__c0013_2daa0d8f",
+    "3. Synthèse des données > 3.2. Moyens thérapeutiques pour la sédation et l'analg",
+    [
+     "avis d'experts"
+    ]
+   ],
+   [
+    "2006_2_AFAR_Prise-en-charge-de-larret-cardiaque-1_c70196__c0004_83952ef8",
+    "",
+    [
+     "accord faible",
+     "accord fort"
+    ]
+   ],
+   [
+    "2006_2_AFAR_Prise-en-charge-de-larret-cardiaque-1_c70196__c0005_1d8b01d1",
+    "",
+    [
+     "accord fort"
+    ]
+   ],
+   [
+    "2005_2_AFAR_Prise-en-charge-des-sujets-en-etat-de-mort-encephalique-d_c953e6__c0018_98456932",
+    "2. CHAPITRE I. LA MORT ENCÉPHALIQUE : HISTORIQUE, CONCEPT ET DIAGNOSTIC > 3. CHA",
+    [
+     "recommandation forte"
+    ]
+   ],
+   [
+    "2002_1-s2_0-S1624069303000513-main_d3592a__c0044_09aab7f9",
+    "Réactualisation de la douzième conférence de consensus de la Société de réanimat",
+    [
+     "avis d'experts"
+    ]
+   ],
+   [
+    "1996_2b_AFAR_Texte-Long_Intubation-difficile_850d77__c0025_fd1f9271",
+    "Prediction and definition of difficult mask ventilation and difficult intubation",
+    [
+     "grade 1",
+     "grade 2"
+    ]
+   ]
+  ],
+  "sibling_stacked": [
+   [
+    "2010_2_AFAR_Urgences-Obstetricales-Extrahospitalieres_47ad85__c0032_fc8a3916",
+    "2. CHAPITRE 2 – ACCOUCHEMENT INOPINÉ EXTRAHOSPITALIER > 3. CHAPITRE 3 – HÉMORRAGIES DU DEUXIÈME ET DU TROISIÈME TRIMESTR"
+   ],
+   [
+    "2010_2_AFAR_Urgences-Obstetricales-Extrahospitalieres_47ad85__c0033_462f8828",
+    "2. CHAPITRE 2 – ACCOUCHEMENT INOPINÉ EXTRAHOSPITALIER > 3. CHAPITRE 3 – HÉMORRAGIES DU DEUXIÈME ET DU TROISIÈME TRIMESTR"
+   ],
+   [
+    "2010_2_AFAR_Urgences-Obstetricales-Extrahospitalieres_47ad85__c0034_87b7648a",
+    "2. CHAPITRE 2 – ACCOUCHEMENT INOPINÉ EXTRAHOSPITALIER > 3. CHAPITRE 3 – HÉMORRAGIES DU DEUXIÈME ET DU TROISIÈME TRIMESTR"
+   ],
+   [
+    "2010_2_AFAR_Urgences-Obstetricales-Extrahospitalieres_47ad85__c0035_f3e1b80f",
+    "2. CHAPITRE 2 – ACCOUCHEMENT INOPINÉ EXTRAHOSPITALIER > 3. CHAPITRE 3 – HÉMORRAGIES DU DEUXIÈME ET DU TROISIÈME TRIMESTR"
+   ],
+   [
+    "2010_2_AFAR_Urgences-Obstetricales-Extrahospitalieres_47ad85__c0036_c6ae495d",
+    "2. CHAPITRE 2 – ACCOUCHEMENT INOPINÉ EXTRAHOSPITALIER > 3. CHAPITRE 3 – HÉMORRAGIES DU DEUXIÈME ET DU TROISIÈME TRIMESTR"
+   ],
+   [
+    "2010_2_AFAR_Urgences-Obstetricales-Extrahospitalieres_47ad85__c0037_32421442",
+    "2. CHAPITRE 2 – ACCOUCHEMENT INOPINÉ EXTRAHOSPITALIER > 3. CHAPITRE 3 – HÉMORRAGIES DU DEUXIÈME ET DU TROISIÈME TRIMESTR"
+   ],
+   [
+    "2010_2_AFAR_Urgences-Obstetricales-Extrahospitalieres_47ad85__c0038_593e1fb4",
+    "2. CHAPITRE 2 – ACCOUCHEMENT INOPINÉ EXTRAHOSPITALIER > 3. CHAPITRE 3 – HÉMORRAGIES DU DEUXIÈME ET DU TROISIÈME TRIMESTR"
+   ],
+   [
+    "2010_2_AFAR_Urgences-Obstetricales-Extrahospitalieres_47ad85__c0039_62ee5312",
+    "2. CHAPITRE 2 – ACCOUCHEMENT INOPINÉ EXTRAHOSPITALIER > 3. CHAPITRE 3 – HÉMORRAGIES DU DEUXIÈME ET DU TROISIÈME TRIMESTR"
+   ],
+   [
+    "2010_2_AFAR_Urgences-Obstetricales-Extrahospitalieres_47ad85__c0040_bbf3bc69",
+    "2. CHAPITRE 2 – ACCOUCHEMENT INOPINÉ EXTRAHOSPITALIER > 3. CHAPITRE 3 – HÉMORRAGIES DU DEUXIÈME ET DU TROISIÈME TRIMESTR"
+   ],
+   [
+    "2010_2_AFAR_Urgences-Obstetricales-Extrahospitalieres_47ad85__c0041_57912de5",
+    "2. CHAPITRE 2 – ACCOUCHEMENT INOPINÉ EXTRAHOSPITALIER > 3. CHAPITRE 3 – HÉMORRAGIES DU DEUXIÈME ET DU TROISIÈME TRIMESTR"
+   ],
+   [
+    "2010_2_AFAR_Urgences-Obstetricales-Extrahospitalieres_47ad85__c0042_e7da2556",
+    "2. CHAPITRE 2 – ACCOUCHEMENT INOPINÉ EXTRAHOSPITALIER > 3. CHAPITRE 3 – HÉMORRAGIES DU DEUXIÈME ET DU TROISIÈME TRIMESTR"
+   ],
+   [
+    "2010_2_AFAR_Urgences-Obstetricales-Extrahospitalieres_47ad85__c0043_1967b9ed",
+    "2. CHAPITRE 2 – ACCOUCHEMENT INOPINÉ EXTRAHOSPITALIER > 3. CHAPITRE 3 – HÉMORRAGIES DU DEUXIÈME ET DU TROISIÈME TRIMESTR"
+   ],
+   [
+    "2010_2_AFAR_Urgences-Obstetricales-Extrahospitalieres_47ad85__c0044_fca2e81d",
+    "2. CHAPITRE 2 – ACCOUCHEMENT INOPINÉ EXTRAHOSPITALIER > 3. CHAPITRE 3 – HÉMORRAGIES DU DEUXIÈME ET DU TROISIÈME TRIMESTR"
+   ],
+   [
+    "2010_2_AFAR_Urgences-Obstetricales-Extrahospitalieres_47ad85__c0045_51d69af5",
+    "2. CHAPITRE 2 – ACCOUCHEMENT INOPINÉ EXTRAHOSPITALIER > 3. CHAPITRE 3 – HÉMORRAGIES DU DEUXIÈME ET DU TROISIÈME TRIMESTR"
+   ],
+   [
+    "2010_2_AFAR_Urgences-Obstetricales-Extrahospitalieres_47ad85__c0046_293676cc",
+    "2. CHAPITRE 2 – ACCOUCHEMENT INOPINÉ EXTRAHOSPITALIER > 3. CHAPITRE 3 – HÉMORRAGIES DU DEUXIÈME ET DU TROISIÈME TRIMESTR"
+   ],
+   [
+    "2010_2_AFAR_Urgences-Obstetricales-Extrahospitalieres_47ad85__c0047_dd7f3e77",
+    "2. CHAPITRE 2 – ACCOUCHEMENT INOPINÉ EXTRAHOSPITALIER > 3. CHAPITRE 3 – HÉMORRAGIES DU DEUXIÈME ET DU TROISIÈME TRIMESTR"
+   ],
+   [
+    "2010_2_AFAR_Urgences-Obstetricales-Extrahospitalieres_47ad85__c0048_4cc851b2",
+    "2. CHAPITRE 2 – ACCOUCHEMENT INOPINÉ EXTRAHOSPITALIER > 3. CHAPITRE 3 – HÉMORRAGIES DU DEUXIÈME ET DU TROISIÈME TRIMESTR"
+   ],
+   [
+    "2010_2_AFAR_Urgences-Obstetricales-Extrahospitalieres_47ad85__c0049_b56d88fc",
+    "2. CHAPITRE 2 – ACCOUCHEMENT INOPINÉ EXTRAHOSPITALIER > 3. CHAPITRE 3 – HÉMORRAGIES DU DEUXIÈME ET DU TROISIÈME TRIMESTR"
+   ],
+   [
+    "2010_2_AFAR_Urgences-Obstetricales-Extrahospitalieres_47ad85__c0050_29e7cb54",
+    "2. CHAPITRE 2 – ACCOUCHEMENT INOPINÉ EXTRAHOSPITALIER > 3. CHAPITRE 3 – HÉMORRAGIES DU DEUXIÈME ET DU TROISIÈME TRIMESTR"
+   ],
+   [
+    "2010_2_AFAR_Urgences-Obstetricales-Extrahospitalieres_47ad85__c0051_efbc8507",
+    "2. CHAPITRE 2 – ACCOUCHEMENT INOPINÉ EXTRAHOSPITALIER > 3. CHAPITRE 3 – HÉMORRAGIES DU DEUXIÈME ET DU TROISIÈME TRIMESTR"
+   ],
+   [
+    "2010_2_AFAR_Urgences-Obstetricales-Extrahospitalieres_47ad85__c0052_4d38f286",
+    "2. CHAPITRE 2 – ACCOUCHEMENT INOPINÉ EXTRAHOSPITALIER > 3. CHAPITRE 3 – HÉMORRAGIES DU DEUXIÈME ET DU TROISIÈME TRIMESTR"
+   ],
+   [
+    "2010_2_AFAR_Urgences-Obstetricales-Extrahospitalieres_47ad85__c0053_096e70e5",
+    "2. CHAPITRE 2 – ACCOUCHEMENT INOPINÉ EXTRAHOSPITALIER > 3. CHAPITRE 3 – HÉMORRAGIES DU DEUXIÈME ET DU TROISIÈME TRIMESTR"
+   ],
+   [
+    "2010_2_AFAR_Urgences-Obstetricales-Extrahospitalieres_47ad85__c0054_61a140ab",
+    "2. CHAPITRE 2 – ACCOUCHEMENT INOPINÉ EXTRAHOSPITALIER > 3. CHAPITRE 3 – HÉMORRAGIES DU DEUXIÈME ET DU TROISIÈME TRIMESTR"
+   ],
+   [
+    "2010_2_SFAR_Anesthesie-loco-regionale-en-pediatrie_626352__c0010_12711732",
+    "QUESTION N° 1 : QUELS ANESTHÉSIQUES LOCAUX (ALx) CHOISIR ET QUELLES POSOLOGIES EN FONCTION DE L'ÂGE, DE LA TECHNIQUE ET "
+   ],
+   [
+    "2010_2_SFAR_Anesthesie-loco-regionale-en-pediatrie_626352__c0011_132dd25b",
+    "QUESTION N° 1 : QUELS ANESTHÉSIQUES LOCAUX (ALx) CHOISIR ET QUELLES POSOLOGIES EN FONCTION DE L'ÂGE, DE LA TECHNIQUE ET "
+   ]
+  ],
+  "unflagged_biblio": [
+   [
+    "2009_2_AFAR_Mieux-vivre-la-reanimation_8ed1f4__c0069_2c17a9cc",
+    "POUR EN SAVOIR PLUS",
+    14
+   ],
+   [
+    "2009_2_AFAR_Mieux-vivre-la-reanimation_8ed1f4__c0070_92cdb364",
+    "POUR EN SAVOIR PLUS",
+    13
+   ],
+   [
+    "2009_2_AFAR_Mieux-vivre-la-reanimation_8ed1f4__c0071_fca0ac69",
+    "POUR EN SAVOIR PLUS",
+    11
+   ],
+   [
+    "2009_2_AFAR_Mieux-vivre-la-reanimation_8ed1f4__c0072_f83ae8a6",
+    "POUR EN SAVOIR PLUS",
+    13
+   ],
+   [
+    "2009_2_AFAR_Mieux-vivre-la-reanimation_8ed1f4__c0073_b874938d",
+    "POUR EN SAVOIR PLUS",
+    14
+   ],
+   [
+    "2009_2_AFAR_Mieux-vivre-la-reanimation_8ed1f4__c0074_8d92f098",
+    "POUR EN SAVOIR PLUS",
+    11
+   ],
+   [
+    "2009_2_AFAR_Mieux-vivre-la-reanimation_8ed1f4__c0075_48c905e4",
+    "POUR EN SAVOIR PLUS",
+    9
+   ],
+   [
+    "2009_2_AFAR_Mieux-vivre-la-reanimation_8ed1f4__c0076_d4476971",
+    "POUR EN SAVOIR PLUS",
+    13
+   ],
+   [
+    "2009_2_AFAR_Mieux-vivre-la-reanimation_8ed1f4__c0077_dc88ece3",
+    "POUR EN SAVOIR PLUS",
+    14
+   ],
+   [
+    "2009_2_AFAR_Mieux-vivre-la-reanimation_8ed1f4__c0078_c45a46ba",
+    "POUR EN SAVOIR PLUS",
+    11
+   ],
+   [
+    "2009_2_AFAR_Mieux-vivre-la-reanimation_8ed1f4__c0079_acac35f8",
+    "POUR EN SAVOIR PLUS",
+    14
+   ],
+   [
+    "2009_2_AFAR_Mieux-vivre-la-reanimation_8ed1f4__c0080_941998e3",
+    "POUR EN SAVOIR PLUS",
+    14
+   ],
+   [
+    "2009_2_AFAR_Mieux-vivre-la-reanimation_8ed1f4__c0081_46edc2ed",
+    "POUR EN SAVOIR PLUS",
+    13
+   ],
+   [
+    "2009_2_AFAR_Mieux-vivre-la-reanimation_8ed1f4__c0082_3b6b94da",
+    "POUR EN SAVOIR PLUS",
+    10
+   ],
+   [
+    "2007_Organisation-et-Structuration-de-l-Hopital-en-cas-de-pandemie-de_23dabc__c0071_5e50d44b",
+    "E. Aspect Ethique > E4. L'accès au traitement > E5. Comment ",
+    6
+   ],
+   [
+    "2007_Organisation-et-Structuration-de-l-Hopital-en-cas-de-pandemie-de_23dabc__c0072_219e74ec",
+    "E. Aspect Ethique > E4. L'accès au traitement > E5. Comment ",
+    4
+   ],
+   [
+    "2005_2b_AFAR_TEXTE-LONG_Anesthesie-pour-amygdalectomie-chez-lenfant_f868e3__c0003_a38f9f9b",
+    "Anesthésie pour amygdalectomie chez l'enfant Anaesthesia for",
+    8
+   ],
+   [
+    "unk_guide-mise-en-place-gestion-reanimation-ephemere_1a72c8__c0071_40c775dc",
+    "Chapitre 1 : La mise en place et le désarmement > 1-1 Travai",
+    3
+   ]
+  ],
+  "footnote_reco": [
+   [
+    "2007_Organisation-et-Structuration-de-l-Hopital-en-cas-de-pandemie-de_23dabc__c0032_d8fa87fc",
+    "B2. Facteurs limitants l'augmentation des capacités des réan"
+   ],
+   [
+    "2007_2c_AFAR_Texte_long_Sedation-et-analgesie-en-reanimation_nouveau-_1eab5a__c0030_f8ec277f",
+    "Introduction > 2. Question 2 : quels sont les moyens thérape"
+   ]
+  ]
+ }
+}

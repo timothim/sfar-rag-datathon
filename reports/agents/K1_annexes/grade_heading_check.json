@@ -1,0 +1,94 @@
+{
+ "chunks_under_grade_heading": 574,
+ "current": 574,
+ "holding_a_statement": 56,
+ "statement_grade_differs_from_heading_grade": 10,
+ "chunk_question_differs_from_path_question": 5,
+ "docs_all": 33,
+ "docs_current": 33,
+ "docs_stmt": 14,
+ "docs_differs": 5,
+ "docs_qdiff": 1,
+ "examples": [
+  [
+   "2026_RFE_sedationproceduraleUrgences_24juin2026_1f0c12__c0103_6af05169",
+   "AVIS D'EXPERT (Accord fort)",
+   [
+    "grade 2",
+    "recommandation faible",
+    "accord fort"
+   ]
+  ],
+  [
+   "2020_RFE_20pr_C3_A9-_C3_A9clampsie_finale_8989f8__c0060_181305c5",
+   "Avis d'experts (Accord FORT)",
+   [
+    "grade 2",
+    "accord fort",
+    "avis d expert"
+   ]
+  ],
+  [
+   "2020_RFE_20pr_C3_A9-_C3_A9clampsie_finale_8989f8__c0064_1eb4830a",
+   "Avis d'experts (Accord FORT)",
+   [
+    "grade 1",
+    "accord fort",
+    "grade 2"
+   ]
+  ],
+  [
+   "2020_RFE_20pr_C3_A9-_C3_A9clampsie_finale_8989f8__c0070_b03284ce",
+   "Avis d'experts (Accord FORT)",
+   [
+    "grade 1",
+    "accord fort"
+   ]
+  ],
+  [
+   "2020_RFE_20pr_C3_A9-_C3_A9clampsie_finale_8989f8__c0075_a63bcd37",
+   "Avis d'experts (Accord FORT)",
+   [
+    "grade 1",
+    "accord fort"
+   ]
+  ],
+  [
+   "2019_rfe-trauma-abdominale_656ac9__c0052_62e3cd72",
+   "Avis d'experts",
+   [
+    "grade 2",
+    "accord fort"
+   ]
+  ],
+  [
+   "2019_rfe-trauma-abdominale_656ac9__c0058_c598ee9d",
+   "Avis d'experts",
+   [
+    "grade 2",
+    "accord fort"
+   ]
+  ],
+  [
+   "2017_RFE-Hospital-acquired-pneumonia-in-ICU_e091db__c0073_5090014b",
+   "GRADE 1–, STRONG AGREEMENT",
+   [
+    "grade 2"
+   ]
+  ],
+  [
+   "2016_RFE-ACCPM-Eye-protection-in-anaesthesia-and-intensive-care_fdf503__c0022_dec3a348",
+   "(GRADE 1+) STRONG agreement",
+   [
+    "grade 2"
+   ]
+  ],
+  [
+   "2016_RFE-ACCPM-Eye-protection-in-anaesthesia-and-intensive-care_fdf503__c0024_50223dba",
+   "(GRADE 1+) STRONG agreement",
+   [
+    "grade 2"
+   ]
+  ]
+ ]
+}

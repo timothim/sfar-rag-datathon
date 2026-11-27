@@ -1,0 +1,23 @@
+64 queries from 33 documents
+W1127 11:30:44.146000 95902 torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 7884.92it/s]
+Loading weights:   0%|          | 0/201 [00:00<?, ?it/s]Loading weights: 100%|██████████| 201/201 [00:00<00:00, 8078.72it/s]
+{
+ "queries": 64,
+ "docs": 33,
+ "stmt_in_context": 63,
+ "stmt_rank1": 37,
+ "stmt_rank_le3": 50,
+ "stmt_chunk_type": {
+  "recommendation_box": 43,
+  "prose": 18,
+  "callout_footnote": 2
+ },
+ "stmt_chunk_without_grade": 19,
+ "queries_with_argument_above_stmt": 25,
+ "top1_is_same_doc_argument_prose": 24,
+ "top1_other_doc": 2,
+ "queries_with_ge1_chunk_ge3_biblio_lines": 34,
+ "queries_with_ge1_mostly_biblio_chunk": 34,
+ "mean_context": 24.71875
+}
