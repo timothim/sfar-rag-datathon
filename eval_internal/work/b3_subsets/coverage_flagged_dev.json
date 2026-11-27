@@ -1,0 +1,16 @@
+{
+ "note": "dev items flagged not covered by the retrieval coverage signal (C10, tas_v3_errata); all dev, used only for the coverage-gate ablation",
+ "ids": [
+  "Q28",
+  "Q52",
+  "MR-abst000",
+  "MR-abst004",
+  "MR-abst007",
+  "MR-abst013",
+  "MR-abst017",
+  "MR-abst020",
+  "MR-abst026",
+  "MR-abst031",
+  "MR-abst036"
+ ]
+}

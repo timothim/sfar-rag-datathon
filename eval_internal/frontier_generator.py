@@ -9,6 +9,11 @@ LLM, have Claude Code subagents answer them, and turn their answers into a stand
     # 3. build the report (then judge it with judge_io export/merge)
     .venv/bin/python eval_internal/frontier_generator.py report --suite multirfe_synth --variant ctx6 --model-label claude-sonnet-5-5
 
+Superseded for new experiments by eval_internal/gen_replay.py (any retrieval config / --ablate /
+index map / generation preset / prompt mode / id list; `run --backend record --export-frontier DIR`
+writes the same gen_input_*.json files, `import-frontier --dir DIR` builds the report). Kept as is to
+reproduce the earlier ctx6 / ctx12 runs.
+
 Variants (config C9, prompt mode clinical_concise):
   ctx6  : exactly the context the 7B gets (final_top_k=8, generation selection <= 6 chunks / 6 500 chars)
   ctx12 : wider context (final_top_k=12, no generation-side pruning or selection)

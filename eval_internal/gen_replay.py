@@ -73,10 +73,14 @@ def _git_rev() -> str:
 
 
 def _load_ids(path: str | None) -> list[str] | None:
+    """Ids from one file or a comma list of files (union)."""
     if not path:
         return None
-    data = json.loads(Path(path).read_text(encoding="utf-8"))
-    return data["ids"] if isinstance(data, dict) else data
+    ids: list[str] = []
+    for one in path.split(","):
+        data = json.loads(Path(one).read_text(encoding="utf-8"))
+        ids += data["ids"] if isinstance(data, dict) else data
+    return ids
 
 
 def _items(suite: str, ids: list[str] | None) -> list[EvalItem]:

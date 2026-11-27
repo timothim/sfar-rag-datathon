@@ -209,3 +209,14 @@ def test_answer_check_doses_drugs_citations():
     assert not swapped.flagged and swapped.doses_not_in_cited == ["15 mg/kg"]
     assert check_answer("Pas de recommandation.", passages).uncited
     assert not check_answer("Les recommandations ne traitent pas cette question.", passages, is_abstention=True).flagged
+
+
+def test_section_population_in_rich_header():
+    from rag_sfar.generation.context import section_populations
+
+    assert section_populations("Champ 3. Disciplines pédiatriques et néonatales > Partie 1") == ["enfant", "nouveau-né"]
+    assert section_populations("Champ 2. Disciplines adultes > Orthopédie") == ["adulte"]
+    rc = _rc("p", "Ligne.", 1, section="Champ 3. Disciplines pédiatriques > Partie 1")
+    _, block = assemble_context([rc], GenerationConfig(context_format="structured", source_header="rich",
+                                                       selection="budget", max_context_chunks=9, max_context_chars=10**6))
+    assert "Population (titre de section) : enfant" in block

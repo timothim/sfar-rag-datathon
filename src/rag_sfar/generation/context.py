@@ -226,6 +226,22 @@ def _strengths(grades: list[str]) -> str:
     return ", ".join(seen.values())
 
 
+_POP_PATTERNS = (
+    ("adulte", re.compile(r"\badultes?\b")),
+    ("enfant", re.compile(r"\b(?:p[ée]diatri\w*|enfants?|nourrissons?)\b")),
+    ("nouveau-né", re.compile(r"\b(?:n[ée]onat\w*|nouveau-n[ée]s?)\b")),
+    ("obstétrique", re.compile(r"\b(?:obst[ée]tri\w*|femmes? enceintes?|grossesse)\b")),
+)
+
+
+def section_populations(section_path: str) -> list[str]:
+    """Populations named by the heading path of a passage (structural: the guideline's own
+    section titles, e.g. "... par disciplines pédiatriques et néonatales"). Used in the source
+    header only when the chunk carries no structural `populations` label."""
+    s = section_path.lower()
+    return [label for label, rx in _POP_PATTERNS if rx.search(s)]
+
+
 def _edition_label(c) -> str:
     if not getattr(c, "is_active", True):
         return "ABROGÉE — ne plus appliquer"
@@ -247,6 +263,10 @@ def rich_header(label: str, items: list[RetrievedChunk]) -> str:
     pops = list(dict.fromkeys(p for r in items for p in (r.chunk.populations or [])))
     if pops:
         meta.append("Population : " + ", ".join(pops))
+    else:
+        spops = list(dict.fromkeys(p for r in items for p in section_populations(r.chunk.section_path)))
+        if spops:
+            meta.append("Population (titre de section) : " + ", ".join(spops))
     grades = _strengths([g for r in items for g in r.chunk.grade_levels])
     if grades:
         meta.append("Force/accord mentionnés : " + grades)
