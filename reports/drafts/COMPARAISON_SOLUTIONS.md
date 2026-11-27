@@ -67,7 +67,20 @@ Agent Q1, IC dans `eval_internal/robustness/results/summary.md` et `FINAL_REPORT
 
 Effet de formulation, configuration figée, sur les 88 énoncés réécrits : −25,5 [−38,2 ; −12,7] au dev, −3,6 [−17,9 ; +14,3] au test. Les gains vus sous fautes et sigles synthétiques ne se retrouvent pas sur ces formulations. Latence : 196 à 206 ms contre 198 ms pour la figée.
 
-À COMPLÉTER : normalisation par le modèle en mode ajout (NORM-add) contre configuration figée sur `abpvern`, dev et test, suffisance avec IC appariés, et nombre de normalisations infidèles relevées à la lecture.
+**Normalisation de la question par le modèle, en mode ajout (NORM), sur les formulations de cliniciens** (`reports/agents/V1_benchmark_valide.md`, section 6 ; substitut Claude Haiku à la place du modèle servi ; retrieval seul ; prompt de normalisation inchangé, écrit avant que ce jeu existe chez nous ; côté test : une passe post hoc sur configuration fixe, ce test a déjà servi).
+
+| Configuration − configuration figée, suffisance des preuves, variante en langage courant | dev | test (post hoc) |
+|---|---|---|
+| NORM, 171 questions | **+6,2 [+2,1 ; +11,5]** (6 gagnées, 0 perdue ; n = 96) | +1,6 [0 ; +4,7] (1 gagnée, 0 perdue ; n = 64) |
+| NORM, 88 énoncés reformulés par les experts | **+9,1 [+1,8 ; +18,2]** (5 / 0 ; n = 55) | +3,6 [0 ; +10,7] (1 / 0 ; n = 28) |
+| NORM, 29 reformulations publiées | +12,5 [0 ; +31,2] (n = 16) | +10,0 [0 ; +30,0] (n = 10) |
+| Options lexicales + NORM, 171 questions | +8,3 [+2,1 ; +15,6] (10 / 2) | +6,2 [+1,6 ; +12,5] (4 / 0) |
+
+Niveau de la configuration figée sur ce jeu : 81,2 % en dev et en test. Sur le dev, NORM récupère environ un tiers de la perte due à la formulation (−25,5 points sur les 88 énoncés reformulés) ; sur le test, le gain de NORM seule tient à une question et son intervalle touche 0. Une partie du gain « options lexicales + NORM » sur le test vient des n-grammes seuls, sur un test déjà utilisé : il indique une direction, il ne permet pas de choisir une configuration.
+
+Fidélité : le modèle a modifié 59 des 171 questions (dont 55 des 88 reformulées par les experts). Sur 30 réécritures tirées au hasard et relues à la main, plus les cas signalés par les agents, **aucun contenu clinique perdu, ajouté ou altéré** ; chaque réécriture garde la forme d'origine et ajoute le développement entre parenthèses. Les sigles ambigus sont laissés tels quels (aucun apport sur ceux-là). Relecture faite par un agent, pas par un médecin.
+
+Lecture : c'est la seule option de robustesse qui montre un effet sur des formulations réelles de cliniciens. Elle reste éteinte par défaut : l'effet est établi côté dev seulement, avec Haiku et non avec le modèle servi, et la fidélité doit être remesurée avec ce modèle avant activation.
 
 ### 1.4 Modèles de recherche plus gros
 

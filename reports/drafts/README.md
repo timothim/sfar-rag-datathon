@@ -50,7 +50,7 @@ Sur `multirfe_synth` test, les réponses sont correctes à 91,2 % [80,7–97,1] 
   - lignes de tableau pédiatriques au test (69 % de suffisance) ;
   - réponses qui choisissent une population non précisée ;
   - fautes de frappe : −6 à −12 points de suffisance au dev.
-- Les options de robustesse (lexicale, normalisation de la question par le modèle) et la décomposition des questions existent comme interrupteurs, désactivés par défaut. Aucune n'a d'effet démontré sur la sonde tenue à l'écart.
+- Les options de robustesse (lexicale, normalisation de la question par le modèle) et la décomposition des questions existent comme interrupteurs, désactivés par défaut. Aucune n'a d'effet démontré sur la sonde tenue à l'écart. Seule la normalisation par le modèle montre un effet sur des formulations réelles de cliniciens (variante en langage courant du benchmark validé, côté dev : +6,2 points de suffisance des preuves [+2,1 ; +11,5], aucune question perdue ; côté test, post hoc : +1,6 [0 ; +4,7]), mesuré avec Claude Haiku à la place du modèle servi.
 - Démo et MCP :
   - aucun vrai générateur testé avec la page ;
   - image conteneur jamais construite ;

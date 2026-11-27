@@ -11,7 +11,7 @@
 - **Le dev était optimiste.** Le retrieval atteint 95,7 % de suffisance des preuves sur le dev et 82,8 % sur le test ; les réponses correctes passent de 73,6 % à 53,6 % (grilles du brouillon) ou de 77,8 % à 62,3 % (grilles validées). Les correctifs du retrieval avaient été conçus en lisant les échecs du dev et n'ont pas transféré au test.
 - **Erreurs graves sur le test** : 4 sur 69 sous les grilles du brouillon, 2 sur 69 (2,9 % [0–10]) sous les grilles validées, toutes du même type : une conduite unique imposée alors que la population ou la situation n'était pas précisée. Aucune mauvaise molécule, mauvaise dose, conduite opposée ou édition périmée n'a été relevée (0 sur 69, borne haute de l'intervalle exact 5,2 %).
 - **Avec les formulations des cliniciens** (variante en langage courant publiée par les experts), la suffisance du retrieval gelé est de 81,2 % sur le dev comme sur le test. Les options lexicales (n-grammes, lexique) n'y montrent pas de gain démontré ; la normalisation par le modèle y est en cours de mesure.
-- **Décision** : la configuration évaluée et gelée est la solution. Les options explorées le 27/11 existent comme interrupteurs, désactivés par défaut ; aucune n'a montré d'effet sur la sonde tenue à l'écart.
+- **Décision** : la configuration évaluée et gelée est la solution. Les options explorées le 27/11 existent comme interrupteurs, désactivés par défaut ; aucune n'a montré d'effet sur la sonde tenue à l'écart. Une seule montre un effet sur des formulations réelles de cliniciens : la normalisation de la question par le modèle, en mode ajout (+6,2 points de suffisance [+2,1 ; +11,5] côté dev de la variante en langage courant, aucune question perdue ; +1,6 [0 ; +4,7] côté test, post hoc ; section 5.5). Elle est l'option recommandée à activer en premier, après vérification de sa fidélité avec le modèle réellement servi.
 - **Rien n'est validé cliniquement.** Les questions du benchmark ont été validées par des médecins ; nos jeux internes sont synthétiques ; aucun médecin n'a relu nos réponses (section 12).
 
 ## 1. Ce que fait le système, et ce qu'il n'est pas
@@ -239,7 +239,20 @@ Sous les grilles du brouillon, le benchmark attendait pour 10 à 11 questions un
 - Options contre figée, sur le langage courant (171 questions) : n-grammes +2,1 [−3,1 ; +8,3] dev, 0,0 test ; lexique +1,0 dev, 0,0 test ; les deux +3,1 [−3,1 ; +9,4] dev, +1,6 [−3,1 ; +6,2] test. **Aucun gain démontré** : tous les intervalles contiennent 0.
 - Lecture : les gains vus sous fautes synthétiques (n-grammes) et sur un sigle synthétique (lexique, « ABP ») ne se retrouvent pas sur les formulations des experts, qui portent surtout sur des raccourcis opératoires et des synonymes. Le chiffre réaliste de suffisance avec des formulations de cliniciens est autour de 81–83 %.
 
-À COMPLÉTER : normalisation de la question par le modèle en mode ajout (NORM-add) contre configuration figée sur la variante en langage courant (`abpvern`), dev et test, suffisance avec IC appariés, et nombre de normalisations infidèles (altération du contenu clinique) relevées à la lecture.
+**Normalisation de la question par le modèle, en mode ajout (NORM), sur les formulations de cliniciens** (`reports/agents/V1_benchmark_valide.md`, section 6 ; substitut Claude Haiku à la place du modèle servi ; retrieval seul ; prompt de normalisation inchangé, écrit avant que ce jeu existe chez nous ; côté test : une passe post hoc sur configuration fixe, ce test a déjà servi).
+
+| Configuration − configuration figée, suffisance des preuves, variante en langage courant | dev | test (post hoc) |
+|---|---|---|
+| NORM, 171 questions | **+6,2 [+2,1 ; +11,5]** (6 gagnées, 0 perdue ; n = 96) | +1,6 [0 ; +4,7] (1 gagnée, 0 perdue ; n = 64) |
+| NORM, 88 énoncés reformulés par les experts | **+9,1 [+1,8 ; +18,2]** (5 / 0 ; n = 55) | +3,6 [0 ; +10,7] (1 / 0 ; n = 28) |
+| NORM, 29 reformulations publiées | +12,5 [0 ; +31,2] (n = 16) | +10,0 [0 ; +30,0] (n = 10) |
+| Options lexicales + NORM, 171 questions | +8,3 [+2,1 ; +15,6] (10 / 2) | +6,2 [+1,6 ; +12,5] (4 / 0) |
+
+Niveau de la configuration figée sur ce jeu : 81,2 % en dev et en test. Sur le dev, NORM récupère environ un tiers de la perte due à la formulation (−25,5 points sur les 88 énoncés reformulés) ; sur le test, le gain de NORM seule tient à une question et son intervalle touche 0. Une partie du gain « options lexicales + NORM » sur le test vient des n-grammes seuls, sur un test déjà utilisé : il indique une direction, il ne permet pas de choisir une configuration.
+
+Fidélité : le modèle a modifié 59 des 171 questions (dont 55 des 88 reformulées par les experts). Sur 30 réécritures tirées au hasard et relues à la main, plus les cas signalés par les agents, **aucun contenu clinique perdu, ajouté ou altéré** ; chaque réécriture garde la forme d'origine et ajoute le développement entre parenthèses. Les sigles ambigus sont laissés tels quels (aucun apport sur ceux-là). Relecture faite par un agent, pas par un médecin.
+
+Lecture : c'est la seule option de robustesse qui montre un effet sur des formulations réelles de cliniciens. Elle reste éteinte par défaut : l'effet est établi côté dev seulement, avec Haiku et non avec le modèle servi, et la fidélité doit être remesurée avec ce modèle avant activation.
 
 ### 5.6 Autres limites
 
@@ -391,7 +404,7 @@ En mode ajout, le contexte gelé est conservé tel quel et la réécriture ne re
 |---|---|---|---|
 | **Configuration gelée `C10_context_notes`** | **solution retenue, active par défaut** | évaluée selon le protocole pré-enregistré (section 3) | — |
 | Option lexicale (n-grammes + lexique) | interrupteur, désactivé par défaut (démo : « lexicale ») | gains sur dev sous fautes et sigles synthétiques (+4,2 et +10,4 points) | aucun gain démontré sur `genprobe2` ni sur les formulations des cliniciens ; lexique à relire par des médecins (13 entrées enrichies) |
-| Normalisation par le modèle, mode ajout | interrupteur, désactivé par défaut (démo : « normalisation ») | +8,1 [+4,1 ; +12,2] sur dev avec 3 fautes ; aucune perte possible par construction ; fidèle à la lecture avec Haiku | effet sur `genprobe2` non démontré (+1,7 [0 ; +5,0]) ; fidélité non mesurée avec le modèle servi ; un appel LLM de plus par question |
+| Normalisation par le modèle, mode ajout | interrupteur, désactivé par défaut (démo : « normalisation ») | +8,1 [+4,1 ; +12,2] sur dev avec 3 fautes ; **sur les formulations de cliniciens : +6,2 [+2,1 ; +11,5] côté dev, 0 question perdue** ; aucune perte possible par construction ; fidèle à la lecture avec Haiku (0 altération sur 30 réécritures relues) | effet sur `genprobe2` non démontré (+1,7 [0 ; +5,0]) ; côté test des formulations de cliniciens, intervalle touchant 0 (+1,6 [0 ; +4,7], post hoc) ; fidélité non mesurée avec le modèle servi ; un appel LLM de plus par question |
 | Décomposition par LLM | interrupteur (`RAG_SFAR_MULTI_QUERY=decompose`), désactivé, non branché à l'API ni à la démo | +12,5 [0 ; +31,2] sur 16 questions de développement | aucun effet sur les questions à deux sources de `genprobe2` |
 | Reformulation libre, passage hypothétique | rejetés | — | changent le sens des questions (section 8.3) |
 

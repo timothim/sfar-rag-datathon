@@ -532,3 +532,18 @@ Vérifié par l'orchestrateur après tous les commits : diff vide contre `retrie
 - **W1** (commit 5b0436a) : `reports/drafts/FINAL_REPORT.md`, `COMPARAISON_SOLUTIONS.md` complétés, **`reports/drafts/README.md`** nouveau (chiffres vérifiés seulement). Reste une seule ligne « À COMPLÉTER » (NORM sur `abpvern`). `reports/FINAL_REPORT.md` et `reports/COMPARAISON_SOLUTIONS.md` n'existent pas encore à la racine de `reports/` ; `README.md` date du commit initial (fichier d'origine : remplacement à valider par l'utilisateur).
 - Incohérences signalées par W1 et suites données : (1) **le choix « lexicale » de la démo utilisait le lexique complet**, celui que Q1 déconseille (13 entrées ajoutent des termes, dont 7 des molécules) → C1 relancé : n-grammes + développement simple des sigles appliqué dans l'enveloppe de la démo, `use_medical_lexicon` éteint partout, sigles développés affichés ; (2) `DEMO.md` présentait le Qwen 9B comme le substitut de l'évaluation (c'était Claude Sonnet) → C1 ; (3) ports incohérents entre `DEMO.md` et `MCP_DEPLOIEMENT.md` → C1 ; (4) la décomposition n'est branchée ni à l'API ni à la démo : dit tel quel dans les brouillons ; (5) `A_VALIDER_MEDECINS.md` citait `tas_v5` → corrigé (`tas_v6`) ; (6) nombre de questions à clarification : 10 dans le brouillon du benchmark selon V1 (6 dev, 4 test) ; le « 5 » du protocole désigne celles du test selon notre conversion d'alors.
 - Rappel de méthode : les candidats LEX mesurés sur `genprobe2` et sur le vernaculaire utilisaient le lexique complet ; la démo servira le lexique réduit, mesuré équivalent par Q1 sur le dev seulement.
+
+## NORM sur les formulations de cliniciens : effet mesuré côté dev ; brouillons sans emplacement vide (10:57)
+- **V1, section 6** (`reports/agents/V1_benchmark_valide.md`, commit 376852d) : normalisation par LLM en mode ajout sur `abpvern` (171 réponses Haiku importées sans rejet ; prompt de Q2 inchangé ; un travail GPU ; côté test : une passe post hoc, configuration fixe).
+
+| Configuration − gelée, suffisance | dev | test (post hoc) |
+|---|---|---|
+| NORM, 171 | **+6,2 [+2,1 ; +11,5]** (6 gagnées / 0 perdue, n = 96) | +1,6 [0 ; +4,7] (1 / 0, n = 64) |
+| NORM, 88 reformulées | **+9,1 [+1,8 ; +18,2]** (5 / 0) | +3,6 [0 ; +10,7] (1 / 0) |
+| NORM, 29 publiées | +12,5 [0 ; +31,2] | +10,0 [0 ; +30,0] |
+| LEX + NORM, 171 | +8,3 [+2,1 ; +15,6] (10 / 2) | +6,2 [+1,6 ; +12,5] (4 / 0) |
+
+- Rappel des niveaux gelés : 81,2 / 81,2. Rappel des preuves : NORM +5,2 [+1,6 ; +9,9] dev, +0,8 test. Fidélité : 59/171 questions modifiées ; 30 réécritures relues plus les cas signalés : **0 altération clinique** ; sigles ambigus laissés tels quels.
+- **Lecture** : seule option de robustesse à montrer un effet sur des formulations réelles (intervalle excluant 0 côté dev, aucune question perdue). Limites : substitut Haiku ; côté test l'intervalle touche 0 et ce test a déjà servi ; le gain LEX + NORM sur le test vient en partie des n-grammes sur un test utilisé ; relecture de fidélité par un agent, pas par un médecin. Le plan pré-déclaré de `genprobe2` ne couvrait pas ce jeu : résultat exploratoire.
+- **Position proposée à l'utilisateur** : configuration gelée par défaut (celle qui a été évaluée) ; NORM en mode ajout = option recommandée à activer en premier, après contrôle de fidélité avec le modèle servi (Qwen 27B sur LibreDataHub).
+- Brouillons : dernier emplacement rempli par l'orchestrateur dans `FINAL_REPORT.md` (§5.5, ligne de décision, tableau 8.5), `COMPARAISON_SOLUTIONS.md` (§1.3) et `README.md` du dossier `reports/drafts/`. Plus aucune ligne « À COMPLÉTER ».
